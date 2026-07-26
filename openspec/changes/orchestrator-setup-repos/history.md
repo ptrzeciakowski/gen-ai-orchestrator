@@ -6,3 +6,6 @@
 
 ### 2026-07-26 19:27
 > Wybieram opcję C, mimo jej wad. Zaktualizuj proposal i możemy przejść do przygotowania designu zmiany.
+
+### 2026-07-26 19:33
+> Tak, ale dodajmy to od razu do do setupu tego repozytorium tworząc skrypt openc-spect-agy-init.sh który utworzy pluginy dla agy umożliwające kolejne kroki procesu open-spec... W którym kroku jest realizacja zmiany?
