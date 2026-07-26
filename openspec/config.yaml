@@ -3,19 +3,13 @@ schema: spec-driven
 # Project context (optional)
 # This is shown to AI when creating artifacts.
 # Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
 
 rules:
   proposal:
-    - Must enforce the 12 Rules from .ai/guidelines/brutally-honest-rules.md
+    - Must enforce Brutally Honest Guidelines and Non-Destructive Spec Enrichment from .ai/guidelines/brutally-honest-rules.md
     - Explicitly state Non-Goals, Risks, and unverified assumptions
+    - Preserve and cumulatively enrich all previous context and test findings
   design:
-    - Must enforce the 12 Rules from .ai/guidelines/brutally-honest-rules.md
+    - Must enforce Brutally Honest Guidelines and Non-Destructive Spec Enrichment from .ai/guidelines/brutally-honest-rules.md
     - Challenge initial design assumptions brutally and map out multiple options
-    - Never disguise guesses as facts and never invent statistics or citations
-
-
+    - Never disguise guesses as facts, never invent citations, and never truncate existing design context

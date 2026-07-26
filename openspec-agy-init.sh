@@ -30,8 +30,8 @@ fi
 cat << 'EOF' > "$PLUGIN_DIR/plugin.json"
 {
   "name": "openspec-agy-integration",
-  "version": "1.2.0",
-  "description": "Dodaje skille OpenSpec z obsługą 12 Zasad Brutalnej Szczerości, dwutabelowego summary.md, datowania HHMM oraz rejestru changes-summary.md do interfejsu AGY"
+  "version": "1.3.0",
+  "description": "Dodaje skille OpenSpec z obsługą Zasad Brutalnej Szczerości, Akumulacyjnego Wzbogacania Artefaktów, dwutabelowego summary.md, datowania HHMM oraz rejestru changes-summary.md do interfejsu AGY"
 }
 EOF
 
@@ -40,13 +40,13 @@ EXPLORE_CONTENT='---
 name: opsx-explore
 description: Rozpocznij proces eksploracji OpenSpec dla nowego pomysłu. Aktywuj ten skill, gdy użytkownik wpisze opsx-explore, /opsx-explore, eksploracja openspec lub poprosi o analize nowego pomyslu.
 ---
-Twoim zadaniem jako Agenta jest załadowanie lokalnego pliku `.ai/tools/opsx-explore.json` oraz wytycznych `.ai/guidelines/brutally-honest-rules.md` z bieżącego repozytorium. Twórz eksplorację przestrzegając 12 Zasad Brutalnej Szczerości (nazywanie niepewności wprost, oznaczanie domysłów jako [Hipoteza/Domysł], zakaz zmyślania metryk i źródeł).'
+Twoim zadaniem jako Agenta jest załadowanie lokalnego pliku `.ai/tools/opsx-explore.json` oraz wytycznych `.ai/guidelines/brutally-honest-rules.md` z bieżącego repozytorium. Twórz eksplorację przestrzegając Zasad Brutalnej Szczerości i Akumulacyjnego Wzbogacania (nazywanie niepewności wprost, oznaczanie domysłów jako [Hipoteza/Domysł], zakaz zmyślania metryk i źródeł).'
 
 DESIGN_CONTENT='---
 name: opsx-design
 description: Przygotuj dokument designu OpenSpec (design.md) na bazie eksploracji. Aktywuj ten skill, gdy użytkownik wpisze opsx-design, /opsx-design lub poprosi o wygenerowanie architektury technicznej.
 ---
-Załaduj plik `.ai/tools/opsx-design.json` oraz wytyczne `.ai/guidelines/brutally-honest-rules.md`. Podczas wygenerowania dokumentu architektonicznego bezwzględnie punktuj słabości, prezentuj alternatywne opcje i unikaj sztucznej pewności siebie.'
+Załaduj plik `.ai/tools/opsx-design.json` oraz wytyczne `.ai/guidelines/brutally-honest-rules.md`. Podczas wygenerowania dokumentu architektonicznego bezwzględnie punktuj słabości, prezentuj alternatywne opcje, wzbogacaj artefakty akumulacyjnie i unikaj sztucznej pewności siebie.'
 
 TASKS_CONTENT='---
 name: opsx-tasks
@@ -64,7 +64,7 @@ ARCHIVE_CONTENT='---
 name: opsx-archive
 description: Zarchiwizuj obecną zmianę w OpenSpec (uruchamia też auto-estymację). Aktywuj ten skill, gdy użytkownik wpisze opsx-archive, /opsx-archive lub poprosi o zarchiwizowanie/zamknięcie zmiany.
 ---
-Przeczytaj plik `.ai/tools/opsx-archive.json`. Wygeneruj dwutabelowe `summary.md` (wyceny estymatorów + metryki sesji wall-clock/tokeny), zarchiwizuj zmianę pod nazwą w formacie YYYY-MM-DD-HHMM-<change-id> (np. 2026-07-26-2052-orch-constructive-criticizm), a na końcu zaktualizuj plik zbiorczy `openspec/changes/archive/changes-summary.md`.'
+Przeczytaj plik `.ai/tools/opsx-archive.json`. Wygeneruj dwutabelowe `summary.md` (wyceny estymatorów + metryki sesji wall-clock/tokeny), zarchiwizuj zmianę pod nazwą w formacie YYYY-MM-DD-HHMM-<change-id>, a na końcu zaktualizuj plik zbiorczy `openspec/changes/archive/changes-summary.md`.'
 
 # Zapis do wtyczki globalnej
 echo "$EXPLORE_CONTENT" > "$PLUGIN_SKILLS_DIR/opsx-explore/SKILL.md"
