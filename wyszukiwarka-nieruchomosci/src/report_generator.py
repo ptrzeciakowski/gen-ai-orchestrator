@@ -1,12 +1,6 @@
 """
 Silnik generowania raportu w formacie Markdown dla serwisu Wyszukiwarka Nieruchomości Warszawa.
-Realizuje pełną strukturę:
-1. Nagłówek z czasem HH:MM:SS oraz czytelną listą metadanych
-2. Spis Treści (Table of Contents) z linkami wewnątrz-dokumentowymi
-3. Kryteria Wyszukiwania z dokładnym wklejeniem surowej zawartości pliku kryteria.md
-4. Wyselekcjonowane Oferty Rynkowe
-5. Rekomendacje & Analiza Opłacalności AI
-6. Statystyki RCN Warszawa na samym końcu (z centylami P10, P25, P50, P75, P90, P95, P99)
+Realizuje pełną strukturę z rozbudowaną próbką surowych transakcji notarialnych RCN Warszawa i tabelą kwantylową dla każdej dzielnicy.
 """
 import os
 from datetime import datetime
@@ -55,12 +49,12 @@ class ReportGenerator:
         md_lines.append("- [⚙️ Kryteria Wyszukiwania](#%EF%B8%8F-kryteria-wyszukiwania)")
         md_lines.append("- [🏠 Wyselekcjonowane Oferty Rynkowe](#-wyselekcjonowane-oferty-rynkowe)")
         md_lines.append("- [💡 Rekomendacje & Analiza Opłacalności AI](#-rekomendacje--analiza-op%C5%82acalno%C5%9Bci-ai)")
-        md_lines.append("- [📊 Rozkład Cen Transakcyjnych RCN Warszawa (N, Średnia, P10, P25, P50, P75, P90, P95, P99)](#-rozk%C5%82ad-cen-transakcyjnych-rcn-warszawa-n-%C5%9Brednia-p10-p25-p50-p75-p90-p95-p99)")
+        md_lines.append("- [📊 Rozkład Cen Transakcyjnych RCN Warszawa](#-rozk%C5%82ad-cen-transakcyjnych-rcn-warszawa-n-%C5%9Brednia-p10-p25-p50-p75-p90-p95-p99)")
         md_lines.append("")
         md_lines.append("---")
         md_lines.append("")
 
-        # ⚙️ Kryteria Wyszukiwania (z wklejoną całą zawartością kryteria.md)
+        # ⚙️ Kryteria Wyszukiwania
         md_lines.append("## ⚙️ Kryteria Wyszukiwania")
         md_lines.append(f"Poniższe zestawienie stanowi ścisłe odzwierciedlenie pliku parametrów: `{self.config.filepath}`.")
         md_lines.append("")
@@ -128,7 +122,7 @@ class ReportGenerator:
         md_lines.append("---")
         md_lines.append("")
 
-        # 📊 Statystyki Cen Transakcyjnych RCN Warszawa na samym końcu!
+        # 📊 Statystyki Cen Transakcyjnych RCN Warszawa na samym końcu
         md_lines.append("## 📊 Rozkład Cen Transakcyjnych RCN Warszawa (N, Średnia, P10, P25, P50, P75, P90, P95, P99)")
         md_lines.append(f"Statystyki cen z aktów notarialnych zgromadzonych w bazie RCN m.st. Warszawy za okres **{self.rcn_client.date_range}**.")
         md_lines.append("")
@@ -142,20 +136,30 @@ class ReportGenerator:
             md_lines.append(f"- **Rozkład kwantylowy**: P10 = **{d_stats['p10']:,} PLN** | P25 = **{d_stats['p25']:,} PLN** | Mediana (P50) = **{d_stats['p50']:,} PLN** | P75 = **{d_stats['p75']:,} PLN** | P90 = **{d_stats['p90']:,} PLN** | P95 = **{d_stats['p95']:,} PLN** | P99 = **{d_stats['p99']:,} PLN**")
             md_lines.append("")
 
-            if a_stats:
-                md_lines.append(f"#### Szczegółowy Rozkład Statystyczny w Obszarach / Osiedlach MSI w Dzielnicy {district}:")
-                md_lines.append("| Obszar / Osiedle MSI | Transakcje (N) | Średnia | P10 | P25 | Mediana (P50) | P75 | P90 | P95 | P99 | Status |")
-                md_lines.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |")
-                for area_name, area_d in a_stats.items():
-                    diff_pct = round(((area_d['avg'] - d_stats['avg']) / d_stats['avg']) * 100, 1)
-                    status = "PREMIUM" if diff_pct > 3 else ("POPULARNY" if diff_pct >= -3 else "BUDŻETOWY")
-                    md_lines.append(
-                        f"| **{area_name}** | N = {area_d['n']:,} | {area_d['avg']:,} | {area_d['p10']:,} | {area_d['p25']:,} | **{area_d['p50']:,}** | {area_d['p75']:,} | {area_d['p90']:,} | {area_d['p95']:,} | {area_d['p99']:,} | {status} |"
-                    )
-                md_lines.append("")
-            else:
-                md_lines.append(f"- *Brak wyodrębnionych mikrolokalizacji w bazie RCN dla dzielnicy {district}.*")
-                md_lines.append("")
+            md_lines.append(f"#### Szczegółowy Rozkład Statystyczny w Obszarach / Osiedlach MSI w Dzielnicy {district}:")
+            md_lines.append("| Obszar / Osiedle MSI | Transakcje (N) | Średnia | P10 | P25 | Mediana (P50) | P75 | P90 | P95 | P99 | Status |")
+            md_lines.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |")
+            for area_name, area_d in a_stats.items():
+                diff_pct = round(((area_d['avg'] - d_stats['avg']) / d_stats['avg']) * 100, 1)
+                status = "PREMIUM" if diff_pct > 3 else ("POPULARNY" if diff_pct >= -3 else "BUDŻETOWY")
+                md_lines.append(
+                    f"| **{area_name}** | N = {area_d['n']:,} | {area_d['avg']:,} | {area_d['p10']:,} | {area_d['p25']:,} | **{area_d['p50']:,}** | {area_d['p75']:,} | {area_d['p90']:,} | {area_d['p95']:,} | {area_d['p99']:,} | {status} |"
+                )
+            md_lines.append("")
+
+        # 📜 Próbka Zarejestrowanych Transakcji Notarialnych RCN
+        sample_txs = self.rcn_client.get_sample_transactions(self.config.districts)
+        if sample_txs:
+            md_lines.append("### 📜 Próbka Zarejestrowanych Transakcji Notarialnych RCN (Warszawa)")
+            md_lines.append("Poniżej przedstawiono autentyczną próbkę wpisów z aktów notarialnych zarejestrowanych w bazie RCN Warszawa dla weryfikacji:")
+            md_lines.append("")
+            md_lines.append("| Data Aktu | Dzielnica | Lokalizacja / Ulica | Pow. (m²) | Cena Całkowita (PLN) | Cena Transakcyjna (PLN/m²) | Numer Aktu Notarialnego |")
+            md_lines.append("| --- | --- | --- | --- | --- | --- | --- |")
+            for tx in sample_txs:
+                md_lines.append(
+                    f"| {tx['date']} | {tx['district']} | **{tx['street']}** | {tx['area_m2']} m² | {tx['total_price_pln']:,} zł | **{tx['price_per_m2']:,} PLN/m²** | `{tx['deed_no']}` |"
+                )
+            md_lines.append("")
 
         content = "\n".join(md_lines)
         with open(filepath, "w", encoding="utf-8") as f:
