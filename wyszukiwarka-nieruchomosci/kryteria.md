@@ -6,7 +6,7 @@ Domyślny plik konfiguracyjny parametrów wyszukiwania nieruchomości. Edytuj po
 
 ## 📍 Lokalizacja
 - **Miasto**: Warszawa
-- **Dzielnice**: [Mokotów, Ursynów, Wilanów]
+- **Dzielnice**: [Ursynów]
 - **Maksymalna odległość od stacji metra (m)**: Dowolna
 
 ## 🏠 Parametry Nieruchomości
@@ -14,7 +14,7 @@ Domyślny plik konfiguracyjny parametrów wyszukiwania nieruchomości. Edytuj po
 - **Typ ogłoszeniodawcy**: Dowolny                  # Opcje: Bezpośrednio | Agencja | Dowolny
 - **Rynek**: Dowolny                                # Opcje: Pierwotny | Wtórny | Dowolny
 - **Cena minimalna (PLN)**: 800000
-- **Cena maksymalna (PLN)**: Dowolna
+- **Cena maksymalna (PLN)**: 1200000
 - **Maksymalna cena za m² (PLN/m²)**: Dowolna
 - **Powierzchnia minimalna (m²)**: Dowolna
 - **Powierzchnia maksymalna (m²)**: Dowolna

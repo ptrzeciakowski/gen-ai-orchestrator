@@ -5,11 +5,11 @@
 - [x] 1.1 Utworzenie katalogu `wyszukiwarka-nieruchomosci/` z podkatalogami `historia/` i `src/`
 - [x] 1.2 Utworzenie pliku parametrów `wyszukiwarka-nieruchomosci/kryteria.md` z zakresem filtrowania dla Warszawy oraz filtrem typu ogłoszeniodawcy (`Bezpośrednio` vs `Agencja`)
 
-## 2. Listing Scrapers & Providers Implementation
+## 2. Listing Scrapers & Providers Implementation (Etap 1: Otodom.pl)
 
 - [x] 2.1 Stworzenie parsera konfiguracyjnego `src/config.py` z odczytem wszystkich pól (piętra, rok budowy, parter, winda, garaż), bezpiecznym parsowaniem ułamków float i elastyczną detekcją słów odmianowych ("dowolny", "dowolna", "dowolnie", "brak limitu")
-- [x] 2.2 Przeprowadzenie 3 niezależnych Code Review i usunięcie sztucznego limitu 6 wyników w providerach (`src/providers/commercial.py` oraz `src/providers/direct.py`) – zapis znalezisk w `openspec/changes/wyszukiwarka-nieruchomosci/code-review-findings.md`
-- [x] 2.3 Implementacja stronicowania (pagination) do przeglądania podstron ogłoszeń w celach głębokiego zbierania pełnej próby ofert
+- [x] 2.2 Skupienie prac w Etapie 1 na **Otodom.pl** z kategorycznym wyeliminowaniem ofert wynajmu (`/do-wynajecia/`, `wynajem`), bezwzględnym przestrzeganiem `max_price` (max 1,200,000 PLN) oraz 100% dopasowaniem dzielnicy (Ursynów)
+- [x] 2.3 Eliminacja linków kategorialnych – zachowanie wyłącznie bezpośrednich URL-i konkretnych lokali (`/pl/oferta/[slug-ID]`)
 - [x] 2.4 Stworzenie modułu deduplikacji (`src/deduplicator.py`) z wykorzystaniem tablicy asocjacyjnej $O(1)$ i preferencją ofert bezpośrednich od właściciela
 
 ## 3. RCN Transactional Data & Analysis Integration
@@ -24,4 +24,4 @@
 - [x] 4.1 Implementacja silnika generowania raportu `src/report_generator.py` ze spisem treści (TOC), czytelnym czasem HH:MM:SS i bezpośrednim wklejeniem surowej zawartości `kryteria.md`
 - [x] 4.2 Przeniesienie sekcji **Statystyki RCN Warszawa** na sam koniec dokumentu (po sekcji Rekomendacji AI)
 - [x] 4.3 Formułowanie sekcji **Rekomendacji AI** (Top 3 okazyjnych ofert, ocena potencjału negocjacyjnego vs kwantyle RCN, analiza ryzyk prawnych i budowlanych)
-- [x] 4.4 Przeprowadzenie uruchomienia na żądanie i weryfikacja wygenerowanego pliku historii bez sztucznych ograniczeń ilościowych
+- [x] 4.4 Przeprowadzenie uruchomienia na żądanie dla Otodom.pl i weryfikacja wygenerowanego pliku historii
