@@ -9,12 +9,15 @@ schema: spec-driven
 #     We use conventional commits
 #     Domain: e-commerce platform
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+rules:
+  exploration:
+    - Must enforce the 12 Rules from .ai/guidelines/brutally-honest-rules.md
+    - Include explicit sections for Uncertainty, Missing Context, and Alternative Paths
+  proposal:
+    - Must enforce the 12 Rules from .ai/guidelines/brutally-honest-rules.md
+    - Explicitly state Non-Goals, Risks, and unverified assumptions
+  design:
+    - Must enforce the 12 Rules from .ai/guidelines/brutally-honest-rules.md
+    - Challenge initial design assumptions brutally and map out multiple options
+    - Never disguise guesses as facts and never invent statistics or citations
+
