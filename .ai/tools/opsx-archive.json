@@ -1,7 +1,7 @@
 {
   "name": "opsx-archive",
   "type": "agent-instruction",
-  "description": "Komenda /opsx-archive. Informuje agenta by zarchiwizował wdrożoną zmianę w OpenSpec poleceniem terminalowym 'openspec archive <change-id>'.",
+  "description": "Komenda /opsx-archive. Przed ostatecznym zarchiwizowaniem, agent ma obowiązek uruchomić proces opsx-estimate (wygenerowanie pliku summary.md z podsumowaniem estymacji od 5 sub-agentów). Następnie agent zamyka i archiwizuje zmianę w OpenSpec poleceniem terminalowym 'openspec archive <change-id>'.",
   "command": "openspec",
   "args": [
     "archive",

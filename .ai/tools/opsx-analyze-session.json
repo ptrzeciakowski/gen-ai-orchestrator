@@ -1,0 +1,11 @@
+{
+  "name": "opsx-analyze-session",
+  "type": "script",
+  "description": "Narzędzie służące do analizy sesji zindeksowanych w pliku .sessions dla danej zmiany OpenSpec. Przeszukuje systemowe rejestry dla sesji AGY wyliczając m.in. czas trwania oraz ilość wykonanych kroków.",
+  "command": "bash",
+  "args": [
+    "./.ai/tools/opsx-analyze-session.sh",
+    "<change-name>"
+  ],
+  "env": {}
+}

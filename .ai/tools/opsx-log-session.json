@@ -1,13 +1,13 @@
 {
   "name": "opsx-log-session",
   "type": "script",
-  "description": "Narzędzie pozwalające na zapisywanie identyfikatorów i podsumowań sesji AGY (liczba tokenów, czas trwania, etc.) do pliku .sessions bezpośrednio w katalogu bieżącej zmiany w OpenSpec.",
+  "description": "Narzędzie pozwalające na zapisanie identyfikatora sesji i narzędzia agentowego do pliku .sessions bezpośrednio w katalogu bieżącej zmiany w OpenSpec.",
   "command": "bash",
   "args": [
     "./.ai/tools/opsx-log-session.sh",
     "<session-id>",
     "<change-name>",
-    "[stats]"
+    "[tool-name]"
   ],
   "env": {}
 }
