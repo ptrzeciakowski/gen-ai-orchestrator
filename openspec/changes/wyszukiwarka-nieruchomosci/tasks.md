@@ -14,11 +14,11 @@
 
 ## 3. RCN Transactional Data & Analysis Integration
 
-- [x] 3.1 Implementacja modułu integracji z RCN Warszawa (`src/rcn_client.py` - pobieranie i wyliczanie średnich cen transakcyjnych m² w dzielnicach)
+- [x] 3.1 Implementacja modułu integracji z RCN Warszawa (`src/rcn_client.py` - pobieranie i wyliczanie 5-elementowego rozkładu kwantylowego P10, P25, P50, P75, P90 per dzielnica i osiedla MSI)
 - [x] 3.2 Implementacja kalkulatora odchyleń cenowych (% odchylenia od RCN) i weryfikacji opłacalności
 
-## 4. Report Generation & AI Recommendations
+## 4. Report Generation & Audit Trail
 
-- [x] 4.1 Implementacja silnika generowania raportu `src/report_generator.py` z nazywaniem plików `YYYY-MM-DD-HH24MISS-oferty.md` w katalogu `historia/`
-- [x] 4.2 Formułowanie sekcji **Rekomendacji AI** (Top 3 okazyjnych ofert, ocena potencjału negocjacyjnego vs RCN, analiza ryzyk)
+- [x] 4.1 Implementacja silnika generowania raportu `src/report_generator.py` rejestrującego FAKTYCZNIE ZASTOSOWANE KRYTERIA WYSZUKIWANIA z nazywaniem plików `YYYY-MM-DD-HH24MISS-oferty.md` w `historia/` dla pełnej audytowalności
+- [x] 4.2 Formułowanie sekcji **Rekomendacji AI** (Top 3 okazyjnych ofert, ocena potencjału negocjacyjnego vs kwantyle RCN, analiza ryzyk)
 - [x] 4.3 Przeprowadzenie uruchomienia na żądanie i weryfikacja wygenerowanego pliku historii
