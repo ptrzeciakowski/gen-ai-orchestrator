@@ -1,6 +1,12 @@
 """
-Silnik generowania raportu w formacie Markdown z rozszerzonymi statystykami kwantylowymi RCN Warszawa:
-Wyświetla FAKTYCZNIE ZASTOSOWANE KRYTERIA WYSZUKIWANIA odczytane z pliku kryteria.md dla pełnej audytowalności.
+Silnik generowania raportu w formacie Markdown dla serwisu Wyszukiwarka Nieruchomości Warszawa.
+Realizuje pełną strukturę:
+1. Nagłówek z czasem HH:MM:SS oraz czytelną listą metadanych
+2. Spis Treści (Table of Contents) z linkami wewnątrz-dokumentowymi
+3. Kryteria Wyszukiwania z dokładnym wklejeniem surowej zawartości pliku kryteria.md
+4. Wyselekcjonowane Oferty Rynkowe
+5. Rekomendacje & Analiza Opłacalności AI
+6. Statystyki RCN Warszawa na samym końcu (z centylami P10, P25, P50, P75, P90, P95, P99)
 """
 import os
 from datetime import datetime
@@ -14,8 +20,12 @@ class ReportGenerator:
         os.makedirs(self.history_dir, exist_ok=True)
 
     def generate_report(self, listings):
-        timestamp_str = datetime.now().strftime("%Y-%m-%d-%H%M%S")
-        filename = f"{timestamp_str}-oferty.md"
+        now = datetime.now()
+        date_str = now.strftime("%Y-%m-%d")
+        time_readable = now.strftime("%H:%M:%S")
+        timestamp_file_id = now.strftime("%Y-%m-%d-%H%M%S")
+        
+        filename = f"{timestamp_file_id}-oferty.md"
         filepath = os.path.join(self.history_dir, filename)
 
         # Wzbogacenie ofert o metryki RCN
@@ -30,59 +40,44 @@ class ReportGenerator:
 
         # Generowanie zawartości Markdown
         md_lines = []
-        md_lines.append(f"# Raport Ofert Nieruchomości - Warszawa ({timestamp_str})")
+        md_lines.append(f"# Raport Ofert Nieruchomości - Warszawa ({date_str} {time_readable})")
         md_lines.append("")
-        md_lines.append(f"**Wygenerowano**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        md_lines.append(f"**Przeanalizowano unikalnych ofert**: {len(processed_listings)}")
-        md_lines.append(f"**Źródło danych transakcyjnych**: Rejestr Cen Nieruchomości m.st. Warszawy (RCN - https://mapa.um.warszawa.pl/rcn-szukaj/)")
-        md_lines.append(f"**Okres transakcyjny bazy RCN**: `{self.rcn_client.date_range}`")
-        md_lines.append("")
-        md_lines.append("---")
-        md_lines.append("")
-        md_lines.append("## ⚙️ Faktycznie Zastosowane Kryteria Wyszukiwania")
-        md_lines.append(f"- **Ścieżka pliku kryteriów**: `{self.config.filepath}`")
-        md_lines.append(f"- **Miasto**: {self.config.city}")
-        md_lines.append(f"- **Wybrane Dzielnice**: {', '.join(self.config.districts)}")
-        md_lines.append(f"- **Zakres cenowy (PLN)**: {self.config.min_price:,} zł - {self.config.max_price:,} zł")
-        md_lines.append(f"- **Maksymalna cena za m²**: {self.config.max_price_per_m2:,} zł/m²")
-        md_lines.append(f"- **Powierzchnia (m²)**: {self.config.min_area} m² - {self.config.max_area} m²")
-        md_lines.append(f"- **Liczba pokoi**: {self.config.min_rooms} - {self.config.max_rooms}")
-        md_lines.append(f"- **Typ ogłoszeniodawcy**: {self.config.seller_type}")
-        md_lines.append(f"- **Stan prawny**: {self.config.legal_status}")
+        md_lines.append(f"- **Wygenerowano**: {date_str} o godzinie `{time_readable}`")
+        md_lines.append(f"- **Przeanalizowano unikalnych ofert**: `{len(processed_listings)}`")
+        md_lines.append(f"- **Źródło danych transakcyjnych**: Rejestr Cen Nieruchomości m.st. Warszawy (RCN - https://mapa.um.warszawa.pl/rcn-szukaj/)")
+        md_lines.append(f"- **Okres transakcyjny bazy RCN**: `{self.rcn_client.date_range}`")
         md_lines.append("")
         md_lines.append("---")
         md_lines.append("")
 
-        md_lines.append("## 📊 Rozkład Cen Transakcyjnych RCN Warszawa (N, Średnia, P10, P25, P50, P75, P90)")
-        md_lines.append(f"Statystyki z zarejestrowanych aktów notarialnych zgromadzonych w bazie RCN m.st. Warszawy za okres **{self.rcn_client.date_range}**.")
+        # 📌 Spis Treści (Table of Contents)
+        md_lines.append("## 📌 Spis Treści")
+        md_lines.append("- [⚙️ Kryteria Wyszukiwania](#%EF%B8%8F-kryteria-wyszukiwania)")
+        md_lines.append("- [🏠 Wyselekcjonowane Oferty Rynkowe](#-wyselekcjonowane-oferty-rynkowe)")
+        md_lines.append("- [💡 Rekomendacje & Analiza Opłacalności AI](#-rekomendacje--analiza-op%C5%82acalno%C5%9Bci-ai)")
+        md_lines.append("- [📊 Rozkład Cen Transakcyjnych RCN Warszawa (N, Średnia, P10, P25, P50, P75, P90, P95, P99)](#-rozk%C5%82ad-cen-transakcyjnych-rcn-warszawa-n-%C5%9Brednia-p10-p25-p50-p75-p90-p95-p99)")
         md_lines.append("")
-
-        for district in self.config.districts:
-            d_stats = self.rcn_client.get_district_stats(district)
-            a_stats = self.rcn_client.get_area_stats(district)
-            
-            md_lines.append(f"### 📍 Dzielnica: {district} (N = {d_stats['n']:,} transakcji)")
-            md_lines.append(f"- **Średnia cena transakcyjna**: **{d_stats['avg']:,} PLN/m²**")
-            md_lines.append(f"- **Rozkład kwantylowy**: P10 = **{d_stats['p10']:,} PLN** | P25 = **{d_stats['p25']:,} PLN** | Mediana (P50) = **{d_stats['p50']:,} PLN** | P75 = **{d_stats['p75']:,} PLN** | P90 = **{d_stats['p90']:,} PLN**")
-            md_lines.append("")
-
-            if a_stats:
-                md_lines.append(f"#### Rozkład Statystyczny w Obszarach / Osiedlach MSI w Dzielnicy {district}:")
-                md_lines.append("| Obszar / Osiedle MSI | Transakcje (N) | Średnia (PLN/m²) | 10. Centyl (P10) | 1. Kwartyl (P25) | Mediana (P50) | 3. Kwartyl (P75) | 90. Centyl (P90) | Status |")
-                md_lines.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- |")
-                for area_name, area_d in a_stats.items():
-                    diff_pct = round(((area_d['avg'] - d_stats['avg']) / d_stats['avg']) * 100, 1)
-                    status = "PREMIUM" if diff_pct > 3 else ("POPULARNY" if diff_pct >= -3 else "BUDŻETOWY")
-                    md_lines.append(
-                        f"| **{area_name}** | N = {area_d['n']:,} | {area_d['avg']:,} PLN | {area_d['p10']:,} PLN | {area_d['p25']:,} PLN | **{area_d['p50']:,} PLN** | {area_d['p75']:,} PLN | {area_d['p90']:,} PLN | {status} |"
-                    )
-                md_lines.append("")
-            else:
-                md_lines.append(f"- *Brak wyodrębnionych mikrolokalizacji w bazie RCN dla dzielnicy {district}.*")
-                md_lines.append("")
-
         md_lines.append("---")
         md_lines.append("")
+
+        # ⚙️ Kryteria Wyszukiwania (z wklejoną całą zawartością kryteria.md)
+        md_lines.append("## ⚙️ Kryteria Wyszukiwania")
+        md_lines.append(f"Poniższe zestawienie stanowi ścisłe odzwierciedlenie pliku parametrów: `{self.config.filepath}`.")
+        md_lines.append("")
+        md_lines.append("### 📜 Pełny Plik Parametrów Wyszukiwania (`kryteria.md`)")
+        md_lines.append("```markdown")
+        if self.config.raw_content:
+            md_lines.append(self.config.raw_content.strip())
+        else:
+            md_lines.append("# Kryteria Wyszukiwania Nieruchomości - Warszawa")
+            md_lines.append(f"- Miasto: {self.config.city}")
+            md_lines.append(f"- Dzielnice: {', '.join(self.config.districts)}")
+        md_lines.append("```")
+        md_lines.append("")
+        md_lines.append("---")
+        md_lines.append("")
+
+        # 🏠 Wyselekcjonowane Oferty Rynkowe
         md_lines.append("## 🏠 Wyselekcjonowane Oferty Rynkowe")
         md_lines.append("")
         md_lines.append("| Tytuł Ogłoszenia | Dzielnica | Pow. (m²) | Pokoje | Cena (PLN) | PLN/m² | Średnia RCN | Mediana (P50) | Odchylenie RCN (%) | Typ | Źródło | Link |")
@@ -98,6 +93,8 @@ class ReportGenerator:
         md_lines.append("")
         md_lines.append("---")
         md_lines.append("")
+
+        # 💡 Rekomendacje & Analiza Opłacalności AI
         md_lines.append("## 💡 Rekomendacje & Analiza Opłacalności AI")
         md_lines.append("")
 
@@ -115,10 +112,10 @@ class ReportGenerator:
                 md_lines.append("")
 
             md_lines.append("### 🤝 Strategia Negocjacyjna z Wykorzystaniem Rozkładu Kwantylowego RCN")
-            md_lines.append("1. **Próg 10. Centyla (P10)**: Przedstawia dolne 10% cen transakcyjnych (stan do remontu / rynkowy okazje). Celuj w P10 przy wykończeniu deweloperskim lub do generelnego remontu.")
-            md_lines.append("2. **Próg 1. Kwartyla (P25)**: Wyznacza dolny podział rynku transakcyjnego. Ceny zbliżone do P25 są uznawane za bardzo okazyjne rynkowo.")
-            md_lines.append("3. **Próg Medianowy (P50)**: Mediana transakcyjna RCN stanowi najstabilniejszy punkt odniesienia negocjacyjnego.")
-            md_lines.append("4. **Próg 3. Kwartyla (P75) i 90. Centyla (P90)**: Wysokie ceny transakcyjne charakterystyczne dla apartamentowców premium i wykończenia 'pod klucz' z klimatyzacją i garażem.")
+            md_lines.append("1. **Próg 10. Centyla (P10)**: Przedstawia dolne 10% cen transakcyjnych (stan do remontu / okazje). Celuj w P10 przy mieszkaniach do generalnego remontu.")
+            md_lines.append("2. **Próg 1. Kwartyla (P25)**: Wyznacza dolne 25% cen transakcyjnych. Ceny równe lub niższe od P25 stanowią bardzo dobrą okazję rynkową.")
+            md_lines.append("3. **Próg Medianowy (P50)**: Mediana transakcyjna RCN stanowi najbardziej obiektywny i odporny na skrajności punkt odniesienia negocjacyjnego.")
+            md_lines.append("4. **Progi P90, P95 i P99**: Najwyższe ceny transakcyjne (luksusowe apartamenty, wysoki standard wykończenia 'pod klucz', klimatyzacja i podwójny garaż).")
             md_lines.append("")
             md_lines.append("### ⚠️ Ryzyka i Punkty Do Weryfikacji (Checklist)")
             md_lines.append("- [ ] **Stan Prawny**: Zweryfikuj numer Księgi Wieczystej (Dział III - roszczenia i hipoteki w Dziale IV).")
@@ -126,6 +123,39 @@ class ReportGenerator:
             md_lines.append("- [ ] **Miejsce Parkingowe**: Sprawdź czy miejsce w garażu podziemnym jest na odrębnej KW, czy jako udział w lokalu garażowym.")
         else:
             md_lines.append("Brak ofert spełniających podane kryteria.")
+
+        md_lines.append("")
+        md_lines.append("---")
+        md_lines.append("")
+
+        # 📊 Statystyki Cen Transakcyjnych RCN Warszawa na samym końcu!
+        md_lines.append("## 📊 Rozkład Cen Transakcyjnych RCN Warszawa (N, Średnia, P10, P25, P50, P75, P90, P95, P99)")
+        md_lines.append(f"Statystyki cen z aktów notarialnych zgromadzonych w bazie RCN m.st. Warszawy za okres **{self.rcn_client.date_range}**.")
+        md_lines.append("")
+
+        for district in self.config.districts:
+            d_stats = self.rcn_client.get_district_stats(district)
+            a_stats = self.rcn_client.get_area_stats(district)
+            
+            md_lines.append(f"### 📍 Dzielnica: {district} (N = {d_stats['n']:,} transakcji)")
+            md_lines.append(f"- **Średnia cena transakcyjna**: **{d_stats['avg']:,} PLN/m²**")
+            md_lines.append(f"- **Rozkład kwantylowy**: P10 = **{d_stats['p10']:,} PLN** | P25 = **{d_stats['p25']:,} PLN** | Mediana (P50) = **{d_stats['p50']:,} PLN** | P75 = **{d_stats['p75']:,} PLN** | P90 = **{d_stats['p90']:,} PLN** | P95 = **{d_stats['p95']:,} PLN** | P99 = **{d_stats['p99']:,} PLN**")
+            md_lines.append("")
+
+            if a_stats:
+                md_lines.append(f"#### Szczegółowy Rozkład Statystyczny w Obszarach / Osiedlach MSI w Dzielnicy {district}:")
+                md_lines.append("| Obszar / Osiedle MSI | Transakcje (N) | Średnia | P10 | P25 | Mediana (P50) | P75 | P90 | P95 | P99 | Status |")
+                md_lines.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |")
+                for area_name, area_d in a_stats.items():
+                    diff_pct = round(((area_d['avg'] - d_stats['avg']) / d_stats['avg']) * 100, 1)
+                    status = "PREMIUM" if diff_pct > 3 else ("POPULARNY" if diff_pct >= -3 else "BUDŻETOWY")
+                    md_lines.append(
+                        f"| **{area_name}** | N = {area_d['n']:,} | {area_d['avg']:,} | {area_d['p10']:,} | {area_d['p25']:,} | **{area_d['p50']:,}** | {area_d['p75']:,} | {area_d['p90']:,} | {area_d['p95']:,} | {area_d['p99']:,} | {status} |"
+                    )
+                md_lines.append("")
+            else:
+                md_lines.append(f"- *Brak wyodrębnionych mikrolokalizacji w bazie RCN dla dzielnicy {district}.*")
+                md_lines.append("")
 
         content = "\n".join(md_lines)
         with open(filepath, "w", encoding="utf-8") as f:
