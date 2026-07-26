@@ -1,7 +1,7 @@
 {
   "name": "opsx-archive",
   "type": "agent-instruction",
-  "description": "Komenda /opsx-archive. Przed ostatecznym zarchiwizowaniem, agent wywołuje proces opsx-estimate do wygenerowania dwutabelowego summary.md. Następnie wylicza metryki z sesji (wall-clock, input/output tokens, koszt uśredniony), dopisuje lub aktualizuje zbiorczy plik openspec/changes/archive/changes-summary.md i wykonuje polecenie terminalowe 'openspec archive <change-id>'.",
+  "description": "Komenda /opsx-archive. Wywołuje proces opsx-estimate do wygenerowania dwutabelowego summary.md. Wylicza metryki sesji (wall-clock, tokeny WE/WY, oszczędność czasowa). Wykonuje polecenie 'openspec archive <change-id>', a następnie zmienia nazwę utworu archiwalnego na format z datą i godziną 'YYYY-MM-DD-HHMM-<change-id>' (np. 2026-07-26-2052-orch-constructive-criticizm). Na końcu dopisuje/aktualizuje centralny rejestr openspec/changes/archive/changes-summary.md.",
   "command": "openspec",
   "args": [
     "archive",
