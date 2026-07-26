@@ -1,10 +1,10 @@
 {
   "name": "opsx-explore",
   "type": "agent-instruction",
-  "description": "Komenda /opsx-explore. Uruchamia nową eksplorację w OpenSpec. Agent ma obowiązek utworzyć plik dokumentujący eksplorację w folderze openspec/changes/<change-id>/ z restrykcyjną konwencją nazewniczą: 001-<change-name>-001.md",
+  "description": "Komenda /opsx-explore. Uruchamia nową eksplorację w OpenSpec. Agent ma obowiązek utworzyć plik dokumentujący eksplorację w folderze openspec/changes/<change-id>/ z restrykcyjną konwencją nazewniczą: 001-<change-name>-001.md. Eksploracja musi być silnie krytyczna, polegać na podważaniu założeń z proposal.md, punktowaniu potencjalnych zagrożeń i przedstawieniu przynajmniej kilku alternatywnych opcji do ostatecznej decyzji dla dewelopera.",
   "command": "echo",
   "args": [
-    "Przy tworzeniu pliku pamiętaj o konwencji 001-nazwa_zmiany-001.md"
+    "Tworząc eksplorację w 001-<change-name>-001.md pamiętaj: masz być bezwzględnie krytyczny wobec proponowanej zmiany. Punktuj słabości, błędy architektoniczne, ryzyka i przedstaw logiczne alternatywy pozostawiając podsumowanie decyzyjne dla Użytkownika."
   ],
   "env": {}
 }

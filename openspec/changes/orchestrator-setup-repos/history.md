@@ -1,0 +1,8 @@
+### 2026-07-26 19:21
+> Dobrze, lecimy z kolejną zmianą - nazwijmy ją orchestrator-setup-repos. Chciałbym w ramach tej zmiany skonfigurować to repozytorium tak, żeby agenty mogły realizować zmiany w innych repozytoriach zdefiniowanych tutaj. Definicja repozytoriów znowu miałaby odbywać się poprzez symlinki (zakładam, że są lokalnie dostępne). Zmiany w innych repozytoriach miałyby się odbywać poprzez feature branche i pull requesty. Do tego pewnie będzie potrzebny git-agent?
+
+### 2026-07-26 19:23
+> Zróbmy eksplorację tego kierunku - bądź krytyczny (dodaj bycie krytycznym do opisuj eksploracji) i rozważ inne opcje, które potem przedstawisz mi do decyzji.
+
+### 2026-07-26 19:27
+> Wybieram opcję C, mimo jej wad. Zaktualizuj proposal i możemy przejść do przygotowania designu zmiany.
