@@ -1,0 +1,10 @@
+# External repositories workspace
+.ai/repositories/
+.repositories
+
+# Session tracking
+.sessions
+
+# Logs & temp files
+*.log
+.DS_Store
