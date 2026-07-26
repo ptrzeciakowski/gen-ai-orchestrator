@@ -7,14 +7,14 @@ Domyślny plik konfiguracyjny parametrów wyszukiwania nieruchomości. Edytuj po
 ## 📍 Lokalizacja
 - **Miasto**: Warszawa
 - **Dzielnice**: [Mokotów, Ursynów, Wilanów]
-- **Maksymalna odległość od stacji metra (m)**: 5000
+- **Maksymalna odległość od stacji metra (m)**: Dowolna
 
 ## 🏠 Parametry Nieruchomości
 - **Typ nieruchomości**: Mieszkanie
 - **Typ ogłoszeniodawcy**: Dowolny                  # Opcje: Bezpośrednio | Agencja | Dowolny
 - **Rynek**: Dowolny                                # Opcje: Pierwotny | Wtórny | Dowolny
 - **Cena minimalna (PLN)**: 800000
-- **Cena maksymalna (PLN)**: 1200000
+- **Cena maksymalna (PLN)**: Dowolna
 - **Maksymalna cena za m² (PLN/m²)**: Dowolna
 - **Powierzchnia minimalna (m²)**: Dowolna
 - **Powierzchnia maksymalna (m²)**: Dowolna
@@ -24,11 +24,11 @@ Domyślny plik konfiguracyjny parametrów wyszukiwania nieruchomości. Edytuj po
 - **Piętro maksymalne**: 8
 - **Wyklucz parter**: Tak
 - **Wyklucz ostatnie piętro**: Nie
-- **Minimalny rok budowy**: 2000
+- **Minimalny rok budowy**: Dowolny
 
 ## 🛠️ Wyposażenie i Wymagania Dodatkowe
 - **Winda**: Tak
-- **Balkon / Taras / Ogródek**: Tak
+- **Balkon / Taras / Ogródek**: Dowolnie
 - **Miejsce garażowe / parkingowe**: Niewymagane
 - **Stan wykończenia**: Dowolny                     # Opcje: Do zamieszkania | Do odświeżenia | Do remontu | Dowolny
 - **Stan prawny**: Dowolny                          # Opcje: Pełna własność | Spółdzielcze własnościowe z KW | Dowolny
