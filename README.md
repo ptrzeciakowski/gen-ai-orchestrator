@@ -47,3 +47,12 @@ Repository containing gen-ai-orchestration layer with skills, agents, toolset an
 > Niech to będzie pierwsza komenda (tool) - aktualizacja readme w ten sposób wymuszana każdorazowo przy modyfikacji openspec-gen-ai-orchestrator. Przeniosłem do tego katalogu zmianę 001-explore-orchestrator-setup-001.md
 > 
 > Popraw jeszcze .agents, bo w tej chwili to nie są symlinki do .ai a powinny być, żeby w jednym miejscu definiować zmianę.
+
+### 2026-07-26 18:46
+> Chciałbym móc krótko wywoływać komendy openSpec tak jak /opsx-design - jak to mogę dodać, żeby było agnostyczne? Dodaś w .ai/tools opsx-design.json z odpowiednim opisem?
+
+### 2026-07-26 18:53
+> Dobrze, dodaj w takim razie pozostałe komendy open spec, czyli opsx-explore (do explore dodaj konwencję o której pisałem wcześniej 001-change-name-001.md, opsx-archive, komendę implementującą design. Chciałbym też mieć zapewnione tworzenie i aktualizację pliku .session gdzie będą zapisywany identyfikatory sesji z agy, po to żeby potem można było łatwo sięgać do starych sesji po podsumowanie (wall clock, i inne statystki sesji (liczba tokenów, liczba interakcji, etc.) w ramach których realizowana była zmiana).
+
+### 2026-07-26 18:56
+> plik .session powinien się nazywać .sessions i być w katalogu zmiany, np. plik @[.session] powinien leżeć tu openspec/changes/archive/explore-ochestrator-setup/

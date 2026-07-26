@@ -1,0 +1,13 @@
+{
+  "name": "opsx-tasks",
+  "type": "agent-instruction",
+  "description": "Komenda /opsx-tasks (lub implementacja). Informuje agenta by użył polecenia 'openspec instructions tasks --change <change-id>' w celu wygenerowania planu wdrożeniowego (tasks.md) dla zaprojektowanej wcześniej architektury.",
+  "command": "openspec",
+  "args": [
+    "instructions",
+    "tasks",
+    "--change",
+    "<change-id>"
+  ],
+  "env": {}
+}

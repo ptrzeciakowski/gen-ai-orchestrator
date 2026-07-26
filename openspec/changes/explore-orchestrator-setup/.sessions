@@ -1,0 +1,4 @@
+# Logi Sesji Agentów (AGY)
+=========================
+[2026-07-26 18:53:30] Session ID: c2ecf9cf-7ad5-44c3-8147-a917ee8f8be5 | Stats: Session duration: ~52 min | Interactions: Multiple | Change: explore-orchestrator-setup | Status: SUCCESS
+[2026-07-26 18:56:19] Session ID: c2ecf9cf-7ad5-44c3-8147-a917ee8f8be5 | Stats: Updated logging logic to store inside .sessions per change

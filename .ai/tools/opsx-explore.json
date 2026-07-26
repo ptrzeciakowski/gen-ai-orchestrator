@@ -1,0 +1,10 @@
+{
+  "name": "opsx-explore",
+  "type": "agent-instruction",
+  "description": "Komenda /opsx-explore. Uruchamia nową eksplorację w OpenSpec. Agent ma obowiązek utworzyć plik dokumentujący eksplorację w folderze openspec/changes/<change-id>/ z restrykcyjną konwencją nazewniczą: 001-<change-name>-001.md",
+  "command": "echo",
+  "args": [
+    "Przy tworzeniu pliku pamiętaj o konwencji 001-nazwa_zmiany-001.md"
+  ],
+  "env": {}
+}

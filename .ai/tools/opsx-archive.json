@@ -1,0 +1,11 @@
+{
+  "name": "opsx-archive",
+  "type": "agent-instruction",
+  "description": "Komenda /opsx-archive. Informuje agenta by zarchiwizował wdrożoną zmianę w OpenSpec poleceniem terminalowym 'openspec archive <change-id>'.",
+  "command": "openspec",
+  "args": [
+    "archive",
+    "<change-id>"
+  ],
+  "env": {}
+}
