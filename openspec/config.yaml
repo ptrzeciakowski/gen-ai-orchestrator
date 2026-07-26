@@ -10,9 +10,6 @@ schema: spec-driven
 #     Domain: e-commerce platform
 
 rules:
-  exploration:
-    - Must enforce the 12 Rules from .ai/guidelines/brutally-honest-rules.md
-    - Include explicit sections for Uncertainty, Missing Context, and Alternative Paths
   proposal:
     - Must enforce the 12 Rules from .ai/guidelines/brutally-honest-rules.md
     - Explicitly state Non-Goals, Risks, and unverified assumptions
@@ -20,4 +17,5 @@ rules:
     - Must enforce the 12 Rules from .ai/guidelines/brutally-honest-rules.md
     - Challenge initial design assumptions brutally and map out multiple options
     - Never disguise guesses as facts and never invent statistics or citations
+
 
