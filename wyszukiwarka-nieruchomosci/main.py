@@ -15,6 +15,11 @@ from src.deduplicator import Deduplicator
 from src.rcn_client import RCNClient
 from src.report_generator import ReportGenerator
 
+def format_num_or_any(val):
+    if val is None:
+        return "Dowolny"
+    return f"{val:,}"
+
 def main():
     print("🏠 Uruchamianie Serwisu Wyszukiwarka Nieruchomości Warszawa...")
     
@@ -22,7 +27,10 @@ def main():
     config = CriteriaConfig()
     print(f"✅ Załadowano kryteria z: {config.filepath}")
     print(f"   Dzielnice: {', '.join(config.districts)}")
-    print(f"   Zakres cenowy: {config.min_price:,} - {config.max_price:,} PLN")
+    
+    min_p_str = format_num_or_any(config.min_price)
+    max_p_str = format_num_or_any(config.max_price)
+    print(f"   Zakres cenowy: {min_p_str} - {max_p_str} PLN")
 
     # 2. Pobieranie ofert z providerów
     comm_provider = CommercialProvider(config)
