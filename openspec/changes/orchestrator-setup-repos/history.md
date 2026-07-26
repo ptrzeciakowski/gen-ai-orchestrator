@@ -12,3 +12,6 @@
 
 ### 2026-07-26 19:40
 > Nie widzę tool-a opsx-implement, taki powinien być i taki sam powinien powstać plugin.
+
+### 2026-07-26 19:42
+> tak, ale wyjdę z tej sesji, jeszcze raz włączę AGY i uruchomię tworzenie tasków. Przy okazji prztestsujemy zapis więcej niż jednej sesji w pliku .sessions
