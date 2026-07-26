@@ -1,0 +1,10 @@
+{
+  "name": "openspec-update-readme",
+  "type": "script",
+  "description": "Narzędzie (komenda) wymuszające aktualizację pliku README.md przez dodanie surowych wymagań i wpisów od Użytkownika w chronologicznej kolejności przy każdej modyfikacji openspec-gen-ai-orchestrator.",
+  "command": "bash",
+  "args": [
+    "./.ai/tools/openspec-update-readme.sh"
+  ],
+  "env": {}
+}

@@ -25,6 +25,13 @@ Repository containing gen-ai-orchestration layer with skills, agents, toolset an
 > - wszystkie założenia do tego repozytorium (w tym te wymagania w postaci surowej - na końcu) muszą być dodawane i aktualizowane w pliku @[README.md]
 
 ### 2026-07-26 18:18
+> Kontekst wykonanych prac, do których odnoszą się uwagi:
+> 1. Struktura Agentów: Utworzono katalog `.agents` z podkatalogami.
+> 2. Standard Open Spec: Utworzono strukturę katalogów `openspec/specs` oraz `openspec/changes`.
+> 3. Ślady Eksploracji: Stworzono katalog `explorations` ze śladem z sesji konfiguracyjnej.
+> 4. Zaktualizowane założenia: Zaktualizowano README opierając się na zgłoszeniach.
+> 
+> Odpowiedź Użytkownika:
 > Ad 1. Zróbmy strukturę agnostyczną, tj. katalog .ai w którym będą właściwe skille, agenty i toole. Pod agy zróbmy .agents/skills, .agents/agents, .agents/tools będący symlinkami do odpowiednich folderów w podkatalogu .ai. Dodaj tam szablony dla każdego z typów artefaktów z repozytorium obsydian.
 > 
 > Pamiętaj o zaktualizowaniu @[README.md]. Struktura pliku
@@ -35,3 +42,8 @@ Repository containing gen-ai-orchestration layer with skills, agents, toolset an
 > 
 > Ad 2 i 3. Spoko. Explorations powinien być pierwszą zmianą w podkatalogu openspec/changes/explore-orchestrator-setup
 > Ad 4. OK.
+
+### 2026-07-26 18:27
+> Niech to będzie pierwsza komenda (tool) - aktualizacja readme w ten sposób wymuszana każdorazowo przy modyfikacji openspec-gen-ai-orchestrator. Przeniosłem do tego katalogu zmianę 001-explore-orchestrator-setup-001.md
+> 
+> Popraw jeszcze .agents, bo w tej chwili to nie są symlinki do .ai a powinny być, żeby w jednym miejscu definiować zmianę.
