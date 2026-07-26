@@ -1,7 +1,7 @@
 {
   "name": "opsx-estimate",
   "type": "agent-instruction",
-  "description": "Narzędzie szacujące wysiłek deweloperski. Agent ma wywołać równolegle 3 niezależnych sub-agentów, dostarczając im do analizy pliki proposal.md oraz design.md ze wskazanej zmiany. Każdy z sub-agentów szacuje nakład pracy w roboczogodzinach i roboczodniach. Główny agent agreguje te 5 wyników i zapisuje szczegółowe podsumowanie szacunków w pliku summary.md w katalogu danej zmiany.",
+  "description": "Narzędzie szacujące wysiłek deweloperski i agregujące metryki sesyjności. Agent powołuje 5 niezależnych sub-agentów do estymacji zmiany, po czym tworzy plik summary.md z podziałem na 2 czytelne tabele w sekcji '## ⏱️ Effort Estimation & Metrics': (1) Tabela Estymatorów (czas w roboczogodzinach h oraz roboczodniach MD), (2) Tabela Metryk Sesji (Wall-clock, Input Tokens, Output Tokens).",
   "command": "agent-internal",
   "args": [
     "<change-id>"

@@ -30,8 +30,8 @@ fi
 cat << 'EOF' > "$PLUGIN_DIR/plugin.json"
 {
   "name": "openspec-agy-integration",
-  "version": "1.0.2",
-  "description": "Dodaje skille OpenSpec do interfejsu AGY"
+  "version": "1.1.0",
+  "description": "Dodaje skille OpenSpec z obsługą 12 Zasad Brutalnej Szczerości, dwutabelowego summary.md oraz rejestru changes-summary.md do interfejsu AGY"
 }
 EOF
 
@@ -40,13 +40,13 @@ EXPLORE_CONTENT='---
 name: opsx-explore
 description: Rozpocznij proces eksploracji OpenSpec dla nowego pomysłu. Aktywuj ten skill, gdy użytkownik wpisze opsx-explore, /opsx-explore, eksploracja openspec lub poprosi o analize nowego pomyslu.
 ---
-Twoim zadaniem jako Agenta jest natychmiastowe załadowanie lokalnego pliku `.ai/tools/opsx-explore.json` z obecnego repozytorium i wykonanie ukrytej w nim instrukcji. Zastosuj się do niej przy obecnym zadaniu.'
+Twoim zadaniem jako Agenta jest załadowanie lokalnego pliku `.ai/tools/opsx-explore.json` oraz wytycznych `.ai/guidelines/brutally-honest-rules.md` z bieżącego repozytorium. Twórz eksplorację przestrzegając 12 Zasad Brutalnej Szczerości (nazywanie niepewności wprost, oznaczanie domysłów jako [Hipoteza/Domysł], zakaz zmyślania metryk i źródeł).'
 
 DESIGN_CONTENT='---
 name: opsx-design
 description: Przygotuj dokument designu OpenSpec (design.md) na bazie eksploracji. Aktywuj ten skill, gdy użytkownik wpisze opsx-design, /opsx-design lub poprosi o wygenerowanie architektury technicznej.
 ---
-Załaduj plik `.ai/tools/opsx-design.json` z bieżącego repozytorium i wygeneruj odpowiedni dokument bazując na instrukcjach.'
+Załaduj plik `.ai/tools/opsx-design.json` oraz wytyczne `.ai/guidelines/brutally-honest-rules.md`. Podczas wygenerowania dokumentu architektonicznego bezwzględnie punktuj słabości, prezentuj alternatywne opcje i unikaj sztucznej pewności siebie.'
 
 TASKS_CONTENT='---
 name: opsx-tasks
@@ -64,7 +64,7 @@ ARCHIVE_CONTENT='---
 name: opsx-archive
 description: Zarchiwizuj obecną zmianę w OpenSpec (uruchamia też auto-estymację). Aktywuj ten skill, gdy użytkownik wpisze opsx-archive, /opsx-archive lub poprosi o zarchiwizowanie/zamknięcie zmiany.
 ---
-Przeczytaj plik `.ai/tools/opsx-archive.json`. Odpal subagentów wyceniających, przygotuj `summary.md` i domknij zmianę poleceniem `openspec archive`.'
+Przeczytaj plik `.ai/tools/opsx-archive.json`. Wygeneruj dwutabelowe `summary.md` (wyceny estymatorów + metryki sesji wall-clock/tokeny), zaktualizuj plik zbiorczy `openspec/changes/archive/changes-summary.md` i domknij zmianę poleceniem `openspec archive`.'
 
 # Zapis do wtyczki globalnej
 echo "$EXPLORE_CONTENT" > "$PLUGIN_SKILLS_DIR/opsx-explore/SKILL.md"
@@ -86,13 +86,3 @@ echo "✅ Zainstalowano z sukcesem w: $PLUGIN_DIR"
 if [ -n "$REPO_SKILLS_DIR" ] && [ -d "$REPO_SKILLS_DIR" ]; then
   echo "✅ Zainstalowano także w repozytorium: $REPO_SKILLS_DIR"
 fi
-echo ""
-echo "ℹ️  UWAGA DOTYCZĄCA UŻYCIA SKILLI W ANTIGRAVITY:"
-echo "   - W Antigravity symbol '@' służy do załączania plików (np. @openspec-agy-init.sh)."
-echo "   - Aby uruchomić skill, po prostu wpisz w czacie polecenie dla Agenta, np.:"
-echo "     • 'opsx-explore dla nowego modułu'"
-echo "     • '/opsx-design'"
-echo "     • 'Uruchom opsx-tasks'"
-echo "     • 'Zrealizuj zadanie z opsx-implement'"
-echo "     • 'opsx-archive'"
-

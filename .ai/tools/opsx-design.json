@@ -1,7 +1,7 @@
 {
   "name": "opsx-design",
   "type": "agent-instruction",
-  "description": "Agnostyczna definicja komendy /opsx-design. Informuje każdego agenta Gen AI, że w momencie napotkania tej komendy powinien użyć polecenia terminalowego 'openspec instructions design --change <change-id>' aby wygenerować dokument techniczny design.md na podstawie propozycji w OpenSpec.",
+  "description": "Komenda /opsx-design. Uruchamia polecenie 'openspec instructions design --change <change-id>' do wygenerowania design.md. Agent ma obowiązek załadować .ai/guidelines/brutally-honest-rules.md i stosować 12 Zasad przy podejmowaniu i komentowaniu decyzji architektonicznych (bezwzględna uczciwość, brak sztucznej pewności siebie, podważenie założeń, zakaz zmyślania metryk/źródeł).",
   "command": "openspec",
   "args": [
     "instructions",

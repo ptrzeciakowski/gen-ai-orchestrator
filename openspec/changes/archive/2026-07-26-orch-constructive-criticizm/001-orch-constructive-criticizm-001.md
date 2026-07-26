@@ -18,8 +18,8 @@ Eksploracja obejmuje trzy spójne usprawnienia orkiestratora Gen AI (`gen-ai-orc
 
 3. **Jednolity Szablon Estymacji (`summary.md`), Wsteczna Migracja & Rejestr `archive/changes-summary.md`**:
    - Standaryzacja pliku `summary.md` generowanego przez skille/narzędzia estymacyjne wg szablonu z `archive/2026-07-26-orchestrator-setup-repos/summary.md`.
-   - Przekształcenie sekcji `## ⏱️ Effort Estimation & Metrics` w spójny układ **tabelaryczny**.
-   - Wprowadzenie do metryk danych sesyjnych: **Wall-clock** (czas trwania), **Ilość tokenów WE/WY (Input/Output Tokens)** oraz **Szacowany Koszt** (uśredniona wartość wyliczona przez sub-agentów estymujących).
+   - Przekształcenie sekcji `## ⏱️ Effort Estimation & Metrics` w spójny układ **tabelaryczny** oparty o roboczogodziny (h) oraz roboczodni (MD).
+   - Wprowadzenie do metryk danych sesyjnych: **Wall-clock** (czas trwania) oraz **Ilość tokenów WE/WY (Input/Output Tokens)**.
    - **Wsteczna aktualizacja**: Przebudowa istniejących plików `summary.md` dla zarchiwizowanych zmian (`2026-07-26-explore-orchestrator-setup` oraz `2026-07-26-orchestrator-setup-repos`) do nowego standardu.
    - **Zbiorczy plik podsumowania**: Utworzenie początkowego `openspec/changes/archive/changes-summary.md` zbierającego metryki wszystkich zarchiwizowanych zmian oraz automatyczne dopisywanie/aktualizowanie go podczas archiwizacji (w procesie `opsx-archive`).
 
@@ -37,10 +37,10 @@ Eksploracja obejmuje trzy spójne usprawnienia orkiestratora Gen AI (`gen-ai-orc
 
 ### 🔴 Luki w Estymacji, Metrykach Sesyjnych i Archiwizacji:
 - Dotychczasowy format estymacji w `summary.md` różnił się w zarchiwizowanych zmianach i brakowało w nim jednoznacznych tabel ze wskaźnikami zużycia tokenów oraz czasu wall-clock.
-- Brak zbiorczego rejestru `openspec/changes/archive/changes-summary.md` utrudniał wgląd w zagregowany koszt i czas trwania wszystkich dotychczasowych prac.
+- Brak zbiorczego rejestru `openspec/changes/archive/changes-summary.md` utrudniał wgląd w zagregowany nakład pracy i czas trwania wszystkich dotychczasowych prac.
 
 ---
 
 ## 3. Podsumowanie Decyzyjne Eksploracji
 
-Zgadzamy się na pełne objęcie powyższego zakresu i przechodzimy do aktualizacji dokumentu **Proposal** (`proposal.md`).
+Zgadzamy się na pełne objęcie powyższego zakresu.
