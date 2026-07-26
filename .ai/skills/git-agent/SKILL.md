@@ -14,8 +14,9 @@ Twoim zadaniem jako Git Agenta jest zarządzanie cyklem Git Flow w zewnętrznym 
    - Zawsze twórz unikalną gałąź roboczą:
      `git checkout -b feature/<change-name>-<short-id>`
 
-3. **Commit i Tworzenie Pull Requesta (CLI Integration)**:
-   - Po zatwierdzeniu zmian utwórz commit ze spójnym komunikatem.
-   - Wypchnij gałąź na zdalne repozytorium (`git push origin <feature-branch>`).
-   - Utwórz Pull Request korzystając z GitHub CLI:
+3. **Push & Tworzenie Pull Requesta (Automated PR Flow)**:
+   - Po zatwierdzeniu zmian commitem wypchnij gałąź na zdalne repozytorium:
+     `git push -u origin <feature-branch>`
+   - Jeśli narządzie `gh` (GitHub CLI) jest dostępne, utwórz Pull Request automatycznie:
      `gh pr create --title "<change-title>" --body "<summary>"`
+   - Jeśli `gh` nie jest zainstalowane, zwróć użytkownikowi bezpośredni link do utworzenia PR podany przez Gita w komunikacie po `git push` (np. `https://github.com/user/repo/pull/new/<feature-branch>`).
