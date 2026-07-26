@@ -44,3 +44,6 @@
 
 ### 2026-07-26 18:58
 > W pliku @[openspec/changes/explore-orchestrator-setup/.sessions] powinny być tylko id sesji i info o tym jaki tool zostały użyty (w tym przypadku AGY)
+
+### 2026-07-26 19:06
+> Dobrze. Dodaj proszę jeszcze tool szacujący czas w roboczo godzinach i przeliczający to na roboczo-dni który szacuje reazlizację zmiany opisanej w proposa i potem design. Tool ma wywoływać 5 niezależnych sub-agentów, którzy takie szacowanie przygotują. Potem ma być w podsumowaniu to pokazane. Tool miałby być wywoływany w momencie archiwizacji zmiany gdzie miałby powstawać plik summary.md.
