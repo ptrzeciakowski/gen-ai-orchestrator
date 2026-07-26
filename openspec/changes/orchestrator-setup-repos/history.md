@@ -9,3 +9,6 @@
 
 ### 2026-07-26 19:33
 > Tak, ale dodajmy to od razu do do setupu tego repozytorium tworząc skrypt openc-spect-agy-init.sh który utworzy pluginy dla agy umożliwające kolejne kroki procesu open-spec... W którym kroku jest realizacja zmiany?
+
+### 2026-07-26 19:40
+> Nie widzę tool-a opsx-implement, taki powinien być i taki sam powinien powstać plugin.
