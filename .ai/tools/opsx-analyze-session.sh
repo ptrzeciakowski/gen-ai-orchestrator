@@ -30,8 +30,9 @@ while read -r line; do
         if [ -f "$LOG_FILE" ]; then
             STEPS=$(cat "$LOG_FILE" | wc -l | tr -d ' ')
             USER_MSGS=$(grep -c '"type":"USER_INPUT"' "$LOG_FILE")
-            START_TIME=$(head -n 1 "$LOG_FILE" | grep -o '"Created At":"[^"]*"' | cut -d'"' -f4)
-            END_TIME=$(tail -n 1 "$LOG_FILE" | grep -o '"Created At":"[^"]*"' | cut -d'"' -f4)
+            START_TIME=$(head -n 1 "$LOG_FILE" | grep -o '"created_at":"[^"]*"' | cut -d'"' -f4)
+            END_TIME=$(tail -n 1 "$LOG_FILE" | grep -o '"created_at":"[^"]*"' | cut -d'"' -f4)
+
             
             echo "  - Czas startu: $START_TIME"
             echo "  - Czas końca:  $END_TIME"
