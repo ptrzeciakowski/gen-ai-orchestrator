@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Główny skrypt uruchomieniowy serwisu wyszukiwarka-nieruchomosci.
+Główny skrypt uruchomieniowy serwisu wyszukiwarka-nieruchomosci (Architektura ELT Bronze / Silver / Gold).
 Odświeża listę ofert na żądanie na podstawie kryteria.md, integruje z RCN Warszawa i zapisuje nowy plik w historia/.
 """
 import sys
@@ -9,6 +9,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from src.config import CriteriaConfig
+from src.db import DatabaseManager
 from src.providers.commercial import CommercialProvider
 from src.providers.direct import DirectProvider
 from src.deduplicator import Deduplicator
@@ -21,10 +22,12 @@ def format_num_or_any(val):
     return f"{val:,}"
 
 def main():
-    print("🏠 Uruchamianie Serwisu Wyszukiwarka Nieruchomości Warszawa...")
+    print("🏠 Uruchamianie Serwisu Wyszukiwarka Nieruchomości Warszawa (Architektura ELT)...")
     
-    # 1. Odczyt konfiguracji z kryteria.md
+    # 1. Odczyt konfiguracji z kryteria.md i inicjalizacja bazy danych SQLite
     config = CriteriaConfig()
+    db_manager = DatabaseManager()
+    print(f"✅ Baza danych SQLite gotowa w: {db_manager.db_path}")
     print(f"✅ Załadowano kryteria z: {config.filepath}")
     print(f"   Dzielnice: {', '.join(config.districts)}")
     
@@ -32,27 +35,25 @@ def main():
     max_p_str = format_num_or_any(config.max_price)
     print(f"   Zakres cenowy: {min_p_str} - {max_p_str} PLN")
 
-    # 2. Pobieranie ofert z providerów
-    comm_provider = CommercialProvider(config)
-    direct_provider = DirectProvider(config)
+    # 2. Pobieranie szerokiego strumienia ogłoszeń do warstwy Bronze (Extract & Load)
+    comm_provider = CommercialProvider(config, db_manager=db_manager)
+    direct_provider = DirectProvider(config, db_manager=db_manager)
 
-    raw_listings = []
-    comm_listings = comm_provider.fetch_listings()
-    direct_listings = direct_provider.fetch_listings()
+    comm_saved = comm_provider.fetch_listings()
+    direct_saved = direct_provider.fetch_listings()
+    total_saved = comm_saved + direct_saved
 
-    raw_listings.extend(comm_listings)
-    raw_listings.extend(direct_listings)
-    print(f"✅ Pobrano {len(raw_listings)} ofert z portali (Otodom, OLX, Morizon, Adresowo, Sprzedajemy, Lento).")
+    print(f"✅ Zapisano {total_saved} surowych obiektów ogłoszeń do warstwy Bronze (bronze_listings).")
 
-    # 3. Deduplikacja
-    dedup = Deduplicator()
-    unique_listings = dedup.deduplicate(raw_listings)
-    print(f"✅ Zredukowano duplikaty do {len(unique_listings)} unikalnych ofert.")
+    # 3. Transformacja w widoku Silver i deduplikacja w widoku Gold
+    dedup = Deduplicator(db_manager=db_manager)
+    gold_listings = dedup.get_gold_listings()
+    print(f"✅ Odczytano {len(gold_listings)} zdeduplikowanych i przefiltrowanych ofert z warstwy Gold (gold_listings).")
 
     # 4. Integracja z RCN Warszawa & Generowanie Raportu
     rcn_client = RCNClient()
     generator = ReportGenerator(config, rcn_client)
-    report_file = generator.generate_report(unique_listings)
+    report_file = generator.generate_report(gold_listings)
 
     print(f"\n🎉 Wygenerowano nowy raport historii w:")
     print(f"👉 {report_file}")

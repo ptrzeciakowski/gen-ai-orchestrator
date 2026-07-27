@@ -1,31 +1,36 @@
 """
-Moduł deduplikacji i konsolidacji ofert nieruchomości pochodzących z różnych źródeł (Otodom, OLX, Morizon, Adresowo).
-Scalanie bazuje na unikalnej kombinacji: Dzielnica + Powierzchnia m² (zaokrąglona do 1m²) + Pokoje + Piętro.
-W przypadku wykrycia tej samej oferty na kilku portalach, priorytetyzowana jest wersja "Bezpośrednio" od właściciela.
+Moduł deduplikacji i konsolidacji ofert nieruchomości pochodzących z różnych źródeł (Otodom, OLX, Adresowo).
+Odczytuje zdeduplikowane i pogrupowane rekordy z widoku gold_listings bazy danych SQLite.
 """
+from src.db import DatabaseManager
 
 class Deduplicator:
-    def deduplicate(self, listings):
-        unique_dict = {}
+    def __init__(self, db_manager=None):
+        self.db_manager = db_manager or DatabaseManager()
 
-        for item in listings:
-            district = item.get("district", "Inna")
-            try:
-                area_rounded = round(float(item.get("area_m2", 0)), 0)
-            except (ValueError, TypeError):
-                area_rounded = 0
-            
-            rooms = item.get("rooms", 0)
-            floor = item.get("floor", 0)
-            
-            key = f"{district}_{area_rounded}_{rooms}_{floor}"
+    def get_gold_listings(self):
+        """
+        Pobiera zdeduplikowane oferty bezpośrednio z widoku gold_listings.
+        """
+        conn = self.db_manager.get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM gold_listings;")
+            rows = cursor.fetchall()
+            return [dict(row) for row in rows]
+        finally:
+            conn.close()
 
-            if key not in unique_dict:
-                unique_dict[key] = item
-            else:
-                existing = unique_dict[key]
-                # Jeśli nowe ogłoszenie jest bezpośrednio od właściciela, a istniejące nie – podmień na bezpośrednie
-                if item.get("seller_type") == "Bezpośrednio" and existing.get("seller_type") != "Bezpośrednio":
+    def deduplicate(self, listings=None):
+        """
+        Zwraca zdeduplikowaną listę ofert na bazie widoku gold_listings.
+        """
+        if listings is not None and len(listings) > 0:
+            unique_dict = {}
+            for item in listings:
+                key = f"{item.get('district')}_{round(float(item.get('area_m2', 0)), 0)}_{item.get('rooms')}_{item.get('floor')}"
+                if key not in unique_dict or (item.get("seller_type") == "Bezpośrednio" and unique_dict[key].get("seller_type") != "Bezpośrednio"):
                     unique_dict[key] = item
-
-        return list(unique_dict.values())
+            return list(unique_dict.values())
+        
+        return self.get_gold_listings()

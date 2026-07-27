@@ -1,10 +1,13 @@
 """
-Provider ogłoszeń bezpośrednich (Zaślepka na Etap 1: Prace skoncentrowane wyłącznie na weryfikacji i stabilności Otodom.pl).
+Provider ogłoszeń bezpośrednich (Warstwa Bronze).
 """
+from src.db import DatabaseManager
+
 class DirectProvider:
-    def __init__(self, config):
+    def __init__(self, config, db_manager=None):
         self.config = config
+        self.db_manager = db_manager or DatabaseManager()
 
     def fetch_listings(self):
-        # W Etapie 1 skupiamy się w 100% na idealnym działaniu Otodom.pl
-        return []
+        # W Etapie 1 skupiamy się w 100% na pobieraniu i przetwarzaniu w strukturze Bronze/Silver/Gold
+        return 0
