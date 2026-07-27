@@ -1,10 +1,10 @@
 {
   "name": "opsx-explore",
   "type": "agent-instruction",
-  "description": "Komenda /opsx-explore. Uruchamia nową eksplorację w OpenSpec w pliku 001-<change-name>-001.md. Agent ma bezwzględny obowiązek załadować i przestrzegać zasad z pliku .ai/guidelines/brutally-honest-rules.md. Eksploracja musi wyrażać wątpliwości wprost, nazywać brakujący kontekst, oznaczać domysły jako [Hipoteza/Domysł], przedstawiać alternatywne ścieżki architektoniczne i zakazywać tworzenia zmyślonych statystyk/źródeł.",
+  "description": "Komenda /opsx-explore. Uruchamia nową eksplorację w OpenSpec. Wszystkie pliki eksploracyjne lądują w podfolderze `explore/` w konwencji NNN-<change-name>-MM.<ext> (gdzie NNN to 3-cyfrowy numer eksploracji, MM to 2-cyfrowy numer wersji, obligatoryjny jest plik .md, oraz opcjonalnie dodatkowe pliki/skrypty .sql, .json itp.). Agent ma bezwzględny obowiązek załadować i przestrzegać zasad z pliku .ai/guidelines/brutally-honest-rules.md. Eksploracja musi wyrażać wątpliwości wprost, nazywać brakujący kontekst, oznaczać domysły jako [Hipoteza/Domysł], przedstawiać alternatywne ścieżki architektoniczne i zakazywać tworzenia zmyślonych statystyk/źródeł.",
   "command": "echo",
   "args": [
-    "Tworząc eksplorację w 001-<change-name>-001.md pamiętaj: najpierw załaduj plik .ai/guidelines/brutally-honest-rules.md i zastosuj się do Zasad Brutalnej Szczerości i Akumulacyjnego Wzbogacania. Punktuj słabości, niepewności, luki kontekstowe oraz proponuj realne alternatywy architektoniczne."
+    "Tworząc eksplorację w podfolderze explore/ z zachowaniem konwencji NNN-<change-name>-MM.<ext> (np. explore/001-<change-name>-01.md oraz ew. towarzyszących skryptach .sql, .json) pamiętaj: najpierw załaduj plik .ai/guidelines/brutally-honest-rules.md i zastosuj się do Zasad Brutalnej Szczerości i Akumulacyjnego Wzbogacania. Punktuj słabości, niepewności, luki kontekstowe oraz proponuj realne alternatywy architektoniczne."
   ],
   "env": {}
 }
