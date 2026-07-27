@@ -1,10 +1,10 @@
 {
   "name": "opsx-implement",
   "type": "agent-instruction",
-  "description": "Komenda do wykonywania implementacji w ramach cyklu OpenSpec. Agent analizuje plik tasks.md dla otwartej zmiany, pobiera z niego pierwsze niezakończone zadanie i wdraża stosowne modyfikacje w repozytorium.",
+  "description": "Komenda /opsx-implement. Instrukcja skilla znajduje się w pliku .ai/skills/opsx-implement/SKILL.md jako Single Source of Truth.",
   "command": "echo",
   "args": [
-    "Przeanalizuj plik tasks.md. Wybierz najbliższe zadanie nieposiadające statusu wykonanego i podejmij techniczne kroki potrzebne do jego wdrożenia. Na końcu swojej pracy poinformuj o sukcesie wykonania zadania i zaproponuj zaktualizowanie pliku tasks.md lub dokonaj tego sam."
+    "Załaduj instrukcję z pliku .ai/skills/opsx-implement/SKILL.md i zrealizuj kolejne niezakończone zadanie z pliku tasks.md."
   ],
   "env": {}
 }

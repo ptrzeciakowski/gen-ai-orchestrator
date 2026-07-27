@@ -1,13 +1,10 @@
 {
   "name": "opsx-design",
   "type": "agent-instruction",
-  "description": "Komenda /opsx-design. Uruchamia polecenie 'openspec instructions design --change <change-id>' do wygenerowania design.md. Agent ma obowiązek załadować .ai/guidelines/brutally-honest-rules.md i stosować 12 Zasad przy podejmowaniu i komentowaniu decyzji architektonicznych (bezwzględna uczciwość, brak sztucznej pewności siebie, podważenie założeń, zakaz zmyślania metryk/źródeł).",
-  "command": "openspec",
+  "description": "Komenda /opsx-design. Instrukcja skilla znajduje się w pliku .ai/skills/opsx-design/SKILL.md jako Single Source of Truth.",
+  "command": "echo",
   "args": [
-    "instructions",
-    "design",
-    "--change",
-    "<change-id>"
+    "Załaduj instrukcję z pliku .ai/skills/opsx-design/SKILL.md oraz wytyczne .ai/guidelines/brutally-honest-rules.md i utwórz lub zaktualizuj plik design.md w katalogu aktywnej zmiany."
   ],
   "env": {}
 }

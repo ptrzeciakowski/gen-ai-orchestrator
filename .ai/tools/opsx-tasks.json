@@ -1,13 +1,10 @@
 {
   "name": "opsx-tasks",
   "type": "agent-instruction",
-  "description": "Komenda /opsx-tasks (lub implementacja). Informuje agenta by użył polecenia 'openspec instructions tasks --change <change-id>' w celu wygenerowania planu wdrożeniowego (tasks.md) dla zaprojektowanej wcześniej architektury.",
-  "command": "openspec",
+  "description": "Komenda /opsx-tasks. Instrukcja skilla znajduje się w pliku .ai/skills/opsx-tasks/SKILL.md jako Single Source of Truth.",
+  "command": "echo",
   "args": [
-    "instructions",
-    "tasks",
-    "--change",
-    "<change-id>"
+    "Załaduj instrukcję z pliku .ai/skills/opsx-tasks/SKILL.md i utwórz lub zaktualizuj plik tasks.md w katalogu aktywnej zmiany."
   ],
   "env": {}
 }
