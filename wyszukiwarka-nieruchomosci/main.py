@@ -16,17 +16,24 @@ from src.deduplicator import Deduplicator
 from src.rcn_client import RCNClient
 from src.report_generator import ReportGenerator
 
+from datetime import datetime
+
 def format_num_or_any(val):
     if val is None:
         return "Dowolny"
     return f"{val:,}"
 
 def main():
-    print("🏠 Uruchamianie Serwisu Wyszukiwarka Nieruchomości Warszawa (Architektura ELT)...")
+    run_id = f"run_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    print(f"🏠 Uruchamianie Serwisu Wyszukiwarka Nieruchomości Warszawa (ELT Run: {run_id})...")
     
     # 1. Odczyt konfiguracji z kryteria.md i inicjalizacja bazy danych SQLite
     config = CriteriaConfig()
     db_manager = DatabaseManager()
+    
+    # Czyszczenie starych danych Bronze przed nowym uruchomieniem dla zachowania czystości izolacji
+    db_manager.clear_bronze()
+    print("🧹 Wyczyszczono warstwę Bronze przed nowym pobraniem.")
     print(f"✅ Baza danych SQLite gotowa w: {db_manager.db_path}")
     print(f"✅ Załadowano kryteria z: {config.filepath}")
     print(f"   Dzielnice: {', '.join(config.districts)}")
@@ -39,14 +46,14 @@ def main():
     comm_provider = CommercialProvider(config, db_manager=db_manager)
     direct_provider = DirectProvider(config, db_manager=db_manager)
 
-    comm_saved = comm_provider.fetch_listings()
-    direct_saved = direct_provider.fetch_listings()
+    comm_saved = comm_provider.fetch_listings(run_id=run_id)
+    direct_saved = direct_provider.fetch_listings(run_id=run_id)
     total_saved = comm_saved + direct_saved
 
-    print(f"✅ Zapisano {total_saved} surowych obiektów ogłoszeń do warstwy Bronze (bronze_listings).")
+    print(f"✅ Zapisano {total_saved} surowych realnych ogłoszeń z Otodom do Bronze (run_id: {run_id}).")
 
     # 3. Transformacja w widoku Silver i deduplikacja w widoku Gold
-    dedup = Deduplicator(db_manager=db_manager)
+    dedup = Deduplicator(config=config, db_manager=db_manager)
     gold_listings = dedup.get_gold_listings()
     print(f"✅ Odczytano {len(gold_listings)} zdeduplikowanych i przefiltrowanych ofert z warstwy Gold (gold_listings).")
 

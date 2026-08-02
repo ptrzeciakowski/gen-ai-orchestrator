@@ -65,53 +65,133 @@ class DatabaseManager:
             cursor.execute("""
             CREATE TABLE IF NOT EXISTS bronze_listings (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+                run_id TEXT,
                 source_portal TEXT NOT NULL,
                 external_id TEXT NOT NULL,
                 city TEXT NOT NULL DEFAULT 'Warszawa',
                 chunk_name TEXT,
                 raw_payload JSON NOT NULL,
                 scraped_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-                UNIQUE(source_portal, external_id) ON CONFLICT REPLACE
+                UNIQUE(run_id, source_portal, external_id) ON CONFLICT REPLACE
             );
             """)
+            
+            # Próba dodania kolumny run_id dla istniejących baz
+            try:
+                cursor.execute("ALTER TABLE bronze_listings ADD COLUMN run_id TEXT;")
+            except Exception:
+                pass
             
             cursor.execute("""
             CREATE INDEX IF NOT EXISTS idx_bronze_source_ext 
             ON bronze_listings(source_portal, external_id);
             """)
 
-            # 2. Widok Silver (MVP Opcja 1: JSON1 Views)
+            # 2. Widok Silver (Obsługa pasywna schematu syntetycznego oraz natywnego Otodom __NEXT_DATA__)
+            cursor.execute("DROP VIEW IF EXISTS silver_listings;")
             cursor.execute("""
-            CREATE VIEW IF NOT EXISTS silver_listings AS
+            CREATE VIEW silver_listings AS
             WITH extracted_data AS (
                 SELECT 
                     b.id AS bronze_id,
+                    b.run_id,
                     b.source_portal,
                     b.external_id,
                     b.scraped_at,
                     json_extract(b.raw_payload, '$.title') AS title,
-                    json_extract(b.raw_payload, '$.url') AS url,
-                    COALESCE(json_extract(b.raw_payload, '$.location.city'), b.city) AS city,
-                    json_extract(b.raw_payload, '$.location.district') AS district,
-                    CAST(json_extract(b.raw_payload, '$.price.value') AS REAL) AS price_pln,
-                    CAST(json_extract(b.raw_payload, '$.area.value') AS REAL) AS area_m2,
-                    CAST(json_extract(b.raw_payload, '$.rooms') AS INTEGER) AS rooms,
-                    CAST(json_extract(b.raw_payload, '$.floor') AS INTEGER) AS floor,
+                    
+                    COALESCE(
+                        json_extract(b.raw_payload, '$.url'),
+                        CASE 
+                            WHEN json_extract(b.raw_payload, '$.slug') IS NOT NULL 
+                            THEN 'https://www.otodom.pl/pl/oferta/' || json_extract(b.raw_payload, '$.slug')
+                            ELSE 'https://www.otodom.pl/pl/oferta/' || b.external_id
+                        END
+                    ) AS url,
+                    
+                    COALESCE(
+                        json_extract(b.raw_payload, '$.location.city'),
+                        json_extract(b.raw_payload, '$.location.address.city.name'),
+                        b.city
+                    ) AS city,
+                    
+                    COALESCE(
+                        json_extract(b.raw_payload, '$.location.district'),
+                        json_extract(b.raw_payload, '$.location.address.district.name'),
+                        (
+                            SELECT json_extract(value, '$.name')
+                            FROM json_each(b.raw_payload, '$.location.reverseGeocoding.locations')
+                            WHERE json_extract(value, '$.locationLevel') = 'district'
+                            LIMIT 1
+                        ),
+                        b.chunk_name
+                    ) AS district,
+
+                    CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.price.value'),
+                        json_extract(b.raw_payload, '$.totalPrice.value')
+                    ) AS REAL) AS price_pln,
+                    
+                    CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.area.value'),
+                        json_extract(b.raw_payload, '$.areaInSquareMeters')
+                    ) AS REAL) AS area_m2,
+                    
+                    CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.rooms'),
+                        CASE json_extract(b.raw_payload, '$.roomsNumber')
+                            WHEN 'ONE' THEN 1
+                            WHEN 'TWO' THEN 2
+                            WHEN 'THREE' THEN 3
+                            WHEN 'FOUR' THEN 4
+                            WHEN 'FIVE' THEN 5
+                            ELSE CAST(json_extract(b.raw_payload, '$.roomsNumber') AS INTEGER)
+                        END
+                    ) AS INTEGER) AS rooms,
+                    
+                    CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.floor'),
+                        CASE json_extract(b.raw_payload, '$.floorNumber')
+                            WHEN 'GROUND_FLOOR' THEN 0
+                            WHEN 'FIRST' THEN 1
+                            WHEN 'SECOND' THEN 2
+                            WHEN 'THIRD' THEN 3
+                            WHEN 'FOURTH' THEN 4
+                            WHEN 'FIFTH' THEN 5
+                            WHEN 'SIXTH' THEN 6
+                            WHEN 'SEVENTH' THEN 7
+                            WHEN 'EIGHTH' THEN 8
+                            WHEN 'NINTH' THEN 9
+                            WHEN 'TENTH' THEN 10
+                            ELSE NULL
+                        END
+                    ) AS INTEGER) AS floor,
+                    
                     CAST(json_extract(b.raw_payload, '$.total_floors') AS INTEGER) AS total_floors,
                     
                     COALESCE(
                         CAST(json_extract(b.raw_payload, '$.features.elevator') AS INTEGER),
                         CASE 
                             WHEN json_extract(b.raw_payload, '$.description') LIKE '%winda%' 
-                              OR json_extract(b.raw_payload, '$.description') LIKE '%windą%' THEN 1 
-                            ELSE 0 
+                              OR json_extract(b.raw_payload, '$.description') LIKE '%windą%'
+                              OR json_extract(b.raw_payload, '$.shortDescription') LIKE '%winda%'
+                              OR json_extract(b.raw_payload, '$.shortDescription') LIKE '%windą%' THEN 1 
+                            ELSE 1 
                         END
                     ) AS has_elevator,
                     
                     CAST(json_extract(b.raw_payload, '$.location.coordinates.latitude') AS REAL) AS lat,
                     CAST(json_extract(b.raw_payload, '$.location.coordinates.longitude') AS REAL) AS lon,
-                    json_extract(b.raw_payload, '$.seller_type') AS seller_type,
-                    json_extract(b.raw_payload, '$.description') AS description_text,
+                    
+                    COALESCE(
+                        json_extract(b.raw_payload, '$.seller_type'),
+                        CASE WHEN json_extract(b.raw_payload, '$.isPrivateOwner') = 1 THEN 'Bezpośrednio' ELSE 'Agencja' END
+                    ) AS seller_type,
+                    
+                    COALESCE(
+                        json_extract(b.raw_payload, '$.description'),
+                        json_extract(b.raw_payload, '$.shortDescription')
+                    ) AS description_text,
                     b.raw_payload
                 FROM bronze_listings b
             )
@@ -126,13 +206,14 @@ class DatabaseManager:
             """)
 
             # 3. Widok Gold (Deduplikacja międzyserwisowa)
+            cursor.execute("DROP VIEW IF EXISTS gold_listings;")
             cursor.execute("""
-            CREATE VIEW IF NOT EXISTS gold_listings AS
+            CREATE VIEW gold_listings AS
             WITH deduplicated AS (
                 SELECT 
                     COALESCE(
                         ROUND(lat, 3) || '_' || ROUND(lon, 3) || '_' || ROUND(area_m2, 1) || '_' || rooms,
-                        district || '_' || ROUND(area_m2, 1) || '_' || rooms || '_' || floor
+                        district || '_' || ROUND(area_m2, 1) || '_' || rooms || '_' || floor || '_' || CAST(price_pln AS INT)
                     ) AS dedup_fingerprint,
                     MIN(bronze_id) AS primary_bronze_id,
                     GROUP_CONCAT(source_portal || ':' || external_id, ', ') AS source_portals_list,
@@ -149,10 +230,12 @@ class DatabaseManager:
                     floor,
                     total_floors,
                     has_elevator,
+                    is_last_floor,
                     seller_type,
                     lat,
                     lon,
-                    scraped_at
+                    scraped_at,
+                    run_id
                 FROM silver_listings
                 GROUP BY dedup_fingerprint
             )
@@ -162,7 +245,22 @@ class DatabaseManager:
         finally:
             conn.close()
 
-    def insert_bronze_listing(self, source_portal, external_id, city, chunk_name, raw_payload):
+    def clear_bronze(self, source_portal=None):
+        """
+        Czyści dane z tabeli bronze_listings.
+        """
+        conn = self.get_connection()
+        try:
+            cursor = conn.cursor()
+            if source_portal:
+                cursor.execute("DELETE FROM bronze_listings WHERE source_portal = ?;", (source_portal,))
+            else:
+                cursor.execute("DELETE FROM bronze_listings;")
+            conn.commit()
+        finally:
+            conn.close()
+
+    def insert_bronze_listing(self, source_portal, external_id, city, chunk_name, raw_payload, run_id=None):
         """
         Wstawia surowy obiekt JSON ogłoszenia do tabeli bronze_listings.
         """
@@ -171,9 +269,9 @@ class DatabaseManager:
         try:
             cursor = conn.cursor()
             cursor.execute("""
-            INSERT OR REPLACE INTO bronze_listings (source_portal, external_id, city, chunk_name, raw_payload)
-            VALUES (?, ?, ?, ?, ?)
-            """, (source_portal, external_id, city, chunk_name, payload_str))
+            INSERT OR REPLACE INTO bronze_listings (run_id, source_portal, external_id, city, chunk_name, raw_payload)
+            VALUES (?, ?, ?, ?, ?, ?)
+            """, (run_id, source_portal, external_id, city, chunk_name, payload_str))
             conn.commit()
         finally:
             conn.close()

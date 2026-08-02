@@ -80,11 +80,16 @@ class ReportGenerator:
         for item in processed_listings:
             delta_str = f"+{item['rcn_delta_pct']}%" if item['rcn_delta_pct'] > 0 else f"{item['rcn_delta_pct']}%"
             badge = "🟢 " if item['rcn_delta_pct'] < 5 else "🟡 "
-            source_val = item.get('source', item.get('source_portals_list', 'Otodom'))
-            seller_val = item.get('seller_type') or 'Agencja'
+            
+            # Czyszczenie znaków podziału | oraz nowej linii \n,\r, które niszczą składnię tabel Markdown
+            clean_title = str(item.get('title') or '').replace('|', '/').replace('\n', ' ').replace('\r', ' ').strip()
+            clean_district = str(item.get('district') or '').replace('|', '/').replace('\n', ' ').replace('\r', ' ').strip()
+            source_val = str(item.get('source', item.get('source_portals_list', 'Otodom'))).replace('|', '/').replace('\n', ' ').strip()
+            seller_val = str(item.get('seller_type') or 'Agencja').replace('|', '/').replace('\n', ' ').strip()
             url_val = item.get('url') or '#'
+
             md_lines.append(
-                f"| {item['title']} | {item['district']} | {item['area_m2']} | {item['rooms']} | {item['price_pln']:,} zł | {item['price_per_m2']:,} | {item['rcn_avg_price_m2']:,} | {item['rcn_p50_m2']:,} | {badge}{delta_str} | {seller_val} | {source_val} | [Zobacz]({url_val}) |"
+                f"| {clean_title} | {clean_district} | {item['area_m2']} | {item['rooms']} | {item['price_pln']:,} zł | {item['price_per_m2']:,} | {item['rcn_avg_price_m2']:,} | {item['rcn_p50_m2']:,} | {badge}{delta_str} | {seller_val} | {source_val} | [Zobacz]({url_val}) |"
             )
 
         md_lines.append("")
@@ -99,9 +104,11 @@ class ReportGenerator:
             top3 = processed_listings[:3]
             md_lines.append("### 🏆 Top 3 Najbardziej Opłacalne Nieruchomości (Wskaźnik Cena / RCN / Bezpośrednio)")
             for i, top in enumerate(top3, 1):
-                source_top = top.get('source', top.get('source_portals_list', 'Otodom'))
-                seller_top = top.get('seller_type') or 'Agencja'
-                md_lines.append(f"#### {i}. {top['title']} ({top['district']})")
+                clean_top_title = str(top.get('title') or '').replace('|', '/').replace('\n', ' ').replace('\r', ' ').strip()
+                clean_top_district = str(top.get('district') or '').replace('|', '/').replace('\n', ' ').strip()
+                source_top = str(top.get('source', top.get('source_portals_list', 'Otodom'))).replace('|', '/').strip()
+                seller_top = str(top.get('seller_type') or 'Agencja').replace('|', '/').strip()
+                md_lines.append(f"#### {i}. {clean_top_title} ({clean_top_district})")
                 md_lines.append(f"- **Cena całkowita**: {top['price_pln']:,} PLN ({top['price_per_m2']:,} PLN/m²)")
                 md_lines.append(f"- **Porównanie do RCN**: Średnia RCN = {top['rcn_avg_price_m2']:,} PLN/m², Mediana P50 = {top['rcn_p50_m2']:,} PLN/m², 1. Kwartyl P25 = {top['rcn_p25_m2']:,} PLN/m².")
                 md_lines.append(f"- **Ocena rynkowa**: Cena oferty to **{top['rcn_status']}** ({top['rcn_delta_pct']}% vs średnia RCN).")
@@ -161,8 +168,9 @@ class ReportGenerator:
             md_lines.append("| Data Aktu | Dzielnica | Lokalizacja / Ulica | Pow. (m²) | Cena Całkowita (PLN) | Cena Transakcyjna (PLN/m²) | Numer Aktu Notarialnego |")
             md_lines.append("| --- | --- | --- | --- | --- | --- | --- |")
             for tx in sample_txs:
+                clean_street = str(tx['street']).replace('|', '/').replace('\n', ' ').strip()
                 md_lines.append(
-                    f"| {tx['date']} | {tx['district']} | **{tx['street']}** | {tx['area_m2']} m² | {tx['total_price_pln']:,} zł | **{tx['price_per_m2']:,} PLN/m²** | `{tx['deed_no']}` |"
+                    f"| {tx['date']} | {tx['district']} | **{clean_street}** | {tx['area_m2']} m² | {tx['total_price_pln']:,} zł | **{tx['price_per_m2']:,} PLN/m²** | `{tx['deed_no']}` |"
                 )
             md_lines.append("")
 
