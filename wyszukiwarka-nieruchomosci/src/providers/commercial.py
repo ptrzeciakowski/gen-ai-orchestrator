@@ -7,6 +7,7 @@ Wdrożona strategia Extraction Chunks:
 import urllib.request
 import re
 import json
+import time
 from src.db import DatabaseManager
 
 class CommercialProvider:
@@ -41,9 +42,18 @@ class CommercialProvider:
 
                     url = f"https://www.otodom.pl/pl/oferty/sprzedaz/mieszkanie/{city_slug}/{district_slug}?limit=36&page={page}&market={market.upper()}{extra_params}"
                     headers = {
-                        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                        'Accept-Language': 'pl-PL,pl;q=0.9,en;q=0.8'
+                        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+                        'Accept-Language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
+                        'Cache-Control': 'max-age=0',
+                        'Sec-Ch-Ua': '"Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"',
+                        'Sec-Ch-Ua-Mobile': '?0',
+                        'Sec-Ch-Ua-Platform': '"macOS"',
+                        'Sec-Fetch-Dest': 'document',
+                        'Sec-Fetch-Mode': 'navigate',
+                        'Sec-Fetch-Site': 'none',
+                        'Sec-Fetch-User': '?1',
+                        'Upgrade-Insecure-Requests': '1'
                     }
                     req = urllib.request.Request(url, headers=headers)
                     
@@ -68,25 +78,6 @@ class CommercialProvider:
                             
                             for item in items:
                                 ext_id = str(item.get('id') or item.get('slug'))
-                                slug_or_id = str(item.get('slug') or item.get('id') or ext_id)
-                                
-                                # Pobranie ustrukturyzowanych cech z karty oferty (m.in. winda, ogrod, garaz)
-                                if 'target' not in item and slug_or_id:
-                                    try:
-                                        detail_url = f"https://www.otodom.pl/pl/oferta/{slug_or_id}"
-                                        req_d = urllib.request.Request(detail_url, headers=headers)
-                                        with urllib.request.urlopen(req_d, timeout=4) as resp_d:
-                                            html_d = resp_d.read().decode('utf-8')
-                                            m_d = re.search(r'<script id=\"__NEXT_DATA__\"[^>]*>(.*?)</script>', html_d, re.DOTALL)
-                                            if m_d:
-                                                data_d = json.loads(m_d.group(1))
-                                                ad_d = data_d.get('props', {}).get('pageProps', {}).get('ad', {})
-                                                if ad_d.get('target'):
-                                                    item['target'] = ad_d.get('target')
-                                                    item['characteristics'] = ad_d.get('characteristics')
-                                    except Exception:
-                                        pass
-
                                 self.db_manager.insert_bronze_listing(
                                     source_portal="otodom",
                                     external_id=ext_id,
@@ -126,5 +117,12 @@ class CommercialProvider:
 
                     except Exception as e:
                         print(f"Błąd pobierania Otodom dla {district} ({market}, strona {page}): {e}")
+                        break
+                    
+                    time.sleep(0.2)
+                    page += 1
+
+        if expected_total_otodom is not None and run_id:
+            self.db_manager.save_run_audit(run_id, "otodom", expected_total_otodom, saved_count)
 
         return saved_count
