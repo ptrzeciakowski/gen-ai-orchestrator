@@ -40,7 +40,8 @@ class DatabaseManager:
             base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             db_path = os.path.join(base_dir, "data", "listings.db")
         self.db_path = db_path
-        os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
+        if self.db_path != ":memory:" and os.path.dirname(self.db_path):
+            os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
         self.init_db()
 
     def get_connection(self):
@@ -87,7 +88,7 @@ class DatabaseManager:
             ON bronze_listings(source_portal, external_id);
             """)
 
-            # 2. Widok Silver (Obsługa pasywna schematu syntetycznego oraz natywnego Otodom __NEXT_DATA__)
+            # 2. Widok Silver (Obsługa pasywna schematu syntetycznego, natywnego Otodom __NEXT_DATA__ oraz Adresowo.pl)
             cursor.execute("DROP VIEW IF EXISTS silver_listings;")
             cursor.execute("""
             CREATE VIEW silver_listings AS
@@ -98,7 +99,10 @@ class DatabaseManager:
                     b.source_portal,
                     b.external_id,
                     b.scraped_at,
-                    json_extract(b.raw_payload, '$.title') AS title,
+                    COALESCE(
+                        json_extract(b.raw_payload, '$.title'),
+                        json_extract(b.raw_payload, '$.place_ld.name')
+                    ) AS title,
                     
                     COALESCE(
                         json_extract(b.raw_payload, '$.url'),
@@ -128,11 +132,13 @@ class DatabaseManager:
                     ) AS district,
 
                     CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.price_pln'),
                         json_extract(b.raw_payload, '$.price.value'),
                         json_extract(b.raw_payload, '$.totalPrice.value')
                     ) AS REAL) AS price_pln,
                     
                     CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.area_m2'),
                         json_extract(b.raw_payload, '$.area.value'),
                         json_extract(b.raw_payload, '$.areaInSquareMeters')
                     ) AS REAL) AS area_m2,
@@ -170,6 +176,7 @@ class DatabaseManager:
                     CAST(json_extract(b.raw_payload, '$.total_floors') AS INTEGER) AS total_floors,
                     
                     COALESCE(
+                        CAST(json_extract(b.raw_payload, '$.has_elevator') AS INTEGER),
                         CAST(json_extract(b.raw_payload, '$.features.elevator') AS INTEGER),
                         CAST(json_extract(b.raw_payload, '$.hasElevator') AS INTEGER),
                         CASE 
@@ -182,8 +189,15 @@ class DatabaseManager:
                         END
                     ) AS has_elevator,
                     
-                    CAST(json_extract(b.raw_payload, '$.location.coordinates.latitude') AS REAL) AS lat,
-                    CAST(json_extract(b.raw_payload, '$.location.coordinates.longitude') AS REAL) AS lon,
+                    CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.location.coordinates.latitude'),
+                        json_extract(b.raw_payload, '$.place_ld.geo.latitude')
+                    ) AS REAL) AS lat,
+                    
+                    CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.location.coordinates.longitude'),
+                        json_extract(b.raw_payload, '$.place_ld.geo.longitude')
+                    ) AS REAL) AS lon,
                     
                     COALESCE(
                         json_extract(b.raw_payload, '$.seller_type'),
@@ -191,6 +205,7 @@ class DatabaseManager:
                     ) AS seller_type,
                     
                     COALESCE(
+                        json_extract(b.raw_payload, '$.description_text'),
                         json_extract(b.raw_payload, '$.description'),
                         json_extract(b.raw_payload, '$.shortDescription')
                     ) AS description_text,
@@ -207,7 +222,7 @@ class DatabaseManager:
             FROM extracted_data e;
             """)
 
-            # 3. Widok Gold (Deduplikacja międzyserwisowa)
+            # 3. Widok Gold (Deduplikacja międzyserwisowa i flaga nowości is_new_listing)
             cursor.execute("DROP VIEW IF EXISTS gold_listings;")
             cursor.execute("""
             CREATE VIEW gold_listings AS
@@ -218,6 +233,8 @@ class DatabaseManager:
                         district || '_' || ROUND(area_m2, 1) || '_' || rooms || '_' || floor || '_' || CAST(price_pln AS INT)
                     ) AS dedup_fingerprint,
                     MIN(bronze_id) AS primary_bronze_id,
+                    MIN(external_id) AS external_id,
+                    MIN(source_portal) AS source_portal,
                     GROUP_CONCAT(source_portal || ':' || external_id, ', ') AS source_portals_list,
                     MIN(price_pln) AS min_price_pln,
                     MAX(price_pln) AS max_price_pln,
@@ -239,9 +256,22 @@ class DatabaseManager:
                     scraped_at,
                     run_id
                 FROM silver_listings
-                GROUP BY dedup_fingerprint
+                GROUP BY dedup_fingerprint, run_id
             )
-            SELECT * FROM deduplicated;
+            SELECT 
+                d.*,
+                CASE 
+                    WHEN NOT EXISTS (
+                        SELECT 1 FROM silver_listings s_prev 
+                        WHERE s_prev.run_id != d.run_id 
+                          AND s_prev.scraped_at < d.scraped_at 
+                          AND COALESCE(
+                              ROUND(s_prev.lat, 3) || '_' || ROUND(s_prev.lon, 3) || '_' || ROUND(s_prev.area_m2, 1) || '_' || s_prev.rooms,
+                              s_prev.district || '_' || ROUND(s_prev.area_m2, 1) || '_' || s_prev.rooms || '_' || s_prev.floor || '_' || CAST(s_prev.price_pln AS INT)
+                          ) = d.dedup_fingerprint
+                    ) THEN 1 ELSE 0 
+                END AS is_new_listing
+            FROM deduplicated d;
             """)
             conn.commit()
         finally:

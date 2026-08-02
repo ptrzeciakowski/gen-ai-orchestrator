@@ -12,6 +12,7 @@ from src.config import CriteriaConfig
 from src.db import DatabaseManager
 from src.providers.commercial import CommercialProvider
 from src.providers.direct import DirectProvider
+from src.providers.adresowo import AdresowoProvider
 from src.deduplicator import Deduplicator
 from src.rcn_client import RCNClient
 from src.report_generator import ReportGenerator
@@ -31,10 +32,7 @@ def main():
     config = CriteriaConfig()
     db_manager = DatabaseManager()
     
-    # Czyszczenie starych danych Bronze przed nowym uruchomieniem dla zachowania czystości izolacji
-    db_manager.clear_bronze()
-    print("🧹 Wyczyszczono warstwę Bronze przed nowym pobraniem.")
-    print(f"✅ Baza danych SQLite gotowa w: {db_manager.db_path}")
+    print(f"✅ Baza danych SQLite gotowa w: {db_manager.db_path} (Retencja historyczna włączona)")
     print(f"✅ Załadowano kryteria z: {config.filepath}")
     print(f"   Dzielnice: {', '.join(config.districts)}")
     
@@ -42,19 +40,21 @@ def main():
     max_p_str = format_num_or_any(config.max_price)
     print(f"   Zakres cenowy: {min_p_str} - {max_p_str} PLN")
 
-    # 2. Pobieranie szerokiego strumienia ogłoszeń do warstwy Bronze (Extract & Load)
+    # 2. Pobieranie szerokiego strumienia ogłoszeń do warstwy Bronze (Otodom & Adresowo)
     comm_provider = CommercialProvider(config, db_manager=db_manager)
     direct_provider = DirectProvider(config, db_manager=db_manager)
+    adresowo_provider = AdresowoProvider(config, db_manager=db_manager)
 
     comm_saved = comm_provider.fetch_listings(run_id=run_id)
     direct_saved = direct_provider.fetch_listings(run_id=run_id)
-    total_saved = comm_saved + direct_saved
+    adresowo_saved = adresowo_provider.fetch_listings(run_id=run_id)
+    total_saved = comm_saved + direct_saved + adresowo_saved
 
-    print(f"✅ Zapisano {total_saved} surowych realnych ogłoszeń z Otodom do Bronze (run_id: {run_id}).")
+    print(f"✅ Zapisano {total_saved} surowych realnych ogłoszeń (Otodom: {comm_saved + direct_saved}, Adresowo: {adresowo_saved}) do Bronze (run_id: {run_id}).")
 
     # 3. Transformacja w widoku Silver i deduplikacja w widoku Gold
     dedup = Deduplicator(config=config, db_manager=db_manager)
-    gold_listings = dedup.get_gold_listings()
+    gold_listings = dedup.get_gold_listings(run_id=run_id)
     print(f"✅ Odczytano {len(gold_listings)} zdeduplikowanych i przefiltrowanych ofert z warstwy Gold (gold_listings).")
 
     # 4. Integracja z RCN Warszawa & Generowanie Raportu
