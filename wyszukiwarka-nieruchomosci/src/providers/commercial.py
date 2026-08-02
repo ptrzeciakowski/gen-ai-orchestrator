@@ -21,14 +21,16 @@ class CommercialProvider:
         districts = self.config.districts if self.config.districts else ["Ursynów"]
         
         saved_count = 0
-
+        expected_total_otodom = None
+        
         for district in districts:
             district_slug = district.lower().replace('ó', 'o').replace('ł', 'l').replace('ś', 's').replace('ż', 'z').replace('ź', 'z')
             
             markets = ["wtorny", "pierwotny"]
             for market in markets:
                 chunk_name = f"{city_slug}_{district_slug}_{market}"
-                for page in range(1, self.max_pages + 1):
+                page = 1
+                while page <= self.max_pages:
                     extra_params = ""
                     if self.config.min_price:
                         extra_params += f"&priceMin={int(self.config.min_price)}"
@@ -55,6 +57,14 @@ class CommercialProvider:
                             data = json.loads(m.group(1))
                             search_ads = data.get('props', {}).get('pageProps', {}).get('data', {}).get('searchAds', {})
                             items = search_ads.get('items', [])
+                            
+                            # Ekstrakcja zadeklarowanej liczby ofert z Otodom
+                            pagination_meta = search_ads.get('pagination', {})
+                            if pagination_meta.get('totalCount') and expected_total_otodom is None:
+                                expected_total_otodom = pagination_meta.get('totalCount')
+
+                            if not items:
+                                break
                             
                             for item in items:
                                 ext_id = str(item.get('id') or item.get('slug'))

@@ -88,6 +88,20 @@ class DatabaseManager:
             ON bronze_listings(source_portal, external_id);
             """)
 
+            # 1b. Tabela Audytowa Kompletności Uruchomień (run_audit)
+            cursor.execute("""
+            CREATE TABLE IF NOT EXISTS run_audit (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                run_id TEXT NOT NULL,
+                source_portal TEXT NOT NULL,
+                expected_total INTEGER,
+                saved_bronze INTEGER,
+                completeness_pct REAL,
+                run_timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(run_id, source_portal) ON CONFLICT REPLACE
+            );
+            """)
+
             # 2. Widok Silver (Obsługa pasywna schematu syntetycznego, natywnego Otodom __NEXT_DATA__ oraz Adresowo.pl)
             cursor.execute("DROP VIEW IF EXISTS silver_listings;")
             cursor.execute("""
@@ -289,6 +303,35 @@ class DatabaseManager:
             else:
                 cursor.execute("DELETE FROM bronze_listings;")
             conn.commit()
+        finally:
+            conn.close()
+
+    def save_run_audit(self, run_id, source_portal, expected_total, saved_bronze):
+        """
+        Zapisuje metryki kompletności zrzutu w tabeli run_audit.
+        """
+        pct = round((saved_bronze / expected_total) * 100.0, 1) if expected_total and expected_total > 0 else 100.0
+        conn = self.get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("""
+            INSERT OR REPLACE INTO run_audit (run_id, source_portal, expected_total, saved_bronze, completeness_pct)
+            VALUES (?, ?, ?, ?, ?)
+            """, (run_id, source_portal, expected_total, saved_bronze, pct))
+            conn.commit()
+        finally:
+            conn.close()
+
+    def get_run_audits(self, run_id):
+        """
+        Pobiera audyt kompletności dla wskazanego run_id.
+        """
+        conn = self.get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM run_audit WHERE run_id = ?;", (run_id,))
+            rows = cursor.fetchall()
+            return [dict(r) for r in rows]
         finally:
             conn.close()
 

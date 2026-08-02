@@ -26,12 +26,15 @@ class AdresowoProvider:
             'Accept-Language': 'pl-PL,pl;q=0.9,en;q=0.8'
         }
 
+        expected_total_adresowo = None
         for district in districts:
             district_slug = district.lower().replace('ó', 'o').replace('ł', 'l').replace('ś', 's').replace('ż', 'z').replace('ź', 'z')
             district_slug_q = f"{district_slug}-Q"
             chunk_name = f"{city_slug}_{district_slug}_adresowo"
 
-            for page in range(1, self.max_pages + 1):
+            page = 1
+            max_limit_pages = 10
+            while page <= max_limit_pages:
                 page_suffix = f"_l{page}" if page > 1 else ""
                 url = f"https://adresowo.pl/mieszkania/{city_slug}/{district_slug_q}/{page_suffix}"
                 req = urllib.request.Request(url, headers=headers)
@@ -40,8 +43,16 @@ class AdresowoProvider:
                     with urllib.request.urlopen(req, timeout=10) as resp:
                         html = resp.read().decode('utf-8')
 
+                    # Wyciągamy deklarowaną przez portal całkowitą liczbę ofert na Ursynowie
+                    if expected_total_adresowo is None:
+                        m_total = re.search(r'(\d+)\s*oferty', html, re.IGNORECASE) or re.search(r'Zobacz\s*(\d+)\s*aktualnych', html, re.IGNORECASE)
+                        if m_total:
+                            expected_total_adresowo = int(m_total.group(1))
+
                     # Odnośniki do konkretnych ofert /o/...
                     offer_hrefs = list(set(re.findall(r'href=\"(/o/[^\"]+)\"', html)))
+                    if not offer_hrefs:
+                        break
                     
                     for clean_href in offer_hrefs:
                         ext_id = clean_href.split('/')[-1]
@@ -148,5 +159,14 @@ class AdresowoProvider:
 
                 except Exception as e:
                     print(f"Błąd pobierania listy Adresowo dla {district} (strona {page}): {e}")
+                    break
+                
+                if expected_total_adresowo and saved_count >= expected_total_adresowo:
+                    break
+
+                page += 1
+
+        if expected_total_adresowo is not None and run_id:
+            self.db_manager.save_run_audit(run_id, "adresowo", expected_total_adresowo, saved_count)
 
         return saved_count

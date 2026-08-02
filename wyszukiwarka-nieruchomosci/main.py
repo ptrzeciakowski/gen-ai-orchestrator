@@ -48,9 +48,16 @@ def main():
     comm_saved = comm_provider.fetch_listings(run_id=run_id)
     direct_saved = direct_provider.fetch_listings(run_id=run_id)
     adresowo_saved = adresowo_provider.fetch_listings(run_id=run_id)
-    total_saved = comm_saved + direct_saved + adresowo_saved
-
     print(f"✅ Zapisano {total_saved} surowych realnych ogłoszeń (Otodom: {comm_saved + direct_saved}, Adresowo: {adresowo_saved}) do Bronze (run_id: {run_id}).")
+
+    # Audyt Kompletności
+    audits = db_manager.get_run_audits(run_id=run_id)
+    for a in audits:
+        portal = a.get('source_portal', '').capitalize()
+        saved = a.get('saved_bronze', 0)
+        expected = a.get('expected_total', 0)
+        pct = a.get('completeness_pct', 100.0)
+        print(f"📊 Audyt Kompletności {portal}: {saved}/{expected} ({pct}% kompletności w Bronze)")
 
     # 3. Transformacja w widoku Silver i deduplikacja w widoku Gold
     dedup = Deduplicator(config=config, db_manager=db_manager)
