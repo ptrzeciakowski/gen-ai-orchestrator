@@ -58,6 +58,25 @@ class CommercialProvider:
                             
                             for item in items:
                                 ext_id = str(item.get('id') or item.get('slug'))
+                                slug_or_id = str(item.get('slug') or item.get('id') or ext_id)
+                                
+                                # Pobranie ustrukturyzowanych cech z karty oferty (m.in. winda, ogrod, garaz)
+                                if 'target' not in item and slug_or_id:
+                                    try:
+                                        detail_url = f"https://www.otodom.pl/pl/oferta/{slug_or_id}"
+                                        req_d = urllib.request.Request(detail_url, headers=headers)
+                                        with urllib.request.urlopen(req_d, timeout=4) as resp_d:
+                                            html_d = resp_d.read().decode('utf-8')
+                                            m_d = re.search(r'<script id=\"__NEXT_DATA__\"[^>]*>(.*?)</script>', html_d, re.DOTALL)
+                                            if m_d:
+                                                data_d = json.loads(m_d.group(1))
+                                                ad_d = data_d.get('props', {}).get('pageProps', {}).get('ad', {})
+                                                if ad_d.get('target'):
+                                                    item['target'] = ad_d.get('target')
+                                                    item['characteristics'] = ad_d.get('characteristics')
+                                    except Exception:
+                                        pass
+
                                 self.db_manager.insert_bronze_listing(
                                     source_portal="otodom",
                                     external_id=ext_id,

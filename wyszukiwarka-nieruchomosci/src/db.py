@@ -171,12 +171,14 @@ class DatabaseManager:
                     
                     COALESCE(
                         CAST(json_extract(b.raw_payload, '$.features.elevator') AS INTEGER),
+                        CAST(json_extract(b.raw_payload, '$.hasElevator') AS INTEGER),
                         CASE 
+                            WHEN json_extract(b.raw_payload, '$.target.Extras_types') LIKE '%lift%' THEN 1
                             WHEN json_extract(b.raw_payload, '$.description') LIKE '%winda%' 
                               OR json_extract(b.raw_payload, '$.description') LIKE '%windą%'
                               OR json_extract(b.raw_payload, '$.shortDescription') LIKE '%winda%'
                               OR json_extract(b.raw_payload, '$.shortDescription') LIKE '%windą%' THEN 1 
-                            ELSE 1 
+                            ELSE 0 
                         END
                     ) AS has_elevator,
                     
