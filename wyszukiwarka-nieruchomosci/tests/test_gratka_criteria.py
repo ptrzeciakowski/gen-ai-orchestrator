@@ -84,17 +84,10 @@ class TestGratkaCriteria(unittest.TestCase):
         url_page1 = provider.build_search_url("Warszawa", "Ursynów", page=1)
         url_page2 = provider.build_search_url("Warszawa", "Śródmieście", page=2)
 
-        self.assertIn("https://gratka.pl/nieruchomosci/mieszkania/warszawa/ursynow/sprzedaz?", url_page1)
-        self.assertIn("cena-calkowita:min=1000000", url_page1)
-        self.assertIn("cena-calkowita:max=1050000", url_page1)
-        self.assertIn("liczba-pokoi:min=3", url_page1)
-        self.assertIn("liczba-pokoi:max=3", url_page1)
-        self.assertIn("powierzchnia-w-m2:min=50", url_page1)
-        self.assertIn("powierzchnia-w-m2:max=80", url_page1)
+        self.assertEqual("https://gratka.pl/nieruchomosci/mieszkania/warszawa/ursynow/sprzedaz", url_page1)
         self.assertNotIn("page=", url_page1)
 
-        self.assertIn("https://gratka.pl/nieruchomosci/mieszkania/warszawa/srodmiescie/sprzedaz?", url_page2)
-        self.assertIn("page=2", url_page2)
+        self.assertEqual("https://gratka.pl/nieruchomosci/mieszkania/warszawa/srodmiescie/sprzedaz?page=2", url_page2)
 
     def test_html_and_json_ld_parsing(self):
         """Test parsowania mocka strony listy i detalu Gratka.pl"""

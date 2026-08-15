@@ -362,6 +362,43 @@ class DatabaseManager:
         finally:
             conn.close()
 
+    def get_latest_bronze_info(self, city=None):
+        """
+        Pobiera metadane o najświeższym zrzucie w warstwie Bronze.
+        Zwraca słownik z run_id, scraped_at, total_listings i statystykami portali lub None.
+        """
+        conn = self.get_connection()
+        try:
+            cursor = conn.cursor()
+            query = "SELECT run_id, MAX(scraped_at) AS last_scraped, COUNT(*) AS count FROM bronze_listings"
+            params = []
+            if city:
+                query += " WHERE city = ?"
+                params.append(city)
+            query += " GROUP BY run_id ORDER BY last_scraped DESC LIMIT 1;"
+            cursor.execute(query, params)
+            row = cursor.fetchone()
+            if not row or not row["run_id"]:
+                return None
+            
+            latest_run_id = row["run_id"]
+            last_scraped = row["last_scraped"]
+            total_count = row["count"]
+
+            # Pobieramy rozkład per portal
+            cursor.execute("SELECT source_portal, COUNT(*) as p_count FROM bronze_listings WHERE run_id = ? GROUP BY source_portal;", (latest_run_id,))
+            p_rows = cursor.fetchall()
+            portals_map = {r["source_portal"]: r["p_count"] for r in p_rows}
+
+            return {
+                "run_id": latest_run_id,
+                "last_scraped_at": last_scraped,
+                "total_listings": total_count,
+                "portals": portals_map
+            }
+        finally:
+            conn.close()
+
     def test_connection(self):
         """
         Przeprowadza test sprawdzający poprawność połączenia i customowych funkcji SQLite.
@@ -379,3 +416,4 @@ class DatabaseManager:
             }
         finally:
             conn.close()
+

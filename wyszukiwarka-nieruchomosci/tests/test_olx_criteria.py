@@ -86,16 +86,12 @@ class TestOLXCriteria(unittest.TestCase):
 
         # Strona 1
         url_p1 = provider.build_search_url(city="Warszawa", district="Ursynów", page=1)
-        self.assertIn("olx.pl/nieruchomosci/mieszkania/sprzedaz/warszawa/q-ursynow/", url_p1)
-        self.assertIn("search[filter_float_price:from]=1000000", url_p1)
-        self.assertIn("search[filter_float_price:to]=1050000", url_p1)
-        self.assertIn("search[filter_enum_rooms][0]=three", url_p1)
+        self.assertEqual("https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/warszawa/q-ursynow/", url_p1)
         self.assertNotIn("page=1", url_p1)
 
         # Strona 2
         url_p2 = provider.build_search_url(city="Warszawa", district="Ursynów", page=2)
-        self.assertIn("page=2", url_p2)
-        self.assertIn("search[filter_float_price:from]=1000000", url_p2)
+        self.assertEqual("https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/warszawa/q-ursynow/?page=2", url_p2)
 
     def test_olx_payload_normalization(self):
         """Test 2: Weryfikacja spłaszczania parametrów params do korzenia słownika O(1)."""

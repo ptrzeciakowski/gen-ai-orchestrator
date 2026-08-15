@@ -47,7 +47,7 @@ class GratkaProvider:
 
     def build_search_url(self, city_slug: str, district_slug: str, page: int = 1) -> str:
         """
-        Buduje URL wyszukiwania na Gratka.pl z uwzględnieniem filtrów kryteriów.
+        Buduje URL wyszukiwania na Gratka.pl (szeroki zrzut dla danej lokalizacji).
         """
         c_slug = slugify(city_slug) or "warszawa"
         d_slug = slugify(district_slug)
@@ -56,24 +56,9 @@ class GratkaProvider:
         else:
             base = f"https://gratka.pl/nieruchomosci/mieszkania/{c_slug}/sprzedaz"
 
-        params = []
-        if getattr(self.config, 'min_price', None):
-            params.append(f"cena-calkowita:min={int(self.config.min_price)}")
-        if getattr(self.config, 'max_price', None):
-            params.append(f"cena-calkowita:max={int(self.config.max_price)}")
-        if getattr(self.config, 'min_rooms', None):
-            params.append(f"liczba-pokoi:min={int(self.config.min_rooms)}")
-        if getattr(self.config, 'max_rooms', None):
-            params.append(f"liczba-pokoi:max={int(self.config.max_rooms)}")
-        if getattr(self.config, 'min_area', None):
-            params.append(f"powierzchnia-w-m2:min={int(self.config.min_area)}")
-        if getattr(self.config, 'max_area', None):
-            params.append(f"powierzchnia-w-m2:max={int(self.config.max_area)}")
         if page > 1:
-            params.append(f"page={page}")
-
-        query_string = "&".join(params)
-        return f"{base}?{query_string}" if query_string else base
+            return f"{base}?page={page}"
+        return base
 
     def parse_listing_page(self, html: str) -> Tuple[Optional[int], List[Dict[str, str]]]:
         """

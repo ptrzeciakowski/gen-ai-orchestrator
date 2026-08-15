@@ -82,18 +82,12 @@ class TestMorizonCriteria(unittest.TestCase):
 
         # Test generowania URL dla Ursynowa (strona 1)
         url_p1 = provider.build_search_url("Warszawa", "Ursynów", page=1)
-        self.assertTrue(url_p1.startswith("https://www.morizon.pl/mieszkania/sprzedaz/warszawa/ursynow/"))
-        self.assertIn("ps[price_from]=1000000", url_p1)
-        self.assertIn("ps[price_to]=1050000", url_p1)
-        self.assertIn("ps[number_of_rooms_from]=3", url_p1)
-        self.assertIn("ps[number_of_rooms_to]=3", url_p1)
-        self.assertIn("ps[living_area_from]=50", url_p1)
-        self.assertIn("ps[living_area_to]=70", url_p1)
+        self.assertEqual(url_p1, "https://www.morizon.pl/mieszkania/warszawa/ursynow/")
         self.assertNotIn("page=", url_p1)
 
         # Test generowania URL ze stroną 2
         url_p2 = provider.build_search_url("Warszawa", "Ursynów", page=2)
-        self.assertIn("page=2", url_p2)
+        self.assertEqual(url_p2, "https://www.morizon.pl/mieszkania/warszawa/ursynow/?page=2")
 
     def test_morizon_raw_payload_parsing(self):
         """Test wielowarstwowego parsera JSON-LD i DOM fallback dla Morizona"""

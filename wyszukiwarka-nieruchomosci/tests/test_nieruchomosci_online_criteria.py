@@ -75,19 +75,11 @@ class TestNieruchomosciOnlineCriteria(unittest.TestCase):
         )
 
     def test_build_search_url_positional_format(self):
-        """Weryfikacja 8 slotów pozycyjnych URL dla różnych kombinacji kryteriów"""
+        """Weryfikacja 8 slotów pozycyjnych URL dla szerokiej lokalizacji (Bronze)"""
         cfg = CriteriaConfig()
-        cfg.min_price = 1000000
-        cfg.max_price = 1050000
-        cfg.min_rooms = 3
-        cfg.max_rooms = 3
-        cfg.min_area = 50
-        cfg.max_area = 70
-        cfg.market_type = "Wtórny"
-
         provider = NieruchomosciOnlineProvider(cfg, db_manager=self.db_manager)
         
-        # Test 1: Pełne parametry i strona 1
+        # Test 1: Lokalizacja i strona 1
         url_p1 = provider.build_search_url("Warszawa", "Ursynów", page=1)
         self.assertTrue(url_p1.startswith("https://www.nieruchomosci-online.pl/szukaj.html?"))
         query_part = url_p1.split("?")[1]
@@ -98,11 +90,7 @@ class TestNieruchomosciOnlineCriteria(unittest.TestCase):
         self.assertEqual(slots[0], "3")  # mode
         self.assertEqual(slots[1], "mieszkanie")
         self.assertEqual(slots[2], "sprzedaz")
-        self.assertEqual(slots[3], "rynek-wtorny")
         self.assertEqual(slots[4], "warszawa:ursynow")
-        self.assertEqual(slots[5], "1000000-1050000")
-        self.assertEqual(slots[6], "50-70")
-        self.assertEqual(slots[7], "3")
 
         # Test 2: Paginacja strona 2
         url_p2 = provider.build_search_url("Warszawa", "Ursynów", page=2)
@@ -118,26 +106,6 @@ class TestNieruchomosciOnlineCriteria(unittest.TestCase):
         q_bialoleka = url_bialoleka.split("?")[1]
         slots_bial = q_bialoleka.split(",")
         self.assertEqual(slots_bial[4], "warszawa:bialoleka")
-
-        # Test 4: Rynek pierwotny oraz puste wartości (zachowanie przecinków)
-        cfg_empty = CriteriaConfig()
-        cfg_empty.min_price = None
-        cfg_empty.max_price = None
-        cfg_empty.min_rooms = None
-        cfg_empty.max_rooms = None
-        cfg_empty.min_area = None
-        cfg_empty.max_area = None
-        cfg_empty.market_type = "Pierwotny"
-
-        provider_empty = NieruchomosciOnlineProvider(cfg_empty, db_manager=self.db_manager)
-        url_empty = provider_empty.build_search_url("Warszawa", "Ursynów", page=1)
-        q_empty = url_empty.split("?")[1]
-        slots_empty = q_empty.split(",")
-        self.assertEqual(len(slots_empty), 8)
-        self.assertEqual(slots_empty[3], "rynek-pierwotny")
-        self.assertEqual(slots_empty[5], "")  # cena pusta
-        self.assertEqual(slots_empty[6], "")  # metraz pusty
-        self.assertEqual(slots_empty[7], "")  # pokoje puste
 
     def test_parse_listing_html(self):
         """Test parsowania kodu HTML listy wyników wyszukiwania (nagłówek i linki do ofert)"""

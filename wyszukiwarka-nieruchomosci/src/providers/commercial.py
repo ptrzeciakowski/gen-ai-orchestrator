@@ -32,15 +32,7 @@ class CommercialProvider:
                 chunk_name = f"{city_slug}_{district_slug}_{market}"
                 page = 1
                 while page <= self.max_pages:
-                    extra_params = ""
-                    if self.config.min_price:
-                        extra_params += f"&priceMin={int(self.config.min_price)}"
-                    if self.config.max_price:
-                        extra_params += f"&priceMax={int(self.config.max_price)}"
-                    if self.config.min_rooms == 3 and self.config.max_rooms == 3:
-                        extra_params += "&roomsNumber=%5BTHREE%5D"
-
-                    url = f"https://www.otodom.pl/pl/oferty/sprzedaz/mieszkanie/{city_slug}/{district_slug}?limit=36&page={page}&market={market.upper()}{extra_params}"
+                    url = f"https://www.otodom.pl/pl/oferty/sprzedaz/mieszkanie/{city_slug}/{district_slug}?limit=36&page={page}&market={market.upper()}"
                     headers = {
                         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
                         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',

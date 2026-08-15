@@ -33,41 +33,14 @@ class NieruchomosciOnlineProvider:
 
     def build_search_url(self, city: str, district: str = "", page: int = 1) -> str:
         """
-        Buduje adres URL w autorskim formacie pozycyjnym portalu Nieruchomosci-online.pl.
-        Struktura: szukaj.html?{mode},{property_type},{transaction_type},{market},{location},{price_range},{area_range},{rooms_range}&p={page}
+        Buduje adres URL w formacie pozycyjnym portalu Nieruchomosci-online.pl (szeroki zrzut dla danej lokalizacji).
         """
         city_norm = self._normalize_slug(city) if city else "warszawa"
         dist_norm = self._normalize_slug(district) if district else ""
         loc_slot = f"{city_norm}:{dist_norm}" if dist_norm else city_norm
 
-        price_slot = ""
-        if self.config.min_price is not None or self.config.max_price is not None:
-            p_min = int(self.config.min_price) if self.config.min_price is not None else ""
-            p_max = int(self.config.max_price) if self.config.max_price is not None else ""
-            price_slot = f"{p_min}-{p_max}"
-
-        area_slot = ""
-        if self.config.min_area is not None or self.config.max_area is not None:
-            a_min = int(self.config.min_area) if self.config.min_area is not None else ""
-            a_max = int(self.config.max_area) if self.config.max_area is not None else ""
-            area_slot = f"{a_min}-{a_max}"
-
-        rooms_slot = ""
-        if self.config.min_rooms is not None or self.config.max_rooms is not None:
-            r_min = int(self.config.min_rooms) if self.config.min_rooms is not None else ""
-            r_max = int(self.config.max_rooms) if self.config.max_rooms is not None else ""
-            rooms_slot = f"{r_min}-{r_max}" if r_min != r_max else str(r_min)
-
-        market_slot = ""
-        if self.config.market_type:
-            m_lower = self.config.market_type.lower()
-            if "wtórn" in m_lower or "wtorny" in m_lower:
-                market_slot = "rynek-wtorny"
-            elif "pierwotn" in m_lower or "pierwotny" in m_lower:
-                market_slot = "rynek-pierwotny"
-
-        # Tablica 8 parametrów pozycyjnych
-        slots = ["3", "mieszkanie", "sprzedaz", market_slot, loc_slot, price_slot, area_slot, rooms_slot]
+        # 8 slotów pozycyjnych: tryb 3, mieszkanie, sprzedaz, rynek dowolny, lokalizacja, cena dowolna, metraż dowolny, pokoje dowolne
+        slots = ["3", "mieszkanie", "sprzedaz", "", loc_slot, "", "", ""]
         base_query = ",".join(slots)
         url = f"https://www.nieruchomosci-online.pl/szukaj.html?{base_query}"
         if page > 1:

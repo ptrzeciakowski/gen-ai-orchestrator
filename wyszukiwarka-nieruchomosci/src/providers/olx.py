@@ -46,7 +46,7 @@ class OLXProvider:
 
     def build_search_url(self, city="Warszawa", district=None, page=1):
         """
-        Buduje adres URL zapytania do OLX.pl na podstawie kryteriów wyszukiwania.
+        Buduje adres URL zapytania do OLX.pl dla danej lokalizacji (szeroki zrzut Bronze).
         """
         city_slug = self._slugify(city) if city else "warszawa"
         if district:
@@ -55,31 +55,8 @@ class OLXProvider:
         else:
             base_url = f"https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/{city_slug}/"
 
-        params = []
         if page and page > 1:
-            params.append(f"page={page}")
-
-        if self.config:
-            if self.config.min_price is not None:
-                params.append(f"search[filter_float_price:from]={int(self.config.min_price)}")
-            if self.config.max_price is not None:
-                params.append(f"search[filter_float_price:to]={int(self.config.max_price)}")
-
-            room_mapping = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five"}
-            if self.config.min_rooms is not None and self.config.max_rooms is not None:
-                if self.config.min_rooms == self.config.max_rooms:
-                    r_val = room_mapping.get(int(self.config.min_rooms), str(int(self.config.min_rooms)))
-                    params.append(f"search[filter_enum_rooms][0]={r_val}")
-                else:
-                    for idx, r in enumerate(range(int(self.config.min_rooms), int(self.config.max_rooms) + 1)):
-                        r_val = room_mapping.get(r, str(r))
-                        params.append(f"search[filter_enum_rooms][{idx}]={r_val}")
-            elif self.config.min_rooms is not None:
-                r_val = room_mapping.get(int(self.config.min_rooms), str(int(self.config.min_rooms)))
-                params.append(f"search[filter_enum_rooms][0]={r_val}")
-
-        if params:
-            return f"{base_url}?{'&'.join(params)}"
+            return f"{base_url}?page={page}"
         return base_url
 
     def _extract_ads_and_meta(self, html, default_city="Warszawa", default_district="Ursynów"):

@@ -43,39 +43,18 @@ class MorizonProvider:
 
     def build_search_url(self, city, district=None, page=1):
         """
-        Buduje adres URL wyszukiwania Morizon z tablicowymi parametrami ps[...] oraz paginacją.
+        Buduje adres URL wyszukiwania Morizon dla zadanej lokalizacji (szeroki zrzut Bronze).
         """
         city_slug = self.normalize_slug(city) if city else "warszawa"
         district_slug = self.normalize_slug(district) if district else ""
 
         if district_slug:
-            base_url = f"https://www.morizon.pl/mieszkania/sprzedaz/{city_slug}/{district_slug}/"
+            base_url = f"https://www.morizon.pl/mieszkania/{city_slug}/{district_slug}/"
         else:
-            base_url = f"https://www.morizon.pl/mieszkania/sprzedaz/{city_slug}/"
-
-        params = []
-        if self.config:
-            if getattr(self.config, 'min_price', None) is not None:
-                params.append(f"ps[price_from]={int(self.config.min_price)}")
-            if getattr(self.config, 'max_price', None) is not None:
-                params.append(f"ps[price_to]={int(self.config.max_price)}")
-            if getattr(self.config, 'min_rooms', None) is not None:
-                params.append(f"ps[number_of_rooms_from]={int(self.config.min_rooms)}")
-            if getattr(self.config, 'max_rooms', None) is not None:
-                params.append(f"ps[number_of_rooms_to]={int(self.config.max_rooms)}")
-            if getattr(self.config, 'min_area', None) is not None:
-                params.append(f"ps[living_area_from]={int(self.config.min_area)}")
-            if getattr(self.config, 'max_area', None) is not None:
-                params.append(f"ps[living_area_to]={int(self.config.max_area)}")
-            if getattr(self.config, 'market_type', None) and str(self.config.market_type).lower() != "dowolny":
-                market_val = self.normalize_slug(str(self.config.market_type))
-                params.append(f"ps[market_type]={market_val}")
+            base_url = f"https://www.morizon.pl/mieszkania/{city_slug}/"
 
         if page > 1:
-            params.append(f"page={page}")
-
-        if params:
-            return f"{base_url}?{'&'.join(params)}"
+            return f"{base_url}?page={page}"
         return base_url
 
     def parse_listing_detail(self, html_d, detail_url, default_city="Warszawa", default_district="Ursynów"):
