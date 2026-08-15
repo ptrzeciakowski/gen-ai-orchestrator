@@ -75,37 +75,25 @@ class TestNieruchomosciOnlineCriteria(unittest.TestCase):
         )
 
     def test_build_search_url_positional_format(self):
-        """Weryfikacja 8 slotów pozycyjnych URL dla szerokiej lokalizacji (Bronze)"""
+        """Weryfikacja formatu sub-domenowego URL dla danej lokalizacji (Bronze)"""
         cfg = CriteriaConfig()
         provider = NieruchomosciOnlineProvider(cfg, db_manager=self.db_manager)
         
         # Test 1: Lokalizacja i strona 1
         url_p1 = provider.build_search_url("Warszawa", "Ursynów", page=1)
-        self.assertTrue(url_p1.startswith("https://www.nieruchomosci-online.pl/szukaj.html?"))
-        query_part = url_p1.split("?")[1]
-        self.assertNotIn("&p=", query_part)
-        
-        slots = query_part.split(",")
-        self.assertEqual(len(slots), 8, f"URL musi zawierać dokładnie 8 slotów pozycyjnych, otrzymano: {slots}")
-        self.assertEqual(slots[0], "3")  # mode
-        self.assertEqual(slots[1], "mieszkanie")
-        self.assertEqual(slots[2], "sprzedaz")
-        self.assertEqual(slots[4], "warszawa:ursynow")
+        self.assertEqual("https://warszawa.nieruchomosci-online.pl/mieszkania,ursynow/", url_p1)
+        self.assertNotIn("?p=", url_p1)
 
         # Test 2: Paginacja strona 2
         url_p2 = provider.build_search_url("Warszawa", "Ursynów", page=2)
-        self.assertTrue(url_p2.endswith("&p=2"))
+        self.assertEqual("https://warszawa.nieruchomosci-online.pl/mieszkania,ursynow/?p=2", url_p2)
 
         # Test 3: Normalizacja znaków diakrytycznych w dzielnicach i miastach
         url_srodmiescie = provider.build_search_url("Kraków", "Śródmieście", page=1)
-        q_srodmiescie = url_srodmiescie.split("?")[1]
-        slots_srod = q_srodmiescie.split(",")
-        self.assertEqual(slots_srod[4], "krakow:srodmiescie")
+        self.assertEqual("https://krakow.nieruchomosci-online.pl/mieszkania,srodmiescie/", url_srodmiescie)
 
         url_bialoleka = provider.build_search_url("Warszawa", "Białołęka", page=1)
-        q_bialoleka = url_bialoleka.split("?")[1]
-        slots_bial = q_bialoleka.split(",")
-        self.assertEqual(slots_bial[4], "warszawa:bialoleka")
+        self.assertEqual("https://warszawa.nieruchomosci-online.pl/mieszkania,bialoleka/", url_bialoleka)
 
     def test_parse_listing_html(self):
         """Test parsowania kodu HTML listy wyników wyszukiwania (nagłówek i linki do ofert)"""
@@ -118,10 +106,10 @@ class TestNieruchomosciOnlineCriteria(unittest.TestCase):
                 znaleziono <strong>42</strong> ogłoszeń mieszkania na sprzedaż
             </div>
             <div class="results-list">
-                <a href="/mieszkanie-na-sprzedaz/24598123.html">Oferta 1</a>
+                <a href="https://warszawa.nieruchomosci-online.pl/mieszkanie-na-sprzedaz/24598123.html">Oferta 1</a>
                 <a href="https://warszawa.nieruchomosci-online.pl/mieszkanie-na-sprzedaz/24598124.html">Oferta 2</a>
                 <a href="/szukaj.html?3,mieszkanie">Inny link</a>
-                <a href="/mieszkanie-na-sprzedaz/24598123.html">Duplikat linku</a>
+                <a href="https://warszawa.nieruchomosci-online.pl/mieszkanie-na-sprzedaz/24598123.html">Duplikat linku</a>
             </div>
         </body>
         </html>
@@ -132,7 +120,7 @@ class TestNieruchomosciOnlineCriteria(unittest.TestCase):
 
         self.assertEqual(expected_total, 42)
         self.assertEqual(len(offer_urls), 2)
-        self.assertIn("https://www.nieruchomosci-online.pl/mieszkanie-na-sprzedaz/24598123.html", offer_urls)
+        self.assertIn("https://warszawa.nieruchomosci-online.pl/mieszkanie-na-sprzedaz/24598123.html", offer_urls)
         self.assertIn("https://warszawa.nieruchomosci-online.pl/mieszkanie-na-sprzedaz/24598124.html", offer_urls)
 
     def test_parse_detail_html_with_json_ld_and_table(self):
@@ -334,14 +322,14 @@ class TestNieruchomosciOnlineCriteria(unittest.TestCase):
         mock_listing_ursynow = """
         <html><body>
             znaleziono <strong>25</strong> ogłoszeń
-            <a href="/mieszkanie-na-sprzedaz/111.html">O1</a>
-            <a href="/mieszkanie-na-sprzedaz/222.html">O2</a>
+            <a href="https://warszawa.nieruchomosci-online.pl/mieszkanie-na-sprzedaz/111.html">O1</a>
+            <a href="https://warszawa.nieruchomosci-online.pl/mieszkanie-na-sprzedaz/222.html">O2</a>
         </body></html>
         """
         mock_listing_mokotow = """
         <html><body>
             znaleziono <strong>35</strong> ogłoszeń
-            <a href="/mieszkanie-na-sprzedaz/333.html">O3</a>
+            <a href="https://warszawa.nieruchomosci-online.pl/mieszkanie-na-sprzedaz/333.html">O3</a>
         </body></html>
         """
         mock_detail = """
@@ -357,9 +345,9 @@ class TestNieruchomosciOnlineCriteria(unittest.TestCase):
         def mock_urlopen(req, timeout=None):
             url = req.full_url if hasattr(req, 'full_url') else str(req)
             m_resp = MagicMock()
-            if "ursynow" in url:
+            if "mieszkania,ursynow" in url:
                 m_resp.read.return_value = mock_listing_ursynow.encode('utf-8')
-            elif "mokotow" in url:
+            elif "mieszkania,mokotow" in url:
                 m_resp.read.return_value = mock_listing_mokotow.encode('utf-8')
             else:
                 m_resp.read.return_value = mock_detail.encode('utf-8')

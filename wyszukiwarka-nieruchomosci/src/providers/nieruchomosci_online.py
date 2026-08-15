@@ -33,19 +33,19 @@ class NieruchomosciOnlineProvider:
 
     def build_search_url(self, city: str, district: str = "", page: int = 1) -> str:
         """
-        Buduje adres URL w formacie pozycyjnym portalu Nieruchomosci-online.pl (szeroki zrzut dla danej lokalizacji).
+        Buduje adres URL portalu Nieruchomosci-online.pl dla danej lokalizacji.
+        Format: https://{city_slug}.nieruchomosci-online.pl/mieszkania,{district_slug}/ (lub ?p={page})
         """
         city_norm = self._normalize_slug(city) if city else "warszawa"
         dist_norm = self._normalize_slug(district) if district else ""
-        loc_slot = f"{city_norm}:{dist_norm}" if dist_norm else city_norm
+        if dist_norm:
+            base_url = f"https://{city_norm}.nieruchomosci-online.pl/mieszkania,{dist_norm}/"
+        else:
+            base_url = f"https://{city_norm}.nieruchomosci-online.pl/mieszkania,sprzedaz/"
 
-        # 8 slotów pozycyjnych: tryb 3, mieszkanie, sprzedaz, rynek dowolny, lokalizacja, cena dowolna, metraż dowolny, pokoje dowolne
-        slots = ["3", "mieszkanie", "sprzedaz", "", loc_slot, "", "", ""]
-        base_query = ",".join(slots)
-        url = f"https://www.nieruchomosci-online.pl/szukaj.html?{base_query}"
         if page > 1:
-            url += f"&p={page}"
-        return url
+            return f"{base_url}?p={page}"
+        return base_url
 
     def parse_listing_html(self, html: str):
         """
@@ -66,13 +66,18 @@ class NieruchomosciOnlineProvider:
                 pass
 
         # Ekstrakcja linków do ogłoszeń
-        raw_hrefs = re.findall(r'href=["\']((?:https?://[a-zA-Z0-9.-]*nieruchomosci-online\.pl)?/[^"\'\s]*?(\d+)\.html)["\']', html)
+        raw_hrefs = re.findall(r'href=["\']((?:https?:)?//(?:[a-zA-Z0-9.-]+\.)?nieruchomosci-online\.pl/[^"\'\s]*?(\d+)\.html)["\']', html)
+        if not raw_hrefs:
+            raw_hrefs = re.findall(r'href=["\']((?:https?:)?//[^\'"\s]*?(\d+)\.html)["\']', html)
         offer_urls = []
         seen = set()
+        city_slug = self._normalize_slug(self.config.city if self.config and self.config.city else "warszawa")
         for href_tuple in raw_hrefs:
             href = href_tuple[0] if isinstance(href_tuple, tuple) else href_tuple
-            if href.startswith('/'):
-                href = "https://www.nieruchomosci-online.pl" + href
+            if href.startswith('//'):
+                href = "https:" + href
+            elif href.startswith('/'):
+                href = f"https://{city_slug}.nieruchomosci-online.pl" + href
             if href not in seen and "/szukaj" not in href:
                 seen.add(href)
                 offer_urls.append(href)
@@ -146,11 +151,19 @@ class NieruchomosciOnlineProvider:
                 price_val = float(str(offer_ld.get('price')).replace(' ', '').replace(',', '.'))
             except (ValueError, TypeError):
                 pass
-        elif apartment_ld.get('offers', {}).get('price'):
-            try:
-                price_val = float(str(apartment_ld['offers']['price']).replace(' ', '').replace(',', '.'))
-            except (ValueError, TypeError):
-                pass
+
+        if price_val is None and apartment_ld.get('offers'):
+            apt_offers = apartment_ld['offers']
+            if isinstance(apt_offers, dict) and apt_offers.get('price'):
+                try:
+                    price_val = float(str(apt_offers['price']).replace(' ', '').replace(',', '.'))
+                except (ValueError, TypeError):
+                    pass
+            elif isinstance(apt_offers, list) and len(apt_offers) > 0 and isinstance(apt_offers[0], dict) and apt_offers[0].get('price'):
+                try:
+                    price_val = float(str(apt_offers[0]['price']).replace(' ', '').replace(',', '.'))
+                except (ValueError, TypeError):
+                    pass
 
         if price_val is None:
             p_match = re.search(r'(\d[\d\s]*[,\.]?\d*)\s*(?:zł|PLN)', html, re.IGNORECASE)
