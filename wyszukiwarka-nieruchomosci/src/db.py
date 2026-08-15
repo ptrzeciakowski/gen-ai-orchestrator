@@ -102,7 +102,7 @@ class DatabaseManager:
             );
             """)
 
-            # 2. Widok Silver (Obsługa pasywna schematu syntetycznego, natywnego Otodom __NEXT_DATA__ oraz Adresowo.pl)
+            # 2. Widok Silver (Obsługa pasywna schematu syntetycznego, natywnego Otodom __NEXT_DATA__, Adresowo.pl oraz Gratka.pl)
             cursor.execute("DROP VIEW IF EXISTS silver_listings;")
             cursor.execute("""
             CREATE VIEW silver_listings AS
@@ -121,6 +121,7 @@ class DatabaseManager:
                     COALESCE(
                         json_extract(b.raw_payload, '$.url'),
                         CASE 
+                            WHEN b.source_portal = 'gratka' THEN 'https://gratka.pl/nieruchomosci/ob/' || b.external_id
                             WHEN json_extract(b.raw_payload, '$.slug') IS NOT NULL 
                             THEN 'https://www.otodom.pl/pl/oferta/' || json_extract(b.raw_payload, '$.slug')
                             ELSE 'https://www.otodom.pl/pl/oferta/' || b.external_id
@@ -148,7 +149,8 @@ class DatabaseManager:
                     CAST(COALESCE(
                         json_extract(b.raw_payload, '$.price_pln'),
                         json_extract(b.raw_payload, '$.price.value'),
-                        json_extract(b.raw_payload, '$.totalPrice.value')
+                        json_extract(b.raw_payload, '$.totalPrice.value'),
+                        json_extract(b.raw_payload, '$.offer_ld.price')
                     ) AS REAL) AS price_pln,
                     
                     CAST(COALESCE(
@@ -187,16 +189,23 @@ class DatabaseManager:
                         END
                     ) AS INTEGER) AS floor,
                     
-                    CAST(json_extract(b.raw_payload, '$.total_floors') AS INTEGER) AS total_floors,
+                    CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.total_floors'),
+                        json_extract(b.raw_payload, '$.floorsInBuilding')
+                    ) AS INTEGER) AS total_floors,
                     
                     COALESCE(
                         CAST(json_extract(b.raw_payload, '$.has_elevator') AS INTEGER),
                         CAST(json_extract(b.raw_payload, '$.features.elevator') AS INTEGER),
                         CAST(json_extract(b.raw_payload, '$.hasElevator') AS INTEGER),
                         CASE 
+                            WHEN json_extract(b.raw_payload, '$.features.winda') = 1 
+                              OR json_extract(b.raw_payload, '$.features.winda') = 'true' THEN 1
                             WHEN json_extract(b.raw_payload, '$.target.Extras_types') LIKE '%lift%' THEN 1
                             WHEN json_extract(b.raw_payload, '$.description') LIKE '%winda%' 
                               OR json_extract(b.raw_payload, '$.description') LIKE '%windą%'
+                              OR json_extract(b.raw_payload, '$.description_text') LIKE '%winda%'
+                              OR json_extract(b.raw_payload, '$.description_text') LIKE '%windą%'
                               OR json_extract(b.raw_payload, '$.shortDescription') LIKE '%winda%'
                               OR json_extract(b.raw_payload, '$.shortDescription') LIKE '%windą%' THEN 1 
                             ELSE 0 
@@ -205,12 +214,14 @@ class DatabaseManager:
                     
                     CAST(COALESCE(
                         json_extract(b.raw_payload, '$.location.coordinates.latitude'),
-                        json_extract(b.raw_payload, '$.place_ld.geo.latitude')
+                        json_extract(b.raw_payload, '$.place_ld.geo.latitude'),
+                        json_extract(b.raw_payload, '$.coordinates.latitude')
                     ) AS REAL) AS lat,
                     
                     CAST(COALESCE(
                         json_extract(b.raw_payload, '$.location.coordinates.longitude'),
-                        json_extract(b.raw_payload, '$.place_ld.geo.longitude')
+                        json_extract(b.raw_payload, '$.place_ld.geo.longitude'),
+                        json_extract(b.raw_payload, '$.coordinates.longitude')
                     ) AS REAL) AS lon,
                     
                     COALESCE(

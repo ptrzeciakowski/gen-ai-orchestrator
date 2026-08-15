@@ -14,7 +14,7 @@
 
 ### Faza 1: Przygotowanie Warstwy Danych i Bazy SQLite (`src/db.py`)
 
-- [ ] **Zadanie 1.1: Aktualizacja i Standaryzacja Widoku `silver_listings` w `src/db.py`**
+- [x] **Zadanie 1.1: Aktualizacja i Standaryzacja Widoku `silver_listings` w `src/db.py`**
   - **Plik do modyfikacji**: [`src/db.py`](file:///Users/pawel/git/gen-ai-orchestrator/wyszukiwarka-nieruchomosci/src/db.py)
   - **Opis**: Upewnienie się, że widok `silver_listings` wspiera odczyt znormalizowanych kluczy pierwszego poziomu (`price_pln`, `area_m2`, `rooms`, `floor`, `total_floors`, `has_elevator`, `location.coordinates`) z zachowaniem ścieżek fallbackowych dla Gratki (`features.winda`, `offer_ld.price`).
   - **Kryteria Akceptacji**:
@@ -26,21 +26,21 @@
 
 ### Faza 2: Implementacja Modułu `GratkaProvider` (`src/providers/gratka.py`)
 
-- [ ] **Zadanie 2.1: Utworzenie Klasy `GratkaProvider` i Generatora URL**
+- [x] **Zadanie 2.1: Utworzenie Klasy `GratkaProvider` i Generatora URL**
   - **Plik do utworzenia**: [`src/providers/gratka.py`](file:///Users/pawel/git/gen-ai-orchestrator/wyszukiwarka-nieruchomosci/src/providers/gratka.py)
   - **Opis**: Implementacja metody `build_search_url(city_slug, district_slug, page)` z obsługą parametrów dwukropkowych Gratki (`cena-calkowita:min/max`, `liczba-pokoi:min/max`, `powierzchnia-w-m2:min/max`, `page=N`).
   - **Kryteria Akceptacji**:
     - Generator poprawnie składa parametry zapytania GET zgodnie ze specyfikacją.
     - Prawidłowa normalizacja znaków diakrytycznych w nazwach dzielnic.
 
-- [ ] **Zadanie 2.2: Implementacja Dwufazowego Pobierania (List + Detail Scraping)**
+- [x] **Zadanie 2.2: Implementacja Dwufazowego Pobierania (List + Detail Scraping)**
   - **Plik do modyfikacji**: [`src/providers/gratka.py`](file:///Users/pawel/git/gen-ai-orchestrator/wyszukiwarka-nieruchomosci/src/providers/gratka.py)
   - **Opis**: Implementacja pętli paginacji listy ofert oraz pobierania podstron szczegółowych każdego ogłoszenia z buforem czasowym 150-250ms i pełnym zestawem nagłówków Chromium macOS.
   - **Kryteria Akceptacji**:
     - Ekstrakcja ustrukturyzowanych obiektów JSON-LD oraz tabeli cech (winda, piętro, rok budowy).
     - Pre-normalizacja kluczy do korzenia `raw_payload` i zapis do tabeli `bronze_listings`.
 
-- [ ] **Zadanie 2.3: Implementacja Ekstrakcji Metryk Audytu (`run_audit`)**
+- [x] **Zadanie 2.3: Implementacja Ekstrakcji Metryk Audytu (`run_audit`)**
   - **Plik do modyfikacji**: [`src/providers/gratka.py`](file:///Users/pawel/git/gen-ai-orchestrator/wyszukiwarka-nieruchomosci/src/providers/gratka.py)
   - **Opis**: Pobranie zadeklarowanej liczby ofert z nagłówka strony listingu Gratki (`expected_total_gratka`) i rejestracja w bazie przez `db_manager.save_run_audit(run_id, "gratka", ...)`.
   - **Kryteria Akceptacji**:
@@ -50,7 +50,7 @@
 
 ### Faza 3: Integracja w Głównym Pipeline (`main.py`)
 
-- [ ] **Zadanie 3.1: Rejestracja `GratkaProvider` w `main.py`**
+- [x] **Zadanie 3.1: Rejestracja `GratkaProvider` w `main.py`**
   - **Plik do modyfikacji**: [`main.py`](file:///Users/pawel/git/gen-ai-orchestrator/wyszukiwarka-nieruchomosci/main.py)
   - **Opis**: Zaimportowanie `GratkaProvider`, wywołanie pobierania w sekcji Bronze oraz wyświetlenie podsumowania audytu kompletności Gratki w konsoli.
   - **Kryteria Akceptacji**:
@@ -61,7 +61,7 @@
 
 ### Faza 4: Zestaw Testów Jednostkowych i Zgodności Kryteriów (`tests/test_gratka_criteria.py`)
 
-- [ ] **Zadanie 4.1: Utworzenie Dedykowanego Pakietu Testów Kryteriów**
+- [x] **Zadanie 4.1: Utworzenie Dedykowanego Pakietu Testów Kryteriów**
   - **Plik do utworzenia**: [`tests/test_gratka_criteria.py`](file:///Users/pawel/git/gen-ai-orchestrator/wyszukiwarka-nieruchomosci/tests/test_gratka_criteria.py)
   - **Opis**: Zaimplementowanie testów jednostkowych weryfikujących zachowanie warstwy ELT dla ofert z Gratki:
     1. `test_gratka_price_filtering` (zakres 1,000,000 - 1,050,000 PLN).
@@ -77,7 +77,7 @@
 
 ### Faza 5: Weryfikacja Całościowa (End-to-End Validation)
 
-- [ ] **Zadanie 5.1: Uruchomienie Pełnego Zestawu Testów Projektu**
+- [x] **Zadanie 5.1: Uruchomienie Pełnego Zestawu Testów Projektu**
   - **Opis**: Uruchomienie wszystkich testów jednostkowych w repozytorium:
     - `python3 -m unittest discover tests/`
   - **Kryteria Akceptacji**: Wszystkie testy (w tym testy istniejących modułów Adresowo i ELT) przechodzą bez błędów.
