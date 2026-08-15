@@ -19,14 +19,15 @@ Plik zawiera zbiorczy rejestr wszystkich zarchiwizowanych zmian w standardzie Op
 | **`2026-07-27-2116-orchestrator-skill-single-source-of-true`** | Ustanowienie `SKILL.md` jako Single Source of Truth dla skilli OpenSpec (`opsx-explore`, `opsx-design`, `opsx-tasks`, `opsx-implement`, `opsx-archive`), konwencja `explore/NNN-nazwa-zmiany-MM.<ext>`, refaktoryzacja `openspec-agy-init.sh`. | 45,000 | 38,000 | $0.71 | 00:15:00 (0.25h) | 8.0 h | 1.00 MD | **+7.75 h** |
 | **`2026-08-02-0851-wyszukiwarka-nieruchomosci-data-arch`** | Architektura ELT Bronze/Silver/Gold w SQLite dla Wyszukiwarki Nieruchomości: pobieranie z `__NEXT_DATA__` Otodom, wyliczanie metryk RCN, automatyczne czyszczenie bazy i `run_id`, ścisłe filtrowanie SQL w deduplikatorze oraz bezbłędne renderowanie tabel. | 68,000 | 42,000 | $0.83 | 00:45:00 (0.75h) | 12.0 h | 1.50 MD | **+11.25 h** |
 | **`2026-08-02-1018-wyszukiwarka-nieruchomosci-adresowo`** | Integracja serwisu Adresowo.pl z klasą `AdresowoProvider`, obsługa dedykowanych adresów URL (`-Q/`, `_l2`), trwała retencja historyczna w `bronze_listings`, deduplikacja międzyserwisowa oraz wdrożenie flagi nowości (`is_new_listing`). | 75,000 | 48,000 | $0.95 | 00:50:00 (0.83h) | 14.0 h | 1.75 MD | **+13.17 h** |
-| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany** | **463,588** | **349,600** | **$6.47** | **05:06:23 (5.10h)** | **81.0 h** | **10.12 MD** | **+75.90 h** |
+| **`2026-08-15-1711-wyszukiwarka-nieruchomosci-brozne-completeness`** | Weryfikacja kompletności pobierania w warstwie Bronze: dynamiczna paginacja na bazie `totalCount` (Otodom) i liczby deklarowanych ofert (Adresowo), audyt w tabeli `run_audit`, raportowanie wskaźnika w CLI i nagłówkach Markdown. | 62,000 | 39,000 | $0.77 | 00:35:00 (0.58h) | 10.0 h | 1.25 MD | **+9.42 h** |
+| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany** | **525,588** | **388,600** | **$7.24** | **05:41:23 (5.68h)** | **91.0 h** | **11.37 MD** | **+85.32 h** |
 
 ---
 
 ## 📊 Podsumowanie Agregacji Projektu
 
-- **Łączne Zużycie Tokenów**: 463,588 WE / 349,600 WY
-- **Łączny Szacowany Koszt API LLM**: **$6.47**
-- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **05:06:23** (5.10 h)
-- **Łączny Estymowany Czas Pracy Deweloperskiej**: **81.0 roboczogodzin (10.12 MD)**
-- **Zysk / Oszczędność Czasu Deweloperskiego**: **+75.90 roboczogodzin (~9.49 MD zaoszczędzone)**
+- **Łączne Zużycie Tokenów**: 525,588 WE / 388,600 WY
+- **Łączny Szacowany Koszt API LLM**: **$7.24**
+- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **05:41:23** (5.68 h)
+- **Łączny Estymowany Czas Pracy Deweloperskiej**: **91.0 roboczogodzin (11.37 MD)**
+- **Zysk / Oszczędność Czasu Deweloperskiego**: **+85.32 roboczogodzin (~10.66 MD zaoszczędzone)**
