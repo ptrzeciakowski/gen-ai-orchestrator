@@ -370,10 +370,10 @@ class DatabaseManager:
         conn = self.get_connection()
         try:
             cursor = conn.cursor()
-            query = "SELECT run_id, MAX(scraped_at) AS last_scraped, COUNT(*) AS count FROM bronze_listings"
+            query = "SELECT run_id, MAX(scraped_at) AS last_scraped, COUNT(*) AS count FROM bronze_listings WHERE run_id LIKE 'run_%'"
             params = []
             if city:
-                query += " WHERE city = ?"
+                query += " AND city = ?"
                 params.append(city)
             query += " GROUP BY run_id ORDER BY last_scraped DESC LIMIT 1;"
             cursor.execute(query, params)

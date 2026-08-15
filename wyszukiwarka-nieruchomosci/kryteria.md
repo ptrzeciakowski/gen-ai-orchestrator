@@ -14,7 +14,7 @@ Domyślny plik konfiguracyjny parametrów wyszukiwania nieruchomości. Edytuj po
 - **Typ ogłoszeniodawcy**: Dowolny                  # Opcje: Bezpośrednio | Agencja | Dowolny
 - **Rynek**: Dowolny                                # Opcje: Pierwotny | Wtórny | Dowolny
 - **Cena minimalna (PLN)**: 500000
-- **Cena maksymalna (PLN)**: 2000000
+- **Cena maksymalna (PLN)**: 1000000
 - **Maksymalna cena za m² (PLN/m²)**: Dowolna
 - **Powierzchnia minimalna (m²)**: Dowolna
 - **Powierzchnia maksymalna (m²)**: Dowolna
