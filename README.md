@@ -16,7 +16,7 @@ gen-ai-orchestrator/
 │   ├── agents -> ../.ai/agents
 │   ├── skills -> ../.ai/skills
 │   └── tools  -> ../.ai/tools
-├── .repositories/             # Symlink wskazujący na .ai/repositories
+├── .repositories/             # Symlink wskazujący na .ai/repositories (np. obsydian, wyszukiwarka-nieruchomosci)
 ├── openspec/                  # Przestrzeń robocza i specyfikacje OpenSpec
 │   ├── config.yaml            # Główna konfiguracja projektu OpenSpec (workflow schemas, rules)
 │   ├── specs/                 # Stan docelowy i kanoniczne specyfikacje modułów
@@ -26,11 +26,7 @@ gen-ai-orchestrator/
 │       │   ├── 2026-07-26-1914-explore-orchestrator-setup/
 │       │   ├── 2026-07-26-2012-orchestrator-setup-repos/
 │       │   └── 2026-07-26-2052-orch-constructive-criticizm/
-│       └── wyszukiwarka-nieruchomosci/  # Obecnie realizowana zmiana OpenSpec
-├── wyszukiwarka-nieruchomosci/ # Dedykowany podkatalog modułu wyszukiwania nieruchomości Warszawa
-│   ├── kryteria.md            # Konfiguracja parametrów wyszukiwania
-│   ├── historia/              # Wygenerowane raporty YYYY-MM-DD-HH24MISS-oferty.md
-│   └── src/                   # Kod źródłowy (providers, rcn_client, report_generator)
+│       └── wyszukiwarka-nieruchomosci-*/ # Realizowane propozycje zmian OpenSpec
 ├── specs/                     # Dodatkowe specyfikacje i dokumenty pomocnicze
 ├── README.md                  # Dokumentacja główna repozytorium
 └── openspec-agy-init.sh       # Skrypt instalujący i synchronizujący skille wtyczki AGY
