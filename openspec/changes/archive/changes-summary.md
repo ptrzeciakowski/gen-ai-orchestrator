@@ -25,14 +25,15 @@ Plik zawiera zbiorczy rejestr wszystkich zarchiwizowanych zmian w standardzie Op
 | **`2026-08-15-2158-wyszukiwarka-nieruchomosci-nieruchomosci-online`** | Integracja serwisu Nieruchomosci-online.pl: obsługa sub-domen miejskich, parsowanie JSON-LD i parametrów technicznych, bezpieczna obsługa formatów tablicowych ofert oraz 9 testów jednostkowych. | 72,000 | 48,000 | $0.94 | 00:40:00 (0.67h) | 14.0 h | 1.75 MD | **+13.33 h** |
 | **`2026-08-15-2158-wyszukiwarka-nieruchomosci-olx`** | Integracja serwisu OLX.pl: 1-fazowy parser stanu SSR `__PRERENDERED_STATE__`, pre-normalizacja O(1) do korzenia `raw_payload`, detekcja ofert prywatnych oraz 7 testów jednostkowych. | 64,000 | 40,000 | $0.79 | 00:30:00 (0.50h) | 12.0 h | 1.50 MD | **+11.50 h** |
 | **`2026-08-16-0715-wyszukiwarka-nieruchomosci-standalone-repo`** | Wydzielenie silnika wyszukiwarki nieruchomości do dedykowanego repozytorium Git (`ptrzeciakowski/wyszukiwarka-nieruchomosci`), podpięcie przez symlinki `.repositories/`, publikacja na GitHubie oraz walidacja bezpieczeństwa. | 45,000 | 32,000 | $0.62 | 00:20:00 (0.33h) | 6.0 h | 0.75 MD | **+5.67 h** |
-| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany (13 zmian)** | **839,588** | **594,600** | **$11.27** | **08:21:23 (8.34h)** | **147.0 h** | **18.38 MD** | **+138.66 h** |
+| **`2026-08-16-0720-wyszukiwarka-nieruchomosci-filter-min-build-year`** | Wdrożenie filtra minimalnego roku budowy (`min_build_year`): ekstrakcja w `silver_listings`, propagacja `MAX(build_year)` w `gold_listings`, filtracja SQL w `Deduplicator`, rozszerzenie tabeli w `ReportGenerator` oraz 4 testy jednostkowe. | 48,000 | 35,000 | $0.67 | 00:15:00 (0.25h) | 8.0 h | 1.00 MD | **+7.75 h** |
+| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany (14 zmian)** | **887,588** | **629,600** | **$11.94** | **08:36:23 (8.59h)** | **155.0 h** | **19.38 MD** | **+146.41 h** |
 
 ---
 
 ## 📊 Podsumowanie Agregacji Projektu
 
-- **Łączne Zużycie Tokenów**: 839,588 WE / 594,600 WY
-- **Łączny Szacowany Koszt API LLM**: **$11.27**
-- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **08:21:23** (8.34 h)
-- **Łączny Estymowany Czas Pracy Deweloperskiej**: **147.0 roboczogodzin (18.38 MD)**
-- **Zysk / Oszczędność Czasu Deweloperskiego**: **+138.66 roboczogodzin (~17.33 MD zaoszczędzone)**
+- **Łączne Zużycie Tokenów**: 887,588 WE / 629,600 WY
+- **Łączny Szacowany Koszt API LLM**: **$11.94**
+- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **08:36:23** (8.59 h)
+- **Łączny Estymowany Czas Pracy Deweloperskiej**: **155.0 roboczogodzin (19.38 MD)**
+- **Zysk / Oszczędność Czasu Deweloperskiego**: **+146.41 roboczogodzin (~18.30 MD zaoszczędzone)**
