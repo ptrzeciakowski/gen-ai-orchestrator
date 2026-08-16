@@ -17,14 +17,21 @@ Plik zawiera zbiorczy rejestr wszystkich zarchiwizowanych zmian w standardzie Op
 | **`2026-07-26-2052-orchestrator-constructive-criticizm`** | Wdrożenie 12 Zasad Brutalnej Szczerości, opis struktury w `README.md`, dwutabelowy szablon `summary.md` oraz zbiorczy rejestr `changes-summary.md`. | 51,746 | 46,000 | $0.85 | 00:30:11 (0.50h) | 10.0 h | 1.25 MD | **+9.50 h** |
 | **`2026-07-26-2300-wyszukiwarka-nieruchomosci`** | Etap 1 Wyszukiwarki Nieruchomości: Skupienie na Otodom.pl, bezwzględna walidacja cen max, brak wynajmu, brak linków kategorialnych, integracja RCN z 7 kwantylami ($P10\text{--}P99$) i próbką aktów notarialnych. | 65,400 | 52,100 | $0.80 | 00:42:00 (0.70h) | 10.5 h | 1.31 MD | **+9.80 h** |
 | **`2026-07-27-2116-orchestrator-skill-single-source-of-true`** | Ustanowienie `SKILL.md` jako Single Source of Truth dla skilli OpenSpec (`opsx-explore`, `opsx-design`, `opsx-tasks`, `opsx-implement`, `opsx-archive`), konwencja `explore/NNN-nazwa-zmiany-MM.<ext>`, refaktoryzacja `openspec-agy-init.sh`. | 45,000 | 38,000 | $0.71 | 00:15:00 (0.25h) | 8.0 h | 1.00 MD | **+7.75 h** |
-| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany** | **320,588** | **259,600** | **$4.69** | **03:31:23 (3.52h)** | **55.0 h** | **6.87 MD** | **+51.48 h** |
+| **`2026-08-02-0851-wyszukiwarka-nieruchomosci-data-arch`** | Architektura ELT Bronze/Silver/Gold w SQLite dla Wyszukiwarki Nieruchomości: pobieranie z `__NEXT_DATA__` Otodom, wyliczanie metryk RCN, automatyczne czyszczenie bazy i `run_id`, ścisłe filtrowanie SQL w deduplikatorze oraz bezbłędne renderowanie tabel. | 68,000 | 42,000 | $0.83 | 00:45:00 (0.75h) | 12.0 h | 1.50 MD | **+11.25 h** |
+| **`2026-08-02-1018-wyszukiwarka-nieruchomosci-adresowo`** | Integracja serwisu Adresowo.pl z klasą `AdresowoProvider`, obsługa dedykowanych adresów URL (`-Q/`, `_l2`), trwała retencja historyczna w `bronze_listings`, deduplikacja międzyserwisowa oraz wdrożenie flagi nowości (`is_new_listing`). | 75,000 | 48,000 | $0.95 | 00:50:00 (0.83h) | 14.0 h | 1.75 MD | **+13.17 h** |
+| **`2026-08-15-1711-wyszukiwarka-nieruchomosci-brozne-completeness`** | Weryfikacja kompletności pobierania w warstwie Bronze: dynamiczna paginacja na bazie `totalCount` (Otodom) i liczby deklarowanych ofert (Adresowo), audyt w tabeli `run_audit`, raportowanie wskaźnika w CLI i nagłówkach Markdown. | 62,000 | 39,000 | $0.77 | 00:35:00 (0.58h) | 10.0 h | 1.25 MD | **+9.42 h** |
+| **`2026-08-15-2158-wyszukiwarka-nieruchomosci-gratka`** | Integracja serwisu Gratka.pl: 2-fazowy scraper (lista + detal), ekstrakcja JSON-LD i tabeli cech, politeness delay, audyt kompletności oraz 8 testów jednostkowych zgodności z `kryteria.md`. | 65,000 | 42,000 | $0.82 | 00:35:00 (0.58h) | 12.0 h | 1.50 MD | **+11.42 h** |
+| **`2026-08-15-2158-wyszukiwarka-nieruchomosci-morizon`** | Integracja serwisu Morizon.pl: 2-fazowy scraper, obsługa Schema.org `Apartment`/`Place`, wyznaczanie współrzędnych i pięter, audyt kompletności oraz 8 testów jednostkowych. | 68,000 | 44,000 | $0.86 | 00:35:00 (0.58h) | 12.0 h | 1.50 MD | **+11.42 h** |
+| **`2026-08-15-2158-wyszukiwarka-nieruchomosci-nieruchomosci-online`** | Integracja serwisu Nieruchomosci-online.pl: obsługa sub-domen miejskich, parsowanie JSON-LD i parametrów technicznych, bezpieczna obsługa formatów tablicowych ofert oraz 9 testów jednostkowych. | 72,000 | 48,000 | $0.94 | 00:40:00 (0.67h) | 14.0 h | 1.75 MD | **+13.33 h** |
+| **`2026-08-15-2158-wyszukiwarka-nieruchomosci-olx`** | Integracja serwisu OLX.pl: 1-fazowy parser stanu SSR `__PRERENDERED_STATE__`, pre-normalizacja O(1) do korzenia `raw_payload`, detekcja ofert prywatnych oraz 7 testów jednostkowych. | 64,000 | 40,000 | $0.79 | 00:30:00 (0.50h) | 12.0 h | 1.50 MD | **+11.50 h** |
+| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany (12 zmian)** | **794,588** | **562,600** | **$10.65** | **08:01:23 (8.01h)** | **141.0 h** | **17.62 MD** | **+132.99 h** |
 
 ---
 
 ## 📊 Podsumowanie Agregacji Projektu
 
-- **Łączne Zużycie Tokenów**: 320,588 WE / 259,600 WY
-- **Łączny Szacowany Koszt API LLM**: **$4.69**
-- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **03:31:23** (3.52 h)
-- **Łączny Estymowany Czas Pracy Deweloperskiej**: **55.0 roboczogodzin (6.87 MD)**
-- **Zysk / Oszczędność Czasu Deweloperskiego**: **+51.48 roboczogodzin (~6.43 MD zaoszczędzone)**
+- **Łączne Zużycie Tokenów**: 794,588 WE / 562,600 WY
+- **Łączny Szacowany Koszt API LLM**: **$10.65**
+- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **08:01:23** (8.01 h)
+- **Łączny Estymowany Czas Pracy Deweloperskiej**: **141.0 roboczogodzin (17.62 MD)**
+- **Zysk / Oszczędność Czasu Deweloperskiego**: **+132.99 roboczogodzin (~16.62 MD zaoszczędzone)**

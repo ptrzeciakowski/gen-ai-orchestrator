@@ -37,7 +37,17 @@ class ReportGenerator:
         md_lines.append(f"# Raport Ofert Nieruchomości - Warszawa ({date_str} {time_readable})")
         md_lines.append("")
         md_lines.append(f"- **Wygenerowano**: {date_str} o godzinie `{time_readable}`")
-        md_lines.append(f"- **Przeanalizowano unikalnych ofert**: `{len(processed_listings)}`")
+        md_lines.append(f"- **Przeanalizowano unikalnych ofert w Gold**: `{len(processed_listings)}`")
+        
+        if hasattr(self, 'db_manager') and self.db_manager and hasattr(listings, 'run_id'):
+            audits = self.db_manager.get_run_audits(listings.run_id)
+            for a in audits:
+                portal = a.get('source_portal', '').capitalize()
+                saved = a.get('saved_bronze', 0)
+                expected = a.get('expected_total', 0)
+                pct = a.get('completeness_pct', 100.0)
+                md_lines.append(f"- **Audyt Kompletności {portal} (Bronze)**: `{saved}/{expected}` ({pct}% kompletności)")
+
         md_lines.append(f"- **Źródło danych transakcyjnych**: Rejestr Cen Nieruchomości m.st. Warszawy (RCN - https://mapa.um.warszawa.pl/rcn-szukaj/)")
         md_lines.append(f"- **Okres transakcyjny bazy RCN**: `{self.rcn_client.date_range}`")
         md_lines.append("")

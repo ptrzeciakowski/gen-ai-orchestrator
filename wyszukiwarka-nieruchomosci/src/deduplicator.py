@@ -9,9 +9,9 @@ class Deduplicator:
         self.config = config
         self.db_manager = db_manager or DatabaseManager()
 
-    def get_gold_listings(self, config=None):
+    def get_gold_listings(self, config=None, run_id=None):
         """
-        Pobiera zdeduplikowane oferty z widoku gold_listings, nakładając filtry biznesowe z kryteria.md.
+        Pobiera zdeduplikowane oferty z widoku gold_listings dla wskazanego run_id, nakładając filtry biznesowe z kryteria.md.
         """
         cfg = config or self.config
         conn = self.db_manager.get_connection()
@@ -19,6 +19,12 @@ class Deduplicator:
             cursor = conn.cursor()
             query = "SELECT * FROM gold_listings WHERE 1=1"
             params = []
+
+            if run_id:
+                query += " AND run_id = ?"
+                params.append(run_id)
+            else:
+                query += " AND run_id = (SELECT run_id FROM bronze_listings ORDER BY id DESC LIMIT 1)"
 
             if cfg:
                 if cfg.min_price is not None:

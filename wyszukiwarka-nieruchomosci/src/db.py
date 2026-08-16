@@ -40,7 +40,8 @@ class DatabaseManager:
             base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             db_path = os.path.join(base_dir, "data", "listings.db")
         self.db_path = db_path
-        os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
+        if self.db_path != ":memory:" and os.path.dirname(self.db_path):
+            os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
         self.init_db()
 
     def get_connection(self):
@@ -87,7 +88,21 @@ class DatabaseManager:
             ON bronze_listings(source_portal, external_id);
             """)
 
-            # 2. Widok Silver (Obsługa pasywna schematu syntetycznego oraz natywnego Otodom __NEXT_DATA__)
+            # 1b. Tabela Audytowa Kompletności Uruchomień (run_audit)
+            cursor.execute("""
+            CREATE TABLE IF NOT EXISTS run_audit (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                run_id TEXT NOT NULL,
+                source_portal TEXT NOT NULL,
+                expected_total INTEGER,
+                saved_bronze INTEGER,
+                completeness_pct REAL,
+                run_timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(run_id, source_portal) ON CONFLICT REPLACE
+            );
+            """)
+
+            # 2. Widok Silver (Obsługa pasywna schematu syntetycznego, natywnego Otodom __NEXT_DATA__, Adresowo.pl oraz Gratka.pl)
             cursor.execute("DROP VIEW IF EXISTS silver_listings;")
             cursor.execute("""
             CREATE VIEW silver_listings AS
@@ -98,11 +113,15 @@ class DatabaseManager:
                     b.source_portal,
                     b.external_id,
                     b.scraped_at,
-                    json_extract(b.raw_payload, '$.title') AS title,
+                    COALESCE(
+                        json_extract(b.raw_payload, '$.title'),
+                        json_extract(b.raw_payload, '$.place_ld.name')
+                    ) AS title,
                     
                     COALESCE(
                         json_extract(b.raw_payload, '$.url'),
                         CASE 
+                            WHEN b.source_portal = 'gratka' THEN 'https://gratka.pl/nieruchomosci/ob/' || b.external_id
                             WHEN json_extract(b.raw_payload, '$.slug') IS NOT NULL 
                             THEN 'https://www.otodom.pl/pl/oferta/' || json_extract(b.raw_payload, '$.slug')
                             ELSE 'https://www.otodom.pl/pl/oferta/' || b.external_id
@@ -128,11 +147,14 @@ class DatabaseManager:
                     ) AS district,
 
                     CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.price_pln'),
                         json_extract(b.raw_payload, '$.price.value'),
-                        json_extract(b.raw_payload, '$.totalPrice.value')
+                        json_extract(b.raw_payload, '$.totalPrice.value'),
+                        json_extract(b.raw_payload, '$.offer_ld.price')
                     ) AS REAL) AS price_pln,
                     
                     CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.area_m2'),
                         json_extract(b.raw_payload, '$.area.value'),
                         json_extract(b.raw_payload, '$.areaInSquareMeters')
                     ) AS REAL) AS area_m2,
@@ -167,23 +189,40 @@ class DatabaseManager:
                         END
                     ) AS INTEGER) AS floor,
                     
-                    CAST(json_extract(b.raw_payload, '$.total_floors') AS INTEGER) AS total_floors,
+                    CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.total_floors'),
+                        json_extract(b.raw_payload, '$.floorsInBuilding')
+                    ) AS INTEGER) AS total_floors,
                     
                     COALESCE(
+                        CAST(json_extract(b.raw_payload, '$.has_elevator') AS INTEGER),
                         CAST(json_extract(b.raw_payload, '$.features.elevator') AS INTEGER),
                         CAST(json_extract(b.raw_payload, '$.hasElevator') AS INTEGER),
                         CASE 
+                            WHEN json_extract(b.raw_payload, '$.features.winda') = 1 
+                              OR json_extract(b.raw_payload, '$.features.winda') = 'true' THEN 1
                             WHEN json_extract(b.raw_payload, '$.target.Extras_types') LIKE '%lift%' THEN 1
                             WHEN json_extract(b.raw_payload, '$.description') LIKE '%winda%' 
                               OR json_extract(b.raw_payload, '$.description') LIKE '%windą%'
+                              OR json_extract(b.raw_payload, '$.description_text') LIKE '%winda%'
+                              OR json_extract(b.raw_payload, '$.description_text') LIKE '%windą%'
                               OR json_extract(b.raw_payload, '$.shortDescription') LIKE '%winda%'
                               OR json_extract(b.raw_payload, '$.shortDescription') LIKE '%windą%' THEN 1 
                             ELSE 0 
                         END
                     ) AS has_elevator,
                     
-                    CAST(json_extract(b.raw_payload, '$.location.coordinates.latitude') AS REAL) AS lat,
-                    CAST(json_extract(b.raw_payload, '$.location.coordinates.longitude') AS REAL) AS lon,
+                    CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.location.coordinates.latitude'),
+                        json_extract(b.raw_payload, '$.place_ld.geo.latitude'),
+                        json_extract(b.raw_payload, '$.coordinates.latitude')
+                    ) AS REAL) AS lat,
+                    
+                    CAST(COALESCE(
+                        json_extract(b.raw_payload, '$.location.coordinates.longitude'),
+                        json_extract(b.raw_payload, '$.place_ld.geo.longitude'),
+                        json_extract(b.raw_payload, '$.coordinates.longitude')
+                    ) AS REAL) AS lon,
                     
                     COALESCE(
                         json_extract(b.raw_payload, '$.seller_type'),
@@ -191,6 +230,7 @@ class DatabaseManager:
                     ) AS seller_type,
                     
                     COALESCE(
+                        json_extract(b.raw_payload, '$.description_text'),
                         json_extract(b.raw_payload, '$.description'),
                         json_extract(b.raw_payload, '$.shortDescription')
                     ) AS description_text,
@@ -207,7 +247,7 @@ class DatabaseManager:
             FROM extracted_data e;
             """)
 
-            # 3. Widok Gold (Deduplikacja międzyserwisowa)
+            # 3. Widok Gold (Deduplikacja międzyserwisowa i flaga nowości is_new_listing)
             cursor.execute("DROP VIEW IF EXISTS gold_listings;")
             cursor.execute("""
             CREATE VIEW gold_listings AS
@@ -218,6 +258,8 @@ class DatabaseManager:
                         district || '_' || ROUND(area_m2, 1) || '_' || rooms || '_' || floor || '_' || CAST(price_pln AS INT)
                     ) AS dedup_fingerprint,
                     MIN(bronze_id) AS primary_bronze_id,
+                    MIN(external_id) AS external_id,
+                    MIN(source_portal) AS source_portal,
                     GROUP_CONCAT(source_portal || ':' || external_id, ', ') AS source_portals_list,
                     MIN(price_pln) AS min_price_pln,
                     MAX(price_pln) AS max_price_pln,
@@ -239,9 +281,22 @@ class DatabaseManager:
                     scraped_at,
                     run_id
                 FROM silver_listings
-                GROUP BY dedup_fingerprint
+                GROUP BY dedup_fingerprint, run_id
             )
-            SELECT * FROM deduplicated;
+            SELECT 
+                d.*,
+                CASE 
+                    WHEN NOT EXISTS (
+                        SELECT 1 FROM silver_listings s_prev 
+                        WHERE s_prev.run_id != d.run_id 
+                          AND s_prev.scraped_at < d.scraped_at 
+                          AND COALESCE(
+                              ROUND(s_prev.lat, 3) || '_' || ROUND(s_prev.lon, 3) || '_' || ROUND(s_prev.area_m2, 1) || '_' || s_prev.rooms,
+                              s_prev.district || '_' || ROUND(s_prev.area_m2, 1) || '_' || s_prev.rooms || '_' || s_prev.floor || '_' || CAST(s_prev.price_pln AS INT)
+                          ) = d.dedup_fingerprint
+                    ) THEN 1 ELSE 0 
+                END AS is_new_listing
+            FROM deduplicated d;
             """)
             conn.commit()
         finally:
@@ -262,6 +317,35 @@ class DatabaseManager:
         finally:
             conn.close()
 
+    def save_run_audit(self, run_id, source_portal, expected_total, saved_bronze):
+        """
+        Zapisuje metryki kompletności zrzutu w tabeli run_audit.
+        """
+        pct = round((saved_bronze / expected_total) * 100.0, 1) if expected_total and expected_total > 0 else 100.0
+        conn = self.get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("""
+            INSERT OR REPLACE INTO run_audit (run_id, source_portal, expected_total, saved_bronze, completeness_pct)
+            VALUES (?, ?, ?, ?, ?)
+            """, (run_id, source_portal, expected_total, saved_bronze, pct))
+            conn.commit()
+        finally:
+            conn.close()
+
+    def get_run_audits(self, run_id):
+        """
+        Pobiera audyt kompletności dla wskazanego run_id.
+        """
+        conn = self.get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM run_audit WHERE run_id = ?;", (run_id,))
+            rows = cursor.fetchall()
+            return [dict(r) for r in rows]
+        finally:
+            conn.close()
+
     def insert_bronze_listing(self, source_portal, external_id, city, chunk_name, raw_payload, run_id=None):
         """
         Wstawia surowy obiekt JSON ogłoszenia do tabeli bronze_listings.
@@ -275,6 +359,43 @@ class DatabaseManager:
             VALUES (?, ?, ?, ?, ?, ?)
             """, (run_id, source_portal, external_id, city, chunk_name, payload_str))
             conn.commit()
+        finally:
+            conn.close()
+
+    def get_latest_bronze_info(self, city=None):
+        """
+        Pobiera metadane o najświeższym zrzucie w warstwie Bronze.
+        Zwraca słownik z run_id, scraped_at, total_listings i statystykami portali lub None.
+        """
+        conn = self.get_connection()
+        try:
+            cursor = conn.cursor()
+            query = "SELECT run_id, MAX(scraped_at) AS last_scraped, COUNT(*) AS count FROM bronze_listings WHERE run_id LIKE 'run_%'"
+            params = []
+            if city:
+                query += " AND city = ?"
+                params.append(city)
+            query += " GROUP BY run_id ORDER BY last_scraped DESC LIMIT 1;"
+            cursor.execute(query, params)
+            row = cursor.fetchone()
+            if not row or not row["run_id"]:
+                return None
+            
+            latest_run_id = row["run_id"]
+            last_scraped = row["last_scraped"]
+            total_count = row["count"]
+
+            # Pobieramy rozkład per portal
+            cursor.execute("SELECT source_portal, COUNT(*) as p_count FROM bronze_listings WHERE run_id = ? GROUP BY source_portal;", (latest_run_id,))
+            p_rows = cursor.fetchall()
+            portals_map = {r["source_portal"]: r["p_count"] for r in p_rows}
+
+            return {
+                "run_id": latest_run_id,
+                "last_scraped_at": last_scraped,
+                "total_listings": total_count,
+                "portals": portals_map
+            }
         finally:
             conn.close()
 
@@ -295,3 +416,4 @@ class DatabaseManager:
             }
         finally:
             conn.close()
+
