@@ -28,14 +28,15 @@ Plik zawiera zbiorczy rejestr wszystkich zarchiwizowanych zmian w standardzie Op
 | **`2026-08-16-0720-wyszukiwarka-nieruchomosci-filter-min-build-year`** | Wdrożenie filtra minimalnego roku budowy (`min_build_year`): ekstrakcja w `silver_listings`, propagacja `MAX(build_year)` w `gold_listings`, filtracja SQL w `Deduplicator`, rozszerzenie tabeli w `ReportGenerator` oraz 4 testy jednostkowe. | 48,000 | 35,000 | $0.67 | 00:15:00 (0.25h) | 8.0 h | 1.00 MD | **+7.75 h** |
 | **`2026-08-16-0730-wyszukiwarka-nieruchomosci-enhanced-deduplication`** | Wdrożenie 3-poziomowej kaskadowej deduplikacji (Ulica -> GPS -> Dzielnica), walidacja bounding box GPS Polski, normalizacja `street_slug` w SQLite, konsolidacja cech w Gold (`MAX(floor)`, `MAX(build_year)`) i 4 testy jednostkowe. | 52,000 | 38,000 | $0.73 | 00:20:00 (0.33h) | 12.0 h | 1.50 MD | **+11.67 h** |
 | **`2026-08-16-0750-wyszukiwarka-nieruchomosci-react-ui`** | Nowoczesny interfejs webowy React 19 + Vite z wielowątkowym backendem REST API (Python), dynamiczną filtracją SQL, badżami opłacalności RCN, telemetrią warstw Bronze/Silver/Gold, odświeżaniem bazy w tle i 6 testami API. | 78,000 | 54,000 | $1.04 | 00:25:00 (0.42h) | 24.0 h | 3.00 MD | **+23.58 h** |
-| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany (16 zmian)** | **1,017,588** | **721,600** | **$13.71** | **09:21:23 (9.34h)** | **191.0 h** | **23.88 MD** | **+181.66 h** |
+| **`2026-08-22-2145-wyszukiwarka-nieruchomosci-parallel-ingestion`** | Potok równoległego pobierania danych (ThreadPoolExecutor max_workers=6) dla 6 portali, wzmocnienie współbieżności bazy SQLite (WAL mode, mutex, timeouty, batch insert) oraz integracja z CLI i Web UI API. | 68,000 | 45,000 | $0.88 | 00:45:00 (0.75h) | 14.0 h | 1.75 MD | **+13.25 h** |
+| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany (17 zmian)** | **1,085,588** | **766,600** | **$14.59** | **10:06:23 (10.09h)** | **205.0 h** | **25.63 MD** | **+194.91 h** |
 
 ---
 
 ## 📊 Podsumowanie Agregacji Projektu
 
-- **Łączne Zużycie Tokenów**: 1,017,588 WE / 721,600 WY
-- **Łączny Szacowany Koszt API LLM**: **$13.71**
-- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **09:21:23** (9.34 h)
-- **Łączny Estymowany Czas Pracy Deweloperskiej**: **191.0 roboczogodzin (23.88 MD)**
-- **Zysk / Oszczędność Czasu Deweloperskiego**: **+181.66 roboczogodzin (~22.71 MD zaoszczędzone)**
+- **Łączne Zużycie Tokenów**: 1,085,588 WE / 766,600 WY
+- **Łączny Szacowany Koszt API LLM**: **$14.59**
+- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **10:06:23** (10.09 h)
+- **Łączny Estymowany Czas Pracy Deweloperskiej**: **205.0 roboczogodzin (25.63 MD)**
+- **Zysk / Oszczędność Czasu Deweloperskiego**: **+194.91 roboczogodzin (~24.36 MD zaoszczędzone)**
