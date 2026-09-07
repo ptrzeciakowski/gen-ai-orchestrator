@@ -23,15 +23,17 @@ Twoim zadaniem jako Agenta jest utrwalenie historii konwersacji i analizy w dedy
    - Każdy plik odpowiada kolejnej sesji / transzy prac w ramach danego explore-a (`001-...md`, `002-...md` itd.).
    - Do wyznaczenia kolejnego pliku można posłużyć się skryptem `./.ai/tools/sandbox-explore.sh <folder_name> <session_id> <title> [slug]`.
 
-4. **Wymagana Zawartość i Struktura Pliku Sesji**:
+4. **Wymagana Zawartość i Dokładna Treść Czatu**:
    - **Nagłówek metadanych**:
      - Data i godzina sesji (np. `YYYY-MM-DD HH:MM:SS TZ`)
      - ID sesji (`Conversation ID`)
      - Tytuł sesji
-   - **Struktura Konwersacji**:
-     - W formacie markdown, odzwierciedlającym pełną strukturę dialogu (zapytanie użytkownika, research, wnioski, odpowiedzi).
-     - **Zasada Jednego Wątku**: W przypadku jednego wątku tematycznego cała treść musi być ujęta w ramach **jednego rozdziału** (np. `# Rozdział 1: <Tytuł wątku>`).
-     - Podsekcje mogą szczegółowo opisywać przebieg konwersacji (np. `## Zapytanie Użytkownika`, `## Odpowiedź Asystenta i Analiza`, `## Rekomendacje`).
+   - **Dokładna Treść Konwersacji**:
+     - W pliku sesji musi znaleźć się **dokładna, pełna treść czatu**, a nie skrótowe streszczenie czy syntetyczny raport.
+     - **Zasada Jednego Wątku**: W przypadku jednego wątku tematycznego cała konwersacja musi być ujęta w ramach **jednego rozdziału** (np. `# Rozdział 1: <Tytuł wątku>`).
+     - Poszczególne wypowiedzi muszą odzwierciedlać strukturę dialogu za pomocą nagłówków drugiego stopnia:
+       - `## Użytkownik` (dokładna treść zapytania / promptu użytkownika)
+       - `## Asystent` (dokładna, pełna odpowiedź asystenta wraz z tabelami, linkami i szczegółami)
 
 5. **Zgodność z Zasadami Repozytorium**:
    - Stosuj wytyczne z `.ai/guidelines/brutally-honest-rules.md` (zakaz zmyślania linków i liczb, precyzyjne oznaczanie niepewności).
