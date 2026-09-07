@@ -348,3 +348,11 @@ Wybieram opcję numer 2. Zapisz proszę treści maila po angielsku i po polsku w
 Zapisano szablony wiadomości e-mail w dedykowanych plikach sesyjnych:
 - `002-tresc-maila-po-angielsku.md`
 - `003-tresc-maila-po-polsku.md`
+
+## Użytkownik
+
+Skończyłem, przygotuj proszę linki do oklikania.
+
+## Asystent
+
+Wygenerowano kompletne zestawienie bezpośrednich linków do wysyłki przez przeglądarkę Gmail (1 kliknięcie otwiera nowe okno z uzupełnionym odbiorcą, tematem i wyedytowaną treścią). Zapisano je w pliku `004-linki-do-wysylki-gmail.md`.

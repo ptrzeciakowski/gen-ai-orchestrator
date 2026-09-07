@@ -24,7 +24,7 @@ Accommodation inquiry: 30.01 – 06.02.2027 (2 apartments / 7 persons)
 ```text
 Dear Sir or Madam,
 
-We are looking for accommodation for two friendly families (total: 7 persons – 3 adults and 4 children) for the upcoming winter holidays.
+We are looking for accommodation for two families (total: 7 persons – 3 adults and 4 children) for the upcoming winter holidays.
 
 Dates: 30.01.2027 – 06.02.2027 (7 nights)
 

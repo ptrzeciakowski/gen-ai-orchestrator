@@ -24,7 +24,7 @@ Zapytanie o ofertę: narty Austria 30.01 – 06.02.2027 (2 apartamenty / 7 osób
 ```text
 Dzień dobry,
 
-Poszukujemy oferty zakwaterowania dla dwóch zaprzyjaźnionych rodzin (łącznie 7 osób: 3 osoby dorosłe + 4 dzieci) w pierwszym tygodniu ferii zimowych dla województwa mazowieckiego.
+Poszukujemy oferty zakwaterowania dla dwóch rodzin (łącznie 7 osób: 3 osoby dorosłe + 4 dzieci) w pierwszym tygodniu ferii zimowych dla województwa mazowieckiego.
 
 Termin: 30.01.2027 – 06.02.2027 (7 noclegów, sobota – sobota)
 
