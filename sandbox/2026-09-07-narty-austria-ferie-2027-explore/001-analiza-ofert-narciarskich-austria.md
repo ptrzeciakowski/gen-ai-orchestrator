@@ -285,3 +285,66 @@ Super, tylko dlaczego w pliku '/Users/pawel/git/gen-ai-orchestrator/sandbox/2026
 Oczywiście! Plik sesji został zaktualizowany i zawiera teraz **dokładną, pełną treść każdego promptu użytkownika i każdej odpowiedzi asystenta** od początku tej sesji, zorganizowaną w ramach jednego spójnego rozdziału.
 
 Dodatkowo zaktualizowano definicję skilla w `.ai/skills/sandbox-explore/SKILL.md`, wprowadzając jednoznaczną zasadę, że pliki w `sandbox/` muszą rejestrować dosłowny dialog czatu (sekcje `## Użytkownik` oraz `## Asystent`), a nie syntetyczne raporty podsumowujące.
+
+## Użytkownik
+
+Dobrze, to teraz - zmodyfikujmy mail-a po angielsku tak aby
+- Początek (Dear Sir or Madam) był ogólny
+- jedyna opcja to 2 osobne apartamenty
+- do preferencji oprócz walking distance (to nie jest must-have) dodajmy basen lub saunę
+
+Najpierw zatwierdźmy treść maila, a potem na jego wzrór chciałbym przygotować maile per adres, który pokazałeś wcześniej. Możesz przygotować pliki .eml, które będę mógł otworzyć w gmailu i wysłać je bezpośrednio. Jeżeli możesz to mógłbyś przygotować drafty tych maili na moim koncie.
+
+## Asystent
+
+Oto propozycja zmodyfikowanej treści wiadomości e-mail w języku angielskim:
+
+### Proponowana treść maila (do zatwierdzenia)
+
+**Temat:**
+```text
+Accommodation inquiry: 30.01 – 06.02.2027 (2 apartments / 7 persons)
+```
+
+**Treść:**
+```text
+Dear Sir or Madam,
+
+We are looking for accommodation for two friendly families (total: 7 persons – 3 adults and 4 children) for the upcoming winter holidays.
+
+Dates:
+- 30.01.2027 – 06.02.2027 (7 nights)
+- Alternative / flexible: 31.01.2027 – 07.02.2027
+
+Required Accommodation:
+We are exclusively looking for 2 separate apartments located in the same house or residence:
+1. Apartment 1: for 4 persons (2 adults + 2 children)
+2. Apartment 2: for 3 persons (1 adult + 2 children)
+
+Preferences:
+- Wellness: access to a sauna or swimming pool on-site (or within the building/residence).
+- Location: convenient access to the ski slopes / gondola station (walking distance or ski-in/ski-out is a strong plus, though not a strict must-have).
+
+Could you please check your availability or forward our inquiry to your associated local hosts and provide us with available offers and prices?
+
+Thank you in advance for your assistance.
+
+Best regards,
+[Twoje Imię i Nazwisko]
+[Numer telefonu]
+```
+
+### Kwestia techniczna: Pliki .eml vs Drafty w Gmailu
+1. Pliki .eml
+2. Bezpośrednie linki do tworzenia draftów w przeglądarce Gmail (https://mail.google.com/mail/?view=cm&...)
+3. Bezpośrednie tworzenie draftów przez API Gmail na koncie
+
+## Użytkownik
+
+Wybieram opcję numer 2. Zapisz proszę treści maila po angielsku i po polsku w plikach 002 i 003. Wyedytuję je i potem przejdziemy do wysyłki.
+
+## Asystent
+
+Zapisano szablony wiadomości e-mail w dedykowanych plikach sesyjnych:
+- `002-tresc-maila-po-angielsku.md`
+- `003-tresc-maila-po-polsku.md`
