@@ -1,0 +1,13 @@
+{
+  "name": "sandbox-explore",
+  "type": "agent-instruction",
+  "description": "Komenda /sandbox-explore. Zapisuje historię i podsumowanie sesji do katalogu sandbox/ w konwencji YYYY-MM-DD-nazwa-explore. Zawsze proponuje nazwę folderu i pyta użytkownika o jej akceptację. Tworzy pliki NNN-tytul-sesji.md (3-5 wyrazowy tytuł, np. 001-analiza-trendu-narciarskiego.md) z metadanymi sesji (data, czas, id sesji, tytuł) oraz ustrukturyzowaną historią wątku w ramach jednego rozdziału.",
+  "command": "bash",
+  "args": [
+    "./.ai/tools/sandbox-explore.sh",
+    "<folder-name>",
+    "[session-id]",
+    "[title]"
+  ],
+  "env": {}
+}
