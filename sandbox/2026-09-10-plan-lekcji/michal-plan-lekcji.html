@@ -3,42 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Michał - plan lekcji</title>
-    <style>
+        <style>
         :root {
-            /* 1 interwał (5 min) = 7 pikseli wysokości */
-            --grid-scale: 7px; 
+            /* 1 interwał (5 min) = 6px wysokości (idealne dopasowanie do pojedynczej strony A4) */
+            --grid-scale: 6px; 
         }
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #f8fafc;
-            padding: 20px;
+            padding: 16px;
             color: #334155;
+            margin: 0;
+        }
+
+        .actions {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .btn-print {
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 8px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+            transition: background-color 0.15s ease, transform 0.1s ease;
+        }
+
+        .btn-print:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e293b;
+            margin: 0 0 10px 0;
+            font-size: 20px;
         }
 
         .calendar {
             display: grid;
             /* Kolumny: 1 dla godzin, 5 dla dni roboczych */
-            grid-template-columns: 70px repeat(5, 1fr);
-            /* Rzędy: Nagłówek + 132 interwały 5-minutowe (od 8:00 do 19:00) */
-            grid-template-rows: 50px repeat(132, var(--grid-scale));
+            grid-template-columns: 65px repeat(5, 1fr);
+            /* Rzędy: Nagłówek (38px) + odstęp nad 8:00 (14px) + 132 interwały 5-minutowe (od 8:00 do 19:00) */
+            grid-template-rows: 38px 14px repeat(132, var(--grid-scale));
             gap: 1px;
             background-color: #e2e8f0;
             border: 1px solid #cbd5e1;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            max-width: 1100px;
+            max-width: 1050px;
             margin: 0 auto;
+            page-break-inside: avoid;
+            break-inside: avoid;
         }
 
         .header {
             background-color: #ffffff;
             font-weight: 600;
+            font-size: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-bottom: 2px solid #cbd5e1;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
 
         /* Linie siatki godzin w tle */
@@ -51,28 +87,28 @@
         /* Etykiety czasu po lewej stronie */
         .time-label {
             grid-column: 1;
-            font-size: 13px;
+            font-size: 12px;
             color: #64748b;
             text-align: right;
             padding-right: 12px;
-            transform: translateY(-9px); 
+            transform: translateY(-50%); 
             z-index: 2;
         }
 
         /* Główna logika pozycjonowania lekcji */
         .lesson {
-            /* (Godzina - 8) * 12 interwałów na godzinę + minuty/5 + 2 (korekta na nagłówek) */
-            grid-row-start: calc( ((var(--h) - 8) * 12) + (var(--m) / 5) + 2 );
+            /* (Godzina - 8) * 12 interwałów na godzinę + minuty/5 + 3 (korekta na nagłówek i odstęp) */
+            grid-row-start: calc( ((var(--h) - 8) * 12) + (var(--m) / 5) + 3 );
             grid-row-end: span calc(var(--d) / 5);
             grid-column: var(--col);
 
-            margin: 2px 4px;
+            margin: 2px 3px;
             border-radius: 6px;
-            padding: 4px;
-            font-size: 13px;
+            padding: 3px 4px;
+            font-size: 12px;
             font-weight: 500;
             color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
             z-index: 10;
             
             display: flex;
@@ -80,8 +116,10 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            line-height: 1.2;
+            line-height: 1.18;
             transition: transform 0.15s ease;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
 
         .lesson:hover {
@@ -90,9 +128,9 @@
         }
 
         .lesson .time {
-            font-size: 11px;
-            opacity: 0.9;
-            margin-top: 4px;
+            font-size: 10px;
+            opacity: 0.92;
+            margin-top: 3px;
             font-weight: 400;
         }
 
@@ -100,12 +138,41 @@
         .general { background-color: #3b82f6; } /* Domyślny niebieski */
         .es { background-color: #f59e0b; } /* Early Stage - Pomarańczowy */
         .sport { background-color: #14b8a6; } /* Szkolenie sportowe / WF - Morski */
-        
-        h2 { text-align: center; color: #1e293b; margin-bottom: 30px; }
+
+        /* Druk na A4 */
+        @page {
+            size: A4 portrait;
+            margin: 8mm;
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            .no-print {
+                display: none !important;
+            }
+            h2 {
+                margin: 0 0 8px 0;
+                font-size: 18px;
+            }
+            .calendar {
+                box-shadow: none;
+                max-width: 100%;
+                border-color: #cbd5e1;
+            }
+            .lesson {
+                box-shadow: none;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <div class="actions no-print">
+        <button onclick="window.print()" class="btn-print">🖨️ Drukuj plan lekcji (A4)</button>
+    </div>
     <h2>Michał - plan lekcji</h2>
 
     <div class="calendar">
@@ -118,17 +185,17 @@
         <div class="header" style="grid-column: 6; grid-row: 1;">Piątek</div>
 
         <!-- Oś czasu -->
-        <div class="time-label" style="grid-row: 2;">8:00</div><div class="grid-line" style="grid-row: 2;"></div>
-        <div class="time-label" style="grid-row: 14;">9:00</div><div class="grid-line" style="grid-row: 14;"></div>
-        <div class="time-label" style="grid-row: 26;">10:00</div><div class="grid-line" style="grid-row: 26;"></div>
-        <div class="time-label" style="grid-row: 38;">11:00</div><div class="grid-line" style="grid-row: 38;"></div>
-        <div class="time-label" style="grid-row: 50;">12:00</div><div class="grid-line" style="grid-row: 50;"></div>
-        <div class="time-label" style="grid-row: 62;">13:00</div><div class="grid-line" style="grid-row: 62;"></div>
-        <div class="time-label" style="grid-row: 74;">14:00</div><div class="grid-line" style="grid-row: 74;"></div>
-        <div class="time-label" style="grid-row: 86;">15:00</div><div class="grid-line" style="grid-row: 86;"></div>
-        <div class="time-label" style="grid-row: 98;">16:00</div><div class="grid-line" style="grid-row: 98;"></div>
-        <div class="time-label" style="grid-row: 110;">17:00</div><div class="grid-line" style="grid-row: 110;"></div>
-        <div class="time-label" style="grid-row: 122;">18:00</div><div class="grid-line" style="grid-row: 122;"></div>
+        <div class="time-label" style="grid-row: 3;">8:00</div><div class="grid-line" style="grid-row: 3;"></div>
+        <div class="time-label" style="grid-row: 15;">9:00</div><div class="grid-line" style="grid-row: 15;"></div>
+        <div class="time-label" style="grid-row: 27;">10:00</div><div class="grid-line" style="grid-row: 27;"></div>
+        <div class="time-label" style="grid-row: 39;">11:00</div><div class="grid-line" style="grid-row: 39;"></div>
+        <div class="time-label" style="grid-row: 51;">12:00</div><div class="grid-line" style="grid-row: 51;"></div>
+        <div class="time-label" style="grid-row: 63;">13:00</div><div class="grid-line" style="grid-row: 63;"></div>
+        <div class="time-label" style="grid-row: 75;">14:00</div><div class="grid-line" style="grid-row: 75;"></div>
+        <div class="time-label" style="grid-row: 87;">15:00</div><div class="grid-line" style="grid-row: 87;"></div>
+        <div class="time-label" style="grid-row: 99;">16:00</div><div class="grid-line" style="grid-row: 99;"></div>
+        <div class="time-label" style="grid-row: 111;">17:00</div><div class="grid-line" style="grid-row: 111;"></div>
+        <div class="time-label" style="grid-row: 123;">18:00</div><div class="grid-line" style="grid-row: 123;"></div>
 
         <!-- ==================== PONIEDZIAŁEK (--col: 2) ==================== -->
         <div class="lesson sport" style="--col: 2; --h: 8; --m: 0; --d: 45;">Wychowanie fizyczne <span class="time">8:00-8:45</span></div>
