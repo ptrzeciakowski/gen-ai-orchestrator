@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Michał - plan lekcji</title>
+    <style>
+        :root {
+            /* 1 interwał (5 min) = 7 pikseli wysokości */
+            --grid-scale: 7px; 
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8fafc;
+            padding: 20px;
+            color: #334155;
+        }
+
+        .calendar {
+            display: grid;
+            /* Kolumny: 1 dla godzin, 5 dla dni roboczych */
+            grid-template-columns: 70px repeat(5, 1fr);
+            /* Rzędy: Nagłówek + 132 interwały 5-minutowe (od 8:00 do 19:00) */
+            grid-template-rows: 50px repeat(132, var(--grid-scale));
+            gap: 1px;
+            background-color: #e2e8f0;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: #ffffff;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #cbd5e1;
+        }
+
+        /* Linie siatki godzin w tle */
+        .grid-line {
+            grid-column: 2 / -1;
+            border-top: 1px dashed #cbd5e1;
+            z-index: 1;
+        }
+
+        /* Etykiety czasu po lewej stronie */
+        .time-label {
+            grid-column: 1;
+            font-size: 13px;
+            color: #64748b;
+            text-align: right;
+            padding-right: 12px;
+            transform: translateY(-9px); 
+            z-index: 2;
+        }
+
+        /* Główna logika pozycjonowania lekcji */
+        .lesson {
+            /* (Godzina - 8) * 12 interwałów na godzinę + minuty/5 + 2 (korekta na nagłówek) */
+            grid-row-start: calc( ((var(--h) - 8) * 12) + (var(--m) / 5) + 2 );
+            grid-row-end: span calc(var(--d) / 5);
+            grid-column: var(--col);
+
+            margin: 2px 4px;
+            border-radius: 6px;
+            padding: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 10;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            line-height: 1.2;
+            transition: transform 0.15s ease;
+        }
+
+        .lesson:hover {
+            transform: scale(1.03);
+            z-index: 20;
+        }
+
+        .lesson .time {
+            font-size: 11px;
+            opacity: 0.9;
+            margin-top: 4px;
+            font-weight: 400;
+        }
+
+        /* Kolorystyka przedmiotów */
+        .general { background-color: #3b82f6; } /* Domyślny niebieski */
+        .es { background-color: #f59e0b; } /* Early Stage - Pomarańczowy */
+        .sport { background-color: #14b8a6; } /* Szkolenie sportowe / WF - Morski */
+        
+        h2 { text-align: center; color: #1e293b; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+
+    <h2>Michał - plan lekcji</h2>
+
+    <div class="calendar">
+        <!-- Nagłówki -->
+        <div class="header" style="grid-column: 1; grid-row: 1;">Godzina</div>
+        <div class="header" style="grid-column: 2; grid-row: 1;">Poniedziałek</div>
+        <div class="header" style="grid-column: 3; grid-row: 1;">Wtorek</div>
+        <div class="header" style="grid-column: 4; grid-row: 1;">Środa</div>
+        <div class="header" style="grid-column: 5; grid-row: 1;">Czwartek</div>
+        <div class="header" style="grid-column: 6; grid-row: 1;">Piątek</div>
+
+        <!-- Oś czasu -->
+        <div class="time-label" style="grid-row: 2;">8:00</div><div class="grid-line" style="grid-row: 2;"></div>
+        <div class="time-label" style="grid-row: 14;">9:00</div><div class="grid-line" style="grid-row: 14;"></div>
+        <div class="time-label" style="grid-row: 26;">10:00</div><div class="grid-line" style="grid-row: 26;"></div>
+        <div class="time-label" style="grid-row: 38;">11:00</div><div class="grid-line" style="grid-row: 38;"></div>
+        <div class="time-label" style="grid-row: 50;">12:00</div><div class="grid-line" style="grid-row: 50;"></div>
+        <div class="time-label" style="grid-row: 62;">13:00</div><div class="grid-line" style="grid-row: 62;"></div>
+        <div class="time-label" style="grid-row: 74;">14:00</div><div class="grid-line" style="grid-row: 74;"></div>
+        <div class="time-label" style="grid-row: 86;">15:00</div><div class="grid-line" style="grid-row: 86;"></div>
+        <div class="time-label" style="grid-row: 98;">16:00</div><div class="grid-line" style="grid-row: 98;"></div>
+        <div class="time-label" style="grid-row: 110;">17:00</div><div class="grid-line" style="grid-row: 110;"></div>
+        <div class="time-label" style="grid-row: 122;">18:00</div><div class="grid-line" style="grid-row: 122;"></div>
+
+        <!-- ==================== PONIEDZIAŁEK (--col: 2) ==================== -->
+        <div class="lesson sport" style="--col: 2; --h: 8; --m: 0; --d: 45;">Wychowanie fizyczne <span class="time">8:00-8:45</span></div>
+        <div class="lesson sport" style="--col: 2; --h: 8; --m: 55; --d: 45;">Wychowanie fizyczne <span class="time">8:55-9:40</span></div>
+        <div class="lesson general" style="--col: 2; --h: 9; --m: 50; --d: 45;">Matematyka <span class="time">9:50-10:35</span></div>
+        <div class="lesson general" style="--col: 2; --h: 10; --m: 45; --d: 45;">Język angielski <span class="time">10:45-11:30</span></div>
+        <div class="lesson general" style="--col: 2; --h: 11; --m: 40; --d: 45;">Muzyka <span class="time">11:40-12:25</span></div>
+        <div class="lesson general" style="--col: 2; --h: 12; --m: 45; --d: 45;">Język polski <span class="time">12:45-13:30</span></div>
+
+        <!-- ==================== WTOREK (--col: 3) ==================== -->
+        <div class="lesson general" style="--col: 3; --h: 8; --m: 0; --d: 45;">Język polski <span class="time">8:00-8:45</span></div>
+        <div class="lesson general" style="--col: 3; --h: 8; --m: 55; --d: 45;">Matematyka <span class="time">8:55-9:40</span></div>
+        <div class="lesson general" style="--col: 3; --h: 9; --m: 50; --d: 45;">Plastyka <span class="time">9:50-10:35</span></div>
+        <div class="lesson general" style="--col: 3; --h: 10; --m: 45; --d: 45;">Godzina wychowawcza <span class="time">10:45-11:30</span></div>
+        <div class="lesson general" style="--col: 3; --h: 11; --m: 40; --d: 45;">Geografia <span class="time">11:40-12:25</span></div>
+        <div class="lesson sport" style="--col: 3; --h: 12; --m: 45; --d: 45;">Szkolenie sportowe <span class="time">12:45-13:30</span></div>
+        <div class="lesson sport" style="--col: 3; --h: 13; --m: 50; --d: 45;">Szkolenie sportowe <span class="time">13:50-14:35</span></div>
+        <div class="lesson sport" style="--col: 3; --h: 14; --m: 45; --d: 45;">Szkolenie sportowe <span class="time">14:45-15:30</span></div>
+        <div class="lesson es" style="--col: 3; --h: 16; --m: 30; --d: 90;">Early Stage <span class="time">16:30-18:00</span></div>
+
+        <!-- ==================== ŚRODA (--col: 4) ==================== -->
+        <div class="lesson general" style="--col: 4; --h: 8; --m: 55; --d: 45;">Edukacja zdrowotna <span class="time">8:55-9:40</span></div>
+        <div class="lesson general" style="--col: 4; --h: 9; --m: 50; --d: 45;">Historia <span class="time">9:50-10:35</span></div>
+        <div class="lesson general" style="--col: 4; --h: 10; --m: 45; --d: 45;">Matematyka <span class="time">10:45-11:30</span></div>
+        <div class="lesson general" style="--col: 4; --h: 11; --m: 40; --d: 45;">Język angielski <span class="time">11:40-12:25</span></div>
+        <div class="lesson sport" style="--col: 4; --h: 12; --m: 45; --d: 45;">Wychowanie fizyczne <span class="time">12:45-13:30</span></div>
+
+        <!-- ==================== CZWARTEK (--col: 5) ==================== -->
+        <div class="lesson general" style="--col: 5; --h: 8; --m: 55; --d: 45;">Język polski <span class="time">8:55-9:40</span></div>
+        <div class="lesson general" style="--col: 5; --h: 9; --m: 50; --d: 45;">Język polski <span class="time">9:50-10:35</span></div>
+        <div class="lesson sport" style="--col: 5; --h: 10; --m: 45; --d: 45;">Wychowanie fizyczne <span class="time">10:45-11:30</span></div>
+        <div class="lesson general" style="--col: 5; --h: 11; --m: 40; --d: 45;">Język angielski <span class="time">11:40-12:25</span></div>
+        <div class="lesson general" style="--col: 5; --h: 12; --m: 45; --d: 45;">Matematyka <span class="time">12:45-13:30</span></div>
+        <div class="lesson sport" style="--col: 5; --h: 14; --m: 0; --d: 90;">Trening tenisowy indywidualny <span class="time">14:00-15:30</span></div>
+        <div class="lesson es" style="--col: 5; --h: 17; --m: 0; --d: 90;">Early Stage <span class="time">17:00-18:30</span></div>
+
+        <!-- ==================== PIĄTEK (--col: 6) ==================== -->
+        <div class="lesson general" style="--col: 6; --h: 8; --m: 0; --d: 45;">Biologia <span class="time">8:00-8:45</span></div>
+        <div class="lesson general" style="--col: 6; --h: 8; --m: 55; --d: 45;">Język polski <span class="time">8:55-9:40</span></div>
+        <div class="lesson general" style="--col: 6; --h: 9; --m: 50; --d: 45;">Informatyka <span class="time">9:50-10:35</span></div>
+        <div class="lesson general" style="--col: 6; --h: 10; --m: 45; --d: 45;">Technika <span class="time">10:45-11:30</span></div>
+        <div class="lesson general" style="--col: 6; --h: 11; --m: 40; --d: 45;">Historia <span class="time">11:40-12:25</span></div>
+        <div class="lesson sport" style="--col: 6; --h: 12; --m: 45; --d: 45;">Szkolenie sportowe <span class="time">12:45-13:30</span></div>
+        <div class="lesson sport" style="--col: 6; --h: 13; --m: 50; --d: 45;">Szkolenie sportowe <span class="time">13:50-14:35</span></div>
+        <div class="lesson sport" style="--col: 6; --h: 14; --m: 45; --d: 45;">Szkolenie sportowe <span class="time">14:45-15:30</span></div>
+    </div>
+</body>
+</html>
