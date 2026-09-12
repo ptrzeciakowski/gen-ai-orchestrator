@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Quizy Sukcesu: Trójkąty, Kąty i Pitagoras</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm 12mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1e293b; margin: 0; padding: 0; font-size: 10pt; line-height: 1.35; }
+  .header { text-align: center; border-bottom: 2px solid #0284c7; padding-bottom: 4px; margin-bottom: 12px; }
+  .header h1 { margin: 0; font-size: 15pt; color: #0369a1; }
+  .header p { margin: 2px 0 0; font-size: 9pt; color: #0284c7; }
+  .quiz-card { background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; }
+  .quiz-title { font-size: 11pt; font-weight: bold; color: #0c4a6e; display: flex; justify-content: space-between; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 8px; }
+  .task { margin-bottom: 8px; font-size: 10pt; }
+  .task-num { font-weight: bold; color: #0284c7; margin-right: 4px; }
+  .answer-space { border-bottom: 1px dashed #94a3b8; height: 26px; margin-top: 3px; display: flex; align-items: flex-end; color: #64748b; font-size: 8.5pt; font-style: italic; }
+  .page-break { page-break-before: always; }
+  .coach-card { background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
+  .coach-title { font-size: 11pt; font-weight: bold; color: #166534; margin-bottom: 6px; }
+  table.answers { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 9pt; }
+  table.answers th, table.answers td { border: 1px solid #cbd5e1; padding: 5px 8px; text-align: left; }
+  table.answers th { background: #e2e8f0; color: #1e293b; }
+</style>
+</head>
+<body>
+
+<!-- STRONA 1: KARTA 1 & KARTA 2 -->
+<div class="header">
+  <h1>🎯 QUIZY SUKCESU: TRÓJKĄTY, KĄTY I PITAGORAS</h1>
+  <p>Trening Mikrokroków Nadii – 5 minut na kartę | Zegar start!</p>
+</div>
+
+<div class="quiz-card">
+  <div class="quiz-title">
+    <span>KARTA 1: Kąty i Sumy w Figurach</span>
+    <span style="font-size: 9pt; font-weight: normal; color: #64748b;">Czas: 5 min | Punkty: __/3</span>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 1.</span> W trójkącie równoramiennym kąt między ramionami ma 50°. Jakie miary mają kąty przy podstawie?
+    <div class="answer-space">Kąty przy podstawie = _________________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 2.</span> Kąt przyległy do kąta α ma miarę 135°. Ile wynosi kąt α?
+    <div class="answer-space">α = _________________________________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 3.</span> Trzy kąty czworokąta mają 70°, 110° i 120°. Jaka jest miara czwartego kąta?
+    <div class="answer-space">Czwarty kąt = ________________________</div>
+  </div>
+</div>
+
+<div class="quiz-card">
+  <div class="quiz-title">
+    <span>KARTA 2: Twierdzenie Pitagorasa i Święte Trójki</span>
+    <span style="font-size: 9pt; font-weight: normal; color: #64748b;">Czas: 5 min | Punkty: __/3</span>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 1.</span> Przyprostokątne trójkąta mają 6 cm i 8 cm. Oblicz przeciwprostokątną c.
+    <div class="answer-space">c = _________________________________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 2.</span> Przeciwprostokątna ma 13 cm, a przyprostokątna 12 cm. Oblicz drugą przyprostokątną.
+    <div class="answer-space">a = _________________________________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 3.</span> Czy z odcinków 5 cm, 7 cm i 13 cm można zbudować trójkąt? Zapisz warunek.
+    <div class="answer-space">Odpowiedź i warunek: __________________</div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- STRONA 2: KARTA 3 & KARTA 4 -->
+<div class="header">
+  <h1>🎯 QUIZY SUKCESU: TRÓJKĄTY, KĄTY I PITAGORAS</h1>
+  <p>Trening Mikrokroków Nadii – Część II</p>
+</div>
+
+<div class="quiz-card">
+  <div class="quiz-title">
+    <span>KARTA 3: Ekierki i Trójkąt Równoboczny</span>
+    <span style="font-size: 9pt; font-weight: normal; color: #64748b;">Czas: 5 min | Punkty: __/3</span>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 1.</span> Kwadrat ma bok 9 cm. Ile wynosi długość jego przekątnej d?
+    <div class="answer-space">d = _________________________________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 2.</span> Trójkąt równoboczny ma bok a = 6 cm. Oblicz jego wysokość h oraz pole P.
+    <div class="answer-space">h = _______________ | P = _______________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 3.</span> W trójkącie 30°−60°−90° przeciwprostokątna ma 14 cm. Ile wynosi najkrótszy bok?
+    <div class="answer-space">Najkrótszy bok = ______________________</div>
+  </div>
+</div>
+
+<div class="quiz-card">
+  <div class="quiz-title">
+    <span>KARTA 4: Miszmasz Egzaminacyjny CKE</span>
+    <span style="font-size: 9pt; font-weight: normal; color: #64748b;">Czas: 5 min | Punkty: __/3</span>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 1.</span> Drabina o długości 10 m oparta jest o ścianę. Jej dół jest 6 m od ściany. Na jaką wysokość sięga drabina?
+    <div class="answer-space">Wysokość = ___________________________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 2.</span> W trójkącie prostokątnym o kątach 30°, 60°, 90° bok naprzeciw 30° ma 5 cm. Oblicz pole trójkąta.
+    <div class="answer-space">Pole = _______________________________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 3.</span> Kąty w trójkącie mają miary x, 2x, 3x. Wyznacz miarę największego kąta.
+    <div class="answer-space">Największy kąt = ______________________</div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- STRONA 3: PRZEWODNIK RODZICA I ODPOWIEDZI -->
+<div class="coach-card">
+  <div class="coach-title">🧠 PRZEWODNIK MENTORA (Dla Rodzica / Nauczyciela)</div>
+  <p style="margin: 3px 0 6px;"><b>Wskazówki neurodydaktyczne:</b></p>
+  <ul>
+    <li><b>Zmysł wzroku:</b> Zachęcaj Nadię do zaznaczania kąta prostego łukiem z kropką i wskazywania palcem boku naprzeciwko: <i>"To jest przeciwprostokątna!"</i></li>
+    <li><b>Święte Trójki:</b> Jeśli Nadia od razu poda 10 w zadaniu z bokami 6 i 8 bez rozpisywania całego Pitagorasa, nagródź to: <i>"Brawo, poznałaś trójkę pitagorejską jak prawdziwy mistrz!"</i></li>
+    <li><b>Ekierki:</b> W trójkącie 30-60-90 przypomnij: <i>"Krótki bok to połowa najdłuższego!"</i>.</li>
+  </ul>
+</div>
+
+<div class="quiz-card">
+  <div class="quiz-title"><span>🔑 KLUCZ ODPOWIEDZI Z WYJAŚNIENIEM KROK PO KROKU</span></div>
+  <table class="answers">
+    <thead>
+      <tr>
+        <th style="width: 15%;">Karta</th>
+        <th style="width: 15%;">Zadanie</th>
+        <th style="width: 25%;">Prawidłowa Odpowiedź</th>
+        <th>Kluczowy krok / Wyjaśnienie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3"><b>KARTA 1</b></td>
+        <td>Zadanie 1</td>
+        <td><b>65° i 65°</b></td>
+        <td>(180° − 50°) ÷ 2 = 130° ÷ 2 = 65°</td>
+      </tr>
+      <tr>
+        <td>Zadanie 2</td>
+        <td><b>45°</b></td>
+        <td>180° − 135° = 45° (kąty przyległe sumują się do 180°)</td>
+      </tr>
+      <tr>
+        <td>Zadanie 3</td>
+        <td><b>60°</b></td>
+        <td>360° − (70° + 110° + 120°) = 360° − 300° = 60°</td>
+      </tr>
+
+      <tr>
+        <td rowspan="3"><b>KARTA 2</b></td>
+        <td>Zadanie 1</td>
+        <td><b>10 cm</b></td>
+        <td>Święta trójka 6-8-10 (lub 6² + 8² = 36 + 64 = 100, √100 = 10)</td>
+      </tr>
+      <tr>
+        <td>Zadanie 2</td>
+        <td><b>5 cm</b></td>
+        <td>Święta trójka 5-12-13 (lub 13² − 12² = 169 − 144 = 25, √25 = 5)</td>
+      </tr>
+      <tr>
+        <td>Zadanie 3</td>
+        <td><b>NIE MOŻNA</b></td>
+        <td>5 + 7 = 12, a 12 &lt; 13 (suma krótszych boków musi być większa niż najdłuższy!)</td>
+      </tr>
+
+      <tr>
+        <td rowspan="3"><b>KARTA 3</b></td>
+        <td>Zadanie 1</td>
+        <td><b>9√2 cm</b></td>
+        <td>Wzór na przekątną kwadratu: d = a√2 = 9√2</td>
+      </tr>
+      <tr>
+        <td>Zadanie 2</td>
+        <td><b>h = 3√3 cm, P = 9√3 cm²</b></td>
+        <td>h = (6√3)/2 = 3√3; &nbsp; P = (6²√3)/4 = 36√3 / 4 = 9√3</td>
+      </tr>
+      <tr>
+        <td>Zadanie 3</td>
+        <td><b>7 cm</b></td>
+        <td>W trójkącie 30-60-90 bok naprzeciw 30° jest połową przeciwprostokątnej: 14 ÷ 2 = 7</td>
+      </tr>
+
+      <tr>
+        <td rowspan="3"><b>KARTA 4</b></td>
+        <td>Zadanie 1</td>
+        <td><b>8 m</b></td>
+        <td>Święta trójka 6-8-10! (lub h² = 10² − 6² = 100 − 36 = 64 → h = 8)</td>
+      </tr>
+      <tr>
+        <td>Zadanie 2</td>
+        <td><b>12,5√3 cm² (lub 25√3 / 2)</b></td>
+        <td>Przyprostokątne to a = 5 oraz b = 5√3. Pole = (5 · 5√3) / 2 = 12,5√3</td>
+      </tr>
+      <tr>
+        <td>Zadanie 3</td>
+        <td><b>90°</b></td>
+        <td>x + 2x + 3x = 180° → 6x = 180° → x = 30°. Największy kąt to 3x = 90° (trójkąt prostokątny!)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

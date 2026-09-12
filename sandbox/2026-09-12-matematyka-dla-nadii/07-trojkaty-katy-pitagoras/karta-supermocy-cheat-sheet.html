@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karta Supermocy: Trójkąty, Kąty i Twierdzenie Pitagorasa</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm 10mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1e293b; margin: 0; padding: 0; font-size: 10.2pt; line-height: 1.32; }
+  .header { text-align: center; border-bottom: 3px solid #0284c7; padding-bottom: 4px; margin-bottom: 8px; }
+  .header h1 { margin: 0; font-size: 15.5pt; color: #0369a1; text-transform: uppercase; letter-spacing: 0.5px; }
+  .header p { margin: 2px 0 0; font-size: 9.5pt; color: #0284c7; font-weight: 600; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .card { background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 7px 10px; margin-bottom: 6px; }
+  .card-title { font-size: 10.8pt; font-weight: bold; color: #0c4a6e; margin-bottom: 4px; display: flex; align-items: center; gap: 5px; border-bottom: 1.5px solid #cbd5e1; padding-bottom: 2px; }
+  .formula-box { background: #ffffff; border-left: 3.5px solid #0284c7; padding: 5px 8px; margin: 4px 0; font-family: "Courier New", monospace; font-size: 10pt; font-weight: bold; color: #0f172a; border-radius: 0 5px 5px 0; }
+  .alert-box { background: #fff1f2; border: 1.5px solid #fecdd3; border-left: 3.5px solid #e11d48; padding: 5px 8px; border-radius: 4px; font-size: 9.3pt; color: #9f1239; margin-top: 4px; }
+  .success-box { background: #f0fdf4; border: 1.5px solid #bbf7d0; border-left: 3.5px solid #16a34a; padding: 5px 8px; border-radius: 4px; font-size: 9.3pt; color: #166534; margin-top: 4px; }
+  ul { margin: 3px 0; padding-left: 17px; }
+  li { margin-bottom: 2px; }
+  .badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 1px 5px; border-radius: 4px; font-size: 8.5pt; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>⚡ KARTA SUPERMOCY: TRÓJKĄTY I PITAGORAS (Klasa 7 & 8)</h1>
+  <p>Sprytne Metody Nadii: Złote Kąty, Święte Trójki i Magiczne Ekierki</p>
+</div>
+
+<div class="grid-2">
+  <!-- LEWA KOLUMNA -->
+  <div>
+    <div class="card">
+      <div class="card-title">📐 1. Trzy Żelazne Zasady Kątów</div>
+      <ul>
+        <li><b>W trójkącie:</b> suma kątów = <b>180°</b>. W czworokącie = <b>360°</b>.</li>
+        <li><b>Kąty przyległe (linia prosta):</b> dają <b>180°</b> (np. 180° − 65° = 115°).</li>
+        <li><b>Kąty wierzchołkowe (krzyżyk) i naprzemianległe (litera Z):</b> są <b>DOKŁADNIE RÓWNE</b>!</li>
+      </ul>
+      <div class="success-box">
+        💡 <b>Trójkąt równoramienny:</b> Kąty przy podstawie są IDENTYCZNE! Jeśli kąt między ramionami ma 40°, to przy podstawie: (180° − 40°) ÷ 2 = 70°.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🔺 2. Twierdzenie Pitagorasa bez Błędu</div>
+      <div class="formula-box">
+        a² + b² = c² &nbsp;&nbsp;(c = przeciwprostokątna!)
+      </div>
+      <ul>
+        <li>Szukasz <b>długiego boku (c)</b>? → <b>DODAJESZ:</b><br>
+          c² = 6² + 8² = 36 + 64 = 100 → <b>c = 10</b></li>
+        <li>Szukasz <b>krótkiego boku (a lub b)</b>? → <b>ODEJMUJESZ:</b><br>
+          a² = 13² − 12² = 169 − 144 = 25 → <b>a = 5</b></li>
+      </ul>
+      <div class="alert-box">
+        🚨 <b>NAJWIĘKSZA PUŁAPKA CKE:</b> Zawsze upewnij się, gdzie jest kąt prosty! Najdłuższy bok c leży DOKŁADNIE NAPRZECIW kąta prostego!
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🛑 3. Nierówność Trójkąta</div>
+      <p style="margin: 2px 0;">Suma dwóch <b>krótszych boków</b> musi być <b>WIĘKSZA</b> niż najdłuższy: <b>a + b &gt; c</b></p>
+      <ul>
+        <li>Boki 3, 5, 7 → 3 + 5 = 8 &gt; 7 <span class="badge" style="background:#dcfce7; color:#166534;">TAK ✅</span></li>
+        <li>Boki 2, 4, 7 → 2 + 4 = 6 &lt; 7 <span class="badge" style="background:#fee2e2; color:#991b1b;">NIE ❌</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PRAWA KOLUMNA -->
+  <div>
+    <div class="card">
+      <div class="card-title">⚡ 4. Święte Trójki (Bez Liczenia!)</div>
+      <p style="margin: 2px 0;">Zapamiętaj te zestawy – pojawiają się w 80% zadań:</p>
+      <ul>
+        <li><span class="badge">3 – 4 – 5</span> oraz ich wielokrotności:
+          <ul>
+            <li><b>6 – 8 – 10</b> (podwojenie)</li>
+            <li><b>9 – 12 – 15</b> (potrojenie)</li>
+            <li><b>30 – 40 – 50</b></li>
+          </ul>
+        </li>
+        <li><span class="badge">5 – 12 – 13</span> (np. przeciwprostokątna 13, przyprostokątna 12 → drugi bok to od razu 5!)</li>
+        <li><span class="badge">8 – 15 – 17</span></li>
+      </ul>
+      <div class="success-box">
+        🚀 <b>Oszczędzasz 2 minuty:</b> Widzisz boki 6 i 8? Od razu piszesz 10!
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📐 5. Magiczne Ekierki (Specjalne Trójkąty)</div>
+      <p style="margin: 2px 0;"><b>A. Ekierka 45°−45°−90° (Połówka kwadratu):</b></p>
+      <div class="formula-box">
+        Boki: a, a, a√2 &nbsp;|&nbsp; Przekątna kwadratu d = a√2
+      </div>
+      <p style="margin: 2px 0; font-size: 9.3pt;">Kwadrat o boku 7 ma przekątną <b>7√2</b>.</p>
+
+      <p style="margin: 4px 0 2px;"><b>B. Ekierka 30°−60°−90° (Połówka trójkąta równobocznego):</b></p>
+      <div class="formula-box">
+        Krótki bok (naprzeciw 30°) = a<br>
+        Przeciwprostokątna = 2a &nbsp;(dwa razy dłuższy!)<br>
+        Średni bok (wysokość h, naprzeciw 60°) = a√3
+      </div>
+      <p style="margin: 2px 0; font-size: 9.3pt;"><b>Trójkąt równoboczny:</b> h = (a√3)/2, &nbsp; Pole P = (a²√3)/4</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

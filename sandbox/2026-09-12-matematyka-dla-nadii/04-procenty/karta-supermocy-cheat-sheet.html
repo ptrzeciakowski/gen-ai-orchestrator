@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karta Supermocy: Procenty</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm 10mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1e293b; margin: 0; padding: 0; font-size: 10.2pt; line-height: 1.32; }
+  .header { text-align: center; border-bottom: 3px solid #f59e0b; padding-bottom: 4px; margin-bottom: 8px; }
+  .header h1 { margin: 0; font-size: 17pt; color: #d97706; text-transform: uppercase; }
+  .header .sub { font-size: 10pt; font-weight: 600; color: #475569; }
+  .card { border-radius: 8px; padding: 7px 10px; border: 1.5px solid #cbd5e1; background: #fff; margin-bottom: 7px; }
+  .card-amber { border-color: #f59e0b; background: #fffbeb; }
+  .card-emerald { border-color: #10b981; background: #ecfdf5; }
+  .card-rose { border-color: #f43f5e; background: #fff1f2; }
+  .card-blue { border-color: #3b82f6; background: #eff6ff; }
+  .card-title { font-size: 11pt; font-weight: bold; margin-bottom: 4px; display: flex; align-items: center; gap: 5px; }
+  .card-amber .card-title { color: #b45309; }
+  .card-emerald .card-title { color: #047857; }
+  .card-rose .card-title { color: #be123c; }
+  .card-blue .card-title { color: #1d4ed8; }
+  table.pct-table { width: 100%; border-collapse: collapse; font-size: 9pt; background: #fff; border-radius: 6px; overflow: hidden; }
+  table.pct-table th, table.pct-table td { padding: 3px 6px; border: 1px solid #fde68a; text-align: center; }
+  table.pct-table th { background: #fef3c7; color: #92400e; font-weight: bold; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .footer-tip { text-align: center; font-size: 8.8pt; color: #64748b; border-top: 1px dashed #cbd5e1; padding-top: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🏷️ KARTA SUPERMOCY: PROCENTY (KLASA 7 & 8)</h1>
+  <div class="sub">Ściągawka Nadii na biurko – Klocki procentowe, obniżki w sklepie i punkty procentowe!</div>
+</div>
+
+<div class="card card-amber">
+  <div class="card-title">🚀 1. KLUB PROCENTOWYCH UŁAMKÓW (SZYBKIE PRZELICZNIKI)</div>
+  <table class="pct-table">
+    <thead>
+      <tr><th>Procent</th><th>Ułamek</th><th>Co to oznacza w praktyce?</th><th>Przykład w pamięci</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><b>50%</b></td><td><b>1/2</b></td><td><b>Połowa</b> (podziel przez 2)</td><td>50% z 80 zł = <b>40 zł</b></td></tr>
+      <tr><td><b>25%</b></td><td><b>1/4</b></td><td><b>Ćwiartka</b> (podziel na 4)</td><td>25% z 60 zł = <b>15 zł</b></td></tr>
+      <tr><td><b>75%</b></td><td><b>3/4</b></td><td><b>Trzy ćwiartki</b> (50% + 25%)</td><td>75% z 40 zł = 20 + 10 = <b>30 zł</b></td></tr>
+      <tr><td><b>10%</b></td><td><b>1/10</b></td><td><b>Utnij zero</b> (przesuń przecinek o 1 w lewo)</td><td>10% z 230 zł = <b>23 zł</b></td></tr>
+      <tr><td><b>5%</b></td><td><b>1/20</b></td><td><b>Połowa z 10%</b></td><td>10% = 20 &rarr; 5% = <b>10</b></td></tr>
+      <tr><td><b>1%</b></td><td><b>1/100</b></td><td><b>Przesuń przecinek o 2 w lewo</b></td><td>1% z 450 zł = <b>4,50 zł</b></td></tr>
+      <tr><td><b>20%</b></td><td><b>1/5</b></td><td><b>Dwa razy 10%</b> (lub podziel przez 5)</td><td>20% z 70 zł = 2 &times; 7 = <b>14 zł</b></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="grid-2">
+  <div class="card card-emerald">
+    <div class="card-title">🧩 2. METODA KLOCKÓW PROCENTOWYCH</div>
+    <div style="font-size: 8.8pt;">Zbuduj procent z klocków <b>10%, 5%, 1%</b>:</div>
+    <div style="font-size: 8.8pt; background: #fff; padding: 4px 6px; border-radius: 4px; margin-top: 3px; border: 1px solid #a7f3d0;">
+      <b>Ile to 15% ze 80 zł?</b><br>
+      &bull; 10% = 8 zł<br>
+      &bull; 5% = 4 zł (połowa z 8)<br>
+      &bull; <b>Razem:</b> 8 + 4 = <b>12 zł</b>!<br><br>
+      <b>Ile to 35% z 200 zł?</b><br>
+      &bull; 3 &times; 10% = 3 &times; 20 = 60 zł<br>
+      &bull; 5% = 10 zł &rarr; <b>Razem: 70 zł</b>!
+    </div>
+  </div>
+
+  <div class="card card-rose">
+    <div class="card-title">🛍️ 3. OBNIŻKI I PODWYŻKI W SKLEPIE</div>
+    <div style="font-size: 8.8pt;">Mnożnik jednokrokowy:</div>
+    <div style="font-size: 8.8pt; background: #fff; padding: 4px 6px; border-radius: 4px; margin-top: 3px; border: 1px solid #fecdd3;">
+      &bull; Obniżka o 20% &rarr; płacisz 80%: <b>0,8 &times; cena</b><br>
+      &bull; Podwyżka o 15% &rarr; płacisz 115%: <b>1,15 &times; cena</b><br><br>
+      🚨 <b>PUŁAPKA CKE:</b> Spadek o 10% i wzrost o 10%:<br>
+      100 zł &rarr; &minus;10% = 90 zł &rarr; +10% (z 90 zł!) = 90 + 9 = <b>99 zł</b>! (Nie wraca do 100 zł!).
+    </div>
+  </div>
+</div>
+
+<div class="card card-blue">
+  <div class="card-title">⚖️ 4. PUNKTY PROCENTOWE (pp) VS PROCENTY</div>
+  <div style="font-size: 8.8pt;">
+    Gdy poparcie wzrosło z <b>20%</b> do <b>25%</b>:<br>
+    &bull; Wzrosło o <b>5 punktów procentowych (pp)</b> (zwykłe odejmowanie: 25 &minus; 20 = 5 pp).<br>
+    &bull; Wzrosło o <b>25%</b> wartości początkowej (bo 5 / 20 = 1/4 = 25%).
+  </div>
+</div>
+
+<div class="footer-tip">
+  💡 Pamiętaj Nadiu: Procent to po prostu ułamek ze stówką w mianowniku. 10% to Twój najlepszy przyjaciel! 🏆
+</div>
+</body>
+</html>

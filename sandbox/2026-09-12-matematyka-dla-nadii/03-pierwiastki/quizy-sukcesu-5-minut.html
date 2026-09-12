@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Quizy Sukcesu: Pierwiastki</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm 12mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1e293b; margin: 0; padding: 0; font-size: 10.5pt; line-height: 1.35; }
+  .page-break { page-break-after: always; }
+  .header-main { text-align: center; border-bottom: 2.5px solid #0d9488; padding-bottom: 5px; margin-bottom: 12px; }
+  .header-main h1 { margin: 0; font-size: 16pt; color: #0f766e; }
+  .header-main p { margin: 2px 0 0 0; font-size: 9.5pt; color: #64748b; }
+  .quiz-card { border: 2px solid #cbd5e1; border-radius: 10px; padding: 12px 14px; margin-bottom: 14px; background: #fff; }
+  .quiz-1 { border-color: #0d9488; background: #f8fafc; }
+  .quiz-2 { border-color: #3b82f6; background: #f8fafc; }
+  .quiz-3 { border-color: #8b5cf6; background: #f8fafc; }
+  .quiz-4 { border-color: #f43f5e; background: #f8fafc; }
+  .quiz-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1.5px dashed #cbd5e1; padding-bottom: 6px; margin-bottom: 8px; }
+  .quiz-title { font-size: 12pt; font-weight: bold; }
+  .quiz-1 .quiz-title { color: #0f766e; }
+  .quiz-2 .quiz-title { color: #1d4ed8; }
+  .quiz-3 .quiz-title { color: #6d28d9; }
+  .quiz-4 .quiz-title { color: #be123c; }
+  .quiz-meta { font-size: 9pt; font-weight: 600; color: #475569; }
+  .task { margin-bottom: 8px; }
+  .task-title { font-size: 9.8pt; font-weight: bold; color: #334155; margin-bottom: 3px; }
+  .task-body { font-size: 10pt; padding-left: 10px; }
+  .blank-line { display: inline-block; border-bottom: 1.5px solid #94a3b8; min-width: 50px; height: 16px; vertical-align: middle; margin: 0 4px; }
+  .rank-box { margin-top: 8px; padding-top: 6px; border-top: 1px dotted #cbd5e1; display: flex; justify-content: space-between; font-size: 8.5pt; color: #475569; }
+  .key-section { background: #f8fafc; border: 1.5px solid #94a3b8; border-radius: 8px; padding: 10px 14px; margin-bottom: 10px; }
+  .key-title { font-weight: bold; color: #1e293b; font-size: 10.5pt; margin-bottom: 4px; }
+  .tip-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 6px 10px; font-size: 9pt; color: #92400e; margin-top: 4px; border-radius: 0 4px 4px 0; }
+</style>
+</head>
+<body>
+
+<div class="header-main">
+  <h1>🌿 QUIZY SUKCESU: PIERWIASTKI (KLASA 7 & 8)</h1>
+  <p>5-minutowe wyzwania pewności siebie • 1 karta naraz • Po każdej karcie 3 minuty przerwy!</p>
+</div>
+
+<div class="quiz-card quiz-1">
+  <div class="quiz-header">
+    <div class="quiz-title">🎯 KARTA 1: SZYBKIE PIERWIASTKI I SZACOWANIE</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Rozgrzewka – 2 pkt)</div>
+    <div class="task-body">
+      Oblicz w pamięci:
+      <div style="margin: 4px 0; display: flex; gap: 30px;">
+        <span>a) &radic;64 = <span class="blank-line"></span></span>
+        <span>b) &radic;144 = <span class="blank-line"></span></span>
+        <span>c) <sup>3</sup>&radic;27 = <span class="blank-line"></span></span>
+        <span>d) <sup>3</sup>&radic;(&minus;8) = <span class="blank-line"></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Szacowanie – 2 pkt)</div>
+    <div class="task-body">
+      Wskaż między jakimi dwiema kolejnymi liczbami całkowitymi leży pierwiastek:
+      <div style="margin: 4px 0;">
+        a) &radic;30 leży między <span class="blank-line"></span> a <span class="blank-line"></span> (bo &radic;25 &lt; &radic;30 &lt; &radic;36)<br>
+        b) &radic;50 leży między <span class="blank-line"></span> a <span class="blank-line"></span>
+      </div>
+    </div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Mistrz Osi – 2 pkt)</div>
+    <div class="task-body">
+      Która liczba jest większa: <b>&radic;17</b> czy <b>4</b>?<br>
+      Odpowiedź: <span class="blank-line" style="min-width: 80px;"></span>, ponieważ &radic;17 jest większy od &radic;16.
+    </div>
+  </div>
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Czarodziejka Pierwiastków!</b></span>
+    <span>[ ] 3–4 pkt: <b>Bystre Oko!</b></span>
+    <span>[ ] 1–2 pkt: <b>Krok do przodu!</b></span>
+  </div>
+</div>
+
+<div class="quiz-card quiz-2">
+  <div class="quiz-header">
+    <div class="quiz-title">🧩 KARTA 2: WYŁĄCZANIE CZYNNIKA PRZED PIERWIASTEK</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Magiczna Czwórka – 2 pkt)</div>
+    <div class="task-body">
+      Rozbij na 4 &times; [ &nbsp; ] i wyłącz 2 przed pierwiastek:
+      <div style="margin: 4px 0; display: flex; gap: 40px;">
+        <span>a) &radic;20 = &radic;(4 &times; 5) = <span class="blank-line"></span></span>
+        <span>b) &radic;28 = &radic;(4 &times; 7) = <span class="blank-line"></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Magiczna Dziewiątka i 25 – 2 pkt)</div>
+    <div class="task-body">
+      Wyłącz czynnik przed pierwiastek:
+      <div style="margin: 4px 0; display: flex; gap: 40px;">
+        <span>a) &radic;45 = &radic;(9 &times; 5) = <span class="blank-line"></span></span>
+        <span>b) &radic;75 = &radic;(25 &times; 3) = <span class="blank-line"></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Zadanie Egzaminacyjne – 2 pkt)</div>
+    <div class="task-body">
+      Uprość wyrażenie: 2&radic;18 = 2 &times; (3&radic;2) = <span class="blank-line" style="min-width: 80px;"></span>
+    </div>
+  </div>
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Mistrzyni Rozkładu!</b></span>
+    <span>[ ] 3–4 pkt: <b>Sprytny Rachunek!</b></span>
+    <span>[ ] 1–2 pkt: <b>Trenujemy dalej!</b></span>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="header-main">
+  <h1>🌿 QUIZY SUKCESU: PIERWIASTKI (CZĘŚĆ 2)</h1>
+  <p>Skupienie na 5 minut • Tylko 3 zadania na karcie • Wybierz najsprytniejszą ścieżkę!</p>
+</div>
+
+<div class="quiz-card quiz-3">
+  <div class="quiz-header">
+    <div class="quiz-title">⚡ KARTA 3: DZIAŁANIA NA PIERWIASTKACH</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Mnożenie i Dzielenie – 2 pkt)</div>
+    <div class="task-body">
+      Wrzuć pod jeden pierwiastek i oblicz:
+      <div style="margin: 4px 0; display: flex; gap: 40px;">
+        <span>a) &radic;2 &times; &radic;8 = &radic;(2 &times; 8) = &radic;<span class="blank-line" style="min-width:30px;"></span> = <span class="blank-line"></span></span>
+        <span>b) &radic;75 / &radic;3 = &radic;(75/3) = &radic;<span class="blank-line" style="min-width:30px;"></span> = <span class="blank-line"></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Dodawanie takich samych pierwiastków – 2 pkt)</div>
+    <div class="task-body">
+      Dodaj jak jabłka do koszyka:
+      <div style="margin: 4px 0; display: flex; gap: 40px;">
+        <span>a) 3&radic;5 + 4&radic;5 = <span class="blank-line"></span></span>
+        <span>b) 7&radic;2 &minus; 2&radic;2 = <span class="blank-line"></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Uprość Wyrażenie – 2 pkt)</div>
+    <div class="task-body">
+      Oblicz: &radic;50 + &radic;18 = 5&radic;2 + 3&radic;2 = <span class="blank-line" style="min-width: 80px;"></span>
+    </div>
+  </div>
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Niepokonana w Działaniach!</b></span>
+    <span>[ ] 3–4 pkt: <b>Dobra Precyzja!</b></span>
+    <span>[ ] 1–2 pkt: <b>Trening!</b></span>
+  </div>
+</div>
+
+<div class="quiz-card quiz-4">
+  <div class="quiz-header">
+    <div class="quiz-title">🚨 KARTA 4: ANTYPUŁAPKA DODAWANIA POD PIERWIASTKIEM</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Prawda czy Fałsz – 2 pkt)</div>
+    <div class="task-body">
+      Oceń zdanie (wpisz P lub F):
+      <div style="margin: 4px 0;">
+        a) &radic;(36 + 64) = 6 + 8 = 14 &nbsp; [ &nbsp; ]<br>
+        b) &radic;(36 + 64) = &radic;100 = 10 &nbsp; [ &nbsp; ]
+      </div>
+    </div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Oblicz Poprawnie – 2 pkt)</div>
+    <div class="task-body">
+      Najpierw wykonaj działanie pod pierwiastkiem:
+      <div style="margin: 4px 0; display: flex; gap: 40px;">
+        <span>a) &radic;(100 &minus; 64) = &radic;<span class="blank-line" style="min-width:30px;"></span> = <span class="blank-line"></span></span>
+        <span>b) &radic;(1 + 9/16) = &radic;(25/16) = <span class="blank-line"></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Finał Egzaminacyjny CKE – 2 pkt)</div>
+    <div class="task-body">
+      Wartość wyrażenia <b>&radic;(25 &minus; 9)</b> wynosi:
+      <div style="margin: 4px 0; display: flex; gap: 30px; font-weight: bold;">
+        <span>A. 4</span> <span>B. 2</span> <span>C. 16</span> <span>D. 8</span>
+      </div>
+    </div>
+  </div>
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Pogromczyni Pułapek CKE!</b></span>
+    <span>[ ] 3–4 pkt: <b>Czyste Konto!</b></span>
+    <span>[ ] 1–2 pkt: <b>Krok w przód!</b></span>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<div class="header-main">
+  <h1>🗝️ KLUCZ ODPOWIEDZI I WSKAZÓWKI COACHINGOWE (PIERWIASTKI)</h1>
+  <p>Ściągawka dla Pawła: weryfikacja i budowanie poczucia sprawczości</p>
+</div>
+
+<div class="key-section">
+  <div class="key-title">Karta 1: Szybkie Pierwiastki i Szacowanie</div>
+  <b>1.</b> a) 8, b) 12, c) 3, d) &minus;2.<br>
+  <b>2.</b> a) 5 i 6, b) 7 i 8.<br>
+  <b>3.</b> &radic;17 &gt; 4 (bo &radic;17 &gt; &radic;16 = 4).
+  <div class="tip-box"><b>💡 Jak chwalić:</b> <i>"Świetnie oszacowałaś &radic;30 w głowie bez kalkulatora! To dokładnie to, czego wymaga egzamin."</i></div>
+</div>
+
+<div class="key-section">
+  <div class="key-title">Karta 2: Wyłączanie Czynnika przed Pierwiastek</div>
+  <b>1.</b> a) 2&radic;5, b) 2&radic;7.<br>
+  <b>2.</b> a) 3&radic;5, b) 5&radic;3.<br>
+  <b>3.</b> 6&radic;2.
+  <div class="tip-box"><b>💡 Sprytny trik:</b> Przypomnij: szukamy zawsze klocków 4, 9, 25. Nie trzeba dzielić przez 2 i 3 po sto razy!</div>
+</div>
+
+<div class="key-section">
+  <div class="key-title">Karta 3: Działania na Pierwiastkach</div>
+  <b>1.</b> a) &radic;16 = 4, b) &radic;25 = 5.<br>
+  <b>2.</b> a) 7&radic;5, b) 5&radic;2.<br>
+  <b>3.</b> 8&radic;2.
+  <div class="tip-box"><b>💡 Metafora jabłek:</b> 3 koszyki &radic;5 + 4 koszyki &radic;5 to 7 koszyków &radic;5. Pod pierwiastkiem nic się nie zmienia!</div>
+</div>
+
+<div class="key-section">
+  <div class="key-title">Karta 4: Antypułapka Dodawania pod Pierwiastkiem</div>
+  <b>1.</b> a) F, b) P.<br>
+  <b>2.</b> a) &radic;36 = 6, b) 5/4 = 1 1/4.<br>
+  <b>3.</b> Odpowiedź <b>A</b> (bo &radic;16 = 4).
+  <div class="tip-box"><b>💡 Rytuał:</b> Zapytaj: <i>"Czy rozrywamy parasol, gdy pada deszcz? Nie! Najpierw liczymy pod parasolem!"</i></div>
+</div>
+</body>
+</html>
