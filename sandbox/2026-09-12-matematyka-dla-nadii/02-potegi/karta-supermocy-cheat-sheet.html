@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karta Supermocy: Potęgi – Nadia</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 10.5pt;
+    line-height: 1.32;
+  }
+  .header {
+    text-align: center;
+    border-bottom: 3px solid #8b5cf6;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 17pt;
+    color: #6d28d9;
+    text-transform: uppercase;
+  }
+  .header .sub {
+    font-size: 10pt;
+    font-weight: 600;
+    color: #475569;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .card {
+    border-radius: 8px;
+    padding: 7px 10px;
+    border: 1.5px solid #cbd5e1;
+    background: #ffffff;
+  }
+  .card-purple { border-color: #8b5cf6; background: #f5f3ff; }
+  .card-rose { border-color: #f43f5e; background: #fff1f2; }
+  .card-blue { border-color: #3b82f6; background: #eff6ff; }
+  .card-amber { border-color: #f59e0b; background: #fffbeb; }
+
+  .card-title {
+    font-size: 11pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .card-purple .card-title { color: #6d28d9; }
+  .card-rose .card-title { color: #be123c; }
+  .card-blue .card-title { color: #1d4ed8; }
+  .card-amber .card-title { color: #b45309; }
+
+  table.power-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  table.power-table th, table.power-table td {
+    padding: 4px 6px;
+    border: 1px solid #ddd6fe;
+    text-align: center;
+  }
+  table.power-table th {
+    background: #ede9fe;
+    color: #5b21b6;
+    font-weight: bold;
+  }
+  .badge-op {
+    background: #c7d2fe;
+    color: #3730a3;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  .rule-box {
+    background: #fff;
+    border-left: 3.5px solid #be123c;
+    padding: 4px 8px;
+    margin: 4px 0;
+    font-size: 9pt;
+    border-radius: 0 4px 4px 0;
+  }
+  .brick {
+    background: #fff;
+    border: 1px solid #bfdbfe;
+    padding: 3px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 2px 0;
+    font-size: 9.2pt;
+  }
+  .footer-tip {
+    text-align: center;
+    font-size: 8.8pt;
+    color: #64748b;
+    border-top: 1px dashed #cbd5e1;
+    padding-top: 4px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>⚡ KARTA SUPERMOCY: POTĘGI (KLASA 7 & EGZAMIN)</h1>
+  <div class="sub">Ściągawka Nadii na biurko – Prawa potęg, pułapki minusa i sprytne rozkładanie liczb!</div>
+</div>
+
+<!-- SEKCJA 1: PRAWA DZIAŁAŃ -->
+<div class="card card-purple" style="margin-bottom: 7px;">
+  <div class="card-title">🚀 1. ZŁOTE PRAWA DZIAŁAŃ NA POTĘGACH (TE SAME PODSTAWY)</div>
+  <table class="power-table">
+    <thead>
+      <tr>
+        <th>Operacja</th>
+        <th>Wzór z Supermocą</th>
+        <th>Co robisz z wykładnikami na górze?</th>
+        <th>Przykład w 3 sekundy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Mnożenie</b></td>
+        <td>a<sup>m</sup> &times; a<sup>n</sup> = <b>a<sup>m + n</sup></b></td>
+        <td><span class="badge-op">DODAJESZ (+)</span></td>
+        <td>5<sup>2</sup> &times; 5<sup>3</sup> &times; 5<sup>5</sup> = 5<sup>2+3+5</sup> = <b>5<sup>10</sup></b></td>
+      </tr>
+      <tr>
+        <td><b>Dzielenie</b></td>
+        <td>a<sup>m</sup> &divide; a<sup>n</sup> = <b>a<sup>m &minus; n</sup></b></td>
+        <td><span class="badge-op">ODEJMUJESZ (&minus;)</span></td>
+        <td>7<sup>12</sup> &divide; 7<sup>9</sup> = 7<sup>12&minus;9</sup> = <b>7<sup>3</sup></b></td>
+      </tr>
+      <tr>
+        <td><b>Potęga potęgi</b></td>
+        <td>(a<sup>m</sup>)<sup>n</sup> = <b>a<sup>m &times; n</sup></b></td>
+        <td><span class="badge-op">MNOŻYSZ (&times;)</span></td>
+        <td>(2<sup>4</sup>)<sup>3</sup> = 2<sup>4&times;3</sup> = <b>2<sup>12</sup></b></td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="font-size: 8.8pt; margin-top: 4px; display: flex; justify-content: space-around; background: #ede9fe; padding: 2px 6px; border-radius: 4px; color: #4c1d95;">
+    <span>⭐ <b>a<sup>0</sup> = 1</b> (np. 7<sup>0</sup> = 1, 150<sup>0</sup> = 1)</span>
+    <span>⭐ <b>a<sup>1</sup> = a</b> (np. 8<sup>1</sup> = 8)</span>
+    <span>⭐ <b>1<sup>n</sup> = 1</b> (1 do dowolnej potęgi to 1)</span>
+  </div>
+</div>
+
+<div class="grid-2">
+  <!-- SEKCJA 2: ANTYPUŁAPKA MINUSA -->
+  <div class="card card-rose">
+    <div class="card-title">🦹 2. ANTYPUŁAPKA MINUSA</div>
+    <div style="font-size: 8.8pt; color: #334155;">Spójrz na nawias i na wykładnik:</div>
+    <div class="rule-box">
+      <b>&bull; (&minus;3)<sup>2</sup> = +9</b> &rarr; minus w nawiasie do potęgi <b>parzystej</b> daje <b>PLUS (+)</b>!<br>
+      <b>&bull; (&minus;3)<sup>3</sup> = &minus;27</b> &rarr; minus w nawiasie do potęgi <b>nieparzystej</b> daje <b>MINUS (&minus;)</b>!
+    </div>
+    <div class="rule-box" style="border-color: #e11d48; background: #fff5f5;">
+      🚨 <b>PUŁAPKA CKE: &minus;3<sup>2</sup> = &minus;9!</b><br>
+      Gdy <b>nie ma nawiasu</b>, potęgujesz samą 3, a minus stoi z przodu!
+    </div>
+  </div>
+
+  <!-- SEKCJA 3: ROZBIJANIE PODSTAW -->
+  <div class="card card-blue">
+    <div class="card-title">🧩 3. ROZBIJANIE PODSTAWY</div>
+    <div style="font-size: 8.8pt;">Różne podstawy? Zamień na klocki (2, 3, 5):</div>
+    <div style="margin: 2px 0;">
+      <div class="brick"><b>6<sup>n</sup> = (2 &times; 3)<sup>n</sup> = 2<sup>n</sup> &times; 3<sup>n</sup></b></div>
+      <div class="brick"><b>10<sup>n</sup> = (2 &times; 5)<sup>n</sup> = 2<sup>n</sup> &times; 5<sup>n</sup></b></div>
+      <div class="brick"><b>4<sup>n</sup> = (2<sup>2</sup>)<sup>n</sup> = 2<sup>2n</sup></b> | <b>8<sup>n</sup> = 2<sup>3n</sup></b> | <b>9<sup>n</sup> = 3<sup>2n</sup></b></div>
+    </div>
+    <div style="font-size: 8.5pt; color: #1e40af; background: #dbeafe; padding: 2px 5px; border-radius: 3px; margin-top: 3px;">
+      <b>Zadanie z egzaminu:</b> 6<sup>8</sup> / 2<sup>4</sup> = (2<sup>8</sup> &times; 3<sup>8</sup>) / 2<sup>4</sup> = <b>2<sup>4</sup> &times; 3<sup>8</sup></b>!
+    </div>
+  </div>
+</div>
+
+<!-- SEKCJA 4: DODAWANIE POTĘG -->
+<div class="card card-amber">
+  <div class="card-title">🛑 4. WIELKI BŁĄD EGZAMINACYJNY: DODAWANIE POTĘG!</div>
+  <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 8px; font-size: 9pt;">
+    <div style="background: #fff; padding: 4px 6px; border-radius: 4px; border: 1px solid #fcd34d;">
+      ❌ <b>NIGDY TAK NIE RÓB:</b><br>
+      2<sup>5</sup> + 2<sup>5</sup> &ne; 2<sup>10</sup>!<br>
+      <i>Wykładniki dodajemy TYLKO przy mnożeniu!</i>
+    </div>
+    <div style="background: #fff; padding: 4px 6px; border-radius: 4px; border: 1px solid #fcd34d;">
+      ✅ <b>JAK ZROBIĆ TO SPISIE (Worki):</b><br>
+      2<sup>5</sup> + 2<sup>5</sup> = 2 &times; 2<sup>5</sup> = 2<sup>1</sup> &times; 2<sup>5</sup> = <b>2<sup>6</sup></b>!<br>
+      3<sup>7</sup> + 3<sup>7</sup> + 3<sup>7</sup> = 3 &times; 3<sup>7</sup> = 3<sup>1</sup> &times; 3<sup>7</sup> = <b>3<sup>8</sup></b>!
+    </div>
+  </div>
+</div>
+
+<div class="footer-tip">
+  💡 Pamiętaj Nadiu: Potęgi to kod skróconego mnożenia. Zamiast liczyć wielkie liczby, operuj na wykładnikach! 🏆
+</div>
+
+</body>
+</html>

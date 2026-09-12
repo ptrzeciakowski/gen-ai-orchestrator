@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karta Supermocy Matematycznych – Nadia</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+  .header {
+    text-align: center;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 18pt;
+    color: #1d4ed8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .header .sub {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: #475569;
+    margin-top: 2px;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .card {
+    border-radius: 8px;
+    padding: 8px 10px;
+    border: 1.5px solid #cbd5e1;
+    background: #ffffff;
+  }
+  .card-blue {
+    border-color: #3b82f6;
+    background: #eff6ff;
+  }
+  .card-amber {
+    border-color: #f59e0b;
+    background: #fffbeb;
+  }
+  .card-emerald {
+    border-color: #10b981;
+    background: #ecfdf5;
+  }
+  .card-purple {
+    border-color: #8b5cf6;
+    background: #f5f3ff;
+  }
+  .card-title {
+    font-size: 11.5pt;
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-blue .card-title { color: #1d4ed8; }
+  .card-amber .card-title { color: #b45309; }
+  .card-emerald .card-title { color: #047857; }
+  .card-purple .card-title { color: #6d28d9; }
+
+  table.club-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    background: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  table.club-table th, table.club-table td {
+    padding: 4px 6px;
+    border: 1px solid #bfdbfe;
+    text-align: center;
+  }
+  table.club-table th {
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: bold;
+  }
+  .highlight-badge {
+    display: inline-block;
+    background: #dcfce7;
+    color: #15803d;
+    font-weight: bold;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid #86efac;
+  }
+  .rule-box {
+    background: #ffffff;
+    border-left: 4px solid #f59e0b;
+    padding: 5px 8px;
+    margin: 5px 0;
+    font-size: 9.5pt;
+    border-radius: 0 4px 4px 0;
+  }
+  .pockets-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 8px 0;
+    font-size: 9.5pt;
+  }
+  .pocket {
+    background: #ffffff;
+    border: 1.5px solid #10b981;
+    border-radius: 6px;
+    padding: 4px 6px;
+    text-align: center;
+    min-width: 55px;
+  }
+  .pocket-title {
+    font-size: 7.5pt;
+    color: #047857;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .pocket-frac {
+    font-size: 8pt;
+    color: #64748b;
+  }
+  .wall-diagram {
+    background: #ffffff;
+    border: 1.5px dashed #8b5cf6;
+    border-radius: 6px;
+    padding: 6px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 11pt;
+    margin: 4px 0;
+  }
+  .wall-line {
+    color: #dc2626;
+    font-weight: bold;
+  }
+  .cop-down {
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .cop-up {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .footer-tip {
+    text-align: center;
+    font-size: 9pt;
+    color: #64748b;
+    margin-top: 4px;
+    border-top: 1px dashed #cbd5e1;
+    padding-top: 4px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🚀 KARTA SUPERMOCY MATEMATYCZNYCH (KLASA 7)</h1>
+  <div class="sub">Ściągawka Nadii na biurko – Szybkie patenty zamiast żmudnego liczenia!</div>
+</div>
+
+<!-- SEKCJA 1: KLUB PRZYJACIÓŁ -->
+<div class="card card-blue" style="margin-bottom: 8px;">
+  <div class="card-title">⭐ 1. KLUB PRZYJACIÓŁ 10, 100 I 1000 (ZAKAZ DZIELENIA POD KRESKĄ!)</div>
+  <div style="font-size: 9.5pt; margin-bottom: 4px;">
+    Gdy widzisz mianownik (liczbę na dole), pomnóż <b>GÓRĘ i DÓŁ</b> przez jego przyjaciela:
+  </div>
+  <table class="club-table">
+    <thead>
+      <tr>
+        <th>Mianownik na dole</th>
+        <th>Jego Super-Przyjaciel</th>
+        <th>Do czego dążymy?</th>
+        <th>Gotowy przykład mistrza</th>
+        <th>Zapamiętaj (W ułamku)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>2</b></td>
+        <td><span class="highlight-badge">&times; 5</span></td>
+        <td><b>10</b></td>
+        <td>1/2 = (1&times;5)/(2&times;5) = 5/10 = <b>0,5</b></td>
+        <td><b>1/2 = 0,5</b></td>
+      </tr>
+      <tr>
+        <td><b>4</b></td>
+        <td><span class="highlight-badge">&times; 25</span></td>
+        <td><b>100</b></td>
+        <td>3/4 = (3&times;25)/(4&times;25) = 75/100 = <b>0,75</b></td>
+        <td><b>1/4 = 0,25 | 3/4 = 0,75</b></td>
+      </tr>
+      <tr>
+        <td><b>5</b></td>
+        <td><span class="highlight-badge">&times; 2</span> lub &times; 20</td>
+        <td><b>10</b> lub 100</td>
+        <td>2/5 = (2&times;2)/(5&times;2) = 4/10 = <b>0,4</b></td>
+        <td><b>1/5 = 0,2</b></td>
+      </tr>
+      <tr>
+        <td><b>8</b></td>
+        <td><span class="highlight-badge">&times; 125</span></td>
+        <td><b>1000</b></td>
+        <td>5/8 = (5&times;125)/(8&times;125) = 625/1000 = <b>0,625</b></td>
+        <td><b>1/8 = 0,125</b></td>
+      </tr>
+      <tr>
+        <td><b>20</b></td>
+        <td><span class="highlight-badge">&times; 5</span></td>
+        <td><b>100</b></td>
+        <td>9/20 = (9&times;5)/(20&times;5) = 45/100 = <b>0,45</b></td>
+        <td><b>1/20 = 0,05</b></td>
+      </tr>
+      <tr>
+        <td><b>25</b></td>
+        <td><span class="highlight-badge">&times; 4</span></td>
+        <td><b>100</b></td>
+        <td>11/25 = (11&times;4)/(25&times;4) = 44/100 = <b>0,44</b></td>
+        <td><b>1/25 = 0,04</b></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="grid-2">
+  <!-- SEKCJA 2: DOMKI POZYCYJNE -->
+  <div class="card card-emerald">
+    <div class="card-title">🏠 2. DOMKI PO PRZECINKU</div>
+    <div style="font-size: 9pt; color: #334155;">Każda kieszonka ma swoje stałe miejsce:</div>
+    <div class="pockets-visual">
+      <div class="pocket" style="border-color: #0284c7; background: #f0f9ff;">
+        <div class="pocket-title">CAŁOŚCI</div>
+        <div style="font-size: 11pt; font-weight: bold; color: #0369a1;">2</div>
+      </div>
+      <div style="font-size: 14pt; font-weight: bold; color: #0284c7;">,</div>
+      <div class="pocket">
+        <div class="pocket-title">Dziesiąte</div>
+        <div class="pocket-frac">1/10</div>
+        <div style="font-size: 10pt; font-weight: bold; color: #dc2626;">0</div>
+      </div>
+      <div class="pocket">
+        <div class="pocket-title">Setne</div>
+        <div class="pocket-frac">1/100</div>
+        <div style="font-size: 10pt; font-weight: bold; color: #047857;">3</div>
+      </div>
+      <div class="pocket">
+        <div class="pocket-title">Tysięczne</div>
+        <div class="pocket-frac">1/1000</div>
+        <div style="font-size: 10pt; color: #94a3b8;">-</div>
+      </div>
+    </div>
+    <div class="rule-box" style="border-color: #10b981;">
+      <b>Zasada Strażnika:</b> Gdy w kieszonce nic nie ma, wstawiasz <b>0</b>!<br>
+      &bull; 2 + 3/100 = <b>2,03</b> (nie 2,3!)<br>
+      &bull; 9 zł 8 gr = <b>9,08 zł</b> (grosze mają 2 cyfry!)<br>
+      &bull; Kwadrans (15 min) = 1/4 h = <b>0,25 h</b>
+    </div>
+  </div>
+
+  <!-- SEKCJA 3: MUR I POLICJANT -->
+  <div class="card card-purple">
+    <div class="card-title">🧱 3. ZASADA MURU I POLICJANTA</div>
+    <div style="font-size: 9pt;">Stawiasz <b>MUR (|)</b> po cyfrze zaokrąglenia:</div>
+    <div class="wall-diagram">
+      Liczba <span class="wall-line">|</span> <span style="background: #fef08a; padding: 2px 4px; border-radius: 3px;">👮 POLICJANT</span> reszta...
+    </div>
+    <div style="font-size: 8.8pt; line-height: 1.35;">
+      &bull; 👮 <span class="cop-down">0, 1, 2, 3, 4</span> &rarr; <b>ŚPI (w dół)</b>: cyfra przed murem bez zmian, reszta odpada!<br>
+      &nbsp;&nbsp;<i>3,1 | 46 &approx; <b>3,1</b></i><br>
+      &bull; 🚨 <span class="cop-up">5, 6, 7, 8, 9</span> &rarr; <b>ALARM (w górę)</b>: dodajesz <b>+1</b> do cyfry przed murem!<br>
+      &nbsp;&nbsp;<i>56,0 | 7 &approx; <b>56,1</b></i><br>
+      &bull; 💥 <b>Efekt Domina (gdy stoi 9):</b><br>
+      &nbsp;&nbsp;<i>9,99 | 7 &approx; <b>10,00</b> (zera muszą zostać!)</i><br>
+      &bull; 🔁 <b>Gdy jest okres:</b> rozpisz: 2,(5) = 2,55 | 5... &approx; <b>2,56</b>
+    </div>
+  </div>
+</div>
+
+<!-- SEKCJA 4: PORÓWNYWANIE -->
+<div class="card card-amber">
+  <div class="card-title">🍕 4. SPRYTNE PORÓWNYWANIE (W 3 SEKUNDY)</div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; font-size: 8.8pt;">
+    <div style="background: #fff; padding: 5px 6px; border-radius: 4px; border: 1px solid #fde68a;">
+      <b>🍕 Zasada Pizzy:</b><br>
+      Ten sam licznik na górze &rarr; mniejszy dół = <b>większy kawałek</b>!<br>
+      <b>1/7 &gt; 1/8</b> &nbsp;|&nbsp; <b>2/3 &gt; 2/5</b>
+    </div>
+    <div style="background: #fff; padding: 5px 6px; border-radius: 4px; border: 1px solid #fde68a;">
+      <b>💰 Zasada Groszy:</b><br>
+      Dopisuj zera na końcu, by wyrównać długość liczb:<br>
+      0,6 czy 0,57? &rarr; <b>0,60 &gt; 0,57</b><br>
+      6,9 czy 6,801? &rarr; <b>6,900 &gt; 6,801</b>
+    </div>
+    <div style="background: #fff; padding: 5px 6px; border-radius: 4px; border: 1px solid #fde68a;">
+      <b>🎯 Brakujący Kawałek:</b><br>
+      7/8 czy 8/9?<br>
+      Brakuje: 1/8 vs 1/9.<br>
+      1/9 to mniejszy ubytek &rarr; <b>8/9 &gt; 7/8</b>!
+    </div>
+  </div>
+</div>
+
+<div class="footer-tip">
+  💡 Pamiętaj Nadiu: Matematyka to nie żmudne liczenie pod kreską – to wybieranie najsprytniejszej drogi! 🏆
+</div>
+
+</body>
+</html>
