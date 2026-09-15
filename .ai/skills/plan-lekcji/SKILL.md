@@ -105,6 +105,9 @@ Stosuj spójną, czytelną typografię i kolorystykę Tailwind-inspired:
 | `.sport` | `#14b8a6` (Morski / Teal) | WF, szkolenie sportowe, basen, trening tenisowy |
 | `.therapy` | `#8b5cf6` (Fioletowy) | Zajęcia terapeutyczne, psychologiczne, rewalidacja, pedagogiczne |
 | `.es` | `#f59e0b` (Bursztynowy) | Szkoły językowe (np. Early Stage) i popołudniowe kursy zewnętrzne |
+| `.lunch` | `#ea580c` (Ciepły pomarańcz) | Bloki obiadowe (np. Obiad w szkole) |
+| `.home` | `#6366f1` (Indygo) | Zajęcia w domu (np. korepetycje domowe) |
+| `.muted` / `.cancelled` | `#94a3b8` (Szary) | Zajęcia wyszarzone, odwołane lub opcjonalne |
 
 ---
 
@@ -140,6 +143,45 @@ Aby zagwarantować bezproblemowy wydruk na **dokładnie 1 stronie A4**:
        <button onclick="window.print()" class="btn-print">🖨️ Drukuj plan lekcji (A4)</button>
    </div>
    ```
+
+---
+
+## 📝 Edycja planu w Markdown i Skrypt Python (`generate_plan.py`)
+
+Plany lekcji mogą być wygodnie definiowane i edytowane w czytelnym formacie tabeli Markdown, a następnie automatycznie kompilowane do HTML i PDF (1 strona A4) za pomocą skryptu Python `generate_plan.py` (dostępnego w katalogu roboczym oraz w `scripts/generate_plan.py` w folderze skilla).
+
+### 1. Format tabeli Markdown (`<osoba>-plan-lekcji.md`)
+```markdown
+# Imię - plan lekcji
+
+| Godziny | Poniedziałek | Wtorek | Środa | Czwartek | Piątek |
+| :---: | :--- | :--- | :--- | :--- | :--- |
+| 08:00 - 08:45 | Plastyka | Matematyka | Język polski | Wychowanie fizyczne | Fizyka |
+| 08:55 - 09:40 | Język polski | Język polski | Matematyka | Język angielski | Język polski |
+...
+| 14:25 - 15:10 | Obiad | Obiad | Obiad | Muzyka | Obiad |
+| 16:00 - 17:00 | - | - | Zajęcia terapeutyczne | - | - |
+| 18:00 - 19:00 | - | - | - | Język angielski (w domu) | - |
+```
+
+- **Godziny w wierszu**: definiowane w pierwszej kolumnie (`Godziny`).
+- **Nietypowe godziny w komórce**: można podać czas bezpośrednio w komórce, np. `Trening (14:00 - 15:30)`.
+- **Automatyczna klasyfikacja stylów**: skrypt rozpoznaje słowa kluczowe (*WF*, *Trening*, *Terapia*, *Early Stage*, *Obiad*, *w domu*) i dobiera odpowiedni kolor.
+- **Ręczny override stylu**: można podać tag np. `Konsultacje [home]`, `Basen [sport]`, `Przekąska [lunch]`.
+- **Puste godziny (okienka)**: pusta komórka lub znak `-`.
+
+### 2. Uruchamianie kompilacji
+```bash
+# Kompilacja pojedynczego planu:
+python3 generate_plan.py nadia-plan-lekcji.md
+
+# Kompilacja wszystkich planów w danym katalogu:
+python3 generate_plan.py --all
+```
+Skrypt automatycznie:
+1. Parsuje plik Markdown i tworzy dopasowany HTML z osadzonym CSS Grid i buforami 14px.
+2. Kompiluje plik HTML do PDF za pomocą headless Google Chrome.
+3. Weryfikuje warunek **dokładnie 1 strony A4**.
 
 ---
 
