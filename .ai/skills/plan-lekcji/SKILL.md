@@ -164,19 +164,34 @@ Gdy użytkownik przekaże link do Google Docs:
 - Sprawdź godziny rozpoczęcia kolejnych lekcji (np. 8:00, 8:55, 9:50, 10:45, 11:40, 12:35 lub 12:45).
 - Okienka (oznaczone myślnikiem `-` lub wolne godziny) nie tworzą kafelka, pozostawiając czytelne puste tło siatki.
 
+### 3. Pobieranie zrzutu ze schowka macOS
+Gdy użytkownik wskazuje na dane lub zrzut w schowku ("ze schowka", "zrzut ekranu", "wklej"):
+- Użyj skryptu:
+  ```bash
+  bash ~/.gemini/config/skills/mac-clipboard-analyzer/scripts/get_clipboard_image.sh /tmp/clipboard_image.png
+  ```
+- Obejrzyj obraz za pomocą `view_file` i precyzyjnie porównaj go z planem (zwracając uwagę na przedmioty, sale, godziny, okienka oraz odwołane zajęcia).
+
+---
+
+## 🚫 Zakaz analizy historii Git (`git log`)
+
+- **NIGDY nie uruchamiaj ani nie analizuj `git log` ani historii commitów**.
+- Modyfikacje i aktualizacje planów lekcji wykonuj wyłącznie w oparciu o bieżący stan pliku HTML, dostarczone przez użytkownika dane (np. ze schowka, dokumentu, tabeli) i wytyczne promptu.
+
 ---
 
 ## ✅ Weryfikacja Jakościowa (Checklist)
 
 Po wygenerowaniu lub modyfikacji pliku HTML:
-1. **Pojedyncza strona A4**:
-   Skompiluj stronę do PDF w headless Chrome i zweryfikuj liczbę stron:
+1. **Generowanie wizualizacji PDF i weryfikacja pojedynczej strony A4**:
+   Zawsze wygeneruj plik PDF obok pliku HTML w tym samym folderze (np. `<nazwa>-plan-lekcji.pdf`) za pomocą headless Chrome i zweryfikuj liczbę stron:
    ```bash
-   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --print-to-pdf=/tmp/test.pdf "file://<SCIEZKA_HTML>"
-   python3 -c "import re; pages = re.findall(rb'/Type\s*/Page[^s]', open('/tmp/test.pdf', 'rb').read()); print('Liczba stron:', len(pages))"
+   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --print-to-pdf="<FOLDER_DOCELOWY>/<nazwa>-plan-lekcji.pdf" "file://<SCIEZKA_HTML>"
+   python3 -c "import re; pages = re.findall(rb'/Type\s*/Page[^s]', open('<FOLDER_DOCELOWY>/<nazwa>-plan-lekcji.pdf', 'rb').read()); print('Liczba stron:', len(pages))"
    ```
-   Liczba stron **musi wynosić 1**.
+   Liczba stron **musi wynosić dokładnie 1**.
 2. **Brak kolizji etykiety 8:00**:
    Upewnij się, że etykieta `8:00` jest w rzędzie 3, a rząd 2 ma wysokość 14px.
 3. **Spójność linków**:
-   W odpowiedzi dla użytkownika podaj bezpośredni, klikalny link w formacie `file://...`.
+   W odpowiedzi dla użytkownika podaj bezpośrednie, klikalne linki do pliku HTML oraz wygenerowanego pliku PDF w formacie `file://...`.
