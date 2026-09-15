@@ -141,6 +141,8 @@ def parse_markdown_plan(md_path: Path):
                 clean_name = re.sub(r"\[([a-zA-Z0-9_-]+)\]", "", clean_name).strip()
 
             cls = explicit_tag if explicit_tag else classify_subject(clean_name)
+            if duration <= 25:
+                cls = f"{cls} short"
             time_display = f"{h1}:{m1:02d}-{h2}:{m2:02d}"
 
             end_total = h2 * 60 + m2
@@ -334,6 +336,18 @@ def generate_html(title: str, lessons: list, max_hour: int = 19) -> str:
             opacity: 0.92;
             margin-top: 3px;
             font-weight: 400;
+        }}
+
+        /* Krótkie kafelki (np. 20-minutowe przerwy obiadowe) */
+        .lesson.short {{
+            padding: 1px 2px;
+            font-size: 10px;
+            line-height: 1.05;
+        }}
+
+        .lesson.short .time {{
+            font-size: 8.5px;
+            margin-top: 1px;
         }}
 
         /* Kolorystyka przedmiotów */

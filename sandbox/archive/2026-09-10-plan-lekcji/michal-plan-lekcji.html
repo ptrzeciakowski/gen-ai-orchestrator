@@ -134,6 +134,18 @@
             font-weight: 400;
         }
 
+        /* Krótkie kafelki (np. 20-minutowe przerwy obiadowe) */
+        .lesson.short {
+            padding: 1px 2px;
+            font-size: 10px;
+            line-height: 1.05;
+        }
+
+        .lesson.short .time {
+            font-size: 8.5px;
+            margin-top: 1px;
+        }
+
         /* Kolorystyka przedmiotów */
         .general { background-color: #3b82f6; } /* Domyślny niebieski */
         .sport { background-color: #14b8a6; }   /* WF / Szkolenie sportowe - Morski */
@@ -141,6 +153,7 @@
         .es { background-color: #f59e0b; }      /* Szkoła językowa / Early Stage - Bursztynowy */
         .lunch { background-color: #ea580c; }   /* Blok obiadowy - Ciepły pomarańcz */
         .home { background-color: #6366f1; }    /* Zajęcia w domu - Indygo */
+        .muted, .cancelled, .gray { background-color: #94a3b8; opacity: 0.9; } /* Wyszarzone / opcjonalne / odwołane - Szary */
 
         /* Druk na A4 */
         @page {
@@ -207,7 +220,9 @@
         <div class="lesson general" style="--col: 2; --h: 9; --m: 50; --d: 45;">Matematyka <span class="time">9:50-10:35</span></div>
         <div class="lesson general" style="--col: 2; --h: 10; --m: 45; --d: 45;">Język angielski <span class="time">10:45-11:30</span></div>
         <div class="lesson general" style="--col: 2; --h: 11; --m: 40; --d: 45;">Muzyka <span class="time">11:40-12:25</span></div>
+        <div class="lesson lunch short" style="--col: 2; --h: 12; --m: 25; --d: 20;">Obiad (opcjonalny) <span class="time">12:25-12:45</span></div>
         <div class="lesson general" style="--col: 2; --h: 12; --m: 45; --d: 45;">Język polski <span class="time">12:45-13:30</span></div>
+        <div class="lesson lunch short" style="--col: 2; --h: 13; --m: 30; --d: 20;">Obiad (opcjonalny) <span class="time">13:30-13:50</span></div>
 
         <!-- ==================== WTOREK (--col: 3) ==================== -->
         <div class="lesson general" style="--col: 3; --h: 8; --m: 0; --d: 45;">Język polski <span class="time">8:00-8:45</span></div>
@@ -215,7 +230,9 @@
         <div class="lesson general" style="--col: 3; --h: 9; --m: 50; --d: 45;">Plastyka <span class="time">9:50-10:35</span></div>
         <div class="lesson general" style="--col: 3; --h: 10; --m: 45; --d: 45;">Godzina wychowawcza <span class="time">10:45-11:30</span></div>
         <div class="lesson general" style="--col: 3; --h: 11; --m: 40; --d: 45;">Geografia <span class="time">11:40-12:25</span></div>
+        <div class="lesson lunch short" style="--col: 3; --h: 12; --m: 25; --d: 20;">Obiad (opcjonalny) <span class="time">12:25-12:45</span></div>
         <div class="lesson sport" style="--col: 3; --h: 12; --m: 45; --d: 45;">Szkolenie sportowe <span class="time">12:45-13:30</span></div>
+        <div class="lesson lunch short" style="--col: 3; --h: 13; --m: 30; --d: 20;">Obiad (opcjonalny) <span class="time">13:30-13:50</span></div>
         <div class="lesson sport" style="--col: 3; --h: 13; --m: 50; --d: 45;">Szkolenie sportowe <span class="time">13:50-14:35</span></div>
         <div class="lesson sport" style="--col: 3; --h: 14; --m: 45; --d: 45;">Szkolenie sportowe <span class="time">14:45-15:30</span></div>
         <div class="lesson es" style="--col: 3; --h: 16; --m: 30; --d: 90;">Early Stage <span class="time">16:30-18:00</span></div>
@@ -225,14 +242,18 @@
         <div class="lesson general" style="--col: 4; --h: 9; --m: 50; --d: 45;">Historia <span class="time">9:50-10:35</span></div>
         <div class="lesson general" style="--col: 4; --h: 10; --m: 45; --d: 45;">Matematyka <span class="time">10:45-11:30</span></div>
         <div class="lesson general" style="--col: 4; --h: 11; --m: 40; --d: 45;">Język angielski <span class="time">11:40-12:25</span></div>
+        <div class="lesson lunch short" style="--col: 4; --h: 12; --m: 25; --d: 20;">Obiad (opcjonalny) <span class="time">12:25-12:45</span></div>
         <div class="lesson sport" style="--col: 4; --h: 12; --m: 45; --d: 45;">Wychowanie fizyczne <span class="time">12:45-13:30</span></div>
+        <div class="lesson lunch short" style="--col: 4; --h: 13; --m: 30; --d: 20;">Obiad (opcjonalny) <span class="time">13:30-13:50</span></div>
 
         <!-- ==================== CZWARTEK (--col: 5) ==================== -->
         <div class="lesson general" style="--col: 5; --h: 8; --m: 55; --d: 45;">Język polski <span class="time">8:55-9:40</span></div>
         <div class="lesson general" style="--col: 5; --h: 9; --m: 50; --d: 45;">Język polski <span class="time">9:50-10:35</span></div>
         <div class="lesson sport" style="--col: 5; --h: 10; --m: 45; --d: 45;">Wychowanie fizyczne <span class="time">10:45-11:30</span></div>
         <div class="lesson general" style="--col: 5; --h: 11; --m: 40; --d: 45;">Język angielski <span class="time">11:40-12:25</span></div>
+        <div class="lesson lunch short" style="--col: 5; --h: 12; --m: 25; --d: 20;">Obiad (opcjonalny) <span class="time">12:25-12:45</span></div>
         <div class="lesson general" style="--col: 5; --h: 12; --m: 45; --d: 45;">Matematyka <span class="time">12:45-13:30</span></div>
+        <div class="lesson lunch short" style="--col: 5; --h: 13; --m: 30; --d: 20;">Obiad (opcjonalny) <span class="time">13:30-13:50</span></div>
         <div class="lesson sport" style="--col: 5; --h: 14; --m: 0; --d: 90;">Trening tenisowy indywidualny <span class="time">14:00-15:30</span></div>
         <div class="lesson es" style="--col: 5; --h: 17; --m: 0; --d: 90;">Early Stage <span class="time">17:00-18:30</span></div>
 
@@ -242,7 +263,9 @@
         <div class="lesson general" style="--col: 6; --h: 9; --m: 50; --d: 45;">Informatyka <span class="time">9:50-10:35</span></div>
         <div class="lesson general" style="--col: 6; --h: 10; --m: 45; --d: 45;">Technika <span class="time">10:45-11:30</span></div>
         <div class="lesson general" style="--col: 6; --h: 11; --m: 40; --d: 45;">Historia <span class="time">11:40-12:25</span></div>
+        <div class="lesson lunch short" style="--col: 6; --h: 12; --m: 25; --d: 20;">Obiad (opcjonalny) <span class="time">12:25-12:45</span></div>
         <div class="lesson sport" style="--col: 6; --h: 12; --m: 45; --d: 45;">Szkolenie sportowe <span class="time">12:45-13:30</span></div>
+        <div class="lesson lunch short" style="--col: 6; --h: 13; --m: 30; --d: 20;">Obiad (opcjonalny) <span class="time">13:30-13:50</span></div>
         <div class="lesson sport" style="--col: 6; --h: 13; --m: 50; --d: 45;">Szkolenie sportowe <span class="time">13:50-14:35</span></div>
         <div class="lesson sport" style="--col: 6; --h: 14; --m: 45; --d: 45;">Szkolenie sportowe <span class="time">14:45-15:30</span></div>
     </div>

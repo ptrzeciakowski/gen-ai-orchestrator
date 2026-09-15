@@ -3,9 +3,9 @@ name: plan-lekcji
 description: Tworzenie i aktualizacja interaktywnych planów lekcji w widoku osi czasu (CSS Grid Timeline View) zoptymalizowanych pod pojedynczą stronę wydruku A4. Użyj, gdy użytkownik prosi o utworzenie, wygenerowanie, modyfikację lub wydruk planu lekcji (np. z Google Docs, Librusa, tekstu czy tabeli).
 ---
 
-# Plan Lekcji (Timeline View & A4 Print)
+# Plan Lekcji (Markdown Source & A4 PDF Print)
 
-Skill służy do generowania oraz aktualizowania wizualnych, interaktywnych planów lekcji w formacie HTML z widokiem osi czasu (Timeline View) opartym o precyzyjną siatkę CSS Grid, zoptymalizowanych do idealnego wydruku na **pojedynczej stronie A4**.
+Skill służy do generowania oraz aktualizowania planów lekcji. Głównym edytowalnym źródłem prawdy jest czytelna tabela w Markdown (`<nazwa>-plan-lekcji.md`), a docelowym rezultatem wizualnym jest elegancki plik PDF na **pojedynczej stronie A4** (`<nazwa>-plan-lekcji.pdf`). Plik HTML pełni rolę wewnętrznego mechanizmu renderującego dla headless Chrome (nie musi być eksponowany użytkownikowi).
 
 ---
 
@@ -236,4 +236,4 @@ Po wygenerowaniu lub modyfikacji pliku HTML:
 2. **Brak kolizji etykiety 8:00**:
    Upewnij się, że etykieta `8:00` jest w rzędzie 3, a rząd 2 ma wysokość 14px.
 3. **Spójność linków**:
-   W odpowiedzi dla użytkownika podaj bezpośrednie, klikalne linki do pliku HTML oraz wygenerowanego pliku PDF w formacie `file://...`.
+   W odpowiedzi dla użytkownika podawaj bezpośrednie, klikalne linki do edytowalnego pliku Markdown (`.md`) oraz wygenerowanego pliku PDF (`.pdf`) w formacie `file://...`. Pliki HTML traktuj jako wewnętrzny etap kompilacji.
