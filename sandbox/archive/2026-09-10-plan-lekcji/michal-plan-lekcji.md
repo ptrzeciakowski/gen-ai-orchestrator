@@ -11,7 +11,9 @@
 | 12:45 - 13:30 | Język polski | Szkolenie sportowe | Wychowanie fizyczne | Matematyka | Szkolenie sportowe |
 | 13:30 - 13:50 | Obiad (opcjonalny) | Obiad (opcjonalny) | Obiad (opcjonalny) | Obiad (opcjonalny) | Obiad (opcjonalny) |
 | 13:50 - 14:35 | - | Szkolenie sportowe | - | - | Szkolenie sportowe |
-| 14:00 - 15:30 | - | - | - | Trening tenisowy indywidualny | - |
+| 14:00 - 15:30 | - | - | Trening tenisowy indywidualny | - | - |
 | 14:45 - 15:30 | - | Szkolenie sportowe | - | - | Szkolenie sportowe |
+| 15:00 - 16:30 | Trening tenisowy z Matim | - | - | - | - |
 | 16:30 - 18:00 | - | Early Stage | - | - | - |
+| 15:00 - 16:00 | - | - | - | Trening motoryczny | - |
 | 17:00 - 18:30 | - | - | - | Early Stage | - |

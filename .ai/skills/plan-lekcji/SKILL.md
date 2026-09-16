@@ -102,7 +102,8 @@ Stosuj spójną, czytelną typografię i kolorystykę Tailwind-inspired:
 | Klasa CSS | Kolor tła | Przeznaczenie |
 | :--- | :--- | :--- |
 | `.general` | `#3b82f6` (Niebieski) | Przedmioty ogólne (Język polski, Matematyka, Historia, Języki obce, Przyroda itd.) |
-| `.sport` | `#14b8a6` (Morski / Teal) | WF, szkolenie sportowe, basen, trening tenisowy |
+| `.sport` | `#14b8a6` (Morski / Teal) | WF, szkolenie sportowe, basen |
+| `.tennis` | `#8b5cf6` (Fioletowy) | Treningi tenisowe (indywidualne, klubowe) |
 | `.therapy` | `#8b5cf6` (Fioletowy) | Zajęcia terapeutyczne, psychologiczne, rewalidacja, pedagogiczne |
 | `.es` | `#f59e0b` (Bursztynowy) | Szkoły językowe (np. Early Stage) i popołudniowe kursy zewnętrzne |
 | `.lunch` | `#ea580c` (Ciepły pomarańcz) | Bloki obiadowe (np. Obiad w szkole) |

@@ -41,7 +41,9 @@ def classify_subject(name: str) -> str:
         return "es"
     if any(k in s for k in ["terapeutyczn", "psycholog", "rewalidacj", "pedagog"]):
         return "therapy"
-    if any(k in s for k in ["fizyczne", "wf", "sportow", "trening", "tenis", "basen", "pływani"]):
+    if "tenis" in s:
+        return "tennis"
+    if any(k in s for k in ["fizyczne", "wf", "sportow", "trening", "basen", "pływani"]):
         return "sport"
     return "general"
 
@@ -354,6 +356,7 @@ def generate_html(title: str, lessons: list, max_hour: int = 19) -> str:
         .general {{ background-color: #3b82f6; }} /* Domyślny niebieski */
         .sport {{ background-color: #14b8a6; }}   /* WF / Szkolenie sportowe - Morski */
         .therapy {{ background-color: #8b5cf6; }} /* Zajęcia terapeutyczne - Fioletowy */
+        .tennis {{ background-color: #8b5cf6; }}  /* Trening tenisowy - Fioletowy */
         .es {{ background-color: #f59e0b; }}      /* Szkoła językowa / Early Stage - Bursztynowy */
         .lunch {{ background-color: #ea580c; }}   /* Blok obiadowy - Ciepły pomarańcz */
         .home {{ background-color: #6366f1; }}    /* Zajęcia w domu - Indygo */
