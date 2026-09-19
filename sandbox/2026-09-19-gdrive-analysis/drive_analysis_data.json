@@ -1,0 +1,2464 @@
+{
+  "summary": {
+    "total_active_files": 77498,
+    "total_active_folders": 8185,
+    "owned_files": 77425,
+    "shared_with_me": 73,
+    "starred_count": 5,
+    "trashed_count": 9,
+    "top_folders_count": 28,
+    "root_loose_files_count": 49
+  },
+  "recency_distribution": {
+    "Ostatnie 30 dni": 105,
+    "1 - 6 miesięcy temu": 352,
+    "6 - 12 miesięcy temu": 10339,
+    "1 - 3 lata temu": 755,
+    "Ponad 3 lata temu": 36587,
+    "Nigdy nie otwierane (recency = 0)": 29360
+  },
+  "top_folders": [
+    {
+      "title": "01👨‍👩‍👧‍👦 Rodzina",
+      "id": "11bbJ6lydhHOJLMEOM4ZzgQbMgCWqfE-P",
+      "files": 484,
+      "folders": 44,
+      "size": 5941570395,
+      "size_str": "5.5 GB",
+      "last_viewed": "2026-08-25 14:53",
+      "last_modified": "2026-07-23 19:58",
+      "never_opened_files": 330,
+      "top_mimes": [
+        [
+          "application/dicom",
+          253
+        ],
+        [
+          "application/pdf",
+          57
+        ],
+        [
+          "image/jpeg",
+          49
+        ]
+      ]
+    },
+    {
+      "title": "02🏫Szkoła",
+      "id": "15EWxRSVBQs25VH6Pmnlvr7hM5HaYPW2-",
+      "files": 159,
+      "folders": 25,
+      "size": 314888286,
+      "size_str": "300.3 MB",
+      "last_viewed": "2026-09-16 07:05",
+      "last_modified": "2026-09-16 07:01",
+      "never_opened_files": 14,
+      "top_mimes": [
+        [
+          "application/pdf",
+          79
+        ],
+        [
+          "application/vnd.google-apps.document",
+          38
+        ],
+        [
+          "image/jpeg",
+          17
+        ]
+      ]
+    },
+    {
+      "title": "03🏥Zdrowie",
+      "id": "12XjScXAibLP5hk1jSh_k0QXH9e8wYQg8",
+      "files": 464,
+      "folders": 23,
+      "size": 589469777,
+      "size_str": "562.2 MB",
+      "last_viewed": "2026-09-04 09:09",
+      "last_modified": "2026-09-04 09:10",
+      "never_opened_files": 1,
+      "top_mimes": [
+        [
+          "application/dicom",
+          329
+        ],
+        [
+          "application/pdf",
+          95
+        ],
+        [
+          "application/vnd.google-apps.document",
+          12
+        ]
+      ]
+    },
+    {
+      "title": "05💰Finanse",
+      "id": "0BwzirsbzEfktNjFiMzc2OGUtMTRiMC00ZDFiLTlkMjktMzJiZWUxMTBiZmYz",
+      "files": 275,
+      "folders": 70,
+      "size": 222373570,
+      "size_str": "212.1 MB",
+      "last_viewed": "2026-09-15 19:49",
+      "last_modified": "2026-08-16 20:48",
+      "never_opened_files": 144,
+      "top_mimes": [
+        [
+          "application/pdf",
+          131
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          22
+        ],
+        [
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          22
+        ]
+      ]
+    },
+    {
+      "title": "06🏠Mieszkanie",
+      "id": "0BwzirsbzEfktMDFiMGZlYzktMjZhZS00YTFkLTg4MDQtYTA3Mjc2ZjEzYzlm",
+      "files": 1162,
+      "folders": 133,
+      "size": 830236493,
+      "size_str": "791.8 MB",
+      "last_viewed": "2026-09-04 21:17",
+      "last_modified": "2026-09-04 21:19",
+      "never_opened_files": 894,
+      "top_mimes": [
+        [
+          "image/jpeg",
+          486
+        ],
+        [
+          "application/pdf",
+          156
+        ],
+        [
+          "application/x-javascript",
+          105
+        ]
+      ]
+    },
+    {
+      "title": "07🏢Praca",
+      "id": "0BwzirsbzEfktcGp0SkoybWV1UFk",
+      "files": 86,
+      "folders": 14,
+      "size": 194166858,
+      "size_str": "185.2 MB",
+      "last_viewed": "2026-07-19 09:17",
+      "last_modified": "2026-06-16 23:58",
+      "never_opened_files": 20,
+      "top_mimes": [
+        [
+          "application/pdf",
+          39
+        ],
+        [
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          20
+        ],
+        [
+          "application/vnd.google-apps.document",
+          7
+        ]
+      ]
+    },
+    {
+      "title": "08🏖️Wakacje",
+      "id": "1-4lJTOvAh_VPAIzxyjpFOHKRWiEl6A-d",
+      "files": 122,
+      "folders": 32,
+      "size": 45848552,
+      "size_str": "43.7 MB",
+      "last_viewed": "2026-09-16 17:44",
+      "last_modified": "2026-09-16 17:44",
+      "never_opened_files": 3,
+      "top_mimes": [
+        [
+          "application/pdf",
+          83
+        ],
+        [
+          "application/vnd.google-apps.document",
+          16
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          13
+        ]
+      ]
+    },
+    {
+      "title": "09🚗Samochód",
+      "id": "0BwzirsbzEfktS0xocWc1ZjhTN1E",
+      "files": 168,
+      "folders": 27,
+      "size": 366071171,
+      "size_str": "349.1 MB",
+      "last_viewed": "2026-09-07 18:51",
+      "last_modified": "2026-07-29 22:00",
+      "never_opened_files": 50,
+      "top_mimes": [
+        [
+          "image/jpeg",
+          81
+        ],
+        [
+          "application/pdf",
+          58
+        ],
+        [
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          8
+        ]
+      ]
+    },
+    {
+      "title": "10 ☂️ Ubezpieczenie",
+      "id": "1cPlMzHGB9LUeOeZFW6x7gFmLdB6T_nle",
+      "files": 12,
+      "folders": 10,
+      "size": 19197898,
+      "size_str": "18.3 MB",
+      "last_viewed": "2026-07-29 21:59",
+      "last_modified": "2026-07-29 21:59",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/pdf",
+          12
+        ]
+      ]
+    },
+    {
+      "title": "11. Obsydian",
+      "id": "10iysqV3ekznw6Fi5MSJsJuXybtBxcAB9",
+      "files": 0,
+      "folders": 0,
+      "size": 0,
+      "size_str": "0.0 B",
+      "last_viewed": "NIGDY",
+      "last_modified": "NIGDY",
+      "never_opened_files": 0,
+      "top_mimes": []
+    },
+    {
+      "title": "15🏡Lewickie",
+      "id": "1_JsTR85bZv-bLpW6CMbD0aZOOfhq74vV",
+      "files": 46,
+      "folders": 12,
+      "size": 630000398,
+      "size_str": "600.8 MB",
+      "last_viewed": "2026-08-22 17:18",
+      "last_modified": "2026-08-22 17:18",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/pdf",
+          22
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          10
+        ],
+        [
+          "application/vnd.google-apps.document",
+          6
+        ]
+      ]
+    },
+    {
+      "title": "16🏡Pokój",
+      "id": "11bNKpBVbL-VfIc8rj_Egq_aw-x9dKwd-",
+      "files": 24,
+      "folders": 4,
+      "size": 27436429,
+      "size_str": "26.2 MB",
+      "last_viewed": "2026-04-08 19:19",
+      "last_modified": "2026-04-07 22:16",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "text/csv",
+          19
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          2
+        ],
+        [
+          "application/octet-stream",
+          1
+        ]
+      ]
+    },
+    {
+      "title": "20📚 ebooks + audobooks",
+      "id": "1guqWoTZNo13i4OVUlq88u6tDeClUJ-c9",
+      "files": 74,
+      "folders": 2,
+      "size": 1266159733,
+      "size_str": "1.2 GB",
+      "last_viewed": "2024-07-27 20:34",
+      "last_modified": "2024-07-27 20:34",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "audio/mpeg",
+          65
+        ],
+        [
+          "application/epub+zip",
+          3
+        ],
+        [
+          "application/pdf",
+          2
+        ]
+      ]
+    },
+    {
+      "title": "25📄 Paweł - dokumenty",
+      "id": "1FZlWuz0SaZt7psyn3FrP9OiOP9fnAnfN",
+      "files": 7586,
+      "folders": 1468,
+      "size": 8801228180,
+      "size_str": "8.2 GB",
+      "last_viewed": "2025-09-25 19:55",
+      "last_modified": "2025-09-25 19:54",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/octet-stream",
+          2025
+        ],
+        [
+          "text/x-sql",
+          1712
+        ],
+        [
+          "text/xml",
+          1093
+        ]
+      ]
+    },
+    {
+      "title": "85🏃 Bieganie",
+      "id": "1mRJRSbpShmI1L3JkQMuWPfGo14PVt2DF",
+      "files": 23,
+      "folders": 7,
+      "size": 22070347,
+      "size_str": "21.0 MB",
+      "last_viewed": "2026-06-19 06:38",
+      "last_modified": "2026-04-28 22:42",
+      "never_opened_files": 2,
+      "top_mimes": [
+        [
+          "application/pdf",
+          10
+        ],
+        [
+          "image/jpeg",
+          4
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          3
+        ]
+      ]
+    },
+    {
+      "title": "88📸Zdjęcia",
+      "id": "1RWyIwwccoIAgb5vWZrkYOjlHKj6ZebU4",
+      "files": 30958,
+      "folders": 538,
+      "size": 204050528399,
+      "size_str": "190.0 GB",
+      "last_viewed": "2026-08-07 21:07",
+      "last_modified": "2025-09-16 21:01",
+      "never_opened_files": 26915,
+      "top_mimes": [
+        [
+          "image/jpeg",
+          29492
+        ],
+        [
+          "video/mp4",
+          1167
+        ],
+        [
+          "application/octet-stream",
+          90
+        ]
+      ]
+    },
+    {
+      "title": "91🔑Hasła",
+      "id": "16mW-LKfiZrZZV4WBttjR5MN2bhCog-e8",
+      "files": 5,
+      "folders": 0,
+      "size": 86654,
+      "size_str": "84.6 KB",
+      "last_viewed": "2025-03-30 09:42",
+      "last_modified": "2025-03-30 09:42",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "text/csv",
+          3
+        ],
+        [
+          "application/octet-stream",
+          1
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          1
+        ]
+      ]
+    },
+    {
+      "title": "92🎵 Muzyka",
+      "id": "1hWyHVdqI3fO3GtKaozFOGImJEyN2-Z2d",
+      "files": 133,
+      "folders": 3,
+      "size": 1163607502,
+      "size_str": "1.1 GB",
+      "last_viewed": "2023-11-15 13:54",
+      "last_modified": "2023-11-15 13:54",
+      "never_opened_files": 98,
+      "top_mimes": [
+        [
+          "audio/mpeg",
+          132
+        ],
+        [
+          "text/plain",
+          1
+        ]
+      ]
+    },
+    {
+      "title": "93🎮Gry",
+      "id": "1-iTnWjyYNU5E8KJvRBHAx4qhkJYKLlYA",
+      "files": 26,
+      "folders": 16,
+      "size": 70105058,
+      "size_str": "66.9 MB",
+      "last_viewed": "2024-12-14 18:14",
+      "last_modified": "2024-12-13 21:59",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/octet-stream",
+          12
+        ],
+        [
+          "application/x-gzip",
+          8
+        ],
+        [
+          "application/json",
+          2
+        ]
+      ]
+    },
+    {
+      "title": "94🧑‍💻Oprogramowanie",
+      "id": "0BwzirsbzEfktMHYySmVZS25nNUE",
+      "files": 4,
+      "folders": 2,
+      "size": 684732277,
+      "size_str": "653.0 MB",
+      "last_viewed": "2023-06-28 23:06",
+      "last_modified": "2021-06-20 20:48",
+      "never_opened_files": 3,
+      "top_mimes": [
+        [
+          "message/rfc822",
+          2
+        ],
+        [
+          "application/x-msdos-program",
+          1
+        ],
+        [
+          "application/x-iwork-keynote-sffkey",
+          1
+        ]
+      ]
+    },
+    {
+      "title": "95💽Kopia zapasowa",
+      "id": "1589fQyP9AAY2siGKCkqyug6hrqd4PSKj",
+      "files": 24470,
+      "folders": 3915,
+      "size": 54500762747,
+      "size_str": "50.8 GB",
+      "last_viewed": "2026-08-07 21:07",
+      "last_modified": "2025-09-25 19:55",
+      "never_opened_files": 1,
+      "top_mimes": [
+        [
+          "image/jpeg",
+          5345
+        ],
+        [
+          "application/octet-stream",
+          4829
+        ],
+        [
+          "text/x-sql",
+          4737
+        ]
+      ]
+    },
+    {
+      "title": "96🗄️Archiwum",
+      "id": "1AsOEe9qZkEkqKKYX7n6gRlcnfMMlwYS_",
+      "files": 730,
+      "folders": 37,
+      "size": 346400569,
+      "size_str": "330.4 MB",
+      "last_viewed": "2026-03-22 20:48",
+      "last_modified": "2026-03-22 20:49",
+      "never_opened_files": 640,
+      "top_mimes": [
+        [
+          "application/octet-stream",
+          461
+        ],
+        [
+          "image/jpeg",
+          82
+        ],
+        [
+          "application/pdf",
+          45
+        ]
+      ]
+    },
+    {
+      "title": "98🧾Paragony",
+      "id": "1Gm82gQBRTT66cdLuUX3v9myFvBXgSKyg",
+      "files": 54,
+      "folders": 0,
+      "size": 33068401,
+      "size_str": "31.5 MB",
+      "last_viewed": "2026-09-18 17:52",
+      "last_modified": "2026-09-18 17:52",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/pdf",
+          50
+        ],
+        [
+          "text/plain",
+          3
+        ],
+        [
+          "application/octet-stream",
+          1
+        ]
+      ]
+    },
+    {
+      "title": "Analiza_Matematyczna_WEiTI",
+      "id": "1mJvDDn0pizMO_t-yzOhrc1TAjuaV3VP6",
+      "files": 2,
+      "folders": 0,
+      "size": 220322,
+      "size_str": "215.2 KB",
+      "last_viewed": "2026-09-11 19:40",
+      "last_modified": "2026-09-11 21:43",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          2
+        ]
+      ]
+    },
+    {
+      "title": "Gemini Gems",
+      "id": "1-0P4-e0-LJ-3hB7fosOV-U1s0_7UHkCI",
+      "files": 2,
+      "folders": 0,
+      "size": 1478,
+      "size_str": "1.4 KB",
+      "last_viewed": "2026-04-06 11:48",
+      "last_modified": "2026-04-05 22:03",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/vnd.google-gemini.gem",
+          2
+        ]
+      ]
+    },
+    {
+      "title": "Notability",
+      "id": "1bBBJ0a2YFMDhsQiyoVw9HNMqIHkf_jqd",
+      "files": 232,
+      "folders": 28,
+      "size": 442415752,
+      "size_str": "421.9 MB",
+      "last_viewed": "2026-07-23 22:31",
+      "last_modified": "2026-07-23 21:55",
+      "never_opened_files": 227,
+      "top_mimes": [
+        [
+          "application/x-zip",
+          167
+        ],
+        [
+          "application/pdf",
+          63
+        ],
+        [
+          "application/vnd.google-apps.document",
+          1
+        ]
+      ]
+    },
+    {
+      "title": "Zapisane z Chrome",
+      "id": "1M0jlYZ3euRJM428LZCo4YhsPtaj9LiqH",
+      "files": 9,
+      "folders": 0,
+      "size": 78248173,
+      "size_str": "74.6 MB",
+      "last_viewed": "2025-10-05 13:58",
+      "last_modified": "2025-10-06 17:18",
+      "never_opened_files": 4,
+      "top_mimes": [
+        [
+          "application/pdf",
+          7
+        ],
+        [
+          "image/png",
+          2
+        ]
+      ]
+    },
+    {
+      "title": "Zapisane z Chrome (1)",
+      "id": "1dmJIT4jGEvnYVslPk9C50Zb5gDZdNh9w",
+      "files": 15,
+      "folders": 0,
+      "size": 11186259,
+      "size_str": "10.7 MB",
+      "last_viewed": "2026-06-11 07:29",
+      "last_modified": "2026-06-11 07:28",
+      "never_opened_files": 2,
+      "top_mimes": [
+        [
+          "application/pdf",
+          15
+        ]
+      ]
+    }
+  ],
+  "root_files": [
+    {
+      "title": "0d5a2mpppx6h1lwz06r0m4okatv9.pdf",
+      "id": "1X3RzM_9X1TR6GksoDLLGaPlm8DPlZQOs",
+      "size": 6304051,
+      "size_str": "6.0 MB",
+      "mime": "application/pdf",
+      "is_owner": true,
+      "last_viewed": "2025-11-12 14:33",
+      "last_modified": "2025-11-12 14:33"
+    },
+    {
+      "title": "Analiza zużycia energii i fotowoltaiki.gdoc",
+      "id": "1Q3qOQ6QANcHvr-fVmRHaTCGywIaK3wYOLM3umNJG1I8",
+      "size": 3807,
+      "size_str": "3.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-04-05 21:52",
+      "last_modified": "2026-04-05 21:52"
+    },
+    {
+      "title": "Analiza_Matematyczna_WEiTI_PW_Podrecznik.gdoc",
+      "id": "1T7p7zb6iuXPpHbdCWIH31RtP-xzsYagpY0rsYEWdGB4",
+      "size": 126746,
+      "size_str": "123.8 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:51",
+      "last_modified": "2026-09-11 19:50"
+    },
+    {
+      "title": "Apteki ALK 30.05.23.xlsx",
+      "id": "1Z0_ZNN59DIwFqzpKiKTrYn1chpAU3OvE",
+      "size": 27891,
+      "size_str": "27.2 KB",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "is_owner": true,
+      "last_viewed": "2025-05-11 17:02",
+      "last_modified": "2023-11-09 18:30"
+    },
+    {
+      "title": "Arkusz kalkulacyjny bez tytułu.gsheet",
+      "id": "1w6Bh5-qb0gtCHVmCVlbxO-1DbNpXEMn0c2RFX_Ypy_s",
+      "size": 43094,
+      "size_str": "42.1 KB",
+      "mime": "application/vnd.google-apps.spreadsheet",
+      "is_owner": true,
+      "last_viewed": "2026-06-22 21:38",
+      "last_modified": "2026-06-21 22:26"
+    },
+    {
+      "title": "Bilet - WH64222365.pdf",
+      "id": "1uR6Mb92i2KD0b5_Wac5sNv8ndHCDD0Ak",
+      "size": 97141,
+      "size_str": "94.9 KB",
+      "mime": "application/pdf",
+      "is_owner": true,
+      "last_viewed": "2026-08-25 17:03",
+      "last_modified": "2026-08-23 18:08"
+    },
+    {
+      "title": "Czy możesz załączyć podsumowanie o które prosiłem?.gdoc",
+      "id": "1xCQ_dQ2WpqPquldT76BvrfT37VDnIsdZ7TP8t_91FxU",
+      "size": 5059,
+      "size_str": "4.9 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-05-24 10:16",
+      "last_modified": "2026-04-12 17:56"
+    },
+    {
+      "title": "Dokument bez tytułu (1).gdoc",
+      "id": "1tAtiKgmy4eD2_A_0pd1SlsJHI4UYMGqtBAiHYD1zT1c",
+      "size": 367331,
+      "size_str": "358.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-07-26 11:05",
+      "last_modified": "2026-07-26 11:05"
+    },
+    {
+      "title": "Dokument bez tytułu (2).gdoc",
+      "id": "1UyFXgNZJhRHkMaNB5xElcHVrMkgFKx73XIzmV9lZ0jc",
+      "size": 5363,
+      "size_str": "5.2 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-04 21:16",
+      "last_modified": "2026-09-04 21:16"
+    },
+    {
+      "title": "Dokument bez tytułu.gdoc",
+      "id": "1tUKJGNy6aeF6pFyfloOCIloDgWguEtUc3Gv5bmv-V-g",
+      "size": 1787,
+      "size_str": "1.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-05 00:12",
+      "last_modified": "2026-06-05 00:12"
+    },
+    {
+      "title": "Dowód osobisty - Paweł Trzeciakowski.pdf",
+      "id": "1zsz6dWxhyifbovYWAg1xI28C1pp9Q6YO",
+      "size": 857444,
+      "size_str": "837.3 KB",
+      "mime": "application/pdf",
+      "is_owner": true,
+      "last_viewed": "2025-12-07 18:02",
+      "last_modified": "2024-02-05 12:49"
+    },
+    {
+      "title": "Dowód osobisty - mama.pdf",
+      "id": "1JcDOb2lGk0tDGXlwdYcZVa2hsuIZvYg6",
+      "size": 817716,
+      "size_str": "798.6 KB",
+      "mime": "application/pdf",
+      "is_owner": true,
+      "last_viewed": "2026-01-14 21:21",
+      "last_modified": "2024-02-05 12:34"
+    },
+    {
+      "title": "Dziennik.gdoc",
+      "id": "1jlVmOF7w_Kur3W7mCIXE-Io-S-Vrg_uOXbI6ivsNDBw",
+      "size": 9111971,
+      "size_str": "8.7 MB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-08-10 22:15",
+      "last_modified": "2026-08-10 22:15"
+    },
+    {
+      "title": "IMG_2312.jpeg",
+      "id": "1qaaz31g0SEhhxL8GlkZ1TYjoPiu7YwBi",
+      "size": 4619417,
+      "size_str": "4.4 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2313.jpeg",
+      "id": "1aw0RulwYmYcbooh-lRblQmqHF7fprQtd",
+      "size": 5452122,
+      "size_str": "5.2 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2314.jpeg",
+      "id": "1aLky8Z7fi2an9mrodbGM4jCKd7evmvjU",
+      "size": 2988880,
+      "size_str": "2.9 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2315.jpeg",
+      "id": "19BVyC2bev8Z4lSLUE7LrmRm-QQle_4li",
+      "size": 6049238,
+      "size_str": "5.8 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2316.jpeg",
+      "id": "1c1ydMlGlOi4Y-fxqLnDq6dSBfbprNDr_",
+      "size": 5213377,
+      "size_str": "5.0 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2317.jpeg",
+      "id": "15ifI0uyW4Y0U_9nOILEU2buVn-41u35X",
+      "size": 5361962,
+      "size_str": "5.1 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2318.jpeg",
+      "id": "1qQU_caz_ByqhlaRtKkgltf_s-TEWDJFs",
+      "size": 6060608,
+      "size_str": "5.8 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2319.jpeg",
+      "id": "1MHtb2GyYwOygVh16upZLSGGA4SqtJhMX",
+      "size": 5158140,
+      "size_str": "4.9 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2320.jpeg",
+      "id": "1R_-Eo7yQzvEyGdDd7BmwKhGB_XXMwgcT",
+      "size": 5111928,
+      "size_str": "4.9 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2321.jpeg",
+      "id": "1QxD5QYbvApSPX9rlYxBjzqLRZRYk4JEV",
+      "size": 4432011,
+      "size_str": "4.2 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2322.jpeg",
+      "id": "1fwCpGI600DXhB1wqOokxEFTtQKwOBTG0",
+      "size": 3635271,
+      "size_str": "3.5 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2323.jpeg",
+      "id": "1bn7lMETLw24vY9k5q0di3drJ7NeiwpIz",
+      "size": 5414818,
+      "size_str": "5.2 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-05-24 10:16",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "Karta kwalifikacyjna ZIELONEJ SZKOŁY CAMP DRAWA.gdoc",
+      "id": "1mkcgLBjIRCp9A5hydYziEG8U6SQgrypIv2SlZxYWcLs",
+      "size": 14226,
+      "size_str": "13.9 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-05-28 17:12",
+      "last_modified": "2026-05-27 21:46"
+    },
+    {
+      "title": "LinkedIn Post - Snowflake Summit '26 Closing Draft.gdoc",
+      "id": "1-CTJ96CN025ijoHqdwxiqZuI2PTEjrITfMqKBxIesnk",
+      "size": 2752,
+      "size_str": "2.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-05 00:08",
+      "last_modified": "2026-06-05 00:08"
+    },
+    {
+      "title": "OWU Warta Travel - C0517.pdf",
+      "id": "1ctO-D41UJhFqqzPmRBcqdYGm7tOwkLX8",
+      "size": 388855,
+      "size_str": "379.7 KB",
+      "mime": "application/pdf",
+      "is_owner": true,
+      "last_viewed": "2026-05-22 08:01",
+      "last_modified": "2026-05-22 08:01"
+    },
+    {
+      "title": "Pierścionek Rocznicowy Casa Batlló.gdoc",
+      "id": "1Psp8JBLssaMjeogbPea_KWvyYF69Ug4KwA3cmRtdgHg",
+      "size": 508980,
+      "size_str": "497.1 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-05-26 16:13",
+      "last_modified": "2026-05-24 10:08"
+    },
+    {
+      "title": "Plan Projektu: Warstwa Semantyczna Snowflake dla FinTech & eCommerce.gdoc",
+      "id": "1FIt6hTdYRWen7nzrrrWGkyJvDJDi0BieXLd4IQZp26c",
+      "size": 12044,
+      "size_str": "11.8 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-04 19:41",
+      "last_modified": "2026-06-04 19:41"
+    },
+    {
+      "title": "Plan wycieczki - Tatry Wysokie (Słowacja) V2.gdoc",
+      "id": "1H_eCuaGkGRdknm-w2Amdh2yBhVFBaE4TGNC9ZGZQOag",
+      "size": 5412,
+      "size_str": "5.3 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-08-12 21:51",
+      "last_modified": "2026-08-03 19:27"
+    },
+    {
+      "title": "Plan wycieczki - Tatry Wysokie (Słowacja).gdoc",
+      "id": "1FZTNipyYAPV26Cc_JqaOC4IoNC4WbICAaQjZEadCRms",
+      "size": 4084,
+      "size_str": "4.0 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-08-03 19:22",
+      "last_modified": "2026-08-03 19:22"
+    },
+    {
+      "title": "Pomysły na mieszkanie.gdoc",
+      "id": "15pKA8dPaUrluFdRV084j0BctUihdcqNnFygowq61RUA",
+      "size": 3416,
+      "size_str": "3.3 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-08-07 19:10",
+      "last_modified": "2026-08-07 19:09"
+    },
+    {
+      "title": "Serio? Nie możesz wyciągnąć całej tej konwersacji ....gdoc",
+      "id": "1Nuu6F8XYSVGZaJ7XIncyxGVlNiMaR_xNW7XnuO8hQp8",
+      "size": 5239,
+      "size_str": "5.1 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-04 19:40",
+      "last_modified": "2026-06-04 19:40"
+    },
+    {
+      "title": "Strategia i Architektura Nowoczesnej Warstwy Semantycznej w Snowflake.gdoc",
+      "id": "1r9zhdHQ1YIsWTOdtn7rzrp51LtnWjgCaR3aZ2prfc3E",
+      "size": 8004,
+      "size_str": "7.8 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-25 08:36",
+      "last_modified": "2026-06-25 08:02"
+    },
+    {
+      "title": "Super, dodaj jeszcze do dokumentu kartę z całą tą ....gdoc",
+      "id": "17Qadwa2hm4E_BDrCvuRai-X2bn2RzSeDUpuM5PTW7xE",
+      "size": 3663,
+      "size_str": "3.6 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-04 19:37",
+      "last_modified": "2026-06-04 19:37"
+    },
+    {
+      "title": "Ubezpieczenie - Toyota Corolla.gprj",
+      "id": "1hofw68_Nkhb0-laYuQ85oLdCMRxuZ-iB",
+      "size": 0,
+      "size_str": "0.0 B",
+      "mime": "application/vnd.google-apps.project",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:29",
+      "last_modified": "2026-07-24 22:45"
+    },
+    {
+      "title": "Ubezpieczenie - Vw Golf.gprj",
+      "id": "1RmcomGrzT3QQUc1KbgarEFsTE6A-iO8_",
+      "size": 0,
+      "size_str": "0.0 B",
+      "mime": "application/vnd.google-apps.project",
+      "is_owner": true,
+      "last_viewed": "2026-07-24 22:55",
+      "last_modified": "2026-07-24 22:55"
+    },
+    {
+      "title": "Wzrost Nadii i Michała.gsheet",
+      "id": "1wRa3rVnv6CJW-sgoOxKgFse0HTGoOIBtqvjI-UXC3DA",
+      "size": 3123,
+      "size_str": "3.0 KB",
+      "mime": "application/vnd.google-apps.spreadsheet",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:29",
+      "last_modified": "2026-06-21 23:40"
+    },
+    {
+      "title": "Zróżnicowanie Przyrodnicze Rosji - klasa 6C.gslides",
+      "id": "1XUmfIyLlSdNzZMasUPxa2lZDdr1p3aM5rck1tA9yPJ0",
+      "size": 1340349,
+      "size_str": "1.3 MB",
+      "mime": "application/vnd.google-apps.presentation",
+      "is_owner": true,
+      "last_viewed": "2026-06-14 13:31",
+      "last_modified": "2026-06-14 13:31"
+    },
+    {
+      "title": "dobrze, biorąc pod uwagę te kryteria przygotuj mi....gsheet",
+      "id": "1J0FOc2lha88y3UMFzB2ja7y92upOXeSn2STxkkmCALo",
+      "size": 2036,
+      "size_str": "2.0 KB",
+      "mime": "application/vnd.google-apps.spreadsheet",
+      "is_owner": true,
+      "last_viewed": "2026-07-19 11:13",
+      "last_modified": "2026-07-19 11:13"
+    },
+    {
+      "title": "home_budget_categorized_2026-06-21 (1).csv",
+      "id": "1d45285JMwpOSO_BkQJ4JbLZr9iD879bp",
+      "size": 62712,
+      "size_str": "61.2 KB",
+      "mime": "text/csv",
+      "is_owner": true,
+      "last_viewed": "2026-06-21 17:44",
+      "last_modified": "2026-06-21 17:43"
+    },
+    {
+      "title": "home_budget_categorized_2026-06-21.csv",
+      "id": "1uUSx_r7NB1uPzHKhH2o5ncyxidgXQgwW",
+      "size": 85357,
+      "size_str": "83.4 KB",
+      "mime": "text/csv",
+      "is_owner": true,
+      "last_viewed": "2026-06-21 16:30",
+      "last_modified": "2026-06-21 16:29"
+    },
+    {
+      "title": "jeszcze raz poproszę o te wykresy, ale pokaż sumę....gdoc",
+      "id": "1PKp_dplk6nBXRTwopdciMJYKyoxA7Tqie3sSgNJfOY0",
+      "size": 135907,
+      "size_str": "132.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-04-05 21:47",
+      "last_modified": "2026-04-05 21:47"
+    },
+    {
+      "title": "wprowadzenie-do-calek.docx",
+      "id": "12oyMV7LJ2O80fn9TN-DM6rJHtr_yAZzL",
+      "size": 15719,
+      "size_str": "15.4 KB",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:18",
+      "last_modified": "2026-09-11 19:17"
+    },
+    {
+      "title": "wprowadzenie-do-calek.gdoc",
+      "id": "1VBkJksfBArgBAmHYFTPTfb0eVLq82G_MVO_s0suXU5E",
+      "size": 9230,
+      "size_str": "9.0 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:23",
+      "last_modified": "2026-09-11 19:20"
+    },
+    {
+      "title": "wygeneruj mi podsumowanie tej rozmowy z osateczny... (1).gdoc",
+      "id": "1cdd78uKdNXRqDXGhA2SXhEzd4LfAgb6BFg67iZu2jCA",
+      "size": 4816,
+      "size_str": "4.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-04 21:15",
+      "last_modified": "2026-09-04 21:15"
+    },
+    {
+      "title": "wygeneruj mi podsumowanie tej rozmowy z osateczny....gdoc",
+      "id": "1-hEAvT78qaE8507JZQ47OdHjcCjlBLfBDBEo4vjKJh4",
+      "size": 1687,
+      "size_str": "1.6 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-04 21:15",
+      "last_modified": "2026-09-04 21:15"
+    },
+    {
+      "title": "zrób z tego tabelę - w kolumnach fazy życia, a w....gdoc",
+      "id": "1AJ5eeHd7dxeSXM8UVE8RjNB-hypjUMn_WtkQGz5MPTo",
+      "size": 4759,
+      "size_str": "4.6 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:29",
+      "last_modified": "2026-05-22 22:30"
+    }
+  ],
+  "candidates_for_deletion_sample": [
+    {
+      "sid": 830,
+      "id": "1qPVqm7_9BwAGUEmUZkXNobyMsqGm3ERehAISSXWFCcw",
+      "title": "Dokument bez tytułu.gdoc",
+      "size": 17488,
+      "size_str": "17.1 KB",
+      "path": "Mój dysk / 96🗄️Archiwum / Dokument bez tytułu.gdoc",
+      "last_viewed": "2021-09-12 16:28",
+      "last_modified": "2021-09-12 16:28",
+      "reasons": [
+        "Plik bez tytułu (prawdopodobnie pusty/porzucony szkic)"
+      ]
+    },
+    {
+      "sid": 997,
+      "id": "1V5a3SPvkRNe0wlHf2PTdP0CHHKA4StoGyDWVvsd-d8Q",
+      "title": "CV - Paweł Trzeciakowski (1).gdoc",
+      "size": 18834,
+      "size_str": "18.4 KB",
+      "path": "Mój dysk / 25📄 Paweł - dokumenty / 04. CV / CV - Paweł Trzeciakowski (1).gdoc",
+      "last_viewed": "2021-10-10 13:19",
+      "last_modified": "2021-10-10 13:19",
+      "reasons": [
+        "Prawdopodobna duplikacja z sufiksem (1)/(2)"
+      ]
+    },
+    {
+      "sid": 1302,
+      "id": "1GYKk5tflAzKHVuGtt16KYAkhfRyTr63u",
+      "title": "VID_20191225_200557.mp4",
+      "size": 422624445,
+      "size_str": "403.0 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0000 - Eksploatacja domu w Lewickich / VID_20191225_200557.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2019-12-25 20:08",
+      "reasons": [
+        "Bardzo duży stary plik (403.0 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 1303,
+      "id": "1VzTb1dzFqJl_TQ57YyrhsKuNYjrRxXqo",
+      "title": "VID_20191225_200924.mp4",
+      "size": 126560029,
+      "size_str": "120.7 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0000 - Eksploatacja domu w Lewickich / VID_20191225_200924.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2019-12-25 20:10",
+      "reasons": [
+        "Bardzo duży stary plik (120.7 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 1308,
+      "id": "1MWiGR7gbQq_-DW7yz6Tgxn7zqDmjd_2A",
+      "title": "Virtual Pool 4-4.1.4.9.exe",
+      "size": 684720496,
+      "size_str": "653.0 MB",
+      "path": "Mój dysk / 94🧑‍💻Oprogramowanie / 02. Virtual Pool 3 / Virtual Pool 4-4.1.4.9.exe",
+      "last_viewed": "NIGDY",
+      "last_modified": "2021-06-20 20:48",
+      "reasons": [
+        "Bardzo duży stary plik (653.0 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 1595,
+      "id": "1RNxv0oYiTzTFjHvDkzsR-EQRUSjSeyvX",
+      "title": "20161231_185508.mp4",
+      "size": 107747787,
+      "size_str": "102.8 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / 20161231_185508.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2016-12-31 18:56",
+      "reasons": [
+        "Bardzo duży stary plik (102.8 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 9262,
+      "id": "1tNYiyVlvVyvVdegJzNS0Oz760DO-YyFS",
+      "title": "20160924_163912.mp4",
+      "size": 131715209,
+      "size_str": "125.6 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.09 / 20160924_163912.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2016-09-24 16:40",
+      "reasons": [
+        "Bardzo duży stary plik (125.6 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 9271,
+      "id": "1-DOYJ9xhQC5u1GHvRnKXgl6_S2QheEDa",
+      "title": "20160929_115637.mp4",
+      "size": 141990689,
+      "size_str": "135.4 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.09 / 20160929_115637.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2016-09-29 11:57",
+      "reasons": [
+        "Bardzo duży stary plik (135.4 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 10279,
+      "id": "1q7_vMfyRxyH1-15c0V5Vd73VTFWCE-Pho5173EKH3i0",
+      "title": "Dokument bez tytułu.gdoc",
+      "size": 3579,
+      "size_str": "3.5 KB",
+      "path": "Mój dysk / 06🏠Mieszkanie / 05. Pod Strzechą 7 / 2016 - kupno mieszkania / 00. Akt notarialny / Dokument bez tytułu.gdoc",
+      "last_viewed": "2023-11-29 19:12",
+      "last_modified": "2023-11-29 19:12",
+      "reasons": [
+        "Plik bez tytułu (prawdopodobnie pusty/porzucony szkic)"
+      ]
+    },
+    {
+      "sid": 29994,
+      "id": "1iT1c1M3-wjSorsqncHvimq71ME7EP91G6dPz2miQJEU",
+      "title": "Dokument bez tytułu.gdoc",
+      "size": 2125,
+      "size_str": "2.1 KB",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 04 matma / Dokument bez tytułu.gdoc",
+      "last_viewed": "2025-12-15 19:06",
+      "last_modified": "2025-12-15 19:06",
+      "reasons": [
+        "Plik bez tytułu (prawdopodobnie pusty/porzucony szkic)"
+      ]
+    },
+    {
+      "sid": 30901,
+      "id": "1PKp_dplk6nBXRTwopdciMJYKyoxA7Tqie3sSgNJfOY0",
+      "title": "jeszcze raz poproszę o te wykresy, ale pokaż sumę....gdoc",
+      "size": 135907,
+      "size_str": "132.7 KB",
+      "path": "Mój dysk / jeszcze raz poproszę o te wykresy, ale pokaż sumę....gdoc",
+      "last_viewed": "2026-04-05 21:47",
+      "last_modified": "2026-04-05 21:47",
+      "reasons": [
+        "Tymczasowy zrzut / prompt eksportowany z czatu LLM do root"
+      ]
+    },
+    {
+      "sid": 30928,
+      "id": "1c1ydMlGlOi4Y-fxqLnDq6dSBfbprNDr_",
+      "title": "IMG_2316.jpeg",
+      "size": 5213377,
+      "size_str": "5.0 MB",
+      "path": "Mój dysk / IMG_2316.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30929,
+      "id": "1aw0RulwYmYcbooh-lRblQmqHF7fprQtd",
+      "title": "IMG_2313.jpeg",
+      "size": 5452122,
+      "size_str": "5.2 MB",
+      "path": "Mój dysk / IMG_2313.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30930,
+      "id": "1QxD5QYbvApSPX9rlYxBjzqLRZRYk4JEV",
+      "title": "IMG_2321.jpeg",
+      "size": 4432011,
+      "size_str": "4.2 MB",
+      "path": "Mój dysk / IMG_2321.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30931,
+      "id": "1xCQ_dQ2WpqPquldT76BvrfT37VDnIsdZ7TP8t_91FxU",
+      "title": "Czy możesz załączyć podsumowanie o które prosiłem?.gdoc",
+      "size": 5059,
+      "size_str": "4.9 KB",
+      "path": "Mój dysk / Czy możesz załączyć podsumowanie o które prosiłem?.gdoc",
+      "last_viewed": "2026-05-24 10:16",
+      "last_modified": "2026-04-12 17:56",
+      "reasons": [
+        "Tymczasowy zrzut / prompt eksportowany z czatu LLM do root"
+      ]
+    },
+    {
+      "sid": 30932,
+      "id": "1qaaz31g0SEhhxL8GlkZ1TYjoPiu7YwBi",
+      "title": "IMG_2312.jpeg",
+      "size": 4619417,
+      "size_str": "4.4 MB",
+      "path": "Mój dysk / IMG_2312.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30933,
+      "id": "1MHtb2GyYwOygVh16upZLSGGA4SqtJhMX",
+      "title": "IMG_2319.jpeg",
+      "size": 5158140,
+      "size_str": "4.9 MB",
+      "path": "Mój dysk / IMG_2319.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30934,
+      "id": "1qQU_caz_ByqhlaRtKkgltf_s-TEWDJFs",
+      "title": "IMG_2318.jpeg",
+      "size": 6060608,
+      "size_str": "5.8 MB",
+      "path": "Mój dysk / IMG_2318.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30935,
+      "id": "1R_-Eo7yQzvEyGdDd7BmwKhGB_XXMwgcT",
+      "title": "IMG_2320.jpeg",
+      "size": 5111928,
+      "size_str": "4.9 MB",
+      "path": "Mój dysk / IMG_2320.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30936,
+      "id": "1aLky8Z7fi2an9mrodbGM4jCKd7evmvjU",
+      "title": "IMG_2314.jpeg",
+      "size": 2988880,
+      "size_str": "2.9 MB",
+      "path": "Mój dysk / IMG_2314.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30937,
+      "id": "15ifI0uyW4Y0U_9nOILEU2buVn-41u35X",
+      "title": "IMG_2317.jpeg",
+      "size": 5361962,
+      "size_str": "5.1 MB",
+      "path": "Mój dysk / IMG_2317.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30938,
+      "id": "1fwCpGI600DXhB1wqOokxEFTtQKwOBTG0",
+      "title": "IMG_2322.jpeg",
+      "size": 3635271,
+      "size_str": "3.5 MB",
+      "path": "Mój dysk / IMG_2322.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30939,
+      "id": "19BVyC2bev8Z4lSLUE7LrmRm-QQle_4li",
+      "title": "IMG_2315.jpeg",
+      "size": 6049238,
+      "size_str": "5.8 MB",
+      "path": "Mój dysk / IMG_2315.jpeg",
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 30940,
+      "id": "1bn7lMETLw24vY9k5q0di3drJ7NeiwpIz",
+      "title": "IMG_2323.jpeg",
+      "size": 5414818,
+      "size_str": "5.2 MB",
+      "path": "Mój dysk / IMG_2323.jpeg",
+      "last_viewed": "2026-05-24 10:16",
+      "last_modified": "2026-04-14 17:38",
+      "reasons": [
+        "Pojedyncze surowe zdjęcie w głównym katalogu (do przeniesienia/usunięcia)"
+      ]
+    },
+    {
+      "sid": 31056,
+      "id": "1AJ5eeHd7dxeSXM8UVE8RjNB-hypjUMn_WtkQGz5MPTo",
+      "title": "zrób z tego tabelę - w kolumnach fazy życia, a w....gdoc",
+      "size": 4759,
+      "size_str": "4.6 KB",
+      "path": "Mój dysk / zrób z tego tabelę - w kolumnach fazy życia, a w....gdoc",
+      "last_viewed": "2026-09-11 19:29",
+      "last_modified": "2026-05-22 22:30",
+      "reasons": [
+        "Tymczasowy zrzut / prompt eksportowany z czatu LLM do root"
+      ]
+    },
+    {
+      "sid": 31108,
+      "id": "1Nuu6F8XYSVGZaJ7XIncyxGVlNiMaR_xNW7XnuO8hQp8",
+      "title": "Serio? Nie możesz wyciągnąć całej tej konwersacji ....gdoc",
+      "size": 5239,
+      "size_str": "5.1 KB",
+      "path": "Mój dysk / Serio? Nie możesz wyciągnąć całej tej konwersacji ....gdoc",
+      "last_viewed": "2026-06-04 19:40",
+      "last_modified": "2026-06-04 19:40",
+      "reasons": [
+        "Tymczasowy zrzut / prompt eksportowany z czatu LLM do root"
+      ]
+    },
+    {
+      "sid": 31109,
+      "id": "17Qadwa2hm4E_BDrCvuRai-X2bn2RzSeDUpuM5PTW7xE",
+      "title": "Super, dodaj jeszcze do dokumentu kartę z całą tą ....gdoc",
+      "size": 3663,
+      "size_str": "3.6 KB",
+      "path": "Mój dysk / Super, dodaj jeszcze do dokumentu kartę z całą tą ....gdoc",
+      "last_viewed": "2026-06-04 19:37",
+      "last_modified": "2026-06-04 19:37",
+      "reasons": [
+        "Tymczasowy zrzut / prompt eksportowany z czatu LLM do root"
+      ]
+    },
+    {
+      "sid": 31110,
+      "id": "1tUKJGNy6aeF6pFyfloOCIloDgWguEtUc3Gv5bmv-V-g",
+      "title": "Dokument bez tytułu.gdoc",
+      "size": 1787,
+      "size_str": "1.7 KB",
+      "path": "Mój dysk / Dokument bez tytułu.gdoc",
+      "last_viewed": "2026-06-05 00:12",
+      "last_modified": "2026-06-05 00:12",
+      "reasons": [
+        "Plik bez tytułu (prawdopodobnie pusty/porzucony szkic)"
+      ]
+    },
+    {
+      "sid": 31194,
+      "id": "1w6Bh5-qb0gtCHVmCVlbxO-1DbNpXEMn0c2RFX_Ypy_s",
+      "title": "Arkusz kalkulacyjny bez tytułu.gsheet",
+      "size": 43094,
+      "size_str": "42.1 KB",
+      "path": "Mój dysk / Arkusz kalkulacyjny bez tytułu.gsheet",
+      "last_viewed": "2026-06-22 21:38",
+      "last_modified": "2026-06-21 22:26",
+      "reasons": [
+        "Plik bez tytułu (prawdopodobnie pusty/porzucony szkic)"
+      ]
+    },
+    {
+      "sid": 31195,
+      "id": "1d45285JMwpOSO_BkQJ4JbLZr9iD879bp",
+      "title": "home_budget_categorized_2026-06-21 (1).csv",
+      "size": 62712,
+      "size_str": "61.2 KB",
+      "path": "Mój dysk / home_budget_categorized_2026-06-21 (1).csv",
+      "last_viewed": "2026-06-21 17:44",
+      "last_modified": "2026-06-21 17:43",
+      "reasons": [
+        "Prawdopodobna duplikacja z sufiksem (1)/(2)"
+      ]
+    },
+    {
+      "sid": 31237,
+      "id": "1J0FOc2lha88y3UMFzB2ja7y92upOXeSn2STxkkmCALo",
+      "title": "dobrze, biorąc pod uwagę te kryteria przygotuj mi....gsheet",
+      "size": 2036,
+      "size_str": "2.0 KB",
+      "path": "Mój dysk / dobrze, biorąc pod uwagę te kryteria przygotuj mi....gsheet",
+      "last_viewed": "2026-07-19 11:13",
+      "last_modified": "2026-07-19 11:13",
+      "reasons": [
+        "Tymczasowy zrzut / prompt eksportowany z czatu LLM do root"
+      ]
+    },
+    {
+      "sid": 31409,
+      "id": "1gZpq3HkCV5oTg-uilCoYFyUyfHLESNIsdbLf4BIDGgg",
+      "title": "Dokument bez tytułu.gdoc",
+      "size": 2879,
+      "size_str": "2.8 KB",
+      "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 04 Michał / 05 Tenis / Dokument bez tytułu.gdoc",
+      "last_viewed": "2026-07-23 19:45",
+      "last_modified": "2026-07-23 19:45",
+      "reasons": [
+        "Plik bez tytułu (prawdopodobnie pusty/porzucony szkic)"
+      ]
+    },
+    {
+      "sid": 31765,
+      "id": "1flWFasQyUlYxBjtqImb0u9gBbyF_K_X6",
+      "title": "20171122_200447.mp4",
+      "size": 276454005,
+      "size_str": "263.6 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171122_200447.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-11-22 19:07",
+      "reasons": [
+        "Bardzo duży stary plik (263.6 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31771,
+      "id": "1H2x4kpBYXqdJpm5Ve590qpSZTE8vZQqN",
+      "title": "20171123_195243.mp4",
+      "size": 288566234,
+      "size_str": "275.2 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171123_195243.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-11-23 18:55",
+      "reasons": [
+        "Bardzo duży stary plik (275.2 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31779,
+      "id": "17iKBendXKLfQCp8hcUJzMp6py_9yWxBS",
+      "title": "20171209_144852.mp4",
+      "size": 185955558,
+      "size_str": "177.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171209_144852.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-12-09 13:50",
+      "reasons": [
+        "Bardzo duży stary plik (177.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31804,
+      "id": "1Rb7eiVozdRcugzKFsU7HFUBxrI6jXDmt",
+      "title": "20171211_183846.mp4",
+      "size": 112707272,
+      "size_str": "107.5 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171211_183846.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-12-11 17:39",
+      "reasons": [
+        "Bardzo duży stary plik (107.5 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31839,
+      "id": "1juHoVDH3ayXnwmFVWJUUXfbtgTD1MzhP",
+      "title": "20171219_160930.mp4",
+      "size": 889560444,
+      "size_str": "848.4 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171219_160930.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-12-19 15:16",
+      "reasons": [
+        "Bardzo duży stary plik (848.4 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31840,
+      "id": "1kt7JjxKs86KCq5C5ehNBjp6j_45mNJyi",
+      "title": "20171219_161641.mp4",
+      "size": 270409200,
+      "size_str": "257.9 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171219_161641.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-12-19 15:18",
+      "reasons": [
+        "Bardzo duży stary plik (257.9 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31841,
+      "id": "1xVoad7dtLLzW9QmyTwC4999cuUg8o96R",
+      "title": "20171219_161913.mp4",
+      "size": 217453340,
+      "size_str": "207.4 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171219_161913.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-12-19 15:20",
+      "reasons": [
+        "Bardzo duży stary plik (207.4 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31842,
+      "id": "1VXjC1knG6hj_H9izw-orBvpIW6m8ZRri",
+      "title": "20171219_162809.mp4",
+      "size": 284445083,
+      "size_str": "271.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171219_162809.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-12-19 15:30",
+      "reasons": [
+        "Bardzo duży stary plik (271.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31843,
+      "id": "156wdXVfXC2qq5bBCxLrFh5xVP5oPrMbh",
+      "title": "20171219_163035.mp4",
+      "size": 437368657,
+      "size_str": "417.1 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171219_163035.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-12-19 15:34",
+      "reasons": [
+        "Bardzo duży stary plik (417.1 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31920,
+      "id": "1Y8xSDCz3qxDuIOyh3MDKcBj-q4LRiyZc",
+      "title": "20171224_170535.mp4",
+      "size": 166337227,
+      "size_str": "158.6 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171224_170535.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-12-24 16:06",
+      "reasons": [
+        "Bardzo duży stary plik (158.6 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31921,
+      "id": "18-f6Use3zmOG2YwzcKHnuXWJ3i8YOgl5",
+      "title": "20171224_170720.mp4",
+      "size": 140619596,
+      "size_str": "134.1 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171224_170720.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-12-24 16:08",
+      "reasons": [
+        "Bardzo duży stary plik (134.1 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 31962,
+      "id": "1qtCuCOBylOIAgnoqLNWDlP8-tTHQlDlZ",
+      "title": "20171225_201535.mp4",
+      "size": 124586425,
+      "size_str": "118.8 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171225_201535.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-12-25 19:16",
+      "reasons": [
+        "Bardzo duży stary plik (118.8 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32047,
+      "id": "1gExPPcay5NkQfKxcpvbY9OVXct8EWugD",
+      "title": "20180111_191048.mp4",
+      "size": 127062647,
+      "size_str": "121.2 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20180111_191048.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-01-11 18:11",
+      "reasons": [
+        "Bardzo duży stary plik (121.2 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32048,
+      "id": "1XZUFeu8S5a8B1RfrXhAyYV9_hqDjpx8j",
+      "title": "20180111_191201.mp4",
+      "size": 207144939,
+      "size_str": "197.5 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20180111_191201.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-01-11 18:13",
+      "reasons": [
+        "Bardzo duży stary plik (197.5 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32093,
+      "id": "1EAxQbXHfqaUvWNlMRWKvoMWX3V4M6-oB",
+      "title": "20180120_190721.mp4",
+      "size": 106699186,
+      "size_str": "101.8 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20180120_190721.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-01-20 18:08",
+      "reasons": [
+        "Bardzo duży stary plik (101.8 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32314,
+      "id": "1Bf2pIlITqchilcwFdr3OTVoIyQQdtNhY",
+      "title": "20180225_150331.mp4",
+      "size": 173605353,
+      "size_str": "165.6 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20180225_150331.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-02-25 14:04",
+      "reasons": [
+        "Bardzo duży stary plik (165.6 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32336,
+      "id": "1sz6YeOqOVeiFZN6OOkBfRHEAX4awZUO7",
+      "title": "20180306_114115.mp4",
+      "size": 296735769,
+      "size_str": "283.0 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20180306_114115.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-03-06 10:43",
+      "reasons": [
+        "Bardzo duży stary plik (283.0 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32620,
+      "id": "1yy8LiNWTTjRGA1OfgzlohWHF6O0mxvx3",
+      "title": "20180628_183410.mp4",
+      "size": 174486966,
+      "size_str": "166.4 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180628_183410.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-06-28 18:36",
+      "reasons": [
+        "Bardzo duży stary plik (166.4 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32701,
+      "id": "14-nN26CZXqytoG2GjgfCaRA_3kt466Gk",
+      "title": "20180731_102433.mp4",
+      "size": 161062807,
+      "size_str": "153.6 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180731_102433.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-07-31 10:25",
+      "reasons": [
+        "Bardzo duży stary plik (153.6 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32735,
+      "id": "1MPh-dbOMP6EOlaSmSDeSLW_iYAtrzeKX",
+      "title": "20180802_120937.mp4",
+      "size": 128070331,
+      "size_str": "122.1 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180802_120937.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-08-02 12:10",
+      "reasons": [
+        "Bardzo duży stary plik (122.1 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32744,
+      "id": "1-7vh8IdWOnI1lJy0-PWWKFwLGuZlTzsX",
+      "title": "20180802_184820.mp4",
+      "size": 188068737,
+      "size_str": "179.4 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180802_184820.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-08-02 18:49",
+      "reasons": [
+        "Bardzo duży stary plik (179.4 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32752,
+      "id": "1AlqrFRqZ5ESONHyh4vGvqP0WqE2ZBG_x",
+      "title": "20180802_190106.mp4",
+      "size": 243592308,
+      "size_str": "232.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180802_190106.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-08-02 19:03",
+      "reasons": [
+        "Bardzo duży stary plik (232.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32758,
+      "id": "1cerOVk10FGTKOaTWOhzkHV8p7lblE8fT",
+      "title": "20180802_190323.mp4",
+      "size": 369315320,
+      "size_str": "352.2 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180802_190323.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-08-02 19:06",
+      "reasons": [
+        "Bardzo duży stary plik (352.2 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32884,
+      "id": "1lo3sIboThrNaGy6RMCRSQBPPcsdgLRWl",
+      "title": "20180901_181605.mp4",
+      "size": 161257050,
+      "size_str": "153.8 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180901_181605.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-09-01 18:17",
+      "reasons": [
+        "Bardzo duży stary plik (153.8 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32920,
+      "id": "16LtaYHkTJoBNQ-cGGkHrAQdQIKhYEh13",
+      "title": "20180916_110408.mp4",
+      "size": 119990912,
+      "size_str": "114.4 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180916_110408.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-09-16 11:05",
+      "reasons": [
+        "Bardzo duży stary plik (114.4 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 32975,
+      "id": "15bbLSlcWvxeXjhrNGgQo7hZ4j-9hlPtR",
+      "title": "20181003_184535.mp4",
+      "size": 137745760,
+      "size_str": "131.4 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20181003_184535.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-10-03 18:46",
+      "reasons": [
+        "Bardzo duży stary plik (131.4 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33013,
+      "id": "1u1BMhfTQFXfqdV7LVi99Gyx6BfWp1wpl",
+      "title": "20181014_140241.mp4",
+      "size": 182321379,
+      "size_str": "173.9 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20181014_140241.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-10-14 14:04",
+      "reasons": [
+        "Bardzo duży stary plik (173.9 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33018,
+      "id": "1u6KTScKSx1lfMOnOBw6PtTGR2Q1y1X_K",
+      "title": "20181016_183114.mp4",
+      "size": 149161085,
+      "size_str": "142.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20181016_183114.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-10-16 18:32",
+      "reasons": [
+        "Bardzo duży stary plik (142.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33049,
+      "id": "15nht2MNPMAmosnl9XLLvv-fmwWKexuOU",
+      "title": "20181020_133122.mp4",
+      "size": 392029461,
+      "size_str": "373.9 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20181020_133122.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-10-20 13:34",
+      "reasons": [
+        "Bardzo duży stary plik (373.9 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33284,
+      "id": "1-1Pw0atfGcmUhtM8057eOols_tReapih",
+      "title": "20181202_200809.mp4",
+      "size": 117635973,
+      "size_str": "112.2 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20181202_200809.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2018-12-02 20:09",
+      "reasons": [
+        "Bardzo duży stary plik (112.2 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33320,
+      "id": "1pf1ADBqLBXY32OOPgmHvyP2nUpbK3vW5",
+      "title": "20161102_065243.mp4",
+      "size": 155078751,
+      "size_str": "147.9 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20161102_065243.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2016-11-02 05:54",
+      "reasons": [
+        "Bardzo duży stary plik (147.9 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33321,
+      "id": "10k0GIb0RHU6neAodpHYIosDERVVQJ9Bm",
+      "title": "20161111_153644.mp4",
+      "size": 110043702,
+      "size_str": "104.9 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20161111_153644.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2016-11-11 14:37",
+      "reasons": [
+        "Bardzo duży stary plik (104.9 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33323,
+      "id": "1k5WrG5E7VNpx7jxV4JP7bQDGcUMdtWlL",
+      "title": "20161113_135852.mp4",
+      "size": 208945073,
+      "size_str": "199.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20161113_135852.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2016-11-13 13:00",
+      "reasons": [
+        "Bardzo duży stary plik (199.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33328,
+      "id": "19bnC7PD_lOFUtFSJxH6AVTRvyLWygiC4",
+      "title": "20161223_102723.mp4",
+      "size": 112307940,
+      "size_str": "107.1 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20161223_102723.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2016-12-23 09:28",
+      "reasons": [
+        "Bardzo duży stary plik (107.1 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33329,
+      "id": "1eDzNAxUg2zgS44vrJFuFw3oSRJqO2fnN",
+      "title": "20161223_110137.mp4",
+      "size": 107754013,
+      "size_str": "102.8 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20161223_110137.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2016-12-23 10:02",
+      "reasons": [
+        "Bardzo duży stary plik (102.8 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33335,
+      "id": "1FafzaHkEXZPKogx0oj_rtmNjitkiop88",
+      "title": "20170109_184459.mp4",
+      "size": 189202408,
+      "size_str": "180.4 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170109_184459.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-01-09 17:46",
+      "reasons": [
+        "Bardzo duży stary plik (180.4 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33337,
+      "id": "1iAJRQhb6AFZCjn9pIo5arEveJph_k_z0",
+      "title": "20170127_135530.mp4",
+      "size": 174717651,
+      "size_str": "166.6 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170127_135530.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-01-27 12:56",
+      "reasons": [
+        "Bardzo duży stary plik (166.6 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33338,
+      "id": "1yceLShw7vIbtWY-RiDiq_wfMydX87aNP",
+      "title": "20170131_111357.mp4",
+      "size": 136638771,
+      "size_str": "130.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170131_111357.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-01-31 10:15",
+      "reasons": [
+        "Bardzo duży stary plik (130.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33342,
+      "id": "1KeVqktHQLJrue2DRrQmeT5-n2cB5lqM7",
+      "title": "20170308_111415.mp4",
+      "size": 193219112,
+      "size_str": "184.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170308_111415.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-03-08 10:15",
+      "reasons": [
+        "Bardzo duży stary plik (184.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33346,
+      "id": "1Vrbmzi64DgQvSyfXyL5kNglrrXg-q1yK",
+      "title": "20170318_155830.mp4",
+      "size": 112523462,
+      "size_str": "107.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170318_155830.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-03-18 14:59",
+      "reasons": [
+        "Bardzo duży stary plik (107.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33348,
+      "id": "1RGkoifwprBOj8zeRhGgeBTQWxkAnJ-CN",
+      "title": "20170323_143336.mp4",
+      "size": 295372010,
+      "size_str": "281.7 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170323_143336.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-03-23 13:36",
+      "reasons": [
+        "Bardzo duży stary plik (281.7 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33349,
+      "id": "1KGAWh38Jwgm_CEv84wZrmBXhls2wuLjP",
+      "title": "20170401_132202.mp4",
+      "size": 179058697,
+      "size_str": "170.8 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170401_132202.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-04-01 13:23",
+      "reasons": [
+        "Bardzo duży stary plik (170.8 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33451,
+      "id": "1RrRiLoXYRQsgsZ3GurFZDU7htgNWwb3k",
+      "title": "20170518_121715.mp4",
+      "size": 493754757,
+      "size_str": "470.9 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170518_121715.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-05-18 12:21",
+      "reasons": [
+        "Bardzo duży stary plik (470.9 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33475,
+      "id": "1VZ48Onb0cu6mBwHn4CHEIygwjC2F7SA8",
+      "title": "20170531_171305.mp4",
+      "size": 137909686,
+      "size_str": "131.5 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170531_171305.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-05-31 17:14",
+      "reasons": [
+        "Bardzo duży stary plik (131.5 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33476,
+      "id": "1YtbFSHfI8lydafwMJLeHsWIPk3CA0rYX",
+      "title": "20170531_180353.mp4",
+      "size": 312372389,
+      "size_str": "297.9 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170531_180353.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-05-31 18:06",
+      "reasons": [
+        "Bardzo duży stary plik (297.9 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33501,
+      "id": "1CXRK2aj8dWyK2MY5mnmqFU4yyOLznDWg",
+      "title": "20170608_111440.mp4",
+      "size": 165365573,
+      "size_str": "157.7 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170608_111440.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-06-08 11:16",
+      "reasons": [
+        "Bardzo duży stary plik (157.7 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33534,
+      "id": "1y5LxNmwr34OE2fi2W0J4mjRjmBZAOj6B",
+      "title": "20170703_185233.mp4",
+      "size": 170281142,
+      "size_str": "162.4 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170703_185233.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-07-03 18:53",
+      "reasons": [
+        "Bardzo duży stary plik (162.4 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33543,
+      "id": "1OWgpcpAshNhS6U6759NHAss_Yk9eAEDA",
+      "title": "20170710_163657.mp4",
+      "size": 140340023,
+      "size_str": "133.8 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170710_163657.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-07-10 16:38",
+      "reasons": [
+        "Bardzo duży stary plik (133.8 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33644,
+      "id": "1qY-PtXbbeCVwekXI4jNmQjiOD8DAC6b0",
+      "title": "20170731_173334.mp4",
+      "size": 273300668,
+      "size_str": "260.6 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170731_173334.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-07-31 17:35",
+      "reasons": [
+        "Bardzo duży stary plik (260.6 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33651,
+      "id": "1aUHITTzrOJNsxm0Y9KICUAdODRvI7Vvr",
+      "title": "20170803_195040.mp4",
+      "size": 303810510,
+      "size_str": "289.7 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170803_195040.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2017-08-03 19:53",
+      "reasons": [
+        "Bardzo duży stary plik (289.7 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33860,
+      "id": "19XKPgesSmXsvVgZ8SE1s_iS90KM_69hI",
+      "title": "00235.MTS",
+      "size": 183797760,
+      "size_str": "175.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00235.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 17:06",
+      "reasons": [
+        "Bardzo duży stary plik (175.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33861,
+      "id": "1RYjtr8ZI3TXAokYtwJsCZRTNuoUYUz8f",
+      "title": "00236.MTS",
+      "size": 126406656,
+      "size_str": "120.6 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00236.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 17:25",
+      "reasons": [
+        "Bardzo duży stary plik (120.6 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33862,
+      "id": "1EbNIptEAD98xvg5EdzxHhl5Shmnb-32w",
+      "title": "00237.MTS",
+      "size": 250355712,
+      "size_str": "238.8 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00237.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 17:27",
+      "reasons": [
+        "Bardzo duży stary plik (238.8 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33864,
+      "id": "1te0MytPCC_6SF1I4acG8F4Aos0YS9RbP",
+      "title": "00239.MTS",
+      "size": 135376896,
+      "size_str": "129.1 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00239.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 17:56",
+      "reasons": [
+        "Bardzo duży stary plik (129.1 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33865,
+      "id": "1GWj6KpYsUYWvHnk4dreNjZ2pXrGr6KsH",
+      "title": "00240.MTS",
+      "size": 152020992,
+      "size_str": "145.0 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00240.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 17:58",
+      "reasons": [
+        "Bardzo duży stary plik (145.0 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33867,
+      "id": "1OvTBY5b8w6Ris4Em1T83bW2AZXvk9JZY",
+      "title": "00242.MTS",
+      "size": 108152832,
+      "size_str": "103.1 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00242.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 18:04",
+      "reasons": [
+        "Bardzo duży stary plik (103.1 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33868,
+      "id": "13DAEJUEYVc4FrA-s71qikAGtplvPOKTp",
+      "title": "00243.MTS",
+      "size": 112773120,
+      "size_str": "107.5 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00243.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 18:06",
+      "reasons": [
+        "Bardzo duży stary plik (107.5 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33869,
+      "id": "1Ajv-0CymNoi2QIivEiHoSIRLFQcJpr6l",
+      "title": "00244.MTS",
+      "size": 142983168,
+      "size_str": "136.4 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00244.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 18:09",
+      "reasons": [
+        "Bardzo duży stary plik (136.4 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33870,
+      "id": "165mkmBJPTTMr7RVCX8Mrpw5VCMcZjfwe",
+      "title": "00245.MTS",
+      "size": 150472704,
+      "size_str": "143.5 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00245.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 18:58",
+      "reasons": [
+        "Bardzo duży stary plik (143.5 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33872,
+      "id": "1rKCvScDXLFE6nWtoQJR4QMbiY84umrLy",
+      "title": "00247.MTS",
+      "size": 740063232,
+      "size_str": "705.8 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00247.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 19:34",
+      "reasons": [
+        "Bardzo duży stary plik (705.8 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33873,
+      "id": "1VnrlcaGKZGOrel0CRzD5_iKb3dheoC0O",
+      "title": "00248.MTS",
+      "size": 402978816,
+      "size_str": "384.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00248.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 20:06",
+      "reasons": [
+        "Bardzo duży stary plik (384.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33877,
+      "id": "1FzopaG_EUEzBFmWW8ycY6apWaL9juhYL",
+      "title": "00252.MTS",
+      "size": 105203712,
+      "size_str": "100.3 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00252.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-01 20:16",
+      "reasons": [
+        "Bardzo duży stary plik (100.3 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33913,
+      "id": "1KwnXW6Hy2nSYFszFKK2ZVIl0pXsYkJdr",
+      "title": "00256.MTS",
+      "size": 153667584,
+      "size_str": "146.5 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00256.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-02 01:16",
+      "reasons": [
+        "Bardzo duży stary plik (146.5 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33917,
+      "id": "1J17zMSGaIBwep-th1vbcBSesj9C7x2Dh",
+      "title": "00260.MTS",
+      "size": 141398016,
+      "size_str": "134.8 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00260.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-02 01:24",
+      "reasons": [
+        "Bardzo duży stary plik (134.8 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33924,
+      "id": "1FJjNjRDSfztF7GP4K-zb3R4V8vNYpa4a",
+      "title": "00268.MTS",
+      "size": 165617664,
+      "size_str": "157.9 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00268.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-02 01:37",
+      "reasons": [
+        "Bardzo duży stary plik (157.9 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33926,
+      "id": "16fAM244ESd4OfYGsuoWvh2HGH0oKojk4",
+      "title": "00270.MTS",
+      "size": 200312832,
+      "size_str": "191.0 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00270.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-02 01:47",
+      "reasons": [
+        "Bardzo duży stary plik (191.0 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 33927,
+      "id": "1QdLmBCwMAvYq9-bqQed8k4HmcuSxqoCU",
+      "title": "00271.MTS",
+      "size": 161009664,
+      "size_str": "153.6 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00271.MTS",
+      "last_viewed": "NIGDY",
+      "last_modified": "2012-09-02 01:48",
+      "reasons": [
+        "Bardzo duży stary plik (153.6 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    },
+    {
+      "sid": 37829,
+      "id": "13OjiL-3dkmGu0vWx7MYWBwK7EXh6f2u4",
+      "title": "VID_20200726_153331.mp4",
+      "size": 136203027,
+      "size_str": "129.9 MB",
+      "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.07 / 2020.07-08 Cyrhla i Tylicz / VID_20200726_153331.mp4",
+      "last_viewed": "NIGDY",
+      "last_modified": "2020-07-26 15:33",
+      "reasons": [
+        "Bardzo duży stary plik (129.9 MB), nigdy nie otwierany, nie modyfikowany od lat"
+      ]
+    }
+  ],
+  "total_candidates_found": 263
+}
