@@ -1,0 +1,5300 @@
+{
+  "global_summary": {
+    "total_active_files": 77498,
+    "total_active_folders": 8185,
+    "owned_files": 77425,
+    "shared_with_me": 73,
+    "total_size_bytes": 286654960398,
+    "total_size_str": "267.0 GB"
+  },
+  "top_folders": [
+    {
+      "title": "01👨‍👩‍👧‍👦 Rodzina",
+      "files": 484,
+      "folders": 44,
+      "size": 5941570395,
+      "size_str": "5.5 GB",
+      "last_viewed": "2026-08-25 14:53",
+      "last_modified": "2026-07-23 19:58",
+      "never_opened_files": 330,
+      "top_mimes": [
+        [
+          "application/dicom",
+          253
+        ],
+        [
+          "application/pdf",
+          57
+        ],
+        [
+          "image/jpeg",
+          49
+        ],
+        [
+          "application/x-msdos-program",
+          42
+        ],
+        [
+          "image/png",
+          30
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "00 ‼️ Ważne dokumenty",
+          "files": 17,
+          "size_str": "26.6 MB",
+          "last_viewed": "2026-08-25 14:53",
+          "last_modified": "2025-07-14 23:32"
+        },
+        {
+          "title": "01 🤹‍♀️ Natalka",
+          "files": 317,
+          "size_str": "4.5 GB",
+          "last_viewed": "2023-10-21 05:51",
+          "last_modified": "2023-10-20 21:38"
+        },
+        {
+          "title": "02 🚸 Dzieci",
+          "files": 18,
+          "size_str": "28.7 MB",
+          "last_viewed": "2026-07-03 11:12",
+          "last_modified": "2025-05-05 09:51"
+        },
+        {
+          "title": "03 Nadia",
+          "files": 9,
+          "size_str": "12.7 MB",
+          "last_viewed": "2026-08-25 14:51",
+          "last_modified": "2026-07-23 19:58"
+        },
+        {
+          "title": "04 Michał",
+          "files": 75,
+          "size_str": "917.7 MB",
+          "last_viewed": "2026-07-23 19:56",
+          "last_modified": "2026-07-23 19:45"
+        },
+        {
+          "title": "05 Kuba",
+          "files": 24,
+          "size_str": "8.0 MB",
+          "last_viewed": "2023-01-14 19:56",
+          "last_modified": "2023-01-14 19:56"
+        },
+        {
+          "title": "10 🌲 Drzewo genealogiczne",
+          "files": 18,
+          "size_str": "11.8 MB",
+          "last_viewed": "2024-01-21 13:39",
+          "last_modified": "2024-01-21 13:39"
+        }
+      ]
+    },
+    {
+      "title": "02🏫Szkoła",
+      "files": 159,
+      "folders": 25,
+      "size": 314888286,
+      "size_str": "300.3 MB",
+      "last_viewed": "2026-09-16 07:05",
+      "last_modified": "2026-09-16 07:01",
+      "never_opened_files": 14,
+      "top_mimes": [
+        [
+          "application/pdf",
+          79
+        ],
+        [
+          "application/vnd.google-apps.document",
+          38
+        ],
+        [
+          "image/jpeg",
+          17
+        ],
+        [
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          10
+        ],
+        [
+          "video/mp4",
+          5
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "Michał",
+          "files": 72,
+          "size_str": "94.5 MB",
+          "last_viewed": "2026-09-16 07:05",
+          "last_modified": "2026-09-16 07:01"
+        },
+        {
+          "title": "Nadia",
+          "files": 85,
+          "size_str": "205.3 MB",
+          "last_viewed": "2026-09-15 08:19",
+          "last_modified": "2026-09-10 08:05"
+        }
+      ]
+    },
+    {
+      "title": "03🏥Zdrowie",
+      "files": 464,
+      "folders": 23,
+      "size": 589469777,
+      "size_str": "562.2 MB",
+      "last_viewed": "2026-09-04 09:09",
+      "last_modified": "2026-09-04 09:10",
+      "never_opened_files": 1,
+      "top_mimes": [
+        [
+          "application/dicom",
+          329
+        ],
+        [
+          "application/pdf",
+          95
+        ],
+        [
+          "application/vnd.google-apps.document",
+          12
+        ],
+        [
+          "image/jpeg",
+          8
+        ],
+        [
+          "image/png",
+          3
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "2024 - LuxMed w Roche",
+          "files": 4,
+          "size_str": "2.5 MB",
+          "last_viewed": "2024-03-11 08:48",
+          "last_modified": "2024-03-11 08:48"
+        },
+        {
+          "title": "Mama",
+          "files": 2,
+          "size_str": "1.1 MB",
+          "last_viewed": "2026-02-09 18:25",
+          "last_modified": "2026-02-09 18:25"
+        },
+        {
+          "title": "Michał",
+          "files": 30,
+          "size_str": "17.5 MB",
+          "last_viewed": "2026-09-04 09:09",
+          "last_modified": "2026-09-04 09:10"
+        },
+        {
+          "title": "Nadia",
+          "files": 24,
+          "size_str": "53.1 MB",
+          "last_viewed": "2026-08-25 14:51",
+          "last_modified": "2026-06-10 08:01"
+        },
+        {
+          "title": "Natka",
+          "files": 347,
+          "size_str": "396.5 MB",
+          "last_viewed": "2026-01-26 13:04",
+          "last_modified": "2026-01-26 12:59"
+        },
+        {
+          "title": "Pawel",
+          "files": 34,
+          "size_str": "72.2 MB",
+          "last_viewed": "2026-06-20 08:29",
+          "last_modified": "2025-12-04 08:21"
+        },
+        {
+          "title": "Terapia M.",
+          "files": 9,
+          "size_str": "7.8 MB",
+          "last_viewed": "2026-08-27 22:06",
+          "last_modified": "2026-09-03 09:30"
+        },
+        {
+          "title": "_Archiwum",
+          "files": 13,
+          "size_str": "4.5 MB",
+          "last_viewed": "2023-07-23 08:24",
+          "last_modified": "2023-07-23 08:20"
+        }
+      ]
+    },
+    {
+      "title": "05💰Finanse",
+      "files": 275,
+      "folders": 70,
+      "size": 222373570,
+      "size_str": "212.1 MB",
+      "last_viewed": "2026-09-15 19:49",
+      "last_modified": "2026-08-16 20:48",
+      "never_opened_files": 144,
+      "top_mimes": [
+        [
+          "application/pdf",
+          131
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          22
+        ],
+        [
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          22
+        ],
+        [
+          "image/png",
+          19
+        ],
+        [
+          "application/octet-stream",
+          13
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "00. Podatki",
+          "files": 167,
+          "size_str": "159.9 MB",
+          "last_viewed": "2026-05-28 14:23",
+          "last_modified": "2026-05-28 14:22"
+        },
+        {
+          "title": "01. Budżet",
+          "files": 28,
+          "size_str": "38.5 MB",
+          "last_viewed": "2026-06-28 22:32",
+          "last_modified": "2026-06-28 22:31"
+        },
+        {
+          "title": "97. Emerytura",
+          "files": 5,
+          "size_str": "2.7 MB",
+          "last_viewed": "2025-09-22 08:36",
+          "last_modified": "2025-09-22 08:36"
+        },
+        {
+          "title": "98. Kredyty",
+          "files": 4,
+          "size_str": "945.8 KB",
+          "last_viewed": "2025-04-06 11:19",
+          "last_modified": "2025-04-06 11:19"
+        },
+        {
+          "title": "99. Archiwum",
+          "files": 68,
+          "size_str": "9.7 MB",
+          "last_viewed": "2024-09-13 15:28",
+          "last_modified": "2024-09-13 15:31"
+        }
+      ]
+    },
+    {
+      "title": "06🏠Mieszkanie",
+      "files": 1162,
+      "folders": 133,
+      "size": 830236493,
+      "size_str": "791.8 MB",
+      "last_viewed": "2026-09-04 21:17",
+      "last_modified": "2026-09-04 21:19",
+      "never_opened_files": 894,
+      "top_mimes": [
+        [
+          "image/jpeg",
+          486
+        ],
+        [
+          "application/pdf",
+          156
+        ],
+        [
+          "application/x-javascript",
+          105
+        ],
+        [
+          "text/html",
+          84
+        ],
+        [
+          "image/png",
+          80
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "00. Archiwum",
+          "files": 243,
+          "size_str": "417.7 MB",
+          "last_viewed": "2025-03-08 14:12",
+          "last_modified": "2022-05-25 12:20"
+        },
+        {
+          "title": "05. Pod Strzechą 7",
+          "files": 900,
+          "size_str": "354.8 MB",
+          "last_viewed": "2026-08-24 08:18",
+          "last_modified": "2026-08-08 16:24"
+        },
+        {
+          "title": "06. Działka   Dom",
+          "files": 2,
+          "size_str": "19.1 MB",
+          "last_viewed": "2025-02-07 19:07",
+          "last_modified": "2024-08-05 18:13"
+        },
+        {
+          "title": "10. Sieć",
+          "files": 15,
+          "size_str": "137.3 KB",
+          "last_viewed": "2022-07-03 21:21",
+          "last_modified": "2022-07-03 21:21"
+        },
+        {
+          "title": "90. Kupno mieszkania",
+          "files": 1,
+          "size_str": "2.9 KB",
+          "last_viewed": "2026-07-26 17:45",
+          "last_modified": "2026-07-26 17:45"
+        }
+      ]
+    },
+    {
+      "title": "07🏢Praca",
+      "files": 86,
+      "folders": 14,
+      "size": 194166858,
+      "size_str": "185.2 MB",
+      "last_viewed": "2026-07-19 09:17",
+      "last_modified": "2026-06-16 23:58",
+      "never_opened_files": 20,
+      "top_mimes": [
+        [
+          "application/pdf",
+          39
+        ],
+        [
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          20
+        ],
+        [
+          "application/vnd.google-apps.document",
+          7
+        ],
+        [
+          "application/msword",
+          7
+        ],
+        [
+          "image/jpeg",
+          3
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "01. Archiwum",
+          "files": 16,
+          "size_str": "2.7 MB",
+          "last_viewed": "2026-01-14 21:38",
+          "last_modified": "2026-01-14 21:38"
+        },
+        {
+          "title": "02. Świadectwa pracy",
+          "files": 4,
+          "size_str": "1.4 MB",
+          "last_viewed": "2025-06-10 11:26",
+          "last_modified": "2025-06-10 11:26"
+        },
+        {
+          "title": "2015",
+          "files": 15,
+          "size_str": "805.1 KB",
+          "last_viewed": "2023-06-19 14:13",
+          "last_modified": "2018-06-28 22:08"
+        },
+        {
+          "title": "2018 - Roche",
+          "files": 29,
+          "size_str": "88.1 MB",
+          "last_viewed": "2025-06-10 11:25",
+          "last_modified": "2025-06-10 11:16"
+        },
+        {
+          "title": "2025 - Allegro",
+          "files": 8,
+          "size_str": "33.4 MB",
+          "last_viewed": "2026-03-24 13:29",
+          "last_modified": "2026-03-24 13:36"
+        },
+        {
+          "title": "2026 - HSBC",
+          "files": 2,
+          "size_str": "545.2 KB",
+          "last_viewed": "2026-01-14 21:55",
+          "last_modified": "2026-01-14 21:55"
+        },
+        {
+          "title": "Szkolenia",
+          "files": 1,
+          "size_str": "51.0 MB",
+          "last_viewed": "2022-01-04 18:36",
+          "last_modified": "2022-01-04 18:36"
+        }
+      ]
+    },
+    {
+      "title": "08🏖️Wakacje",
+      "files": 122,
+      "folders": 32,
+      "size": 45848552,
+      "size_str": "43.7 MB",
+      "last_viewed": "2026-09-16 17:44",
+      "last_modified": "2026-09-16 17:44",
+      "never_opened_files": 3,
+      "top_mimes": [
+        [
+          "application/pdf",
+          83
+        ],
+        [
+          "application/vnd.google-apps.document",
+          16
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          13
+        ],
+        [
+          "image/png",
+          4
+        ],
+        [
+          "application/vnd.google-apps.shortcut",
+          4
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "2022",
+          "files": 20,
+          "size_str": "4.4 MB",
+          "last_viewed": "2024-07-22 10:51",
+          "last_modified": "2022-07-09 12:22"
+        },
+        {
+          "title": "2023",
+          "files": 19,
+          "size_str": "6.5 MB",
+          "last_viewed": "2026-02-07 22:57",
+          "last_modified": "2023-10-03 22:45"
+        },
+        {
+          "title": "2024",
+          "files": 12,
+          "size_str": "1.6 MB",
+          "last_viewed": "2025-08-05 20:54",
+          "last_modified": "2024-09-23 09:32"
+        },
+        {
+          "title": "2025",
+          "files": 36,
+          "size_str": "16.5 MB",
+          "last_viewed": "2026-07-17 23:16",
+          "last_modified": "2026-03-07 21:35"
+        },
+        {
+          "title": "2026",
+          "files": 33,
+          "size_str": "14.7 MB",
+          "last_viewed": "2026-09-16 17:44",
+          "last_modified": "2026-09-16 17:44"
+        },
+        {
+          "title": "2027.02 - Narty",
+          "files": 2,
+          "size_str": "90.0 KB",
+          "last_viewed": "2026-09-15 19:42",
+          "last_modified": "2026-09-09 10:50"
+        }
+      ]
+    },
+    {
+      "title": "09🚗Samochód",
+      "files": 168,
+      "folders": 27,
+      "size": 366071171,
+      "size_str": "349.1 MB",
+      "last_viewed": "2026-09-07 18:51",
+      "last_modified": "2026-07-29 22:00",
+      "never_opened_files": 50,
+      "top_mimes": [
+        [
+          "image/jpeg",
+          81
+        ],
+        [
+          "application/pdf",
+          58
+        ],
+        [
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          8
+        ],
+        [
+          "application/vnd.google-apps.document",
+          6
+        ],
+        [
+          "image/png",
+          6
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "#Archive",
+          "files": 124,
+          "size_str": "229.2 MB",
+          "last_viewed": "2024-09-26 10:48",
+          "last_modified": "2023-10-12 20:21"
+        },
+        {
+          "title": "2023 - Toyota Corolla",
+          "files": 43,
+          "size_str": "118.3 MB",
+          "last_viewed": "2026-09-07 18:51",
+          "last_modified": "2026-07-29 22:00"
+        }
+      ]
+    },
+    {
+      "title": "10 ☂️ Ubezpieczenie",
+      "files": 12,
+      "folders": 10,
+      "size": 19197898,
+      "size_str": "18.3 MB",
+      "last_viewed": "2026-07-29 21:59",
+      "last_modified": "2026-07-29 21:59",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/pdf",
+          12
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "02 Toyota Corolla - ubezpieczenie",
+          "files": 0,
+          "size_str": "0.0 B",
+          "last_viewed": "NIGDY",
+          "last_modified": "NIGDY"
+        },
+        {
+          "title": "20. Mieszkanie Pod Strzechą Ubezpieczenie",
+          "files": 0,
+          "size_str": "0.0 B",
+          "last_viewed": "NIGDY",
+          "last_modified": "NIGDY"
+        },
+        {
+          "title": "2025 Słowacja Natalki",
+          "files": 2,
+          "size_str": "2.9 MB",
+          "last_viewed": "2025-08-27 10:10",
+          "last_modified": "2025-08-27 10:10"
+        },
+        {
+          "title": "NNW Nadii i Michasia",
+          "files": 5,
+          "size_str": "6.0 MB",
+          "last_viewed": "2025-08-27 10:10",
+          "last_modified": "2025-08-27 10:10"
+        },
+        {
+          "title": "VW Golf - Opole",
+          "files": 5,
+          "size_str": "9.3 MB",
+          "last_viewed": "2026-07-29 21:59",
+          "last_modified": "2026-07-29 21:59"
+        }
+      ]
+    },
+    {
+      "title": "11. Obsydian",
+      "files": 0,
+      "folders": 0,
+      "size": 0,
+      "size_str": "0.0 B",
+      "last_viewed": "NIGDY",
+      "last_modified": "NIGDY",
+      "never_opened_files": 0,
+      "top_mimes": [],
+      "subfolders": []
+    },
+    {
+      "title": "15🏡Lewickie",
+      "files": 46,
+      "folders": 12,
+      "size": 630000398,
+      "size_str": "600.8 MB",
+      "last_viewed": "2026-08-22 17:18",
+      "last_modified": "2026-08-22 17:18",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/pdf",
+          22
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          10
+        ],
+        [
+          "application/vnd.google-apps.document",
+          6
+        ],
+        [
+          "image/jpeg",
+          4
+        ],
+        [
+          "video/mp4",
+          2
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "00. Eksploatacja domu w Lewickich",
+          "files": 4,
+          "size_str": "525.5 MB",
+          "last_viewed": "2023-03-18 17:30",
+          "last_modified": "2023-03-18 17:30"
+        },
+        {
+          "title": "01. Podział działki w Lewickich",
+          "files": 22,
+          "size_str": "3.0 MB",
+          "last_viewed": "2026-08-22 17:06",
+          "last_modified": "2021-09-17 21:27"
+        },
+        {
+          "title": "2025-03 - Plus - abonament",
+          "files": 8,
+          "size_str": "67.2 MB",
+          "last_viewed": "2025-03-08 14:47",
+          "last_modified": "2025-03-08 14:47"
+        },
+        {
+          "title": "2026-01-03 - Plus - abonament",
+          "files": 4,
+          "size_str": "3.4 MB",
+          "last_viewed": "2026-01-03 19:19",
+          "last_modified": "2026-01-03 19:18"
+        }
+      ]
+    },
+    {
+      "title": "16🏡Pokój",
+      "files": 24,
+      "folders": 4,
+      "size": 27436429,
+      "size_str": "26.2 MB",
+      "last_viewed": "2026-04-08 19:19",
+      "last_modified": "2026-04-07 22:16",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "text/csv",
+          19
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          2
+        ],
+        [
+          "application/octet-stream",
+          1
+        ],
+        [
+          "text/x-sql",
+          1
+        ],
+        [
+          "application/vnd.google-apps.document",
+          1
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "Energia Elektryczna",
+          "files": 23,
+          "size_str": "26.2 MB",
+          "last_viewed": "2026-04-08 19:19",
+          "last_modified": "2026-04-07 22:16"
+        }
+      ]
+    },
+    {
+      "title": "20📚 ebooks + audobooks",
+      "files": 74,
+      "folders": 2,
+      "size": 1266159733,
+      "size_str": "1.2 GB",
+      "last_viewed": "2024-07-27 20:34",
+      "last_modified": "2024-07-27 20:34",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "audio/mpeg",
+          65
+        ],
+        [
+          "application/epub+zip",
+          3
+        ],
+        [
+          "application/pdf",
+          2
+        ],
+        [
+          "application/octet-stream",
+          2
+        ],
+        [
+          "application/x-zip",
+          1
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "03. Math",
+          "files": 2,
+          "size_str": "8.5 MB",
+          "last_viewed": "2024-07-27 20:34",
+          "last_modified": "2024-07-27 20:34"
+        },
+        {
+          "title": "sila-komunikacji-charles-duhigg-ebookpoint",
+          "files": 65,
+          "size_str": "565.8 MB",
+          "last_viewed": "2024-06-10 10:36",
+          "last_modified": "2024-06-10 10:36"
+        }
+      ]
+    },
+    {
+      "title": "25📄 Paweł - dokumenty",
+      "files": 7586,
+      "folders": 1468,
+      "size": 8801228180,
+      "size_str": "8.2 GB",
+      "last_viewed": "2025-09-25 19:55",
+      "last_modified": "2025-09-25 19:54",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/octet-stream",
+          2025
+        ],
+        [
+          "text/x-sql",
+          1712
+        ],
+        [
+          "text/xml",
+          1093
+        ],
+        [
+          "application/vnd.google-apps.document",
+          827
+        ],
+        [
+          "application/pdf",
+          311
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "00. Michaś",
+          "files": 8,
+          "size_str": "3.2 MB",
+          "last_viewed": "2025-05-14 10:04",
+          "last_modified": "2025-09-25 19:54"
+        },
+        {
+          "title": "00. Nadia",
+          "files": 39,
+          "size_str": "3.1 GB",
+          "last_viewed": "2025-09-25 19:55",
+          "last_modified": "2021-10-10 13:19"
+        },
+        {
+          "title": "01. Natalka",
+          "files": 151,
+          "size_str": "165.4 MB",
+          "last_viewed": "2021-10-17 12:42",
+          "last_modified": "2021-10-10 13:58"
+        },
+        {
+          "title": "02. Finanse",
+          "files": 76,
+          "size_str": "44.8 MB",
+          "last_viewed": "2023-06-19 14:17",
+          "last_modified": "2021-10-10 13:24"
+        },
+        {
+          "title": "03. NFZ",
+          "files": 4,
+          "size_str": "310.7 KB",
+          "last_viewed": "2021-10-10 13:19",
+          "last_modified": "2021-10-10 13:19"
+        },
+        {
+          "title": "04. CV",
+          "files": 10,
+          "size_str": "9.5 MB",
+          "last_viewed": "2021-10-10 13:59",
+          "last_modified": "2021-10-10 13:19"
+        },
+        {
+          "title": "05. DWH",
+          "files": 835,
+          "size_str": "762.7 MB",
+          "last_viewed": "2021-10-10 14:09",
+          "last_modified": "2021-10-10 14:09"
+        },
+        {
+          "title": "05. Samochód",
+          "files": 50,
+          "size_str": "30.5 MB",
+          "last_viewed": "2021-10-10 14:10",
+          "last_modified": "2021-10-10 14:10"
+        },
+        {
+          "title": "06. Praca",
+          "files": 5416,
+          "size_str": "1.1 GB",
+          "last_viewed": "2021-10-10 14:37",
+          "last_modified": "2021-10-10 14:24"
+        },
+        {
+          "title": "11. Instrukcje obsługi",
+          "files": 160,
+          "size_str": "231.5 MB",
+          "last_viewed": "2021-10-10 14:39",
+          "last_modified": "2021-10-10 13:19"
+        },
+        {
+          "title": "50. Zdrowie",
+          "files": 705,
+          "size_str": "378.3 MB",
+          "last_viewed": "2024-02-05 12:47",
+          "last_modified": "2021-10-10 14:40"
+        },
+        {
+          "title": "90. SVN Repo",
+          "files": 123,
+          "size_str": "544.2 KB",
+          "last_viewed": "2021-10-10 13:37",
+          "last_modified": "2021-10-10 13:21"
+        },
+        {
+          "title": "96. Studia",
+          "files": 1,
+          "size_str": "2.4 GB",
+          "last_viewed": "2021-11-19 21:26",
+          "last_modified": "2009-12-04 23:59"
+        }
+      ]
+    },
+    {
+      "title": "85🏃 Bieganie",
+      "files": 23,
+      "folders": 7,
+      "size": 22070347,
+      "size_str": "21.0 MB",
+      "last_viewed": "2026-06-19 06:38",
+      "last_modified": "2026-04-28 22:42",
+      "never_opened_files": 2,
+      "top_mimes": [
+        [
+          "application/pdf",
+          10
+        ],
+        [
+          "image/jpeg",
+          4
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          3
+        ],
+        [
+          "image/png",
+          3
+        ],
+        [
+          "text/csv",
+          2
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "2018",
+          "files": 3,
+          "size_str": "1.5 MB",
+          "last_viewed": "2025-06-08 11:07",
+          "last_modified": "2018-09-02 06:31"
+        },
+        {
+          "title": "2019",
+          "files": 7,
+          "size_str": "1.3 MB",
+          "last_viewed": "2026-06-19 06:34",
+          "last_modified": "2019-06-15 21:30"
+        },
+        {
+          "title": "2022",
+          "files": 2,
+          "size_str": "597.1 KB",
+          "last_viewed": "2026-06-19 06:35",
+          "last_modified": "2024-06-23 11:58"
+        },
+        {
+          "title": "2023",
+          "files": 1,
+          "size_str": "968.0 KB",
+          "last_viewed": "2026-06-19 06:38",
+          "last_modified": "2024-06-23 12:00"
+        },
+        {
+          "title": "2024",
+          "files": 1,
+          "size_str": "6.7 MB",
+          "last_viewed": "2025-06-08 11:05",
+          "last_modified": "2024-06-23 12:01"
+        },
+        {
+          "title": "2025",
+          "files": 3,
+          "size_str": "436.2 KB",
+          "last_viewed": "2026-06-19 06:35",
+          "last_modified": "2026-04-05 20:46"
+        }
+      ]
+    },
+    {
+      "title": "88📸Zdjęcia",
+      "files": 30958,
+      "folders": 538,
+      "size": 204050528399,
+      "size_str": "190.0 GB",
+      "last_viewed": "2026-08-07 21:07",
+      "last_modified": "2025-09-16 21:01",
+      "never_opened_files": 26915,
+      "top_mimes": [
+        [
+          "image/jpeg",
+          29492
+        ],
+        [
+          "video/mp4",
+          1167
+        ],
+        [
+          "application/octet-stream",
+          90
+        ],
+        [
+          "video/x-msvideo",
+          66
+        ],
+        [
+          "image/heif",
+          46
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "#01 Nadia",
+          "files": 4,
+          "size_str": "1.8 MB",
+          "last_viewed": "2025-09-16 21:04",
+          "last_modified": "2025-09-16 21:01"
+        },
+        {
+          "title": "#02 Michałek",
+          "files": 2,
+          "size_str": "7.2 MB",
+          "last_viewed": "2025-09-16 21:06",
+          "last_modified": "2025-09-01 22:53"
+        },
+        {
+          "title": "#Natalka",
+          "files": 2,
+          "size_str": "3.9 MB",
+          "last_viewed": "2023-01-02 16:09",
+          "last_modified": "2019-08-10 10:22"
+        },
+        {
+          "title": "#Paweł",
+          "files": 12,
+          "size_str": "19.8 MB",
+          "last_viewed": "2025-06-03 08:01",
+          "last_modified": "2025-06-02 22:27"
+        },
+        {
+          "title": "0000 - Eksploatacja domu w Lewickich",
+          "files": 2,
+          "size_str": "523.7 MB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2019-12-25 20:10"
+        },
+        {
+          "title": "0001 - Temp",
+          "files": 3883,
+          "size_str": "46.2 GB",
+          "last_viewed": "2021-01-21 22:58",
+          "last_modified": "2020-07-04 15:18"
+        },
+        {
+          "title": "2005",
+          "files": 8,
+          "size_str": "1.5 MB",
+          "last_viewed": "2023-01-21 22:29",
+          "last_modified": "2014-04-26 07:47"
+        },
+        {
+          "title": "2006",
+          "files": 6,
+          "size_str": "7.3 MB",
+          "last_viewed": "2023-01-21 22:29",
+          "last_modified": "2009-12-06 01:02"
+        },
+        {
+          "title": "2007",
+          "files": 546,
+          "size_str": "516.9 MB",
+          "last_viewed": "2023-01-21 22:35",
+          "last_modified": "2014-04-26 07:50"
+        },
+        {
+          "title": "2008",
+          "files": 969,
+          "size_str": "2.6 GB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2009-02-20 09:02"
+        },
+        {
+          "title": "2009",
+          "files": 2168,
+          "size_str": "6.1 GB",
+          "last_viewed": "2021-10-10 07:50",
+          "last_modified": "2013-06-28 13:51"
+        },
+        {
+          "title": "2010",
+          "files": 1612,
+          "size_str": "6.8 GB",
+          "last_viewed": "2021-10-10 00:30",
+          "last_modified": "2013-06-28 12:46"
+        },
+        {
+          "title": "2011",
+          "files": 2767,
+          "size_str": "6.7 GB",
+          "last_viewed": "2026-08-07 21:07",
+          "last_modified": "2014-06-16 16:34"
+        },
+        {
+          "title": "2012",
+          "files": 2962,
+          "size_str": "10.9 GB",
+          "last_viewed": "2025-05-05 20:59",
+          "last_modified": "2020-09-13 22:04"
+        },
+        {
+          "title": "2013",
+          "files": 1166,
+          "size_str": "4.7 GB",
+          "last_viewed": "2021-10-10 07:54",
+          "last_modified": "2014-04-25 18:07"
+        },
+        {
+          "title": "2013-2014 - Nadia",
+          "files": 1383,
+          "size_str": "9.3 GB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2014-04-14 22:26"
+        },
+        {
+          "title": "2014",
+          "files": 1751,
+          "size_str": "14.9 GB",
+          "last_viewed": "2020-12-16 20:31",
+          "last_modified": "2015-12-20 17:31"
+        },
+        {
+          "title": "2015",
+          "files": 669,
+          "size_str": "5.9 GB",
+          "last_viewed": "2021-10-15 15:21",
+          "last_modified": "2020-09-13 09:29"
+        },
+        {
+          "title": "2015 (1)",
+          "files": 669,
+          "size_str": "5.9 GB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2020-09-13 09:29"
+        },
+        {
+          "title": "2016",
+          "files": 1500,
+          "size_str": "10.7 GB",
+          "last_viewed": "2025-06-16 18:59",
+          "last_modified": "2018-10-21 17:48"
+        },
+        {
+          "title": "2017",
+          "files": 1984,
+          "size_str": "11.2 GB",
+          "last_viewed": "2021-10-17 09:47",
+          "last_modified": "2020-09-13 09:33"
+        },
+        {
+          "title": "2017 (1)",
+          "files": 1984,
+          "size_str": "11.2 GB",
+          "last_viewed": "2021-10-09 23:41",
+          "last_modified": "2020-09-13 09:33"
+        },
+        {
+          "title": "2018",
+          "files": 1290,
+          "size_str": "9.0 GB",
+          "last_viewed": "2021-10-10 08:14",
+          "last_modified": "2019-04-05 20:44"
+        },
+        {
+          "title": "2019",
+          "files": 2174,
+          "size_str": "10.3 GB",
+          "last_viewed": "2021-03-16 19:55",
+          "last_modified": "2021-03-15 19:09"
+        },
+        {
+          "title": "2020",
+          "files": 929,
+          "size_str": "10.5 GB",
+          "last_viewed": "2021-10-10 10:38",
+          "last_modified": "2020-11-23 21:09"
+        },
+        {
+          "title": "2021",
+          "files": 118,
+          "size_str": "5.2 GB",
+          "last_viewed": "2025-03-17 16:26",
+          "last_modified": "2021-09-10 09:56"
+        },
+        {
+          "title": "Zdjęcia do albumu",
+          "files": 392,
+          "size_str": "1002.4 MB",
+          "last_viewed": "2021-10-14 17:28",
+          "last_modified": "2021-10-12 08:09"
+        },
+        {
+          "title": "farma_dyn_gladysz",
+          "files": 5,
+          "size_str": "77.5 MB",
+          "last_viewed": "2023-01-02 16:10",
+          "last_modified": "2021-10-31 14:42"
+        }
+      ]
+    },
+    {
+      "title": "91🔑Hasła",
+      "files": 5,
+      "folders": 0,
+      "size": 86654,
+      "size_str": "84.6 KB",
+      "last_viewed": "2025-03-30 09:42",
+      "last_modified": "2025-03-30 09:42",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "text/csv",
+          3
+        ],
+        [
+          "application/octet-stream",
+          1
+        ],
+        [
+          "application/vnd.google-apps.spreadsheet",
+          1
+        ]
+      ],
+      "subfolders": []
+    },
+    {
+      "title": "92🎵 Muzyka",
+      "files": 133,
+      "folders": 3,
+      "size": 1163607502,
+      "size_str": "1.1 GB",
+      "last_viewed": "2023-11-15 13:54",
+      "last_modified": "2023-11-15 13:54",
+      "never_opened_files": 98,
+      "top_mimes": [
+        [
+          "audio/mpeg",
+          132
+        ],
+        [
+          "text/plain",
+          1
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "Astrid Lindgren - Karlsson z Dachu",
+          "files": 12,
+          "size_str": "499.0 MB",
+          "last_viewed": "2021-04-05 11:14",
+          "last_modified": "2011-11-07 13:09"
+        },
+        {
+          "title": "Opowieści na dobranoc dla młodych",
+          "files": 102,
+          "size_str": "240.7 MB",
+          "last_viewed": "2021-04-05 11:58",
+          "last_modified": "2017-09-26 13:34"
+        },
+        {
+          "title": "opowiesci-z-narnii-1-opowiesci-z-narnii-tom-1-lew-czarownica-i-stara-szafa-c-s-lewis-ebookpoint",
+          "files": 18,
+          "size_str": "369.9 MB",
+          "last_viewed": "2023-11-15 13:54",
+          "last_modified": "2023-11-15 13:54"
+        }
+      ]
+    },
+    {
+      "title": "93🎮Gry",
+      "files": 26,
+      "folders": 16,
+      "size": 70105058,
+      "size_str": "66.9 MB",
+      "last_viewed": "2024-12-14 18:14",
+      "last_modified": "2024-12-13 21:59",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/octet-stream",
+          12
+        ],
+        [
+          "application/x-gzip",
+          8
+        ],
+        [
+          "application/json",
+          2
+        ],
+        [
+          "application/x-zip",
+          1
+        ],
+        [
+          "application/zip",
+          1
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "Minecraft",
+          "files": 24,
+          "size_str": "42.7 MB",
+          "last_viewed": "2023-12-22 07:23",
+          "last_modified": "2023-01-01 08:29"
+        },
+        {
+          "title": "VCMI HoMM 3",
+          "files": 1,
+          "size_str": "23.9 MB",
+          "last_viewed": "2024-07-05 10:52",
+          "last_modified": "2024-07-05 10:52"
+        }
+      ]
+    },
+    {
+      "title": "94🧑‍💻Oprogramowanie",
+      "files": 4,
+      "folders": 2,
+      "size": 684732277,
+      "size_str": "653.0 MB",
+      "last_viewed": "2023-06-28 23:06",
+      "last_modified": "2021-06-20 20:48",
+      "never_opened_files": 3,
+      "top_mimes": [
+        [
+          "message/rfc822",
+          2
+        ],
+        [
+          "application/x-msdos-program",
+          1
+        ],
+        [
+          "application/x-iwork-keynote-sffkey",
+          1
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "01. Unreal Commander",
+          "files": 1,
+          "size_str": "1.2 KB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2017-10-28 22:48"
+        },
+        {
+          "title": "02. Virtual Pool 3",
+          "files": 3,
+          "size_str": "653.0 MB",
+          "last_viewed": "2023-06-28 23:06",
+          "last_modified": "2021-06-20 20:48"
+        }
+      ]
+    },
+    {
+      "title": "95💽Kopia zapasowa",
+      "files": 24470,
+      "folders": 3915,
+      "size": 54500762747,
+      "size_str": "50.8 GB",
+      "last_viewed": "2026-08-07 21:07",
+      "last_modified": "2025-09-25 19:55",
+      "never_opened_files": 1,
+      "top_mimes": [
+        [
+          "image/jpeg",
+          5345
+        ],
+        [
+          "application/octet-stream",
+          4829
+        ],
+        [
+          "text/x-sql",
+          4737
+        ],
+        [
+          "text/xml",
+          2516
+        ],
+        [
+          "text/plain",
+          1131
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "20130629 - nuvi 2595",
+          "files": 31,
+          "size_str": "17.2 MB",
+          "last_viewed": "2021-10-14 23:06",
+          "last_modified": "2014-01-22 17:47"
+        },
+        {
+          "title": "20130630 - thompson twg870",
+          "files": 1,
+          "size_str": "16.5 KB",
+          "last_viewed": "2021-10-14 23:08",
+          "last_modified": "2013-06-30 14:51"
+        },
+        {
+          "title": "20130817 - DNB",
+          "files": 2972,
+          "size_str": "1.2 GB",
+          "last_viewed": "2026-03-23 09:01",
+          "last_modified": "2013-08-03 06:47"
+        },
+        {
+          "title": "20151229 - HTC Nastka",
+          "files": 466,
+          "size_str": "1.9 GB",
+          "last_viewed": "2021-10-14 23:08",
+          "last_modified": "2015-12-29 18:38"
+        },
+        {
+          "title": "20160124 - ok router podrzędny",
+          "files": 1,
+          "size_str": "31.8 KB",
+          "last_viewed": "2021-10-15 02:53",
+          "last_modified": "2016-01-24 15:37"
+        },
+        {
+          "title": "20160714 - Galaxy S3",
+          "files": 146,
+          "size_str": "310.1 MB",
+          "last_viewed": "2021-10-14 23:08",
+          "last_modified": "2016-07-14 21:24"
+        },
+        {
+          "title": "20171123 - Galaxy S4",
+          "files": 636,
+          "size_str": "7.9 GB",
+          "last_viewed": "2024-11-03 17:37",
+          "last_modified": "2017-11-23 21:51"
+        },
+        {
+          "title": "20171130 - Galaxy S7 Paweł",
+          "files": 181,
+          "size_str": "1.2 GB",
+          "last_viewed": "2021-10-15 05:58",
+          "last_modified": "2017-11-30 19:03"
+        },
+        {
+          "title": "20180112 - Babcia",
+          "files": 429,
+          "size_str": "6.3 GB",
+          "last_viewed": "2021-10-15 00:01",
+          "last_modified": "2018-01-12 21:01"
+        },
+        {
+          "title": "20181223 - Galaxy S7 Natalka",
+          "files": 2082,
+          "size_str": "1.2 GB",
+          "last_viewed": "2023-09-06 15:51",
+          "last_modified": "2018-12-23 22:27"
+        },
+        {
+          "title": "20190810 - ASUS",
+          "files": 8759,
+          "size_str": "12.3 GB",
+          "last_viewed": "2026-04-03 13:11",
+          "last_modified": "2025-09-25 19:55"
+        },
+        {
+          "title": "20190921 - Xiaomi Redmi 4X",
+          "files": 6,
+          "size_str": "14.5 MB",
+          "last_viewed": "2021-10-14 23:06",
+          "last_modified": "2019-09-21 06:52"
+        },
+        {
+          "title": "20200913 - MI A2 Natalka",
+          "files": 774,
+          "size_str": "7.9 GB",
+          "last_viewed": "2021-10-15 05:03",
+          "last_modified": "2020-09-13 06:30"
+        },
+        {
+          "title": "20201126 - MI A2 Natalka",
+          "files": 120,
+          "size_str": "1.6 GB",
+          "last_viewed": "2021-10-14 23:06",
+          "last_modified": "2020-11-26 21:09"
+        },
+        {
+          "title": "20201205 - Mama Huaweii backup",
+          "files": 199,
+          "size_str": "234.0 MB",
+          "last_viewed": "2021-01-12 07:50",
+          "last_modified": "2021-01-12 07:44"
+        },
+        {
+          "title": "20210307 - Xiaomi Mi A3 - Paweł",
+          "files": 2,
+          "size_str": "29.5 MB",
+          "last_viewed": "2021-03-07 11:47",
+          "last_modified": "2021-03-07 11:47"
+        },
+        {
+          "title": "20210724 - Xiaomi Redmi 4X Babcia Krysia",
+          "files": 0,
+          "size_str": "0.0 B",
+          "last_viewed": "NIGDY",
+          "last_modified": "NIGDY"
+        },
+        {
+          "title": "20210726 - ASUS Laptop",
+          "files": 7663,
+          "size_str": "8.8 GB",
+          "last_viewed": "2026-08-07 21:07",
+          "last_modified": "2024-01-07 19:46"
+        }
+      ]
+    },
+    {
+      "title": "96🗄️Archiwum",
+      "files": 730,
+      "folders": 37,
+      "size": 346400569,
+      "size_str": "330.4 MB",
+      "last_viewed": "2026-03-22 20:48",
+      "last_modified": "2026-03-22 20:49",
+      "never_opened_files": 640,
+      "top_mimes": [
+        [
+          "application/octet-stream",
+          461
+        ],
+        [
+          "image/jpeg",
+          82
+        ],
+        [
+          "application/pdf",
+          45
+        ],
+        [
+          "image/png",
+          44
+        ],
+        [
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          29
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "2012 Wesele",
+          "files": 85,
+          "size_str": "27.9 MB",
+          "last_viewed": "2025-05-21 19:26",
+          "last_modified": "2014-12-21 20:50"
+        },
+        {
+          "title": "2018 SVN",
+          "files": 473,
+          "size_str": "111.5 MB",
+          "last_viewed": "2018-08-17 18:51",
+          "last_modified": "2019-06-30 07:13"
+        },
+        {
+          "title": "2020 Działalność Gospodarcza",
+          "files": 32,
+          "size_str": "9.0 MB",
+          "last_viewed": "2023-03-03 08:44",
+          "last_modified": "2021-11-19 22:51"
+        },
+        {
+          "title": "89✨Sterta",
+          "files": 123,
+          "size_str": "161.7 MB",
+          "last_viewed": "2026-03-22 20:48",
+          "last_modified": "2026-03-22 20:49"
+        }
+      ]
+    },
+    {
+      "title": "98🧾Paragony",
+      "files": 54,
+      "folders": 0,
+      "size": 33068401,
+      "size_str": "31.5 MB",
+      "last_viewed": "2026-09-18 17:52",
+      "last_modified": "2026-09-18 17:52",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/pdf",
+          50
+        ],
+        [
+          "text/plain",
+          3
+        ],
+        [
+          "application/octet-stream",
+          1
+        ]
+      ],
+      "subfolders": []
+    },
+    {
+      "title": "Analiza_Matematyczna_WEiTI",
+      "files": 2,
+      "folders": 0,
+      "size": 220322,
+      "size_str": "215.2 KB",
+      "last_viewed": "2026-09-11 19:40",
+      "last_modified": "2026-09-11 21:43",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          2
+        ]
+      ],
+      "subfolders": []
+    },
+    {
+      "title": "Gemini Gems",
+      "files": 2,
+      "folders": 0,
+      "size": 1478,
+      "size_str": "1.4 KB",
+      "last_viewed": "2026-04-06 11:48",
+      "last_modified": "2026-04-05 22:03",
+      "never_opened_files": 0,
+      "top_mimes": [
+        [
+          "application/vnd.google-gemini.gem",
+          2
+        ]
+      ],
+      "subfolders": []
+    },
+    {
+      "title": "Notability",
+      "files": 232,
+      "folders": 28,
+      "size": 442415752,
+      "size_str": "421.9 MB",
+      "last_viewed": "2026-07-23 22:31",
+      "last_modified": "2026-07-23 21:55",
+      "never_opened_files": 227,
+      "top_mimes": [
+        [
+          "application/x-zip",
+          167
+        ],
+        [
+          "application/pdf",
+          63
+        ],
+        [
+          "application/vnd.google-apps.document",
+          1
+        ],
+        [
+          "application/zip",
+          1
+        ]
+      ],
+      "subfolders": [
+        {
+          "title": "Allegro",
+          "files": 49,
+          "size_str": "76.5 MB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2026-07-23 21:55"
+        },
+        {
+          "title": "Dzieci",
+          "files": 31,
+          "size_str": "123.2 MB",
+          "last_viewed": "2026-03-28 17:36",
+          "last_modified": "2026-07-23 21:55"
+        },
+        {
+          "title": "Matematyka",
+          "files": 21,
+          "size_str": "37.5 MB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2026-07-23 21:55"
+        },
+        {
+          "title": "Random",
+          "files": 28,
+          "size_str": "22.7 MB",
+          "last_viewed": "2026-07-23 22:31",
+          "last_modified": "2026-04-16 22:25"
+        },
+        {
+          "title": "Roche",
+          "files": 7,
+          "size_str": "6.2 MB",
+          "last_viewed": "2026-07-23 20:09",
+          "last_modified": "2026-07-23 20:07"
+        },
+        {
+          "title": "Szkolenia",
+          "files": 37,
+          "size_str": "87.7 MB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2026-07-23 21:55"
+        },
+        {
+          "title": "Wakacje",
+          "files": 11,
+          "size_str": "6.3 MB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2026-07-23 21:55"
+        },
+        {
+          "title": "Welcome",
+          "files": 10,
+          "size_str": "30.9 MB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2026-04-16 22:25"
+        },
+        {
+          "title": "Welcome (2)",
+          "files": 2,
+          "size_str": "105.2 KB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2025-03-30 09:33"
+        },
+        {
+          "title": "Zdrowie",
+          "files": 33,
+          "size_str": "26.1 MB",
+          "last_viewed": "NIGDY",
+          "last_modified": "2026-07-23 21:55"
+        }
+      ]
+    },
+    {
+      "title": "Zapisane z Chrome",
+      "files": 9,
+      "folders": 0,
+      "size": 78248173,
+      "size_str": "74.6 MB",
+      "last_viewed": "2025-10-05 13:58",
+      "last_modified": "2025-10-06 17:18",
+      "never_opened_files": 4,
+      "top_mimes": [
+        [
+          "application/pdf",
+          7
+        ],
+        [
+          "image/png",
+          2
+        ]
+      ],
+      "subfolders": []
+    },
+    {
+      "title": "Zapisane z Chrome (1)",
+      "files": 15,
+      "folders": 0,
+      "size": 11186259,
+      "size_str": "10.7 MB",
+      "last_viewed": "2026-06-11 07:29",
+      "last_modified": "2026-06-11 07:28",
+      "never_opened_files": 2,
+      "top_mimes": [
+        [
+          "application/pdf",
+          15
+        ]
+      ],
+      "subfolders": []
+    }
+  ],
+  "root_files": [
+    {
+      "title": "0d5a2mpppx6h1lwz06r0m4okatv9.pdf",
+      "size": 6304051,
+      "size_str": "6.0 MB",
+      "mime": "application/pdf",
+      "is_owner": true,
+      "last_viewed": "2025-11-12 14:33",
+      "last_modified": "2025-11-12 14:33"
+    },
+    {
+      "title": "Analiza zużycia energii i fotowoltaiki.gdoc",
+      "size": 3807,
+      "size_str": "3.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-04-05 21:52",
+      "last_modified": "2026-04-05 21:52"
+    },
+    {
+      "title": "Analiza_Matematyczna_WEiTI_PW_Podrecznik.gdoc",
+      "size": 126746,
+      "size_str": "123.8 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:51",
+      "last_modified": "2026-09-11 19:50"
+    },
+    {
+      "title": "Apteki ALK 30.05.23.xlsx",
+      "size": 27891,
+      "size_str": "27.2 KB",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "is_owner": true,
+      "last_viewed": "2025-05-11 17:02",
+      "last_modified": "2023-11-09 18:30"
+    },
+    {
+      "title": "Arkusz kalkulacyjny bez tytułu.gsheet",
+      "size": 43094,
+      "size_str": "42.1 KB",
+      "mime": "application/vnd.google-apps.spreadsheet",
+      "is_owner": true,
+      "last_viewed": "2026-06-22 21:38",
+      "last_modified": "2026-06-21 22:26"
+    },
+    {
+      "title": "Bilet - WH64222365.pdf",
+      "size": 97141,
+      "size_str": "94.9 KB",
+      "mime": "application/pdf",
+      "is_owner": true,
+      "last_viewed": "2026-08-25 17:03",
+      "last_modified": "2026-08-23 18:08"
+    },
+    {
+      "title": "Czy możesz załączyć podsumowanie o które prosiłem?.gdoc",
+      "size": 5059,
+      "size_str": "4.9 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-05-24 10:16",
+      "last_modified": "2026-04-12 17:56"
+    },
+    {
+      "title": "Dokument bez tytułu (1).gdoc",
+      "size": 367331,
+      "size_str": "358.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-07-26 11:05",
+      "last_modified": "2026-07-26 11:05"
+    },
+    {
+      "title": "Dokument bez tytułu (2).gdoc",
+      "size": 5363,
+      "size_str": "5.2 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-04 21:16",
+      "last_modified": "2026-09-04 21:16"
+    },
+    {
+      "title": "Dokument bez tytułu.gdoc",
+      "size": 1787,
+      "size_str": "1.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-05 00:12",
+      "last_modified": "2026-06-05 00:12"
+    },
+    {
+      "title": "Dowód osobisty - Paweł Trzeciakowski.pdf",
+      "size": 857444,
+      "size_str": "837.3 KB",
+      "mime": "application/pdf",
+      "is_owner": true,
+      "last_viewed": "2025-12-07 18:02",
+      "last_modified": "2024-02-05 12:49"
+    },
+    {
+      "title": "Dowód osobisty - mama.pdf",
+      "size": 817716,
+      "size_str": "798.6 KB",
+      "mime": "application/pdf",
+      "is_owner": true,
+      "last_viewed": "2026-01-14 21:21",
+      "last_modified": "2024-02-05 12:34"
+    },
+    {
+      "title": "Dziennik.gdoc",
+      "size": 9111971,
+      "size_str": "8.7 MB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-08-10 22:15",
+      "last_modified": "2026-08-10 22:15"
+    },
+    {
+      "title": "IMG_2312.jpeg",
+      "size": 4619417,
+      "size_str": "4.4 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2313.jpeg",
+      "size": 5452122,
+      "size_str": "5.2 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2314.jpeg",
+      "size": 2988880,
+      "size_str": "2.9 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2315.jpeg",
+      "size": 6049238,
+      "size_str": "5.8 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2316.jpeg",
+      "size": 5213377,
+      "size_str": "5.0 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2317.jpeg",
+      "size": 5361962,
+      "size_str": "5.1 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2318.jpeg",
+      "size": 6060608,
+      "size_str": "5.8 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2319.jpeg",
+      "size": 5158140,
+      "size_str": "4.9 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2320.jpeg",
+      "size": 5111928,
+      "size_str": "4.9 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2321.jpeg",
+      "size": 4432011,
+      "size_str": "4.2 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2322.jpeg",
+      "size": 3635271,
+      "size_str": "3.5 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-04-14 17:37",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "IMG_2323.jpeg",
+      "size": 5414818,
+      "size_str": "5.2 MB",
+      "mime": "image/jpeg",
+      "is_owner": true,
+      "last_viewed": "2026-05-24 10:16",
+      "last_modified": "2026-04-14 17:38"
+    },
+    {
+      "title": "Karta kwalifikacyjna ZIELONEJ SZKOŁY CAMP DRAWA.gdoc",
+      "size": 14226,
+      "size_str": "13.9 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-05-28 17:12",
+      "last_modified": "2026-05-27 21:46"
+    },
+    {
+      "title": "LinkedIn Post - Snowflake Summit '26 Closing Draft.gdoc",
+      "size": 2752,
+      "size_str": "2.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-05 00:08",
+      "last_modified": "2026-06-05 00:08"
+    },
+    {
+      "title": "OWU Warta Travel - C0517.pdf",
+      "size": 388855,
+      "size_str": "379.7 KB",
+      "mime": "application/pdf",
+      "is_owner": true,
+      "last_viewed": "2026-05-22 08:01",
+      "last_modified": "2026-05-22 08:01"
+    },
+    {
+      "title": "Pierścionek Rocznicowy Casa Batlló.gdoc",
+      "size": 508980,
+      "size_str": "497.1 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-05-26 16:13",
+      "last_modified": "2026-05-24 10:08"
+    },
+    {
+      "title": "Plan Projektu: Warstwa Semantyczna Snowflake dla FinTech & eCommerce.gdoc",
+      "size": 12044,
+      "size_str": "11.8 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-04 19:41",
+      "last_modified": "2026-06-04 19:41"
+    },
+    {
+      "title": "Plan wycieczki - Tatry Wysokie (Słowacja) V2.gdoc",
+      "size": 5412,
+      "size_str": "5.3 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-08-12 21:51",
+      "last_modified": "2026-08-03 19:27"
+    },
+    {
+      "title": "Plan wycieczki - Tatry Wysokie (Słowacja).gdoc",
+      "size": 4084,
+      "size_str": "4.0 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-08-03 19:22",
+      "last_modified": "2026-08-03 19:22"
+    },
+    {
+      "title": "Pomysły na mieszkanie.gdoc",
+      "size": 3416,
+      "size_str": "3.3 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-08-07 19:10",
+      "last_modified": "2026-08-07 19:09"
+    },
+    {
+      "title": "Serio? Nie możesz wyciągnąć całej tej konwersacji ....gdoc",
+      "size": 5239,
+      "size_str": "5.1 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-04 19:40",
+      "last_modified": "2026-06-04 19:40"
+    },
+    {
+      "title": "Strategia i Architektura Nowoczesnej Warstwy Semantycznej w Snowflake.gdoc",
+      "size": 8004,
+      "size_str": "7.8 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-25 08:36",
+      "last_modified": "2026-06-25 08:02"
+    },
+    {
+      "title": "Super, dodaj jeszcze do dokumentu kartę z całą tą ....gdoc",
+      "size": 3663,
+      "size_str": "3.6 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-06-04 19:37",
+      "last_modified": "2026-06-04 19:37"
+    },
+    {
+      "title": "Ubezpieczenie - Toyota Corolla.gprj",
+      "size": 0,
+      "size_str": "0.0 B",
+      "mime": "application/vnd.google-apps.project",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:29",
+      "last_modified": "2026-07-24 22:45"
+    },
+    {
+      "title": "Ubezpieczenie - Vw Golf.gprj",
+      "size": 0,
+      "size_str": "0.0 B",
+      "mime": "application/vnd.google-apps.project",
+      "is_owner": true,
+      "last_viewed": "2026-07-24 22:55",
+      "last_modified": "2026-07-24 22:55"
+    },
+    {
+      "title": "Wzrost Nadii i Michała.gsheet",
+      "size": 3123,
+      "size_str": "3.0 KB",
+      "mime": "application/vnd.google-apps.spreadsheet",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:29",
+      "last_modified": "2026-06-21 23:40"
+    },
+    {
+      "title": "Zróżnicowanie Przyrodnicze Rosji - klasa 6C.gslides",
+      "size": 1340349,
+      "size_str": "1.3 MB",
+      "mime": "application/vnd.google-apps.presentation",
+      "is_owner": true,
+      "last_viewed": "2026-06-14 13:31",
+      "last_modified": "2026-06-14 13:31"
+    },
+    {
+      "title": "dobrze, biorąc pod uwagę te kryteria przygotuj mi....gsheet",
+      "size": 2036,
+      "size_str": "2.0 KB",
+      "mime": "application/vnd.google-apps.spreadsheet",
+      "is_owner": true,
+      "last_viewed": "2026-07-19 11:13",
+      "last_modified": "2026-07-19 11:13"
+    },
+    {
+      "title": "home_budget_categorized_2026-06-21 (1).csv",
+      "size": 62712,
+      "size_str": "61.2 KB",
+      "mime": "text/csv",
+      "is_owner": true,
+      "last_viewed": "2026-06-21 17:44",
+      "last_modified": "2026-06-21 17:43"
+    },
+    {
+      "title": "home_budget_categorized_2026-06-21.csv",
+      "size": 85357,
+      "size_str": "83.4 KB",
+      "mime": "text/csv",
+      "is_owner": true,
+      "last_viewed": "2026-06-21 16:30",
+      "last_modified": "2026-06-21 16:29"
+    },
+    {
+      "title": "jeszcze raz poproszę o te wykresy, ale pokaż sumę....gdoc",
+      "size": 135907,
+      "size_str": "132.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-04-05 21:47",
+      "last_modified": "2026-04-05 21:47"
+    },
+    {
+      "title": "wprowadzenie-do-calek.docx",
+      "size": 15719,
+      "size_str": "15.4 KB",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:18",
+      "last_modified": "2026-09-11 19:17"
+    },
+    {
+      "title": "wprowadzenie-do-calek.gdoc",
+      "size": 9230,
+      "size_str": "9.0 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:23",
+      "last_modified": "2026-09-11 19:20"
+    },
+    {
+      "title": "wygeneruj mi podsumowanie tej rozmowy z osateczny... (1).gdoc",
+      "size": 4816,
+      "size_str": "4.7 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-04 21:15",
+      "last_modified": "2026-09-04 21:15"
+    },
+    {
+      "title": "wygeneruj mi podsumowanie tej rozmowy z osateczny....gdoc",
+      "size": 1687,
+      "size_str": "1.6 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-04 21:15",
+      "last_modified": "2026-09-04 21:15"
+    },
+    {
+      "title": "zrób z tego tabelę - w kolumnach fazy życia, a w....gdoc",
+      "size": 4759,
+      "size_str": "4.6 KB",
+      "mime": "application/vnd.google-apps.document",
+      "is_owner": true,
+      "last_viewed": "2026-09-11 19:29",
+      "last_modified": "2026-05-22 22:30"
+    }
+  ],
+  "shared_items": [
+    {
+      "title": "KLASY SPORTOWE-DZIEŃ OTWARTY.pptx",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2025-02-22 17:34",
+      "last_viewed": "2025-03-02 16:58",
+      "last_modified": "2024-02-05 16:33",
+      "path": "KLASY SPORTOWE-DZIEŃ OTWARTY.pptx",
+      "size_str": "389.9 KB"
+    },
+    {
+      "title": "Kopia KLASA_4_PREZENTACJA.pptx",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2025-02-22 17:33",
+      "last_viewed": "2025-03-02 16:58",
+      "last_modified": "2022-03-15 13:12",
+      "path": "Kopia KLASA_4_PREZENTACJA.pptx",
+      "size_str": "2.7 MB"
+    },
+    {
+      "title": "podanie do klasy sportowej.doc",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2025-02-22 17:37",
+      "last_viewed": "2025-03-12 17:58",
+      "last_modified": "2023-03-13 16:29",
+      "path": "podanie do klasy sportowej.doc",
+      "size_str": "34.0 KB"
+    },
+    {
+      "title": "02. KEN 52",
+      "is_folder": true,
+      "is_owner": true,
+      "shared_date": "2012-01-06 09:20",
+      "last_viewed": "2020-01-07 21:56",
+      "last_modified": "2013-02-13 21:18",
+      "path": "Mój dysk / 06🏠Mieszkanie / 00. Archiwum / 02. KEN 52",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "2012 Wesele",
+      "is_folder": true,
+      "is_owner": true,
+      "shared_date": "2011-05-18 19:49",
+      "last_viewed": "2020-09-19 06:09",
+      "last_modified": "2021-03-15 18:47",
+      "path": "Mój dysk / 96🗄️Archiwum / 2012 Wesele",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Fundamentals of Statistics -- H_ Mulholland and C_ R_ Jones (Auth_) -- 1968.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2024-07-27 20:21",
+      "last_viewed": "2024-07-27 20:21",
+      "last_modified": "2024-07-26 04:54",
+      "path": "Fundamentals of Statistics -- H_ Mulholland and C_ R_ Jones (Auth_) -- 1968.pdf",
+      "size_str": "15.2 MB"
+    },
+    {
+      "title": "Nadia - prace domowe",
+      "is_folder": true,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2025-04-07 08:14",
+      "last_modified": "2020-11-28 11:26",
+      "path": "Mój dysk / 02🏫Szkoła / Nadia / 2020 21 - klasa 1c / Nadia - prace domowe",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "HoMM3_HD_Latest_setup.exe",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2026-04-13 17:20",
+      "path": "HoMM3_HD_Latest_setup.exe",
+      "size_str": "16.9 MB"
+    },
+    {
+      "title": "IMG_20201128_112511.jpg",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2025-04-07 08:15",
+      "last_modified": "2020-11-28 11:26",
+      "path": "Mój dysk / 02🏫Szkoła / Nadia / 2020 21 - klasa 1c / Nadia - prace domowe / IMG_20201128_112511.jpg",
+      "size_str": "3.0 MB"
+    },
+    {
+      "title": "IMG_20201128_112519.jpg",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2025-04-07 08:15",
+      "last_modified": "2020-11-28 11:26",
+      "path": "Mój dysk / 02🏫Szkoła / Nadia / 2020 21 - klasa 1c / Nadia - prace domowe / IMG_20201128_112519.jpg",
+      "size_str": "3.4 MB"
+    },
+    {
+      "title": "Nadia_Trzeciakowska_Finka i Teo konno w terenie.docx",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2021-05-16 17:19",
+      "path": "Mój dysk / 02🏫Szkoła / Nadia / 2020 21 - klasa 1c / Książka pierwszoklasisty / Nadia_Trzeciakowska_Finka i Teo konno w terenie.docx",
+      "size_str": "15.8 KB"
+    },
+    {
+      "title": "Zniżki TSL.gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2024-06-04 12:59",
+      "last_viewed": "2024-06-04 14:36",
+      "last_modified": "2026-06-01 20:39",
+      "path": "Zniżki TSL.gsheet",
+      "size_str": "132.0 KB"
+    },
+    {
+      "title": "Adam Bańka.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2025-05-05 14:48",
+      "last_modified": "2025-05-06 09:23",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / Adam Bańka.pdf",
+      "size_str": "1.2 MB"
+    },
+    {
+      "title": "Jan Kaźmierczak.jpg",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2025-05-21 19:14",
+      "last_modified": "2025-05-06 09:23",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / Jan Kaźmierczak.jpg",
+      "size_str": "838.5 KB"
+    },
+    {
+      "title": "Zespoły diagnozujące autyzm u dorosłych.gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2024-12-29 20:18",
+      "last_viewed": "2024-12-29 20:18",
+      "last_modified": "2026-09-16 19:29",
+      "path": "Zespoły diagnozujące autyzm u dorosłych.gsheet",
+      "size_str": "10.8 KB"
+    },
+    {
+      "title": "Weronika Pawlak.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2025-05-19 09:01",
+      "last_modified": "2025-05-19 09:01",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / Weronika Pawlak.pdf",
+      "size_str": "114.0 KB"
+    },
+    {
+      "title": "SPOTKANIA INDYWIDUALNE- 2dBL.gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2023-01-31 06:43",
+      "last_viewed": "2023-02-06 20:41",
+      "last_modified": "2026-03-18 23:19",
+      "path": "SPOTKANIA INDYWIDUALNE- 2dBL.gsheet",
+      "size_str": "3.1 KB"
+    },
+    {
+      "title": "Julian Zbroszczyk.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2025-05-21 21:57",
+      "last_modified": "2025-05-19 09:01",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / Julian Zbroszczyk.pdf",
+      "size_str": "67.1 KB"
+    },
+    {
+      "title": "Michał Stankiewicz.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2025-05-21 21:57",
+      "last_modified": "2025-05-19 09:51",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / Michał Stankiewicz.pdf",
+      "size_str": "5.4 MB"
+    },
+    {
+      "title": "Complete dbt Bootcamp slides.gslides",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2025-05-27 10:45",
+      "last_viewed": "2025-05-27 10:45",
+      "last_modified": "2026-05-27 11:23",
+      "path": "Complete dbt Bootcamp slides.gslides",
+      "size_str": "6.8 MB"
+    },
+    {
+      "title": "Materiały prasowe WFP18",
+      "is_folder": true,
+      "is_owner": false,
+      "shared_date": "2025-05-31 18:19",
+      "last_viewed": "2025-05-31 18:19",
+      "last_modified": "2024-10-07 13:42",
+      "path": "Materiały prasowe WFP18",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Go Karts - aftermovie.mp4",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2022-10-05 13:13",
+      "last_viewed": "2022-10-05 13:13",
+      "last_modified": "2022-10-05 10:49",
+      "path": "Go Karts - aftermovie.mp4",
+      "size_str": "116.5 MB"
+    },
+    {
+      "title": "TAJLANDIA 2024",
+      "is_folder": true,
+      "is_owner": false,
+      "shared_date": "2024-05-09 22:50",
+      "last_viewed": "2024-10-25 21:26",
+      "last_modified": "2024-05-09 22:50",
+      "path": "TAJLANDIA 2024",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "63-Szablon-budzet-domowy-2021-PLN-v7-4.gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2020-12-17 10:57",
+      "path": "63-Szablon-budzet-domowy-2021-PLN-v7-4.gsheet",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Plan lekcji do druku - Darmowy do pobrania A4 PDF - Wzór 4_kopia.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2025-09-01 13:31",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / Plan lekcji do druku - Darmowy do pobrania A4 PDF - Wzór 4_kopia.pdf",
+      "size_str": "1.1 MB"
+    },
+    {
+      "title": "Planowanie",
+      "is_folder": true,
+      "is_owner": false,
+      "shared_date": "2020-10-31 10:30",
+      "last_viewed": "2025-09-01 20:07",
+      "last_modified": "2020-11-06 15:02",
+      "path": "Planowanie",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Regulamin eliminacji do turnieju “Heroes 30th Anniversary Cup”.gdoc",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2025-09-05 20:55",
+      "last_viewed": "2025-09-05 20:55",
+      "last_modified": "2025-08-26 09:37",
+      "path": "Regulamin eliminacji do turnieju “Heroes 30th Anniversary Cup”.gdoc",
+      "size_str": "10.3 KB"
+    },
+    {
+      "title": "Regulamin turnieju “Heroes 30th Anniversary Cup”.gdoc",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2025-09-19 21:19",
+      "last_viewed": "2025-09-19 21:19",
+      "last_modified": "2025-09-07 10:44",
+      "path": "Regulamin turnieju “Heroes 30th Anniversary Cup”.gdoc",
+      "size_str": "9.9 KB"
+    },
+    {
+      "title": "ZAWODZI-SL-00055030-20251018230321-26_kopia.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2025-10-22 12:46",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / ZAWODZI-SL-00055030-20251018230321-26_kopia.pdf",
+      "size_str": "128.2 KB"
+    },
+    {
+      "title": "duch-shematy_kopia.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2025-10-29 19:18",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / duch-shematy_kopia.pdf",
+      "size_str": "1.5 MB"
+    },
+    {
+      "title": "Wito.doc",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2022-09-17 12:24",
+      "path": "Wito.doc",
+      "size_str": "96.5 KB"
+    },
+    {
+      "title": "Urwis.doc",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2022-09-17 12:24",
+      "path": "Urwis.doc",
+      "size_str": "96.0 KB"
+    },
+    {
+      "title": "Pozwolenia radiowe 5G – Play (via SpeedTest.pl).gmap",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2021-07-06 19:28",
+      "last_viewed": "2021-07-06 19:28",
+      "last_modified": "2020-08-01 21:16",
+      "path": "Pozwolenia radiowe 5G – Play (via SpeedTest.pl).gmap",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "kodowanie zestawienie.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2019-11-22 19:32",
+      "last_viewed": "2019-11-22 19:32",
+      "last_modified": "2019-06-22 20:36",
+      "path": "kodowanie zestawienie.pdf",
+      "size_str": "201.6 KB"
+    },
+    {
+      "title": "Czasownik kl.4_kopia.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2025-11-21 16:24",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / Czasownik kl.4_kopia.pdf",
+      "size_str": "144.6 KB"
+    },
+    {
+      "title": "8b6d2dc2-30fb-4d6f-ab61-d066e4ae15f9.zip",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2025-11-25 13:47",
+      "last_viewed": "2025-11-27 18:54",
+      "last_modified": "2025-11-25 13:47",
+      "path": "8b6d2dc2-30fb-4d6f-ab61-d066e4ae15f9.zip",
+      "size_str": "86.4 MB"
+    },
+    {
+      "title": "Jebus Outcast 3.0.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2025-12-26 16:16",
+      "last_viewed": "2026-03-20 20:20",
+      "last_modified": "2025-02-18 00:39",
+      "path": "Jebus Outcast 3.0.pdf",
+      "size_str": "6.6 MB"
+    },
+    {
+      "title": "Jebus King 3.0.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2025-12-26 16:16",
+      "last_viewed": "2025-12-26 16:16",
+      "last_modified": "2025-05-01 17:25",
+      "path": "Jebus King 3.0.pdf",
+      "size_str": "1.1 MB"
+    },
+    {
+      "title": "Jebus Outcast Unlimited.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2025-12-26 16:17",
+      "last_viewed": "2025-12-26 16:17",
+      "last_modified": "2025-02-22 13:49",
+      "path": "Jebus Outcast Unlimited.pdf",
+      "size_str": "1.0 MB"
+    },
+    {
+      "title": "Deklaracja obecności.gdoc",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2022-06-15 12:31",
+      "last_viewed": "2022-06-15 22:54",
+      "last_modified": "2022-07-05 12:51",
+      "path": "Deklaracja obecności.gdoc",
+      "size_str": "6.0 KB"
+    },
+    {
+      "title": "Memory Lane Guide.gdoc",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2024-12-19 21:16",
+      "last_viewed": "2024-12-20 14:58",
+      "last_modified": "2025-03-02 04:15",
+      "path": "Memory Lane Guide.gdoc",
+      "size_str": "7.4 MB"
+    },
+    {
+      "title": "vcmi-status.gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2024-07-06 22:39",
+      "last_viewed": "2024-07-06 22:39",
+      "last_modified": "2013-02-23 20:17",
+      "path": "vcmi-status.gsheet",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Budżet komunijny_lindego_2024.gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2024-10-09 20:45",
+      "last_viewed": "2024-10-10 19:59",
+      "last_modified": "2024-11-13 21:17",
+      "path": "Budżet komunijny_lindego_2024.gsheet",
+      "size_str": "23.5 KB"
+    },
+    {
+      "title": "Faza pucharowa (Mistrzostwa Polski Heroes III 2018).gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2024-06-28 22:28",
+      "last_viewed": "2024-06-28 22:28",
+      "last_modified": "2021-12-01 21:35",
+      "path": "Faza pucharowa (Mistrzostwa Polski Heroes III 2018).gsheet",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Faza pucharowa (Mistrzostwa Polski Heroes III 2019).gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2024-06-28 22:29",
+      "last_viewed": "2024-06-28 22:29",
+      "last_modified": "2021-12-01 21:37",
+      "path": "Faza pucharowa (Mistrzostwa Polski Heroes III 2019).gsheet",
+      "size_str": "33.0 KB"
+    },
+    {
+      "title": "Budżet domowy 2018.gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2019-12-15 19:19",
+      "last_viewed": "2020-09-20 20:17",
+      "last_modified": "2017-12-11 23:11",
+      "path": "Budżet domowy 2018.gsheet",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Śrem Plan miasta.gmap",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2022-04-21 21:40",
+      "last_viewed": "2022-04-21 21:40",
+      "last_modified": "2015-06-16 10:10",
+      "path": "Śrem Plan miasta.gmap",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "COVID-19 w Polsce.gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2021-12-13 17:35",
+      "last_viewed": "2021-12-21 23:27",
+      "last_modified": "2024-05-05 08:31",
+      "path": "COVID-19 w Polsce.gsheet",
+      "size_str": "1.5 MB"
+    },
+    {
+      "title": "Szczecin.gmap",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2021-08-15 20:48",
+      "last_viewed": "2021-08-22 16:33",
+      "last_modified": "2015-06-13 13:49",
+      "path": "Szczecin.gmap",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Automated Google Calendar Import.gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2022-05-18 08:48",
+      "last_viewed": "2022-05-18 08:57",
+      "last_modified": "2021-01-19 20:45",
+      "path": "Automated Google Calendar Import.gsheet",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Faza pucharowa (Mistrzostwa Polski Heroes III 2020).gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2024-06-28 22:29",
+      "last_viewed": "2024-06-28 22:29",
+      "last_modified": "2021-12-14 16:58",
+      "path": "Faza pucharowa (Mistrzostwa Polski Heroes III 2020).gsheet",
+      "size_str": "33.1 KB"
+    },
+    {
+      "title": "Faza grupowa (Mistrzostwa Polski Heroes III 2018).gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2024-06-28 22:27",
+      "last_viewed": "2024-06-28 22:27",
+      "last_modified": "2025-01-24 20:11",
+      "path": "Faza grupowa (Mistrzostwa Polski Heroes III 2018).gsheet",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Bilety_3428297.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2026-03-26 12:40",
+      "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / Bilety_3428297.pdf",
+      "size_str": "1.6 MB"
+    },
+    {
+      "title": "Spotkania indywidualne 3c .gsheet",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2021-06-07 07:19",
+      "last_viewed": "2023-02-07 06:52",
+      "last_modified": "2023-06-13 12:44",
+      "path": "Spotkania indywidualne 3c .gsheet",
+      "size_str": "2.8 KB"
+    },
+    {
+      "title": "2026-06-03-rekomendacje dla szkoły.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2026-08-25 14:51",
+      "last_modified": "2026-06-10 07:55",
+      "path": "Mój dysk / 03🏥Zdrowie / Nadia / 2026-06-03-rekomendacje dla szkoły.pdf",
+      "size_str": "131.6 KB"
+    },
+    {
+      "title": "2026-06-03 Linde  uzasadnienie oceny zachowania.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2026-08-25 14:51",
+      "last_modified": "2026-06-10 08:01",
+      "path": "Mój dysk / 03🏥Zdrowie / Nadia / 2026-06-03 Linde  uzasadnienie oceny zachowania.pdf",
+      "size_str": "12.5 MB"
+    },
+    {
+      "title": "TAJLANDIA.xlsx",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-12 13:53",
+      "last_modified": "2024-07-05 16:12",
+      "path": "TAJLANDIA 2024 / TAJLANDIA.xlsx",
+      "size_str": "118.0 KB"
+    },
+    {
+      "title": "Nadia nożycuje",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2020-11-23 20:28",
+      "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.11 / Nadia nożycuje",
+      "size_str": "12.1 MB"
+    },
+    {
+      "title": "Nadia nożycuje.mp4",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2020-11-23 20:35",
+      "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.11 / Nadia nożycuje.mp4",
+      "size_str": "71.2 MB"
+    },
+    {
+      "title": "Tajlandia - Planowanie.gdoc",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2024-05-09 22:50",
+      "path": "TAJLANDIA 2024 / Tajlandia - Planowanie.gdoc",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Bilety Lotnicze WAW - BANKOK",
+      "is_folder": true,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-06 22:49",
+      "last_modified": "2024-05-09 22:55",
+      "path": "TAJLANDIA 2024 / Bilety Lotnicze WAW - BANKOK",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Podróż 23.07 - Koh Tao - Bankok",
+      "is_folder": true,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-06-09 09:53",
+      "last_modified": "2024-05-09 22:56",
+      "path": "TAJLANDIA 2024 / Podróż 23.07 - Koh Tao - Bankok",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Dzungla - nocleg i wycieczka ",
+      "is_folder": true,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-05 16:15",
+      "last_modified": "2024-05-09 22:56",
+      "path": "TAJLANDIA 2024 / Dzungla - nocleg i wycieczka ",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Podróż 13.07 - Khao Sok - Koh Samui",
+      "is_folder": true,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-05 16:16",
+      "last_modified": "2024-06-18 14:51",
+      "path": "TAJLANDIA 2024 / Podróż 13.07 - Khao Sok - Koh Samui",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Logistyka 1 dni.docx",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-19 08:24",
+      "last_modified": "2024-07-04 11:55",
+      "path": "TAJLANDIA 2024 / Logistyka 1 dni.docx",
+      "size_str": "13.1 KB"
+    },
+    {
+      "title": "12go_booking_13903193.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-23 11:43",
+      "last_modified": "2024-07-15 06:13",
+      "path": "TAJLANDIA 2024 / 12go_booking_13903193.pdf",
+      "size_str": "261.1 KB"
+    },
+    {
+      "title": "Gmail - 10-13.07 - Tours.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-10 11:13",
+      "last_modified": "2024-05-09 22:54",
+      "path": "TAJLANDIA 2024 / Dzungla - nocleg i wycieczka  / Gmail - 10-13.07 - Tours.pdf",
+      "size_str": "305.7 KB"
+    },
+    {
+      "title": "12go_booking_13012097.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-23 05:27",
+      "last_modified": "2024-05-09 22:53",
+      "path": "TAJLANDIA 2024 / Podróż 23.07 - Koh Tao - Bankok / 12go_booking_13012097.pdf",
+      "size_str": "266.8 KB"
+    },
+    {
+      "title": "12go_booking_13012098.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-23 09:53",
+      "last_modified": "2024-05-09 22:53",
+      "path": "TAJLANDIA 2024 / Podróż 23.07 - Koh Tao - Bankok / 12go_booking_13012098.pdf",
+      "size_str": "190.6 KB"
+    },
+    {
+      "title": "EmiratesTicket1.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-26 03:36",
+      "last_modified": "2024-05-09 22:51",
+      "path": "TAJLANDIA 2024 / Bilety Lotnicze WAW - BANKOK / EmiratesTicket1.pdf",
+      "size_str": "146.3 KB"
+    },
+    {
+      "title": "EmiratesTicket2.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2024-05-09 22:52",
+      "path": "TAJLANDIA 2024 / Bilety Lotnicze WAW - BANKOK / EmiratesTicket2.pdf",
+      "size_str": "146.2 KB"
+    },
+    {
+      "title": "EmiratesTicket3.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2024-05-09 22:52",
+      "path": "TAJLANDIA 2024 / Bilety Lotnicze WAW - BANKOK / EmiratesTicket3.pdf",
+      "size_str": "146.2 KB"
+    },
+    {
+      "title": "EmiratesTicket4.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2024-05-09 22:52",
+      "path": "TAJLANDIA 2024 / Bilety Lotnicze WAW - BANKOK / EmiratesTicket4.pdf",
+      "size_str": "146.3 KB"
+    },
+    {
+      "title": "EmiratesFareConditions.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-12 03:49",
+      "last_modified": "2024-05-09 22:52",
+      "path": "TAJLANDIA 2024 / Bilety Lotnicze WAW - BANKOK / EmiratesFareConditions.pdf",
+      "size_str": "30.4 KB"
+    },
+    {
+      "title": "MICHAL TRZECIAKOWSKI DXB 0TM0E7.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2024-07-06 12:29",
+      "path": "TAJLANDIA 2024 / Bilety Lotnicze WAW - BANKOK / MICHAL TRZECIAKOWSKI DXB 0TM0E7.pdf",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "NADIA TRZECIAKOWSKA DXB 0TM0E7.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2024-07-06 19:56",
+      "path": "TAJLANDIA 2024 / Bilety Lotnicze WAW - BANKOK / NADIA TRZECIAKOWSKA DXB 0TM0E7.pdf",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "NATALIA TRZECIAKOWSKA DXB 0TM0E7.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2024-07-06 19:57",
+      "path": "TAJLANDIA 2024 / Bilety Lotnicze WAW - BANKOK / NATALIA TRZECIAKOWSKA DXB 0TM0E7.pdf",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "PAWEL TRZECIAKOWSKI DXB 0TM0E7.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "NIGDY",
+      "last_modified": "2024-07-06 19:57",
+      "path": "TAJLANDIA 2024 / Bilety Lotnicze WAW - BANKOK / PAWEL TRZECIAKOWSKI DXB 0TM0E7.pdf",
+      "size_str": "0.0 B"
+    },
+    {
+      "title": "Prom Khao Sok - Koh Samui 13.07.docx",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-12 13:53",
+      "last_modified": "2024-06-18 14:50",
+      "path": "TAJLANDIA 2024 / Podróż 13.07 - Khao Sok - Koh Samui / Prom Khao Sok - Koh Samui 13.07.docx",
+      "size_str": "145.6 KB"
+    },
+    {
+      "title": "12go_booking_13545111.pdf",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "NIGDY",
+      "last_viewed": "2024-07-19 08:24",
+      "last_modified": "2024-06-18 14:53",
+      "path": "TAJLANDIA 2024 / Podróż 13.07 - Khao Sok - Koh Samui / 12go_booking_13545111.pdf",
+      "size_str": "213.3 KB"
+    },
+    {
+      "title": "REGULAMIN MP 2026.docx",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2026-08-11 21:26",
+      "last_viewed": "2026-08-11 21:26",
+      "last_modified": "2026-09-13 12:47",
+      "path": "REGULAMIN MP 2026.docx",
+      "size_str": "209.0 KB"
+    },
+    {
+      "title": "REGULAMIN MP 2026 - Regulamin Szablonów.docx",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2026-08-11 21:26",
+      "last_viewed": "2026-08-11 21:26",
+      "last_modified": "2026-05-16 18:14",
+      "path": "REGULAMIN MP 2026 - Regulamin Szablonów.docx",
+      "size_str": "196.3 KB"
+    },
+    {
+      "title": "Narty 2027.gslides",
+      "is_folder": false,
+      "is_owner": false,
+      "shared_date": "2026-09-09 08:43",
+      "last_viewed": "2026-09-09 20:44",
+      "last_modified": "2026-09-09 08:43",
+      "path": "Narty 2027.gslides",
+      "size_str": "3.2 MB"
+    }
+  ],
+  "deletion_candidates": {
+    "untitled_docs": [
+      {
+        "title": "Dokument bez tytułu.gdoc",
+        "path": "Mój dysk / 96🗄️Archiwum / Dokument bez tytułu.gdoc",
+        "size_str": "17.1 KB",
+        "last_viewed": "2021-09-12 16:28",
+        "last_modified": "2021-09-12 16:28"
+      },
+      {
+        "title": "Dokument bez tytułu.gdoc",
+        "path": "Mój dysk / 06🏠Mieszkanie / 05. Pod Strzechą 7 / 2016 - kupno mieszkania / 00. Akt notarialny / Dokument bez tytułu.gdoc",
+        "size_str": "3.5 KB",
+        "last_viewed": "2023-11-29 19:12",
+        "last_modified": "2023-11-29 19:12"
+      },
+      {
+        "title": "Dokument bez tytułu.gdoc",
+        "path": "Mój dysk / 02🏫Szkoła / Michał / 04 matma / Dokument bez tytułu.gdoc",
+        "size_str": "2.1 KB",
+        "last_viewed": "2025-12-15 19:06",
+        "last_modified": "2025-12-15 19:06"
+      },
+      {
+        "title": "Dokument bez tytułu.gdoc",
+        "path": "Mój dysk / Dokument bez tytułu.gdoc",
+        "size_str": "1.7 KB",
+        "last_viewed": "2026-06-05 00:12",
+        "last_modified": "2026-06-05 00:12"
+      },
+      {
+        "title": "Arkusz kalkulacyjny bez tytułu.gsheet",
+        "path": "Mój dysk / Arkusz kalkulacyjny bez tytułu.gsheet",
+        "size_str": "42.1 KB",
+        "last_viewed": "2026-06-22 21:38",
+        "last_modified": "2026-06-21 22:26"
+      },
+      {
+        "title": "Dokument bez tytułu.gdoc",
+        "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 04 Michał / 05 Tenis / Dokument bez tytułu.gdoc",
+        "size_str": "2.8 KB",
+        "last_viewed": "2026-07-23 19:45",
+        "last_modified": "2026-07-23 19:45"
+      },
+      {
+        "title": "Dokument bez tytułu (1).gdoc",
+        "path": "Mój dysk / Dokument bez tytułu (1).gdoc",
+        "size_str": "358.7 KB",
+        "last_viewed": "2026-07-26 11:05",
+        "last_modified": "2026-07-26 11:05"
+      },
+      {
+        "title": "Dokument bez tytułu (2).gdoc",
+        "path": "Mój dysk / Dokument bez tytułu (2).gdoc",
+        "size_str": "5.2 KB",
+        "last_viewed": "2026-09-04 21:16",
+        "last_modified": "2026-09-04 21:16"
+      }
+    ],
+    "duplicate_versions": [
+      {
+        "title": "Kopia KLASA_4_PREZENTACJA.pptx",
+        "path": "Kopia KLASA_4_PREZENTACJA.pptx",
+        "size_str": "2.7 MB",
+        "last_viewed": "2025-03-02 16:58",
+        "last_modified": "2022-03-15 13:12"
+      },
+      {
+        "title": "CV - Paweł Trzeciakowski (1).gdoc",
+        "path": "Mój dysk / 25📄 Paweł - dokumenty / 04. CV / CV - Paweł Trzeciakowski (1).gdoc",
+        "size_str": "18.4 KB",
+        "last_viewed": "2021-10-10 13:19",
+        "last_modified": "2021-10-10 13:19"
+      },
+      {
+        "title": "Nadia na koniu (1)",
+        "path": "Mój dysk / 02🏫Szkoła / Nadia / 2020 21 - klasa 1c / Nadia na koniu (1)",
+        "size_str": "16.5 MB",
+        "last_viewed": "2020-11-21 21:47",
+        "last_modified": "2020-11-21 21:47"
+      },
+      {
+        "title": "Kopia ZIR-2_Zacznik_do_informacji_o_gruntach_-_dane_o_przedmiotach_opodatkowania_zwolnionych_z_opodatkowania.gsheet",
+        "path": "Mój dysk / 15🏡Lewickie / 01. Podział działki w Lewickich / 01. Zgłoszenie do gminy / Piotr / Kopia ZIR-2_Zacznik_do_informacji_o_gruntach_-_dane_o_przedmiotach_opodatkowania_zwolnionych_z_opodatkowania.gsheet",
+        "size_str": "84.5 KB",
+        "last_viewed": "2021-09-16 19:47",
+        "last_modified": "2021-09-16 19:47"
+      },
+      {
+        "title": "Kopia ZIR-1_Zacznik_do_informacji_o_gruntach_-_dane_o_przedmiotach_opodatkowania_podlegajcych_opodatkowaniu.xls",
+        "path": "Mój dysk / 15🏡Lewickie / 01. Podział działki w Lewickich / 01. Zgłoszenie do gminy / 01. Od Izy / Kopia ZIR-1_Zacznik_do_informacji_o_gruntach_-_dane_o_przedmiotach_opodatkowania_podlegajcych_opodatkowaniu.xls",
+        "size_str": "61.0 KB",
+        "last_viewed": "2021-09-17 21:23",
+        "last_modified": "2021-09-16 20:00"
+      },
+      {
+        "title": "Kopia ZIR-2_Zacznik_do_informacji_o_gruntach_-_dane_o_przedmiotach_opodatkowania_zwolnionych_z_opodatkowania.xls",
+        "path": "Mój dysk / 15🏡Lewickie / 01. Podział działki w Lewickich / 01. Zgłoszenie do gminy / 01. Od Izy / Kopia ZIR-2_Zacznik_do_informacji_o_gruntach_-_dane_o_przedmiotach_opodatkowania_zwolnionych_z_opodatkowania.xls",
+        "size_str": "62.0 KB",
+        "last_viewed": "2021-09-17 21:23",
+        "last_modified": "2021-09-16 20:01"
+      },
+      {
+        "title": "Plan lekcji do druku - Darmowy do pobrania A4 PDF - Wzór 4_kopia.pdf",
+        "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / Plan lekcji do druku - Darmowy do pobrania A4 PDF - Wzór 4_kopia.pdf",
+        "size_str": "1.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2025-09-01 13:31"
+      },
+      {
+        "title": "ZAWODZI-SL-00055030-20251018230321-26_kopia.pdf",
+        "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / ZAWODZI-SL-00055030-20251018230321-26_kopia.pdf",
+        "size_str": "128.2 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2025-10-22 12:46"
+      },
+      {
+        "title": "duch-shematy_kopia.pdf",
+        "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / duch-shematy_kopia.pdf",
+        "size_str": "1.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2025-10-29 19:18"
+      },
+      {
+        "title": "Czasownik kl.4_kopia.pdf",
+        "path": "Mój dysk / 02🏫Szkoła / Michał / 2024-25 - Klasa 3a / I Komunia / Fotograf - zgody / Czasownik kl.4_kopia.pdf",
+        "size_str": "144.6 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2025-11-21 16:24"
+      },
+      {
+        "title": "Kopia Remont - wymagania v2.docx.gdoc",
+        "path": "Mój dysk / 06🏠Mieszkanie / 05. Pod Strzechą 7 / 2017 - Remont / 02. Wymagania / Kopia Remont - wymagania v2.docx.gdoc",
+        "size_str": "0.0 B",
+        "last_viewed": "2016-08-18 18:23",
+        "last_modified": "2016-08-18 18:21"
+      },
+      {
+        "title": "Kopia dokumentu Gruzja 2023 - rozliczenie  – 3 października o 06:33.gsheet",
+        "path": "Mój dysk / 08🏖️Wakacje / 2023 / 2023-09 Gruzja / Kopia dokumentu Gruzja 2023 - rozliczenie  – 3 października o 06:33.gsheet",
+        "size_str": "4.8 KB",
+        "last_viewed": "2023-10-03 22:45",
+        "last_modified": "2023-10-03 22:45"
+      },
+      {
+        "title": "home_budget_categorized_2026-06-21 (1).csv",
+        "path": "Mój dysk / home_budget_categorized_2026-06-21 (1).csv",
+        "size_str": "61.2 KB",
+        "last_viewed": "2026-06-21 17:44",
+        "last_modified": "2026-06-21 17:43"
+      },
+      {
+        "title": "IM000118 (1)",
+        "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 01 🤹‍♀️ Natalka / TK kolana lewego - Natalka / S0001 / SE0003 / IM000118 (1)",
+        "size_str": "516.0 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-10-27 19:54"
+      },
+      {
+        "title": "IM000143 (1)",
+        "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 01 🤹‍♀️ Natalka / TK kolana lewego - Natalka / S0001 / SE0003 / IM000143 (1)",
+        "size_str": "516.0 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-10-27 19:54"
+      },
+      {
+        "title": "IM000149 (1)",
+        "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 01 🤹‍♀️ Natalka / TK kolana lewego - Natalka / S0001 / SE0003 / IM000149 (1)",
+        "size_str": "516.0 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-10-27 19:54"
+      },
+      {
+        "title": "IM000153 (1)",
+        "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 01 🤹‍♀️ Natalka / TK kolana lewego - Natalka / S0001 / SE0003 / IM000153 (1)",
+        "size_str": "515.7 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-10-27 19:54"
+      },
+      {
+        "title": "IM000164 (1)",
+        "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 01 🤹‍♀️ Natalka / TK kolana lewego - Natalka / S0001 / SE0003 / IM000164 (1)",
+        "size_str": "515.7 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-10-27 19:54"
+      },
+      {
+        "title": "IM000154 (1)",
+        "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 01 🤹‍♀️ Natalka / TK kolana lewego - Natalka / S0001 / SE0003 / IM000154 (1)",
+        "size_str": "515.7 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-10-27 19:54"
+      },
+      {
+        "title": "IM000151 (1)",
+        "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 01 🤹‍♀️ Natalka / TK kolana lewego - Natalka / S0001 / SE0003 / IM000151 (1)",
+        "size_str": "516.0 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-10-27 19:54"
+      },
+      {
+        "title": "IM000141 (1)",
+        "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 01 🤹‍♀️ Natalka / TK kolana lewego - Natalka / S0001 / SE0003 / IM000141 (1)",
+        "size_str": "516.0 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-10-27 19:54"
+      },
+      {
+        "title": "IM000152 (1)",
+        "path": "Mój dysk / 01👨‍👩‍👧‍👦 Rodzina / 01 🤹‍♀️ Natalka / TK kolana lewego - Natalka / S0001 / SE0003 / IM000152 (1)",
+        "size_str": "515.7 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-10-27 19:54"
+      },
+      {
+        "title": "Kopia 2013.03 - Umowa kupna - sprzedaży.gdoc",
+        "path": "Mój dysk / 25📄 Paweł - dokumenty / 05. Samochód / Ford Focus / Kopia 2013.03 - Umowa kupna - sprzedaży.gdoc",
+        "size_str": "254.0 B",
+        "last_viewed": "2021-10-10 13:19",
+        "last_modified": "2013-03-09 08:25"
+      },
+      {
+        "title": "01 - styczen — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 / 2015.12 - kalendarz Nadii / 01 - styczen — kopia.jpg",
+        "size_str": "1.0 MB",
+        "last_viewed": "2021-10-15 15:16",
+        "last_modified": "2015-01-21 11:35"
+      },
+      {
+        "title": "07 - lipiec — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 / 2015.12 - kalendarz Nadii / 07 - lipiec — kopia.jpg",
+        "size_str": "1.5 MB",
+        "last_viewed": "2021-10-15 15:16",
+        "last_modified": "2015-07-30 11:36"
+      },
+      {
+        "title": "08 - sierpien — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 / 2015.12 - kalendarz Nadii / 08 - sierpien — kopia.jpg",
+        "size_str": "1.0 MB",
+        "last_viewed": "2021-10-15 15:16",
+        "last_modified": "2015-08-03 08:14"
+      },
+      {
+        "title": "02 - luty - kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 / 2015.12 - kalendarz Nadii / 02 - luty - kopia.jpg",
+        "size_str": "1.9 MB",
+        "last_viewed": "2021-10-15 15:16",
+        "last_modified": "2015-08-05 22:39"
+      },
+      {
+        "title": "09 - wrzesien — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 / 2015.12 - kalendarz Nadii / 09 - wrzesien — kopia.jpg",
+        "size_str": "2.2 MB",
+        "last_viewed": "2021-10-15 15:16",
+        "last_modified": "2015-09-22 08:50"
+      },
+      {
+        "title": "10 - październik — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 / 2015.12 - kalendarz Nadii / 10 - październik — kopia.jpg",
+        "size_str": "2.4 MB",
+        "last_viewed": "2021-10-15 15:16",
+        "last_modified": "2015-10-30 11:46"
+      },
+      {
+        "title": "12 - grudzień — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 / 2015.12 - kalendarz Nadii / 12 - grudzień — kopia.jpg",
+        "size_str": "2.9 MB",
+        "last_viewed": "2021-10-15 15:16",
+        "last_modified": "2015-12-16 21:27"
+      },
+      {
+        "title": "ankieta poprawiona (1).gdoc",
+        "path": "Mój dysk / 25📄 Paweł - dokumenty / 01. Natalka / 02. Studia SGH / 00. Praca magisterska / Natalka - praca mgr / ankieta poprawiona (1).gdoc",
+        "size_str": "8.1 KB",
+        "last_viewed": "2021-10-10 13:24",
+        "last_modified": "2021-10-10 13:24"
+      },
+      {
+        "title": "IMG-20140606-WA0000 - Kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.06 - cały czerwiec / IMG-20140606-WA0000 - Kopia.jpg",
+        "size_str": "196.3 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-06-06 08:03"
+      },
+      {
+        "title": "IMG-20140606-WA0001 - Kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.06 - cały czerwiec / IMG-20140606-WA0001 - Kopia.jpg",
+        "size_str": "182.8 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-06-06 09:25"
+      },
+      {
+        "title": "IMG-20140606-WA0006 - Kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.06 - cały czerwiec / IMG-20140606-WA0006 - Kopia.jpg",
+        "size_str": "57.0 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-06-06 09:37"
+      },
+      {
+        "title": "IMG-20140606-WA0007 - Kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.06 - cały czerwiec / IMG-20140606-WA0007 - Kopia.jpg",
+        "size_str": "88.7 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-06-06 09:38"
+      },
+      {
+        "title": "IMG-20140606-WA0010 - Kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.06 - cały czerwiec / IMG-20140606-WA0010 - Kopia.jpg",
+        "size_str": "82.5 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-06-06 09:39"
+      },
+      {
+        "title": "IMG-20140625-WA0001 - Kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.06 - cały czerwiec / IMG-20140625-WA0001 - Kopia.jpg",
+        "size_str": "58.1 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-06-25 18:48"
+      },
+      {
+        "title": "IMG-20140626-WA0000 - Kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.06 - cały czerwiec / IMG-20140626-WA0000 - Kopia.jpg",
+        "size_str": "62.8 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-06-26 08:25"
+      },
+      {
+        "title": "04Kwiecień - Kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.12 - kalendarz / 04Kwiecień - Kopia.jpg",
+        "size_str": "1.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-01-28 20:23"
+      },
+      {
+        "title": "IMG_8823 - Kopia.JPG",
+        "path": "Mój dysk / 88📸Zdjęcia / 2011 / 2011.08.27 - Ślub Ani i Pawła Brańskich / Ania i Paweł Robocze / IMG_8823 - Kopia.JPG",
+        "size_str": "1.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2011-08-28 10:45"
+      },
+      {
+        "title": "IMG_9150 - Kopia.JPG",
+        "path": "Mój dysk / 88📸Zdjęcia / 2011 / 2011.08.27 - Ślub Ani i Pawła Brańskich / Ania i Paweł Robocze / IMG_9150 - Kopia.JPG",
+        "size_str": "1.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2011-08-28 10:48"
+      },
+      {
+        "title": "IMG_8824 - Kopia.JPG",
+        "path": "Mój dysk / 88📸Zdjęcia / 2011 / 2011.08.27 - Ślub Ani i Pawła Brańskich / Ania i Paweł Robocze / IMG_8824 - Kopia.JPG",
+        "size_str": "985.3 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2011-08-28 11:30"
+      },
+      {
+        "title": "IMG_0226 - Kopia.JPG",
+        "path": "Mój dysk / 88📸Zdjęcia / 2011 / 2011.08.27 - Ślub Ani i Pawła Brańskich / Ania i Paweł Robocze / IMG_0226 - Kopia.JPG",
+        "size_str": "1005.3 KB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2011-09-17 11:48"
+      },
+      {
+        "title": "IMG_0228 - Kopia.JPG",
+        "path": "Mój dysk / 88📸Zdjęcia / 2011 / 2011.08.27 - Ślub Ani i Pawła Brańskich / Ania i Paweł Robocze / IMG_0228 - Kopia.JPG",
+        "size_str": "1.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2011-09-17 11:49"
+      },
+      {
+        "title": "IMG_0235 - Kopia.JPG",
+        "path": "Mój dysk / 88📸Zdjęcia / 2011 / 2011.08.27 - Ślub Ani i Pawła Brańskich / Ania i Paweł Robocze / IMG_0235 - Kopia.JPG",
+        "size_str": "1.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2011-09-17 11:52"
+      },
+      {
+        "title": "01 - styczen — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.12 - kalendarz Nadii / 01 - styczen — kopia.jpg",
+        "size_str": "1.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-01-21 11:35"
+      },
+      {
+        "title": "07 - lipiec — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.12 - kalendarz Nadii / 07 - lipiec — kopia.jpg",
+        "size_str": "1.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-07-30 11:36"
+      },
+      {
+        "title": "08 - sierpien — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.12 - kalendarz Nadii / 08 - sierpien — kopia.jpg",
+        "size_str": "1.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-08-03 08:14"
+      },
+      {
+        "title": "02 - luty - kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.12 - kalendarz Nadii / 02 - luty - kopia.jpg",
+        "size_str": "1.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-08-05 22:39"
+      },
+      {
+        "title": "09 - wrzesien — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.12 - kalendarz Nadii / 09 - wrzesien — kopia.jpg",
+        "size_str": "2.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-09-22 08:50"
+      },
+      {
+        "title": "10 - październik — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.12 - kalendarz Nadii / 10 - październik — kopia.jpg",
+        "size_str": "2.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-10-30 11:46"
+      },
+      {
+        "title": "12 - grudzień — kopia.jpg",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.12 - kalendarz Nadii / 12 - grudzień — kopia.jpg",
+        "size_str": "2.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-12-16 21:27"
+      },
+      {
+        "title": "Kopia history_20191126_212212.xml",
+        "path": "Mój dysk / 95💽Kopia zapasowa / 20210726 - ASUS Laptop / Paweł - dokumenty / 02. Finanse / 50. Budżet domowy / Kopia history_20191126_212212.xml",
+        "size_str": "1.1 MB",
+        "last_viewed": "2024-01-07 19:46",
+        "last_modified": "2024-01-07 19:46"
+      },
+      {
+        "title": "Kopia history_20191126_212116.xml",
+        "path": "Mój dysk / 95💽Kopia zapasowa / 20210726 - ASUS Laptop / Paweł - dokumenty / 02. Finanse / 50. Budżet domowy / Kopia history_20191126_212116.xml",
+        "size_str": "914.7 KB",
+        "last_viewed": "2024-01-07 19:46",
+        "last_modified": "2024-01-07 19:46"
+      },
+      {
+        "title": "Kopia history_20201017_201356.xml",
+        "path": "Mój dysk / 95💽Kopia zapasowa / 20210726 - ASUS Laptop / Paweł - dokumenty / 02. Finanse / 50. Budżet domowy / Kopia history_20201017_201356.xml",
+        "size_str": "647.2 KB",
+        "last_viewed": "2024-01-07 19:46",
+        "last_modified": "2024-01-07 19:46"
+      },
+      {
+        "title": "015_WYSZUKAJ PIONOWO 2 - kopia.xlsx",
+        "path": "Mój dysk / 95💽Kopia zapasowa / 20190810 - ASUS / SVN / 09. Excel / Szkolenie Excel 2017-02-21 / 015_WYSZUKAJ PIONOWO 2 - kopia.xlsx",
+        "size_str": "197.4 KB",
+        "last_viewed": "2021-10-15 02:29",
+        "last_modified": "2018-09-04 21:18"
+      },
+      {
+        "title": "wygeneruj mi podsumowanie tej rozmowy z osateczny... (1).gdoc",
+        "path": "Mój dysk / wygeneruj mi podsumowanie tej rozmowy z osateczny... (1).gdoc",
+        "size_str": "4.7 KB",
+        "last_viewed": "2026-09-04 21:15",
+        "last_modified": "2026-09-04 21:15"
+      }
+    ],
+    "llm_prompt_exports_in_root": [
+      {
+        "title": "jeszcze raz poproszę o te wykresy, ale pokaż sumę....gdoc",
+        "path": "Mój dysk / jeszcze raz poproszę o te wykresy, ale pokaż sumę....gdoc",
+        "size_str": "132.7 KB",
+        "last_viewed": "2026-04-05 21:47",
+        "last_modified": "2026-04-05 21:47"
+      },
+      {
+        "title": "Czy możesz załączyć podsumowanie o które prosiłem?.gdoc",
+        "path": "Mój dysk / Czy możesz załączyć podsumowanie o które prosiłem?.gdoc",
+        "size_str": "4.9 KB",
+        "last_viewed": "2026-05-24 10:16",
+        "last_modified": "2026-04-12 17:56"
+      },
+      {
+        "title": "zrób z tego tabelę - w kolumnach fazy życia, a w....gdoc",
+        "path": "Mój dysk / zrób z tego tabelę - w kolumnach fazy życia, a w....gdoc",
+        "size_str": "4.6 KB",
+        "last_viewed": "2026-09-11 19:29",
+        "last_modified": "2026-05-22 22:30"
+      },
+      {
+        "title": "Serio? Nie możesz wyciągnąć całej tej konwersacji ....gdoc",
+        "path": "Mój dysk / Serio? Nie możesz wyciągnąć całej tej konwersacji ....gdoc",
+        "size_str": "5.1 KB",
+        "last_viewed": "2026-06-04 19:40",
+        "last_modified": "2026-06-04 19:40"
+      },
+      {
+        "title": "Super, dodaj jeszcze do dokumentu kartę z całą tą ....gdoc",
+        "path": "Mój dysk / Super, dodaj jeszcze do dokumentu kartę z całą tą ....gdoc",
+        "size_str": "3.6 KB",
+        "last_viewed": "2026-06-04 19:37",
+        "last_modified": "2026-06-04 19:37"
+      },
+      {
+        "title": "dobrze, biorąc pod uwagę te kryteria przygotuj mi....gsheet",
+        "path": "Mój dysk / dobrze, biorąc pod uwagę te kryteria przygotuj mi....gsheet",
+        "size_str": "2.0 KB",
+        "last_viewed": "2026-07-19 11:13",
+        "last_modified": "2026-07-19 11:13"
+      },
+      {
+        "title": "wygeneruj mi podsumowanie tej rozmowy z osateczny....gdoc",
+        "path": "Mój dysk / wygeneruj mi podsumowanie tej rozmowy z osateczny....gdoc",
+        "size_str": "1.6 KB",
+        "last_viewed": "2026-09-04 21:15",
+        "last_modified": "2026-09-04 21:15"
+      }
+    ],
+    "stray_photos_in_root": [
+      {
+        "title": "IMG_2316.jpeg",
+        "path": "Mój dysk / IMG_2316.jpeg",
+        "size_str": "5.0 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2313.jpeg",
+        "path": "Mój dysk / IMG_2313.jpeg",
+        "size_str": "5.2 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2321.jpeg",
+        "path": "Mój dysk / IMG_2321.jpeg",
+        "size_str": "4.2 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2312.jpeg",
+        "path": "Mój dysk / IMG_2312.jpeg",
+        "size_str": "4.4 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2319.jpeg",
+        "path": "Mój dysk / IMG_2319.jpeg",
+        "size_str": "4.9 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2318.jpeg",
+        "path": "Mój dysk / IMG_2318.jpeg",
+        "size_str": "5.8 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2320.jpeg",
+        "path": "Mój dysk / IMG_2320.jpeg",
+        "size_str": "4.9 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2314.jpeg",
+        "path": "Mój dysk / IMG_2314.jpeg",
+        "size_str": "2.9 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2317.jpeg",
+        "path": "Mój dysk / IMG_2317.jpeg",
+        "size_str": "5.1 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2322.jpeg",
+        "path": "Mój dysk / IMG_2322.jpeg",
+        "size_str": "3.5 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2315.jpeg",
+        "path": "Mój dysk / IMG_2315.jpeg",
+        "size_str": "5.8 MB",
+        "last_viewed": "2026-04-14 17:37",
+        "last_modified": "2026-04-14 17:38"
+      },
+      {
+        "title": "IMG_2323.jpeg",
+        "path": "Mój dysk / IMG_2323.jpeg",
+        "size_str": "5.2 MB",
+        "last_viewed": "2026-05-24 10:16",
+        "last_modified": "2026-04-14 17:38"
+      }
+    ],
+    "huge_abandoned_binaries_archives": [
+      {
+        "title": "VID_20191225_200557.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0000 - Eksploatacja domu w Lewickich / VID_20191225_200557.mp4",
+        "size_str": "403.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-12-25 20:08"
+      },
+      {
+        "title": "VID_20191225_200924.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0000 - Eksploatacja domu w Lewickich / VID_20191225_200924.mp4",
+        "size_str": "120.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-12-25 20:10"
+      },
+      {
+        "title": "Virtual Pool 4-4.1.4.9.exe",
+        "path": "Mój dysk / 94🧑‍💻Oprogramowanie / 02. Virtual Pool 3 / Virtual Pool 4-4.1.4.9.exe",
+        "size_str": "653.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2021-06-20 20:48"
+      },
+      {
+        "title": "20161231_185508.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / 20161231_185508.mp4",
+        "size_str": "102.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-12-31 18:56"
+      },
+      {
+        "title": "20160924_163912.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.09 / 20160924_163912.mp4",
+        "size_str": "125.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-09-24 16:40"
+      },
+      {
+        "title": "20160929_115637.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.09 / 20160929_115637.mp4",
+        "size_str": "135.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-09-29 11:57"
+      },
+      {
+        "title": "20171122_200447.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171122_200447.mp4",
+        "size_str": "263.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-11-22 19:07"
+      },
+      {
+        "title": "20171123_195243.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171123_195243.mp4",
+        "size_str": "275.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-11-23 18:55"
+      },
+      {
+        "title": "20171209_144852.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171209_144852.mp4",
+        "size_str": "177.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-12-09 13:50"
+      },
+      {
+        "title": "20171211_183846.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171211_183846.mp4",
+        "size_str": "107.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-12-11 17:39"
+      },
+      {
+        "title": "20171219_160930.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171219_160930.mp4",
+        "size_str": "848.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-12-19 15:16"
+      },
+      {
+        "title": "20171219_161641.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171219_161641.mp4",
+        "size_str": "257.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-12-19 15:18"
+      },
+      {
+        "title": "20171219_161913.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171219_161913.mp4",
+        "size_str": "207.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-12-19 15:20"
+      },
+      {
+        "title": "20171219_162809.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171219_162809.mp4",
+        "size_str": "271.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-12-19 15:30"
+      },
+      {
+        "title": "20171219_163035.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171219_163035.mp4",
+        "size_str": "417.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-12-19 15:34"
+      },
+      {
+        "title": "20171224_170535.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171224_170535.mp4",
+        "size_str": "158.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-12-24 16:06"
+      },
+      {
+        "title": "20171224_170720.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171224_170720.mp4",
+        "size_str": "134.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-12-24 16:08"
+      },
+      {
+        "title": "20171225_201535.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20171225_201535.mp4",
+        "size_str": "118.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-12-25 19:16"
+      },
+      {
+        "title": "20180111_191048.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20180111_191048.mp4",
+        "size_str": "121.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-01-11 18:11"
+      },
+      {
+        "title": "20180111_191201.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20180111_191201.mp4",
+        "size_str": "197.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-01-11 18:13"
+      },
+      {
+        "title": "20180120_190721.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20180120_190721.mp4",
+        "size_str": "101.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-01-20 18:08"
+      },
+      {
+        "title": "20180225_150331.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20180225_150331.mp4",
+        "size_str": "165.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-02-25 14:04"
+      },
+      {
+        "title": "20180306_114115.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20180306_114115.mp4",
+        "size_str": "283.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-03-06 10:43"
+      },
+      {
+        "title": "20180628_183410.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180628_183410.mp4",
+        "size_str": "166.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-06-28 18:36"
+      },
+      {
+        "title": "20180731_102433.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180731_102433.mp4",
+        "size_str": "153.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-07-31 10:25"
+      },
+      {
+        "title": "20180802_120937.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180802_120937.mp4",
+        "size_str": "122.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-08-02 12:10"
+      },
+      {
+        "title": "20180802_184820.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180802_184820.mp4",
+        "size_str": "179.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-08-02 18:49"
+      },
+      {
+        "title": "20180802_190106.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180802_190106.mp4",
+        "size_str": "232.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-08-02 19:03"
+      },
+      {
+        "title": "20180802_190323.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180802_190323.mp4",
+        "size_str": "352.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-08-02 19:06"
+      },
+      {
+        "title": "20180901_181605.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180901_181605.mp4",
+        "size_str": "153.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-09-01 18:17"
+      },
+      {
+        "title": "20180916_110408.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20180916_110408.mp4",
+        "size_str": "114.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-09-16 11:05"
+      },
+      {
+        "title": "20181003_184535.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20181003_184535.mp4",
+        "size_str": "131.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-10-03 18:46"
+      },
+      {
+        "title": "20181014_140241.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20181014_140241.mp4",
+        "size_str": "173.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-10-14 14:04"
+      },
+      {
+        "title": "20181016_183114.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20181016_183114.mp4",
+        "size_str": "142.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-10-16 18:32"
+      },
+      {
+        "title": "20181020_133122.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20181020_133122.mp4",
+        "size_str": "373.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-10-20 13:34"
+      },
+      {
+        "title": "20181202_200809.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera / 20181202_200809.mp4",
+        "size_str": "112.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-12-02 20:09"
+      },
+      {
+        "title": "20161102_065243.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20161102_065243.mp4",
+        "size_str": "147.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-11-02 05:54"
+      },
+      {
+        "title": "20161111_153644.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20161111_153644.mp4",
+        "size_str": "104.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-11-11 14:37"
+      },
+      {
+        "title": "20161113_135852.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20161113_135852.mp4",
+        "size_str": "199.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-11-13 13:00"
+      },
+      {
+        "title": "20161223_102723.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20161223_102723.mp4",
+        "size_str": "107.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-12-23 09:28"
+      },
+      {
+        "title": "20161223_110137.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20161223_110137.mp4",
+        "size_str": "102.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-12-23 10:02"
+      },
+      {
+        "title": "20170109_184459.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170109_184459.mp4",
+        "size_str": "180.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-01-09 17:46"
+      },
+      {
+        "title": "20170127_135530.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170127_135530.mp4",
+        "size_str": "166.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-01-27 12:56"
+      },
+      {
+        "title": "20170131_111357.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170131_111357.mp4",
+        "size_str": "130.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-01-31 10:15"
+      },
+      {
+        "title": "20170308_111415.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170308_111415.mp4",
+        "size_str": "184.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-03-08 10:15"
+      },
+      {
+        "title": "20170318_155830.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170318_155830.mp4",
+        "size_str": "107.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-03-18 14:59"
+      },
+      {
+        "title": "20170323_143336.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170323_143336.mp4",
+        "size_str": "281.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-03-23 13:36"
+      },
+      {
+        "title": "20170401_132202.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170401_132202.mp4",
+        "size_str": "170.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-04-01 13:23"
+      },
+      {
+        "title": "20170518_121715.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170518_121715.mp4",
+        "size_str": "470.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-05-18 12:21"
+      },
+      {
+        "title": "20170531_171305.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170531_171305.mp4",
+        "size_str": "131.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-05-31 17:14"
+      },
+      {
+        "title": "20170531_180353.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170531_180353.mp4",
+        "size_str": "297.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-05-31 18:06"
+      },
+      {
+        "title": "20170608_111440.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170608_111440.mp4",
+        "size_str": "157.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-06-08 11:16"
+      },
+      {
+        "title": "20170703_185233.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170703_185233.mp4",
+        "size_str": "162.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-07-03 18:53"
+      },
+      {
+        "title": "20170710_163657.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170710_163657.mp4",
+        "size_str": "133.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-07-10 16:38"
+      },
+      {
+        "title": "20170731_173334.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170731_173334.mp4",
+        "size_str": "260.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-07-31 17:35"
+      },
+      {
+        "title": "20170803_195040.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / zdjecia 2017 / Camera 1 / 20170803_195040.mp4",
+        "size_str": "289.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-08-03 19:53"
+      },
+      {
+        "title": "00235.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00235.MTS",
+        "size_str": "175.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 17:06"
+      },
+      {
+        "title": "00236.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00236.MTS",
+        "size_str": "120.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 17:25"
+      },
+      {
+        "title": "00237.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00237.MTS",
+        "size_str": "238.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 17:27"
+      },
+      {
+        "title": "00239.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00239.MTS",
+        "size_str": "129.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 17:56"
+      },
+      {
+        "title": "00240.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00240.MTS",
+        "size_str": "145.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 17:58"
+      },
+      {
+        "title": "00242.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00242.MTS",
+        "size_str": "103.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 18:04"
+      },
+      {
+        "title": "00243.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00243.MTS",
+        "size_str": "107.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 18:06"
+      },
+      {
+        "title": "00244.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00244.MTS",
+        "size_str": "136.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 18:09"
+      },
+      {
+        "title": "00245.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00245.MTS",
+        "size_str": "143.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 18:58"
+      },
+      {
+        "title": "00247.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00247.MTS",
+        "size_str": "705.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 19:34"
+      },
+      {
+        "title": "00248.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00248.MTS",
+        "size_str": "384.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 20:06"
+      },
+      {
+        "title": "00252.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00252.MTS",
+        "size_str": "100.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-01 20:16"
+      },
+      {
+        "title": "00256.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00256.MTS",
+        "size_str": "146.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-02 01:16"
+      },
+      {
+        "title": "00260.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00260.MTS",
+        "size_str": "134.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-02 01:24"
+      },
+      {
+        "title": "00268.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00268.MTS",
+        "size_str": "157.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-02 01:37"
+      },
+      {
+        "title": "00270.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00270.MTS",
+        "size_str": "191.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-02 01:47"
+      },
+      {
+        "title": "00271.MTS",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09.01-02 - Ślub i Wesele / Wujek Tomek / 00271.MTS",
+        "size_str": "153.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2012-09-02 01:48"
+      },
+      {
+        "title": "VID_20200726_153331.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.07 / 2020.07-08 Cyrhla i Tylicz / VID_20200726_153331.mp4",
+        "size_str": "129.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2020-07-26 15:33"
+      },
+      {
+        "title": "VID_20200727_094830.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.07 / 2020.07-08 Cyrhla i Tylicz / VID_20200727_094830.mp4",
+        "size_str": "123.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2020-07-27 09:48"
+      },
+      {
+        "title": "VID_20200729_103831.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.07 / 2020.07-08 Cyrhla i Tylicz / VID_20200729_103831.mp4",
+        "size_str": "104.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2020-07-29 10:39"
+      },
+      {
+        "title": "VID_20200729_133555.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.07 / 2020.07-08 Cyrhla i Tylicz / VID_20200729_133555.mp4",
+        "size_str": "126.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2020-07-29 13:36"
+      },
+      {
+        "title": "VID_20200731_101854.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.07 / 2020.07-08 Cyrhla i Tylicz / VID_20200731_101854.mp4",
+        "size_str": "111.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2020-07-31 10:19"
+      },
+      {
+        "title": "VID_20200805_142527.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.07 / 2020.07-08 Cyrhla i Tylicz / VID_20200805_142527.mp4",
+        "size_str": "347.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2020-08-05 14:27"
+      },
+      {
+        "title": "VID_20200805_142749.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.07 / 2020.07-08 Cyrhla i Tylicz / VID_20200805_142749.mp4",
+        "size_str": "119.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2020-08-05 14:28"
+      },
+      {
+        "title": "VID_20200617_203459.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.06 / VID_20200617_203459.mp4",
+        "size_str": "196.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2020-06-17 20:36"
+      },
+      {
+        "title": "VID_20200613_123950.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2020 / 2020.06 / 2020.06 - Wicie / VID_20200613_123950.mp4",
+        "size_str": "139.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2020-06-13 12:40"
+      },
+      {
+        "title": "VID_20180314_185503.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20180314_185503.mp4",
+        "size_str": "2.4 GB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-03-14 19:19"
+      },
+      {
+        "title": "VID_20180513_123424.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20180513_123424.mp4",
+        "size_str": "451.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-05-13 12:38"
+      },
+      {
+        "title": "VID_20180513_123907.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20180513_123907.mp4",
+        "size_str": "115.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-05-13 12:40"
+      },
+      {
+        "title": "VID_20180514_160753.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20180514_160753.mp4",
+        "size_str": "349.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-05-14 16:11"
+      },
+      {
+        "title": "VID_20180514_161733.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20180514_161733.mp4",
+        "size_str": "176.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-05-14 16:19"
+      },
+      {
+        "title": "VID_20180618_184152.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20180618_184152.mp4",
+        "size_str": "127.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-06-18 18:43"
+      },
+      {
+        "title": "VID_20180721_121611.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20180721_121611.mp4",
+        "size_str": "103.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-07-21 12:17"
+      },
+      {
+        "title": "VID_20180802_193120.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20180802_193120.mp4",
+        "size_str": "103.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-08-02 19:32"
+      },
+      {
+        "title": "VID_20190122_104837.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20190122_104837.mp4",
+        "size_str": "153.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-01-22 10:50"
+      },
+      {
+        "title": "VID_20190123_115631.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20190123_115631.mp4",
+        "size_str": "141.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-01-23 11:57"
+      },
+      {
+        "title": "VID_20190124_143612.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20190124_143612.mp4",
+        "size_str": "104.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-01-24 14:37"
+      },
+      {
+        "title": "VID_20190124_143716.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20190124_143716.mp4",
+        "size_str": "109.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-01-24 14:38"
+      },
+      {
+        "title": "VID_20190125_104634.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20190125_104634.mp4",
+        "size_str": "288.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-01-25 10:49"
+      },
+      {
+        "title": "VID_20190304_151619.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20190304_151619.mp4",
+        "size_str": "248.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-03-04 15:18"
+      },
+      {
+        "title": "VID_20190421_114301.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 0001 - Temp / Camera / VID_20190421_114301.mp4",
+        "size_str": "202.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-04-21 11:45"
+      },
+      {
+        "title": "20131107_153600.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2013.11 - Opole / 20131107_153600.mp4",
+        "size_str": "460.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-11-07 15:40"
+      },
+      {
+        "title": "20131111_185628.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2013.11 - Opole / 20131111_185628.mp4",
+        "size_str": "212.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-11-11 18:58"
+      },
+      {
+        "title": "20131217_090628.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014.01.12 - Pierwszy basen / 20131217_090628.mp4",
+        "size_str": "146.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-12-17 08:07"
+      },
+      {
+        "title": "MVI_3257.AVI",
+        "path": "Mój dysk / 88📸Zdjęcia / 2012 / 2012.09 - Podróż poślubna (Włochy) / MVI_3257.AVI",
+        "size_str": "112.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2009-02-10 00:38"
+      },
+      {
+        "title": "20130928_191342.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014 - Kalendarz Nadii / Zdjęcia / 20130928_191342.mp4",
+        "size_str": "205.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-10-28 21:09"
+      },
+      {
+        "title": "20130928_192425.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014 - Kalendarz Nadii / Zdjęcia / 20130928_192425.mp4",
+        "size_str": "565.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-10-28 21:18"
+      },
+      {
+        "title": "20130928_191342.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014 - Kalendarz Nadii / GALAXY S2 / 20130928_191342.mp4",
+        "size_str": "205.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-09-28 20:15"
+      },
+      {
+        "title": "20130928_192425.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014 - Kalendarz Nadii / GALAXY S2 / 20130928_192425.mp4",
+        "size_str": "565.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-09-28 20:44"
+      },
+      {
+        "title": "20131107_153600.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014 - Kalendarz Nadii / GALAXY S2 / 20131107_153600.mp4",
+        "size_str": "460.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-11-07 15:40"
+      },
+      {
+        "title": "20131111_185628.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014 - Kalendarz Nadii / GALAXY S2 / 20131111_185628.mp4",
+        "size_str": "212.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-11-11 18:58"
+      },
+      {
+        "title": "VID_20190922_131850.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2019 / 2019.09 / VID_20190922_131850.mp4",
+        "size_str": "102.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-09-22 13:19"
+      },
+      {
+        "title": "VID_20190831_195951.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2019 / 2019.08-09 - Rodos / VID_20190831_195951.mp4",
+        "size_str": "212.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-08-31 19:01"
+      },
+      {
+        "title": "VID_20190901_102958.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2019 / 2019.08-09 - Rodos / VID_20190901_102958.mp4",
+        "size_str": "164.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-09-01 09:31"
+      },
+      {
+        "title": "20140106_150804.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014.02 - Warszawa / 20140106_150804.mp4",
+        "size_str": "335.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-01-06 15:11"
+      },
+      {
+        "title": "20140113_152518.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014.02 - Warszawa / 20140113_152518.mp4",
+        "size_str": "184.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-01-13 15:27"
+      },
+      {
+        "title": "20140223_070456.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014.02 - Warszawa / 20140223_070456.mp4",
+        "size_str": "196.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-02-23 06:07"
+      },
+      {
+        "title": "20140113_152518.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2014.01 - Warszawa / 20140113_152518.mp4",
+        "size_str": "184.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-01-13 15:27"
+      },
+      {
+        "title": "20130928_191342.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2013.09 - Dom / 20130928_191342.mp4",
+        "size_str": "205.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-09-28 19:15"
+      },
+      {
+        "title": "20130928_192425.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013-2014 - Nadia / 2013.09 - Dom / 20130928_192425.mp4",
+        "size_str": "565.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-09-28 19:44"
+      },
+      {
+        "title": "VID_20191217_162631.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2019 / 2019.12 / 2019.12 - swiatecznie Nadia i Michal / VID_20191217_162631.mp4",
+        "size_str": "492.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-12-17 16:29"
+      },
+      {
+        "title": "VID_20191217_163351.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2019 / 2019.12 / 2019.12 - swiatecznie Nadia i Michal / VID_20191217_163351.mp4",
+        "size_str": "261.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-12-17 16:35"
+      },
+      {
+        "title": "VID_20191218_161219.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2019 / 2019.12 / 2019.12 - swiatecznie Nadia i Michal / VID_20191218_161219.mp4",
+        "size_str": "315.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-12-18 16:14"
+      },
+      {
+        "title": "VID_20191218_162110.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2019 / 2019.12 / 2019.12 - swiatecznie Nadia i Michal / VID_20191218_162110.mp4",
+        "size_str": "156.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-12-18 16:22"
+      },
+      {
+        "title": "VID_20191218_162414.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2019 / 2019.12 / 2019.12 - swiatecznie Nadia i Michal / VID_20191218_162414.mp4",
+        "size_str": "117.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2019-12-18 16:25"
+      },
+      {
+        "title": "20140218_094034.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.02 - caly luty / 20140218_094034.mp4",
+        "size_str": "325.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-02-18 09:43"
+      },
+      {
+        "title": "20140222_101759.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.02 - caly luty / 20140222_101759.mp4",
+        "size_str": "164.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-02-22 10:19"
+      },
+      {
+        "title": "20140223_070456.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.02 - caly luty / 20140223_070456.mp4",
+        "size_str": "196.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-02-23 07:07"
+      },
+      {
+        "title": "20140223_124521.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.02 - caly luty / 20140223_124521.mp4",
+        "size_str": "105.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-02-23 12:46"
+      },
+      {
+        "title": "20140902_202050.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.09 - cały wrzesień / 20140902_202050.mp4",
+        "size_str": "127.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-09-02 20:21"
+      },
+      {
+        "title": "20140907_103346.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.09 - cały wrzesień / 20140907_103346.mp4",
+        "size_str": "186.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-09-07 10:35"
+      },
+      {
+        "title": "20140929_163345.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.09 - cały wrzesień / 20140929_163345.mp4",
+        "size_str": "148.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-09-29 16:35"
+      },
+      {
+        "title": "20141104_171623.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.11 - cały listopad / 20141104_171623.mp4",
+        "size_str": "129.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-11-04 17:17"
+      },
+      {
+        "title": "20141104_193339.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.11 - cały listopad / 20141104_193339.mp4",
+        "size_str": "151.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-11-04 19:35"
+      },
+      {
+        "title": "20141126_113131.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.11 - cały listopad / 20141126_113131.mp4",
+        "size_str": "113.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-11-26 11:32"
+      },
+      {
+        "title": "20140525_175831.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.05.20-29 - Kościelisko Kraków Opole / Galaxy S3 / 20140525_175831.mp4",
+        "size_str": "134.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-05-25 17:59"
+      },
+      {
+        "title": "IMG_0016.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.05.20-29 - Kościelisko Kraków Opole / iPad / IMG_0016.MOV",
+        "size_str": "135.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-05-29 14:41"
+      },
+      {
+        "title": "20140614_212654.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.06 - cały czerwiec / 20140614_212654.mp4",
+        "size_str": "135.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-06-14 21:28"
+      },
+      {
+        "title": "20140618_123238.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.06 - cały czerwiec / 20140618_123238.mp4",
+        "size_str": "133.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-06-18 12:33"
+      },
+      {
+        "title": "20140614_110842.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.06 - cały czerwiec / Paweł / 20140614_110842.mp4",
+        "size_str": "184.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-06-14 11:10"
+      },
+      {
+        "title": "20140726_165541.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.07 - cały lipiec / Paweł / 20140726_165541.mp4",
+        "size_str": "267.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-07-26 16:57"
+      },
+      {
+        "title": "20141004_100928.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.10 - cały październik / 20141004_100928.mp4",
+        "size_str": "151.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-10-04 10:10"
+      },
+      {
+        "title": "20141021_151331.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.10 - cały październik / 20141021_151331.mp4",
+        "size_str": "318.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-10-21 16:16"
+      },
+      {
+        "title": "20141026_140334.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.10 - cały październik / 20141026_140334.mp4",
+        "size_str": "103.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-10-26 14:04"
+      },
+      {
+        "title": "20141026_161744.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.10 - cały październik / 20141026_161744.mp4",
+        "size_str": "208.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-10-26 16:19"
+      },
+      {
+        "title": "20161231_185508.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.12 / 20161231_185508.mp4",
+        "size_str": "102.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-12-31 18:56"
+      },
+      {
+        "title": "20141206_091333.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.12 - cały grudzień / 20141206_091333.mp4",
+        "size_str": "252.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-12-06 09:15"
+      },
+      {
+        "title": "20141220_154552.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.12 - cały grudzień / 20141220_154552.mp4",
+        "size_str": "134.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-12-20 15:47"
+      },
+      {
+        "title": "20160802_185326.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.08 / 20160802_185326.mp4",
+        "size_str": "158.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-08-02 18:54"
+      },
+      {
+        "title": "20160813_155727.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.08 / 20160813_155727.mp4",
+        "size_str": "105.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-08-14 07:10"
+      },
+      {
+        "title": "20160813_154748.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.08 / 20160813_154748.mp4",
+        "size_str": "162.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-08-14 07:10"
+      },
+      {
+        "title": "20160814_174745.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.08 / 20160814_174745.mp4",
+        "size_str": "137.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-08-14 17:48"
+      },
+      {
+        "title": "20160815_171720.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.08 / 20160815_171720.mp4",
+        "size_str": "184.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-08-15 17:18"
+      },
+      {
+        "title": "20160829_184108.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.08 / 20160829_184108.mp4",
+        "size_str": "250.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-08-29 18:43"
+      },
+      {
+        "title": "20140403_173104.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.04 - cały kwiecień / 20140403_173104.mp4",
+        "size_str": "139.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-04-03 17:32"
+      },
+      {
+        "title": "20160604_163410.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.06 / 20160604_163410.mp4",
+        "size_str": "165.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-06-04 16:35"
+      },
+      {
+        "title": "20160609_183825.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.06 / 20160609_183825.mp4",
+        "size_str": "150.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-06-09 18:39"
+      },
+      {
+        "title": "20140322_190937.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.03 - cały marzec / 20140322_190937.mp4",
+        "size_str": "105.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-03-22 19:10"
+      },
+      {
+        "title": "20140325_175609.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.03 - cały marzec / 20140325_175609.mp4",
+        "size_str": "194.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-03-25 16:58"
+      },
+      {
+        "title": "20160702_112049.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.07 / 20160702_112049.mp4",
+        "size_str": "115.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-07-02 11:21"
+      },
+      {
+        "title": "20160702_112359.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.07 / 20160702_112359.mp4",
+        "size_str": "163.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-07-02 11:25"
+      },
+      {
+        "title": "20160704_160238.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.07 / 20160704_160238.mp4",
+        "size_str": "100.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-07-04 16:04"
+      },
+      {
+        "title": "20140802_081015.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / 20140802_081015.mp4",
+        "size_str": "181.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-02 08:12"
+      },
+      {
+        "title": "20140810_153239.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / 20140810_153239.mp4",
+        "size_str": "358.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-10 15:35"
+      },
+      {
+        "title": "20140810_161232.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / 20140810_161232.mp4",
+        "size_str": "137.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-10 16:13"
+      },
+      {
+        "title": "20140812_124751.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / 20140812_124751.mp4",
+        "size_str": "117.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-12 12:49"
+      },
+      {
+        "title": "20140814_165255.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / 20140814_165255.mp4",
+        "size_str": "180.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-14 16:54"
+      },
+      {
+        "title": "20140818_141017.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / 20140818_141017.mp4",
+        "size_str": "115.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-18 14:11"
+      },
+      {
+        "title": "20140824_165749.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / 20140824_165749.mp4",
+        "size_str": "125.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-24 16:58"
+      },
+      {
+        "title": "20140827_163811.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / 20140827_163811.mp4",
+        "size_str": "102.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-27 16:39"
+      },
+      {
+        "title": "20140831_122425.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / 20140831_122425.mp4",
+        "size_str": "149.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-31 12:25"
+      },
+      {
+        "title": "20140814_165255.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / Paweł / 20140814_165255.mp4",
+        "size_str": "180.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-14 16:54"
+      },
+      {
+        "title": "20140810_Radek_MVI_1504.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / Radek / 20140810_Radek_MVI_1504.MOV",
+        "size_str": "112.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-10 20:27"
+      },
+      {
+        "title": "20140810_Radek_MVI_1498.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / Radek / 20140810_Radek_MVI_1498.MOV",
+        "size_str": "157.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-10 20:28"
+      },
+      {
+        "title": "20140810_Radek_MVI_1496.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / Radek / 20140810_Radek_MVI_1496.MOV",
+        "size_str": "138.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-10 20:28"
+      },
+      {
+        "title": "20140810_Radek_MVI_1488.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / Radek / 20140810_Radek_MVI_1488.MOV",
+        "size_str": "167.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-10 20:28"
+      },
+      {
+        "title": "20140810_Radek_MVI_1485.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / Radek / 20140810_Radek_MVI_1485.MOV",
+        "size_str": "300.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-10 20:29"
+      },
+      {
+        "title": "Img_20140817_085643.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / Kostek / Img_20140817_085643.MOV",
+        "size_str": "123.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-17 08:56"
+      },
+      {
+        "title": "Img_20140817_085849.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / Kostek / Img_20140817_085849.MOV",
+        "size_str": "123.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-17 08:58"
+      },
+      {
+        "title": "Img_20140817_090157.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2014 / 2014.08 - cały sierpień / Kostek / Img_20140817_090157.MOV",
+        "size_str": "263.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-08-17 09:01"
+      },
+      {
+        "title": "20160330_165621.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.04 / 20160330_165621.mp4",
+        "size_str": "274.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-03-30 16:58"
+      },
+      {
+        "title": "20160405_160750.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.04 / 20160405_160750.mp4",
+        "size_str": "111.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-04-05 16:08"
+      },
+      {
+        "title": "20160405_161058.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.04 / 20160405_161058.mp4",
+        "size_str": "146.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-04-05 16:12"
+      },
+      {
+        "title": "20160406_091809.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.04 / 20160406_091809.mp4",
+        "size_str": "126.8 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-04-06 09:19"
+      },
+      {
+        "title": "20160422_074217.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.04 / 20160422_074217.mp4",
+        "size_str": "293.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-04-22 07:44"
+      },
+      {
+        "title": "20160426_175837.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.04 / 20160426_175837.mp4",
+        "size_str": "171.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-04-26 18:00"
+      },
+      {
+        "title": "20160429_153745.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.04 / 20160429_153745.mp4",
+        "size_str": "276.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-04-29 15:40"
+      },
+      {
+        "title": "20160731_160604.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2016 / 2016.07.31 - chrzciny Michasia / 20160731_160604.mp4",
+        "size_str": "113.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2016-08-09 17:47"
+      },
+      {
+        "title": "20131231_191657.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013 / 2013.12.29-2014.01.05 - Opole / 20131231_191657.mp4",
+        "size_str": "207.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-12-31 19:19"
+      },
+      {
+        "title": "20140106_150804.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013 / 2013.12.29-2014.01.05 - Opole / 20140106_150804.mp4",
+        "size_str": "335.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2014-01-06 14:11"
+      },
+      {
+        "title": "MVI_3863.AVI",
+        "path": "Mój dysk / 88📸Zdjęcia / 2011 / 2011.08.11 - Stary Folwark / MVI_3863.AVI",
+        "size_str": "101.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2011-08-15 11:55"
+      },
+      {
+        "title": "DSC_0726.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013 / 2013.10.04 - Wesele Grzesia Kaliszewicza i Asi / DSC_0726.MOV",
+        "size_str": "240.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-10-04 16:43"
+      },
+      {
+        "title": "DSC_0797.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013 / 2013.10.04 - Wesele Grzesia Kaliszewicza i Asi / DSC_0797.MOV",
+        "size_str": "120.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-10-04 17:28"
+      },
+      {
+        "title": "DSC_0800.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013 / 2013.10.04 - Wesele Grzesia Kaliszewicza i Asi / DSC_0800.MOV",
+        "size_str": "150.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-10-04 18:25"
+      },
+      {
+        "title": "DSC_0803.MOV",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013 / 2013.10.04 - Wesele Grzesia Kaliszewicza i Asi / DSC_0803.MOV",
+        "size_str": "253.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-10-04 18:27"
+      },
+      {
+        "title": "20131224_110428.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2013 / 2013.12.22-2013.12.28 - Boże Narodzenie w Lewickich / 20131224_110428.mp4",
+        "size_str": "339.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2013-12-24 11:07"
+      },
+      {
+        "title": "VID_20180721_121611.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.07 / VID_20180721_121611.mp4",
+        "size_str": "103.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-07-21 12:17"
+      },
+      {
+        "title": "VID_20180618_184152.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.06 / VID_20180618_184152.mp4",
+        "size_str": "127.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-06-18 18:43"
+      },
+      {
+        "title": "20181223_133932_Michał_furora_gitara.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.12 / 20181223_133932_Michał_furora_gitara.mp4",
+        "size_str": "107.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-12-23 13:40"
+      },
+      {
+        "title": "VID_20180513_123424.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.05 / VID_20180513_123424.mp4",
+        "size_str": "451.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-05-13 12:38"
+      },
+      {
+        "title": "VID_20180513_123907.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.05 / VID_20180513_123907.mp4",
+        "size_str": "115.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-05-13 12:40"
+      },
+      {
+        "title": "VID_20180514_160753.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.05 / 01. Active kids / VID_20180514_160753.mp4",
+        "size_str": "349.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-05-14 16:11"
+      },
+      {
+        "title": "VID_20180514_161733.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.05 / 01. Active kids / VID_20180514_161733.mp4",
+        "size_str": "176.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-05-14 16:19"
+      },
+      {
+        "title": "20181219_162709.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.12 - Active kids / 02. Wigilia / 20181219_162709.mp4",
+        "size_str": "214.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-12-19 16:28"
+      },
+      {
+        "title": "20181219_162936.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.12 - Active kids / 02. Wigilia / 20181219_162936.mp4",
+        "size_str": "271.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-12-19 16:31"
+      },
+      {
+        "title": "20181219_163347.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.12 - Active kids / 02. Wigilia / 20181219_163347.mp4",
+        "size_str": "236.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-12-19 16:35"
+      },
+      {
+        "title": "VID_20180802_193120_sto lat.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2018 / 2018.07-08 - Osada Śnieżka / VID_20180802_193120_sto lat.mp4",
+        "size_str": "103.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2018-08-02 19:32"
+      },
+      {
+        "title": "20150430_155646.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.04 / 20150430_155646.mp4",
+        "size_str": "110.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-04-30 15:57"
+      },
+      {
+        "title": "20151029_212625.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.10 / 20151029_212625.mp4",
+        "size_str": "239.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-10-29 21:28"
+      },
+      {
+        "title": "20151112_225441.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.11 / 20151112_225441.mp4",
+        "size_str": "185.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-11-12 22:56"
+      },
+      {
+        "title": "20150815_171926.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.08 / 20150815_171926.mp4",
+        "size_str": "130.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-08-15 17:20"
+      },
+      {
+        "title": "20150820_093415.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.08 / 20150820_093415.mp4",
+        "size_str": "115.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-08-20 09:35"
+      },
+      {
+        "title": "20150820_095122.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.08 / 20150820_095122.mp4",
+        "size_str": "220.1 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-08-20 09:53"
+      },
+      {
+        "title": "20150118_092244.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.01 / 20150118_092244.mp4",
+        "size_str": "271.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-01-18 08:24"
+      },
+      {
+        "title": "20150719_142331.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.07 / 20150719_142331.mp4",
+        "size_str": "105.2 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-07-19 14:24"
+      },
+      {
+        "title": "20150726_164527.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.07 / 20150726_164527.mp4",
+        "size_str": "243.7 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-07-26 16:47"
+      },
+      {
+        "title": "20150905_185050.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.09 / 20150905_185050.mp4",
+        "size_str": "123.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-09-05 18:51"
+      },
+      {
+        "title": "20150905_185320.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.09 / 20150905_185320.mp4",
+        "size_str": "174.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-09-05 18:54"
+      },
+      {
+        "title": "20151213_113600.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.12 / 20151213_113600.mp4",
+        "size_str": "109.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-12-13 11:36"
+      },
+      {
+        "title": "20151224_164810.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2015 (1) / 2015.12 / 20151224_164810.mp4",
+        "size_str": "1.1 GB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2015-12-24 16:56"
+      },
+      {
+        "title": "20170805_182307.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.08 / 20170805_182307.mp4",
+        "size_str": "110.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-08-05 18:24"
+      },
+      {
+        "title": "20170819_174203.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.08 / 20170819_174203.mp4",
+        "size_str": "125.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-08-19 17:43"
+      },
+      {
+        "title": "20170617_102059.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.06 / 20170617_102059.mp4",
+        "size_str": "130.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-06-17 10:22"
+      },
+      {
+        "title": "20170625_102001.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.06 / 20170625_102001.mp4",
+        "size_str": "176.4 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-06-25 10:21"
+      },
+      {
+        "title": "20170830_202522.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.08-09 - Kreta / 20170830_202522.mp4",
+        "size_str": "103.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-08-30 20:26"
+      },
+      {
+        "title": "20170901_121249.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.08-09 - Kreta / 20170901_121249.mp4",
+        "size_str": "131.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-09-01 11:13"
+      },
+      {
+        "title": "20170901_203239.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.08-09 - Kreta / 20170901_203239.mp4",
+        "size_str": "133.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-09-01 19:33"
+      },
+      {
+        "title": "20170906_140100.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.08-09 - Kreta / 20170906_140100.mp4",
+        "size_str": "108.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-09-06 13:01"
+      },
+      {
+        "title": "20170909_202255.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.08-09 - Kreta / 20170909_202255.mp4",
+        "size_str": "105.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-09-09 19:23"
+      },
+      {
+        "title": "20170909_202659.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.08-09 - Kreta / 20170909_202659.mp4",
+        "size_str": "100.5 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-09-09 19:27"
+      },
+      {
+        "title": "20170909_205241.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.08-09 - Kreta / 20170909_205241.mp4",
+        "size_str": "150.0 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-09-09 19:53"
+      },
+      {
+        "title": "20170401_111416.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.04 / 20170401_111416.mp4",
+        "size_str": "115.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-04-01 11:15"
+      },
+      {
+        "title": "20170401_151436.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.04 / 20170401_151436.mp4",
+        "size_str": "132.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-04-01 15:15"
+      },
+      {
+        "title": "20170501_162713.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.05 / 20170501_162713.mp4",
+        "size_str": "178.6 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-05-01 16:28"
+      },
+      {
+        "title": "20170523_110811.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.05 / 20170523_110811.mp4",
+        "size_str": "101.9 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-05-23 11:09"
+      },
+      {
+        "title": "20170219_165135.mp4",
+        "path": "Mój dysk / 88📸Zdjęcia / 2017 (1) / 2017.02 / 20170219_165135.mp4",
+        "size_str": "140.3 MB",
+        "last_viewed": "NIGDY",
+        "last_modified": "2017-02-19 16:52"
+      }
+    ],
+    "stray_temp_and_redundant_files": []
+  }
+}
