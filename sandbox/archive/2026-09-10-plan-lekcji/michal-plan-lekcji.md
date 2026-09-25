@@ -15,5 +15,5 @@
 | 14:45 - 15:30 | - | Szkolenie sportowe | - | - | Szkolenie sportowe |
 | 15:00 - 16:30 | Trening tenisowy z Matim | - | - | - | - |
 | 16:30 - 18:00 | - | Early Stage | - | - | - |
-| 15:00 - 16:00 | - | - | - | Trening motoryczny | - |
+| 14:30 - 15:30 | - | - | - | Trening tenisowy z Lilą | - |
 | 17:00 - 18:30 | - | - | - | Early Stage | - |
