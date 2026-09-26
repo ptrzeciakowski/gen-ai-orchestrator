@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 1080" width="1260" height="1080" style="background:#FFFFFF;">
+    
+    <style>
+        text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        .title { font-size: 24px; font-weight: 800; fill: #0F172A; letter-spacing: -0.5px; }
+        .subtitle { font-size: 13.5px; font-weight: 500; fill: #475569; }
+        .corp-frame { fill: #FFFFFF; stroke: #0F172A; stroke-width: 3.5; }
+        .corp-inner { fill: #F8FAFC; stroke: #94A3B8; stroke-width: 1.5; }
+        .shelf { fill: #FFFFFF; stroke: #334155; stroke-width: 2.5; }
+        .dryer-bg { fill: #E0F2FE; stroke: #0284C7; stroke-width: 2; rx: 6px; }
+        .laundry-niche { fill: #F0FDF4; stroke: #16A34A; stroke-width: 1.5; stroke-dasharray: 4,4; rx: 4px; }
+        .drawer { fill: #F1F5F9; stroke: #475569; stroke-width: 2; rx: 4px; }
+        .basket { fill: #F8FAFC; stroke: #64748B; stroke-width: 1.5; stroke-dasharray: 4,3; rx: 3px; }
+        .shoe-shelf-bg { fill: #F1F5F9; stroke: #64748B; stroke-width: 1.5; rx: 4px; }
+        .hanging-area { fill: #FAF5FF; stroke: #A855F7; stroke-width: 1.5; stroke-dasharray: 4,4; rx: 5px; }
+        .rod { stroke: #475569; stroke-width: 4; stroke-linecap: round; }
+        .item-text { font-size: 11px; font-weight: 700; fill: #1E293B; }
+        .item-sub { font-size: 9.5px; font-weight: 500; fill: #64748B; }
+        .dim-text { font-size: 11px; font-weight: 700; fill: #DC2626; }
+        .dim-title { font-size: 12.5px; font-weight: 800; fill: #DC2626; }
+        .tag { font-size: 10px; font-weight: 700; fill: #FFFFFF; rx: 3px; }
+    </style>
+    <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626"/>
+        </marker>
+        <marker id="arr-rev" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626"/>
+        </marker>
+    </defs>
+
+    
+    <text x="175" y="45" class="title">ISTNIEJĄCY PAX 58 cm (270 cm) – WARIANT 1</text>
+    <text x="175" y="70" class="subtitle">Moduł 1 (100 cm): Pralnia | Moduł 2 (100 cm): Garderoba sypialniana | Moduł 3 (50 cm): AGD/Narzędzia | Dob. 20 cm: Deska</text>
+    
+    <rect x="175" y="145" width="864.0" height="755.2" class="corp-frame" />
+    
+    <!-- PODZIAŁY MODUŁÓW -->
+    <line x1="495.0" y1="145" x2="495.0" y2="900.2" stroke="#0F172A" stroke-width="3" />
+    <line x1="815.0" y1="145" x2="815.0" y2="900.2" stroke="#0F172A" stroke-width="3" />
+    <line x1="975.0" y1="145" x2="975.0" y2="900.2" stroke="#0F172A" stroke-width="3" />
+    
+    <!-- ==================== MODUŁ 1: 100 CM (PRALNIA) ==================== -->
+    <!-- Pawlacz -->
+    <rect x="179" y="149" width="312.0" height="107.2" fill="#F8FAFC" rx="4"/>
+    <text x="335.0" y="202.6" class="item-text" text-anchor="middle">PAWLACZ: CZARNA WALIZKA PODRÓŻNA (36 cm)</text>
+    <line x1="175" y1="260.2" x2="495.0" y2="260.2" class="shelf" />
+    
+    <!-- Półka 1 (ręczniki, pościele) -->
+    
+    <rect x="181" y="264.2" width="308.0" height="94.4" fill="#F8FAFC" rx="3"/>
+    <text x="335.0" y="311.4" class="item-text" text-anchor="middle">PÓŁKA 100 cm: KOŁDRY, KOCE, POŚCIELE (32 cm)</text>
+    <line x1="175" y1="362.6" x2="495.0" y2="362.6" class="shelf" />
+    
+    <rect x="181" y="366.6" width="308.0" height="88.0" fill="#F8FAFC" rx="3"/>
+    <text x="335.0" y="410.6" class="item-text" text-anchor="middle">PÓŁKA 100 cm: RĘCZNIKI KĄPIELOWE (30 cm)</text>
+    <line x1="175" y1="458.6" x2="495.0" y2="458.6" class="shelf" />
+    
+    <rect x="181" y="462.6" width="308.0" height="88.0" fill="#F8FAFC" rx="3"/>
+    <text x="335.0" y="506.6" class="item-text" text-anchor="middle">PÓŁKA 100 cm: KOSZE Z PRANIEM / CHEMIA</text>
+    <line x1="175" y1="554.6" x2="495.0" y2="554.6" class="shelf" />
+    
+    <!-- Suszarka Beko 60 cm -->
+    <rect x="183" y="564.6" width="192.0" height="272.0" class="dryer-bg" />
+    <!-- Bęben suszarki okrąg -->
+    <circle cx="279.0" cy="700.6" r="65" fill="#BAE6FD" stroke="#0284C7" stroke-width="2.5" />
+    <circle cx="279.0" cy="700.6" r="50" fill="#E0F2FE" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="4,2" />
+    <!-- Panel sterowania -->
+    <rect x="191" y="572.6" width="176.0" height="28" fill="#0284C7" rx="3" />
+    <circle cx="279.0" cy="586.6" r="8" fill="#FFFFFF" />
+    <text x="279.0" y="705.6" class="item-text" fill="#0369A1" font-size="12" text-anchor="middle">SUSZARKA BEKO</text>
+    <text x="279.0" y="720.6" class="item-sub" fill="#0284C7" text-anchor="middle">szer. 60 cm | wys. 85 cm</text>
+    <text x="279.0" y="733.6" class="item-sub" fill="#0284C7" text-anchor="middle">kasetka na skropliny (manual)</text>
+    
+    <!-- Wnęka 31 cm obok suszarki -->
+    <rect x="383.0" y="564.6" width="99.2" height="272.0" class="laundry-niche" />
+    <text x="432.6" y="675.6" class="item-text" fill="#15803D" text-anchor="middle">WNĘKA 31 cm</text>
+    <text x="432.6" y="695.6" class="item-sub" fill="#166534" text-anchor="middle">Regał slim cargo</text>
+    <text x="432.6" y="710.6" class="item-sub" fill="#166534" text-anchor="middle">lub pionowy kosz</text>
+    <text x="432.6" y="725.6" class="item-sub" fill="#166534" text-anchor="middle">na brudne pranie</text>
+    
+    <!-- ==================== MODUŁ 2: 100 CM (GARDEROBA GŁÓWNA) ==================== -->
+    <rect x="499.0" y="149" width="312.0" height="107.2" fill="#F8FAFC" rx="4"/>
+    <text x="655.0" y="202.6" class="item-text" text-anchor="middle">PAWLACZ: CZERWONA DUŻA WALIZKA (36 cm)</text>
+    <line x1="495.0" y1="260.2" x2="815.0" y2="260.2" class="shelf" />
+    
+    <!-- Drążek 100 cm (120 cm wys.) -->
+    
+    <rect x="501.0" y="266.2" width="308.0" height="372.0" class="hanging-area" />
+    <line x1="511.0" y1="288.2" x2="799.0" y2="288.2" class="rod" />
+    <circle cx="511.0" cy="288.2" r="4" fill="#334155" />
+    <circle cx="799.0" cy="288.2" r="4" fill="#334155" />
+    
+    <text x="655.0" y="320.2" class="item-text" fill="#7E22CE" font-size="12" text-anchor="middle">DRĄŻEK 100 cm: GARDEROBA BAZOWA</text>
+    <text x="655.0" y="340.2" class="item-text" text-anchor="middle">Garnitury, koszule, marynarki, spodnie w kant</text>
+    <text x="655.0" y="356.2" class="item-sub" text-anchor="middle">Wysokość wiszenia: 120 cm (idealna na ubrania męskie/damskie)</text>
+    <line x1="495.0" y1="644.2" x2="815.0" y2="644.2" class="shelf" />
+    
+    <rect x="501.0" y="647.2" width="308.0" height="45.2" class="drawer" />
+    <line x1="625.0" y1="669.8000000000001" x2="685.0" y2="669.8000000000001" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+    <text x="655.0" y="682.8000000000001" class="item-text" text-anchor="middle">SZUFLADA 1: bielizna osobista, skarpetki</text>
+    
+    <rect x="501.0" y="698.4000000000001" width="308.0" height="45.2" class="drawer" />
+    <line x1="625.0" y1="721.0000000000001" x2="685.0" y2="721.0000000000001" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+    <text x="655.0" y="734.0000000000001" class="item-text" text-anchor="middle">SZUFLADA 2: t-shirty, bluzki, topy</text>
+    
+    <rect x="501.0" y="749.6000000000001" width="308.0" height="45.2" class="drawer" />
+    <line x1="625.0" y1="772.2000000000002" x2="685.0" y2="772.2000000000002" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+    <text x="655.0" y="785.2000000000002" class="item-text" text-anchor="middle">SZUFLADA 3: spodnie, bluzy, swetry</text>
+    
+    <rect x="501.0" y="800.8000000000002" width="308.0" height="45.2" class="basket" />
+    <text x="655.0" y="828.4000000000002" class="item-text" text-anchor="middle">KOSZ DRUCIANY KOMPLEMENT: koce / dodatki / pościel</text>
+    
+    <!-- ==================== MODUŁ 3: 50 CM (GOSPODARCZY / AGD) ==================== -->
+    <rect x="819.0" y="149" width="152.0" height="107.2" fill="#F8FAFC" rx="4"/>
+    <text x="895.0" y="207.6" class="item-text" text-anchor="middle">PAWLACZ</text>
+    <line x1="815.0" y1="260.2" x2="975.0" y2="260.2" class="shelf" />
+    
+    <!-- Wnęka wysoka 130 cm -->
+    
+    <rect x="821.0" y="266.2" width="148.0" height="404.0" fill="#F1F5F9" stroke="#64748B" stroke-dasharray="3,3" rx="4"/>
+    <text x="895.0" y="300.2" class="item-text" text-anchor="middle">WNĘKA GOSPODARCZA</text>
+    <text x="895.0" y="320.2" class="item-sub" text-anchor="middle">- Odkurzacz Amica</text>
+    <text x="895.0" y="338.2" class="item-sub" text-anchor="middle">- Składana drabina alu</text>
+    <text x="895.0" y="356.2" class="item-sub" text-anchor="middle">- Skrzynka Parkside</text>
+    <line x1="815.0" y1="676.2" x2="975.0" y2="676.2" class="shelf" />
+    
+    <!-- Dolny kosz i półka -->
+    <rect x="821.0" y="680.2" width="148.0" height="43.2" class="basket" />
+    <text x="895.0" y="703.8000000000001" class="item-sub" font-weight="700" text-anchor="middle">Kosz druciany 50 cm</text>
+    
+    <rect x="821.0" y="731.4000000000001" width="148.0" height="162.79999999999995" fill="#E2E8F0" rx="3" />
+    <text x="895.0" y="880.2" class="item-sub" font-weight="700" text-anchor="middle">Walizki Parkside</text>
+    
+    <!-- ==================== MODUŁ 4: 20 CM (DOBUDÓWKA DESKA) ==================== -->
+    <rect x="979.0" y="149" width="56.0" height="107.2" fill="#F8FAFC" rx="4"/>
+    <text x="1007.0" y="198.6" class="item-text" font-size="10" text-anchor="middle">ŻELAZ-</text>
+    <text x="1007.0" y="212.6" class="item-text" font-size="10" text-anchor="middle">KO</text>
+    <line x1="975.0" y1="260.2" x2="1039.0" y2="260.2" class="shelf" />
+    
+    <rect x="979.0" y="266.2" width="56.0" height="628.0" fill="#F8FAFC" stroke="#94A3B8" stroke-dasharray="2,2" rx="3"/>
+    <text x="1007.0" y="502.6" class="item-text" font-size="10" text-anchor="middle">DESKA</text>
+    <text x="1007.0" y="522.6" class="item-text" font-size="10" text-anchor="middle">DO</text>
+    <text x="1007.0" y="542.6" class="item-text" font-size="10" text-anchor="middle">PRASO-</text>
+    <text x="1007.0" y="562.6" class="item-text" font-size="10" text-anchor="middle">WANIA</text>
+    
+    <g>
+        <line x1="175" y1="145" x2="175" y2="91" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="1039.0" y1="145" x2="1039.0" y2="91" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="179" y1="95" x2="1035.0" y2="95" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="607.0" y="90" class="dim-text" text-anchor="middle">ŁĄCZNA SZEROKOŚĆ ZABUDOWY PAX 58: 270 cm</text>
+    </g>
+    <g>
+        <line x1="175" y1="145" x2="175" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="495.0" y1="145" x2="495.0" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="179" y1="123" x2="491.0" y2="123" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="335.0" y="118" class="dim-text" text-anchor="middle">PRALNIA: 100 cm</text>
+    </g>
+    <g>
+        <line x1="495.0" y1="145" x2="495.0" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="815.0" y1="145" x2="815.0" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="499.0" y1="123" x2="811.0" y2="123" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="655.0" y="118" class="dim-text" text-anchor="middle">GARDEROBA: 100 cm</text>
+    </g>
+    <g>
+        <line x1="815.0" y1="145" x2="815.0" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="975.0" y1="145" x2="975.0" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="819.0" y1="123" x2="971.0" y2="123" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="895.0" y="118" class="dim-text" text-anchor="middle">AGD: 50 cm</text>
+    </g>
+    <g>
+        <line x1="975.0" y1="145" x2="975.0" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="1039.0" y1="145" x2="1039.0" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="979.0" y1="123" x2="1035.0" y2="123" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="1007.0" y="118" class="dim-text" text-anchor="middle">20</text>
+    </g>
+    <g>
+        <line x1="175" y1="145" x2="139" y2="145" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="175" y1="900.2" x2="139" y2="900.2" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="135" y1="149" x2="135" y2="896.2" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="123" y="526.6" class="dim-text" text-anchor="end">WYSOKOŚĆ: 236 cm</text>
+    </g>
+    <g>
+        <line x1="175" y1="145" x2="161" y2="145" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="175" y1="260.2" x2="161" y2="260.2" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="157" y1="149" x2="157" y2="256.2" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="145" y="206.6" class="dim-text" text-anchor="end">PAWLACZ: 36 cm</text>
+    </g>
+    <g>
+        <line x1="175" y1="260.2" x2="161" y2="260.2" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="175" y1="554.6" x2="161" y2="554.6" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="157" y1="264.2" x2="157" y2="550.6" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="145" y="411.4" class="dim-text" text-anchor="end">PÓŁKI: 92 cm</text>
+    </g>
+    <g>
+        <line x1="175" y1="554.6" x2="161" y2="554.6" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="175" y1="900.2" x2="161" y2="900.2" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="157" y1="558.6" x2="157" y2="896.2" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="145" y="731.4000000000001" class="dim-text" text-anchor="end">SUSZARKA: 100 cm</text>
+    </g>
+    <g>
+        <line x1="1039.0" y1="260.2" x2="1068.0" y2="260.2" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="1039.0" y1="644.2" x2="1068.0" y2="644.2" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="1064.0" y1="264.2" x2="1064.0" y2="640.2" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="1076.0" y="456.20000000000005" class="dim-text" text-anchor="start">DRĄŻEK: 120 cm</text>
+    </g>
+    <g>
+        <line x1="1039.0" y1="644.2" x2="1068.0" y2="644.2" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="1039.0" y1="900.2" x2="1068.0" y2="900.2" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="1064.0" y1="648.2" x2="1064.0" y2="896.2" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="1076.0" y="776.2" class="dim-text" text-anchor="start">SZUFLADY: 80 cm</text>
+    </g></svg>

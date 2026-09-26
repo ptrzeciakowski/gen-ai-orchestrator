@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 1120" width="920" height="1120" style="background:#FFFFFF;">
+    
+    <style>
+        text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        .title { font-size: 24px; font-weight: 800; fill: #0F172A; letter-spacing: -0.5px; }
+        .subtitle { font-size: 13.5px; font-weight: 500; fill: #475569; }
+        .corp-frame { fill: #FFFFFF; stroke: #0F172A; stroke-width: 3.5; }
+        .corp-inner { fill: #F8FAFC; stroke: #94A3B8; stroke-width: 1.5; }
+        .shelf { fill: #FFFFFF; stroke: #334155; stroke-width: 2.5; }
+        .dryer-bg { fill: #E0F2FE; stroke: #0284C7; stroke-width: 2; rx: 6px; }
+        .laundry-niche { fill: #F0FDF4; stroke: #16A34A; stroke-width: 1.5; stroke-dasharray: 4,4; rx: 4px; }
+        .drawer { fill: #F1F5F9; stroke: #475569; stroke-width: 2; rx: 4px; }
+        .basket { fill: #F8FAFC; stroke: #64748B; stroke-width: 1.5; stroke-dasharray: 4,3; rx: 3px; }
+        .shoe-shelf-bg { fill: #F1F5F9; stroke: #64748B; stroke-width: 1.5; rx: 4px; }
+        .hanging-area { fill: #FAF5FF; stroke: #A855F7; stroke-width: 1.5; stroke-dasharray: 4,4; rx: 5px; }
+        .rod { stroke: #475569; stroke-width: 4; stroke-linecap: round; }
+        .item-text { font-size: 11px; font-weight: 700; fill: #1E293B; }
+        .item-sub { font-size: 9.5px; font-weight: 500; fill: #64748B; }
+        .dim-text { font-size: 11px; font-weight: 700; fill: #DC2626; }
+        .dim-title { font-size: 12.5px; font-weight: 800; fill: #DC2626; }
+        .tag { font-size: 10px; font-weight: 700; fill: #FFFFFF; rx: 3px; }
+    </style>
+    <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626"/>
+        </marker>
+        <marker id="arr-rev" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626"/>
+        </marker>
+    </defs>
+
+    
+    <text x="175" y="45" class="title">SZAFA NA WYMIAR PRZY WEJŚCIU – WARIANT 1</text>
+    <text x="175" y="70" class="subtitle">Wnęka 125 cm × głębokość 62 cm | Lewa: Długie płaszcze (160 cm luzu) | Prawa: Regał obuwniczy</text>
+    
+    <rect x="175" y="145" width="437.5" height="840.0" class="corp-frame" />
+    
+    <!-- BLENDY BOCZNE -->
+    <rect x="175" y="145" width="42.0" height="840.0" fill="#F1F5F9" stroke="#94A3B8" stroke-dasharray="3,3" />
+    <text x="196.0" y="565.0" class="item-sub" text-anchor="middle" transform="rotate(-90 196.0 565.0)">BLENDA 12 cm</text>
+    
+    <rect x="577.5" y="145" width="35.0" height="840.0" fill="#F1F5F9" stroke="#94A3B8" stroke-dasharray="3,3" />
+    <text x="595.0" y="565.0" class="item-sub" text-anchor="middle" transform="rotate(-90 595.0 565.0)">BLENDA 10 cm</text>
+    
+    <!-- KOLUMNA LEWA (50 cm) -->
+    <rect x="217.0" y="145" width="175.0" height="840.0" fill="#FFFFFF" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Pawlacz lewy -->
+    <rect x="221.0" y="149" width="167.0" height="151.5" fill="#F8FAFC" rx="4"/>
+    <text x="304.5" y="223.75" class="item-text" text-anchor="middle">PAWLACZ GÓRNY (45 cm)</text>
+    <text x="304.5" y="238.75" class="item-sub" text-anchor="middle">pudła sezonowe / torby podróżne</text>
+    <line x1="217.0" y1="302.5" x2="392.0" y2="302.5" class="shelf" />
+    
+    <!-- Strefa wieszania 160 cm -->
+    <rect x="223.0" y="308.5" width="163.0" height="548.0" class="hanging-area" />
+    <line x1="229.0" y1="334.5" x2="380.0" y2="334.5" class="rod" />
+    <circle cx="233.0" cy="334.5" r="4" fill="#334155" />
+    <circle cx="376.0" cy="334.5" r="4" fill="#334155" />
+    
+    <text x="304.5" y="367.5" class="item-text" fill="#7E22CE" font-size="12" text-anchor="middle">DRĄŻEK POPRZECZNY</text>
+    <text x="304.5" y="387.5" class="item-text" text-anchor="middle">DŁUGIE PŁASZCZE ZIMOWE</text>
+    <text x="304.5" y="406.5" class="item-sub" text-anchor="middle">trencze, długie kurtki puchowe</text>
+    <text x="304.5" y="422.5" class="item-sub" text-anchor="middle">marynarki i kurtki wyjściowe</text>
+    
+    <rect x="235.0" y="560.5" width="139.0" height="44" fill="#EDE9FE" stroke="#A855F7" stroke-width="1.5" rx="6"/>
+    <text x="304.5" y="582.5" class="item-text" fill="#6B21A8" font-size="12" text-anchor="middle">160 cm W ŚWIETLE</text>
+    <text x="304.5" y="597.5" class="item-sub" fill="#7E22CE" text-anchor="middle">płaszcz wisi prosto bez zaginania!</text>
+    
+    <text x="304.5" y="837.5" class="item-sub" text-anchor="middle">Dno: wolne / gumowy ociekacz</text>
+    
+    <!-- Dolna szuflada -->
+    <line x1="217.0" y1="862.5" x2="392.0" y2="862.5" class="shelf" />
+    <rect x="223.0" y="868.5" width="163.0" height="110.5" class="drawer" />
+    <line x1="279.5" y1="923.75" x2="329.5" y2="923.75" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+    <text x="304.5" y="939.75" class="item-text" text-anchor="middle">SZUFLADA DOLNA (35 cm)</text>
+    
+    <!-- PRZEGRODA ŚRODKOWA -->
+    <rect x="392.0" y="145" width="7.0" height="840.0" fill="#334155" />
+    
+    <!-- KOLUMNA PRAWA (51 cm) -->
+    <rect x="399.0" y="145" width="178.5" height="840.0" fill="#FFFFFF" stroke="#334155" stroke-width="1.5" />
+    
+    <rect x="403.0" y="149" width="170.5" height="151.5" fill="#F8FAFC" rx="4"/>
+    <text x="488.25" y="223.75" class="item-text" text-anchor="middle">NADSTAWKA (45 cm)</text>
+    <text x="488.25" y="238.75" class="item-sub" text-anchor="middle">pudła / segregatory / zapasy</text>
+    <line x1="399.0" y1="302.5" x2="577.5" y2="302.5" class="shelf" />
+    
+        <rect x="403.0" y="304.5" width="170.5" height="87.0" fill="#F8FAFC" rx="3"/>
+        <text x="488.25" y="346.0" class="item-text" text-anchor="middle">PÓŁKA 1 (26 cm)</text>
+        <text x="488.25" y="359.0" class="item-sub" text-anchor="middle">koszyki na czapki i kapelusze</text>
+        <line x1="399.0" y1="393.5" x2="577.5" y2="393.5" class="shelf" />
+        <rect x="403.0" y="395.5" width="170.5" height="73.0" fill="#F8FAFC" rx="3"/>
+        <text x="488.25" y="430.0" class="item-text" text-anchor="middle">PÓŁKA 2 (22 cm)</text>
+        <text x="488.25" y="443.0" class="item-sub" text-anchor="middle">szaliki, kominy, rękawiczki</text>
+        <line x1="399.0" y1="470.5" x2="577.5" y2="470.5" class="shelf" />
+        <rect x="403.0" y="472.5" width="170.5" height="73.0" fill="#F8FAFC" rx="3"/>
+        <text x="488.25" y="507.0" class="item-text" text-anchor="middle">PÓŁKA 3 (22 cm)</text>
+        <text x="488.25" y="520.0" class="item-sub" text-anchor="middle">klucze, portfele, okulary</text>
+        <line x1="399.0" y1="547.5" x2="577.5" y2="547.5" class="shelf" />
+        <rect x="403.0" y="549.5" width="170.5" height="80.0" fill="#F1F5F9" rx="3"/>
+        <text x="488.25" y="587.5" class="item-text" text-anchor="middle">PÓŁKA 4 – BUTY (24 cm)</text>
+        <text x="488.25" y="600.5" class="item-sub" text-anchor="middle">bieżące sneakersy / pantofle</text>
+        <line x1="399.0" y1="631.5" x2="577.5" y2="631.5" class="shelf" />
+        <rect x="403.0" y="633.5" width="170.5" height="80.0" fill="#F1F5F9" rx="3"/>
+        <text x="488.25" y="671.5" class="item-text" text-anchor="middle">PÓŁKA 5 – BUTY (24 cm)</text>
+        <text x="488.25" y="684.5" class="item-sub" text-anchor="middle">bieżące półbuty / obuwie codzienne</text>
+        <line x1="399.0" y1="715.5" x2="577.5" y2="715.5" class="shelf" />
+        <rect x="403.0" y="717.5" width="170.5" height="80.0" fill="#F1F5F9" rx="3"/>
+        <text x="488.25" y="755.5" class="item-text" text-anchor="middle">PÓŁKA 6 – BUTY (24 cm)</text>
+        <text x="488.25" y="768.5" class="item-sub" text-anchor="middle">buty sportowe / wyjściowe</text>
+        <line x1="399.0" y1="799.5" x2="577.5" y2="799.5" class="shelf" />
+        <rect x="403.0" y="801.5" width="170.5" height="80.0" fill="#F1F5F9" rx="3"/>
+        <text x="488.25" y="839.5" class="item-text" text-anchor="middle">PÓŁKA 7 – BUTY (24 cm)</text>
+        <text x="488.25" y="852.5" class="item-sub" text-anchor="middle">buty wyjściowe / kapcie</text>
+        <line x1="399.0" y1="883.5" x2="577.5" y2="883.5" class="shelf" />
+        <rect x="403.0" y="885.5" width="170.5" height="97.5" fill="#F1F5F9" rx="3"/>
+        <text x="488.25" y="932.25" class="item-text" text-anchor="middle">DNO REGAŁU (29 cm)</text>
+        <text x="488.25" y="945.25" class="item-sub" text-anchor="middle">trzewiki / wyższe buty zimowe</text>
+        
+    <g>
+        <line x1="175" y1="145" x2="175" y2="91" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="612.5" y1="145" x2="612.5" y2="91" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="179" y1="95" x2="608.5" y2="95" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="393.75" y="90" class="dim-text" text-anchor="middle">CAŁKOWITA SZEROKOŚĆ WNĘKI: 125 cm</text>
+    </g>
+    <g>
+        <line x1="217.0" y1="145" x2="217.0" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="392.0" y1="145" x2="392.0" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="221.0" y1="123" x2="388.0" y2="123" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="304.5" y="118" class="dim-text" text-anchor="middle">LEWA: 50 cm</text>
+    </g>
+    <g>
+        <line x1="399.0" y1="145" x2="399.0" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="577.5" y1="145" x2="577.5" y2="119" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="403.0" y1="123" x2="573.5" y2="123" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="488.25" y="118" class="dim-text" text-anchor="middle">PRAWA: 51 cm</text>
+    </g>
+    <g>
+        <line x1="175" y1="145" x2="139" y2="145" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="175" y1="985.0" x2="139" y2="985.0" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="135" y1="149" x2="135" y2="981.0" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="123" y="569.0" class="dim-text" text-anchor="end">WYSOKOŚĆ: 240 cm</text>
+    </g>
+    <g>
+        <line x1="217.0" y1="302.5" x2="196.0" y2="302.5" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="217.0" y1="862.5" x2="196.0" y2="862.5" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="192.0" y1="306.5" x2="192.0" y2="858.5" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="180.0" y="586.5" class="dim-text" text-anchor="end">ŚWIATŁO: 160 cm</text>
+    </g>
+    <g>
+        <line x1="217.0" y1="862.5" x2="196.0" y2="862.5" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="217.0" y1="985.0" x2="196.0" y2="985.0" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="192.0" y1="866.5" x2="192.0" y2="981.0" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="180.0" y="927.75" class="dim-text" text-anchor="end">SZUFLADA: 35 cm</text>
+    </g>
+    <g>
+        <line x1="612.5" y1="145" x2="641.5" y2="145" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="612.5" y1="302.5" x2="641.5" y2="302.5" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="637.5" y1="149" x2="637.5" y2="298.5" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="649.5" y="227.75" class="dim-text" text-anchor="start">PAWLACZ: 45 cm</text>
+    </g>
+    <g>
+        <line x1="612.5" y1="302.5" x2="641.5" y2="302.5" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="612.5" y1="985.0" x2="641.5" y2="985.0" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="637.5" y1="306.5" x2="637.5" y2="981.0" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="649.5" y="647.75" class="dim-text" text-anchor="start">REGAŁ PÓŁKOWY: 195 cm</text>
+    </g></svg>
