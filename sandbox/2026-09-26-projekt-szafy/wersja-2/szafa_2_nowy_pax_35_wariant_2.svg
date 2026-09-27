@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 1120" width="950" height="1120" style="background:#FFFFFF;">
+    
+    <style>
+        text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        .title { font-size: 23px; font-weight: 800; fill: #0F172A; letter-spacing: -0.5px; }
+        .subtitle { font-size: 13px; font-weight: 500; fill: #475569; }
+        .corp-frame { fill: #FFFFFF; stroke: #0F172A; stroke-width: 3.5; }
+        .corp-inner { fill: #F8FAFC; stroke: #94A3B8; stroke-width: 1.5; }
+        .shelf { fill: #FFFFFF; stroke: #334155; stroke-width: 2.5; }
+        .dryer-bg { fill: #E0F2FE; stroke: #0284C7; stroke-width: 2; rx: 6px; }
+        .laundry-niche { fill: #F0FDF4; stroke: #16A34A; stroke-width: 1.5; stroke-dasharray: 4,4; rx: 4px; }
+        .drawer { fill: #F1F5F9; stroke: #475569; stroke-width: 2; rx: 4px; }
+        .basket { fill: #F8FAFC; stroke: #64748B; stroke-width: 1.5; stroke-dasharray: 4,3; rx: 3px; }
+        .shoe-shelf-bg { fill: #F1F5F9; stroke: #64748B; stroke-width: 1.5; rx: 4px; }
+        .hanging-area { fill: #FAF5FF; stroke: #A855F7; stroke-width: 1.5; stroke-dasharray: 4,4; rx: 5px; }
+        .guitar-area { fill: #FEF3C7; stroke: #D97706; stroke-width: 1.8; rx: 5px; }
+        .dyson-area { fill: #FDF2F8; stroke: #DB2777; stroke-width: 1.8; rx: 5px; }
+        .vacuum-area { fill: #F5F3FF; stroke: #7C3AED; stroke-width: 1.8; rx: 5px; }
+        .ladder-area { fill: #F1F5F9; stroke: #475569; stroke-width: 1.8; rx: 4px; }
+        .paper-towel-area { fill: #ECFDF5; stroke: #059669; stroke-width: 1.5; rx: 4px; }
+        .backpack-area { fill: #EFF6FF; stroke: #2563EB; stroke-width: 1.5; rx: 4px; }
+        .rod { stroke: #475569; stroke-width: 4; stroke-linecap: round; }
+        .item-text { font-size: 11px; font-weight: 700; fill: #1E293B; }
+        .item-sub { font-size: 9.5px; font-weight: 500; fill: #64748B; }
+        .dim-text { font-size: 11px; font-weight: 700; fill: #DC2626; }
+        .dim-title { font-size: 12.5px; font-weight: 800; fill: #DC2626; }
+        .tag { font-size: 10px; font-weight: 700; fill: #FFFFFF; rx: 3px; }
+        .badge-green { fill: #15803D; rx: 4px; }
+        .badge-purple { fill: #7E22CE; rx: 4px; }
+        .badge-amber { fill: #B45309; rx: 4px; }
+        .badge-blue { fill: #1D4ED8; rx: 4px; }
+    </style>
+    <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626"/>
+        </marker>
+        <marker id="arr-rev" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626"/>
+        </marker>
+    </defs>
+
+    <text x="175" y="42" class="title">NOWY PAX 35 cm – WARIANT 2 (PION AGD: DYSON + MOP + SZUFLADY)</text>
+    <text x="175" y="66" class="subtitle">Dyson i wiadro mopa przeniesione do szafy 35 cm | W szafie PAX 58 nie ruszamy szuflad w module 100 cm!</text>
+    <rect x="175" y="145" width="540.0" height="849.6" class="corp-frame" />
+    <line x1="445.0" y1="145" x2="445.0" y2="994.6" stroke="#0F172A" stroke-width="3" />
+    
+    <rect x="181" y="151" width="258.0" height="119.6" fill="#F8FAFC" rx="4"/>
+    <text x="310.0" y="214.8" class="item-text" text-anchor="middle">PAWLACZ: RZECZY SEZONOWE (36 cm)</text>
+    <line x1="175" y1="274.6" x2="445.0" y2="274.6" class="shelf" />
+    
+    <rect x="181" y="280.6" width="122.4" height="432.0" class="dyson-area"/>
+    <text x="236.2" y="304.6" class="item-text" fill="#BE185D" text-anchor="middle">DYSON PIONOWY</text>
+    <text x="236.2" y="320.6" class="item-sub" fill="#9D174D" text-anchor="middle">stacja ścienna</text>
+    <line x1="203.8" y1="329.6" x2="203.8" y2="616.6" stroke="#16A34A" stroke-width="4" stroke-linecap="round"/>
+    <text x="254.2" y="349.6" class="item-sub" fill="#15803D" font-weight="700">Kij do mopa</text>
+    
+    <rect x="185" y="616.6" width="108.0" height="82.8" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5" rx="3"/>
+    <text x="236.2" y="667.0" class="item-sub" fill="#15803D" font-weight="700" text-anchor="middle">WIADRO MOPA</text>
+    
+    <rect x="326.20000000000005" y="280.6" width="111.60000000000001" height="144.0" class="paper-towel-area"/>
+    <text x="382.0" y="299.6" class="item-sub" fill="#047857" font-weight="700" text-anchor="middle">Ręczniki</text>
+    <text x="382.0" y="312.6" class="item-sub" fill="#047857" font-weight="700" text-anchor="middle">papierowe</text>
+    
+    <rect x="326.20000000000005" y="447.40000000000003" width="111.60000000000001" height="129.6" fill="#F8FAFC" rx="3"/>
+    <text x="382.0" y="519.4000000000001" class="item-sub" text-anchor="middle">Papier toalet.</text>
+    
+    <rect x="326.20000000000005" y="584.2" width="111.60000000000001" height="136.8" fill="#F8FAFC" rx="3"/>
+    <text x="382.0" y="656.2" class="item-sub" text-anchor="middle">Zapasy chemii</text>
+    
+    <line x1="175" y1="735.4000000000001" x2="445.0" y2="735.4000000000001" class="shelf" />
+    
+    <rect x="181" y="749.8" width="258.0" height="64.8" class="drawer"/>
+    <text x="310.0" y="793.0" class="item-text" text-anchor="middle">SZUFLADA 1: Ściereczki, zapasowe mopy, worki, rękawice gumowe</text>
+    
+    <rect x="181" y="821.8000000000001" width="258.0" height="64.8" class="drawer"/>
+    <text x="310.0" y="865.0" class="item-text" text-anchor="middle">SZUFLADA 2: Akcesoria czyszczące, filtry, parownica</text>
+    
+    <rect x="451.0" y="151" width="258.0" height="119.6" fill="#F8FAFC" rx="4"/>
+    <text x="580.0" y="214.8" class="item-text" text-anchor="middle">PAWLACZ: RZECZY SEZONOWE (36 cm)</text>
+    <line x1="445.0" y1="274.6" x2="715.0" y2="274.6" class="shelf" />
+    
+    <rect x="451.0" y="280.6" width="258.0" height="115.2" class="backpack-area"/>
+    <text x="580.0" y="346.6" class="item-text" fill="#1D4ED8" text-anchor="middle">PÓŁKA NA PLECAKI MIEJSKIE I SZKOLNE</text>
+    <line x1="445.0" y1="397.0" x2="715.0" y2="397.0" class="shelf" />
+    
+    <rect x="451.0" y="411.40000000000003" width="258.0" height="115.2" class="backpack-area"/>
+    <text x="580.0" y="476.20000000000005" class="item-text" fill="#1D4ED8" text-anchor="middle">PÓŁKA NA PLECAKI TURYSTYCZNE I SPORTOWE</text>
+    <line x1="445.0" y1="533.8" x2="715.0" y2="533.8" class="shelf" />
+    
+    <rect x="451.0" y="548.2" width="258.0" height="64.8" class="drawer"/>
+    <text x="580.0" y="591.4000000000001" class="item-text" text-anchor="middle">SZUFLADA 3: Czapki zimowe, kapelusze, chusty</text>
+    <rect x="451.0" y="620.2" width="258.0" height="64.8" class="drawer"/>
+    <text x="580.0" y="663.4000000000001" class="item-text" text-anchor="middle">SZUFLADA 4: Rękawiczki, kominy, szaliki</text>
+    <rect x="451.0" y="692.2" width="258.0" height="64.8" class="drawer"/>
+    <text x="580.0" y="735.4000000000001" class="item-text" text-anchor="middle">SZUFLADA 5: Okulary, etui, klucze, latarki</text>
+    <rect x="451.0" y="764.2" width="258.0" height="64.8" class="drawer"/>
+    <text x="580.0" y="807.4000000000001" class="item-text" text-anchor="middle">SZUFLADA 6: Drobne AGD, kable, baterie, ładowarki</text>
+    
+    <text x="580.0" y="974.6" class="item-sub" text-anchor="middle">Dno prawe: zapasowe pudełka / organizery</text>
+    
+    
+    <g>
+        <line x1="175" y1="145" x2="175" y2="96" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="715.0" y1="145" x2="715.0" y2="96" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="179" y1="100" x2="711.0" y2="100" stroke="#DC2626" stroke-width="1.5" marker-start="url(#arr-rev)" marker-end="url(#arr)"/>
+        <text x="445.0" y="95" class="dim-text" text-anchor="middle">ŁĄCZNA SZEROKOŚĆ ŚCIANY: 150 cm</text>
+    </g>
+    </svg>
