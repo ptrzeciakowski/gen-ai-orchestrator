@@ -102,11 +102,11 @@ Czas od $9^{25}$ do $11^{50}$:
 1. **Łączna masa mieszanki:**  
    $$2{,}5\text{ kg} + 1{,}5\text{ kg} = 4{,}0\text{ kg}$$
 2. **Koszt orzechów nerkowca:**  
-   $$2{,}5 \cdot 52\text{ zł} = 130{,}00\text{ zł}$$  
-   *(pomocniczo: $2 \cdot 52 = 104$, pół kilo to $26$, $104 + 26 = 130$)*
+   $$2{,}5 \cdot 52\text{ zł} = 130{,}00\text{ zł}$$
+   *(pomocniczo: 2 · 52 = 104 zł, pół kilo to 26 zł, 104 + 26 = 130 zł)*
 3. **Koszt żurawiny:**  
-   $$1{,}5 \cdot 28\text{ zł} = 42{,}00\text{ zł}$$  
-   *(pomocniczo: $1 \cdot 28 = 28$, pół kilo to $14$, $28 + 14 = 42$)*
+   $$1{,}5 \cdot 28\text{ zł} = 42{,}00\text{ zł}$$
+   *(pomocniczo: 1 · 28 = 28 zł, pół kilo to 14 zł, 28 + 14 = 42 zł)*
 4. **Łączny koszt:**  
    $$130{,}00\text{ zł} + 42{,}00\text{ zł} = 172{,}00\text{ zł}$$
 5. **Cena $1\text{ kg}$ mieszanki:**  

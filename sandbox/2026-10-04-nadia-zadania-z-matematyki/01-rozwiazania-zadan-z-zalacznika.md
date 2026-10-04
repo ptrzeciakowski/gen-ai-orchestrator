@@ -34,7 +34,7 @@ $0{,}4\text{ kg}$ to prawie pół kilograma ($0{,}5\text{ kg}$), pomniejszone o 
    $$19{,}50\text{ zł} : 10 = 1{,}95\text{ zł}$$
 
 3. **Odejmujemy od połowy kilograma $100\text{ g}$:**  
-   $$0{,}4\text{ kg} = 0{,}5\text{ kg} - 0{,}1\text{ kg}$$  
+   $$0{,}4\text{ kg} = 0{,}5\text{ kg} - 0{,}1\text{ kg}$$
    $$9{,}75\text{ zł} - 1{,}95\text{ zł} = 7{,}80\text{ zł}$$
 
 ---
@@ -44,8 +44,8 @@ Mnożymy masę przez cenę jednostkową:
 $$19{,}50 \cdot 0{,}4$$
 
 1. Mnożymy liczby tak, jakby nie było przecinków:  
-   $$195 \cdot 4 = 780$$  
-   *(pomocniczo w pamięci: $195 \cdot 2 = 390$, a $390 \cdot 2 = 780$)*
+   $$195 \cdot 4 = 780$$
+   *(pomocniczo w pamięci: 195 · 2 = 390, a 390 · 2 = 780)*
 2. Liczymy miejsca po przecinku:
    - w liczbie $19{,}5$ jest **1 miejsce** po przecinku
    - w liczbie $0{,}4$ jest **1 miejsce** po przecinku
@@ -199,8 +199,8 @@ To jest jedyny właściwy i przejrzysty algorytm na cenę mieszanki (tzw. średn
    $$3{,}5\text{ kg} + 2\text{ kg} = 5{,}5\text{ kg}$$
 
 2. **Krok 2: Koszt cukierków czekoladowych:**  
-   $$3{,}5 \cdot 40{,}50\text{ zł} = 141{,}75\text{ zł}$$  
-   *(pomocniczo w pamięci: $3 \cdot 40{,}50 = 121{,}50$, a pół kilo to $20{,}25$, razem: $121{,}50 + 20{,}25 = 141{,}75$)*
+   $$3{,}5 \cdot 40{,}50\text{ zł} = 141{,}75\text{ zł}$$
+   *(pomocniczo w pamięci: 3 · 40,50 = 121,50 zł, a pół kilo to 20,25 zł, razem: 121,50 + 20,25 = 141,75 zł)*
 
 3. **Krok 3: Koszt kukułek:**  
    $$2 \cdot 27{,}85\text{ zł} = 55{,}70\text{ zł}$$
@@ -259,7 +259,7 @@ $$1{,}6\text{ kg} = 1600\text{ g}$$
 ### Sposób 2: Na ułamkach zwykłych (Mnożenie ułamków)
 1. **Krok 1: Jaki ułamek CAŁEGO tortu dostał wujek?**  
    Reszta po gościach to:  
-   $$1 - \frac{7}{8} = \frac{1}{8}$$  
+   $$1 - \frac{7}{8} = \frac{1}{8}$$
    Wujek dostał $\frac{1}{2}$ z tej reszty:  
    $$\frac{1}{2} \cdot \frac{1}{8} = \frac{1}{16}\text{ całego tortu}$$
 
@@ -378,7 +378,7 @@ Ponieważ cała tabliczka ma tylko $12$ kostek, a dzieci chciałyby łącznie $1
 Pamiętamy, że $25\text{ cm} = 0{,}25\text{ m} = \frac{1}{4}\text{ m}$.
 
 1. **Krok 1: Łączna długość 12 krótszych kawałków:**  
-   $$12 \cdot 0{,}25\text{ m} = 3\text{ m}$$  
+   $$12 \cdot 0{,}25\text{ m} = 3\text{ m}$$
    *(ponieważ $4$ kawałki po $25\text{ cm}$ dają $1\text{ metr}$, to $12$ kawałków da $12 : 4 = 3\text{ m}$)*
 
 2. **Krok 2: Ile taśmy zostaje na dłuższe kawałki?**  
