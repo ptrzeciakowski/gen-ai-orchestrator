@@ -47,4 +47,4 @@ Folder zawiera 3 moduły w formacie Markdown:
 
 ---
 
-*Wszystkie pliki są w formacie czystego Markdown ze standardową notacją matematyczną LaTeX.*1999
+*Wszystkie pliki są w formacie czystego Markdown ze standardową notacją matematyczną LaTeX.*

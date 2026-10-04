@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Rozwiązania Krok po Kroku – Zadania z Załącznika (Klasa 7)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 9.5pt;
+    line-height: 1.4;
+  }
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1;
+    padding: 0 2px;
+    font-weight: 600;
+  }
+  .frac > span:first-child {
+    border-bottom: 1.5px solid #1e293b;
+    padding-bottom: 1px;
+  }
+  .frac > span:last-child {
+    padding-top: 1px;
+  }
+  .header {
+    border-bottom: 2.5px solid #4338ca;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 15pt;
+    color: #3730a3;
+  }
+  .header .meta {
+    font-size: 9pt;
+    color: #64748b;
+  }
+  .task-block {
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    page-break-inside: avoid;
+  }
+  .task-title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #1e40af;
+    border-bottom: 1.5px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .task-content {
+    background: #f8fafc;
+    border-left: 3px solid #3b82f6;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    font-style: italic;
+    color: #334155;
+  }
+  .methods-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .method-box {
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 9pt;
+  }
+  .method-smart {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+  }
+  .method-smart .m-title {
+    color: #166534;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .method-classic {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+  }
+  .method-classic .m-title {
+    color: #1e293b;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .trap-box {
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 5px 8px;
+    font-size: 8.5pt;
+    color: #92400e;
+    margin-top: 6px;
+  }
+  .ans-box {
+    margin-top: 6px;
+    font-weight: bold;
+    color: #1e40af;
+    font-size: 9.5pt;
+  }
+  .eq {
+    font-family: 'Cambria Math', 'Times New Roman', serif;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>📘 Rozwiązania Krok po Kroku (Klasa 7)</h1>
+    <div class="meta">Dla: <strong>Nadia</strong> &bull; Zadania z kartki 17–25 &bull; Maksymalnie 2 proste metody</div>
+  </div>
+  <div class="meta" style="text-align: right;">
+    Metodyka: Spryt &bull; Oś czasu &bull; Zero pułapek
+  </div>
+</div>
+
+<!-- ZADANIE 17 -->
+<div class="task-block">
+  <div class="task-title">Zadanie 17. Zakupy żurawiny na wagę</div>
+  <div class="task-content">
+    Olga kupiła 0,4 kg żurawiny, której 1 kg kosztuje 19,50 zł. Ile zapłaciła za zakupy?
+  </div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób 1: Sprytny podział wagi (w pamięci)</div>
+      0,4 kg to prawie pół kilo (0,5 kg) minus 100 g (0,1 kg):<br>
+      &bull; <strong>Pół kilo (0,5 kg):</strong> 19,50 zł : 2 = <strong>9,75 zł</strong><br>
+      &bull; <strong>100 g (0,1 kg):</strong> 19,50 zł : 10 = <strong>1,95 zł</strong><br>
+      &bull; Odejmujemy: 9,75 zł &minus; 1,95 zł = <strong style="color:#166534;">7,80 zł</strong>.
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Sposób 2: Mnożenie dziesiętne</div>
+      Mnożymy masę przez cenę:<br>
+      <span class="eq">19,50 &times; 0,4</span><br>
+      1. Mnożymy bez przecinków: 195 &times; 4 = <strong>780</strong>.<br>
+      2. Mamy 2 miejsca po przecinku (jedno w 19,5 i jedno w 0,4).<br>
+      3. Odcinamy od prawej 2 miejsca: <strong>7,80 zł</strong>.
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Pułapka:</strong> Zgubienie przecinka. Szacuj w głowie: 0,4 kg to mniej niż pół kilo, więc cena musi być mniejsza niż 10 zł!
+  </div>
+  <div class="ans-box">Odpowiedź: Olga zapłaciła za zakupy 7,80 zł.</div>
+</div>
+
+<!-- ZADANIE 18 -->
+<div class="task-block">
+  <div class="task-title">Zadanie 18. Ułamek czasu trwania lekcji</div>
+  <div class="task-content">
+    Przez <span class="frac"><span>1</span><span>5</span></span> lekcji matematyki uczniowie rozwiązywali zadania tekstowe. Ile to minut?
+  </div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób 1: Dzielenie przez mianownik (3 sekundy)</div>
+      Lekcja trwa <strong>45 minut</strong>.<br>
+      Mianownik 5 mówi, że dzielimy lekcję na 5 równych części:<br>
+      45 minut : 5 = <strong style="color:#166534;">9 minut</strong>.
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Sposób 2: Mnożenie ułamka przez liczbę</div>
+      Obliczamy ułamek z liczby:<br>
+      <span class="frac"><span>1</span><span>5</span></span> &times; 45 = 
+      <span class="frac"><span>45</span><span>5</span></span> = <strong>9 minut</strong>.
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Pułapka:</strong> Pamiętaj, że w zadaniu nie podają długości lekcji – w polskiej szkole lekcja trwa zawsze 45 minut.
+  </div>
+  <div class="ans-box">Odpowiedź: Uczniowie rozwiązywali zadania przez 9 minut.</div>
+</div>
+
+<!-- ZADANIE 19 -->
+<div class="task-block">
+  <div class="task-title">Zadanie 19. Czas trwania podróży pociągiem</div>
+  <div class="task-content">
+    Pociąg wyruszył o 8<sup>32</sup>, przyjechał o 11<sup>13</sup>. Ile trwała jazda, jeśli odliczymy 15 minut postoju? (A. 2 h 26 min, B. 2,81 h, C. 2,66 h, D. 2 h 41 min)
+  </div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób 1: Oś czasu „do pełnych godzin”</div>
+      1. Od 8<sup>32</sup> do 9<sup>00</sup> &rarr; <strong>28 minut</strong> (60 &minus; 32).<br>
+      2. Od 9<sup>00</sup> do 11<sup>00</sup> &rarr; <strong>2 godziny</strong>.<br>
+      3. Od 11<sup>00</sup> do 11<sup>13</sup> &rarr; <strong>13 minut</strong>.<br>
+      &bull; Cała podróż = 2 h 41 min.<br>
+      &bull; Odejmujemy postój: 2 h 41 min &minus; 15 min = <strong style="color:#166534;">2 h 26 min</strong>.
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Sposób 2: Odjęcie postoju na starcie</div>
+      Odejmujemy postój od godziny przyjazdu:<br>
+      11<sup>13</sup> &minus; 15 min = <strong>10<sup>58</sup></strong>.<br>
+      Teraz liczymy czas od 8<sup>32</sup> do 10<sup>58</sup>:<br>
+      &bull; Od 8<sup>32</sup> do 10<sup>32</sup> &rarr; 2 godziny.<br>
+      &bull; Od 10<sup>32</sup> do 10<sup>58</sup> &rarr; 58 &minus; 32 = 26 minut.<br>
+      Razem: <strong>2 h 26 min</strong>.
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Pułapka:</strong> Odpowiedź D (2 h 41 min) to pułapka bez odliczenia postoju! Z kolei 26 minut to NIE jest 0,26 godziny.
+  </div>
+  <div class="ans-box">Odpowiedź: Poprawna jest odpowiedź A (2 h 26 min).</div>
+</div>
+
+<!-- ZADANIE 20 -->
+<div class="task-block">
+  <div class="task-title">Zadanie 20. Koszt paliwa na trasie Białystok – Lublin (310 km)</div>
+  <div class="task-content">
+    Zużycie: 6 l na 100 km. Cena litra: 7,60 zł. Trasa z mapki: 310 km. Oblicz średni koszt paliwa.
+  </div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób 1: Liczba litrów na całą trasę</div>
+      1. Trasa 310 km to <strong>3,1</strong> setek kilometrów (310 : 100).<br>
+      2. Ile litrów spalimy: 3,1 &times; 6 l = <strong>18,6 litra</strong>.<br>
+      3. Koszt paliwa: 18,6 &times; 7,60 zł = <strong style="color:#166534;">141,36 zł</strong>.
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Sposób 2: Podział trasy (300 km + 10 km)</div>
+      &bull; Na 100 km: 6 &times; 7,60 zł = 45,60 zł.<br>
+      &bull; Na 300 km: 3 &times; 45,60 zł = <strong>136,80 zł</strong>.<br>
+      &bull; Na 10 km (<span class="frac"><span>1</span><span>10</span></span> ze 100 km): 45,60 zł : 10 = <strong>4,56 zł</strong>.<br>
+      &bull; Razem: 136,80 zł + 4,56 zł = <strong>141,36 zł</strong>.
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Błąd z kartki:</strong> W notatkach dodano 0,76 zł zamiast 4,56 zł (wynik 137,56 zł). 0,76 zł to koszt 1 litra na 100 km, a na 10 km auto spala 0,6 litra (0,6 &times; 7,60 zł = 4,56 zł).
+  </div>
+  <div class="ans-box">Odpowiedź: Średni koszt paliwa wynosi 141,36 zł.</div>
+</div>
+
+<!-- ZADANIE 21 -->
+<div class="task-block">
+  <div class="task-title">Zadanie 21. Cena 1 kg mieszanki cukierków</div>
+  <div class="task-content">
+    Pani Małgosia zmieszała 3,5 kg cukierków czekoladowych (40,50 zł/kg) oraz 2 kg kukułek (27,85 zł/kg). Jaka jest cena 1 kg mieszanki?
+  </div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób 1: Schemat mieszanki (Łączny koszt : Łączna waga)</div>
+      1. <strong>Łączna waga:</strong> 3,5 kg + 2 kg = <strong>5,5 kg</strong>.<br>
+      2. <strong>Czekoladowe:</strong> 3,5 &times; 40,50 zł = <strong>141,75 zł</strong>.<br>
+      3. <strong>Kukułki:</strong> 2 &times; 27,85 zł = <strong>55,70 zł</strong>.<br>
+      4. <strong>Całkowity koszt:</strong> 141,75 zł + 55,70 zł = <strong>197,45 zł</strong>.<br>
+      5. <strong>Cena 1 kg:</strong> 197,45 zł : 5,5 kg = <strong style="color:#166534;">35,90 zł</strong>.
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Sposób 2: Szacowanie logiczne</div>
+      Zwykła średnia arytmetyczna cen wynosi (40,50 + 27,85) : 2 = 34,18 zł.<br>
+      Ale cukierków czekoladowych jest więcej (3,5 kg z 5,5 kg), dlatego cena mieszanki MUSI być wyższa niż 34,18 zł i bliższa 40,50 zł.<br>
+      Wynik <strong>35,90 zł</strong> idealnie to potwierdza!
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Pułapka:</strong> Nigdy nie dodawaj samych cen za 1 kg i nie dziel przez 2! Trzeba policzyć cały rachunek i podzielić przez wszystkie kilogramy.
+  </div>
+  <div class="ans-box">Odpowiedź: Cena 1 kg mieszanki wynosi 35,90 zł.</div>
+</div>
+
+<!-- ZADANIE 22 -->
+<div class="task-block">
+  <div class="task-title">Zadanie 22. Tort urodzinowy i spóźniony wujek</div>
+  <div class="task-content">
+    Tort ważył 1,6 kg. Goście zjedli <span class="frac"><span>7</span><span>8</span></span> tortu. Wujek dostał <span class="frac"><span>1</span><span>2</span></span> pozostałej części tortu. Ile ważył kawałek wujka?
+  </div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób 1: Zamiana na gramy (Najłatwiejszy!)</div>
+      Zamieniamy 1,6 kg na gramy: <strong>1600 g</strong>.<br>
+      1. Goście zjedli <span class="frac"><span>7</span><span>8</span></span>, więc została <span class="frac"><span>1</span><span>8</span></span> tortu:<br>
+      1600 g : 8 = <strong>200 g</strong> (tyle zostało po gościach).<br>
+      2. Wujek dostał połowę (<span class="frac"><span>1</span><span>2</span></span>) z tego co zostało:<br>
+      200 g : 2 = <strong style="color:#166534;">100 g (0,1 kg)</strong>.
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Sposób 2: Na ułamkach zwykłych</div>
+      1. Ułamek reszty po gościach: 1 &minus; <span class="frac"><span>7</span><span>8</span></span> = <span class="frac"><span>1</span><span>8</span></span>.<br>
+      2. Ułamek wujka z całego tortu:<br>
+      <span class="frac"><span>1</span><span>2</span></span> &times; <span class="frac"><span>1</span><span>8</span></span> = 
+      <span class="frac"><span>1</span><span>16</span></span> całego tortu.<br>
+      3. Waga wujka: <span class="frac"><span>1</span><span>16</span></span> &times; 1,6 kg = <strong>0,1 kg = 100 g</strong>.
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Błąd z kartki:</strong> Nie odejmuj ułamka od wagi (1,6 &minus; 7/8)! <span class="frac"><span>7</span><span>8</span></span> to część, a nie liczba kilogramów. Zamiana na gramy od razu likwiduje ten problem.
+  </div>
+  <div class="ans-box">Odpowiedź: Kawałek tortu wujka ważył 100 g (czyli 0,1 kg).</div>
+</div>
+
+<!-- ZADANIE 23 -->
+<div class="task-block">
+  <div class="task-title">Zadanie 23. Zakupy Kamila (koszulka i torba)</div>
+  <div class="task-content">
+    Kamil miał 300 zł. Na koszulkę wydał <span class="frac"><span>1</span><span>5</span></span> tej kwoty. Za torbę zapłacił <span class="frac"><span>3</span><span>5</span></span> kwoty, która została mu po koszulce. Ile mu zostało?
+  </div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób 1: Krok po kroku w złotówkach</div>
+      1. <strong>Koszulka:</strong> 300 zł : 5 = <strong>60 zł</strong>.<br>
+      2. <strong>Zostało po koszulce:</strong> 300 &minus; 60 = <strong>240 zł</strong>.<br>
+      3. <strong>Torba (<span class="frac"><span>3</span><span>5</span></span> z 240 zł):</strong><br>
+      240 : 5 = 48 zł, a 3 &times; 48 zł = <strong>144 zł</strong>.<br>
+      4. <strong>Zostało na koniec:</strong> 240 zł &minus; 144 zł = <strong style="color:#166534;">96 zł</strong>.
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Sposób 2: Na ułamkach reszty</div>
+      1. Po koszulce zostało mu <span class="frac"><span>4</span><span>5</span></span> kwoty:<br>
+      <span class="frac"><span>4</span><span>5</span></span> &times; 300 zł = 240 zł.<br>
+      2. Skoro wydał <span class="frac"><span>3</span><span>5</span></span> tej reszty, to zostało mu <span class="frac"><span>2</span><span>5</span></span> z niej:<br>
+      <span class="frac"><span>2</span><span>5</span></span> &times; 240 zł = 2 &times; 48 zł = <strong>96 zł</strong>.
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Pułapka:</strong> Zwróć uwagę na słowa „kwoty, która została mu po zakupie koszulki”! Torba nie kosztowała <span class="frac"><span>3</span><span>5</span></span> z 300 zł, tylko z 240 zł!
+  </div>
+  <div class="ans-box">Odpowiedź: Kamilowi zostało po zakupach 96 zł.</div>
+</div>
+
+<!-- ZADANIE 24 -->
+<div class="task-block">
+  <div class="task-title">Zadanie 24. Podział tabliczki czekolady</div>
+  <div class="task-content">
+    Brat ma dostać <span class="frac"><span>1</span><span>2</span></span>, siostra <span class="frac"><span>5</span><span>12</span></span>, a Paweł <span class="frac"><span>1</span><span>6</span></span> tabliczki. Czy taki podział jest możliwy?
+  </div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób 1: Sprowadzenie do wspólnego mianownika</div>
+      Wspólny mianownik dla 2, 12 i 6 to <strong>12</strong>:<br>
+      &bull; Brat: <span class="frac"><span>1</span><span>2</span></span> = <span class="frac"><span>6</span><span>12</span></span><br>
+      &bull; Siostra: <span class="frac"><span>5</span><span>12</span></span><br>
+      &bull; Paweł: <span class="frac"><span>1</span><span>6</span></span> = <span class="frac"><span>2</span><span>12</span></span><br>
+      Suma części: <span class="frac"><span>6</span><span>12</span></span> + <span class="frac"><span>5</span><span>12</span></span> + <span class="frac"><span>2</span><span>12</span></span> = <span class="frac"><span>13</span><span>12</span></span> = <strong style="color:#b91c1c;">1 <span class="frac"><span>1</span><span>12</span></span> &gt; 1</strong>.<br>
+      Suma przekracza 1 całość!
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Sposób 2: Model 12 kostek czekolady</div>
+      Czekolada ma 12 kostek:<br>
+      &bull; Brat (połowa): 6 kostek.<br>
+      &bull; Siostra (<span class="frac"><span>5</span><span>12</span></span>): 5 kostek.<br>
+      &bull; Paweł (<span class="frac"><span>1</span><span>6</span></span>): 12 : 6 = 2 kostki.<br>
+      Razem: 6 + 5 + 2 = <strong>13 kostek</strong>.<br>
+      Cała tabliczka ma tylko 12 kostek, więc brakuje 1 kostki!
+    </div>
+  </div>
+  <div class="ans-box">Odpowiedź: Taki podział NIE JEST MOŻLIWY, ponieważ suma ułamków wynosi 1 <span class="frac"><span>1</span><span>12</span></span> (przekracza 1 całą tabliczkę).</div>
+</div>
+
+<!-- ZADANIE 25 -->
+<div class="task-block">
+  <div class="task-title">Zadanie 25. Cięcie taśmy o długości 15 m</div>
+  <div class="task-content">
+    Taśmę 15 m tniemy na kawałki 1,5 m i 25 cm. Krótszych kawałków ma być 12. Ile otrzymamy dłuższych kawałków?
+  </div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób 1: W metrach</div>
+      25 cm = 0,25 m (<span class="frac"><span>1</span><span>4</span></span> metra).<br>
+      1. 12 krótkich kawałków: 12 &times; 0,25 m = <strong>3 m</strong> (bo 4 kawałki to 1 m, a 12 : 4 = 3 m).<br>
+      2. Zostaje na dłuższe: 15 m &minus; 3 m = <strong>12 m</strong>.<br>
+      3. Liczba dłuższych kawałków: 12 m : 1,5 m = 120 : 15 = <strong style="color:#166534;">8 kawałków</strong>.
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Sposób 2: W centymetrach (Zero przecinków!)</div>
+      &bull; Taśma: 15 m = <strong>1500 cm</strong>.<br>
+      &bull; Krótsze kawałki (12 sztuk po 25 cm): 12 &times; 25 cm = <strong>300 cm</strong>.<br>
+      &bull; Zostaje: 1500 &minus; 300 = <strong>1200 cm</strong>.<br>
+      &bull; Dłuższy kawałek ma 1,5 m = <strong>150 cm</strong>.<br>
+      &bull; Liczba dłuższych: 1200 : 150 = <strong>8 kawałków</strong>.
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Pułapka:</strong> Mieszanie jednostek (metrów z centymetrami). Zawsze zamień wszystko na jedną jednostkę!
+  </div>
+  <div class="ans-box">Odpowiedź: Otrzymamy 8 dłuższych kawałków.</div>
+</div>
+
+</body>
+</html>

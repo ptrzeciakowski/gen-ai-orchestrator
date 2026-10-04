@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zestaw Treningowy – Matematyka Klasa 7 (Nadia)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+  .page {
+    height: 275mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    page-break-after: always;
+  }
+  .page:last-child {
+    page-break-after: avoid;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 13pt;
+    color: #1d4ed8;
+  }
+  .header .meta {
+    font-size: 9pt;
+    color: #475569;
+    font-weight: 500;
+  }
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1;
+    padding: 0 2px;
+    font-weight: 600;
+  }
+  .frac > span:first-child {
+    border-bottom: 1.5px solid #1e293b;
+    padding-bottom: 1px;
+  }
+  .frac > span:last-child {
+    padding-top: 1px;
+  }
+  .task-card {
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 128mm;
+  }
+  .task-card.full-page {
+    height: 255mm;
+  }
+  .task-title {
+    font-size: 10.5pt;
+    font-weight: bold;
+    color: #1e40af;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    border-bottom: 1px dashed #cbd5e1;
+    padding-bottom: 4px;
+  }
+  .task-text {
+    font-size: 10pt;
+    margin-bottom: 8px;
+    color: #0f172a;
+    line-height: 1.4;
+  }
+  .math-grid {
+    flex-grow: 1;
+    border: 1px solid #94a3b8;
+    border-radius: 5px;
+    background-color: #ffffff;
+    background-image: 
+      linear-gradient(#e2e8f0 1px, transparent 1px),
+      linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+    background-size: 5mm 5mm;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  .grid-label {
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    font-size: 8pt;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+  .ans-line {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+  }
+  .ans-dots {
+    flex-grow: 1;
+    border-bottom: 1.5px dotted #64748b;
+    margin-left: 8px;
+    height: 16px;
+  }
+  .options-row {
+    display: flex;
+    gap: 30px;
+    margin: 6px 0;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 9.5pt;
+  }
+  .notes-box {
+    margin-top: 10px;
+    border: 1px dashed #94a3b8;
+    border-radius: 6px;
+    padding: 10px;
+    background: #f8fafc;
+    flex-grow: 1;
+  }
+</style>
+</head>
+<body>
+
+<!-- STRONA 1: Zadania 17B i 18B -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>📝 Karta Treningowa – Zadania z Matematyki (Klasa 7)</h1>
+      <div class="meta">Uczennica: <strong>Nadia</strong> &bull; Strona 1 z 5</div>
+    </div>
+    <div class="meta" style="text-align: right;">
+      Data: .........................<br>
+      Ocena: ...... / 9 pkt
+    </div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 17B (Zakupy na wagę)</span>
+      <span style="color: #64748b; font-size: 9pt;">[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Ania kupiła <strong>0,6 kg</strong> świeżych borówek amerykańskich, których 1 kg kosztuje <strong>24,50 zł</strong>.<br>
+      Ile zapłaciła za zakupy?
+    </div>
+    <div class="math-grid">
+      <span class="grid-label">Miejsce na obliczenia (kratka 5 &times; 5 mm):</span>
+    </div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 18B (Ułamek z czasu)</span>
+      <span style="color: #64748b; font-size: 9pt;">[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Przez <span class="frac"><span>2</span><span>5</span></span> lekcji języka angielskiego trwającej <strong>45 minut</strong> uczniowie ćwiczyli dialogi w parach.<br>
+      Ile minut trwała ta część lekcji?
+    </div>
+    <div class="math-grid">
+      <span class="grid-label">Miejsce na obliczenia:</span>
+    </div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+</div>
+
+<!-- STRONA 2: Zadania 19B i 20B -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>📝 Karta Treningowa – Zadania z Matematyki (Klasa 7)</h1>
+      <div class="meta">Uczennica: <strong>Nadia</strong> &bull; Strona 2 z 5</div>
+    </div>
+    <div class="meta">Data: .........................</div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 19B (Czas podróży i postój)</span>
+      <span style="color: #64748b; font-size: 9pt;">[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Autobus wyjechał z dworca początkowego o godzinie <strong>9<sup>25</sup></strong>, a do miejscowości docelowej dotarł o godzinie <strong>12<sup>10</sup></strong>. Podczas trasy kierowca miał jeden planowany postój trwający <strong>20 minut</strong>. Ile czasu trwała sama jazda autobusu?
+      <div class="options-row">
+        <div>A. 2 h 45 min</div>
+        <div>B. 2 h 25 min</div>
+        <div>C. 2,65 h</div>
+        <div>D. 2 h 05 min</div>
+      </div>
+    </div>
+    <div class="math-grid">
+      <span class="grid-label">Miejsce na obliczenia:</span>
+    </div>
+    <div class="ans-line">Prawidłowa odpowiedź: <span class="ans-dots" style="max-width: 100px;"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 20B (Spalanie paliwa i koszt trasy)</span>
+      <span style="color: #64748b; font-size: 9pt;">[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Samochód pana Tomasza zużywa średnio <strong>7 litrów</strong> benzyny na 100 km. Litr benzyny kosztuje <strong>6,80 zł</strong>.<br>
+      Oblicz średni koszt paliwa zużytego podczas podróży z Warszawy do Gdańska trasą o długości <strong>340 km</strong>.
+    </div>
+    <div class="math-grid">
+      <span class="grid-label">Miejsce na obliczenia:</span>
+    </div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+</div>
+
+<!-- STRONA 3: Zadania 21B i 22B -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>📝 Karta Treningowa – Zadania z Matematyki (Klasa 7)</h1>
+      <div class="meta">Uczennica: <strong>Nadia</strong> &bull; Strona 3 z 5</div>
+    </div>
+    <div class="meta">Data: .........................</div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 21B (Cena mieszanki bakalii)</span>
+      <span style="color: #64748b; font-size: 9pt;">[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      W sklepie przygotowano mieszankę bakalii: zmieszano <strong>2,5 kg</strong> orzechów nerkowca w cenie <strong>52,00 zł/kg</strong> oraz <strong>1,5 kg</strong> suszonej żurawiny w cenie <strong>28,00 zł/kg</strong>. Jaka była cena 1 kg tej mieszanki?
+    </div>
+    <div class="math-grid">
+      <span class="grid-label">Miejsce na obliczenia:</span>
+    </div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 22B (Ułamek z reszty ciasta)</span>
+      <span style="color: #64748b; font-size: 9pt;">[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Ciasto upieczone przez babcię ważyło <strong>1,5 kg (1500 g)</strong>. Na przyjęciu rodzina zjadła <span class="frac"><span>4</span><span>5</span></span> tego ciasta. Następnego dnia rano tata zjadł <span class="frac"><span>1</span><span>3</span></span> pozostałej części ciasta. Oblicz, ile gramów ciasta zjadł tata.
+    </div>
+    <div class="math-grid">
+      <span class="grid-label">Miejsce na obliczenia (wskazówka: licz w gramach!):</span>
+    </div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+</div>
+
+<!-- STRONA 4: Zadania 23B i 24B -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>📝 Karta Treningowa – Zadania z Matematyki (Klasa 7)</h1>
+      <div class="meta">Uczennica: <strong>Nadia</strong> &bull; Strona 4 z 5</div>
+    </div>
+    <div class="meta">Data: .........................</div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 23B (Zakupy z budżetem)</span>
+      <span style="color: #64748b; font-size: 9pt;">[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Julia otrzymała na urodziny <strong>400 zł</strong>. Na książki wydała <span class="frac"><span>1</span><span>4</span></span> tej kwoty. Następnie za artykuły plastyczne zapłaciła <span class="frac"><span>2</span><span>5</span></span> kwoty, która została jej po zakupie książek. Oblicz, ile złotych zostało Julii po zakupach.
+    </div>
+    <div class="math-grid">
+      <span class="grid-label">Miejsce na obliczenia (pamiętaj: drugi zakup licz z tego, co zostało!):</span>
+    </div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 24B (Czy podział pizzy jest możliwy?)</span>
+      <span style="color: #64748b; font-size: 9pt;">[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Michał zaplanował podział pizzy: starszy brat ma otrzymać <span class="frac"><span>3</span><span>8</span></span>, siostra <span class="frac"><span>1</span><span>4</span></span>, a młodszy brat <span class="frac"><span>7</span><span>16</span></span> pizzy. Czy taki podział pizzy jest możliwy? Uzasadnij swoją odpowiedź.
+    </div>
+    <div class="math-grid">
+      <span class="grid-label">Miejsce na obliczenia i uzasadnienie:</span>
+    </div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+</div>
+
+<!-- STRONA 5: Zadanie 25B + Brudnopis / Notatki -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>📝 Karta Treningowa – Zadania z Matematyki (Klasa 7)</h1>
+      <div class="meta">Uczennica: <strong>Nadia</strong> &bull; Strona 5 z 5</div>
+    </div>
+    <div class="meta">Data: .........................</div>
+  </div>
+
+  <div class="task-card" style="height: 140mm;">
+    <div class="task-title">
+      <span>Zadanie 25B (Cięcie listwy na kawałki)</span>
+      <span style="color: #64748b; font-size: 9pt;">[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Drewnianą listwę o długości <strong>18 m</strong> trzeba pociąć na kawałki o długościach <strong>1,2 m</strong> oraz <strong>30 cm</strong>. Krótszych kawałków ma być <strong>16</strong>. Ile otrzymamy dłuższych kawałków?
+    </div>
+    <div class="math-grid">
+      <span class="grid-label">Miejsce na obliczenia (wskazówka: zamień wszystko na cm lub m!):</span>
+    </div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card" style="height: 110mm;">
+    <div class="task-title">
+      <span>✏️ Miejsce na dodatkowe notatki i brudnopis</span>
+    </div>
+    <div class="math-grid">
+      <span class="grid-label">Brudnopis:</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

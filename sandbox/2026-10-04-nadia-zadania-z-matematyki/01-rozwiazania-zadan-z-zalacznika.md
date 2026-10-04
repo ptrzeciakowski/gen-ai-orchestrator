@@ -1,6 +1,4 @@
 # 📘 Rozwiązania Krok po Kroku – Zadania z Załącznika (Klasa 7)
-
-Materiały przygotowane dla Nadii na podstawie zadań z kart pracy (zadania 17–25).
 Dla każdego zadania przygotowano **maksymalnie 2 łatwe sposoby**:
 1. **Sposób A (Sprytny / Intuicyjny / Życiowy)** – najszybszy, często bez żmudnego liczenia pod kreską.
 2. **Sposób B (Klasyczny / Szkolny)** – przejrzysty schemat krok po kroku.
