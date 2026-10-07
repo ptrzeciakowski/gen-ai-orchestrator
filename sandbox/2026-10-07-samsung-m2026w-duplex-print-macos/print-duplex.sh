@@ -53,8 +53,12 @@ if [[ -f "/Library/Caches/com.sec.printer" ]]; then
     fi
 fi
 
-echo -e "${CYAN}Wysyłanie zadania do kolejki:${NC} ${BOLD}${QUEUE_NAME}${NC}..."
-JOB_OUT=$(lp -d "$QUEUE_NAME" "$@" "$FILE")
+# Upewnienie się, że kolejka jest włączona i nie jest zapauzowana
+cupsenable "$QUEUE_NAME" 2>/dev/null || true
+cupsaccept "$QUEUE_NAME" 2>/dev/null || true
+
+echo -e "${CYAN}Wysyłanie zadania do kolejki:${NC} ${BOLD}${QUEUE_NAME}${NC} (Druk Dwustronny)..."
+JOB_OUT=$(lp -d "$QUEUE_NAME" -o SECManualDuplexOption=LongEdge -o Duplex=DuplexNoTumble "$@" "$FILE")
 echo -e "${GREEN}[OK]${NC} $JOB_OUT"
 
 echo ""

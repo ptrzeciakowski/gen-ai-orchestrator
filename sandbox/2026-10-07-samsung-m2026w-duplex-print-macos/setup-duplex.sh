@@ -27,6 +27,7 @@ CACHE_FILE="/Library/Caches/com.sec.printer"
 DEFAULT_MDNS="sec8425197ca25b.local"
 PRINTER_PORT="9100"
 PRINTER_HOST=""
+SET_DEFAULT=0
 
 # --- Funkcje pomocnicze ---
 log_info() {
@@ -61,6 +62,7 @@ show_help() {
     echo "  --name <NAZWA>           Nazwa kolejki CUPS (domyślnie: ${QUEUE_NAME})"
     echo "  --display <OPIS>         Wyświetlana nazwa w oknie druku (domyślnie: '${DISPLAY_NAME}')"
     echo "  --status                 Wyświetla aktualny status kolejki i uprawnień bez zmian"
+    echo "  --default                Ustawia utworzoną kolejkę jako domyślną drukarkę w macOS"
     echo "  --fix-permissions        Naprawia tylko uprawnienia pliku cache com.sec.printer"
     echo "  --test                   Generuje i wysyła 4-stronicowy dokument testowy"
     echo "  --help, -h               Wyświetla tę pomoc"
@@ -233,14 +235,43 @@ configure_cups_queue() {
 
     # Przygotowanie oczyszczonego pliku PPD (bez zawieszających wtyczek APDialogExtension / Rosetta)
     local clean_ppd_file="$(cd "$(dirname "$0")" && pwd)/Samsung_M2020_Series_Clean.ppd"
-    log_info "Przygotowanie zoptymalizowanego PPD (usunięcie przestarzałych wtyczek GUI)..."
+    log_info "Przygotowanie zoptymalizowanego PPD (usunięcie przestarzałych wtyczek GUI i dodanie natywnego dupleksu)..."
     python3 -c "
 import gzip
 with gzip.open('$PPD_PATH', 'rb') as f:
     ppd = f.read()
+
+# 1. Usunięcie przestarzałych wtyczek GUI powodujących zawieszenie na Apple Silicon
 lines = [l for l in ppd.splitlines() if not l.startswith(b'*APDialogExtension:') and not l.startswith(b'*APPrinterUtilityPath:') and not l.startswith(b'*APPrinterIconPath:')]
+text = b'\n'.join(lines)
+
+# 2. Wymuszenie domyślnego dupleksu w sterowniku Samsunga
+text = text.replace(b'*DefaultSECManualDuplexOption: None', b'*DefaultSECManualDuplexOption: LongEdge')
+
+# 3. Wstrzyknięcie standardowej sekcji Apple/CUPS Duplex (Two-Sided)
+duplex_block = b'''
+*% =========================================================
+*% Standard macOS Duplex (Two-Sided Printing)
+*% =========================================================
+
+*OpenUI *Duplex/Two-Sided: PickOne
+*OrderDependency: 20 AnySetup *Duplex
+*DefaultDuplex: DuplexNoTumble
+*Duplex None/Off: \"\"
+*Duplex DuplexNoTumble/Long-Edge (Standard): \"\"
+*Duplex DuplexTumble/Short-Edge (Flip): \"\"
+*CloseUI: *Duplex
+'''
+
+if b'*OpenUI *Duplex' not in text:
+    target = b'*CloseUI: *SECManualDuplexOption'
+    if target in text:
+        text = text.replace(target, target + b'\n' + duplex_block)
+    else:
+        text += b'\n' + duplex_block
+
 with open('$clean_ppd_file', 'wb') as f:
-    f.write(b'\n'.join(lines))
+    f.write(text)
 "
 
     # Wywołanie lpadmin z czystym PPD
@@ -249,7 +280,11 @@ with open('$clean_ppd_file', 'wb') as f:
         -P "$clean_ppd_file" \
         -D "$DISPLAY_NAME" \
         -o PageSize=A4 \
-        -o SECManualDuplexOption=LongEdge
+        -o SECManualDuplexOption=LongEdge \
+        -o Duplex=DuplexNoTumble
+
+    # Zapisanie domyślnych opcji użytkownika
+    lpoptions -p "$QUEUE_NAME" -o SECManualDuplexOption=LongEdge -o Duplex=DuplexNoTumble 2>/dev/null || true
 
     log_ok "Kolejka '${QUEUE_NAME}' została utworzona/zaktualizowana (PPD zoptymalizowany pod Apple Silicon/macOS)."
 
@@ -257,15 +292,24 @@ with open('$clean_ppd_file', 'wb') as f:
     log_info "Weryfikacja parametrów kolejki..."
     local duplex_opt
     duplex_opt=$(lpoptions -p "$QUEUE_NAME" -l 2>/dev/null | grep "SECManualDuplexOption" || true)
+    local cups_duplex
+    cups_duplex=$(lpoptions -p "$QUEUE_NAME" -l 2>/dev/null | grep "Duplex/" || true)
     local page_opt
     page_opt=$(lpoptions -p "$QUEUE_NAME" -l 2>/dev/null | grep "PageSize" || true)
 
-    echo -e "  - Duplex: ${GREEN}${duplex_opt}${NC}"
-    echo -e "  - Format: ${GREEN}${page_opt}${NC}"
+    echo -e "  - Samsung Duplex: ${GREEN}${duplex_opt}${NC}"
+    echo -e "  - macOS Duplex:   ${GREEN}${cups_duplex}${NC}"
+    echo -e "  - Format papieru: ${GREEN}${page_opt}${NC}"
 
-    # Włączenie kolejki i akceptacja zadań
+    # Włączenie kolejki i akceptacja zadań (odblokowanie jeśli była zapauzowana)
     cupsenable "$QUEUE_NAME" 2>/dev/null || true
     cupsaccept "$QUEUE_NAME" 2>/dev/null || true
+
+    if [[ "$SET_DEFAULT" -eq 1 ]]; then
+        log_info "Ustawianie kolejki '${QUEUE_NAME}' jako domyślnej w systemie..."
+        lpoptions -d "$QUEUE_NAME" 2>/dev/null || true
+        log_ok "Kolejka '${QUEUE_NAME}' została ustawiona jako domyślna drukarka."
+    fi
 }
 
 # --- Wyświetlenie statusu ---
@@ -485,6 +529,10 @@ while [[ $# -gt 0 ]]; do
         --test)
             run_test
             exit 0
+            ;;
+        --default)
+            SET_DEFAULT=1
+            shift
             ;;
         --help|-h)
             show_help

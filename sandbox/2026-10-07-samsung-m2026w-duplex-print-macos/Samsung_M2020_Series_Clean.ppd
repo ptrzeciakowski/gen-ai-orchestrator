@@ -70,11 +70,24 @@
 
 *OpenUI *SECManualDuplexOption/Two-Sided Printing (Manual): PickOne
 *OrderDependency: 10  AnySetup *SECManualDuplexOption
-*DefaultSECManualDuplexOption: None
+*DefaultSECManualDuplexOption: LongEdge
 *SECManualDuplexOption None/None: ""
 *SECManualDuplexOption LongEdge/Long Edge: ""
 *SECManualDuplexOption ShortEdge/Short Edge: ""
 *CloseUI: *SECManualDuplexOption
+
+*% =========================================================
+*% Standard macOS Duplex (Two-Sided Printing)
+*% =========================================================
+
+*OpenUI *Duplex/Two-Sided: PickOne
+*OrderDependency: 20 AnySetup *Duplex
+*DefaultDuplex: DuplexNoTumble
+*Duplex None/Off: ""
+*Duplex DuplexNoTumble/Long-Edge (Standard): ""
+*Duplex DuplexTumble/Short-Edge (Flip): ""
+*CloseUI: *Duplex
+
 
 *% =========================================================
 *% Toner Save Mode

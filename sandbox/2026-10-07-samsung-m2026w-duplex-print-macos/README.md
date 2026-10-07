@@ -277,7 +277,21 @@ Dzięki wdrożonemu rozwiązaniu masz w systemie macOS dwie niezależne drukarki
   - Okno drukowania nigdy się nie zawiesza.
   - Filtry dupleksu (`prefilter` + `rastertosec`) działają w 100% natywnie na ARM64.
 
-### 3. Drukarka jest „Offline” lub zadanie czeka na połączenie
+### 3. Drukarka wydrukowała strony pojedynczo (Dupleks nie zadziałał)
+* **Objaw:** Po wysłaniu dokumentu (np. 3-stronicowego z Podglądu/Preview) drukarka wypluwa 3 osobne kartki jednostronnie bez zatrzymania i migania diody.
+* **Przyczyna niskopoziomowa:**
+  1. **Niewłaściwa drukarka docelowa:** W oknie druku wybrano standardową systemową kolejkę AirPrint (`Samsung M2020 Series`), która wspiera wyłącznie jednostronny druk.
+  2. **Brak standardowej sekcji `*OpenUI *Duplex` w PPD:** Oryginalny PPD Samsunga definiował dupleks wyłącznie pod niestandardową zmienną `SECManualDuplexOption`, z domyślną wartością `None`. Nowoczesne aplikacje macOS (Podgląd, Pages) odpytują wyłącznie o standardową opcję CUPS `*Duplex`. Gdy jej brakowało, macOS wysyłał zadanie z `Duplex=None` i `sides=one-sided`, a filtr `prefilter` przechodził w tryb passthrough.
+* **Rozwiązanie (Wdrożone w zaktualizowanym PPD i skrypcie):**
+  1. W pliku [`Samsung_M2020_Series_Clean.ppd`](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/Samsung_M2020_Series_Clean.ppd) ustawiono `*DefaultSECManualDuplexOption: LongEdge` oraz dodano standardową deklarację CUPS/Apple `*OpenUI *Duplex/Two-Sided: PickOne` z domyślnym `*DefaultDuplex: DuplexNoTumble`.
+  2. Dzięki temu w każdym oknie druku macOS pole wyboru **„Druk dwustronny” (Two-Sided)** pojawia się i jest **automatycznie zaznaczone**.
+  3. Upewnij się, że w oknie drukowania wybrano drukarkę: **`Samsung M2026W (Druk Dwustronny)`**.
+  4. Aby nie musieć wybierać jej ręcznie za każdym razem, możesz ustawić ją jako domyślną w całym systemie:
+     ```bash
+     ./setup-duplex.sh --default
+     ```
+
+### 4. Drukarka jest „Offline” lub zadanie czeka na połączenie
 * **Przyczyna:** Drukarka zmieniła adres IP w sieci lokalnej lub sieć Wi-Fi nie rozgłasza mDNS (`sec8425197ca25b.local`).
 * **Rozwiązanie:**
   1. Sprawdź czy drukarka odpowiada w sieci:
