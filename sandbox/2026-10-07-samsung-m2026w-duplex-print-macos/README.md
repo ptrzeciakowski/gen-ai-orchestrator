@@ -152,9 +152,11 @@ W katalogu `/Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m202
 | Plik | Typ | Opis |
 | :--- | :--- | :--- |
 | [README.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/README.md) | Dokumentacja | Główny podręcznik techniczny i instrukcja obsługi (ten dokument). |
-| [setup-duplex.sh](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/setup-duplex.sh) | Skrypt Bash | Zautomatyzowany konfigurator kolejki CUPS, naprawiacz uprawnień i tester dupleksu. |
+| [setup-duplex.sh](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/setup-duplex.sh) | Skrypt Bash | Zautomatyzowany konfigurator kolejki CUPS, instalator wrapperów i tester dupleksu. |
+| [samsung-duplex-wrapper.c](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/samsung-duplex-wrapper.c) | Kod źródłowy C | Uniwersalny wrapper filtrów CUPS tłumaczący opcje macOS na manual duplex Samsunga. |
 | [print-duplex.sh](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/print-duplex.sh) | Skrypt Bash | Narzędzie CLI do szybkiego drukowania dowolnego pliku PDF na kolejkę dupleksową. |
-| [001-diagnoza-i-konfiguracja-druku-dwustronnego.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/001-diagnoza-i-konfiguracja-druku-dwustronnego.md) | Zapis sesji | Kompletna historia konwersacji diagnostycznej z sesji z dnia 2026-10-06. |
+| [001-diagnoza-i-konfiguracja-druku-dwustronnego.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/001-diagnoza-i-konfiguracja-druku-dwustronnego.md) | Zapis sesji | Kompletna historia konwersacji diagnostycznej z sesji 1 (2026-10-06). |
+| [002-naprawa-druku-dwustronnego-wrapper-filtrow.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/002-naprawa-druku-dwustronnego-wrapper-filtrow.md) | Zapis sesji | Inżynieria wsteczna Job 177 i wdrożenie uniwersalnego wrappera filtrów CUPS (2026-10-08). |
 
 ---
 
@@ -277,19 +279,27 @@ Dzięki wdrożonemu rozwiązaniu masz w systemie macOS dwie niezależne drukarki
   - Okno drukowania nigdy się nie zawiesza.
   - Filtry dupleksu (`prefilter` + `rastertosec`) działają w 100% natywnie na ARM64.
 
-### 3. Drukarka wydrukowała strony pojedynczo (Dupleks nie zadziałał)
-* **Objaw:** Po wysłaniu dokumentu (np. 3-stronicowego z Podglądu/Preview) drukarka wypluwa 3 osobne kartki jednostronnie bez zatrzymania i migania diody.
-* **Przyczyna niskopoziomowa:**
-  1. **Niewłaściwa drukarka docelowa:** W oknie druku wybrano standardową systemową kolejkę AirPrint (`Samsung M2020 Series`), która wspiera wyłącznie jednostronny druk.
-  2. **Brak standardowej sekcji `*OpenUI *Duplex` w PPD:** Oryginalny PPD Samsunga definiował dupleks wyłącznie pod niestandardową zmienną `SECManualDuplexOption`, z domyślną wartością `None`. Nowoczesne aplikacje macOS (Podgląd, Pages) odpytują wyłącznie o standardową opcję CUPS `*Duplex`. Gdy jej brakowało, macOS wysyłał zadanie z `Duplex=None` i `sides=one-sided`, a filtr `prefilter` przechodził w tryb passthrough.
-* **Rozwiązanie (Wdrożone w zaktualizowanym PPD i skrypcie):**
-  1. W pliku [`Samsung_M2020_Series_Clean.ppd`](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/Samsung_M2020_Series_Clean.ppd) ustawiono `*DefaultSECManualDuplexOption: LongEdge` oraz dodano standardową deklarację CUPS/Apple `*OpenUI *Duplex/Two-Sided: PickOne` z domyślnym `*DefaultDuplex: DuplexNoTumble`.
-  2. Dzięki temu w każdym oknie druku macOS pole wyboru **„Druk dwustronny” (Two-Sided)** pojawia się i jest **automatycznie zaznaczone**.
-  3. Upewnij się, że w oknie drukowania wybrano drukarkę: **`Samsung M2026W (Druk Dwustronny)`**.
-  4. Aby nie musieć wybierać jej ręcznie za każdym razem, możesz ustawić ją jako domyślną w całym systemie:
-     ```bash
-     ./setup-duplex.sh --default
-     ```
+### 3. Drukarka wydrukowała strony pojedynczo (Dupleks nie zadziałał w aplikacjach macOS)
+* **Objaw:** Po wysłaniu dokumentu wielostronicowego z aplikacji Podgląd (Preview), Word lub Chrome drukarka wypluwa osobne kartki jednostronnie bez zatrzymania i migania diody.
+* **Przyczyna niskopoziomowa (Zdiagnozowana w sesji 002):**
+  1. Aplikacje macOS przy zaznaczeniu opcji „Druk dwustronny” przesyłają standardowe atrybuty CUPS/Apple:
+     `Duplex=DuplexNoTumble`, `sides=two-sided-long-edge`, `com.apple.print.PrintSettings.PMDuplexing..n.=2`.
+  2. Aplikacje **nie wiedzą** o niestandardowym atrybucie Samsunga `SECManualDuplexOption` i nie dołączają go do parametrów zadania (`argv[5]`).
+  3. Filtry Samsunga (`prefilter` i `rastertosec`) odpytują wyłącznie funkcję `cupsGetOption("SECManualDuplexOption")`. Gdy parametr ten nie jest obecny w `argv[5]`:
+     - `prefilter` wykonuje passthrough (nie przestawia stron na arkusze parzyste/nieparzyste),
+     - `rastertosec` widząc `PMDuplexing=2` wysyła komendę dupleksu sprzętowego `@PJL SET DUPLEX = ON`. Ponieważ M2026W nie posiada fizycznego dupleksera mechanicznego, urządzenie ignoruje tę komendę i drukuje jednostronnie.
+* **Trwałe Rozwiązanie (Uniwersalny Wrapper Filtrów CUPS):**
+  Wdrożyliśmy uniwersalny wrapper Mach-O (`samsung-duplex-wrapper`), który działa transparentnie w podsystemie CUPS jako filtry `prefilter-duplex` oraz `rastertosec-duplex`.
+  Wrapper analizuje opcje zadania i automatycznie mapuje:
+  - `Duplex=DuplexNoTumble` / `sides=two-sided-long-edge` -> dokłada `SECManualDuplexOption=LongEdge`
+  - `Duplex=DuplexTumble` / `sides=two-sided-short-edge` -> dokłada `SECManualDuplexOption=ShortEdge`
+  - `Duplex=None` / `sides=one-sided` -> dokłada `SECManualDuplexOption=None`
+  Dzięki temu filtr `prefilter` zawsze poprawnie reorderuje strony, a `rastertosec` wysyła komendę `@PJL SET DUPLEX = MANUAL`, zmuszając drukarkę do oczekiwania na przełożenie kartek.
+* **Instalacja wrapperów:**
+  ```bash
+  cd /Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos
+  ./setup-duplex.sh
+  ```
 
 ### 4. Drukarka jest „Offline” lub zadanie czeka na połączenie
 * **Przyczyna:** Drukarka zmieniła adres IP w sieci lokalnej lub sieć Wi-Fi nie rozgłasza mDNS (`sec8425197ca25b.local`).

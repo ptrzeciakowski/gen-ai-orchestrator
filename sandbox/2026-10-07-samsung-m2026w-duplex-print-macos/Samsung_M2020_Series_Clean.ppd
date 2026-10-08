@@ -22,7 +22,7 @@
 *cupsVersion:  1.2
 *cupsManualCopies:  True
 *cupsModelNumber:  0
-*cupsFilter:  "application/vnd.cups-raster 0 /Library/Printers/Samsung/UPD/Filters/rastertosec"
+*cupsFilter:  "application/vnd.cups-raster 0 /Library/Printers/Samsung/UPD/Filters/rastertosec-duplex"
 *ModelName:  "Samsung M2020 Series"
 *ShortNickName:  "Samsung M2020 Series"
 *NickName:  "Samsung M2020 Series"
@@ -54,9 +54,9 @@
 *ePJL:  "SkipBlankPages"
 *eNormalTable:  "6x6x1"
 *eBestTable:  "12x12x1"
-*cupsPreFilter:  "application/postscript 100 /Library/Printers/Samsung/UPD/Filters/prefilter"
-*cupsPreFilter:  "application/vnd.cups-postscript 100 /Library/Printers/Samsung/UPD/Filters/prefilter"
-*cupsPreFilter:  "application/pdf 100 /Library/Printers/Samsung/UPD/Filters/prefilter"
+*cupsPreFilter:  "application/postscript 100 /Library/Printers/Samsung/UPD/Filters/prefilter-duplex"
+*cupsPreFilter:  "application/vnd.cups-postscript 100 /Library/Printers/Samsung/UPD/Filters/prefilter-duplex"
+*cupsPreFilter:  "application/pdf 100 /Library/Printers/Samsung/UPD/Filters/prefilter-duplex"
 *SECManualDuplexOddFirst :  "False"
 *SECManualDuplexLastPageFirst :  "True"
 *SECManualDuplexImage1:  "/Library/Printers/Samsung/M2020/itdrvM1.png"

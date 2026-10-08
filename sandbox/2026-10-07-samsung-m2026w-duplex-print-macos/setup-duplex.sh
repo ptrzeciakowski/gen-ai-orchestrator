@@ -64,6 +64,7 @@ show_help() {
     echo "  --status                 Wyświetla aktualny status kolejki i uprawnień bez zmian"
     echo "  --default                Ustawia utworzoną kolejkę jako domyślną drukarkę w macOS"
     echo "  --fix-permissions        Naprawia tylko uprawnienia pliku cache com.sec.printer"
+    echo "  --install-wrappers       Kompiluje i instaluje wrappery filtrów CUPS w systemie"
     echo "  --test                   Generuje i wysyła 4-stronicowy dokument testowy"
     echo "  --help, -h               Wyświetla tę pomoc"
     echo ""
@@ -170,6 +171,57 @@ fix_cache_permissions() {
     fi
 }
 
+# --- Kompilacja i instalacja wrapperów filtrów dupleksu ---
+install_filter_wrappers() {
+    log_info "Weryfikacja wrapperów filtrów CUPS dla automatycznego dupleksu..."
+    local script_dir
+    script_dir="$(cd "$(dirname "$0")" && pwd)"
+    local src_file="$script_dir/samsung-duplex-wrapper.c"
+    local pre_bin="$script_dir/prefilter-duplex"
+    local sec_bin="$script_dir/rastertosec-duplex"
+    local target_dir="/Library/Printers/Samsung/UPD/Filters"
+
+    if [[ ! -f "$src_file" ]]; then
+        log_err "Brak pliku źródłowego: $src_file"
+        exit 1
+    fi
+
+    # Kompilacja dedykowanych wrapperów jeśli brak binarek lub kod źródłowy nowszy
+    if [[ ! -f "$pre_bin" || ! -f "$sec_bin" || "$src_file" -nt "$pre_bin" || "$src_file" -nt "$sec_bin" ]]; then
+        log_info "Kompilacja uniwersalnych wrapperów filtrów (ARM64 + x86_64)..."
+        clang -O2 -arch arm64 -arch x86_64 -DTARGET_FILTER='"/Library/Printers/Samsung/UPD/Filters/prefilter"' "$src_file" -o "$pre_bin"
+        clang -O2 -arch arm64 -arch x86_64 -DTARGET_FILTER='"/Library/Printers/Samsung/UPD/Filters/rastertosec"' "$src_file" -o "$sec_bin"
+        log_ok "Skompilowano wrappery prefilter-duplex oraz rastertosec-duplex."
+    fi
+
+    # Sprawdzenie czy wrappery są zainstalowane w /Library/Printers/Samsung/UPD/Filters/
+    local need_install=0
+    if [[ ! -f "$target_dir/prefilter-duplex" || ! -f "$target_dir/rastertosec-duplex" ]]; then
+        need_install=1
+    elif [[ "$pre_bin" -nt "$target_dir/prefilter-duplex" || "$sec_bin" -nt "$target_dir/rastertosec-duplex" ]]; then
+        need_install=1
+    fi
+
+    if [[ $need_install -eq 1 ]]; then
+        log_info "Instalacja zaktualizowanych wrapperów w $target_dir..."
+        if [[ $EUID -ne 0 ]]; then
+            echo -e "${CYAN}Wymagane uprawnienia administratora do instalacji filtrów w systemie:${NC}"
+            sudo cp "$pre_bin" "$target_dir/prefilter-duplex"
+            sudo cp "$sec_bin" "$target_dir/rastertosec-duplex"
+            sudo chown root:admin "$target_dir/prefilter-duplex" "$target_dir/rastertosec-duplex"
+            sudo chmod 755 "$target_dir/prefilter-duplex" "$target_dir/rastertosec-duplex"
+        else
+            cp "$pre_bin" "$target_dir/prefilter-duplex"
+            cp "$sec_bin" "$target_dir/rastertosec-duplex"
+            chown root:admin "$target_dir/prefilter-duplex" "$target_dir/rastertosec-duplex"
+            chmod 755 "$target_dir/prefilter-duplex" "$target_dir/rastertosec-duplex"
+        fi
+        log_ok "Wrapeppery filtrów prefilter-duplex oraz rastertosec-duplex zostały poprawnie zainstalowane."
+    else
+        log_ok "Wrapeppery filtrów są aktualne w $target_dir."
+    fi
+}
+
 # --- Automatyczne wykrywanie adresu drukarki ---
 detect_printer_host() {
     if [[ -n "$PRINTER_HOST" ]]; then
@@ -245,7 +297,11 @@ with gzip.open('$PPD_PATH', 'rb') as f:
 lines = [l for l in ppd.splitlines() if not l.startswith(b'*APDialogExtension:') and not l.startswith(b'*APPrinterUtilityPath:') and not l.startswith(b'*APPrinterIconPath:')]
 text = b'\n'.join(lines)
 
-# 2. Wymuszenie domyślnego dupleksu w sterowniku Samsunga
+# 2. Wymuszenie filtrów wrappera dla automatycznego dupleksu
+text = text.replace(b'/Library/Printers/Samsung/UPD/Filters/rastertosec', b'/Library/Printers/Samsung/UPD/Filters/rastertosec-duplex')
+text = text.replace(b'/Library/Printers/Samsung/UPD/Filters/prefilter', b'/Library/Printers/Samsung/UPD/Filters/prefilter-duplex')
+
+# 3. Wymuszenie domyślnego dupleksu w sterowniku Samsunga
 text = text.replace(b'*DefaultSECManualDuplexOption: None', b'*DefaultSECManualDuplexOption: LongEdge')
 
 # 3. Wstrzyknięcie standardowej sekcji Apple/CUPS Duplex (Two-Sided)
@@ -343,6 +399,13 @@ show_status() {
         echo -e "${GREEN}Istnieje${NC} (Uprawnienia: $perms, Właściciel: $owner)"
     else
         echo -e "${RED}Brak pliku! (Musi zostać utworzony z uprawnieniami 0666)${NC}"
+    fi
+
+    echo -n "4. Wrappery filtrów dupleksu (prefilter-duplex / rastertosec-duplex): "
+    if [[ -f "/Library/Printers/Samsung/UPD/Filters/prefilter-duplex" && -f "/Library/Printers/Samsung/UPD/Filters/rastertosec-duplex" ]]; then
+        echo -e "${GREEN}Zainstalowane i aktywne${NC}"
+    else
+        echo -e "${YELLOW}Brak w /Library/Printers/Samsung/UPD/Filters (wymaga instalacji)${NC}"
     fi
 
     echo ""
@@ -526,6 +589,13 @@ while [[ $# -gt 0 ]]; do
             fix_cache_permissions
             exit 0
             ;;
+        --install-wrappers)
+            print_header
+            check_os
+            check_drivers
+            install_filter_wrappers
+            exit 0
+            ;;
         --test)
             run_test
             exit 0
@@ -552,6 +622,7 @@ main() {
     check_drivers
     fix_quarantine
     fix_cache_permissions
+    install_filter_wrappers
     detect_printer_host
     verify_connection
     configure_cups_queue
