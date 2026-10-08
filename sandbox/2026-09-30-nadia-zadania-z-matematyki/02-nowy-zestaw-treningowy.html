@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Nowy Zestaw Treningowy – Matematyka Klasa 7 (Nadia)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 8mm 11mm 8mm 11mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 9.2pt;
+    line-height: 1.35;
+  }
+  .page {
+    height: 279mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    page-break-after: always;
+  }
+  .page:last-child {
+    page-break-after: avoid;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 12pt;
+    color: #1d4ed8;
+    font-weight: 800;
+  }
+  .header .meta {
+    font-size: 8.5pt;
+    color: #475569;
+  }
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1;
+    padding: 0 2px;
+    font-weight: 600;
+  }
+  .frac > span:first-child {
+    border-bottom: 1.4px solid #1e293b;
+    padding-bottom: 1px;
+  }
+  .frac > span:last-child {
+    padding-top: 1px;
+  }
+  .task-card {
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6px;
+    flex-grow: 1;
+  }
+  .task-title {
+    font-size: 9.8pt;
+    font-weight: bold;
+    color: #1e40af;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+    padding-bottom: 2px;
+  }
+  .task-text {
+    font-size: 9.2pt;
+    margin-bottom: 5px;
+    color: #0f172a;
+  }
+  .options-row {
+    display: flex;
+    gap: 20px;
+    margin: 4px 0;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 9pt;
+  }
+  .math-grid {
+    flex-grow: 1;
+    min-height: 28mm;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-image: 
+      linear-gradient(#e2e8f0 1px, transparent 1px),
+      linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+    background-size: 5mm 5mm;
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .grid-label {
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    font-size: 7.5pt;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 0 3px;
+    border-radius: 2px;
+  }
+  .ans-line {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+  }
+  .ans-dots {
+    flex-grow: 1;
+    border-bottom: 1.5px dotted #64748b;
+    margin-left: 6px;
+    height: 14px;
+  }
+  .axis-container {
+    height: 18mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 4px 0;
+  }
+  .axis-line {
+    width: 95%;
+    height: 2px;
+    background: #334155;
+    position: relative;
+  }
+  .axis-arrow {
+    position: absolute;
+    right: -2px;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #334155;
+  }
+  .tick {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: #334155;
+    top: -4px;
+  }
+  .tick-label {
+    position: absolute;
+    top: 10px;
+    font-size: 8pt;
+    font-weight: 600;
+    transform: translateX(-50%);
+  }
+</style>
+</head>
+<body>
+
+<!-- STRONA 1: ZADANIA 1B - 4B -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>📝 Bliźniacza Karta Treningowa – Zadania dla Nadii</h1>
+      <div class="meta">Część I: Bliźniacza Kartkówka 1 &bull; Klasa 7 &bull; Strona 1 z 6</div>
+    </div>
+    <div class="meta" style="text-align: right;">
+      Data: .........................<br>
+      Ocena: ...... / 12 pkt
+    </div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 1B (Odwrotność liczby)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">Odwrotnością liczby <strong>1<span class="frac"><span>2</span><span>5</span></span></strong> jest:</div>
+    <div class="options-row">
+      <span>A. 1<span class="frac"><span>5</span><span>2</span></span></span>
+      <span>B. &minus;<span class="frac"><span>5</span><span>7</span></span></span>
+      <span>C. <span class="frac"><span>5</span><span>7</span></span></span>
+      <span>D. &minus;1<span class="frac"><span>2</span><span>5</span></span></span>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia (kratka 5 &times; 5 mm):</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 2B (Liczba przeciwna)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">Liczbą przeciwną do liczby <strong>&minus;2<span class="frac"><span>1</span><span>4</span></span></strong> jest:</div>
+    <div class="options-row">
+      <span>A. <span class="frac"><span>9</span><span>4</span></span></span>
+      <span>B. &minus;<span class="frac"><span>9</span><span>4</span></span></span>
+      <span>C. &minus;<span class="frac"><span>4</span><span>9</span></span></span>
+      <span>D. <span class="frac"><span>4</span><span>9</span></span></span>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 3B (Porównywanie ułamków)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Dane są liczby: <strong>a = <span class="frac"><span>11</span><span>5</span></span></strong>, <strong>b = 2,15</strong>, <strong>c = <span class="frac"><span>9</span><span>4</span></span></strong>.<br>
+      Po zapisaniu ich w kolejności od najmniejszej do największej otrzymamy:
+    </div>
+    <div class="options-row">
+      <span>A. b, a, c</span>
+      <span>B. a, b, c</span>
+      <span>C. b, c, a</span>
+      <span>D. c, a, b</span>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 4B (Przeliczanie minut na godziny)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text"><strong>195 minut</strong> &ndash; ile to godzin?</div>
+    <div class="options-row">
+      <span>A. 1,95</span>
+      <span>B. 3,15</span>
+      <span>C. 3,25</span>
+      <span>D. 3,1</span>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+</div>
+
+<!-- STRONA 2: ZADANIA 5B - 10B -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>📝 Bliźniacza Karta Treningowa – Zadania dla Nadii</h1>
+      <div class="meta">Część I: Bliźniacza Kartkówka 1 (cd.) &bull; Strona 2 z 6</div>
+    </div>
+    <div class="meta" style="text-align: right;">Uczennica: <strong>Nadia</strong></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 5B (Położenie na osi liczbowej)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">Liczba <strong><span class="frac"><span>1</span><span>4</span></span></strong> leży na osi liczbowej pomiędzy liczbami:</div>
+    <div class="options-row">
+      <span>A. <span class="frac"><span>1</span><span>8</span></span> i <span class="frac"><span>2</span><span>8</span></span></span>
+      <span>B. <span class="frac"><span>1</span><span>6</span></span> i <span class="frac"><span>2</span><span>6</span></span></span>
+      <span>C. <span class="frac"><span>2</span><span>6</span></span> i <span class="frac"><span>3</span><span>6</span></span></span>
+      <span>D. <span class="frac"><span>1</span><span>12</span></span> i <span class="frac"><span>2</span><span>12</span></span></span>
+    </div>
+    <div class="math-grid" style="min-height: 20mm;"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 6B i 7B (Rozwinięcia dziesiętne)</span>
+      <span>[ 2 pkt ]</span>
+    </div>
+    <div class="task-text">
+      <strong>6B.</strong> Rozwinięcie dziesiętne skończone ma ułamek:  
+      A. <span class="frac"><span>2</span><span>3</span></span> &bull; B. <span class="frac"><span>6</span><span>15</span></span> &bull; C. <span class="frac"><span>4</span><span>18</span></span> &bull; D. <span class="frac"><span>5</span><span>12</span></span> &nbsp; &rarr; &nbsp; Odp: [ &nbsp; ]<br><br>
+      <strong>7B.</strong> Ułamkiem o rozwinięciu dziesiętnym nieskończonym jest:  
+      A. <span class="frac"><span>9</span><span>12</span></span> &bull; B. <span class="frac"><span>7</span><span>12</span></span> &bull; C. <span class="frac"><span>3</span><span>8</span></span> &bull; D. <span class="frac"><span>21</span><span>6</span></span> &nbsp; &rarr; &nbsp; Odp: [ &nbsp; ]
+    </div>
+    <div class="math-grid" style="min-height: 20mm;"><span class="grid-label">Miejsce na obliczenia:</span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 8B (Cyfra w okresie)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">Dwudziesta cyfra po przecinku liczby <strong>2,4(185)</strong> to: A. 4 &bull; B. 1 &bull; C. 8 &bull; D. 5</div>
+    <div class="math-grid" style="min-height: 20mm;"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 9B i 10B (Zaokrąglanie)</span>
+      <span>[ 4 pkt ]</span>
+    </div>
+    <div class="task-text">
+      <strong>9B.</strong> Zaokrąglij liczbę <strong>846,375</strong> do:  
+      a) dziesiątek: ....................... &bull; b) jedności: ....................... &bull; c) części setnych: .......................<br><br>
+      <strong>10B.</strong> Kasia zaokrągliła 2962 do pełnych setek (x), a Janek 2840 do pełnych tysięcy (y).<br>
+      Czy liczby x i y są równe? Wybierz <strong>A (Tak)</strong> albo <strong>B (Nie)</strong> oraz uzasadnienie <strong>1, 2</strong> albo <strong>3</strong>:<br>
+      1. cyfra tysięcy początkowych liczb jest taka sama &bull; 2. otrzymane zaokrąglenia nie różnią się &bull; 3. liczba Janka jest mniejsza.
+    </div>
+    <div class="ans-line">Odpowiedź do 10B: Wybieram [ &nbsp; ], ponieważ [ &nbsp; ].</div>
+  </div>
+</div>
+
+<!-- STRONA 3: SPRAWDZIAN CZĘŚĆ 1 (Zadania 11B - 14B) -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>🚀 Część II: Bliźniaczy Sprawdzian Treningowy 1B</h1>
+      <div class="meta">Klasa 7 &bull; Dział: Liczby wymierne &bull; Strona 3 z 6</div>
+    </div>
+    <div class="meta" style="text-align: right;">Uczennica: <strong>Nadia</strong></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 11B (Zamiana czasu – Trening antypułapkowy)</span>
+      <span>[ 2 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Wykonaj obliczenia: <em>(Pamiętaj: 0,1 h to 6 minut!)</em><br>
+      a) <strong>1,3 godziny</strong> &ndash; ile to minut?<br>
+      b) <strong>1,6 minuty</strong> &ndash; ile to sekund?
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: a) ........................................ &bull; b) ........................................</div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 12B (Suma ułamków zwykłych)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Suma liczb <strong>3<span class="frac"><span>3</span><span>4</span></span></strong> i <strong>1<span class="frac"><span>2</span><span>5</span></span></strong> jest równa:
+    </div>
+    <div class="options-row">
+      <span>A. 4<span class="frac"><span>5</span><span>9</span></span></span>
+      <span>B. 5<span class="frac"><span>3</span><span>20</span></span></span>
+      <span>C. 4<span class="frac"><span>3</span><span>20</span></span></span>
+      <span>D. 5<span class="frac"><span>1</span><span>20</span></span></span>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 13B (Działania łączone na ułamkach)</span>
+      <span>[ 3 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Oblicz:  
+      a) <strong>6,40 + <span class="frac"><span>3</span><span>5</span></span></strong> &bull;  
+      b) <strong>8<span class="frac"><span>7</span><span>8</span></span> &minus; 3,25</strong> &bull;  
+      c) <strong>5<span class="frac"><span>5</span><span>6</span></span> &minus; 1,75</strong>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Wyniki: a) ......................... &bull; b) ......................... &bull; c) .........................</div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 14B (Ułamek z liczby)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">Liczba równa <strong><span class="frac"><span>3</span><span>5</span></span></strong> liczby <strong>30,5</strong> to:</div>
+    <div class="options-row">
+      <span>A. 6,1</span>
+      <span>B. 18,3</span>
+      <span>C. 12,2</span>
+      <span>D. 15,25</span>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+</div>
+
+<!-- STRONA 4: SPRAWDZIAN CZĘŚĆ 2 (Zadania 15B - 17B) -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>🚀 Część II: Bliźniaczy Sprawdzian Treningowy 1B (cd.)</h1>
+      <div class="meta">Klasa 7 &bull; Dział: Działania pisemne i kolejność &bull; Strona 4 z 6</div>
+    </div>
+    <div class="meta" style="text-align: right;">Uczennica: <strong>Nadia</strong></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 15B (Działania na dziesiętnych – Zasada Strażnika Zera)</span>
+      <span>[ 4 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Oblicz w słupku: <em>(Pamiętaj: dopisz zero na końcu i podpisuj przecinek pod przecinkiem!)</em><br>
+      a) <strong>34,6 + 4,85</strong> &bull;  
+      b) <strong>100,33 &minus; 16,5</strong> &bull;  
+      c) <strong>0,16 &times; 2,4</strong> &bull;  
+      d) <strong>0,756 : 2,7</strong>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia w słupku:</span></div>
+    <div class="ans-line">Wyniki: a) ......................... &bull; b) ......................... &bull; c) ......................... &bull; d) .........................</div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 16B (Kolejność i ułamki mieszane)</span>
+      <span>[ 2 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Oblicz:  
+      a) <strong>3,45 + 2<span class="frac"><span>1</span><span>6</span></span> &minus; 1,25</strong> &bull;  
+      b) <strong>2<span class="frac"><span>1</span><span>3</span></span> &minus; 1,2 + 1<span class="frac"><span>4</span><span>5</span></span></strong>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia (grupuj liczby dziesiętne!):</span></div>
+    <div class="ans-line">Wyniki: a) ........................................ &bull; b) ........................................</div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 17B (Mnożenie i dzielenie)</span>
+      <span>[ 2 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Oblicz:  
+      a) <strong>1<span class="frac"><span>7</span><span>9</span></span> &times; 4,5</strong> &bull;  
+      b) <strong>2,75 : 3<span class="frac"><span>2</span><span>3</span></span></strong>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia (zamień na ułamki zwykłe i skracaj):</span></div>
+    <div class="ans-line">Wyniki: a) ........................................ &bull; b) ........................................</div>
+  </div>
+</div>
+
+<!-- STRONA 5: SPRAWDZIAN CZĘŚĆ 3 (Zadania 18B - 21B) -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>🚀 Część II: Bliźniaczy Sprawdzian Treningowy 1B (cd.)</h1>
+      <div class="meta">Klasa 7 &bull; Dział: Jednostki masy i liczby ujemne &bull; Strona 5 z 6</div>
+    </div>
+    <div class="meta" style="text-align: right;">Uczennica: <strong>Nadia</strong></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 18B (Wyrażenia wielodziałaniowe)</span>
+      <span>[ 2 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Oblicz:  
+      a) <strong>1 : (3,6 &times; 1<span class="frac"><span>1</span><span>4</span></span>)</strong> &bull;  
+      b) <strong>6<span class="frac"><span>2</span><span>3</span></span> &times; 0,9 : 15</strong>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Wyniki: a) ........................................ &bull; b) ........................................</div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 19B (Jednostki masy)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text"><strong>35 dag</strong> to:</div>
+    <div class="options-row">
+      <span>A. 0,35 t</span>
+      <span>B. 0,035 kg</span>
+      <span>C. 0,00035 t</span>
+      <span>D. 0,0035 t</span>
+    </div>
+    <div class="math-grid" style="min-height: 20mm;"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 20B (Wyrażenie złożone z nawiasami)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">Wyrażenie <strong>3<span class="frac"><span>1</span><span>4</span></span> + (1<span class="frac"><span>2</span><span>5</span></span> &minus; 6 : 4,8)</strong> ma wartość:</div>
+    <div class="options-row">
+      <span>A. 3<span class="frac"><span>2</span><span>5</span></span></span>
+      <span>B. 2<span class="frac"><span>3</span><span>5</span></span></span>
+      <span>C. 4<span class="frac"><span>1</span><span>4</span></span></span>
+      <span>D. 3<span class="frac"><span>1</span><span>10</span></span></span>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 21B (Liczby ujemne i mnożenie)</span>
+      <span>[ 1 pkt ]</span>
+    </div>
+    <div class="task-text">Wartość wyrażenia <strong>(&minus;0,6) &times; 5 + 2,4</strong> wynosi:</div>
+    <div class="options-row">
+      <span>A. 5,4</span>
+      <span>B. 0,6</span>
+      <span>C. &minus;5,4</span>
+      <span>D. &minus;0,6</span>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+    <div class="ans-line">Odpowiedź: <span class="ans-dots"></span></div>
+  </div>
+</div>
+
+<!-- STRONA 6: SPRAWDZIAN CZĘŚĆ 4 (Zadania 22B - 26B) -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>🚀 Część II: Bliźniaczy Sprawdzian Treningowy 1B (cd.)</h1>
+      <div class="meta">Klasa 7 &bull; Dział: Działania na ujemnych i oś liczbowa &bull; Strona 6 z 6</div>
+    </div>
+    <div class="meta" style="text-align: right;">Uczennica: <strong>Nadia</strong></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 22B i 23B (Liczby ujemne, ułamki, potęgi)</span>
+      <span>[ 5 pkt ]</span>
+    </div>
+    <div class="task-text">
+      <strong>22B.</strong> Oblicz:<br>
+      a) <strong>5 &minus; <span class="frac"><span>5</span><span>8</span></span></strong> &bull;  
+      b) <strong>&minus;2<span class="frac"><span>1</span><span>4</span></span> + 3<span class="frac"><span>7</span><span>16</span></span></strong> &bull;  
+      c) <strong>1,8 : (0,9 &minus; <span class="frac"><span>1</span><span>5</span></span>)</strong> &bull;  
+      d) <strong>[0,25 : <span class="frac"><span>1</span><span>8</span></span> + (&minus;<span class="frac"><span>1</span><span>2</span></span>)<sup>2</sup> &times; 4] : (&minus;2)</strong><br><br>
+      <strong>23B.</strong> Wyrażenie <strong>&minus;(5 &minus; <span class="frac"><span>1</span><span>3</span></span>) : (&minus;<span class="frac"><span>2</span><span>3</span></span> + 4)</strong> ma wartość:<br>
+      A. <span class="frac"><span>7</span><span>5</span></span> &bull; B. &minus;<span class="frac"><span>7</span><span>5</span></span> &bull; C. &minus;<span class="frac"><span>28</span><span>9</span></span> &bull; D. <span class="frac"><span>28</span><span>9</span></span> &nbsp; &rarr; &nbsp; Odp: [ &nbsp; ]
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 24B (Dodawanie i odejmowanie liczb ujemnych)</span>
+      <span>[ 4 pkt ]</span>
+    </div>
+    <div class="task-text">
+      Oblicz:  
+      a) <strong>4,75 &minus; (&minus;2<span class="frac"><span>1</span><span>3</span></span>)</strong> &bull;  
+      b) <strong>&minus;2<span class="frac"><span>4</span><span>5</span></span> &minus; 3,4</strong> &bull;  
+      c) <strong>&minus;4<span class="frac"><span>3</span><span>7</span></span> + 2,1</strong> &bull;  
+      d) <strong>&minus;7,2 &minus; (&minus;3<span class="frac"><span>1</span><span>4</span></span>)</strong>
+    </div>
+    <div class="math-grid"><span class="grid-label">Miejsce na obliczenia:</span></div>
+  </div>
+
+  <div class="task-card">
+    <div class="task-title">
+      <span>Zadanie 25B i 26B (Oś liczbowa)</span>
+      <span>[ 4 pkt ]</span>
+    </div>
+    <div class="task-text">
+      <strong>25B.</strong> Zaznacz na osiach liczbowych: a) <strong>x &ge; 2</strong> &bull; b) <strong>x &lt; &minus;1</strong> &bull; c) <strong>x &gt; &minus;1,5</strong><br>
+      <strong>26B.</strong> Zaznacz na osi zbiór liczb spełniających warunek: <strong>&minus;4 &le; x &lt; 2</strong>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px;">
+      <!-- OŚ 1 -->
+      <div style="font-size: 8pt; font-weight: bold; color: #475569;">Oś a) x &ge; 2:</div>
+      <div class="axis-container" style="height: 12mm;">
+        <div class="axis-line">
+          <div class="axis-arrow"></div>
+          <div class="tick" style="left: 20%;"><span class="tick-label">0</span></div>
+          <div class="tick" style="left: 40%;"><span class="tick-label">1</span></div>
+          <div class="tick" style="left: 60%;"><span class="tick-label">2</span></div>
+          <div class="tick" style="left: 80%;"><span class="tick-label">3</span></div>
+        </div>
+      </div>
+      <!-- OŚ 2 -->
+      <div style="font-size: 8pt; font-weight: bold; color: #475569;">Oś 26B) &minus;4 &le; x &lt; 2:</div>
+      <div class="axis-container" style="height: 12mm;">
+        <div class="axis-line">
+          <div class="axis-arrow"></div>
+          <div class="tick" style="left: 15%;"><span class="tick-label">-4</span></div>
+          <div class="tick" style="left: 35%;"><span class="tick-label">-2</span></div>
+          <div class="tick" style="left: 55%;"><span class="tick-label">0</span></div>
+          <div class="tick" style="left: 75%;"><span class="tick-label">2</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

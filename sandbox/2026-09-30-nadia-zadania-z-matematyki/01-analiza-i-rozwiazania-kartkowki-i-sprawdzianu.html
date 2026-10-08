@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Analiza i Rozwiązania – Kartkówka 1 i Sprawdzian 1 (Nadia)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 9.2pt;
+    line-height: 1.36;
+  }
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1;
+    padding: 0 2px;
+    font-weight: 600;
+  }
+  .frac > span:first-child {
+    border-bottom: 1.4px solid #1e293b;
+    padding-bottom: 1px;
+  }
+  .frac > span:last-child {
+    padding-top: 1px;
+  }
+  .header {
+    border-bottom: 2.5px solid #2563eb;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 13.5pt;
+    color: #1d4ed8;
+  }
+  .header .meta {
+    font-size: 8.5pt;
+    color: #64748b;
+  }
+  .section-divider {
+    background: #1e40af;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10.5pt;
+    margin: 14px 0 10px 0;
+    page-break-after: avoid;
+  }
+  .task-block {
+    border: 1.5px solid #cbd5e1;
+    border-radius: 7px;
+    padding: 8px 11px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    page-break-inside: avoid;
+  }
+  .task-title {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #1e40af;
+    border-bottom: 1.5px solid #e2e8f0;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .task-content {
+    background: #f8fafc;
+    border-left: 3px solid #3b82f6;
+    padding: 5px 9px;
+    margin-bottom: 6px;
+    font-style: italic;
+    color: #334155;
+    font-size: 8.8pt;
+  }
+  .methods-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 5px;
+  }
+  .methods-grid.single-col {
+    grid-template-columns: 1fr;
+  }
+  .method-box {
+    border-radius: 5px;
+    padding: 6px 9px;
+    font-size: 8.7pt;
+  }
+  .method-smart {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+  }
+  .method-smart .m-title {
+    color: #166534;
+    font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 8.9pt;
+  }
+  .method-classic {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+  }
+  .method-classic .m-title {
+    color: #1e293b;
+    font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 8.9pt;
+  }
+  .trap-box {
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 4px 8px;
+    font-size: 8.3pt;
+    color: #92400e;
+    margin-top: 4px;
+    border-radius: 0 4px 4px 0;
+  }
+  .trap-alert {
+    background: #fee2e2;
+    border-left: 3px solid #ef4444;
+    padding: 4px 8px;
+    font-size: 8.3pt;
+    color: #991b1b;
+    margin-top: 4px;
+    border-radius: 0 4px 4px 0;
+  }
+  .ans-tag {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-top: 4px;
+    font-size: 8.5pt;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>📘 Analiza i Rozwiązania Krok po Kroku</h1>
+    <div class="meta">Klasa 7 &bull; Kartkówka 1 (Grupa A) oraz Zestaw Treningowy do Sprawdzianu 1 &bull; Uczennica: <strong>Nadia</strong></div>
+  </div>
+  <div class="meta" style="text-align: right;">
+    Baza: <code>Matematyka-kartkówka-i-pierwszy-sprawdzian.pdf</code>
+  </div>
+</div>
+
+<!-- CZĘŚĆ 1: KARTKÓWKA 1 -->
+<div class="section-divider">CZĘŚĆ I: KARTKÓWKA 1 (Grupa A – zadania 1–10)</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 1 (Odwrotność liczby)</span><span>1 pkt</span></div>
+  <div class="task-content">Odwrotnością liczby 1<span class="frac"><span>3</span><span>4</span></span> jest: A. 1<span class="frac"><span>4</span><span>3</span></span> &bull; B. &minus;<span class="frac"><span>4</span><span>7</span></span> &bull; C. <span class="frac"><span>4</span><span>7</span></span> &bull; D. &minus;1<span class="frac"><span>3</span><span>4</span></span></div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób Sprytny:</div>
+      1. Zamień całości na ułamek niewłaściwy: 1<span class="frac"><span>3</span><span>4</span></span> = <span class="frac"><span>7</span><span>4</span></span>.<br>
+      2. Odwróć „do góry nogami”: <span class="frac"><span>7</span><span>4</span></span> &rarr; <strong><span class="frac"><span>4</span><span>7</span></span></strong>.
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Z definicji odwrotności:</div>
+      Iloczyn liczby i jej odwrotności to 1:<br>
+      <span class="frac"><span>7</span><span>4</span></span> &times; x = 1 &implies; x = 1 : <span class="frac"><span>7</span><span>4</span></span> = <strong><span class="frac"><span>4</span><span>7</span></span></strong>.
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Pułapka:</strong> Odwracanie samego ułamka bez włączania całości (błędna odp. A: 1<span class="frac"><span>4</span><span>3</span></span>). Nadia w brudnopisie bezbłędnie zamieniła na <span class="frac"><span>7</span><span>4</span></span> i odwróciła na <span class="frac"><span>4</span><span>7</span></span>!
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: C (<span class="frac"><span>4</span><span>7</span></span>)</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 2 (Liczba przeciwna)</span><span>1 pkt</span></div>
+  <div class="task-content">Liczbą przeciwną do liczby &minus;1<span class="frac"><span>3</span><span>4</span></span> jest: A. <span class="frac"><span>7</span><span>4</span></span> &bull; B. &minus;<span class="frac"><span>7</span><span>4</span></span> &bull; C. &minus;<span class="frac"><span>3</span><span>4</span></span> &bull; D. &minus;<span class="frac"><span>4</span><span>7</span></span></div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób Sprytny:</div>
+      Liczba przeciwna leży po drugiej stronie zera na osi liczbowej. Zmieniamy <strong>tylko znak</strong>:<br>
+      &minus;1<span class="frac"><span>3</span><span>4</span></span> &rarr; +1<span class="frac"><span>3</span><span>4</span></span> = <strong><span class="frac"><span>7</span><span>4</span></span></strong>.
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Pułapka:</strong> Mylenie odwrotności (zamiana licznika z mianownikiem) z liczbą przeciwną (zmiana znaku &minus; na +). Nadia zaznaczyła poprawnie A.
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: A (<span class="frac"><span>7</span><span>4</span></span>)</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 3 (Porównywanie ułamków)</span><span>1 pkt</span></div>
+  <div class="task-content">Dane są liczby a = <span class="frac"><span>9</span><span>5</span></span>, b = 1,7, c = <span class="frac"><span>7</span><span>4</span></span>. Po zapisaniu ich w kolejności od najmniejszej do największej otrzymamy: A. b, a, c &bull; B. b, c, a &bull; C. a, c, b &bull; D. c, a, b</div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób: Klub Przyjaciół (Zamiana na ułamki dziesiętne):</div>
+      &bull; a = <span class="frac"><span>9</span><span>5</span></span> = 1<span class="frac"><span>4</span><span>5</span></span> = <strong>1,80</strong> (bo 4/5 = 8/10)<br>
+      &bull; b = <strong>1,70</strong><br>
+      &bull; c = <span class="frac"><span>7</span><span>4</span></span> = 1<span class="frac"><span>3</span><span>4</span></span> = <strong>1,75</strong> (bo 3/4 = 75/100)<br>
+      Porównujemy ceny: 1,70 zł &lt; 1,75 zł &lt; 1,80 zł &implies; <strong>b &lt; c &lt; a</strong>.
+    </div>
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: B (b, c, a)</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 4 (Zamiana jednostek czasu)</span><span>1 pkt</span></div>
+  <div class="task-content">255 minut &ndash; ile to godzin? A. 2,55 &bull; B. 4,1 &bull; C. 4,25 &bull; D. 4,15</div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób Sprytny:</div>
+      4 godziny to 4 &times; 60 = 240 minut.<br>
+      Zostało: 255 &minus; 240 = 15 minut.<br>
+      15 minut to kwadrans = <span class="frac"><span>1</span><span>4</span></span> h = <strong>0,25 h</strong>.<br>
+      Razem: 4 + 0,25 = <strong>4,25 h</strong>.
+    </div>
+    <div class="method-box method-classic">
+      <div class="m-title">📐 Dzielenie przez 60:</div>
+      255 : 60 = <span class="frac"><span>255</span><span>60</span></span> = <span class="frac"><span>51</span><span>12</span></span> = <span class="frac"><span>17</span><span>4</span></span> = 4<span class="frac"><span>1</span><span>4</span></span> = <strong>4,25</strong>.
+    </div>
+  </div>
+  <div class="trap-alert">
+    🚨 <strong>Kluczowa pułapka:</strong> Zaznaczenie 4,15 (myślenie: 4 godziny i 15 minut to 4,15). Nadia w brudnopisie zauważyła to, przekreśliła 4,15 i wpisała 4,25!
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: C (4,25)</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 5 (Ułamek na osi liczbowej)</span><span>1 pkt</span></div>
+  <div class="task-content">Liczba <span class="frac"><span>1</span><span>6</span></span> leży na osi liczbowej pomiędzy liczbami: A. <span class="frac"><span>1</span><span>12</span></span> i <span class="frac"><span>2</span><span>12</span></span> &bull; B. <span class="frac"><span>2</span><span>12</span></span> i <span class="frac"><span>3</span><span>12</span></span> &bull; C. <span class="frac"><span>1</span><span>9</span></span> i <span class="frac"><span>2</span><span>9</span></span> &bull; D. <span class="frac"><span>2</span><span>9</span></span> i <span class="frac"><span>3</span><span>9</span></span></div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób: Sprowadzenie do wspólnego mianownika 18:</div>
+      &bull; Nasza liczba: <span class="frac"><span>1</span><span>6</span></span> = <span class="frac"><span>3</span><span>18</span></span>.<br>
+      &bull; Sprawdzamy parę C: <span class="frac"><span>1</span><span>9</span></span> = <span class="frac"><span>2</span><span>18</span></span> oraz <span class="frac"><span>2</span><span>9</span></span> = <span class="frac"><span>4</span><span>18</span></span>.<br>
+      Widzimy, że: <span class="frac"><span>2</span><span>18</span></span> &lt; <strong><span class="frac"><span>3</span><span>18</span></span></strong> &lt; <span class="frac"><span>4</span><span>18</span></span>. Liczba leży idealnie pomiędzy nimi!
+    </div>
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: C (<span class="frac"><span>1</span><span>9</span></span> i <span class="frac"><span>2</span><span>9</span></span>)</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 6 (Rozwinięcie dziesiętne skończone)</span><span>1 pkt</span></div>
+  <div class="task-content">Rozwinięcie dziesiętne skończone ma ułamek: A. <span class="frac"><span>1</span><span>3</span></span> &bull; B. <span class="frac"><span>3</span><span>12</span></span> &bull; C. <span class="frac"><span>2</span><span>15</span></span> &bull; D. <span class="frac"><span>1</span><span>12</span></span></div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób: Skracanie ułamków:</div>
+      Ułamek <span class="frac"><span>3</span><span>12</span></span> skraca się przez 3 do <strong><span class="frac"><span>1</span><span>4</span></span> = 0,25</strong> (mianownik 4 = 2 &times; 2 &rarr; rozwinięcie skończone!).<br>
+      Pozostałe ułamki mają w mianownikach trójki, których nie da się skrócić, więc są nieskończone okresowe.
+    </div>
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: B (<span class="frac"><span>3</span><span>12</span></span>)</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 7 (Rozwinięcie dziesiętne nieskończone)</span><span>1 pkt</span></div>
+  <div class="task-content">Ułamkiem o rozwinięciu dziesiętnym nieskończonym jest: A. <span class="frac"><span>18</span><span>12</span></span> &bull; B. <span class="frac"><span>11</span><span>12</span></span> &bull; C. <span class="frac"><span>1</span><span>8</span></span> &bull; D. <span class="frac"><span>15</span><span>6</span></span></div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób:</div>
+      A. <span class="frac"><span>18</span><span>12</span></span> = <span class="frac"><span>3</span><span>2</span></span> = 1,5 (skończone) &bull; C. <span class="frac"><span>1</span><span>8</span></span> = 0,125 (skończone) &bull; D. <span class="frac"><span>15</span><span>6</span></span> = <span class="frac"><span>5</span><span>2</span></span> = 2,5 (skończone).<br>
+      B. <span class="frac"><span>11</span><span>12</span></span> &ndash; mianownik 12 = 3 &times; 4, trójka nie skróci się z 11 &rarr; <strong>nieskończone okresowe</strong> (0,91666...).
+    </div>
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: B (<span class="frac"><span>11</span><span>12</span></span>)</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 8 (N-ta cyfra w okresie)</span><span>1 pkt</span></div>
+  <div class="task-content">Piętnasta cyfra po przecinku rozwinięcia dziesiętnego liczby 3,1(231) to: A. 1 &bull; B. 2 &bull; C. 3 &bull; D. 4</div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ Sposób: Rozpisanie pozycji:</div>
+      Rozwinięcie: 3, 1 (poza okresem) 231 231 231 231 231...<br>
+      &bull; Pozycja 1: cyfra 1<br>
+      &bull; Pozycje 2,3,4: 2, 3, 1 &bull; Pozycje 5,6,7: 2, 3, 1 &bull; Pozycje 8,9,10: 2, 3, 1 &bull; Pozycje 11,12,13: 2, 3, 1<br>
+      &bull; Pozycja 14: 2 &bull; <strong>Pozycja 15: 3</strong>! Nadia w brudnopisie dokładnie tak to wypisała i wygrała!
+    </div>
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: C (3)</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 9 (Zaokrąglanie liczb)</span><span>3 pkt</span></div>
+  <div class="task-content">Liczbę 937,446 zaokrąglij do: a) dziesiątek &bull; b) jedności &bull; c) części setnych</div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      <div class="m-title">📐 Rozwiązanie:</div>
+      &bull; <strong>a) Do dziesiątek:</strong> Patrzymy na cyfrę jedności (7 &ge; 5) &rarr; w górę &rarr; <strong>940</strong>.<br>
+      &bull; <strong>b) Do jedności:</strong> Patrzymy na części dziesiąte (4 &lt; 5) &rarr; w dół &rarr; <strong>937</strong>.<br>
+      &bull; <strong>c) Do części setnych:</strong> Patrzymy na części tysięczne (6 &ge; 5) &rarr; w górę &rarr; <strong>937,45</strong>.
+    </div>
+  </div>
+  <div class="trap-box">
+    🚨 <strong>Wskazówka egzaminacyjna:</strong> Nie dopisuj niepotrzebnych zer po przecinku (np. 940,000)! Wystarczy czysty zapis: <strong>940</strong>, <strong>937</strong> i <strong>937,45</strong>.
+  </div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 10 (Porównanie zaokrągleń)</span><span>1 pkt</span></div>
+  <div class="task-content">Natalia zaokrągliła 3951 do pełnych setek (x), Piotr 3725 do pełnych tysięcy (y). Czy x i y są równe?</div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      &bull; Natalia: 3951 do setek &rarr; 5 decyduje o zaokrągleniu w górę &rarr; x = <strong>4000</strong>.<br>
+      &bull; Piotr: 3725 do tysięcy &rarr; 7 decyduje o zaokrągleniu w górę &rarr; y = <strong>4000</strong>.<br>
+      Oba zaokrąglenia wynoszą 4000, więc są równe.
+    </div>
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: A, ponieważ 2 (Tak, ponieważ otrzymane zaokrąglenia nie różnią się)</div>
+</div>
+
+<!-- CZĘŚĆ 2: SPRAWDZIAN TRENINGOWY 1 -->
+<div class="section-divider" style="background: #047857;">CZĘŚĆ II: ZESTAW TRENINGOWY – SPRAWDZIAN 1 (zadania 1–16)</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 1 (Przeliczanie godzin i minut na ułamkach dziesiętnych)</span></div>
+  <div class="task-content">a) 2,2 godziny &ndash; ile to minut? &bull; b) 1,4 minuty &ndash; ile to sekund?</div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ a) 2,2 godziny:</div>
+      2 h = 120 minut.<br>
+      0,2 h = 0,2 &times; 60 = <strong>12 minut</strong>.<br>
+      Razem: 120 + 12 = <strong>132 minuty</strong>.
+    </div>
+    <div class="method-box method-smart">
+      <div class="m-title">⚡ b) 1,4 minuty:</div>
+      1 min = 60 sekund.<br>
+      0,4 min = 0,4 &times; 60 = <strong>24 sekundy</strong>.<br>
+      Razem: 60 + 24 = <strong>84 sekundy</strong>.
+    </div>
+  </div>
+  <div class="trap-alert">
+    🚨 <strong>BŁĄD Z BRUDNOPISU NADII:</strong> Nadia napisała: a) „2 godziny 20 minut” oraz b) „60 + 40 = 100”.<br>
+    <strong>ZAPAMIĘTAJ NA ZAWSZE:</strong> 0,1 godziny to 6 minut (nie 10!). Zegar ma 60 minut, a nie 100!
+  </div>
+  <div class="ans-tag">Odpowiedź: a) 132 minuty, b) 84 sekundy</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 2 (Dodawanie ułamków zwykłych)</span></div>
+  <div class="task-content">Suma liczb 2<span class="frac"><span>2</span><span>3</span></span> i 2<span class="frac"><span>1</span><span>4</span></span> jest równa: A. 4<span class="frac"><span>3</span><span>7</span></span> &bull; B. 5<span class="frac"><span>1</span><span>12</span></span> &bull; C. 4<span class="frac"><span>11</span><span>12</span></span> &bull; D. 4<span class="frac"><span>2</span><span>7</span></span></div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      Wspólny mianownik dla 3 i 4 to 12:<br>
+      2<span class="frac"><span>8</span><span>12</span></span> + 2<span class="frac"><span>3</span><span>12</span></span> = <strong>4<span class="frac"><span>11</span><span>12</span></span></strong>. (Nadia rozwiązała bezbłędnie!).
+    </div>
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: C (4<span class="frac"><span>11</span><span>12</span></span>)</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 3 (Działania na ułamkach zwykłych i dziesiętnych)</span></div>
+  <div class="task-content">a) 7,50 + <span class="frac"><span>2</span><span>5</span></span> &bull; b) 7<span class="frac"><span>5</span><span>8</span></span> &minus; 2,25 &bull; c) 6<span class="frac"><span>5</span><span>6</span></span> &minus; 2,75</div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      &bull; <strong>a)</strong> 7,50 + 0,40 = <strong>7,9</strong> (lub 7,90)<br>
+      &bull; <strong>b)</strong> 2,25 to 2<span class="frac"><span>1</span><span>4</span></span> = 2<span class="frac"><span>2</span><span>8</span></span> &implies; 7<span class="frac"><span>5</span><span>8</span></span> &minus; 2<span class="frac"><span>2</span><span>8</span></span> = <strong>5<span class="frac"><span>3</span><span>8</span></span></strong> = 5,375<br>
+      &bull; <strong>c)</strong> 2,75 to 2<span class="frac"><span>3</span><span>4</span></span> &implies; mianownik 12: 6<span class="frac"><span>10</span><span>12</span></span> &minus; 2<span class="frac"><span>9</span><span>12</span></span> = <strong>4<span class="frac"><span>1</span><span>12</span></span></strong>.
+    </div>
+  </div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 4 (Ułamek z liczby)</span></div>
+  <div class="task-content">Liczba równa <span class="frac"><span>2</span><span>5</span></span> liczby 20,5 to: A. 4,1 &bull; B. 10,25 &bull; C. 8,2 &bull; D. 41</div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      1. Podziel przez 5: 20,5 : 5 = 4,1<br>
+      2. Pomnóż przez 2: 4,1 &times; 2 = <strong>8,2</strong>.
+    </div>
+  </div>
+  <div class="ans-tag">Poprawna odpowiedź: C (8,2)</div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 5 (Działania na ułamkach dziesiętnych – Słupki)</span></div>
+  <div class="task-content">a) 25,7 + 2,94 &bull; b) 200,22 &minus; 23,5 &bull; c) 0,18 &times; 3,4 &bull; d) 0,837 : 3,1</div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <strong>a) Dodawanie:</strong> 25,7<strong>0</strong> + 2,94 = <strong>28,64</strong><br>
+      <em>(Nadia wpisała 28,1 &ndash; zgubiła 4 i źle podpisała słupek!)</em><br><br>
+      <strong>b) Odejmowanie:</strong> 200,22 &minus; 23,5<strong>0</strong> = <strong>176,72</strong><br>
+      <em>(Nadia wpisała 167,17 &ndash; błąd pożyczania!)</em>
+    </div>
+    <div class="method-box method-smart">
+      <strong>c) Mnożenie:</strong> 18 &times; 34 = 612.<br>
+      Miejsca po przecinku: 2 + 1 = 3 &rarr; <strong>0,612</strong>.<br>
+      <em>(Nadia policzyła 18 &times; 34 = 648 &ndash; błąd rachunkowy!)</em><br><br>
+      <strong>d) Dzielenie:</strong> 8,37 : 31 = <strong>0,27</strong>.
+    </div>
+  </div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 6 i 7 (Mnożenie i dzielenie ułamków mieszanych)</span></div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <strong>Zadanie 6:</strong><br>
+      a) (2,15 &minus; 1,05) + 1<span class="frac"><span>2</span><span>7</span></span> = 1,1 + 1<span class="frac"><span>2</span><span>7</span></span> = 1<span class="frac"><span>7</span><span>70</span></span> + 1<span class="frac"><span>20</span><span>70</span></span> = <strong>2<span class="frac"><span>27</span><span>70</span></span></strong><br>
+      b) 1<span class="frac"><span>2</span><span>3</span></span> &minus; 1,1 + 2,8 = 1<span class="frac"><span>2</span><span>3</span></span> + 1,7 = 1<span class="frac"><span>20</span><span>30</span></span> + 1<span class="frac"><span>21</span><span>30</span></span> = <strong>3<span class="frac"><span>11</span><span>30</span></span></strong>
+    </div>
+    <div class="method-box method-smart">
+      <strong>Zadanie 7:</strong><br>
+      a) <span class="frac"><span>25</span><span>9</span></span> &times; <span class="frac"><span>9</span><span>2</span></span> = <span class="frac"><span>25</span><span>2</span></span> = <strong>12,5</strong><br>
+      b) <span class="frac"><span>13</span><span>4</span></span> : <span class="frac"><span>25</span><span>6</span></span> = <span class="frac"><span>13</span><span>4</span></span> &times; <span class="frac"><span>6</span><span>25</span></span> = <span class="frac"><span>39</span><span>50</span></span> = <strong>0,78</strong>
+    </div>
+  </div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 8, 9, 10, 11 (Kolejność działań, masa, liczby ujemne)</span></div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <strong>Zadanie 8:</strong><br>
+      a) 1 : (<span class="frac"><span>24</span><span>5</span></span> &times; <span class="frac"><span>5</span><span>3</span></span>) = 1 : 8 = <strong>0,125</strong><br>
+      b) (<span class="frac"><span>53</span><span>6</span></span> &times; <span class="frac"><span>3</span><span>5</span></span>) : 26,5 = 5,3 : 26,5 = <strong>0,2</strong><br><br>
+      <strong>Zadanie 9:</strong> 27 dag = <strong>0,00027 t</strong> (Odp. C)
+    </div>
+    <div class="method-box method-smart">
+      <strong>Zadanie 10:</strong><br>
+      8 : 6,4 = 1,25 &implies; 1,2 &minus; 1,25 = &minus;0,05.<br>
+      2,25 + (&minus;0,05) = 2,2 = <strong>2<span class="frac"><span>1</span><span>5</span></span></strong> (Odp. C)<br><br>
+      <strong>Zadanie 11:</strong><br>
+      (&minus;0,4) &times; 5 + 1,7 = &minus;2 + 1,7 = <strong>&minus;0,3</strong> (Odp. D)
+    </div>
+  </div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 12, 13, 14 (Liczby ujemne i ułamki)</span></div>
+  <div class="methods-grid">
+    <div class="method-box method-smart">
+      <strong>Zadanie 12:</strong><br>
+      a) 4 &minus; <span class="frac"><span>3</span><span>8</span></span> = <strong>3<span class="frac"><span>5</span><span>8</span></span></strong><br>
+      b) &minus;3<span class="frac"><span>2</span><span>16</span></span> + 4<span class="frac"><span>5</span><span>16</span></span> = <strong>1<span class="frac"><span>3</span><span>16</span></span></strong><br>
+      c) 2,2 : (0,8 &minus; 0,2) = 2,2 : 0,6 = <strong>3<span class="frac"><span>2</span><span>3</span></span></strong><br>
+      d) [4 + 0,25] : (&minus;3) = <strong>&minus;1<span class="frac"><span>5</span><span>12</span></span></strong>
+    </div>
+    <div class="method-box method-smart">
+      <strong>Zadanie 13:</strong><br>
+      &minus;<span class="frac"><span>15</span><span>4</span></span> : <span class="frac"><span>9</span><span>4</span></span> = <strong>&minus;<span class="frac"><span>5</span><span>3</span></span></strong> (Odp. B)<br><br>
+      <strong>Zadanie 14:</strong><br>
+      a) 5<span class="frac"><span>1</span><span>4</span></span> + 1<span class="frac"><span>1</span><span>3</span></span> = <strong>6<span class="frac"><span>7</span><span>12</span></span></strong><br>
+      b) &minus;3,6 &minus; 4,2 = <strong>&minus;7,8</strong><br>
+      c) &minus;5<span class="frac"><span>10</span><span>35</span></span> + 3<span class="frac"><span>7</span><span>35</span></span> = <strong>&minus;2<span class="frac"><span>3</span><span>35</span></span></strong><br>
+      d) &minus;6,10 + 2,25 = <strong>&minus;3,85</strong>
+    </div>
+  </div>
+</div>
+
+<div class="task-block">
+  <div class="task-title"><span>Zadanie 15 i 16 (Nierówności na osi liczbowej)</span></div>
+  <div class="methods-grid single-col">
+    <div class="method-box method-smart">
+      &bull; <strong>15a) x &gt; 1:</strong> Kółko otwarte &#9675; w punkcie 1, strzałka w prawo &rarr;<br>
+      &bull; <strong>15b) x &lt; 0:</strong> Kółko otwarte &#9675; w punkcie 0, strzałka w lewo &larr;<br>
+      &bull; <strong>15c) x &le; &minus;2,5:</strong> Kółko zamalowane &#9679; w punkcie &minus;2,5, strzałka w lewo &larr;<br>
+      &bull; <strong>Zadanie 16 (&minus;5 &lt; x &le; &minus;1):</strong> Odcinek łączący &minus;5 i &minus;1, gdzie w &minus;5 jest kółko otwarte &#9675;, a w &minus;1 kółko pełne &#9679; &rarr; <strong>Rysunek B</strong>.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

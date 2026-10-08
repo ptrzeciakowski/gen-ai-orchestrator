@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karta Supermocy – Matematyka Klasa 7 (Nadia)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #0f172a;
+    margin: 0;
+    padding: 0;
+    font-size: 8.8pt;
+    line-height: 1.28;
+    background: #ffffff;
+  }
+  .sheet {
+    height: 280mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2.5px solid #2563eb;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 13.5pt;
+    color: #1d4ed8;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .header .tagline {
+    font-size: 8.5pt;
+    color: #475569;
+    font-weight: 500;
+  }
+  .header .badge {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1e40af;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 8pt;
+    font-weight: 700;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    flex-grow: 1;
+  }
+  
+  .module-card {
+    border: 1.5px solid #cbd5e1;
+    border-radius: 7px;
+    padding: 7px 9px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  .module-card.accent-blue {
+    border-color: #93c5fd;
+    background: #f8fafc;
+  }
+  .module-card.accent-amber {
+    border-color: #fcd34d;
+    background: #fffbeb;
+  }
+  .module-card.accent-emerald {
+    border-color: #86efac;
+    background: #f0fdf4;
+  }
+  .module-card.accent-indigo {
+    border-color: #c7d2fe;
+    background: #faf5ff;
+  }
+
+  .module-title {
+    font-size: 9.8pt;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+    border-bottom: 1.5px dashed #cbd5e1;
+  }
+  .accent-blue .module-title { color: #1e40af; border-color: #bfdbfe; }
+  .accent-amber .module-title { color: #b45309; border-color: #fde68a; }
+  .accent-emerald .module-title { color: #047857; border-color: #a7f3d0; }
+  .accent-indigo .module-title { color: #4338ca; border-color: #ddd6fe; }
+
+  .box-sub {
+    font-size: 8.5pt;
+    font-weight: 700;
+    margin: 4px 0 2px 0;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .rule-pill {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 3px 6px;
+    margin-bottom: 4px;
+    font-size: 8.2pt;
+  }
+
+  .highlight-red {
+    background: #fee2e2;
+    border-left: 3px solid #ef4444;
+    padding: 3px 6px;
+    border-radius: 0 4px 4px 0;
+    margin: 3px 0;
+    font-size: 8.2pt;
+    color: #991b1b;
+  }
+  .highlight-green {
+    background: #dcfce7;
+    border-left: 3px solid #22c55e;
+    padding: 3px 6px;
+    border-radius: 0 4px 4px 0;
+    margin: 3px 0;
+    font-size: 8.2pt;
+    color: #14532d;
+  }
+
+  table.mini-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.2pt;
+    margin: 3px 0;
+  }
+  table.mini-table th, table.mini-table td {
+    padding: 2.5px 4px;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+  }
+  table.mini-table th {
+    background: #f1f5f9;
+    font-weight: 700;
+    color: #334155;
+  }
+  table.mini-table td.left {
+    text-align: left;
+  }
+
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.88em;
+    line-height: 0.95;
+    padding: 0 1.5px;
+    font-weight: 700;
+  }
+  .frac > span:first-child {
+    border-bottom: 1.2px solid #0f172a;
+    padding-bottom: 1px;
+  }
+  .frac > span:last-child {
+    padding-top: 1px;
+  }
+
+  .vertical-calc {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8.8pt;
+    font-weight: 700;
+    line-height: 1.15;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 4px 6px;
+    display: inline-block;
+  }
+
+  .footer-bar {
+    border-top: 1.5px solid #cbd5e1;
+    padding-top: 3px;
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.8pt;
+    color: #64748b;
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <!-- NAGŁÓWEK -->
+  <div class="header">
+    <div>
+      <h1>⚡ KARTA SUPERMOCY: Liczby, Ułamki i Oś Liczbowa</h1>
+      <div class="tagline">Złoty podręczny cheat-sheet Nadii &bull; Klasa 7 &bull; Dział 1: Liczby wymierne</div>
+    </div>
+    <div class="badge">Nadia &bull; Matematyka Klasa 7</div>
+  </div>
+
+  <div class="grid-container">
+
+    <!-- MODUŁ 1: KLUB PRZYJACIÓŁ & ZEGARY -->
+    <div class="module-card accent-blue">
+      <div class="module-title">🤝 MODUŁ 1: Klub Przyjaciół & Sprytne Zegary</div>
+      
+      <div class="box-sub">🎯 Klub Mianowników (Zamiana w ułamki dziesiętne bez słupka!):</div>
+      <div class="rule-pill">
+        &bull; <strong>2 &times; 5 = 10</strong> &rarr; <span class="frac"><span>1</span><span>2</span></span> = 0,5 &bull; <span class="frac"><span>1</span><span>5</span></span> = 0,2 &bull; <span class="frac"><span>2</span><span>5</span></span> = 0,4 &bull; <span class="frac"><span>3</span><span>5</span></span> = 0,6 &bull; <span class="frac"><span>4</span><span>5</span></span> = 0,8<br>
+        &bull; <strong>4 &times; 25 = 100</strong> &rarr; <span class="frac"><span>1</span><span>4</span></span> = 0,25 &bull; <span class="frac"><span>3</span><span>4</span></span> = 0,75<br>
+        &bull; <strong>8 &times; 125 = 1000</strong> &rarr; <span class="frac"><span>1</span><span>8</span></span> = 0,125 &bull; <span class="frac"><span>3</span><span>8</span></span> = 0,375 &bull; <span class="frac"><span>5</span><span>8</span></span> = 0,625 &bull; <span class="frac"><span>7</span><span>8</span></span> = 0,875
+      </div>
+
+      <div class="box-sub">⏰ Przelicznik Czasu (Antypułapka: 0,2 h &ne; 20 min!):</div>
+      <div class="highlight-red">
+        🚨 <strong>Zegar ma 60 minut, a nie 100!</strong><br>
+        0,1 h = <strong>6 minut</strong> (bo 60 : 10 = 6) &bull; 0,1 min = <strong>6 sekund</strong>!
+      </div>
+      <table class="mini-table">
+        <tr>
+          <th>Ułamek dziesiętny</th>
+          <th>Przeliczenie</th>
+          <th>Wynik (godziny &rarr; minuty)</th>
+        </tr>
+        <tr>
+          <td><strong>0,2 h</strong></td>
+          <td>2 &times; 6 min</td>
+          <td><strong>12 minut</strong> &rarr; 2,2 h = 2h 12 min = <strong>132 min</strong></td>
+        </tr>
+        <tr>
+          <td><strong>0,25 h</strong></td>
+          <td><span class="frac"><span>1</span><span>4</span></span> godziny</td>
+          <td><strong>15 minut</strong> &rarr; 4,25 h = 4h 15 min = <strong>255 min</strong></td>
+        </tr>
+        <tr>
+          <td><strong>0,4 min</strong></td>
+          <td>4 &times; 6 sekund</td>
+          <td><strong>24 sekundy</strong> &rarr; 1,4 min = 60s + 24s = <strong>84 s</strong></td>
+        </tr>
+        <tr>
+          <td><strong>0,5 h</strong></td>
+          <td>połowa godziny</td>
+          <td><strong>30 minut</strong></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- MODUŁ 2: STRAŻNIK ZERA I SŁUPKI -->
+    <div class="module-card accent-amber">
+      <div class="module-title">🏛️ MODUŁ 2: Strażnik Zera & Słupki Bez Błędów</div>
+
+      <div class="box-sub">📍 Dodawanie i Odejmowanie: PRZECINEK POD PRZECINKIEM!</div>
+      <div class="highlight-green">
+        💡 <strong>Zasada Strażnika Zera:</strong> Dopisuj zielone zera na końcu, aby obie liczby miały tyle samo cyfr po przecinku!
+      </div>
+      
+      <div style="display: flex; gap: 10px; margin: 4px 0;">
+        <div style="flex: 1;">
+          <div style="font-size: 7.8pt; font-weight: 700; color: #475569;">Dodawanie (25,7 + 2,94):</div>
+          <div class="vertical-calc">
+            &nbsp;&nbsp;25,7<strong style="color: #047857;">0</strong><br>
+            +&nbsp;&nbsp;2,94<br>
+            -------<br>
+            &nbsp;&nbsp;<strong>28,64</strong>
+          </div>
+        </div>
+        <div style="flex: 1;">
+          <div style="font-size: 7.8pt; font-weight: 700; color: #475569;">Odejmowanie (200,22 - 23,5):</div>
+          <div class="vertical-calc">
+            &nbsp;&nbsp;200,22<br>
+            -&nbsp;&nbsp;23,5<strong style="color: #047857;">0</strong><br>
+            -------<br>
+            &nbsp;&nbsp;<strong>176,72</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-sub">✖️➗ Mnożenie i Dzielenie Dziesiętnych:</div>
+      <div class="rule-pill">
+        &bull; <strong>Mnożenie:</strong> Mnóż tak, jakby nie było przecinków (18 &times; 34 = 612). Policz sumę miejsc po przecinku: 0,18 (2 m.) + 3,4 (1 m.) = 3 miejsca &rarr; <strong>0,612</strong>.<br>
+        &bull; <strong>Dzielenie:</strong> W dzielniku (druga liczba) NIE MOŻE BYĆ przecinka! Przesuń przecinek w obu liczbach o tyle samo miejsc: 0,837 : 3,1 = <strong>8,37 : 31 = 0,27</strong>.
+      </div>
+
+      <div class="box-sub">⚖️ Jednostki Masy (dag, kg, t):</div>
+      <div class="rule-pill">
+        1 kg = 100 dag &bull; 1 t = 1000 kg = 100 000 dag<br>
+        <strong>27 dag = 0,27 kg = 0,00027 t</strong> (przesuwamy przecinek w lewo!)
+      </div>
+    </div>
+
+    <!-- MODUŁ 3: ZNAKI I OŚ LICZBOWA -->
+    <div class="module-card accent-emerald">
+      <div class="module-title">⚖️ MODUŁ 3: Magia Znaków & Oś Liczbowa</div>
+
+      <div class="box-sub">➕➖ Działania na Liczbach Ujemnych (Zasada Długu):</div>
+      <div class="rule-pill">
+        &bull; <strong>Dwa minusy obok siebie dają PLUS!</strong><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&minus;(&minus;a) = +a &rarr; np. 5,25 &minus; (&minus;1<span class="frac"><span>1</span><span>3</span></span>) = 5,25 + 1<span class="frac"><span>1</span><span>3</span></span><br>
+        &bull; <strong>Dwa długi sumują się w większy dług:</strong><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&minus;3,6 &minus; 4,2 = &minus;(3,6 + 4,2) = <strong>&minus;7,8</strong><br>
+        &bull; <strong>Mnożenie i dzielenie znaków:</strong><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;(&minus;) &times; (+) = (&minus;) &bull; (&minus;) &times; (&minus;) = (+)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;np. (&minus;0,4) &times; 5 = <strong>&minus;2</strong> &bull; (&minus;0,4) &times; 5 + 1,7 = &minus;2 + 1,7 = <strong>&minus;0,3</strong>
+      </div>
+
+      <div class="box-sub">📏 Oś Liczbowa – Strażnik Kółek & Przykłady Działań:</div>
+      
+      <!-- DIAGRAM 1: SKOK NA OSI -->
+      <div style="margin: 3px 0; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px 5px;">
+        <div style="font-size: 7.3pt; font-weight: bold; color: #047857;">📍 Dodawanie w prawo &bull; Odejmowanie w lewo:</div>
+        <svg viewBox="0 0 320 36" width="100%" height="28" style="display: block;">
+          <line x1="10" y1="24" x2="310" y2="24" stroke="#334155" stroke-width="1.5" />
+          <polygon points="310,21 318,24 310,27" fill="#334155" />
+          <line x1="56" y1="20" x2="56" y2="28" stroke="#64748b" stroke-width="1" />
+          <text x="56" y="34" font-size="7" text-anchor="middle" fill="#64748b">-3</text>
+          <line x1="134" y1="18" x2="134" y2="30" stroke="#0f172a" stroke-width="1.5" />
+          <text x="134" y="34" font-size="7.5" font-weight="bold" text-anchor="middle" fill="#0f172a">0</text>
+          <line x1="186" y1="20" x2="186" y2="28" stroke="#64748b" stroke-width="1" />
+          <text x="186" y="34" font-size="7" text-anchor="middle" fill="#64748b">+2</text>
+          <path d="M 56,18 Q 121,2 184,18" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="2,2" />
+          <polygon points="180,14 186,18 182,22" fill="#2563eb" />
+          <circle cx="56" cy="24" r="3" fill="#ef4444" />
+          <circle cx="186" cy="24" r="3" fill="#16a34a" />
+          <text x="121" y="9" font-size="7.2" font-weight="bold" text-anchor="middle" fill="#2563eb">-3 + 5 = +2 (skok w prawo o 5)</text>
+        </svg>
+      </div>
+
+      <!-- DIAGRAM 2: PRZEDZIAŁ I KÓŁKA -->
+      <div style="margin: 3px 0; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px 5px;">
+        <div style="font-size: 7.3pt; font-weight: bold; color: #047857;">📏 Kółka: Otwarte &#9675; (&lt;, &gt;) &bull; Zamalowane &bull; (&le;, &ge;):</div>
+        <svg viewBox="0 0 320 30" width="100%" height="24" style="display: block;">
+          <line x1="10" y1="16" x2="310" y2="16" stroke="#334155" stroke-width="1.5" />
+          <polygon points="310,13 318,16 310,19" fill="#334155" />
+          <line x1="50" y1="12" x2="50" y2="20" stroke="#64748b" stroke-width="1" />
+          <text x="50" y="26" font-size="7" text-anchor="middle" fill="#64748b">-5</text>
+          <line x1="190" y1="12" x2="190" y2="20" stroke="#64748b" stroke-width="1" />
+          <text x="190" y="26" font-size="7" text-anchor="middle" fill="#64748b">-1</text>
+          <line x1="225" y1="11" x2="225" y2="21" stroke="#0f172a" stroke-width="1.5" />
+          <text x="225" y="26" font-size="7" font-weight="bold" text-anchor="middle" fill="#0f172a">0</text>
+          <line x1="53" y1="16" x2="187" y2="16" stroke="#2563eb" stroke-width="3" />
+          <circle cx="50" cy="16" r="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.8" />
+          <circle cx="190" cy="16" r="3" fill="#2563eb" />
+          <text x="120" y="9" font-size="7.2" font-weight="bold" text-anchor="middle" fill="#1e40af">-5 &lt; x &le; -1 (odcinek pomiędzy)</text>
+        </svg>
+      </div>
+
+      <table class="mini-table">
+        <tr>
+          <th>Znak</th>
+          <th>Kółko</th>
+          <th>Znaczenie</th>
+          <th>Przykład</th>
+        </tr>
+        <tr>
+          <td>&lt; lub &gt;</td>
+          <td style="font-size: 10pt;">&#9675; (otwarte)</td>
+          <td>Liczba <strong>NIE należy</strong></td>
+          <td>x &gt; 1 &rarr; puste w 1, w prawo &rarr;</td>
+        </tr>
+        <tr>
+          <td>&le; lub &ge;</td>
+          <td style="font-size: 10pt; color: #1e40af;">&#9679; (zamalowane)</td>
+          <td>Liczba <strong>NALEŻY</strong></td>
+          <td>x &le; &minus;2,5 &rarr; pełne w &minus;2,5, w lewo &larr;</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- MODUŁ 4: ROZWINIĘCIA DZIESIĘTNE I OKRESY -->
+    <div class="module-card accent-indigo">
+      <div class="module-title">🔍 MODUŁ 4: Rozwinięcia Dziesiętne & Okresy</div>
+
+      <div class="box-sub">⚡ Skończone czy Nieskończone? (Test Mianownika w 5 sekund)</div>
+      <div class="rule-pill">
+        <strong>Krok 1:</strong> ZAWSZE najpierw <strong>skróć ułamek</strong> do końca!<br>
+        <strong>Krok 2:</strong> Rozłóż mianownik na czynniki pierwsze:<br>
+        &bull; Tylko <strong>2</strong> i/lub <strong>5</strong> &rarr; <strong>SKOŃCZONE</strong> (np. <span class="frac"><span>3</span><span>12</span></span> = <span class="frac"><span>1</span><span>4</span></span> = 0,25)<br>
+        &bull; Występuje <strong>3, 7, 11, 13...</strong> &rarr; <strong>NIESKOŃCZONE OKRESOWE</strong> (np. <span class="frac"><span>11</span><span>12</span></span> = 0,91666..., bo 12 = 3 &times; 4)
+      </div>
+
+      <div class="box-sub">🎯 Jak znaleźć N-tą cyfrę po przecinku w okresie?</div>
+      <div class="rule-pill">
+        Przykład: <strong>15. cyfra liczby 3,1(231)</strong><br>
+        1. <strong>Odetnij cyfry przed nawiasem:</strong> tu jest jedna cyfra „1”.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Pozostało: 15 &minus; 1 = <strong>14 kroków</strong> wewnątrz okresu.<br>
+        2. <strong>Podziel przez długość okresu</strong> („231” ma 3 cyfry):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;14 : 3 = 4 pełne cykle, <strong>reszta 2</strong>.<br>
+        3. <strong>Odczytaj resztę:</strong> reszta 2 oznacza <strong>2. cyfrę okresu</strong> &rarr; cyfra <strong>3</strong>!
+      </div>
+
+      <div class="box-sub">🔄 Odwrotność vs Liczba Przeciwna:</div>
+      <div class="rule-pill">
+        &bull; <strong>Liczba odwrotna:</strong> do <span class="frac"><span>a</span><span>b</span></span> to <span class="frac"><span>b</span><span>a</span></span> (najpierw zamień na ułamek niewłaściwy: 1<span class="frac"><span>3</span><span>4</span></span> = <span class="frac"><span>7</span><span>4</span></span> &rarr; odwrotność to <strong><span class="frac"><span>4</span><span>7</span></span></strong>)<br>
+        &bull; <strong>Liczba przeciwna:</strong> zmieniasz TYLKO znak (+ &harr; &minus;): do &minus;1<span class="frac"><span>3</span><span>4</span></span> to <strong>+1<span class="frac"><span>3</span><span>4</span></span> = <span class="frac"><span>7</span><span>4</span></span></strong>.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- STOPKA -->
+  <div class="footer-bar">
+    <span>💡 <em>„Nie musisz liczyć w pamięci ani zgadywać – skorzystaj ze sprytu i praw matematyki!”</em></span>
+    <span>Karta Supermocy &bull; Sukces w Matematyce</span>
+  </div>
+</div>
+
+</body>
+</html>
