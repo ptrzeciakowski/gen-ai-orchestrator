@@ -3,7 +3,7 @@
 - **Data i godzina sesji:** 2026-10-06 23:09:23 CEST
 - **ID sesji:** `f4d4a9a6-75b1-4089-b43c-4184927b7a96`
 - **Tytuł:** Diagnoza braku druku obustronnego w Samsung M2026W i uruchomienie kolejki CUPS z manual duplex
-- **Lokalizacja:** `sandbox/2026-10-07-samsung-m2026w-duplex-print-macos`
+- **Lokalizacja:** `sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos`
 
 ---
 

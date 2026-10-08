@@ -3,7 +3,7 @@
 - **Data i godzina sesji:** 2026-10-08 17:16:43 CEST
 - **ID sesji:** `179c8600-1034-4461-8995-1613e09d85f7`
 - **Tytuł:** Inżynieria odwrotna Job 177, wykrycie pomijania manualnego dupleksu w oknie macOS i wdrożenie uniwersalnego wrappera filtrów CUPS
-- **Lokalizacja:** `sandbox/2026-10-07-samsung-m2026w-duplex-print-macos`
+- **Lokalizacja:** `sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos`
 
 ---
 

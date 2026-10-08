@@ -147,16 +147,16 @@ To jedno polecenie całkowicie eliminuje awarię filtra `prefilter` i pozwala na
 
 ## Struktura Katalogu i Narzędzia
 
-W katalogu `/Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/` znajdują się:
+W katalogu `/Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos/` znajdują się:
 
 | Plik | Typ | Opis |
 | :--- | :--- | :--- |
-| [README.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/README.md) | Dokumentacja | Główny podręcznik techniczny i instrukcja obsługi (ten dokument). |
-| [setup-duplex.sh](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/setup-duplex.sh) | Skrypt Bash | Zautomatyzowany konfigurator kolejki CUPS, instalator wrapperów i tester dupleksu. |
-| [samsung-duplex-wrapper.c](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/samsung-duplex-wrapper.c) | Kod źródłowy C | Uniwersalny wrapper filtrów CUPS tłumaczący opcje macOS na manual duplex Samsunga. |
-| [print-duplex.sh](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/print-duplex.sh) | Skrypt Bash | Narzędzie CLI do szybkiego drukowania dowolnego pliku PDF na kolejkę dupleksową. |
-| [001-diagnoza-i-konfiguracja-druku-dwustronnego.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/001-diagnoza-i-konfiguracja-druku-dwustronnego.md) | Zapis sesji | Kompletna historia konwersacji diagnostycznej z sesji 1 (2026-10-06). |
-| [002-naprawa-druku-dwustronnego-wrapper-filtrow.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/002-naprawa-druku-dwustronnego-wrapper-filtrow.md) | Zapis sesji | Inżynieria wsteczna Job 177 i wdrożenie uniwersalnego wrappera filtrów CUPS (2026-10-08). |
+| [README.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos/README.md) | Dokumentacja | Główny podręcznik techniczny i instrukcja obsługi (ten dokument). |
+| [setup-duplex.sh](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos/setup-duplex.sh) | Skrypt Bash | Zautomatyzowany konfigurator kolejki CUPS, instalator wrapperów i tester dupleksu. |
+| [samsung-duplex-wrapper.c](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos/samsung-duplex-wrapper.c) | Kod źródłowy C | Uniwersalny wrapper filtrów CUPS tłumaczący opcje macOS na manual duplex Samsunga. |
+| [print-duplex.sh](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos/print-duplex.sh) | Skrypt Bash | Narzędzie CLI do szybkiego drukowania dowolnego pliku PDF na kolejkę dupleksową. |
+| [001-diagnoza-i-konfiguracja-druku-dwustronnego.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos/001-diagnoza-i-konfiguracja-druku-dwustronnego.md) | Zapis sesji | Kompletna historia konwersacji diagnostycznej z sesji 1 (2026-10-06). |
+| [002-naprawa-druku-dwustronnego-wrapper-filtrow.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos/002-naprawa-druku-dwustronnego-wrapper-filtrow.md) | Zapis sesji | Inżynieria wsteczna Job 177 i wdrożenie uniwersalnego wrappera filtrów CUPS (2026-10-08). |
 
 ---
 
@@ -167,7 +167,7 @@ W katalogu `/Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m202
 Wystarczy uruchomić dołączony skrypt konfiguracyjny:
 
 ```bash
-cd /Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos
+cd /Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos
 ./setup-duplex.sh
 ```
 
@@ -273,7 +273,7 @@ Dzięki wdrożonemu rozwiązaniu masz w systemie macOS dwie niezależne drukarki
   `BasicOptionPDE.bundle` to stara 32/64-bitowa wtyczka Intel/PowerPC z czasów OS X 10.6. Na komputerach Mac z procesorami Apple Silicon macOS próbuje załadować ją pozaprocesowo przez usługę `com.apple.RemotePDEService` tłumaczoną przez translator Rosetta. Nowoczesny podsystem `PrintingUI` (ViewBridge) ulega zakleszczeniu (*deadlock*) w pętli `-[HIRunLoopSemaphore wait]` podczas oczekiwania na odpowiedź z procesu Rosetty.
 * **Rozwiązanie (Zastosowane automatycznie w skrypcie):**
   Wtyczki `APDialogExtension` to wyłącznie prehistoryczne panele graficzne starego okna druku – **nie biorą żadnego udziału w przetwarzaniu wydruku ani w filtrach dupleksu**. 
-  Nasz skrypt [`setup-duplex.sh`](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/setup-duplex.sh) generuje zoptymalizowany plik PPD ([`Samsung_M2020_Series_Clean.ppd`](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos/Samsung_M2020_Series_Clean.ppd)) z wyciętymi przestarzałymi dyrektywami `APDialogExtension`. Dzięki temu:
+  Nasz skrypt [`setup-duplex.sh`](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos/setup-duplex.sh) generuje zoptymalizowany plik PPD ([`Samsung_M2020_Series_Clean.ppd`](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos/Samsung_M2020_Series_Clean.ppd)) z wyciętymi przestarzałymi dyrektywami `APDialogExtension`. Dzięki temu:
   - macOS korzysta z natywnego, błyskawicznego okna drukowania.
   - Rosetta i `RemotePDEService` nigdy nie są uruchamiane.
   - Okno drukowania nigdy się nie zawiesza.
@@ -297,7 +297,7 @@ Dzięki wdrożonemu rozwiązaniu masz w systemie macOS dwie niezależne drukarki
   Dzięki temu filtr `prefilter` zawsze poprawnie reorderuje strony, a `rastertosec` wysyła komendę `@PJL SET DUPLEX = MANUAL`, zmuszając drukarkę do oczekiwania na przełożenie kartek.
 * **Instalacja wrapperów:**
   ```bash
-  cd /Users/pawel/git/gen-ai-orchestrator/sandbox/2026-10-07-samsung-m2026w-duplex-print-macos
+  cd /Users/pawel/git/gen-ai-orchestrator/sandbox/archive/2026-10-07-samsung-m2026w-duplex-print-macos
   ./setup-duplex.sh
   ```
 
