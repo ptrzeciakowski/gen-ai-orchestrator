@@ -1,0 +1,1076 @@
+\documentclass[aspectratio=169, 10pt]{beamer}
+
+% -----------------------------------------------------------------------------
+% Pakiety podstawowe i polonizacja
+% -----------------------------------------------------------------------------
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+  \DeclareUnicodeCharacter{201E}{,,}
+  \DeclareUnicodeCharacter{201D}{''}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[polish]{babel}
+\usepackage{microtype}
+
+% -----------------------------------------------------------------------------
+% Grafika, tabele i układ
+% -----------------------------------------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, calc, fit, backgrounds, matrix, shadows}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath,amssymb}
+
+% -----------------------------------------------------------------------------
+% Definicja nowoczesnej palety kolorów
+% -----------------------------------------------------------------------------
+\definecolor{brandNavy}{RGB}{15, 23, 42}       % Głęboki granat (Slate 900)
+\definecolor{brandBlue}{RGB}{2, 132, 199}      % Akcent błękitny (Sky 600)
+\definecolor{brandDarkBlue}{RGB}{14, 116, 144} % Ciemny błękit (Cyan 700)
+\definecolor{brandTeal}{RGB}{13, 148, 136}     % Morski / Akcent (Teal 600)
+\definecolor{brandDark}{RGB}{30, 41, 59}       % Tekst ciemny (Slate 800)
+\definecolor{brandRed}{RGB}{225, 29, 72}       % Alert / Ostrzeżenie (Rose 600)
+\definecolor{brandGreen}{RGB}{16, 185, 129}    % Sukces / Rekomendacja (Emerald 500)
+\definecolor{brandOrange}{RGB}{234, 88, 12}    % Uwaga (Orange 600)
+\definecolor{brandLight}{RGB}{248, 250, 252}   % Tło kart (Slate 50)
+\definecolor{brandBorder}{RGB}{226, 232, 240}  % Ramki (Slate 200)
+\definecolor{brandMuted}{RGB}{100, 116, 139}   % Tekst wyciszony (Slate 500)
+
+% -----------------------------------------------------------------------------
+% Konfiguracja motywu Beamer
+% -----------------------------------------------------------------------------
+\usetheme{Madrid}
+\useinnertheme{rectangles}
+
+% Kolorystyka elementów
+\setbeamercolor{normal text}{fg=brandDark,bg=white}
+\setbeamercolor{structure}{fg=brandBlue}
+\setbeamercolor{frametitle}{fg=white,bg=brandNavy}
+\setbeamercolor{title}{fg=white,bg=brandNavy}
+\setbeamercolor{subtitle}{fg=brandBlue!30,bg=brandNavy}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{date}{fg=brandMuted!40}
+\setbeamercolor{institute}{fg=white}
+
+% Paski i stopka
+\setbeamercolor{palette primary}{bg=brandNavy,fg=white}
+\setbeamercolor{palette secondary}{bg=brandDarkBlue,fg=white}
+\setbeamercolor{palette tertiary}{bg=brandDark,fg=white}
+\setbeamercolor{palette quaternary}{bg=brandNavy,fg=white}
+
+% Bloki
+\setbeamercolor{block title}{bg=brandBlue!15,fg=brandNavy}
+\setbeamercolor{block body}{bg=brandLight,fg=brandDark}
+\setbeamercolor{block title alerted}{bg=brandRed!15,fg=brandRed}
+\setbeamercolor{block body alerted}{bg=brandRed!5,fg=brandDark}
+\setbeamercolor{block title example}{bg=brandGreen!15,fg=brandGreen}
+\setbeamercolor{block body example}{bg=brandGreen!5,fg=brandDark}
+
+% Zaokrąglenia i cienie
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{navigation symbols}{}
+
+% Płaska, elegancka belka tytułowa slajdu
+\setbeamertemplate{frametitle}{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.2ex,dp=1.3ex,leftskip=1.2cm,rightskip=0.5cm]{frametitle}
+    \usebeamerfont{frametitle}\textbf{\insertframetitle}
+    \ifx\insertframesubtitle\@empty\else
+      \par{\usebeamerfont{framesubtitle}\fontsize{8}{10}\selectfont\color{brandBlue!40}\insertframesubtitle}
+    \fi
+  \end{beamercolorbox}
+}
+
+% Dedykowana stopka slajdu
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.5ex,dp=1ex,leftskip=0.8cm]{palette quaternary}%
+    \usebeamerfont{author in head/foot}\scriptsize\textbf{Audyt Google Drive} $|$ Paweł Trzeciakowski
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.42\paperwidth,ht=2.5ex,dp=1ex,center]{palette tertiary}%
+    \usebeamerfont{title in head/foot}\scriptsize Lean Knowledge \& Asset Hub (2026)
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.24\paperwidth,ht=2.5ex,dp=1ex,rightskip=0.8cm,right]{palette primary}%
+    \usebeamerfont{date in head/foot}\scriptsize \textbf{\insertframenumber} / \inserttotalframenumber
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+% Punktory
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\color{brandBlue}$\blacksquare$}}
+\setbeamertemplate{itemize subitem}{\tiny\raise1.5pt\hbox{\color{brandTeal}$\blacktriangleright$}}
+\setbeamertemplate{itemize subsubitem}{\tiny\raise1.5pt\hbox{\color{brandMuted}$\bullet$}}
+
+% -----------------------------------------------------------------------------
+% Makra użytkownika
+% -----------------------------------------------------------------------------
+\newcommand{\badge}[2]{{\setlength{\fboxsep}{2pt}\colorbox{#1}{\textcolor{white}{\sffamily\bfseries\tiny #2}}}}
+\newcommand{\tagCard}[2]{{\setlength{\fboxsep}{2.5pt}\colorbox{brandLight}{\textcolor{brandNavy}{\sffamily\bfseries\scriptsize [#1]} \footnotesize #2}}}
+\newcommand{\alertTag}[1]{{\badge{brandRed}{#1}}}
+\newcommand{\okTag}[1]{{\badge{brandGreen}{#1}}}
+\newcommand{\infoTag}[1]{{\badge{brandBlue}{#1}}}
+\newcommand{\warnTag}[1]{{\badge{brandOrange}{#1}}}
+
+% Konfiguracja listingu kodu
+\lstset{
+  basicstyle=\ttfamily\tiny,
+  keywordstyle=\color{brandBlue}\bfseries,
+  stringstyle=\color{brandTeal},
+  commentstyle=\color{brandMuted}\itshape,
+  numbers=none,
+  breaklines=true,
+  backgroundcolor=\color{brandLight},
+  frame=single,
+  rulecolor=\color{brandBorder},
+  showstringspaces=false
+}
+
+% -----------------------------------------------------------------------------
+% Informacje o dokumencie
+% -----------------------------------------------------------------------------
+\title[\textbf{Architektura Docelowa Dysku Google}]{\textbf{Kompleksowy Audyt i Architektura Docelowa Dysku Google}}
+\subtitle{Od 267 GB Cyfrowego Magazynu do Zwinnego Hubu Wiedzy (\textit{Lean Knowledge Hub})}
+\author[\textbf{Paweł Trzeciakowski}]{\textbf{Paweł Trzeciakowski} (\texttt{ptrzeciakowski@gmail.com})\\[1ex]\footnotesize Zespół Analityczny: Antigravity Multi-Agent Orchestrator (5 Agentów AI)}
+\institute[\textbf{Antigravity AI}]{\footnotesize Głęboka Analiza Telemetryczna bazy \texttt{metadata\_sqlite\_db} (DriveFS na macOS)}
+\date{19 września 2026 r.}
+
+% =============================================================================
+% DOKUMENT GŁÓWNY
+% =============================================================================
+\begin{document}
+
+% -----------------------------------------------------------------------------
+% Slajd 1: Tytułowy
+% -----------------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 2: Executive Summary
+% -----------------------------------------------------------------------------
+\begin{frame}{Executive Summary}{Kluczowe fakty, diagnoza telemetryczna i cele transformacji}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{Diagnoza Stanu Obecnego (AS-IS)}}
+        \begin{itemize}
+          \item \textbf{267.0 GB} wolumenu ($77\,498$ plików, $8\,185$ folderów).
+          \item \alert{\textbf{85.1\% dysku}} to zasoby \textit{FROZEN/GLACIER} ($>3$ lata nieotwierane lub stan 0).
+          \item Bieżący strumień operacyjny to zaledwie \textbf{0.1\%} ($105$ plików w ost. 30 dni).
+          \item \textbf{Root Drift:} 49 plików luzem w katalogu głównym (skany dowodów, artefakty z czatów AI, fotki z iPhone'a).
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{\textbf{Architektura Docelowa (TO-BE)}}
+        \begin{itemize}
+          \item \textbf{Redukcja o 93\%:} Wolumen gDrive spada z 267 GB do \textbf{15--20 GB}.
+          \item \textbf{Migracja 190 GB zdjęć} do dedykowanego Google Photos (AI semantyczne, rozpoznawanie twarzy).
+          \item \textbf{Uwolnienie 83 GB redundancji} (usunięcie klonów folderów foto, starych backupów z lat 2013--2018).
+          \item \textbf{Zasada Zero-Root} wspierana buforem \texttt{00 Inbox} oraz skryptem Google Apps Script.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.3cm}
+  \begin{center}
+    \tagCard{METRYKA SUKCESU}{Czas odnalezienia kluczowego dokumentu: z kilku minut $\longrightarrow$ \textbf{$<5$ sekund}.}
+  \end{center}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 3: Agenda Prezentacji
+% -----------------------------------------------------------------------------
+\begin{frame}{Agenda}{Struktura raportu i plan wdrożenia nowej architektury}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{Część I: Diagnoza i Zagrożenia}}
+        \begin{enumerate}
+          \item \textbf{Telemetria Cyfrowa} -- bilans wolumenu i metryka \textit{Recency}.
+          \item \textbf{Archetyp Behawioralny} -- jak powstaje chaos w Root (Gemini, Notability, Chrome).
+          \item \textbf{Audyt Bezpieczeństwa} -- ekspozycja RODO (skany dowodów) i zasoby współdzielone.
+          \item \textbf{Dług Technologiczny} -- anatomia megafolderu \texttt{25 Paweł - dokumenty}.
+        \end{enumerate}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{\textbf{Część II: Nowa Architektura i Wdrożenie}}
+        \begin{enumerate}
+          \setcounter{enumi}{4}
+          \item \textbf{Strategiczny Zwrot Foto} -- procedura migracji 190 GB do Google Photos.
+          \item \textbf{Plan Declutteringu} -- odzysk 83 GB w 3 poziomach ryzyka.
+          \item \textbf{Taksonomia Docelowa} -- hybryda Johnny Decimal + PARA.
+          \item \textbf{Operating Model} -- standard nazw, Inbox Zero i Google Apps Script.
+          \item \textbf{4-Fazowa Roadmapa} -- harmonogram wdrożenia krok po kroku.
+        \end{enumerate}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% =============================================================================
+% CZĘŚĆ I: DIAGNOZA I TELEMETRIA
+% =============================================================================
+
+% -----------------------------------------------------------------------------
+% Slajd 4: Globalne Metryki Dysku
+% -----------------------------------------------------------------------------
+\begin{frame}{Globalne Metryki Dysku}{Fizyczna analiza bazy danych Google Drive File Provider (metadata\_sqlite\_db)}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \textbf{Struktura wolumenu fizycznego (267.0 GB):}
+      \vspace{0.2cm}
+      
+      \begin{tikzpicture}[scale=0.85]
+        % Pasek proporcji
+        \draw[fill=brandBlue!80, draw=brandNavy] (0, 0) rectangle (5.7, 0.9);
+        \node[white, font=\scriptsize\bfseries] at (2.85, 0.45) {Zdjęcia: 190.0 GB (71.2\%)};
+        
+        \draw[fill=brandTeal!80, draw=brandNavy] (5.7, 0) rectangle (7.2, 0.9);
+        \node[white, font=\tiny\bfseries] at (6.45, 0.45) {Kopie: 50.8 GB};
+        
+        \draw[fill=brandNavy!70, draw=brandNavy] (7.2, 0) rectangle (8.0, 0.9);
+        \node[white, font=\tiny\bfseries] at (7.6, 0.45) {26 GB};
+      \end{tikzpicture}
+
+      \vspace{0.3cm}
+      \begin{itemize}
+        \item \textbf{Łączna liczba plików:} $77\,498$
+        \item \textbf{Łączna liczba folderów:} $8\,185$
+        \item \textbf{Średnia głębokość drzewa:} 4--6 poziomów
+        \item \textbf{Pliki w katalogu głównym (Root):} 49 obiektów luzem
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.42\textwidth}
+      \begin{block}{\textbf{Kluczowe Składniki Wolumenu}}
+        \small
+        \begin{tabular}{lrr}
+          \toprule
+          \textbf{Obszar} & \textbf{Waga} & \textbf{Udział} \\
+          \midrule
+          \texttt{88 Zdjęcia} & 190.0 GB & 71.2\% \\
+          \texttt{95 Backupy} & 50.8 GB & 19.0\% \\
+          \texttt{25 Dokumenty (stare)} & 8.2 GB & 3.1\% \\
+          Dokumenty robocze & 18.0 GB & 6.7\% \\
+          \midrule
+          \textbf{RAZEM} & \textbf{267.0 GB} & \textbf{100.0\%} \\
+          \bottomrule
+        \end{tabular}
+      \end{block}
+      
+      \vspace{0.1cm}
+      \footnotesize \alertTag{DIAGNOZA} Dysk funkcjonuje jako \textbf{„magazyn wysokiego składowania”}, a nie zwinny hub roboczy.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 5: Rozkład Temperatury Danych (Recency)
+% -----------------------------------------------------------------------------
+\begin{frame}{Asymetria Temperatury Danych}{Analiza metryki viewed\_by\_me\_date ujawnia zjawisko „zamrożonego kapitału”}
+  \begin{center}
+    \small
+    \begin{tabularx}{\textwidth}{lcrXl}
+      \toprule
+      \textbf{Strefa Termiczna} & \textbf{Zakres Czasu} & \textbf{Liczba Plików} & \textbf{Charakterystyka Behawioralna} & \textbf{Status} \\
+      \midrule
+      \textbf{HOT (Gorąca)} & $<30$ dni & \textbf{105 (0.1\%)} & Bieżące projekty (Snowflake, PW Analiza, notatki bieżące) & \okTag{OPERACYJNE} \\
+      \textbf{WARM (Ciepła)} & 1--12 mies. & \textbf{10 691 (13.8\%)} & Dokumenty podatkowe, szkolne dzieci, cykliczne rachunki & \infoTag{AKTYWNE} \\
+      \textbf{COLD (Zimna)} & 1--3 lata & \textbf{755 (1.0\%)} & Zamknięte etapy projektowe, starsze referencje & \warnTag{REFERENCJA} \\
+      \textbf{GLACIER (Lodowiec)} & $>3$ lata / stan 0 & \textbf{65 947 (85.1\%)} & Backupy starych smartfonów, zrzuty foto, archiwa uczelniane & \alertTag{MARTWE} \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+
+  \vspace{0.3cm}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{\textbf{Paradoks Gospodarki Danymi}}
+        \footnotesize
+        Aż \textbf{29\,360 plików} nie zostało nigdy otwartych od momentu synchronizacji! Ponad 85\% pojemności to dane całkowicie pasywne.
+      \end{alertblock}
+    \end{column}
+    
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{Wpływ na Doświadczenie Pracy}}
+        \footnotesize
+        Mimo ogromnego wolumenu, codzienną produktywność Pawła determinuje zaledwie \textbf{0.1\% zasobów}, które cierpią na zanieczyszczenie w Root.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 6: Archetyp Behawioralny Pawła
+% -----------------------------------------------------------------------------
+\begin{frame}{Archetyp Behawioralny i Przyczyny Chaosu}{Rekonstrukcja stylu pracy inżyniera danych w erze narzędzi multi-platformowych}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{block}{\textbf{Profil Cyfrowy Użytkownika}}
+        \textit{High-Velocity Knowledge Worker \& Data Architect with Flat-Dump Drift \& Multi-Device Tool Fragmentation}.
+        \begin{itemize}
+          \item \textbf{Obszary aktywności:} Architektura danych (Snowflake, Allegro, Roche, dbt), rodzina (szkoła, sport), rozwój akademicki (WEiTI PW).
+          \item \textbf{Dobre nawyki:} Intuicyjne stosowanie numeracji dziesiętnej (\texttt{01 Rodzina}, \texttt{05 Finanse}, \texttt{07 Praca}).
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{\textbf{Zjawisko Rozdwojenia Dysku}}
+        Trzy sprzeczne ze sobą role konta:
+        \begin{enumerate}
+          \item \textbf{Cmentarzysko kopii:} 240 GB starych telefonów (Galaxy S3/S4, HTC) i surowych zdjęć.
+          \item \textbf{Warsztat inżynierski:} Aktywne analizy i podręczniki.
+          \item \textbf{Lądowisko transmisyjne:} Narzędzia zewnętrzne zrzucają pliki wprost do Root bez pytania o ścieżkę.
+        \end{enumerate}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 7: Anatomia Problemów w Root: AI, Notability, Chrome
+% -----------------------------------------------------------------------------
+\begin{frame}{Anatomia Problemów w Root}{Jak narzędzia zewnętrzne degradują porządek w katalogu głównym}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \textbf{1. Syndrom „Plików-Promptów” z Gemini (8 plików):}
+      \begin{itemize}
+        \item Web UI Gemini po kliknięciu \textit{„Eksportuj do Dokumentów”} zapisuje plik w \texttt{parents=['root']}.
+        \item Brak nazwy własnej skutkuje nadaniem tytułu z treści promptu:
+        \begin{itemize}\tiny
+          \item \texttt{„Czy możesz załączyć podsumowanie o które prosiłem?.gdoc”}
+          \item \texttt{„Serio? Nie możesz wyciągnąć całej tej konwersacji...gdoc”}
+          \item \texttt{„jeszcze raz poproszę o te wykresy...gdoc”}
+        \end{itemize}
+        \item Podwójne kliknięcia tworzą duplikaty z sufiksem \texttt{(1)}.
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.45\textwidth}
+      \textbf{2. Silos Notability na iPadzie (232 pliki, 422 MB):}
+      \begin{itemize}
+        \item Zapis w odizolowanym folderze w Root.
+        \item Generowanie podwójnych plików dla każdej notatki: \texttt{.note} (binarny edytowalny) + \texttt{.pdf}.
+      \end{itemize}
+
+      \vspace{0.2cm}
+      \textbf{3. Kolizja Wtyczki Chrome:}
+      \begin{itemize}
+        \item Reinstalacja rozszerzenia na macOS utworzyła zdublowany folder \texttt{Zapisane z Chrome (1)}.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% =============================================================================
+% CZĘŚĆ II: BEZPIECZEŃSTWO I DŁUG TECHNOLOGICZNY
+% =============================================================================
+
+% -----------------------------------------------------------------------------
+% Slajd 8: Audyt Bezpieczeństwa i Naruszenia RODO
+% -----------------------------------------------------------------------------
+\begin{frame}{Audyt Bezpieczeństwa i Ochrona Danych (RODO)}{Identyfikacja krytycznych ryzyk PII/PHI w otwartej strukturze dysku}
+  \begin{alertblock}{\textbf{KRYTYCZNE ZAGROŻENIE: Skany dowodów tożsamości w Root}}
+    W otwartym katalogu głównym (\texttt{Mój dysk}) bezpośrednio leżą pliki:
+    \begin{itemize}
+      \item \texttt{Dowód osobisty - Paweł Trzeciakowski.pdf}
+      \item \texttt{Dowód osobisty - mama.pdf}
+      \item Folder \texttt{91 Hasła}
+    \end{itemize}
+    \textbf{Konsekwencje:} W razie przypadkowego włączenia link-sharingu grozi to natychmiastowym wyciekiem numerów PESEL, serii dowodów i ryzykiem wyłudzenia pożyczek.
+  \end{alertblock}
+
+  \vspace{0.2cm}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{Ekspozycja Danych Notarialnych i PHI}}
+        \footnotesize
+        Umowy kupna mieszkań, akty notarialne oraz dokumentacja medyczna dzieci (\texttt{03 Zdrowie}) leżą w nieszyfrowanych gałęziach.
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{\textbf{Rekomendacja: Cyfrowy Sejf}}
+        \footnotesize
+        Utworzenie odizolowanego folderu \textbf{\texttt{00 Zaszyfrowany\_Sejf}} z restrykcyjnymi uprawnieniami lub szyfrowaniem lokalnym (Cryptomator).
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 9: Zarządzanie Współdzieleniem Zewnętrznym
+% -----------------------------------------------------------------------------
+\begin{frame}{Współdzielenie Zewnętrzne (is\_owner = False)}{Zarządzanie 73 zasobami pochodzącymi od osób trzecich}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{Typologia zasobów cudzych na dysku:}
+      \begin{itemize}
+        \item \textbf{Szkoła i dzieci:} Materiały lekcyjne, prace domowe, karty kwalifikacyjne obozów.
+        \item \textbf{Hobby / Towarzyskie:} Turnieje e-sportowe (np. regulaminy \textit{Heroes III}), plany wyjazdów narciarskich (\textit{Narty 2027}).
+        \item \textbf{Zawodowe:} Prezentacje dbt Bootcamp, materiały konferencyjne.
+      \end{itemize}
+
+      \vspace{0.2cm}
+      \footnotesize \alertTag{RYZYKO} Usunięcie pliku przez właściciela zewnętrznego powoduje natychmiastową utratę dostępu w referencjach Pawła.
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+      \begin{block}{\textbf{Docelowa Matryca Współdzielenia}}
+        \small
+        \begin{tabularx}{\textwidth}{p{2.8cm}X}
+          \toprule
+          \textbf{Kategoria} & \textbf{Zasada Zarządzania} \\
+          \midrule
+          \textbf{Dokumenty statyczne} (bilety, umowy, slajdy) & \textbf{Make a copy} -- natychmiastowe utworzenie własnej kopii. \\
+          \addlinespace
+          \textbf{Aktywna praca zespołowa} & \textbf{Shortcuts} -- wyłącznie skróty, brak przypinania fizycznego. \\
+          \addlinespace
+          \textbf{Zakończone projekty} & Usunięcie z dysku (dostęp pozostaje w \textit{Udostępnione dla mnie}). \\
+          \bottomrule
+        \end{tabularx}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 10: Dług Technologiczny: Folder 25
+% -----------------------------------------------------------------------------
+\begin{frame}{Dług Technologiczny: Megafolder 25}{Likwidacja cienia dawnego systemu plików (7\,586 plików, 8.2 GB)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{\textbf{Problem: Zdublowany Cień Systemu}}
+        Folder \texttt{25 Paweł - dokumenty} (nieużywany aktywnie od 2021 r.) tworzy pasożytniczą strukturę dublującą główne kategorie:
+        \begin{itemize}\small
+          \item \texttt{25/.../00. Michaś} $\Longleftrightarrow$ \texttt{01 Rodzina}
+          \item \texttt{25/.../02. Finanse} $\Longleftrightarrow$ \texttt{05 Finanse}
+          \item \texttt{25/.../05. Samochód} $\Longleftrightarrow$ \texttt{09 Samochód}
+          \item \texttt{25/.../06. Praca} $\Longleftrightarrow$ \texttt{07 Praca}
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{\textbf{Procedura Decommissioningu}}
+        \begin{enumerate}
+          \item \textbf{Rozbiórka gałęzi:} Przeniesienie wartościowych podkatalogów do sekcji \texttt{\_Archiwum} wewnątrz odpowiednich nowych folderów.
+          \item \textbf{Eliminacja resztek:} Przeniesienie starych materiałów ze studiów (2009 r.) do \texttt{99 Archiwum}.
+          \item \textbf{Usunięcie folderu 25:} Pełna likwidacja po zakończeniu migracji.
+        \end{enumerate}
+      \end{exampleblock}
+      
+      \vspace{0.2cm}
+      \footnotesize \okTag{WYNIK} Eliminacja dezinformacji i powrotu do przeszukiwania starych struktur.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% =============================================================================
+% CZĘŚĆ III: STRATEGIA UWOLNIENIA PRZESTRZENI
+% =============================================================================
+
+% -----------------------------------------------------------------------------
+% Slajd 11: Strategiczna Decyzja: Migracja Zdjęć (190 GB)
+% -----------------------------------------------------------------------------
+\begin{frame}{Strategiczna Decyzja: Migracja do Google Photos}{Odpięcie 190 GB multimediów (71.2\% dysku) kluczem do odzyskania zwinności}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{block}{\textbf{Dlaczego gDrive nie nadaje się na zdjęcia?}}
+        \begin{itemize}
+          \item \textbf{30\,958 plików foto/wideo} generowało ponad 530 podkatalogów.
+          \item Paraliżowało wyszukiwanie tekstowe i Spotlight na macOS.
+          \item Olbrzymi narzut pamięciowy na bazę \texttt{metadata\_sqlite\_db} klienta DriveFS.
+        \end{itemize}
+      \end{block}
+
+      \vspace{0.2cm}
+      \begin{exampleblock}{\textbf{Korzyści z migracji do Google Photos}}
+        \begin{itemize}
+          \item Automatyczne indeksowanie twarzy (Michał, Nadia, Natalka).
+          \item Wyszukiwanie semantyczne (np. \textit{„Narty Livigno”}, \textit{„tenis”}).
+          \item Odciążenie transferu domowego i dysku lokalnego.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{Obejście limitu 100 plików w Google Photos}}
+        \footnotesize
+        Web UI Google Photos narzuca limit paginacji 100 plików przy wyborze z Dysku.
+        
+        \vspace{0.2cm}
+        \textbf{Rozwiązanie inżynierskie:} Dedykowany skrypt \texttt{flatten\_photos.py}:
+        \begin{itemize}\scriptsize
+          \item Tworzy płaską strukturę \textbf{zerobajtowych symlinków} posortowaną rocznikami na macOS.
+          \item Pozwala na natychmiastowe zaznaczenie 100\% zdjęć za jednym razem (\texttt{Cmd+A}).
+          \item Automatycznie ignoruje wykryte foldery-duplikaty.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 12: Trzyetapowa Procedura Migracji Foto
+% -----------------------------------------------------------------------------
+\begin{frame}{Trzyetapowa Procedura Migracji Foto}{Bezpieczny transfer archiwum fotograficznego bez zużycia łącza domowego}
+  \vspace{0.3cm}
+  \begin{center}
+    \begin{tikzpicture}[node distance=0.8cm, auto]
+      \tikzstyle{stepbox} = [rectangle, rounded corners, minimum width=4cm, minimum height=2.2cm, text width=3.8cm, align=center, font=\scriptsize, draw=brandNavy, line width=1pt]
+      
+      \node[stepbox, fill=brandLight] (s1) {
+        \textbf{\large KROK 1: SANITACJA}\\[1ex]
+        Bezwzględny zakaz wgrywania wykrytych duplikatów:\\[0.5ex]
+        $\bullet$ \texttt{2017 (1)} (11.21 GB)\\
+        $\bullet$ \texttt{2015 (1)} (5.94 GB)\\
+        $\bullet$ \texttt{Fotograf/Kopia} (1.54 GB)
+      };
+
+      \node[stepbox, fill=brandBlue!15, right=0.8cm of s1] (s2) {
+        \textbf{\large KROK 2: TRANSFER}\\[1ex]
+        Import chmurowy w \texttt{photos.google.com}:\\[0.5ex]
+        $\bullet$ \textit{Upload $\rightarrow$ Google Drive}\\
+        $\bullet$ Przetwarzanie serwer-serwer\\
+        $\bullet$ 0 bajtów transferu domowego!\\
+        $\bullet$ Skrypt \texttt{flatten\_photos.py}
+      };
+
+      \node[stepbox, fill=brandGreen!15, right=0.8cm of s2] (s3) {
+        \textbf{\large KROK 3: PURGE}\\[1ex]
+        Likwidacja folderu na gDrive:\\[0.5ex]
+        $\bullet$ Weryfikacja w Photos\\
+        $\bullet$ 14 dni kwarantanny w \texttt{\_DO\_USUNIECIA}\\
+        $\bullet$ Opróżnienie kosza\\
+        $\bullet$ \textbf{Zwolnienie 190.0 GB}
+      };
+
+      \draw[-{Stealth[length=3mm]}, line width=1.5pt, color=brandBlue] (s1) -- (s2);
+      \draw[-{Stealth[length=3mm]}, line width=1.5pt, color=brandBlue] (s2) -- (s3);
+    \end{tikzpicture}
+  \end{center}
+
+  \vspace{0.3cm}
+  \begin{center}
+    \footnotesize \okTag{WYNIK} Biblioteka zdjęć zyskuje inteligentne wyszukiwanie AI, a Dysk Google staje się lekki i przejrzysty.
+  \end{center}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 13: 3-Poziomowy Plan Declutteringu (83 GB)
+% -----------------------------------------------------------------------------
+\begin{frame}{Plan Declutteringu: Odzysk 83 GB Przestrzeni}{Eliminacja fizycznej redundancji podzielona według stopnia ryzyka operacyjnego}
+  \begin{center}
+    \small
+    \begin{tabularx}{\textwidth}{lp{6.2cm}rrl}
+      \toprule
+      \textbf{Poziom Ryzyka} & \textbf{Zakres Plików i Megaduplikatów} & \textbf{Wolumen} & \textbf{Pliki} & \textbf{Poziom Ryzyka} \\
+      \midrule
+      \textbf{Tier 1 (Zero-Risk)} & Klony folderów foto (\texttt{2017 (1)}, \texttt{2015 (1)}), potrójne \texttt{studia.zip}, śmieci z czatów AI w Root & \textbf{24.89 GB} & 3 419 & \okTag{ZEROWE} \\
+      \addlinespace
+      \textbf{Tier 2 (Low-Risk)} & Przestarzałe instalatory exe/dmg, duplikat backupu ASUS, cienie starych projektów & \textbf{11.88 GB} & 6 876 & \infoTag{MINIMALNE} \\
+      \addlinespace
+      \textbf{Tier 3 (Selective)} & Surowe nagrania wideo z lat 2016--2017 w folderze \texttt{0001 - Temp} & \textbf{46.20 GB} & 3 883 & \warnTag{ŚREDNIE} \\
+      \midrule
+      \textbf{ŁĄCZNY ODZYSK} & \textbf{Czysta redundancja i martwy kapitał} & \textbf{82.97 GB} & \textbf{14 178} & \textbf{31.1\% Dysku!} \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+
+  \vspace{0.2cm}
+  \begin{alertblock}{\textbf{Zasada Bezpieczeństwa: 30-dniowy bufor kwarantanny}}
+    \footnotesize
+    Żaden plik nie trafia bezpośrednio do systemowego Kosza. Wszystkie zasoby są najpierw przenoszone do technicznego folderu \textbf{\texttt{\_DO\_USUNIECIA/}}, co daje 100\% gwarancji możliwości cofnięcia operacji.
+  \end{alertblock}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 14: Bilans Transformacji Wolumenu
+% -----------------------------------------------------------------------------
+\begin{frame}{Bilans Transformacji Wolumenu Dysku}{Wizualizacja redukcji zajętości Dysku Google z 267 GB do poziomu 15--20 GB}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{tikzpicture}[scale=0.9]
+        % Wykres słupkowy Przed i Po
+        \draw[fill=brandRed!80, draw=brandNavy] (0.5, 0) rectangle (2.2, 4.5);
+        \node[font=\footnotesize\bfseries, above] at (1.35, 4.5) {267.0 GB};
+        \node[font=\scriptsize\bfseries, white] at (1.35, 2.25) {PRZED AUDYTEM};
+        \node[font=\tiny, white] at (1.35, 1.8) {77.5k plików};
+
+        % Strzałka redukcji
+        \draw[-{Stealth[length=3mm]}, line width=2pt, color=brandGreen] (2.7, 3.0) -- (4.1, 1.5);
+        \node[font=\scriptsize\bfseries, color=brandGreen, align=center] at (3.4, 2.6) {-93\%!};
+
+        \draw[fill=brandGreen!80, draw=brandNavy] (4.5, 0) rectangle (6.2, 0.45);
+        \node[font=\footnotesize\bfseries, above] at (5.35, 0.45) {15--20 GB};
+        \node[font=\tiny\bfseries, black] at (5.35, -0.4) {PO WDROŻENIU};
+        
+        \draw[->, line width=0.5pt] (0,0) -- (6.8,0);
+      \end{tikzpicture}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{Gdzie podziały się dane?}}
+        \begin{itemize}
+          \item \textbf{-190 GB:} Migracja do Google Photos.
+          \item \textbf{-50.8 GB:} Eksport starych kopii telefonów do domowego NAS / SSD.
+          \item \textbf{-25 GB:} Usunięcie 100\% klonów i zduplikowanych zipów.
+          \item \textbf{15--20 GB pozostaje:} Wszystkie kluczowe dokumenty życiowe, finanse, praca, szkoła dzieci i podręczniki.
+        \end{itemize}
+      \end{block}
+      
+      \footnotesize \okTag{EFEKT} Dysk Google staje się superszybkim, czystym ekosystemem inżynierskim.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% =============================================================================
+% CZĘŚĆ IV: DOCELOWA ARCHITEKTURA FOLDERÓW
+% =============================================================================
+
+% -----------------------------------------------------------------------------
+% Slajd 15: Zasady Architektoniczne Nowej Taksonomii
+% -----------------------------------------------------------------------------
+\begin{frame}{Zasady Architektoniczne Nowej Taksonomii}{Połączenie logiki dziesiętnej Johnny Decimal z obszarami życiowymi PARA}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{1. Zasada Zero-Root}}
+        W katalogu głównym (\texttt{Mój dysk}) znajduje się \textbf{dokładnie 0 plików luzem}. Każdy plik musi rezydować w odpowiedniej gałęzi.
+      \end{block}
+
+      \vspace{0.2cm}
+      \begin{block}{\textbf{2. System Dekadowy Johnny Decimal}}
+        Kategorie pierwszego rzędu pogrupowane w logiczne dziesiątki (00, 01--09, 10--19, 20--29, 80--89, 90--99).
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{3. Spójny Format Nazewniczy}}
+        Ujednolicony wzorzec: \texttt{[XX] [Nazwa\_Obszaru]}. Zawsze spacja po numerze, brak przypadkowych kropek.
+      \end{block}
+
+      \vspace{0.2cm}
+      \begin{block}{\textbf{4. Izolacja Aplikacji w Bloku 80+}}
+        Aplikacje zewnętrzne (Notability, Obsidian, boty AI) zostają odseparowane od głównych obszarów życia rodziny i pracy.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 16: Nowe Drzewo Katalogów (Johnny Decimal + PARA)
+% -----------------------------------------------------------------------------
+\begin{frame}{Docelowe Drzewo Katalogów}{Sterylna, przewidywalna taksonomia eliminująca luki i rozproszenie}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \scriptsize
+      \textbf{00\_SYSTEM (Brama wjazdowa i Sejf):}
+      \begin{itemize}\tiny
+        \item \texttt{00 Inbox} (Eksporty AI, pobrania Chrome, staging Notability)
+        \item \texttt{00 Zaszyfrowany\_Sejf} (Dowody osobiste, hasła, RODO)
+      \end{itemize}
+
+      \textbf{01-09 OSOBISTE \& RODZINA:}
+      \begin{itemize}\tiny
+        \item \texttt{01 Rodzina} (Michał, Nadia, Natalka, Kuba, Genealogia)
+        \item \texttt{02 Edukacja\_Dzieci} (Podział na roczniki i klasy)
+        \item \texttt{03 Zdrowie} (Wyłącznie dokumentacja medyczna domowników)
+        \item \texttt{04 Dokumenty\_Osobiste} (Dziennik, CV, certyfikaty)
+        \item \texttt{05 Finanse} (Budżet, podatki roczne, banki, kredyty)
+        \item \texttt{07 Praca} (HSBC 2026, Allegro, Roche, publikacje Snowflake)
+      \end{itemize}
+
+      \textbf{10-19 MAJĄTEK \& INFRASTRUKTURA (Konsolidacja!):}
+      \begin{itemize}\tiny
+        \item \texttt{10 Mieszkanie} (Scalenie d. 06 + 16 Pokój + Fotowoltaika)
+        \item \texttt{11 Lewickie} (Działka wiejska, rachunki, geodezja)
+        \item \texttt{12 Samochod} (Toyota, VW Golf, polisy OC/AC z d. 10)
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \scriptsize
+      \textbf{20-29 ROZWÓJ, PASJE \& WIEDZA:}
+      \begin{itemize}\tiny
+        \item \texttt{20 Nauka\_i\_Wiedza} (Analiza Matematyczna PW, dbt, Snowflake)
+        \item \texttt{21 Audio\_i\_Muzyka} (Audiobooki literatury faktu)
+        \item \texttt{22 Sport\_i\_Bieganie} (Dawne 85 -- plany, maratony)
+        \item \texttt{23 Gry\_i\_Rozrywka} (Heroes III, VCMI, gry dzieci)
+        \item \texttt{24 Podroze\_i\_Wycieczki} (Foldery rocznikowe wyjazdów)
+      \end{itemize}
+
+      \textbf{80-89 APLIKACJE \& INTEGRACJE:}
+      \begin{itemize}\tiny
+        \item \texttt{80 Notability\_Backup} (Wyłącznie wektorowy PDF z OCR)
+        \item \texttt{81 Obsidian\_Vault} (Baza wiedzy markdown)
+        \item \texttt{82 Gemini\_Gems} (Definicje botów systemowych)
+      \end{itemize}
+
+      \textbf{90-99 SYSTEM \& ARCHIWUM:}
+      \begin{itemize}\tiny
+        \item \texttt{95 Kopie\_Zapasowe} (Bieżące obrazy)
+        \item \texttt{98 Paragony} (Strumień skanera mobilnego)
+        \item \texttt{99 Archiwum} (Zamknięte firmy, studia 2009, resztki d. 25)
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 17: Wielowymiarowy Model Klasyfikacji (5D)
+% -----------------------------------------------------------------------------
+\begin{frame}{Wielowymiarowy Model Kategoryzacji (5D)}{Ramy klasyfikacji danych opracowane przez Agenta 5}
+  \begin{center}
+    \begin{tikzpicture}[node distance=0.6cm, auto]
+      \tikzstyle{dimbox} = [rectangle, rounded corners, minimum width=2.4cm, minimum height=1.6cm, text width=2.2cm, align=center, font=\tiny, draw=brandNavy, line width=0.8pt]
+
+      \node[dimbox, fill=brandLight] (d1) {
+        \textbf{\scriptsize W1: DOMENA}\\[0.5ex]
+        Kariera, Finanse, Zdrowie, Rodzina, Majątek, Edukacja, Pasje
+      };
+
+      \node[dimbox, fill=brandBlue!10, right=0.3cm of d1] (d2) {
+        \textbf{\scriptsize W2: TEMPERATURA}\\[0.5ex]
+        HOT ($<30$d)\\WARM (1--12m)\\COLD (1--3l)\\GLACIER ($>3$l)
+      };
+
+      \node[dimbox, fill=brandRed!10, right=0.3cm of d2] (d3) {
+        \textbf{\scriptsize W3: GOVERNANCE}\\[0.5ex]
+        Private, Confidential (Sejf), Family Shared, External Shared
+      };
+
+      \node[dimbox, fill=brandTeal!10, right=0.3cm of d3] (d4) {
+        \textbf{\scriptsize W4: FORMAT}\\[0.5ex]
+        Legal, Knowledge, AI Drafts, Media, Binaries/Data
+      };
+
+      \node[dimbox, fill=brandGreen!10, right=0.3cm of d4] (d5) {
+        \textbf{\scriptsize W5: STATUS}\\[0.5ex]
+        Action Required, Reading Queue, Settlement, Static
+      };
+    \end{tikzpicture}
+  \end{center}
+
+  \vspace{0.2cm}
+  \textbf{Przykłady precyzyjnego pozycjonowania w modelu 5D:}
+  \begin{itemize}\scriptsize
+    \item \texttt{Dowód osobisty.pdf} $\longrightarrow$ [W1: Majątek, W2: Cold, \alert{W3: Confidential/Sejf}, W4: Legal, W5: Static]
+    \item \texttt{home\_budget\_2026.csv} $\longrightarrow$ [W1: Finanse, \okTag{W2: Hot}, W3: Private, W4: Binary/Data, \warnTag{W5: Settlement}]
+    \item \texttt{Analiza\_Matematyczna\_PW.gdoc} $\longrightarrow$ [W1: Edukacja, \okTag{W2: Hot}, W3: Private, W4: Knowledge, W5: Reading]
+  \end{itemize}
+\end{frame}
+
+% =============================================================================
+% CZĘŚĆ V: OPERATING MODEL I AUTOMATYZACJA
+% =============================================================================
+
+% -----------------------------------------------------------------------------
+% Slajd 18: Standard Nazewnictwa Plików
+% -----------------------------------------------------------------------------
+\begin{frame}{Standard Nazewnictwa Plików (File Naming)}{Koniec z promptami i hashami -- rygorystyczny standard ułatwiający wyszukiwanie}
+  \begin{center}
+    \small
+    \begin{tabularx}{\textwidth}{p{3.2cm}p{4.5cm}X}
+      \toprule
+      \textbf{Typ Dokumentu} & \textbf{Wzorzec Nazewniczy} & \textbf{Poprawny Przykład} \\
+      \midrule
+      \textbf{Urzędowy / Polisa} & \texttt{YYYY-MM-DD - [Kto] - [Co].ext} & \texttt{2026-07-24 - Warta - Polisa Corolla.pdf} \\
+      \addlinespace
+      \textbf{Faktura / Koszt} & \texttt{YYYY-MM - [Firma] - [Co] - [Kwota].ext} & \texttt{2026-08 - Plus - Abo Lewickie - 65PLN.pdf} \\
+      \addlinespace
+      \textbf{Badanie medyczne} & \texttt{YYYY-MM-DD - [Osoba] - [Badanie].ext} & \texttt{2026-01-14 - Natka - TK Kolana Osiowa.pdf} \\
+      \addlinespace
+      \textbf{Projekt zawodowy} & \texttt{[Projekt] - [Tytuł] - [Status].ext} & \texttt{Snowflake - Semantyka DWH - Final.gdoc} \\
+      \addlinespace
+      \textbf{Wyjazd / Podróż} & \texttt{YYYY-MM - [Gdzie] - [Dokument].ext} & \texttt{2026-08 - Tatry - Plan Wycieczki V2.gdoc} \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+
+  \vspace{0.2cm}
+  \begin{alertblock}{\textbf{Kluczowa Reguła}}
+    \footnotesize
+    Wszystkie daty zawsze zapisujemy w formacie ISO \textbf{\texttt{YYYY-MM-DD}} lub \textbf{\texttt{YYYY-MM}}, co gwarantuje perfekcyjne, chronologiczne sortowanie w dowolnym systemie plików.
+  \end{alertblock}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 19: Zasada One-Way Inflow i Rola Inboxa
+% -----------------------------------------------------------------------------
+\begin{frame}{Zasada „One-Way Inflow” i Rola Inboxa}{Jedna oficjalna brama wjazdowa chroniąca katalog główny przed degradacją}
+  \begin{center}
+    \begin{tikzpicture}[node distance=0.7cm, auto]
+      \node[draw=brandNavy, fill=brandLight, text width=3.8cm, align=center, rounded corners, font=\scriptsize] (sources) {
+        \textbf{ŹRÓDŁA ZASILANIA}\\
+        $\bullet$ Eksporty z Gemini / ChatGPT\\
+        $\bullet$ Pobrane pliki z Chrome\\
+        $\bullet$ Zrzuty foto/skany z iPhone\\
+        $\bullet$ Szkice Notability z iPada
+      };
+
+      \node[draw=brandBlue, fill=brandBlue!15, text width=4cm, align=center, rounded corners, font=\small\bfseries, right=1.2cm of sources] (inbox) {
+        00 INBOX\\
+        \footnotesize (Strefa Tranzytowa SLA)
+      };
+
+      \node[draw=brandGreen, fill=brandGreen!15, text width=3.2cm, align=center, rounded corners, font=\scriptsize, above right=0.3cm and 1.2cm of inbox] (valid) {
+        \textbf{Wartość trwała}\\
+        Przeniesienie do właściwego folderu tematycznego (np. 07 Praca)
+      };
+
+      \node[draw=brandRed, fill=brandRed!15, text width=3.2cm, align=center, rounded corners, font=\scriptsize, below right=0.3cm and 1.2cm of inbox] (trash) {
+        \textbf{Śmieć / Ephemera AI}\\
+        Kosz lub kwarantanna w \texttt{\_DO\_USUNIECIA/}
+      };
+
+      \draw[-{Stealth[length=3mm]}, line width=1.5pt, color=brandBlue] (sources) -- (inbox);
+      \draw[-{Stealth[length=3mm]}, line width=1.5pt, color=brandGreen] (inbox.north east) -- (valid.west);
+      \draw[-{Stealth[length=3mm]}, line width=1.5pt, color=brandRed] (inbox.south east) -- (trash.west);
+    \end{tikzpicture}
+  \end{center}
+
+  \vspace{0.2cm}
+  \begin{center}
+    \tagCard{ZASADA GWARANCYJNA}{Narzędzia mogą zrzucać pliki do Inboxa bez ograniczeń -- Root pozostaje w 100\% czysty.}
+  \end{center}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 20: 4 Rytuały Higieny Cyfrowej
+% -----------------------------------------------------------------------------
+\begin{frame}{Cztery Rytuały Higieny Cyfrowej}{Porządek to proces, nie stan statyczny -- minimalny nakład czasu z gwarancją sukcesu}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{1. Codzienny: Zero-Root (1 min)}}
+        Nigdy nie kończ dnia z plikiem w katalogu głównym. Wszystko przeciągnij jednym ruchem do \texttt{00 Inbox}.
+      \end{block}
+
+      \vspace{0.2cm}
+      \begin{exampleblock}{\textbf{2. Cotygodniowy: Inbox Zero (10 min)}}
+        \textit{Piątek, godz. 16:30:}
+        \begin{itemize}\scriptsize
+          \item Przejrzyj \texttt{00 Inbox}.
+          \item Artefakty AI $\rightarrow$ kosz lub zmiana nazwy.
+          \item Faktury $\rightarrow$ Finanse, skany $\rightarrow$ Zdrowie.
+          \item Cel: \textbf{0 plików w Inboxie na weekend}.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{3. Miesięczny: Purge \& Audit (15 min)}}
+        \textit{1. dzień miesiąca:}
+        \begin{itemize}\scriptsize
+          \item Opróżnij folder kwarantanny \texttt{\_DO\_USUNIECIA/}.
+          \item Sprawdź uprawnienia do Sejfu Cyfrowego.
+          \item Przegląd plików \textit{Shared with me}.
+        \end{itemize}
+      \end{block}
+
+      \vspace{0.2cm}
+      \begin{block}{\textbf{4. Kwartalny: Vaulting (30 min)}}
+        Zamknięcie semestru szkolnego dzieci, archiwizacja rocznych PIT-ów, archiwizacja zakończonych projektów IT.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 21: Automatyczny Strażnik Roota (Google Apps Script)
+% -----------------------------------------------------------------------------
+\begin{frame}[fragile]{Automatyczny Strażnik Roota}{Darmowy skrypt Google Apps Script chroniący katalog główny w tle}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+\begin{lstlisting}[language=Java]
+function cleanRootDirectory() {
+  const root = DriveApp.getRootFolder();
+  const files = root.getFiles();
+  const inbox = DriveApp.getFoldersByName("00 Inbox").next();
+  const aiFolder = inbox.getFoldersByName("AI_Exports").next();
+  const mediaFolder = inbox.getFoldersByName("Zrzuty").next();
+  
+  const aiKeys = ["czy mozesz", "serio?", "super,", "wygeneruj"];
+
+  while (files.hasNext()) {
+    const file = files.next();
+    const name = file.getName().toLowerCase();
+    
+    // 1. Artefakty czatow AI
+    if (aiKeys.some(k => name.startsWith(k))) {
+      file.moveTo(aiFolder); continue;
+    }
+    // 2. Zrzuty zdjec iPhone
+    if (name.startsWith("img_23") && name.endsWith(".jpeg")) {
+      file.moveTo(mediaFolder); continue;
+    }
+  }
+}
+\end{lstlisting}
+    \end{column}
+
+    \begin{column}{0.42\textwidth}
+      \begin{block}{\textbf{Działanie Automatyzacji}}
+        \footnotesize
+        \begin{itemize}
+          \item Uruchamiany automatycznie w chmurze Google raz na dobę (o godz. 23:00).
+          \item Wykrywa pliki-prompty z Gemini i porzucone zdjęcia w Root.
+          \item Przenosi je bezinwazyjnie do odpowiednich podkatalogów \texttt{00 Inbox}.
+        \end{itemize}
+      \end{block}
+
+      \vspace{0.1cm}
+      \begin{exampleblock}{\textbf{Optymalizacja Notability na iPadzie}}
+        \scriptsize
+        Zmiana formatu Auto-Backup z \texttt{.note + .pdf} na \textbf{wyłącznie przeszukiwalny PDF z OCR} kierowany do \texttt{80 Notability\_Backup}.
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 22: Zaawansowane Formuły Wyszukiwania
+% -----------------------------------------------------------------------------
+\begin{frame}{Formuły i Operatory Wyszukiwania}{Błyskawiczny dostęp do dokumentów bez przeklikiwania drzewa folderów}
+  \begin{center}
+    \small
+    \begin{tabularx}{\textwidth}{p{3.8cm}X}
+      \toprule
+      \textbf{Cel wyszukiwania} & \textbf{Formuła w pasku wyszukiwania Google Drive} \\
+      \midrule
+      \textbf{Kontrola czystości Root} & \texttt{'root' in parents and trashed = false} \\
+      \addlinespace
+      \textbf{Pliki aktywne z tego tygodnia} & \texttt{viewed:7d} lub \texttt{viewed:today} \\
+      \addlinespace
+      \textbf{Poufne skany tożsamości} & \texttt{type:pdf ("dowód" or "paszport" or "pesel")} \\
+      \addlinespace
+      \textbf{Śmieci AI do usunięcia} & \texttt{title:("czy możesz" or "wygeneruj" or "bez tytułu")} \\
+      \addlinespace
+      \textbf{Cudze pliki współdzielone} & \texttt{to:me -owner:me} \\
+      \addlinespace
+      \textbf{Duże zamrożone pliki} & \texttt{size:>100M before:2024-01-01} \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+
+  \vspace{0.3cm}
+  \begin{center}
+    \tagCard{PRO-TIP}{Zapisz powyższe formuły jako zakładki w przeglądarce Chrome, aby wykonywać audyt jednym kliknięciem.}
+  \end{center}
+\end{frame}
+
+% =============================================================================
+% CZĘŚĆ VI: PLAN WDROŻENIA I PODSUMOWANIE
+% =============================================================================
+
+% -----------------------------------------------------------------------------
+% Slajd 23: 4-Fazowy Harmonogram Wdrożenia
+% -----------------------------------------------------------------------------
+\begin{frame}{Harmonogram Wdrożenia (Roadmapa)}{Czteroetapowy plan przejścia do nowej architektury bez zakłócania bieżącej pracy}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{\textbf{FAZA 1: Emergency \& Zero-Root (Dziś -- 15 min)}}
+        \footnotesize
+        \begin{itemize}
+          \item Skany dowodów tożsamości do \texttt{00 Sejf}.
+          \item Utworzenie \texttt{00 Inbox}.
+          \item Triage 49 plików Root $\rightarrow$ stan: \textbf{0 plików w Root}.
+        \end{itemize}
+      \end{alertblock}
+
+      \vspace{0.2cm}
+      \begin{block}{\textbf{FAZA 2: Tier 1 \& 2 Cleanup (Dni 1--7)}}
+        \footnotesize
+        \begin{itemize}
+          \item Przeniesienie 25 GB klonów foto i starych zipów do \texttt{\_DO\_USUNIECIA/}.
+          \item 14-dniowa kwarantanna i opróżnienie kosza.
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\textbf{FAZA 3: Nowa Taksonomia (Dni 8--14)}}
+        \footnotesize
+        \begin{itemize}
+          \item Wdrożenie numeracji \texttt{00--99}.
+          \item Rozbiórka megafolderu \texttt{25 Paweł - dokumenty}.
+          \item Konsolidacja nieruchomości (10 Mieszkanie, 11 Lewickie).
+        \end{itemize}
+      \end{block}
+
+      \vspace{0.2cm}
+      \begin{exampleblock}{\textbf{FAZA 4: Photos \& Automatyzacja (Dni 15--30)}}
+        \footnotesize
+        \begin{itemize}
+          \item Transfer 190 GB zdjęć do Google Photos.
+          \item Uruchomienie skryptu Google Apps Script.
+          \item Konfiguracja Notability na iPadzie.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 24: Karta Wyników Transformacji
+% -----------------------------------------------------------------------------
+\begin{frame}{Karta Wyników Transformacji}{Porównanie kluczowych wskaźników efektywności (KPI) przed i po wdrożeniu}
+  \begin{center}
+    \small
+    \begin{tabularx}{\textwidth}{p{3.5cm}p{4cm}X}
+      \toprule
+      \textbf{Wskaźnik (KPI)} & \textbf{Stan Początkowy (AS-IS)} & \textbf{Stan Docelowy (TO-BE)} \\
+      \midrule
+      \textbf{Wolumen na gDrive} & 267.0 GB (magazyn wszystkiego) & \textbf{15--20 GB (redukcja o 93\%!)} \\
+      \addlinespace
+      \textbf{Pliki luzem w Root} & 49 plików (szum, RODO, skany) & \textbf{0 plików (Zasada Zero-Root)} \\
+      \addlinespace
+      \textbf{Dane wrażliwe (RODO)} & Skany dowodów w katalogu głównym & \textbf{Izolowany Cyfrowy Sejf} \\
+      \addlinespace
+      \textbf{Archiwum Zdjęć} & 190 GB na gDrive (530 folderów) & \textbf{Google Photos (AI semantyczne)} \\
+      \addlinespace
+      \textbf{Zdublowany dług} & Megafolder 25 (7.6k plików) & \textbf{100\% wchłonięty i zlikwidowany} \\
+      \addlinespace
+      \textbf{Czas wyszukiwania} & Kilka minut (frustracja) & \textbf{$<5$ sekund (operatory i ład)} \\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Slajd 25: Slajd Końcowy / Sesja Q&A
+% -----------------------------------------------------------------------------
+\begin{frame}[plain]
+  \begin{center}
+    \vspace{1.5cm}
+    {\Huge \textbf{\color{brandNavy}Dziękuję za Uwagę!}}\\[1.5ex]
+    {\large \color{brandBlue}Twój Dysk Google jest gotowy do transformacji w nowoczesny Lean Hub Wiedzy.}\\[3ex]
+    
+    \begin{tikzpicture}
+      \node[draw=brandBorder, fill=brandLight, rounded corners, text width=9.5cm, align=center, font=\footnotesize] {
+        \textbf{Dostęp do Pełnej Dokumentacji i Skryptów:}\\[0.5ex]
+        \texttt{/Users/pawel/git/gen-ai-orchestrator/sandbox/2026-09-19-gdrive-analysis/}\\[1ex]
+        $\bullet$ \texttt{00-synteza-i-rekomendacje-glowne.md} $|$ $\bullet$ \texttt{06-optymalna-struktura...md}\\
+        $\bullet$ \texttt{scripts/flatten\_photos.py} $|$ $\bullet$ \texttt{scripts/scan\_drive.py}
+      };
+    \end{tikzpicture}
+
+    \vspace{1.2cm}
+    \footnotesize \color{brandMuted}
+    Antigravity Multi-Agent Orchestrator $\bullet$ Wrzesień 2026
+  \end{center}
+\end{frame}
+
+\end{document}
