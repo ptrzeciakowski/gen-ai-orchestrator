@@ -147,7 +147,7 @@ class AuditTest(unittest.TestCase):
         original = ga.DriveClient
         ga.DriveClient = FakeDrive
         try:
-            ga.main(["--db", self.db, "index-drive", "Zdjęcia"])
+            ga.main(["--db", self.db, "index-drive", "--use-api", "Zdjęcia"])
         finally:
             ga.DriveClient = original
         ga.main(["--db", self.db, "index-takeout", str(self.takeout)])

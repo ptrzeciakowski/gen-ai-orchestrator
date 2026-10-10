@@ -2,9 +2,14 @@
 
 Data: 2026-10-10 | Status: **pomysł do sprawdzenia** (nic jeszcze nie zrobione)
 
-## Cel
+## Stan realizacji (2026-10-10)
 
-Sprawdzić, które z ok. 30 000 lokalnych zdjęć (`~/Library/CloudStorage/GoogleDrive-.../Mój dysk/88📸Zdjęcia/`) **nie** są jeszcze w Google Photos.
+- [x] **Zaindeksowano bazę zdjęć z Dysku Google w SQLite!**
+  - **Przełom:** Zamiast autoryzacji Google Cloud API lub pobierania 123 GB plików, użyliśmy lokalnej bazy aplikacji Dysk Google (`~/Library/Application Support/Google/DriveFS/*/metadata_sqlite_db`).
+  - **Wynik:** **27 592 plików multimedialnych** (170,9 GB) zostało zaindeksowanych w **0,29 sekundy**.
+  - Każdy plik ma: pełną ścieżkę w `88📸Zdjęcia`, dokładny rozmiar w bajtach, czas modyfikacji oraz sumę kontrolną **MD5**.
+  - Baza docelowa: `sandbox/2026-10-10-google-photos-completeness-explore/index.sqlite` (tabela `drive`).
+- [x] Skrypt `scripts/gphotos_audit.py` czyta paczki ZIP Takeout strumieniowo, liczy MD5 w locie i porównuje z bazą `drive`.
 
 ## Ustalenia z sesji
 

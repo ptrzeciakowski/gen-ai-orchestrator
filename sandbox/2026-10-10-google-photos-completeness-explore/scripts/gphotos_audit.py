@@ -580,6 +580,15 @@ def parse_exif_time(s: Optional[str]) -> Optional[int]:
 
 def cmd_index_drive(args) -> None:
     con = open_db(args.db)
+
+    # 0) Sprawdź, czy dostępna jest lokalna baza DriveFS (0.3s, bez sieci i bez logowania)
+    if not getattr(args, "use_api", False):
+        db_path = getattr(args, "drivefs_db", None) or find_drivefs_db()
+        if db_path:
+            print(f"Znaleziono lokalną bazę DriveFS:\n  {db_path}\nIndeksuję bez połączenia z siecią...")
+            index_from_drivefs(con, args.folder, db_path)
+            return
+
     cfg = args.gcloud_config or (DEFAULT_GCLOUD_CONFIG if os.path.isdir(DEFAULT_GCLOUD_CONFIG) else None)
     client = DriveClient(cfg, args.quota_project)
 
@@ -730,8 +739,10 @@ def main(argv: Optional[list[str]] = None) -> None:
     s = sub.add_parser("index-local", help="zindeksuj lokalne zdjęcia (czyta zawartość plików)")
     s.add_argument("root")
     s.set_defaults(fn=cmd_index_local)
-    s = sub.add_parser("index-drive", help="zindeksuj metadane z Drive API (bez pobierania plików)")
-    s.add_argument("folder", help="ścieżka folderu względem 'Mój dysk', np. '88📸Zdjęcia'")
+    s = sub.add_parser("index-drive", help="zindeksuj metadane z lokalnej bazy DriveFS lub Drive API")
+    s.add_argument("folder", help="ścieżka/nazwa folderu, np. '88📸Zdjęcia'")
+    s.add_argument("--use-api", action="store_true", help="użyj zdalnego Drive API zamiast lokalnej bazy DriveFS")
+    s.add_argument("--drivefs-db", help="ścieżka do bazy metadata_sqlite_db Google Drive")
     s.add_argument("--gcloud-config", help=f"katalog CLOUDSDK_CONFIG z ADC (domyślnie {DEFAULT_GCLOUD_CONFIG} jeśli istnieje)")
     s.add_argument("--quota-project", help="projekt GCP z włączonym Drive API (nagłówek X-Goog-User-Project)")
     s.set_defaults(fn=cmd_index_drive)
