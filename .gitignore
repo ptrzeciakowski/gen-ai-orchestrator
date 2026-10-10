@@ -5,6 +5,43 @@
 # Session tracking
 .sessions
 
+# Environment variables & secrets
+.env
+.env.*
+*.env
+*credentials*.json
+*client_secret*.json
+service_account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Databases & local caches
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
 # Logs & temp files
 *.log
 .DS_Store
+Thumbs.db
+
+# IDE & editors
+.idea/
+.vscode/
+*.swp
+*.swo
