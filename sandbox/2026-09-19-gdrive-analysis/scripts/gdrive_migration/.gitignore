@@ -1,0 +1,9 @@
+credentials.json
+token.json
+plan.json
+inventory.json
+verification.json
+migration_log.json
+.venv/
+__pycache__/
+*.py[cod]

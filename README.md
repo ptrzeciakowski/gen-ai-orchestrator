@@ -43,3 +43,7 @@ gen-ai-orchestrator/
   - **Rule 13 (Akumulacyjne Wzbogacanie Artefaktów OpenSpec)**: Podczas trwania czatu i dyskusji przed archiwizacją, każde doprecyzowanie, poprawka czy obserwacja z pierwszych testów **MUSI być wplatana akumulacyjnie do artefaktów OpenSpec**, bez destrukcyjnego kasowania czy skracania dotychczasowych wartościowych sekcji.
 - **Zgodność z Open Spec**: Wszystkie zmiany są realizowane zgodnie ze standardem [Open Spec](https://openspec.dev/). Proces obejmuje korzystanie ze specyfikacji (`openspec/specs/`) oraz propozycji zmian w dedykowanych katalogach (`openspec/changes/`).
 - **Standard Estymacji & Rejestr Metryk (`changes-summary.md`)**: Każda zmiana kończy się generowaniem dwutabelowego podsumowania w `summary.md` (estymacje sub-agentów oraz metryki sesji: czas wall-clock, tokeny input/output, oszczędność czasowa). Zbiorczy rejestr w `openspec/changes/archive/changes-summary.md` gromadzi historyczne metryki wszystkich zarchiwizowanych zmian pod nazwami `YYYY-MM-DD-HHMM-<name>`.
+
+## Migracja struktury Google Drive
+
+Wersja robocza skryptu oraz znane ograniczenia: [instrukcja migracji](sandbox/2026-09-19-gdrive-analysis/scripts/gdrive_migration/README.md). Skrypt wymaga dopracowania przed użyciem produkcyjnym.
