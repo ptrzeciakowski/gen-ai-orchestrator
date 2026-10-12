@@ -47,3 +47,5 @@ gen-ai-orchestrator/
 ## Migracja struktury Google Drive
 
 Wersja robocza skryptu oraz znane ograniczenia: [instrukcja migracji](sandbox/2026-09-19-gdrive-analysis/scripts/gdrive_migration/README.md). Skrypt wymaga dopracowania przed użyciem produkcyjnym.
+
+Proponowany podział na migrację katalogów i późniejszą standaryzację nazw: [propozycja zmiany OpenSpec](openspec/changes/gdrive-structure-and-file-naming/proposal.md) oraz [konwencja nazw plików](sandbox/2026-09-19-gdrive-analysis/10-konwencja-nazewnictwa-plikow.md).
