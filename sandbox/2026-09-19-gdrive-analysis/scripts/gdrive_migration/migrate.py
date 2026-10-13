@@ -11,9 +11,10 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+import planner
 
 BASE = Path(__file__).resolve().parent
-SCOPES = ['https://www.googleapis.com/auth/drive']
+SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly']
 FOLDER = 'application/vnd.google-apps.folder'
 ROOT_RENAMES = {
  '01👨‍👩‍👧‍👦 Rodzina':'01-👨‍👩‍👧‍👦-Rodzina', '02🏫Szkoła':'02-🏫-Edukacja-Dzieci',
@@ -123,19 +124,20 @@ def scan(api):
   resp=call(api.files().list(q='trashed = false',spaces='drive',fields='nextPageToken,files(id,name,mimeType,parents,driveId)',pageSize=1000,pageToken=token))
   files.extend(resp.get('files',[])); token=resp.get('nextPageToken')
   if not token: break
- return files
+ root_id=call(api.files().get(fileId='root',fields='id'))['id']
+ return planner.my_drive(files,root_id)
 
 def save(name,obj):
  (BASE/name).write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
-def root_map(files):
+def root_map(files,root_id):
  roots={}
  for f in files:
-  if 'root' in f.get('parents',[]): roots.setdefault(norm(f['name']),[]).append(f)
+   if root_id in f.get('parents',[]): roots.setdefault(norm(f['name']),[]).append(f)
  return roots
 
-def make_plan(files):
- roots=root_map(files); operations=[]; blocked=[]
+def legacy_make_plan(files,root_id):
+ roots=root_map(files,root_id); operations=[]; blocked=[]
  existing_names=set(roots)
  for src,dst in ROOT_RENAMES.items():
   hits=roots.get(norm(src),[])
@@ -178,6 +180,7 @@ def ensure(api,path):
  return parent
 
 def apply(api,plan):
+ raise RuntimeError('Legacy executor disabled; schema v2 requires reviewed execution tooling')
  log=[]
  # Rename only if original is still in root and destination is not present.
  for op in plan['operations']:
@@ -213,16 +216,18 @@ def main():
  parser.add_argument('command',choices=['plan','apply','verify'])
  parser.add_argument('--approve',default='')
  args=parser.parse_args()
- if args.command=='apply' and args.approve!='APPLY':parser.error('apply requires --approve APPLY')
+ if args.command=='apply':parser.error('apply disabled: schema v2 needs reviewed execution, verification and recovery tooling')
  api=auth()
+ root_id=call(api.files().get(fileId='root',fields='id'))['id']
  if args.command=='plan':
-  files=scan(api);save('inventory.json',files);plan=make_plan(files);save('plan.json',plan)
+  files=scan(api);save('inventory.json',files);plan=planner.make_plan(files,root_id,ROOT_RENAMES);save('plan.json',plan)
+  (BASE/'dry_run_report.md').write_text(planner.summary(plan),encoding='utf-8')
   print('Plan operations:',len(plan['operations']),'blocked:',len(plan['blocked']))
  elif args.command=='apply':
   plan=json.loads((BASE/'plan.json').read_text(encoding='utf-8'))
   log=apply(api,plan);print('Finished:',len(log),'errors:',sum(x['status']=='error' for x in log))
  else:
-  files=scan(api); roots=root_map(files)
+  files=scan(api); roots=root_map(files,root_id)
   result={'root_files':[{'name':f['name'],'id':f['id']} for v in roots.values() for f in v if f['mimeType']!=FOLDER],
           'root_folders':sorted(roots),'count':len(files)}
   save('verification.json',result);print('Root loose files:',len(result['root_files']))

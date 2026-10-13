@@ -1,5 +1,29 @@
 # Migracja Google Drive — etap strukturalny
 
+## Aktualizacja 2026-10-13: bezpieczne planowanie v2
+
+**Poniższa sekcja zastępuje instrukcje wykonania ze starej wersji opisanej dalej.**
+
+- `plan` korzysta domyślnie z OAuth `drive.metadata.readonly`, pobiera rzeczywisty ID roota i ogranicza inwentaryzację do jego potwierdzonych potomków. Nie podąża za skrótami ani nie włącza Shared Drives.
+- Nowy moduł `planner.py` rozpoznaje konflikty, uwzględnia planowane zmiany nazw przed tworzeniem celów i nie tworzy z góry całego pustego drzewa.
+- Mapa obejmuje 52 pliki z dokumentu 07 (dokładne dopasowanie nazw, również bez pseudo-rozszerzeń dokumentów Google) oraz 28 folderów i 13 podfolderów folderu 25 z review 09. Warunkowe mapowania folderów są propozycjami do przeglądu, nie automatycznymi operacjami.
+- Niepewne pliki trafiają w planie do przeglądu zamiast do usunięcia. Dokumenty tożsamości i karta szkolna wymagają decyzji. Firmy, osoby i nieruchomości nie są zgadywane.
+- `plan.json` ma **schema_version 2**; nie jest zgodny ze starym wykonawcą. Zarówno CLI `apply`, jak i bezpośrednie wywołanie starego wykonawcy są zablokowane. `--approve APPLY` nie omija blokady.
+- `verify` pozostaje odczytem inwentaryzacyjnym, nie weryfikacją wykonania operacji.
+
+Uruchomienie i testy:
+
+```bash
+.venv/bin/python -m unittest -v test_planner
+.venv/bin/python migrate.py plan
+```
+
+Plan zapisuje `inventory.json`, `plan.json` oraz **`dry_run_report.md`** (czytelne podsumowanie operacji, konfliktów i propozycji mapowania). Raporty i OAuth są lokalne, ignorowane przez Git. Poprzednie wyniki zabezpieczono w `reports/2026-10-13-original/`.
+
+Zobacz [procedurę zatwierdzenia, weryfikacji i odtworzenia](SAFETY.md). Wersja v2 jest narzędziem do planowania, **nie gotowym narzędziem do wykonania całej migracji**. Nie wykonuje audytu uprawnień, szyfrowania, scalenia poddrzew, usuwania ani konfiguracji aplikacji. Do tych etapów potrzebne są decyzje użytkownika i osobno przetestowany wykonawca.
+
+## Historyczny opis wersji roboczej (przed aktualizacją)
+
 **Status: wersja robocza z przekazanego archiwum `gdrive_migration.zip`, niegotowa do migracji produkcyjnej.** Kod `migrate.py` i zależności zachowano bez zmian. Sprawdzono integralność archiwum i składnię Pythona; nie przeprowadzono testów na koncie Google Drive.
 
 Skrypt nie usuwa plików, nie opróżnia kosza, nie szyfruje danych i nie pobiera Takeout. Udostępnia polecenia `plan`, `apply` i `verify`; polecenie jest obowiązkowe. Zmiany wrażliwe i niejednoznaczne wymagają ręcznej decyzji.
