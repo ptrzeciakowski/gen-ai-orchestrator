@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Quizy Sukcesu dla Nadii</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 10.5pt;
+    line-height: 1.35;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+  .header-main {
+    text-align: center;
+    border-bottom: 2.5px solid #6366f1;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+  }
+  .header-main h1 {
+    margin: 0;
+    font-size: 16pt;
+    color: #4338ca;
+  }
+  .header-main p {
+    margin: 2px 0 0 0;
+    font-size: 9.5pt;
+    color: #64748b;
+  }
+  .quiz-card {
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    background: #ffffff;
+  }
+  .quiz-1 { border-color: #3b82f6; background: #f8fafc; }
+  .quiz-2 { border-color: #10b981; background: #f8fafc; }
+  .quiz-3 { border-color: #8b5cf6; background: #f8fafc; }
+  .quiz-4 { border-color: #f59e0b; background: #f8fafc; }
+
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px dashed #cbd5e1;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+  }
+  .quiz-title {
+    font-size: 12pt;
+    font-weight: bold;
+  }
+  .quiz-1 .quiz-title { color: #1d4ed8; }
+  .quiz-2 .quiz-title { color: #047857; }
+  .quiz-3 .quiz-title { color: #6d28d9; }
+  .quiz-4 .quiz-title { color: #b45309; }
+
+  .quiz-meta {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #475569;
+  }
+  .task {
+    margin-bottom: 8px;
+  }
+  .task-title {
+    font-size: 9.8pt;
+    font-weight: bold;
+    color: #334155;
+    margin-bottom: 3px;
+  }
+  .task-body {
+    font-size: 10pt;
+    padding-left: 10px;
+  }
+  .blank-line {
+    display: inline-block;
+    border-bottom: 1.5px solid #94a3b8;
+    min-width: 60px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 0 4px;
+  }
+  .box-input {
+    display: inline-block;
+    border: 1.5px solid #64748b;
+    border-radius: 4px;
+    width: 28px;
+    height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    background: #fff;
+  }
+  .circle-op {
+    display: inline-block;
+    border: 1.5px solid #64748b;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin: 0 6px;
+    background: #fff;
+  }
+  .rank-box {
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px dotted #cbd5e1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #475569;
+  }
+  .key-section {
+    background: #f8fafc;
+    border: 1.5px solid #94a3b8;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+  }
+  .key-title {
+    font-weight: bold;
+    color: #1e293b;
+    font-size: 10.5pt;
+    margin-bottom: 4px;
+  }
+  .tip-box {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 6px 10px;
+    font-size: 9pt;
+    color: #92400e;
+    margin-top: 4px;
+    border-radius: 0 4px 4px 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- STRONA 1: QUIZ 1 & QUIZ 2 -->
+<div class="header-main">
+  <h1>⭐ QUIZY SUKCESU DLA NADII (KLASA 7)</h1>
+  <p>5-minutowe wyzwania pewności siebie • 1 karta naraz • Po każdej karcie 3 minuty przerwy!</p>
+</div>
+
+<!-- QUIZ 1 -->
+<div class="quiz-card quiz-1">
+  <div class="quiz-header">
+    <div class="quiz-title">🎯 KARTA 1: KLUB PRZYJACIÓŁ 100 I 1000</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Rozgrzewka – 2 pkt)</div>
+    <div class="task-body">
+      Połącz strzałką mianownik na dole z jego przyjacielem rozszerzającym:
+      <div style="display: flex; justify-content: space-around; margin: 5px 0; font-weight: 600;">
+        <span>Mianownik <b>4</b></span> &bull;
+        <span>Mianownik <b>5</b></span> &bull;
+        <span>Mianownik <b>8</b></span>
+      </div>
+      <div style="display: flex; justify-content: space-around; color: #1d4ed8; font-weight: bold;">
+        <span>Przyjaciel &times; 125</span>
+        <span>Przyjaciel &times; 2</span>
+        <span>Przyjaciel &times; 25</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Zastosuj Supermoc – 2 pkt)</div>
+    <div class="task-body">
+      Rozszerz ułamek wpisując brakujące liczby i zapisz ułamek z przecinkiem:
+      <div style="margin: 4px 0;">
+        a) <sup>3</sup>/<sub>4</sub> = <sup>(3 &times; <span class="box-input"></span>)</sup>/<sub>(4 &times; 25)</sub> = <sup><span class="box-input" style="width:36px;"></span></sup>/<sub>100</sub> = <span class="blank-line" style="min-width: 70px;"></span>
+      </div>
+      <div style="margin: 4px 0;">
+        b) <sup>7</sup>/<sub>20</sub> = <sup>(7 &times; <span class="box-input"></span>)</sup>/<sub>(20 &times; <span class="box-input"></span>)</sub> = <sup><span class="box-input" style="width:36px;"></span></sup>/<sub>100</sub> = <span class="blank-line" style="min-width: 70px;"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Mistrz Szybkości – 2 pkt)</div>
+    <div class="task-body">
+      Zamień na ułamek dziesiętny w kilka sekund (zero dzielenia pod kreską!):
+      <div style="margin: 4px 0; display: flex; gap: 40px;">
+        <span>a) 4 <sup>2</sup>/<sub>5</sub> = <span class="blank-line" style="min-width: 80px;"></span></span>
+        <span>b) <sup>5</sup>/<sub>8</sub> = <span class="blank-line" style="min-width: 80px;"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Czarodziejka Ułamków!</b></span>
+    <span>[ ] 3–4 pkt: <b>Praktykantka Magii Liczb!</b></span>
+    <span>[ ] 1–2 pkt: <b>Świetny pierwszy krok!</b></span>
+  </div>
+</div>
+
+<!-- QUIZ 2 -->
+<div class="quiz-card quiz-2">
+  <div class="quiz-header">
+    <div class="quiz-title">🏠 KARTA 2: KIESZONKI POZYCYJNE I ZŁOTÓWKI</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Strażnik Zer – 2 pkt)</div>
+    <div class="task-body">
+      Wstaw strażnika (0) w puste kieszenie i zapisz ułamek dziesiętny:
+      <div style="margin: 4px 0;">
+        a) 2 + <sup>3</sup>/<sub>100</sub> = <span class="blank-line" style="min-width: 100px;"></span> <i>(Uwaga: czy na dziesiątych coś jest?)</i>
+      </div>
+      <div style="margin: 4px 0;">
+        b) 3 + <sup>7</sup>/<sub>1000</sub> = <span class="blank-line" style="min-width: 100px;"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Portfel Nadii – 2 pkt)</div>
+    <div class="task-body">
+      Zapisz kwoty w złotówkach (pamiętaj: grosze to zawsze 2 cyfry po przecinku!):
+      <div style="margin: 4px 0; display: flex; gap: 40px;">
+        <span>a) 75 gr = <span class="blank-line" style="min-width: 70px;"></span> zł</span>
+        <span>b) 9 zł 8 gr = <span class="blank-line" style="min-width: 70px;"></span> zł</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Władczyni Czasu – 2 pkt)</div>
+    <div class="task-body">
+      Zapisz czas w godzinach (wskazówka: 15 min to kwadrans = 1/4 h = 0,25 h):
+      <div style="margin: 4px 0; display: flex; gap: 40px;">
+        <span>a) 2 godz 15 min = <span class="blank-line" style="min-width: 70px;"></span> h</span>
+        <span>b) 90 min = <span class="blank-line" style="min-width: 70px;"></span> h</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Królowa Groszy i Minut!</b></span>
+    <span>[ ] 3–4 pkt: <b>Bystry Portfel!</b></span>
+    <span>[ ] 1–2 pkt: <b>Trening czyni mistrza!</b></span>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- STRONA 2: QUIZ 3 & QUIZ 4 -->
+<div class="header-main">
+  <h1>⭐ QUIZY SUKCESU DLA NADII (CZĘŚĆ 2)</h1>
+  <p>Skupienie na 5 minut • Tylko 3 zadania na karcie • Wybierz najsprytniejszą ścieżkę!</p>
+</div>
+
+<!-- QUIZ 3 -->
+<div class="quiz-card quiz-3">
+  <div class="quiz-header">
+    <div class="quiz-title">🧱 KARTA 3: ZASADA MURU I POLICJANTA (ZAOKRĄGLANIE)</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Zaokrąglenie do części dziesiątych – 2 pkt)</div>
+    <div class="task-body">
+      Postawiono mur po 1. cyfrze po przecinku. Spójrz na policjanta i zaokrąglij:
+      <div style="margin: 4px 0;">
+        a) 3,1 | 46 &approx; <span class="blank-line" style="min-width: 70px;"></span> <i>(policjant 4 &rarr; śpi czy alarm?)</i>
+      </div>
+      <div style="margin: 4px 0;">
+        b) 56,0 | 7 &approx; <span class="blank-line" style="min-width: 70px;"></span> <i>(policjant 7 &rarr; dodaj +1!)</i>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Zaokrąglenie do części setnych – 2 pkt)</div>
+    <div class="task-body">
+      Postaw mur po 2 cyfrach po przecinku i podaj wynik:
+      <div style="margin: 4px 0; display: flex; gap: 40px;">
+        <span>a) 0,321 &approx; <span class="blank-line" style="min-width: 70px;"></span></span>
+        <span>b) 12,798 &approx; <span class="blank-line" style="min-width: 70px;"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Zagadka Mistrzyni – 2 pkt)</div>
+    <div class="task-body">
+      Zaokrąglij do części setnych (2 miejsca po przecinku):
+      <div style="margin: 4px 0;">
+        a) Liczba z okresem: 2,(5) = 2,555... &approx; <span class="blank-line" style="min-width: 70px;"></span>
+      </div>
+      <div style="margin: 4px 0;">
+        b) <b>Efekt Domina:</b> 9,997 &approx; <span class="blank-line" style="min-width: 70px;"></span> <i>(Pamiętaj: dopisz zera na końcu!)</i>
+      </div>
+    </div>
+  </div>
+
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Mistrzyni Precyzji!</b></span>
+    <span>[ ] 3–4 pkt: <b>Celne Zaokrąglenie!</b></span>
+    <span>[ ] 1–2 pkt: <b>Dobra próba!</b></span>
+  </div>
+</div>
+
+<!-- QUIZ 4 -->
+<div class="quiz-card quiz-4">
+  <div class="quiz-header">
+    <div class="quiz-title">🍕 KARTA 4: POJEDYNEK LICZB (KTO JEST WIĘKSZY?)</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Zasada Pizzy – ten sam licznik – 2 pkt)</div>
+    <div class="task-body">
+      Wpisz w kółko znak <b>&gt;</b> (większy) lub <b>&lt;</b> (mniejszy):
+      <div style="margin: 6px 0; display: flex; gap: 60px;">
+        <span>a) <sup>1</sup>/<sub>7</sub> <span class="circle-op"></span> <sup>1</sup>/<sub>8</sub></span>
+        <span>b) <sup>2</sup>/<sub>3</sub> <span class="circle-op"></span> <sup>2</sup>/<sub>5</sub></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Zasada Wyrównania Zerami – 2 pkt)</div>
+    <div class="task-body">
+      Wyrównaj liczbę cyfr po przecinku (np. 0,60) i wpisz znak <b>&gt;</b> lub <b>&lt;</b>:
+      <div style="margin: 6px 0; display: flex; gap: 60px;">
+        <span>a) 0,6 <span class="circle-op"></span> 0,57</span>
+        <span>b) 6,801 <span class="circle-op"></span> 6,9</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Wielki Finał – 2 pkt)</div>
+    <div class="task-body">
+      Wpisz znak <b>&gt;</b> lub <b>&lt;</b> (zamień w pamięci na ułamek dziesiętny lub grosze):
+      <div style="margin: 6px 0; display: flex; gap: 60px;">
+        <span>a) <sup>3</sup>/<sub>5</sub> <span class="circle-op"></span> 0,7</span>
+        <span>b) 0,28 <span class="circle-op"></span> <sup>1</sup>/<sub>4</sub></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Niepokonana w Pojedynkach!</b></span>
+    <span>[ ] 3–4 pkt: <b>Ostre Oko!</b></span>
+    <span>[ ] 1–2 pkt: <b>Krok do przodu!</b></span>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- STRONA 3: PRZEWODNIK DLA RODZICA / TRENERA -->
+<div class="header-main">
+  <h1>🗝️ KLUCZ ODPOWIEDZI I WSKAZÓWKI COACHINGOWE</h1>
+  <p>Ściągawka dla Pawła: jak weryfikować odpowiedzi i jak budować poczucie sukcesu u Nadii</p>
+</div>
+
+<div class="key-section">
+  <div class="key-title">Karta 1: Klub Przyjaciół 100 i 1000</div>
+  <b>1.</b> Pary: 4 &harr; 25, 5 &harr; 2, 8 &harr; 125.<br>
+  <b>2.</b> a) (3&times;25)/(4&times;25) = 75/100 = <b>0,75</b>. b) (7&times;5)/(20&times;5) = 35/100 = <b>0,35</b>.<br>
+  <b>3.</b> a) <b>4,4</b> (bo 2/5 = 4/10 = 0,4). b) <b>0,625</b> (bo 5&times;125 = 625).
+  <div class="tip-box">
+    <b>💡 Jak chwalić:</b> Zwróć uwagę na czas i brak zmęczenia: <i>"Widzisz? Zrobiłaś 6 ułamków w 3 minuty i nie zapisałaś ani jednego słupka pod kreską. To jest właśnie spryt matematyczny!"</i>
+  </div>
+</div>
+
+<div class="key-section">
+  <div class="key-title">Karta 2: Kieszonki Pozycyjne i Złotówki</div>
+  <b>1.</b> a) <b>2,03</b> (strażnik 0 na częściach dziesiątych!). b) <b>3,007</b> (dwa zera: dziesiąte i setne).<br>
+  <b>2.</b> a) <b>0,75 zł</b>. b) <b>9,08 zł</b> (uwaga na pułapkę: 8 groszy to 08, a nie 80!).<br>
+  <b>3.</b> a) <b>2,25 h</b> (kwadrans to 25 setnych godziny). b) <b>1,5 h</b>.
+  <div class="tip-box">
+    <b>💡 Jeśli pojawi się błąd przy 9 zł 8 gr (np. 9,8):</b> Nie mów "źle". Zapytaj ze śmiechem: <i>"Czy 8 groszy reszty w sklepie to tyle samo co 80 groszy?"</i>. Zobaczysz, jak w ułamku sekundy sama dopisze zero!
+  </div>
+</div>
+
+<div class="key-section">
+  <div class="key-title">Karta 3: Mur i Policjant (Zaokrąglanie)</div>
+  <b>1.</b> a) <b>3,1</b> (policjant 4 &rarr; w dół). b) <b>56,1</b> (policjant 7 &rarr; podbija 0 do 1).<br>
+  <b>2.</b> a) <b>0,32</b>. b) <b>12,80</b> (policjant 8 podbija 79 do 80).<br>
+  <b>3.</b> a) <b>2,56</b> (2,55|5... &rarr; policjant 5 podbija do 56). b) <b>10,00</b> (efekt domina: 9,99 + 0,01 = 10,00).
+  <div class="tip-box">
+    <b>💡 Rytuał sukcesu przy Efekcie Domina (10,00):</b> To zadanie z gwiazdką! Gdy Nadia poda 10,00 z dwoma zerami, przybijcie "żółwika" albo piątkę – to poziom egzaminu ósmoklasisty.
+  </div>
+</div>
+
+<div class="key-section">
+  <div class="key-title">Karta 4: Pojedynek Liczb</div>
+  <b>1.</b> a) <b>1/7 &gt; 1/8</b> (mniej kawałków = większy kawałek). b) <b>2/3 &gt; 2/5</b>.<br>
+  <b>2.</b> a) <b>0,6 &gt; 0,57</b> (bo 0,60 &gt; 0,57). b) <b>6,801 &lt; 6,9</b> (bo 6,801 &lt; 6,900).<br>
+  <b>3.</b> a) <b>3/5 &lt; 0,7</b> (bo 3/5 = 0,6 &lt; 0,7). b) <b>0,28 &gt; 1/4</b> (bo 1/4 = 0,25).
+  <div class="tip-box">
+    <b>💡 Kluczowa zasada neurodydaktyki:</b> Nigdy nie róbcie wszystkich 4 kart w jeden dzień! Jedna karta na jeden dzień (5 minut) przed kolacją lub po powrocie ze szkoły buduje nawyk bez przeciążenia.
+  </div>
+</div>
+
+</body>
+</html>

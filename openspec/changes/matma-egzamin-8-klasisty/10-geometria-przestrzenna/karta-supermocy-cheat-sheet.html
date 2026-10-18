@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karta Supermocy: Geometria Przestrzenna</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm 10mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1e293b; margin: 0; padding: 0; font-size: 9.8pt; line-height: 1.3; }
+  .header { text-align: center; border-bottom: 3px solid #0284c7; padding-bottom: 4px; margin-bottom: 7px; }
+  .header h1 { margin: 0; font-size: 16pt; color: #0369a1; text-transform: uppercase; }
+  .header .sub { font-size: 9.5pt; font-weight: 600; color: #475569; }
+  .card { border-radius: 8px; padding: 6px 10px; border: 1.5px solid #cbd5e1; background: #fff; margin-bottom: 6px; }
+  .card-blue { border-color: #0284c7; background: #f0f9ff; }
+  .card-teal { border-color: #0d9488; background: #f0fdfa; }
+  .card-amber { border-color: #f59e0b; background: #fffbeb; }
+  .card-rose { border-color: #f43f5e; background: #fff1f2; }
+  .card-title { font-size: 10.6pt; font-weight: bold; margin-bottom: 4px; }
+  .card-blue .card-title { color: #0369a1; }
+  .card-teal .card-title { color: #0f766e; }
+  .card-amber .card-title { color: #b45309; }
+  .card-rose .card-title { color: #be123c; }
+  table.p-table { width: 100%; border-collapse: collapse; font-size: 8.8pt; background: #fff; }
+  table.p-table th, table.p-table td { padding: 3px 6px; border: 1px solid #bae6fd; text-align: center; }
+  table.p-table th { background: #e0f2fe; color: #0c4a6e; font-weight: bold; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .box-white { background: #fff; border: 1px solid #cbd5e1; border-radius: 5px; padding: 5px 8px; margin-top: 3px; font-size: 9pt; }
+  .footer-tip { text-align: center; font-size: 8.6pt; color: #64748b; border-top: 1px dashed #cbd5e1; padding-top: 4px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📦 KARTA SUPERMOCY: GEOMETRIA PRZESTRZENNA (KLASA 7 &amp; 8)</h1>
+  <div class="sub">Graniastosłupy, Ostrosłupy, Trójki Pitagorejskie w Bryłach i Kotwica Litrów</div>
+</div>
+
+<div class="card card-blue">
+  <div class="card-title">🔢 1. ZŁOTA TABELA KRAWĘDZI, WIERZCHOŁKÓW I ŚCIAN (dla n-kąta w podstawie)</div>
+  <table class="p-table">
+    <thead>
+      <tr><th>Bryła (n-kąt w podstawie)</th><th>Wierzchołki (W)</th><th>Krawędzie (K)</th><th>Wszystkie Ściany (S)</th><th>Przykład: Czworokątny (n=4)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><b>Graniastosłup</b> (dwie podstawy)</td><td><b>2n</b></td><td><b>3n</b></td><td><b>n + 2</b></td><td>W = 8, &nbsp;K = 12, &nbsp;S = 6</td></tr>
+      <tr><td><b>Ostrosłup</b> (jedna podstawa + czubek)</td><td><b>n + 1</b></td><td><b>2n</b></td><td><b>n + 1</b></td><td>W = 5, &nbsp;K = 8, &nbsp;S = 5</td></tr>
+    </tbody>
+  </table>
+  <div class="box-white">
+    💡 <b>Błyskawiczny dekoder CKE:</b> Graniastosłup ma <b>18 krawędzi</b> &rarr; 3n = 18 &rarr; <b>n = 6</b> (sześciokątny!). Ostrosłup ma <b>10 krawędzi</b> &rarr; 2n = 10 &rarr; <b>n = 5</b> (pięciokątny!).<br>
+    💡 <b>Sześcian o krawędzi a:</b> Suma wszystkich 12 krawędzi = <b>12a</b> &nbsp;|&nbsp; Pole całkowite P<sub>c</sub> = <b>6a²</b> &nbsp;|&nbsp; Objętość V = <b>a³</b>.
+  </div>
+</div>
+
+<div class="grid-2">
+  <div class="card card-teal">
+    <div class="card-title">🥤 2. OBJĘTOŚĆ I POLE ("ZASADA 3 KUBKÓW")</div>
+    <div class="box-white">
+      <b>Graniastosłup prosty:</b><br>
+      &bull; Objętość: <b>V = P<sub>p</sub> &middot; H</b><br>
+      &bull; Pole całkowite: <b>P<sub>c</sub> = 2 &middot; P<sub>p</sub> + P<sub>b</sub></b>
+    </div>
+    <div class="box-white" style="margin-top:4px;">
+      <b>Ostrosłup (3 razy mniejsza objętość!):</b><br>
+      &bull; Objętość: <b>V = &frac13; &middot; P<sub>p</sub> &middot; H</b><br>
+      &bull; Pole całkowite: <b>P<sub>c</sub> = P<sub>p</sub> + P<sub>b</sub></b><br>
+      <i>(Trzy ostrosłupy wody wypełniają dokładnie jeden graniastosłup o tej samej podstawie i wysokości!)</i>
+    </div>
+  </div>
+
+  <div class="card card-rose">
+    <div class="card-title">💧 3. KOTWICA LITRÓW I POJEMNOŚCI (CKE!)</div>
+    <div class="box-white">
+      &bull; <b>1 litr (l) = 1 dm³ = 1000 cm³</b><br>
+      &bull; <b>1 mililitr (ml) = 1 cm³</b> &nbsp;|&nbsp; <b>1 m³ = 1000 l</b>
+    </div>
+    <div class="box-white" style="margin-top:4px; border-color:#fecdd3; background:#fff1f2;">
+      🚨 <b>Sprytny Trik Akwarium:</b><br>
+      Masz wymiary w <b>cm</b> (np. 50 cm &times; 20 cm &times; 30 cm) i pytają o <b>litry</b>?<br>
+      <b>Zamień cm na dm PRZED mnożeniem!</b><br>
+      5 dm &times; 2 dm &times; 3 dm = <b>30 dm³ = 30 litrów!</b> (Zero stresu z tysiącami zer!).
+    </div>
+  </div>
+</div>
+
+<div class="card card-amber">
+  <div class="card-title">📐 4. PITAGORAS WEWNĄTRZ BRYŁY ("WYJMIJ PŁASKI TRÓJKĄT PROSTOKĄTNY!")</div>
+  <div class="grid-2">
+    <div class="box-white">
+      <b>Wzorzec CKE #1 (Ostrosłup – str. 193 podstawy):</b><br>
+      Krawędź podstawy ma 10 cm (połowa = <b>5 cm</b>), a krawędź boczna ma <b>13 cm</b>.<br>
+      👉 Wyjmujesz trójkąt prostokątny ze ściany: przyprostokątna <b>5</b>, przeciwprostokątna <b>13</b> &rarr; z trójki <b>(5, 12, 13)</b> wysokość ściany ma <b>12 cm</b>!
+    </div>
+    <div class="box-white">
+      <b>Wzorzec CKE #2 (Graniastosłup – str. 192 podstawy):</b><br>
+      W podstawie trójkąt równoramienny o kątach 45&deg; i najdłuższym boku <b>6&radic;2 dm</b>.<br>
+      👉 To połówka kwadratu! Przyprostokątne mają po <b>6 dm</b>, więc pole podstawy P<sub>p</sub> = (6 &middot; 6) / 2 = <b>18 dm²</b>!
+    </div>
+  </div>
+</div>
+
+<div class="footer-tip">
+  🏆 Złota zasada czwartkowych zadań otwartych (3–4 pkt): Zawsze oblicz najpierw osobno P<sub>p</sub> (to już 1 pewny punkt w kluczu CKE!), potem H, a na końcu V!
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karta Supermocy: Statystyka i Prawdopodobieństwo</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm 10mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1e293b; margin: 0; padding: 0; font-size: 9.8pt; line-height: 1.3; }
+  .header { text-align: center; border-bottom: 3px solid #7c3aed; padding-bottom: 4px; margin-bottom: 7px; }
+  .header h1 { margin: 0; font-size: 15.8pt; color: #5b21b6; text-transform: uppercase; }
+  .header .sub { font-size: 9.5pt; font-weight: 600; color: #475569; }
+  .card { border-radius: 8px; padding: 6px 10px; border: 1.5px solid #cbd5e1; background: #fff; margin-bottom: 6px; }
+  .card-purple { border-color: #7c3aed; background: #f5f3ff; }
+  .card-teal { border-color: #0d9488; background: #f0fdfa; }
+  .card-amber { border-color: #f59e0b; background: #fffbeb; }
+  .card-rose { border-color: #f43f5e; background: #fff1f2; }
+  .card-title { font-size: 10.6pt; font-weight: bold; margin-bottom: 4px; }
+  .card-purple .card-title { color: #5b21b6; }
+  .card-teal .card-title { color: #0f766e; }
+  .card-amber .card-title { color: #b45309; }
+  .card-rose .card-title { color: #be123c; }
+  table.p-table { width: 100%; border-collapse: collapse; font-size: 8.8pt; background: #fff; }
+  table.p-table th, table.p-table td { padding: 3px 6px; border: 1px solid #ddd6fe; text-align: center; }
+  table.p-table th { background: #ede9fe; color: #4c1d95; font-weight: bold; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .box-white { background: #fff; border: 1px solid #cbd5e1; border-radius: 5px; padding: 5px 8px; margin-top: 3px; font-size: 9pt; }
+  .footer-tip { text-align: center; font-size: 8.6pt; color: #64748b; border-top: 1px dashed #cbd5e1; padding-top: 4px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🎲 KARTA SUPERMOCY: STATYSTYKA I PRAWDOPODOBIEŃSTWO (KL. 7 &amp; 8)</h1>
+  <div class="sub">Złoty Trik Sumy przy Średniej, Diagramy, Kostka, Moneta i Kule w Worku</div>
+</div>
+
+<div class="card card-purple">
+  <div class="card-title">📊 1. ZŁOTY TRIK ŚREDNIEJ ARYTMETYCZNEJ ("TAJEMNICA SUMY")</div>
+  <div class="grid-2">
+    <div class="box-white">
+      <b>Wzór podstawowy:</b><br>
+      Średnia = (Suma wszystkich elementów) : (Liczba elementów n)<br><br>
+      ⚡ <b>SUPERMOC ODWRÓCENIA (Gdy znasz średnią!):</b><br>
+      <b style="color:#5b21b6; font-size:9.8pt;">SUMA = ŚREDNIA &times; LICZBA ELEMENTÓW (n)</b>
+    </div>
+    <div class="box-white">
+      🎯 <b>Zadanie-Pewniak CKE:</b><br>
+      Średnia 4 liczb wynosi <b>10</b>. Dopisano piątą liczbę i średnia wzrosła do <b>12</b>. Jaką liczbę dopisano?<br>
+      &bull; Stara suma (4 liczb): 4 &times; 10 = <b>40</b><br>
+      &bull; Nowa suma (5 liczb): 5 &times; 12 = <b>60</b><br>
+      &bull; Dopisana liczba: 60 &minus; 40 = <b>20</b>! <i>(Czas: 10 sekund!)</i>
+    </div>
+  </div>
+</div>
+
+<div class="card card-teal">
+  <div class="card-title">🎲 2. RACHUNEK PRAWDOPODOBIEŃSTWA: P(A) = SPRZYJAJĄCE / WSZYSTKIE</div>
+  <table class="p-table">
+    <thead>
+      <tr><th>Doświadczenie</th><th>Wszystkie wyniki</th><th>Najczęstsze pytania CKE (Gotowce!)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><b>2 rzuty monetą</b></td><td><b>4</b>: (OO, OR, RO, RR)</td><td>Dwa orły (OO): <b>1/4</b> &nbsp;|&nbsp; Dokładnie 1 orzeł (OR, RO): <b>2/4 = 1/2</b> &nbsp;|&nbsp; Co najmniej 1 orzeł: <b>3/4</b></td></tr>
+      <tr><td><b>1 rzut kostką (1..6)</b></td><td><b>6</b>: (1, 2, 3, 4, 5, 6)</td><td>Parzyste (2,4,6): <b>3/6 = 1/2</b> &nbsp;|&nbsp; Podzielne przez 3 (3,6): <b>2/6 = 1/3</b> &nbsp;|&nbsp; Liczba pierwsza (<b>2,3,5</b>): <b>3/6 = 1/2</b></td></tr>
+      <tr><td><b>2 rzuty kostką</b></td><td><b>36</b> (bo 6 &times; 6)</td><td>Taka sama liczba oczek (1-1, 2-2, 3-3, 4-4, 5-5, 6-6): <b>6/36 = 1/6</b></td></tr>
+      <tr><td><b>Losowanie kuli</b></td><td><b>Suma wszystkich kul!</b></td><td>W worku jest 5 białych i 10 czarnych &rarr; wszystkich jest <b>15</b> (nie 10!). Szansa na białą: <b>5/15 = 1/3</b></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="grid-2">
+  <div class="card card-amber">
+    <div class="card-title">🥧 3. DIAGRAMY KOŁOWE I SŁUPKOWE</div>
+    <div class="box-white">
+      <b>Całe koło = 100% = 360&deg;</b><br>
+      &bull; Połowa koła = <b>50% = 180&deg;</b><br>
+      &bull; Ćwiartka koła (kąt prosty) = <b>25% = 90&deg;</b><br>
+      &bull; Jedna piąta koła = <b>20% = 72&deg;</b><br>
+      &bull; Jedna dziesiąta koła = <b>10% = 36&deg;</b>
+    </div>
+  </div>
+
+  <div class="card card-rose">
+    <div class="card-title">🚨 4. TRZY ANTYPUŁAPKI EGZAMINACYJNE CKE</div>
+    <div class="box-white" style="border-color:#fecdd3; background:#fff1f2;">
+      1. <b>Jedynka (1) NIE jest liczbą pierwszą!</b> Na kostce liczby pierwsze to tylko: <b>2, 3 oraz 5</b>.<br>
+      2. <b>Worek z kulami:</b> W mianowniku zawsze wpisz <b>sumę wszystkich kul</b>, a nie liczbę kul drugiego koloru!<br>
+      3. <b>Zero w średniej:</b> Jeśli uczeń dostał oceny 5, 4, 0, to dzielimy przez <b>3</b> oceny (zero też jest elementem!).
+    </div>
+  </div>
+</div>
+
+<div class="footer-tip">
+  🏆 Prawdopodobieństwo to zawsze ułamek od 0 (zdarzenie niemożliwe) do 1 (zdarzenie pewne). Nigdy nie może wyjść więcej niż 1!
+</div>
+</body>
+</html>

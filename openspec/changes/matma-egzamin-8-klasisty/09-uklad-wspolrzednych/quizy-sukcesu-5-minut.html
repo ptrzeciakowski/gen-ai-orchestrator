@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Quizy Sukcesu: Układ Współrzędnych</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm 12mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1e293b; margin: 0; padding: 0; font-size: 10pt; line-height: 1.35; }
+  .header { text-align: center; border-bottom: 2px solid #8b5cf6; padding-bottom: 4px; margin-bottom: 12px; }
+  .header h1 { margin: 0; font-size: 15pt; color: #5b21b6; }
+  .header p { margin: 2px 0 0; font-size: 9pt; color: #7c3aed; }
+  .quiz-card { background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; }
+  .quiz-title { font-size: 11pt; font-weight: bold; color: #4c1d95; display: flex; justify-content: space-between; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 8px; }
+  .task { margin-bottom: 8px; font-size: 10pt; }
+  .task-num { font-weight: bold; color: #8b5cf6; margin-right: 4px; }
+  .answer-space { border-bottom: 1px dashed #94a3b8; height: 26px; margin-top: 3px; display: flex; align-items: flex-end; color: #64748b; font-size: 8.5pt; font-style: italic; }
+  .page-break { page-break-before: always; }
+  .coach-card { background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
+  .coach-title { font-size: 11pt; font-weight: bold; color: #166534; margin-bottom: 6px; }
+  table.answers { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 9pt; }
+  table.answers th, table.answers td { border: 1px solid #cbd5e1; padding: 5px 8px; text-align: left; }
+  table.answers th { background: #e2e8f0; color: #1e293b; }
+</style>
+</head>
+<body>
+
+<!-- STRONA 1: KARTA 1 & KARTA 2 -->
+<div class="header">
+  <h1>🎯 QUIZY SUKCESU: UKŁAD WSPÓŁRZĘDNYCH</h1>
+  <p>Trening Mikrokroków Nadii – 5 minut na kartę | Zegar start!</p>
+</div>
+
+<div class="quiz-card">
+  <div class="quiz-title">
+    <span>KARTA 1: Odczytywanie i Położenie Punktów</span>
+    <span style="font-size: 9pt; font-weight: normal; color: #64748b;">Czas: 5 min | Punkty: __/3</span>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 1.</span> W której ćwiartce układu leży punkt P(−4, 7)?
+    <div class="answer-space">Ćwiartka: _____________________________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 2.</span> Podaj współrzędne punktu leżącego na osi OY, 5 jednostek poniżej osi OX.
+    <div class="answer-space">Punkt = (____ , ____)</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 3.</span> Punkt A(3, −2) przesunięto o 4 w lewo i 5 w górę. Podaj nowe współrzędne.
+    <div class="answer-space">A' = (____ , ____)</div>
+  </div>
+</div>
+
+<div class="quiz-card">
+  <div class="quiz-title">
+    <span>KARTA 2: Środek Odcinka (Średnia)</span>
+    <span style="font-size: 9pt; font-weight: normal; color: #64748b;">Czas: 5 min | Punkty: __/3</span>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 1.</span> Oblicz współrzędne środka odcinka o końcach A(−5, 3) i B(7, 9).
+    <div class="answer-space">S = (____ , ____)</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 2.</span> Punkt S(2, 4) jest środkiem odcinka AB. Wiadomo, że A(−2, 1). Wyznacz punkt B.
+    <div class="answer-space">B = (____ , ____)</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 3.</span> Czy środek odcinka łączącego (4, −2) i (−4, 2) to początek układu (0,0)?
+    <div class="answer-space">TAK / NIE, bo: _________________________</div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- STRONA 2: KARTA 3 & KARTA 4 -->
+<div class="header">
+  <h1>🎯 QUIZY SUKCESU: UKŁAD WSPÓŁRZĘDNYCH</h1>
+  <p>Trening Mikrokroków Nadii – Część II</p>
+</div>
+
+<div class="quiz-card">
+  <div class="quiz-title">
+    <span>KARTA 3: Odległości i Pitagoras na Kratkach</span>
+    <span style="font-size: 9pt; font-weight: normal; color: #64748b;">Czas: 5 min | Punkty: __/3</span>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 1.</span> Oblicz odległość między punktami A(2, 3) i B(2, 9).
+    <div class="answer-space">|AB| = _______________________________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 2.</span> Oblicz odległość między C(1, 2) i D(4, 6) (policz kroki w poziomie i pionie).
+    <div class="answer-space">|CD| = _______________________________</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 3.</span> Oblicz długość przeciwprostokątnej trójkąta o wierzchołkach (0,0), (6,0) i (0,8).
+    <div class="answer-space">Długość = ____________________________</div>
+  </div>
+</div>
+
+<div class="quiz-card">
+  <div class="quiz-title">
+    <span>KARTA 4: Symetrie i Pola Figur</span>
+    <span style="font-size: 9pt; font-weight: normal; color: #64748b;">Czas: 5 min | Punkty: __/3</span>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 1.</span> Punkt symetryczny do K(−3, 5) względem osi OX ma współrzędne:
+    <div class="answer-space">K' = (____ , ____)</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 2.</span> Punkt symetryczny do M(4, −6) względem początku (0,0) ma współrzędne:
+    <div class="answer-space">M' = (____ , ____)</div>
+  </div>
+  <div class="task">
+    <span class="task-num">Zadanie 3.</span> Oblicz pole trójkąta o wierzchołkach A(1, 1), B(7, 1) i C(4, 6).
+    <div class="answer-space">Podstawa = ___ | Wysokość = ___ | P = ___</div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- STRONA 3: PRZEWODNIK RODZICA I ODPOWIEDZI -->
+<div class="coach-card">
+  <div class="coach-title">🧠 PRZEWODNIK MENTORA (Dla Rodzica / Nauczyciela)</div>
+  <p style="margin: 3px 0 6px;"><b>Wskazówki motywacyjne:</b></p>
+  <ul>
+    <li><b>Metafora windy:</b> Jeśli mylą się osie x i y, powiedz: <i>"Najpierw idziesz po korytarzu (x), dopiero potem wsiadasz do windy i jedziesz w górę/w dół (y)!"</i></li>
+    <li><b>Środek to średnia:</b> Zamiast wzoru: <i>"Dodaj iksy i podziel przez 2, dodaj igreki i podziel przez 2 – jak średnia ocen!"</i></li>
+    <li><b>Odbicie w lustrze:</b> Odbicie w osi OX zmienia znak tylko igreka (bo punkt przeskakuje pod/nad oś).</li>
+  </ul>
+</div>
+
+<div class="quiz-card">
+  <div class="quiz-title"><span>🔑 KLUCZ ODPOWIEDZI Z WYJAŚNIENIEM KROK PO KROKU</span></div>
+  <table class="answers">
+    <thead>
+      <tr>
+        <th style="width: 15%;">Karta</th>
+        <th style="width: 15%;">Zadanie</th>
+        <th style="width: 25%;">Prawidłowa Odpowiedź</th>
+        <th>Kluczowy krok / Wyjaśnienie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3"><b>KARTA 1</b></td>
+        <td>Zadanie 1</td>
+        <td><b>II ćwiartka</b></td>
+        <td>x &lt; 0 (lewo) i y &gt; 0 (góra) → II ćwiartka</td>
+      </tr>
+      <tr>
+        <td>Zadanie 2</td>
+        <td><b>(0, −5)</b></td>
+        <td>Na osi OY x wynosi 0. W dół o 5 oznacza y = −5.</td>
+      </tr>
+      <tr>
+        <td>Zadanie 3</td>
+        <td><b>A'(−1, 3)</b></td>
+        <td>x = 3 − 4 = −1; &nbsp; y = −2 + 5 = 3</td>
+      </tr>
+
+      <tr>
+        <td rowspan="3"><b>KARTA 2</b></td>
+        <td>Zadanie 1</td>
+        <td><b>S(1, 6)</b></td>
+        <td>x = (−5 + 7)/2 = 2/2 = 1; &nbsp; y = (3 + 9)/2 = 12/2 = 6</td>
+      </tr>
+      <tr>
+        <td>Zadanie 2</td>
+        <td><b>B(6, 7)</b></td>
+        <td>(−2 + x_B)/2 = 2 → −2 + x_B = 4 → x_B = 6; &nbsp; (1 + y_B)/2 = 4 → y_B = 7</td>
+      </tr>
+      <tr>
+        <td>Zadanie 3</td>
+        <td><b>TAK</b></td>
+        <td>x = (4 − 4)/2 = 0; &nbsp; y = (−2 + 2)/2 = 0 → środek to (0,0)</td>
+      </tr>
+
+      <tr>
+        <td rowspan="3"><b>KARTA 3</b></td>
+        <td>Zadanie 1</td>
+        <td><b>6 jednostek</b></td>
+        <td>Punkty leżą w pionie (ten sam x = 2). Odległość to |9 − 3| = 6</td>
+      </tr>
+      <tr>
+        <td>Zadanie 2</td>
+        <td><b>5 jednostek</b></td>
+        <td>Δx = 4 − 1 = 3, Δy = 6 − 2 = 4. Święta trójka 3-4-5 → odległość = 5</td>
+      </tr>
+      <tr>
+        <td>Zadanie 3</td>
+        <td><b>10 jednostek</b></td>
+        <td>Przyprostokątne leżą na osiach: 6 i 8. Święta trójka 6-8-10 → przeciwprostokątna = 10</td>
+      </tr>
+
+      <tr>
+        <td rowspan="3"><b>KARTA 4</b></td>
+        <td>Zadanie 1</td>
+        <td><b>K'(−3, −5)</b></td>
+        <td>Względem OX zmienia się znak y: 5 zamienia się w −5</td>
+      </tr>
+      <tr>
+        <td>Zadanie 2</td>
+        <td><b>M'(−4, 6)</b></td>
+        <td>Względem (0,0) OBA znaki zmieniają się na przeciwne: 4 → −4, −6 → 6</td>
+      </tr>
+      <tr>
+        <td>Zadanie 3</td>
+        <td><b>P = 15</b></td>
+        <td>Podstawa AB leży na linii y=1, długość a = 7 − 1 = 6. Wysokość h = 6 − 1 = 5. Pole = (6 · 5)/2 = 15</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

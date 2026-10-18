@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karta Supermocy: Wyrażenia Algebraiczne</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm 10mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1e293b; margin: 0; padding: 0; font-size: 10.2pt; line-height: 1.32; }
+  .header { text-align: center; border-bottom: 3px solid #6366f1; padding-bottom: 4px; margin-bottom: 8px; }
+  .header h1 { margin: 0; font-size: 17pt; color: #4f46e5; text-transform: uppercase; }
+  .header .sub { font-size: 10pt; font-weight: 600; color: #475569; }
+  .card { border-radius: 8px; padding: 7px 10px; border: 1.5px solid #cbd5e1; background: #fff; margin-bottom: 7px; }
+  .card-indigo { border-color: #6366f1; background: #eef2ff; }
+  .card-rose { border-color: #f43f5e; background: #fff1f2; }
+  .card-amber { border-color: #f59e0b; background: #fffbeb; }
+  .card-emerald { border-color: #10b981; background: #ecfdf5; }
+  .card-title { font-size: 11pt; font-weight: bold; margin-bottom: 4px; display: flex; align-items: center; gap: 5px; }
+  .card-indigo .card-title { color: #4338ca; }
+  .card-rose .card-title { color: #be123c; }
+  .card-amber .card-title { color: #b45309; }
+  .card-emerald .card-title { color: #047857; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .family-badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-weight: bold; margin: 1px; }
+  .footer-tip { text-align: center; font-size: 8.8pt; color: #64748b; border-top: 1px dashed #cbd5e1; padding-top: 4px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🦊 KARTA SUPERMOCY: WYRAŻENIA ALGEBRAICZNE (KLASA 7 & 8)</h1>
+  <div class="sub">Ściągawka Nadii na biurko – Kolorowe rodziny, prysznic i wampir przed nawiasem!</div>
+</div>
+
+<div class="card card-indigo">
+  <div class="card-title">🎨 1. ZASADA KOLOROWYCH RODZIN (REDUKCJA WYRAZÓW PODOBNYCH)</div>
+  <div style="font-size: 8.8pt;">Dodajesz TYLKO wyrazy z tej samej rodziny. Pamiętaj: <b>znak przed liczbą należy do niej</b>!</div>
+  <div style="background: #fff; padding: 5px 8px; border-radius: 6px; margin-top: 4px; border: 1px solid #c7d2fe; font-size: 9.5pt;">
+    <span class="family-badge" style="background: #dbeafe; color: #1e40af;">+3x</span>
+    <span class="family-badge" style="background: #fce7f3; color: #9d174d;">&minus;5y</span>
+    <span class="family-badge" style="background: #dbeafe; color: #1e40af;">+4x</span>
+    <span class="family-badge" style="background: #fce7f3; color: #9d174d;">&minus;2y</span>
+    = (3x + 4x) + (&minus;5y &minus; 2y) = <b>7x &minus; 7y</b>
+  </div>
+  <div style="font-size: 8.5pt; color: #475569; margin-top: 2px;">
+    &bull; <i>x to lisy, x<sup>2</sup> to lisy w kapeluszach (nie łącz ich!), y to żyrafy, same liczby to orzeszki!</i>
+  </div>
+</div>
+
+<div class="grid-2">
+  <div class="card card-emerald">
+    <div class="card-title">🚿 2. PRYSZNIC DLA NAWIASU</div>
+    <div style="font-size: 8.8pt;">Liczba z przodu polewa każdego w środku:</div>
+    <div style="background: #fff; padding: 4px 6px; border-radius: 4px; margin-top: 3px; border: 1px solid #a7f3d0; font-size: 8.8pt;">
+      <b>3(2x &minus; 5)</b> = 3&times;2x &minus; 3&times;5 = <b>6x &minus; 15</b><br>
+      <b>&minus;4(3x &minus; 2)</b> = &minus;12x <b>+ 8</b> <i>(minus i minus = plus!)</i>
+    </div>
+  </div>
+
+  <div class="card card-rose">
+    <div class="card-title">🧛 3. WAMPIR PRZED NAWIASEM</div>
+    <div style="font-size: 8.8pt;">Minus odwraca WSZYSTKIE znaki w środku:</div>
+    <div style="background: #fff; padding: 4px 6px; border-radius: 4px; margin-top: 3px; border: 1px solid #fecdd3; font-size: 8.8pt;">
+      &bull; <b>&minus;(3x &minus; 7)</b> = <b>&minus;3x + 7</b><br>
+      &bull; <b>5x &minus; (2x &minus; 3)</b> = 5x &minus; 2x <b>+ 3</b> = <b>3x + 3</b><br>
+      🚨 <i>Połowa uczniów zapomina zmienić drugi znak!</i>
+    </div>
+  </div>
+</div>
+
+<div class="card card-amber">
+  <div class="card-title">🤝 4. MNOŻENIE DWÓCH NAWIASÓW ("KAŻDY Z KAŻDYM")</div>
+  <div style="font-size: 8.8pt;">
+    (a + b)(c + d) = ac + ad + bc + bd<br>
+    <b>(x + 3)(x &minus; 5)</b> = x<sup>2</sup> &minus; 5x + 3x &minus; 15 = <b>x<sup>2</sup> &minus; 2x &minus; 15</b>
+  </div>
+</div>
+
+<div class="footer-tip">
+  💡 Pamiętaj Nadiu: Litera to po prostu puste pudełko na liczbę. Zawsze pilnuj znaku, który stoi przed nią! 🏆
+</div>
+</body>
+</html>

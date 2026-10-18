@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Mapa Przygody Egzaminacyjnej: 28 Tygodni w Blokach 15-Minutowych</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm 10mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1e293b; margin: 0; padding: 0; font-size: 9.2pt; line-height: 1.28; }
+  .page { height: 278mm; display: flex; flex-direction: column; justify-content: space-between; }
+  .page-break { page-break-after: always; break-after: page; }
+  .header { text-align: center; border-bottom: 3px solid #4f46e5; padding-bottom: 4px; margin-bottom: 6px; }
+  .header h1 { margin: 0; font-size: 15pt; color: #312e81; text-transform: uppercase; letter-spacing: 0.4px; }
+  .header .sub { font-size: 9.2pt; font-weight: 600; color: #475569; margin-top: 2px; }
+  .phase-box { border: 1.5px solid #cbd5e1; border-radius: 7px; padding: 5px 8px; margin-bottom: 5px; background: #fff; }
+  .phase-1 { border-color: #0284c7; background: #f0f9ff; }
+  .phase-2 { border-color: #7c3aed; background: #f5f3ff; }
+  .phase-3 { border-color: #0d9488; background: #f0fdfa; }
+  .phase-4 { border-color: #e11d48; background: #fff1f2; }
+  .phase-title { font-size: 10pt; font-weight: 800; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
+  .phase-1 .phase-title { color: #0369a1; }
+  .phase-2 .phase-title { color: #5b21b6; }
+  .phase-3 .phase-title { color: #0f766e; }
+  .phase-4 .phase-title { color: #be123c; }
+  table.tracker { width: 100%; border-collapse: collapse; background: #fff; font-size: 8.4pt; border-radius: 5px; overflow: hidden; }
+  table.tracker th, table.tracker td { border: 1px solid #cbd5e1; padding: 3px 5px; text-align: left; }
+  table.tracker th { background: #f1f5f9; color: #334155; font-weight: 700; text-align: center; }
+  .chk { display: inline-block; width: 11px; height: 11px; border: 1.4px solid #475569; border-radius: 2px; vertical-align: middle; margin-right: 2px; background: #fff; }
+  .days-cell { white-space: nowrap; text-align: center !important; font-weight: 600; color: #334155; }
+  .badge-mod { display: inline-block; padding: 1px 5px; border-radius: 4px; font-weight: 700; font-size: 7.8pt; background: #e2e8f0; color: #0f172a; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 7px; margin-bottom: 6px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 6px; }
+  .card { border: 1.5px solid #cbd5e1; border-radius: 7px; padding: 7px 9px; background: #f8fafc; }
+  .card-title { font-size: 10pt; font-weight: 800; color: #1e1b4b; margin-bottom: 4px; border-bottom: 1.5px solid #e2e8f0; padding-bottom: 2px; }
+  .footer { text-align: center; font-size: 8.2pt; color: #64748b; border-top: 1px dashed #cbd5e1; padding-top: 3px; }
+  ul.compact { margin: 3px 0; padding-left: 15px; }
+  ul.compact li { margin-bottom: 2px; }
+</style>
+</head>
+<body>
+
+<!-- STRONA 1: TRACKER 28 TYGODNI (140 SESJI PO 15 MINUT) -->
+<div class="page page-break">
+  <div>
+    <div class="header">
+      <h1>🗺️ MAPA PRZYGODY EGZAMINACYJNEJ: 28 TYGODNI × 15 MINUT</h1>
+      <div class="sub">Tracker Postępów do Egzaminu Ósmoklasisty z Matematyki (Podstawa Programowa CKE 2024 • Klasy IV–VIII)</div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card" style="background:#eef2ff; border-color:#6366f1;">
+        <div class="card-title" style="color:#312e81;">⚓ Minuty 1–3: Kotwica</div>
+        <div>Karta Supermocy A4 na biurku + <b>2 szybkie pytania w pamięci</b> z tabeli sprytu. Start od sukcesu!</div>
+      </div>
+      <div class="card" style="background:#f0fdf4; border-color:#16a34a;">
+        <div class="card-title" style="color:#166534;">⚡ Minuty 4–10: Sprint</div>
+        <div><b>1 Karta Quizu (3 zad.)</b> lub <b>1 Zadanie Otwarte CKE</b> metodą Trzech Ścieżek (wybierz najłatwiejszą!).</div>
+      </div>
+      <div class="card" style="background:#fffbeb; border-color:#d97706;">
+        <div class="card-title" style="color:#92400e;">🕵️‍♀️ Minuty 11–15: Detektyw</div>
+        <div>Sprawdzenie pułapek CKE, Wskazówka GWO, przyznanie rangi 🏆 i <b>koniec równo w 15. minucie!</b></div>
+      </div>
+    </div>
+
+    <!-- FAZA I -->
+    <div class="phase-box phase-1">
+      <div class="phase-title">
+        <span>🟦 FAZA I: Sprawność Rachunkowa, Ułamki, Procenty i Proporcje (Tygodnie 1–8)</span>
+        <span>~40% punktów na egzaminie CKE</span>
+      </div>
+      <table class="tracker">
+        <thead>
+          <tr><th style="width:11%;">Tydzień</th><th style="width:18%;">Katalog Modułu</th><th style="width:37%;">Zakres Egzaminacyjny CKE (Kl. IV–VIII)</th><th style="width:34%;">5 Codziennych Bloków 15-Minutowych (+ Sobota)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 1–2</b></td>
+            <td><span class="badge-mod">01-liczby-i-ulamki</span> (cz. I)</td>
+            <td>Liczby naturalne, rzymskie, podzielność (2,3,4,5,9,10,100), NWD/NWW, całkowite, wartość bezwzględna</td>
+            <td class="days-cell">T1: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T2: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 3–4</b></td>
+            <td><span class="badge-mod">01-liczby-i-ulamki</span> (cz. II)</td>
+            <td>Ułamki zwykłe i dziesiętne (Klub Przyjaciół 100/1000, Strażnik Zera, okresy, zaokrąglanie, wyrażenia)</td>
+            <td class="days-cell">T3: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T4: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 5–6</b></td>
+            <td><span class="badge-mod">04-procenty</span></td>
+            <td>Obliczenia procentowe (3 typy), dwukrotne podwyżki i obniżki cen, punkty procentowe, diagramy %</td>
+            <td class="days-cell">T5: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T6: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 7–8</b></td>
+            <td><span class="badge-mod">12-zadania-tekstowe...</span></td>
+            <td>Proporcjonalność prosta, podział proporcjonalny (woreczki), droga-prędkość-czas (km/h↔m/s), zegar, skala</td>
+            <td class="days-cell">T7: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T8: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FAZA II -->
+    <div class="phase-box phase-2">
+      <div class="phase-title">
+        <span>🟪 FAZA II: Narzędzia Klas 7–8 – Potęgi, Pierwiastki, Algebra i Równania (Tygodnie 9–16)</span>
+        <span>Szybkie punkty dzięki „Cheat Code’om”</span>
+      </div>
+      <table class="tracker">
+        <tbody>
+          <tr>
+            <td style="width:11%; text-align:center;"><b>Tydz. 9–10</b></td>
+            <td style="width:18%;"><span class="badge-mod">02-potegi</span></td>
+            <td style="width:37%;">Prawa działań na potęgach, rozkład podstawy (6<sup>n</sup>=2<sup>n</sup>·3<sup>n</sup>), wspólna podstawa, notacja wykładnicza a·10<sup>k</sup></td>
+            <td style="width:34%;" class="days-cell">T9: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T10: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 11–12</b></td>
+            <td><span class="badge-mod">03-pierwiastki</span></td>
+            <td>Pierwiastki &radic; i <sup>3</sup>&radic;, wyłączanie i włączanie czynnika (&radic;75=5&radic;3), szacowanie na osi, pułapka dodawania</td>
+            <td class="days-cell">T11: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T12: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 13–14</b></td>
+            <td><span class="badge-mod">05-wyrazenia-algebr...</span></td>
+            <td>Tworzenie wyrażeń z treści, wartości liczbowe, redukcja wyrazów podobnych, mnożenie nawiasów, minus przed ( )</td>
+            <td class="days-cell">T13: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T14: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 15–16</b></td>
+            <td><span class="badge-mod">06-rownania</span></td>
+            <td>Równania 1. stopnia (likwidacja ułamków NWW), sprawdzanie rozwiązań st. 1–3, zadania tekstowe z równaniem</td>
+            <td class="days-cell">T15: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T16: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FAZA III -->
+    <div class="phase-box phase-3">
+      <div class="phase-title">
+        <span>🟩 FAZA III: Geometria Płaska i Przestrzenna Klas 7–8 (Tygodnie 17–24)</span>
+        <span>Złote Trójki Pitagorejskie i Schematy Wizualne</span>
+      </div>
+      <table class="tracker">
+        <tbody>
+          <tr>
+            <td style="width:11%; text-align:center;"><b>Tydz. 17–18</b></td>
+            <td style="width:18%;"><span class="badge-mod">07-trojkaty-katy...</span></td>
+            <td style="width:37%;">Kąty (przyległe, wierzchołkowe, Z i F), nierówność trójkąta, przystawanie, twierdzenie Pitagorasa (3-4-5, 5-12-13)</td>
+            <td style="width:34%;" class="days-cell">T17: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T18: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 19–20</b></td>
+            <td><span class="badge-mod">08-czworokaty-i-pola</span></td>
+            <td>Pola wielokątów, wyznaczanie wysokości (np. h=a·b/c w trójkącie 5-12-13), jednostki pola (cm², m², ar, ha)</td>
+            <td class="days-cell">T19: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T20: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 21</b></td>
+            <td><span class="badge-mod">13-okrag-i-kolo-pi</span></td>
+            <td>Długość okręgu L=2&pi;r i pole koła P=&pi;r², wyznaczanie r oraz d, obwody i pola figur z półkolami (bieżnia)</td>
+            <td class="days-cell">T21: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;&nbsp;(Bonus: <span class="chk"></span>Sob)</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 22</b></td>
+            <td><span class="badge-mod">09-uklad-wspolrzednych</span></td>
+            <td>Zbiory na osi liczbowej, środek odcinka, drugi koniec odcinka (skok żabki), długość odcinka i punkty kratowe</td>
+            <td class="days-cell">T22: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;&nbsp;(Bonus: <span class="chk"></span>Sob)</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 23–24</b></td>
+            <td><span class="badge-mod">10-geometria-przestrz...</span></td>
+            <td>Graniastosłupy i ostrosłupy (krawędzie/ściany, siatki, pole i objętość z Pitagorasem, 1 l = 1 dm³ = 1000 cm³)</td>
+            <td class="days-cell">T23: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;|&nbsp; T24: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FAZA IV -->
+    <div class="phase-box phase-4">
+      <div class="phase-title">
+        <span>🟥 FAZA IV: Statystyka, Prawdopodobieństwo, Dowody i Mikro-Arkusze CKE (Tygodnie 25–28)</span>
+        <span>Finałowe szlify i symulacja 6 × 15 min</span>
+      </div>
+      <table class="tracker">
+        <tbody>
+          <tr>
+            <td style="width:11%; text-align:center;"><b>Tydz. 25</b></td>
+            <td style="width:18%;"><span class="badge-mod">11-rachunek-prawdop...</span></td>
+            <td style="width:37%;">Średnia arytmetyczna (trik sumy), wykresy i diagramy, zliczanie obiektów, prawdopodobieństwo (moneta, kostka, kule)</td>
+            <td style="width:34%;" class="days-cell">T25: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;&nbsp;(Bonus: <span class="chk"></span>Sob)</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 26</b></td>
+            <td><span class="badge-mod">14-dowodzenie-i-wzor...</span></td>
+            <td>Proste dowody algebraiczne (podzielność) i geometryczne (kąty/przystawanie), przekształcanie wzorów (6=2·3)</td>
+            <td class="days-cell">T26: <span class="chk"></span>Pn <span class="chk"></span>Wt <span class="chk"></span>Śr <span class="chk"></span>Cz <span class="chk"></span>Pt &nbsp;&nbsp;(Bonus: <span class="chk"></span>Sob)</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><b>Tydz. 27–28</b></td>
+            <td><span class="badge-mod">15-mikro-arkusze-cke</span></td>
+            <td>Pełne arkusze CKE rozbite na 6 odcinków po 15 minut (Odc. 1–3: zamknięte 1–15; Odc. 4–6: otwarte 16–21)</td>
+            <td class="days-cell">A1: <span class="chk"></span>1 <span class="chk"></span>2 <span class="chk"></span>3 <span class="chk"></span>4 <span class="chk"></span>5 <span class="chk"></span>6 &nbsp;|&nbsp; A2: <span class="chk"></span>1 <span class="chk"></span>2 <span class="chk"></span>3 <span class="chk"></span>4 <span class="chk"></span>5 <span class="chk"></span>6</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    💡 <b>Złota Zasada Nawyku:</b> Każda zamalowana kratka <span class="chk"></span> to 15 minut bliżej do mistrzowskiego wyniku na egzaminie! Jeśli wypadnie dzień – nie nadrabiaj podwójnie, po prostu jutro zrób kolejne 15 minut.
+  </div>
+</div>
+
+<!-- STRONA 2: PRZEWODNIK PEDAGOGICZNY DLA RODZICA I UCZENNICY -->
+<div class="page">
+  <div>
+    <div class="header">
+      <h1>🧭 PRZEWODNIK PEDAGOGICZNY: JAK PRACOWAĆ W BLOKACH 15-MINUTOWYCH</h1>
+      <div class="sub">Instrukcja obsługi systemu „Mikro-Sprinty Supermocy CKE” dla Rodzica / Trenera i Uczennicy</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">📅 1. Rytm Tygodnia (Co robimy w który dzień?)</div>
+        <ul class="compact">
+          <li><b>Poniedziałek (15 min) – Odkrycie Supermocy:</b> Kładziemy na biurku nową <i>Kartę Supermocy A4</i>. Omawiamy wspólnie 4 kolorowe moduły i rozwiązujemy 2 proste przykłady z karty, aby poczuć jak działa „Cheat Code” (Ścieżka A).</li>
+          <li><b>Wtorek (15 min) – Karta 1 z Quizu Sukcesu:</b> Rozgrzewka (3 min) + samodzielne rozwiązanie Karty 1 (3 zadania, 6 pkt) + wspólny Audyt Detektywa.</li>
+          <li><b>Środa (15 min) – Karta 2 z Quizu Sukcesu:</b> Rozgrzewka (3 min) + Karta 2 (zadania zamknięte w formacie CKE: P/F, A–D, dobieranka).</li>
+          <li><b>Czwartek (15 min) – Misja Otwarta CKE:</b> Jedno zadanie otwarte za 2–4 pkt (z Karty 4 lub arkusza). Uczymy się <b>zbierania punktów cząstkowych CKE</b>.</li>
+          <li><b>Piątek (15 min) – Boss Tygodnia + Spirala Pamięci:</b> Karta 3 z Quizu (2 zadania z bieżącego tygodnia + <b>1 zadanie z działu sprzed 2–3 tygodni</b>).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">🕵️‍♀️ 2. Dwustopniowa Pomoc w Stylu GWO (Gdy pojawi się blokada)</div>
+        <p style="margin:2px 0;">Gdy dziecko mówi <i>„Nie wiem jak ruszyć to zadanie”</i>, <b>nie podajemy od razu gotowego rozwiązania!</b> Stosujemy 2 kroki:</p>
+        <ul class="compact">
+          <li><b>Krok 1 (Kotwica Wizualna):</b> <i>„Zerknij na Kartę Supermocy na biurku – w którym kolorowym boksie mamy podobny przykład?”</i></li>
+          <li><b>Krok 2 (Jednowierszowa Wskazówka GWO):</b> Przeczytaj dziecku 1-zdaniową podpowiedź ze strony 3 Quizu (wzorowaną na dziale <i>Wskazówki</i> z podręcznika GWO), która odsłania tylko <b>pierwszy mikro-krok</b> (np. <i>„Zauważ, że 1,6 kg to 1600 g – ile waży 1/8 tortu?”</i>).</li>
+          <li>Dzięki temu dziecko samo wykonuje obliczenie końcowe i zachowuje 100% poczucia własnego sukcesu!</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:6px; background:#f0fdf4; border-color:#22c55e;">
+      <div class="card-title" style="color:#15803d;">🎯 3. Tajemnica Zadań Otwartych CKE: „Polowanie na Punkty Cząstkowe”</div>
+      <p style="margin:2px 0;">Wielu uczniów boi się zadań otwartych za 3 lub 4 punkty i zostawia puste miejsce. Na naszych czwartkowych 15-minutówkach uczymy strategii <b>„Nigdy nie oddawaj pustej kratki”</b>:</p>
+      <div class="grid-3" style="margin-top:4px; margin-bottom:0;">
+        <div style="background:#fff; padding:5px 7px; border-radius:5px; border:1px solid #bbf7d0;">
+          <b>🥈 Punkt 1 (Startowy):</b><br>Narysuj rysunek pomocniczy, podpisz boki i <b>ujednolić jednostki</b> (np. zamień minuty na godziny lub dm na cm) albo zapisz niewiadomą <i>x</i>.
+        </div>
+        <div style="background:#fff; padding:5px 7px; border-radius:5px; border:1px solid #bbf7d0;">
+          <b>🥇 Punkt 2 (Metoda):</b><br>Zapisz pierwsze poprawne działanie (np. pole podstawy, twierdzenie Pitagorasa dla ściany lub równanie z treści zadania).
+        </div>
+        <div style="background:#fff; padding:5px 7px; border-radius:5px; border:1px solid #bbf7d0;">
+          <b>🏆 Punkt 3/4 (Finisz):</b><br>Dokończ obliczenie, sprawdź czy wynik ma sens życiowy i zapisz odpowiedź wraz z jednostką!
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card" style="background:#fff1f2; border-color:#f43f5e;">
+        <div class="card-title" style="color:#be123c;">✂️ 4. Higiena Programowa 2024 (Czego NIE wymagamy!)</div>
+        <p style="margin:2px 0;">Zgodnie z Rozporządzeniem Ministra Edukacji z 28 czerwca 2024 r. (Dz.U. 2024 poz. 996, str. 182–196) na egzaminie <b>NIE OBOWIĄZUJĄ</b>:</p>
+        <ul class="compact">
+          <li>❌ <b>Symetralna odcinka i dwusieczna kąta</b> (Dział XV kl. VII–VIII – realizowany po egzaminie ósmoklasisty),</li>
+          <li>❌ <b>Wzory skróconego mnożenia</b> (zostaje tylko mnożenie nawiasów),</li>
+          <li>❌ <b>Usuwanie niewymierności z mianownika</b> (zostaje tylko wyłączanie czynnika przed pierwiastek, np. &radic;75 = 5&radic;3),</li>
+          <li>❌ <b>Twierdzenie odwrotne do tw. Pitagorasa</b>,</li>
+          <li>❌ <b>Długość łuku i pole wycinka kołowego</b> (tylko pełny okrąg i koło),</li>
+          <li>❌ <b>Układy równań</b> (wszystkie zadania robimy z jedną niewiadomą <i>x</i>).</li>
+        </ul>
+      </div>
+
+      <div class="card" style="background:#fffbeb; border-color:#f59e0b;">
+        <div class="card-title" style="color:#b45309;">💬 5. Słowniczek Wspierającego Trenera (Jak chwalić i korygować)</div>
+        <ul class="compact">
+          <li>Zamiast: <i>„Znowu zapomniałaś o przecinku!”</i><br>👉 Powiedz: <b>„Oho, Strażnik Zera poszedł na przerwę! Dopiszmy mu zero na końcu ułamka.”</b></li>
+          <li>Zamiast: <i>„2,2 godziny to nie 2 godziny 20 minut!”</i><br>👉 Powiedz: <b>„Pamiętasz Złoty Przelicznik Zegara? 0,1 h to 6 minut, więc 0,2 h to dwa razy po 6 minut!”</b></li>
+          <li>Chwal za spryt, a nie za męczenie się: <b>„Genialnie! Zamiast dzielić pod kreską, użyłaś Przyjaciela 25 i rozwiązałaś to w 5 sekund!”</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    📦 Komplet materiałów dydaktycznych w katalogach <b>00</b>–<b>15</b> • Wygenerowano zgodnie ze standardem OpenSpec &amp; Matematyka Supermoce (A4 Print-Ready)
+  </div>
+</div>
+
+</body>
+</html>

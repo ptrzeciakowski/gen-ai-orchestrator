@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karta Supermocy: Układ Współrzędnych</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm 10mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1e293b; margin: 0; padding: 0; font-size: 10.2pt; line-height: 1.32; }
+  .header { text-align: center; border-bottom: 3px solid #8b5cf6; padding-bottom: 4px; margin-bottom: 8px; }
+  .header h1 { margin: 0; font-size: 15.5pt; color: #5b21b6; text-transform: uppercase; letter-spacing: 0.5px; }
+  .header p { margin: 2px 0 0; font-size: 9.5pt; color: #7c3aed; font-weight: 600; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .card { background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 8px; padding: 7px 10px; margin-bottom: 6px; }
+  .card-title { font-size: 10.8pt; font-weight: bold; color: #4c1d95; margin-bottom: 4px; display: flex; align-items: center; gap: 5px; border-bottom: 1.5px solid #cbd5e1; padding-bottom: 2px; }
+  .formula-box { background: #ffffff; border-left: 3.5px solid #8b5cf6; padding: 5px 8px; margin: 4px 0; font-family: "Courier New", monospace; font-size: 10pt; font-weight: bold; color: #0f172a; border-radius: 0 5px 5px 0; }
+  .alert-box { background: #fff1f2; border: 1.5px solid #fecdd3; border-left: 3.5px solid #e11d48; padding: 5px 8px; border-radius: 4px; font-size: 9.3pt; color: #9f1239; margin-top: 4px; }
+  .success-box { background: #f0fdf4; border: 1.5px solid #bbf7d0; border-left: 3.5px solid #16a34a; padding: 5px 8px; border-radius: 4px; font-size: 9.3pt; color: #166534; margin-top: 4px; }
+  ul { margin: 3px 0; padding-left: 17px; }
+  li { margin-bottom: 2px; }
+  .badge { display: inline-block; background: #ede9fe; color: #5b21b6; padding: 1px 5px; border-radius: 4px; font-size: 8.5pt; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>⚡ KARTA SUPERMOCY: UKŁAD WSPÓŁRZĘDNYCH (Klasa 7 & 8)</h1>
+  <p>Sprytne Metody Nadii: Nawigacja GPS, Średnia Współrzędnych i Pitagoras na Kratkach</p>
+</div>
+
+<div class="grid-2">
+  <!-- LEWA KOLUMNA -->
+  <div>
+    <div class="card">
+      <div class="card-title">📍 1. Nawigacja GPS: Punkt (x, y)</div>
+      <ul>
+        <li><b>x (oś pozioma OX):</b> idziesz po korytarzu lewo (−) / prawo (+).</li>
+        <li><b>y (oś pionowa OY):</b> jedziesz windą dół (−) / góra (+).</li>
+      </ul>
+      <div class="formula-box">
+        A(3, −4) → 3 w prawo, 4 w dół<br>
+        B(−2, 5) → 2 w lewo, 5 w górę
+      </div>
+      <div class="alert-box">
+        🚨 <b>Gdzie jest zero?</b><br>
+        (4, 0) leży <b>na osi OX</b> &nbsp;|&nbsp; (0, −3) leży <b>na osi OY</b>!
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🎯 2. Środek Odcinka = Średnia!</div>
+      <p style="margin: 2px 0;">Środek odcinka S to po prostu średnia arytmetyczna współrzędnych:</p>
+      <div class="formula-box">
+        S = [ (x₁ + x₂)/2 , (y₁ + y₂)/2 ]
+      </div>
+      <div class="success-box">
+        💡 <b>Przykład:</b> A(−3, 8) i B(5, 2)<br>
+        x<sub>S</sub> = (−3 + 5) / 2 = 2 / 2 = <b>1</b><br>
+        y<sub>S</sub> = (8 + 2) / 2 = 10 / 2 = <b>5</b> &nbsp;→&nbsp; <b>S = (1, 5)</b>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRAWA KOLUMNA -->
+  <div>
+    <div class="card">
+      <div class="card-title">📏 3. Odległość = Pitagoras na Kratkach</div>
+      <p style="margin: 2px 0;">Nie musisz wkuwać wzoru! Policz kratki:</p>
+      <ul>
+        <li>Krok w poziomie: Δx = |x₂ − x₁|</li>
+        <li>Krok w pionie: Δy = |y₂ − y₁|</li>
+        <li>Odległość d: <b>d² = (Δx)² + (Δy)²</b></li>
+      </ul>
+      <div class="formula-box">
+        Od A(1, 2) do B(4, 6):<br>
+        poziomo = 3, pionowo = 4 → trójka 3-4-5 → <b>d = 5</b>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🪞 4. Lustra i Symetrie</div>
+      <ul>
+        <li><b>Odbicie w osi OX:</b> punkt spada góra/dół → <b>y zmienia znak</b>: (x, <b>−y</b>)<br>
+          <i>(3, 7) → (3, −7)</i></li>
+        <li><b>Odbicie w osi OY:</b> punkt przeskakuje lewo/prawo → <b>x zmienia znak</b>: (<b>−x</b>, y)<br>
+          <i>(3, 7) → (−3, 7)</i></li>
+        <li><b>Względem punktu (0,0):</b> <b>OBA zmieniają znak</b>: (<b>−x, −y</b>)<br>
+          <i>(3, 7) → (−3, −7)</i></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📦 5. Metoda Pudełka na Pole Figury</div>
+      <p style="margin: 2px 0; font-size: 9.3pt;">Skośny trójkąt na kratkach?</p>
+      <ol style="margin: 2px 0; padding-left: 17px; font-size: 9.3pt;">
+        <li>Obrysuj trójkąt prostokątem ("pudełkiem").</li>
+        <li>Oblicz pole prostokąta: P = a · b.</li>
+        <li>Odejmij 3 narożne trójkąty: P<sub>trójkąta</sub> = P<sub>box</sub> − (P₁ + P₂ + P₃).</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
