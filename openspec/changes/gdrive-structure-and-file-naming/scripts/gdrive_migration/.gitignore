@@ -1,0 +1,11 @@
+credentials.json
+token.json
+plan.json
+inventory.json
+verification.json
+migration_log.json
+dry_run_report.md
+reports/
+.venv/
+__pycache__/
+*.py[cod]
