@@ -268,7 +268,7 @@ def main():
         "total_candidates_found": len(candidates_for_deletion)
     }
 
-    out_file = "/Users/pawel/git/gen-ai-orchestrator/sandbox/2026-09-19-gdrive-analysis/drive_analysis_data.json"
+    out_file = "/Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/drive_analysis_data.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 

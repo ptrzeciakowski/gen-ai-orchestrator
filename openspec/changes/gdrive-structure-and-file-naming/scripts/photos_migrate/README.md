@@ -25,7 +25,7 @@ do Google Photos, więc cały EXIF (data, GPS) zostaje.
 
 ## Krok 2 – środowisko
 ```bash
-cd sandbox/2026-09-19-gdrive-analysis/scripts/photos_migrate
+cd openspec/changes/gdrive-structure-and-file-naming/scripts/photos_migrate
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 brew install exiftool        # opcjonalnie: tylko dla scan --check-dates i --stamp-missing

@@ -48,7 +48,7 @@ Obecny kod obejmuje 13 mapowań nazw folderów głównych i 18 nazw plików; nie
 ## Przygotowanie i planowanie
 
 ```bash
-cd sandbox/2026-09-19-gdrive-analysis/scripts/gdrive_migration
+cd openspec/changes/gdrive-structure-and-file-naming/scripts/gdrive_migration
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 ```

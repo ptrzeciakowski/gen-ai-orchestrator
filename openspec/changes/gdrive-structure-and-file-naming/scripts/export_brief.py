@@ -5,7 +5,7 @@ from datetime import datetime
 from collections import defaultdict, Counter
 
 DB_PATH = "/Users/pawel/Library/Application Support/Google/DriveFS/113301283206781212965/metadata_sqlite_db"
-OUT_DIR = "/Users/pawel/git/gen-ai-orchestrator/sandbox/2026-09-19-gdrive-analysis"
+OUT_DIR = "/Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming"
 
 def format_size(s):
     if s is None:

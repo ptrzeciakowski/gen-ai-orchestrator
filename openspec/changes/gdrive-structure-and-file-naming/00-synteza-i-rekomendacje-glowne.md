@@ -11,7 +11,7 @@
 5. **Agent 5 (`gemini-flash lite`)**: *Analityk Taksonomii Wielowymiarowej i Metryk Behawioralnych*
 
 **Lokalizacja wygenerowanych raportów:**  
-`/Users/pawel/git/gen-ai-orchestrator/sandbox/2026-09-19-gdrive-analysis/`
+`/Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/`
 
 ---
 
@@ -199,9 +199,9 @@ Wdrożenie selektywnego czyszczenia pozwala na natychmiastowe odzyskanie aż **8
 
 Wszystkie szczegółowe dane, skrypty analityczne i operacyjne zestawienia zostały zachowane w folderze projektu:
 
-1. [01-architektura-i-struktura-pro.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-09-19-gdrive-analysis/01-architektura-i-struktura-pro.md) – *Pełny audyt taksonomiczny, analiza długu technicznego folderu 25, specyfikacja architektury Johnny Decimal + PARA.*
-2. [02-uprawnienia-bezpieczenstwo-archiwizacja-pro.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-09-19-gdrive-analysis/02-uprawnienia-bezpieczenstwo-archiwizacja-pro.md) – *Matryca ryzyka RODO/PII, zarządzanie udostępnieniami zewnętrznymi oraz strategia Cold Storage dla 85% zamrożonych zasobów.*
-3. [03-plan-czyszczenia-i-selekcja-plikow-flash.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-09-19-gdrive-analysis/03-plan-czyszczenia-i-selekcja-plikow-flash.md) – *Operacyjna tabela triage'u 49 plików root, detekcja duplikatów bit-w-bit, protokół kwarantanny i kalkulacja odzysku 83 GB.*
-4. [04-workflow-nawyki-i-automatyzacja-flash.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-09-19-gdrive-analysis/04-workflow-nawyki-i-automatyzacja-flash.md) – *Behawioralna rekonstrukcja stylu pracy (Gemini, Notability, Chrome), specyfikacja wzorca 00📥Inbox i gotowy kod Google Apps Script.*
-5. [05-wielowymiarowa-kategoryzacja-i-metryki-flashlite.md](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-09-19-gdrive-analysis/05-wielowymiarowa-kategoryzacja-i-metryki-flashlite.md) – *Model 5D (Domena, Temperatura Recency, Uprawnienia, Archetyp, Akcyjność) oraz zestaw formuł wyszukiwania w Google Drive.*
-6. [drive_dataset_complete.json](file:///Users/pawel/git/gen-ai-orchestrator/sandbox/2026-09-19-gdrive-analysis/drive_dataset_complete.json) – *Kompletny zrzut metadanych telemetrycznych JSON dla całego Dysku Google.*
+1. [01-architektura-i-struktura-pro.md](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/01-architektura-i-struktura-pro.md) – *Pełny audyt taksonomiczny, analiza długu technicznego folderu 25, specyfikacja architektury Johnny Decimal + PARA.*
+2. [02-uprawnienia-bezpieczenstwo-archiwizacja-pro.md](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/02-uprawnienia-bezpieczenstwo-archiwizacja-pro.md) – *Matryca ryzyka RODO/PII, zarządzanie udostępnieniami zewnętrznymi oraz strategia Cold Storage dla 85% zamrożonych zasobów.*
+3. [03-plan-czyszczenia-i-selekcja-plikow-flash.md](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/03-plan-czyszczenia-i-selekcja-plikow-flash.md) – *Operacyjna tabela triage'u 49 plików root, detekcja duplikatów bit-w-bit, protokół kwarantanny i kalkulacja odzysku 83 GB.*
+4. [04-workflow-nawyki-i-automatyzacja-flash.md](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/04-workflow-nawyki-i-automatyzacja-flash.md) – *Behawioralna rekonstrukcja stylu pracy (Gemini, Notability, Chrome), specyfikacja wzorca 00📥Inbox i gotowy kod Google Apps Script.*
+5. [05-wielowymiarowa-kategoryzacja-i-metryki-flashlite.md](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/05-wielowymiarowa-kategoryzacja-i-metryki-flashlite.md) – *Model 5D (Domena, Temperatura Recency, Uprawnienia, Archetyp, Akcyjność) oraz zestaw formuł wyszukiwania w Google Drive.*
+6. [drive_dataset_complete.json](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/drive_dataset_complete.json) – *Kompletny zrzut metadanych telemetrycznych JSON dla całego Dysku Google.*

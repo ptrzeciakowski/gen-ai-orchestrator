@@ -30,14 +30,25 @@ Plik zawiera zbiorczy rejestr wszystkich zarchiwizowanych zmian w standardzie Op
 | **`2026-08-16-0750-wyszukiwarka-nieruchomosci-react-ui`** | Nowoczesny interfejs webowy React 19 + Vite z wielowątkowym backendem REST API (Python), dynamiczną filtracją SQL, badżami opłacalności RCN, telemetrią warstw Bronze/Silver/Gold, odświeżaniem bazy w tle i 6 testami API. | 78,000 | 54,000 | $1.04 | 00:25:00 (0.42h) | 24.0 h | 3.00 MD | **+23.58 h** |
 | **`2026-08-22-2145-wyszukiwarka-nieruchomosci-parallel-ingestion`** | Potok równoległego pobierania danych (ThreadPoolExecutor max_workers=6) dla 6 portali, wzmocnienie współbieżności bazy SQLite (WAL mode, mutex, timeouty, batch insert) oraz integracja z CLI i Web UI API. | 68,000 | 45,000 | $0.88 | 00:45:00 (0.75h) | 14.0 h | 1.75 MD | **+13.25 h** |
 | **`2026-08-22-2200-wyszukiwarka-nieruchomosci-ui-live-refresh`** | Interaktywny przycisk pobierania świeżych ofert w nagłówku Web UI, modal postępu na żywo (0-100%, stoper, statusy per portal) oraz rozszerzenie telemetrii w REST API. | 45,000 | 32,000 | $0.62 | 00:20:00 (0.33h) | 10.0 h | 1.25 MD | **+9.67 h** |
-| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany (18 zmian)** | **1,130,588** | **798,600** | **$15.21** | **10:26:23 (10.42h)** | **215.0 h** | **26.88 MD** | **+204.58 h** |
+| **`2026-09-07-2132-narty-austria-ferie-2027-explore`** | Analiza ofert narciarskich w Austrii na Ferie 2027 (7 regionów), szablony zapytań PL/EN, generator linków Gmail mailto, analiza odpowiedzi oraz selekcja ofert do 4000 EUR z mapami tras. | 85,000 | 56,000 | $1.09 | 01:10:00 (1.17h) | 16.0 h | 2.00 MD | **+14.83 h** |
+| **`2026-09-10-0839-plan-lekcji`** | Generatory planów lekcji dla Nadii i Michała: widok osi czasu CSS Grid zoptymalizowany pod wydruk A4 (HTML/PDF) oraz eksport kalendarzy iCalendar (.ics) w wariantach z obiadami i prefiksami. | 64,000 | 48,000 | $0.91 | 00:55:00 (0.92h) | 12.0 h | 1.50 MD | **+11.08 h** |
+| **`2026-09-11-1917-wzory-matematyczne-gdocs`** | Opracowanie skryptu i opracowania matematycznego z rachunku całkowego (`wprowadzenie-do-calek.md`) oraz konwersja LaTeX do natywnego formatu OMML w DOCX dla Google Docs. | 22,000 | 16,000 | $0.31 | 00:10:00 (0.17h) | 4.0 h | 0.50 MD | **+3.83 h** |
+| **`2026-09-11-2143-ksiazka-analiza-matematyczna-weiti`** | Kompletny 12-częściowy podręcznik akademicki Analizy Matematycznej w duchu WEiTI PW (~283 KB Markdown + paczka DOCX w `dist/`), od aksjomatyki R i C po analizę wektorową i równania różniczkowe. | 195,000 | 168,000 | $3.10 | 02:08:00 (2.13h) | 80.0 h | 10.00 MD | **+77.87 h** |
+| **`2026-09-12-2052-matematyka-dla-nadii`** | Kompleksowy system materiałów edukacyjnych z matematyki (9 działów z Kartami Supermocy A4 i 5-minutowymi Quizami Sukcesu w MD/HTML/PDF) wraz ze skryptami generującymi (`generate_batch1/2.py`). | 140,000 | 115,000 | $2.15 | 01:30:00 (1.50h) | 36.0 h | 4.50 MD | **+34.50 h** |
+| **`2026-09-20-1451-tennis-viedo-analyzer`** | Szablon raportu analitycznego i zaawansowany prompt systemowy Set Analysis PRO do taktyczno-statystycznej analizy wideo meczów tenisowych zgodnie ze standardami ATP/WTA i SwingVision. | 28,000 | 22,000 | $0.41 | 00:15:00 (0.25h) | 6.0 h | 0.75 MD | **+5.75 h** |
+| **`2026-09-26-2159-projekt-szafy`** | Projekt reorganizacji szaf w przedpokoju i konfiguracji nowego zestawu IKEA PAX (2x75x35 cm): weryfikacja wymiarów ze zdjęć, warianty aranżacji, rysunki techniczne i wizualizacje. | 92,000 | 64,000 | $1.24 | 01:15:00 (1.25h) | 16.0 h | 2.00 MD | **+14.75 h** |
+| **`2026-09-30-2303-nadia-zadania-z-matematyki`** | Pakiet naprawczo-treningowy z matematyki (Klasa 7 – ułamki, okresy, zaokrąglenia): analiza kartkówki i sprawdzianu, bliźniaczy zestaw treningowy z kluczem, Karta Supermocy i Quizy Sukcesu (MD/HTML/PDF). | 76,000 | 54,000 | $1.04 | 00:55:00 (0.92h) | 14.0 h | 1.75 MD | **+13.08 h** |
+| **`2026-10-04-1158-nadia-zadania-z-matematyki`** | Pakiet edukacyjny z matematyki dla klasy 7 (zadania tekstowe 17–25): rozwiązania zadań na 2 sposoby z analizą pułapek, bliźniaczy zestaw treningowy (17B–25B) oraz klucz odpowiedzi w MD/HTML/PDF. | 54,000 | 42,000 | $0.79 | 00:25:00 (0.42h) | 10.0 h | 1.25 MD | **+9.58 h** |
+| **`2026-10-07-2356-samsung-m2026w-duplex-print-macos`** | Inżynieria wsteczna sterownika CUPS drukarki Samsung Xpress SL-M2026W na macOS: diagnoza błędu uprawnień `prefilter`, natywny wrapper w C (`samsung-duplex-wrapper.c`), modyfikacja PPD i skrypty instalacyjne. | 115,000 | 78,000 | $1.51 | 01:45:00 (1.75h) | 24.0 h | 3.00 MD | **+22.25 h** |
+| **`2026-10-10-2028-google-photos-completeness-explore`** | Audyt kompletności biblioteki Google Photos względem Dysku Google (`88📸Zdjęcia`): błyskawiczna indeksacja 27 592 plików (170,9 GB) z lokalnej bazy SQLite DriveFS z sumami MD5 oraz strumieniowa weryfikacja paczek ZIP Takeout. | 98,000 | 65,000 | $1.27 | 01:20:00 (1.33h) | 20.0 h | 2.50 MD | **+18.67 h** |
+| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany (29 zmian)** | **2,099,588** | **1,526,600** | **$29.03** | **22:14:23 (22.23h)** | **453.0 h** | **56.63 MD** | **+430.77 h** |
 
 ---
 
 ## 📊 Podsumowanie Agregacji Projektu
 
-- **Łączne Zużycie Tokenów**: 1,130,588 WE / 798,600 WY
-- **Łączny Szacowany Koszt API LLM**: **$15.21**
-- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **10:26:23** (10.42 h)
-- **Łączny Estymowany Czas Pracy Deweloperskiej**: **215.0 roboczogodzin (26.88 MD)**
-- **Zysk / Oszczędność Czasu Deweloperskiego**: **+204.58 roboczogodzin (~25.57 MD zaoszczędzone)**
+- **Łączne Zużycie Tokenów**: 2,099,588 WE / 1,526,600 WY
+- **Łączny Szacowany Koszt API LLM**: **$29.03**
+- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **22:14:23** (22.23 h)
+- **Łączny Estymowany Czas Pracy Deweloperskiej**: **453.0 roboczogodzin (56.63 MD)**
+- **Zysk / Oszczędność Czasu Deweloperskiego**: **+430.77 roboczogodzin (~53.85 MD zaoszczędzone)**
