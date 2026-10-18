@@ -4,4 +4,4 @@ Podstawa programowa: https://cke.gov.pl/images/_EGZAMIN_OSMOKLASISTY/2024/komuni
 - strony 182-196
 
 Podręczniki GWO:
-- 
+- Matematyka z plusem 7
