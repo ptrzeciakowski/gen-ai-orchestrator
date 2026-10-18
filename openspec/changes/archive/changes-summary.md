@@ -29,7 +29,12 @@ Plik zawiera zbiorczy rejestr wszystkich zarchiwizowanych zmian w standardzie Op
 | **`2026-08-16-0730-wyszukiwarka-nieruchomosci-enhanced-deduplication`** | Wdrożenie 3-poziomowej kaskadowej deduplikacji (Ulica -> GPS -> Dzielnica), walidacja bounding box GPS Polski, normalizacja `street_slug` w SQLite, konsolidacja cech w Gold (`MAX(floor)`, `MAX(build_year)`) i 4 testy jednostkowe. | 52,000 | 38,000 | $0.73 | 00:20:00 (0.33h) | 12.0 h | 1.50 MD | **+11.67 h** |
 | **`2026-08-16-0750-wyszukiwarka-nieruchomosci-react-ui`** | Nowoczesny interfejs webowy React 19 + Vite z wielowątkowym backendem REST API (Python), dynamiczną filtracją SQL, badżami opłacalności RCN, telemetrią warstw Bronze/Silver/Gold, odświeżaniem bazy w tle i 6 testami API. | 78,000 | 54,000 | $1.04 | 00:25:00 (0.42h) | 24.0 h | 3.00 MD | **+23.58 h** |
 | **`2026-08-22-2145-wyszukiwarka-nieruchomosci-parallel-ingestion`** | Potok równoległego pobierania danych (ThreadPoolExecutor max_workers=6) dla 6 portali, wzmocnienie współbieżności bazy SQLite (WAL mode, mutex, timeouty, batch insert) oraz integracja z CLI i Web UI API. | 68,000 | 45,000 | $0.88 | 00:45:00 (0.75h) | 14.0 h | 1.75 MD | **+13.25 h** |
+| **`2026-08-22-2150-wyszukiwarka-nieruchomosci-historical-runs-explorer`** | Specyfikacja eksploratora historycznych sesji pobierania (`RunsView.jsx`, `/api/runs`, mechanizm Time-Travel po `run_id` oraz telemetria kompletności warstw Bronze/Silver/Gold). | 24,000 | 16,000 | $0.31 | 00:10:00 (0.17h) | 8.0 h | 1.00 MD | **+7.83 h** |
+| **`2026-08-22-2151-wyszukiwarka-nieruchomosci-medallion-drill-down`** | Specyfikacja inspektora Data Lineage (`Gold -> Silver -> Bronze`): endpoint `/api/listings/lineage`, modal porównania duplikatów międzyportali oraz drzewo surowego JSON (`raw_payload`). | 25,000 | 17,000 | $0.33 | 00:10:00 (0.17h) | 8.0 h | 1.00 MD | **+7.83 h** |
+| **`2026-08-22-2152-wyszukiwarka-nieruchomosci-cloud-containerization`** | Specyfikacja konteneryzacji aplikacji (wieloetapowy `Dockerfile` Node.js + Python Slim, `docker-compose.yml`, trwały wolumen SQLite `./data:/app/data` oraz endpoint `/api/health`). | 22,000 | 15,000 | $0.29 | 00:10:00 (0.17h) | 6.0 h | 0.75 MD | **+5.83 h** |
+| **`2026-08-22-2153-wyszukiwarka-nieruchomosci-cloud-deployment-auth`** | Specyfikacja wdrożenia chmurowego z warstwą uwierzytelniania (`src/auth.py`, `LoginModal.jsx`, JWT/OAuth), konfiguracją HTTPS oraz harmonogramem Cloud Scheduler / Cron. | 24,000 | 16,000 | $0.31 | 00:10:00 (0.17h) | 8.0 h | 1.00 MD | **+7.83 h** |
 | **`2026-08-22-2200-wyszukiwarka-nieruchomosci-ui-live-refresh`** | Interaktywny przycisk pobierania świeżych ofert w nagłówku Web UI, modal postępu na żywo (0-100%, stoper, statusy per portal) oraz rozszerzenie telemetrii w REST API. | 45,000 | 32,000 | $0.62 | 00:20:00 (0.33h) | 10.0 h | 1.25 MD | **+9.67 h** |
+| **`2026-08-22-2202-wyszukiwarka-nieruchomosci-full-dynamic-pagination`** | Wdrożenie pełnej dynamicznej paginacji w warstwie Bronze dla wszystkich 6 portali (Otodom Commercial/Direct, Gratka, Morizon, Nieruchomości-online, OLX, Adresowo) bez sztywnych limitów stron. | 52,000 | 38,000 | $0.73 | 00:25:00 (0.42h) | 12.0 h | 1.50 MD | **+11.58 h** |
 | **`2026-09-07-2132-narty-austria-ferie-2027-explore`** | Analiza ofert narciarskich w Austrii na Ferie 2027 (7 regionów), szablony zapytań PL/EN, generator linków Gmail mailto, analiza odpowiedzi oraz selekcja ofert do 4000 EUR z mapami tras. | 85,000 | 56,000 | $1.09 | 01:10:00 (1.17h) | 16.0 h | 2.00 MD | **+14.83 h** |
 | **`2026-09-10-0839-plan-lekcji`** | Generatory planów lekcji dla Nadii i Michała: widok osi czasu CSS Grid zoptymalizowany pod wydruk A4 (HTML/PDF) oraz eksport kalendarzy iCalendar (.ics) w wariantach z obiadami i prefiksami. | 64,000 | 48,000 | $0.91 | 00:55:00 (0.92h) | 12.0 h | 1.50 MD | **+11.08 h** |
 | **`2026-09-11-1917-wzory-matematyczne-gdocs`** | Opracowanie skryptu i opracowania matematycznego z rachunku całkowego (`wprowadzenie-do-calek.md`) oraz konwersja LaTeX do natywnego formatu OMML w DOCX dla Google Docs. | 22,000 | 16,000 | $0.31 | 00:10:00 (0.17h) | 4.0 h | 0.50 MD | **+3.83 h** |
@@ -41,14 +46,14 @@ Plik zawiera zbiorczy rejestr wszystkich zarchiwizowanych zmian w standardzie Op
 | **`2026-10-04-1158-nadia-zadania-z-matematyki`** | Pakiet edukacyjny z matematyki dla klasy 7 (zadania tekstowe 17–25): rozwiązania zadań na 2 sposoby z analizą pułapek, bliźniaczy zestaw treningowy (17B–25B) oraz klucz odpowiedzi w MD/HTML/PDF. | 54,000 | 42,000 | $0.79 | 00:25:00 (0.42h) | 10.0 h | 1.25 MD | **+9.58 h** |
 | **`2026-10-07-2356-samsung-m2026w-duplex-print-macos`** | Inżynieria wsteczna sterownika CUPS drukarki Samsung Xpress SL-M2026W na macOS: diagnoza błędu uprawnień `prefilter`, natywny wrapper w C (`samsung-duplex-wrapper.c`), modyfikacja PPD i skrypty instalacyjne. | 115,000 | 78,000 | $1.51 | 01:45:00 (1.75h) | 24.0 h | 3.00 MD | **+22.25 h** |
 | **`2026-10-10-2028-google-photos-completeness-explore`** | Audyt kompletności biblioteki Google Photos względem Dysku Google (`88📸Zdjęcia`): błyskawiczna indeksacja 27 592 plików (170,9 GB) z lokalnej bazy SQLite DriveFS z sumami MD5 oraz strumieniowa weryfikacja paczek ZIP Takeout. | 98,000 | 65,000 | $1.27 | 01:20:00 (1.33h) | 20.0 h | 2.50 MD | **+18.67 h** |
-| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany (29 zmian)** | **2,099,588** | **1,526,600** | **$29.03** | **22:14:23 (22.23h)** | **453.0 h** | **56.63 MD** | **+430.77 h** |
+| **SUMA / RAZEM** | **Wszystkie zarchiwizowane zmiany (34 zmiany)** | **2,246,588** | **1,628,600** | **$31.00** | **23:19:23 (23.33h)** | **495.0 h** | **61.88 MD** | **+471.67 h** |
 
 ---
 
 ## 📊 Podsumowanie Agregacji Projektu
 
-- **Łączne Zużycie Tokenów**: 2,099,588 WE / 1,526,600 WY
-- **Łączny Szacowany Koszt API LLM**: **$29.03**
-- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **22:14:23** (22.23 h)
-- **Łączny Estymowany Czas Pracy Deweloperskiej**: **453.0 roboczogodzin (56.63 MD)**
-- **Zysk / Oszczędność Czasu Deweloperskiego**: **+430.77 roboczogodzin (~53.85 MD zaoszczędzone)**
+- **Łączne Zużycie Tokenów**: 2,246,588 WE / 1,628,600 WY
+- **Łączny Szacowany Koszt API LLM**: **$31.00**
+- **Łączny Czas Trwania Sesji AI (Wall-clock)**: **23:19:23** (23.33 h)
+- **Łączny Estymowany Czas Pracy Deweloperskiej**: **495.0 roboczogodzin (61.88 MD)**
+- **Zysk / Oszczędność Czasu Deweloperskiego**: **+471.67 roboczogodzin (~58.96 MD zaoszczędzone)**
