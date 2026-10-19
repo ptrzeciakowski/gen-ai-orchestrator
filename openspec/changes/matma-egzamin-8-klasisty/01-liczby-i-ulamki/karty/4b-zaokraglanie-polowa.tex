@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+\input{../preambula}
+
+\begin{document}
+
+\naglowekKarty{4B}{Zaokrąglanie wersja B: pieniądze i połowa}{zaokrąglać, patrząc tylko na to, czy reszta jest mniejsza niż połowa}
+
+\vspace{0.3em}
+\begin{regula}[REGUŁA – JEDNO PYTANIE: CZY JEST POWYŻEJ POŁOWY?]
+\textbf{Krok 1.} Znajdź dwie liczby zaokrąglone, między którymi leży Twoja liczba, np. $15{,}3$ i $15{,}4$ (krok to $0{,}1$).\\
+\textbf{Krok 2.} Policz \textbf{środek}, czyli połowę kroku: $15{,}3+0{,}05=15{,}35$.\\
+\textbf{Krok 3.} Porównaj: poniżej środka $\rightarrow$ bliżej mniejszej liczby. Powyżej środka $\rightarrow$ bliżej większej.
+\end{regula}
+
+\vspace{0.4em}
+\textbf{Druga droga: pieniądze.} Zaokrąglanie do pełnych złotych to pytanie, czy mamy więcej niż $50$ groszy:
+$$4{,}62\ \text{zł}=4\ \text{zł}\ 62\ \text{gr}\ \xrightarrow{\ 62>50\ }\ \mathbf{5\ zł}
+\qquad\qquad
+4{,}38\ \text{zł}=4\ \text{zł}\ 38\ \text{gr}\ \xrightarrow{\ 38<50\ }\ \mathbf{4\ zł}$$
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, x=10cm]
+  % Krok 1 zł: od 4 do 5; środek 4,5
+  \draw[->] (-0.05,0) -- (1.05,0) node[right, font=\small] {zł};
+  \foreach \v/\lab in {0/{4\,zł}, 0.5/{4{,}5\,zł}, 1/{5\,zł}} {
+    \draw (\v,0.1) -- (\v,-0.1);
+    \node[below, font=\small] at (\v,-0.12) {$\lab$};
+  }
+  % 4,62 zł: powyżej połowy -> bliżej 5 zł
+  \fill[okres] (0.62,0) circle (2.2pt) node[above=4pt, font=\small\bfseries, color=okres] {$4{,}62$};
+  \draw[dashed, okres] (0.62,0) -- (0.62,-0.45);
+  \node[font=\small, color=okres, anchor=north] at (0.62,-0.5) {$62\,\text{gr}>50\,\text{gr}\Rightarrow 5\,\text{zł}$};
+  % 4,38 zł: poniżej połowy -> bliżej 4 zł
+  \fill[cel] (0.38,0) circle (2.2pt) node[below=4pt, font=\small\bfseries, color=cel] {$4{,}38$};
+  \node[font=\small, color=cel] at (0.38,0.6) {$38\,\text{gr}<50\,\text{gr}\Rightarrow 4\,\text{zł}$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.3em}
+\textbf{Przykłady rozstrzygnięte} (zawsze: sąsiedzi, środek, porównanie):
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Zadanie & Sąsiedzi & Środek & Wynik \\
+\midrule
+$4{,}8\,|\,29$ do dziesiątych & $4{,}8$ i $4{,}9$ & $4{,}85$ & $4{,}829<4{,}85\Rightarrow \mathbf{4{,}8}$ \\
+$15{,}3\,|\,7$ do dziesiątych & $15{,}3$ i $15{,}4$ & $15{,}35$ & $15{,}37>15{,}35\Rightarrow \mathbf{15{,}4}$ \\
+$0{,}351$ do setnych & $0{,}35$ i $0{,}36$ & $0{,}355$ & $0{,}351<0{,}355\Rightarrow \mathbf{0{,}35}$ \\
+$7{,}286$ do setnych & $7{,}28$ i $7{,}29$ & $7{,}285$ & $7{,}286>7{,}285\Rightarrow \mathbf{7{,}29}$ \\
+$14{,}52$ do jedności & $14$ i $15$ & $14{,}5$ & $14{,}52>14{,}5\Rightarrow \mathbf{15}$ \\
+$0{,}(6)=0{,}666\ldots$ do setnych & $0{,}66$ i $0{,}67$ & $0{,}665$ & $0{,}666>0{,}665\Rightarrow \mathbf{0{,}67}$ \\
+$3{,}998$ do setnych & $3{,}99$ i $4{,}00$ & $3{,}995$ & $3{,}998>3{,}995\Rightarrow \mathbf{4{,}00}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{pulapka}[PUŁAPKI Z KARTKÓWKI]
+\begin{enumerate}[leftmargin=*, itemsep=2pt]
+  \item \textbf{Połowa to połowa kroku, nie całości.} Dla setnych krok to $0{,}01$, więc środek to $0{,}005$ powyżej zaokrąglonej liczby. Dla jedności krok to $1$, więc środek to $0{,}5$.
+  \item \textbf{Zera zostają.} Wynik $4{,}00$ ma dwie cyfry po przecinku, bo zaokrąglamy do setnych.
+  \item \textbf{Okres najpierw rozpisz:} $0{,}(6)=0{,}666\ldots$. Dopiero wtedy szukasz środka.
+\end{enumerate}
+\end{pulapka}
+
+\end{document}
