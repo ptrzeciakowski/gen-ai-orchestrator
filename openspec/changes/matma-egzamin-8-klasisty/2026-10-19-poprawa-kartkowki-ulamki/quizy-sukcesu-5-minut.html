@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Quizy Sukcesu dla Nadii – Misja Ratunkowa (Poprawa Kartkówki)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 9mm 11mm 9mm 11mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 10pt;
+    line-height: 1.32;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+  .header-main {
+    text-align: center;
+    border-bottom: 2.5px solid #4f46e5;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+  .header-main h1 {
+    margin: 0;
+    font-size: 15.5pt;
+    color: #3730a3;
+  }
+  .header-main p {
+    margin: 2px 0 0 0;
+    font-size: 9pt;
+    color: #64748b;
+  }
+  .quiz-card {
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 13px;
+    margin-bottom: 11px;
+    background: #ffffff;
+  }
+  .quiz-1 { border-color: #f43f5e; background: #fff1f2; }
+  .quiz-2 { border-color: #3b82f6; background: #eff6ff; }
+  .quiz-3 { border-color: #10b981; background: #ecfdf5; }
+  .quiz-4 { border-color: #8b5cf6; background: #f5f3ff; }
+
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px dashed #cbd5e1;
+    padding-bottom: 5px;
+    margin-bottom: 7px;
+  }
+  .quiz-title {
+    font-size: 11.2pt;
+    font-weight: 800;
+  }
+  .quiz-1 .quiz-title { color: #be123c; }
+  .quiz-2 .quiz-title { color: #1d4ed8; }
+  .quiz-3 .quiz-title { color: #047857; }
+  .quiz-4 .quiz-title { color: #6d28d9; }
+
+  .quiz-meta {
+    font-size: 8.8pt;
+    font-weight: 600;
+    color: #475569;
+  }
+  .task {
+    margin-bottom: 7px;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 5px 8px;
+    border: 1px solid #e2e8f0;
+  }
+  .task-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 3px;
+  }
+  .task-body {
+    font-size: 9.6pt;
+    padding-left: 6px;
+  }
+  .blank-line {
+    display: inline-block;
+    border-bottom: 1.5px solid #64748b;
+    min-width: 58px;
+    height: 15px;
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+  .box-input {
+    display: inline-block;
+    border: 1.5px solid #475569;
+    border-radius: 4px;
+    width: 28px;
+    height: 19px;
+    vertical-align: middle;
+    text-align: center;
+    background: #fff;
+  }
+  .circle-op {
+    display: inline-block;
+    border: 1.5px solid #475569;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    margin: 0 5px;
+    background: #fff;
+  }
+  .rank-box {
+    margin-top: 6px;
+    padding-top: 5px;
+    border-top: 1px dotted #94a3b8;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.3pt;
+    color: #334155;
+  }
+  .key-section {
+    background: #f8fafc;
+    border: 1.5px solid #94a3b8;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    font-size: 9.3pt;
+  }
+  .key-title {
+    font-weight: 800;
+    color: #1e293b;
+    font-size: 10pt;
+    margin-bottom: 3px;
+  }
+  .tip-box {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 5px 9px;
+    font-size: 8.6pt;
+    color: #92400e;
+    margin-top: 4px;
+    border-radius: 0 4px 4px 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- STRONA 1: KARTA 1 & KARTA 2 -->
+<div class="header-main">
+  <h1>⭐ QUIZY SUKCESU DLA NADII – MISJA RATUNKOWA (CZĘŚĆ 1)</h1>
+  <p>Trening 100% zagadnień z kartkówki z Librusa • 1 karta = 5 minut • Zero dzielenia pod kreską!</p>
+</div>
+
+<!-- KARTA 1 -->
+<div class="quiz-card quiz-1">
+  <div class="quiz-header">
+    <div class="quiz-title">🔄 KARTA 1: ODWROTNOŚĆ LICZBY vs LICZBA PRZECIWNA</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Rozgrzewka: Nie pomyl pojęć! – 2 pkt)</div>
+    <div class="task-body">
+      Pamiętaj: <b>Przeciwna</b> zmienia tylko znak (+ &harr; &minus;), a <b>Odwrotność</b> robi FIKOŁKA (Góra &harr; Dół):
+      <div style="margin: 4px 0;">
+        a) Dla ułamka <b><sup>3</sup>/<sub>7</sub></b>: &nbsp; liczba przeciwna to <span class="blank-line"></span>, &nbsp; a odwrotność to <span class="blank-line"></span>
+      </div>
+      <div style="margin: 4px 0;">
+        b) Dla liczby <b>&minus;4</b>: &nbsp; liczba przeciwna to <span class="blank-line"></span>, &nbsp; a odwrotność to <span class="blank-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Zastosuj Supermoc: Przygotuj liczbę przed Fikołkiem – 2 pkt)</div>
+    <div class="task-body">
+      Zamień na ułamek zwykły/niewłaściwy, a potem zrób FIKOŁKA (odwróć górę z dołem):
+      <div style="margin: 4px 0;">
+        a) Liczba mieszana: <b>1 <sup>2</sup>/<sub>5</sub></b> = <sup><span class="box-input"></span></sup>/<sub>5</sub> &rarr; Odwrotność to: <span class="blank-line"></span>
+      </div>
+      <div style="margin: 4px 0;">
+        b) Ułamek dziesiętny: <b>0,3</b> = <sup><span class="box-input"></span></sup>/<sub>10</sub> &rarr; Odwrotność to: <span class="blank-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Pułapki z Kartkówki – 2 pkt)</div>
+    <div class="task-body">
+      Podaj <b>odwrotność</b> każdej z liczb (uważaj na całości i znak minus!):
+      <div style="margin: 4px 0; display: flex; gap: 45px;">
+        <span>a) Odwrotność <b>0,25</b> to: <span class="blank-line"></span></span>
+        <span>b) Odwrotność <b>&minus;2 <sup>1</sup>/<sub>3</sub></b> to: <span class="blank-line"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Mistrzyni Fikołków!</b></span>
+    <span>[ ] 3–4 pkt: <b>Dobry Kierunek!</b></span>
+    <span>[ ] 1–2 pkt: <b>Pierwszy krok za Tobą!</b></span>
+  </div>
+</div>
+
+<!-- KARTA 2 -->
+<div class="quiz-card quiz-2">
+  <div class="quiz-header">
+    <div class="quiz-title">🔍 KARTA 2: ROZWINIĘCIE SKOŃCZONE CZY NIESKOŃCZONE?</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Detektyw Mianownika – 2 pkt)</div>
+    <div class="task-body">
+      Wpisz w kratkę <b>S</b> (rozwinięcie <b>skończone</b> – na dole przyjaciele 2 i 5) lub <b>N</b> (<b>nieskończone</b> – obcy szpieg 3, 7, 9...):
+      <div style="margin: 5px 0; display: flex; justify-content: space-between; padding-right: 20px;">
+        <span>a) <sup>3</sup>/<sub>20</sub> &rarr; <span class="box-input"></span></span>
+        <span>b) <sup>4</sup>/<sub>9</sub> &rarr; <span class="box-input"></span></span>
+        <span>c) <sup>5</sup>/<sub>8</sub> &rarr; <span class="box-input"></span></span>
+        <span>d) <sup>2</sup>/<sub>7</sub> &rarr; <span class="box-input"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Pułapka Skracania i Zamiana na Przecinek – 2 pkt)</div>
+    <div class="task-body">
+      <div style="margin: 4px 0;">
+        a) <b>Najpierw skróć przez 3:</b> <sup>6</sup>/<sub>15</sub> = <sup><span class="box-input"></span></sup>/<sub><span class="box-input"></span></sub> = <span class="blank-line"></span> &nbsp; <i>(Skończone czy nieskończone? <span class="blank-line" style="min-width:75px;"></span>)</i>
+      </div>
+      <div style="margin: 4px 0; display: flex; gap: 35px;">
+        <span>b) Trik z Dziewiątkami: <b><sup>5</sup>/<sub>9</sub></b> = <span class="blank-line"></span></span>
+        <span>oraz <b><sup>2</sup>/<sub>3</sub></b> = <sup><span class="box-input"></span></sup>/<sub>9</sub> = <span class="blank-line"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Twoja Supermoc Okresów – 2 pkt)</div>
+    <div class="task-body">
+      <div style="margin: 4px 0;">
+        a) Zapisz z okresem w nawiasie: <b>0,414141...</b> = <span class="blank-line"></span> &nbsp; oraz &nbsp; <b>1,2666...</b> = <span class="blank-line"></span>
+      </div>
+      <div style="margin: 4px 0;">
+        b) Jaka jest <b>15. cyfra po przecinku</b> w ułamku <b>0,(38)</b>? &nbsp; Odpowiedź: <span class="box-input" style="width:36px;"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Detektyw Doskonały!</b></span>
+    <span>[ ] 3–4 pkt: <b>Bystre Oko!</b></span>
+    <span>[ ] 1–2 pkt: <b>Rozgrzewka zaliczona!</b></span>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- STRONA 2: KARTA 3 & KARTA 4 -->
+<div class="header-main">
+  <h1>⭐ QUIZY SUKCESU DLA NADII – MISJA RATUNKOWA (CZĘŚĆ 2)</h1>
+  <p>Zegar Minut na Godziny • Sprytne Porównywanie • Zaokrąglanie (Mur i Policjant)</p>
+</div>
+
+<!-- KARTA 3 -->
+<div class="quiz-card quiz-3">
+  <div class="quiz-header">
+    <div class="quiz-title">⏱️ KARTA 3: MINUTY NA GODZINY I POJEDYNEK UŁAMKÓW</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Złoty Zegar Nadii: 6 min = 0,1 h oraz 15 min = 0,25 h – 2 pkt)</div>
+    <div class="task-body">
+      Zamień czas na godziny i zapisz wynik jako <b>ułamek dziesiętny</b>:
+      <div style="margin: 4px 0; display: flex; justify-content: space-between; padding-right: 15px;">
+        <span>a) <b>18 min</b> = <span class="blank-line"></span> h</span>
+        <span>b) <b>2 godz 15 min</b> = <span class="blank-line"></span> h</span>
+      </div>
+      <div style="margin: 4px 0; display: flex; justify-content: space-between; padding-right: 15px;">
+        <span>c) <b>45 min</b> = <span class="blank-line"></span> h</span>
+        <span>d) <b>1 godz 12 min</b> = <span class="blank-line"></span> h</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Pojedynek Dziesiętnych i Okresowych – 2 pkt)</div>
+    <div class="task-body">
+      Wpisz w kółko znak <b>&gt;</b>, <b>&lt;</b> lub <b>=</b> <i>(Wskazówka: rozpisz okres 0,(4) = 0,444... lub dopisz zera!)</i>:
+      <div style="margin: 5px 0; display: flex; gap: 60px;">
+        <span>a) <b>0,(4)</b> <span class="circle-op"></span> <b>0,4</b></span>
+        <span>b) <b>0,7</b> <span class="circle-op"></span> <b>0,68</b></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Motylek na Krzyż i Termometr – 2 pkt)</div>
+    <div class="task-body">
+      Wpisz w kółko znak <b>&gt;</b> lub <b>&lt;</b>:
+      <div style="margin: 5px 0; display: flex; gap: 45px;">
+        <span>a) <b><sup>5</sup>/<sub>7</sub></b> <span class="circle-op"></span> <b><sup>7</sup>/<sub>10</sub></b> <i>(Motylek: 5&times;10 vs 7&times;7)</i></span>
+        <span>b) <b>&minus;0,2</b> <span class="circle-op"></span> <b>&minus;0,25</b> <i>(Termometr!)</i></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Królowa Czasu i Pojedynków!</b></span>
+    <span>[ ] 3–4 pkt: <b>Szybki Zegar!</b></span>
+    <span>[ ] 1–2 pkt: <b>Krok do przodu!</b></span>
+  </div>
+</div>
+
+<!-- KARTA 4 -->
+<div class="quiz-card quiz-4">
+  <div class="quiz-header">
+    <div class="quiz-title">🧱 KARTA 4: MUR I POLICJANT (ZAOKRĄGLANIE BEZ POMYŁEK)</div>
+    <div class="quiz-meta">Czas: 5 min &nbsp;|&nbsp; Punkty: ___ / 6 pkt</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 1 (Postaw Mur i Sprawdź Policjanta – 2 pkt)</div>
+    <div class="task-body">
+      <div style="margin: 4px 0;">
+        a) Do <b>części dziesiątych</b> (1 cyfra po przecinku): &nbsp; <b>4,8 | 29</b> &approx; <span class="blank-line"></span> &nbsp; oraz &nbsp; <b>15,3 | 7</b> &approx; <span class="blank-line"></span>
+      </div>
+      <div style="margin: 4px 0;">
+        b) Do <b>części setnych</b> (2 cyfry po przecinku): &nbsp; <b>0,351</b> &approx; <span class="blank-line"></span> &nbsp; oraz &nbsp; <b>7,286</b> &approx; <span class="blank-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 2 (Zaokrąglanie Okresu i Całości – 2 pkt)</div>
+    <div class="task-body">
+      <div style="margin: 4px 0;">
+        a) Zaokrąglij ułamek okresowy do <b>części setnych</b>: &nbsp; <b>0,(6) = 0,666...</b> &approx; <span class="blank-line"></span>
+      </div>
+      <div style="margin: 4px 0;">
+        b) Zaokrąglij <b>14,52</b> do <b>jedności</b>: &approx; <span class="blank-line"></span> &nbsp; oraz &nbsp; <b>473,8</b> do <b>dziesiątek</b>: &approx; <span class="blank-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-title">Zadanie 3 (Finałowy Boss: Tysięczne i Efekt Domina – 2 pkt)</div>
+    <div class="task-body">
+      <div style="margin: 4px 0;">
+        a) Zaokrąglij do <b>części tysięcznych</b> (3 cyfry po przecinku): &nbsp; <b>1,(24) = 1,2424...</b> &approx; <span class="blank-line"></span>
+      </div>
+      <div style="margin: 4px 0;">
+        b) <b>Efekt Domina:</b> Zaokrąglij <b>3,998</b> do <b>części setnych</b> <i>(pamiętaj o zerach!)</i>: &approx; <span class="blank-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rank-box">
+    <span>🏆 [ ] 5–6 pkt: <b>Mistrzyni Precyzji!</b></span>
+    <span>[ ] 3–4 pkt: <b>Celny Policjant!</b></span>
+    <span>[ ] 1–2 pkt: <b>Dobry trening!</b></span>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- STRONA 3: KLUCZ ODPOWIEDZI I WSKAZÓWKI DLA PAWŁA -->
+<div class="header-main">
+  <h1>🗝️ KLUCZ ODPOWIEDZI I WSKAZÓWKI COACHINGOWE (DLA PAWŁA)</h1>
+  <p>Diagnoza z Librusa (17% &rarr; 100%): jak szybko odblokować brakujące umiejętności bez stresu</p>
+</div>
+
+<div class="key-section">
+  <div class="key-title">🔄 Karta 1: Odwrotność Liczby vs Liczba Przeciwna</div>
+  <b>1.</b> a) Przeciwna: <b>&minus;3/7</b>, odwrotność: <b>7/3 = 2 i 1/3</b>. &nbsp; b) Przeciwna: <b>4</b>, odwrotność: <b>&minus;1/4</b> (lub &minus;0,25).<br>
+  <b>2.</b> a) 1 i 2/5 = <b>7/5</b> &rarr; odwrotność to <b>5/7</b>. &nbsp; b) 0,3 = <b>3/10</b> &rarr; odwrotność to <b>10/3 = 3 i 1/3</b>.<br>
+  <b>3.</b> a) 0,25 = 1/4 &rarr; odwrotność to <b>4</b>. &nbsp; b) &minus;2 i 1/3 = &minus;7/3 &rarr; odwrotność to <b>&minus;3/7</b>.
+  <div class="tip-box">
+    <b>💡 Diagnoza z kartkówki:</b> Nadia ma opanowaną liczbę przeciwną (<b>v</b>), a traci punkty na odwrotności (<b>x</b>). Uczniowie często odwracają sam ułamek w liczbie mieszanej (pisząc 1 i 5/2 zamiast 5/7) albo zmieniają znak. Hasło: <i>„Przeciwna zmienia znak, Odwrotność robi fikołka (ale najpierw zamień całości na ułamek niewłaściwy!)”</i>.
+  </div>
+</div>
+
+<div class="key-section">
+  <div class="key-title">🔍 Karta 2: Rozwinięcie Skończone czy Nieskończone?</div>
+  <b>1.</b> a) <b>S</b> (20 to przyjaciel &times;5), &nbsp; b) <b>N</b> (mianownik 9), &nbsp; c) <b>S</b> (8 to przyjaciel &times;125), &nbsp; d) <b>N</b> (mianownik 7).<br>
+  <b>2.</b> a) 6/15 (:3) = <b>2/5 = 0,4</b> &rarr; rozwinięcie <b>skończone!</b> (trójka zniknęła po skróceniu!). &nbsp; b) 5/9 = <b>0,(5)</b>; 2/3 = <b>6/9 = 0,(6)</b>.<br>
+  <b>3.</b> a) <b>0,(41)</b> oraz <b>1,2(6)</b>. &nbsp; b) <b>Cyfra 3</b> (okres ma 2 cyfry: nieparzyste miejsca to 3, parzyste to 8; 15 jest nieparzyste).
+  <div class="tip-box">
+    <b>💡 Pułapka nr 1 na sprawdzianach GWO:</b> Nauczyciele zawsze dają ułamek typu <b>6/15</b>, <b>3/12</b> lub <b>21/28</b>. Kto nie skróci ułamka na starcie, widzi dzielnik 3 lub 7 i błędnie wpisuje „nieskończony”. Wyrobienie nawyku <i>„Zawsze najpierw skróć!”</i> daje darmowe punkty.
+  </div>
+</div>
+
+<div class="key-section">
+  <div class="key-title">⏱️ Karta 3: Minuty na Godziny i Pojedynek Ułamków</div>
+  <b>1.</b> a) <b>0,3 h</b> (bo 18 min = 3 &times; 6 min = 3 &times; 0,1 h). &nbsp; b) <b>2,25 h</b> (kwadrans to 0,25 h, nigdy 2,15!). &nbsp; c) <b>0,75 h</b>. &nbsp; d) <b>1,2 h</b> (12 min = 2 &times; 6 min).<br>
+  <b>2.</b> a) <b>0,(4) &gt; 0,4</b> (bo 0,444... &gt; 0,400). &nbsp; b) <b>0,7 &gt; 0,68</b> (bo 0,70 &gt; 0,68).<br>
+  <b>3.</b> a) <b>5/7 &gt; 7/10</b> (Motylek: 5&times;10 = 50 &gt; 7&times;7 = 49). &nbsp; b) <b>&minus;0,2 &gt; &minus;0,25</b> (na termometrze &minus;0,20 jest bliżej zera).
+  <div class="tip-box">
+    <b>💡 Jak odczarować zamianę minut na godziny:</b> Zamiast uczyć dzielenia przez 60, daj Nadii dwa klocki: <b>6 min = 0,1 h</b> oraz <b>15 min = 0,25 h</b>. Zapytaj: <i>„Ile szóstek mieści się w 24 minutach? Cztery! Więc 24 minuty to 0,4 godziny!”</i>.
+  </div>
+</div>
+
+<div class="key-section">
+  <div class="key-title">🧱 Karta 4: Mur i Policjant (Zaokrąglanie)</div>
+  <b>1.</b> a) <b>4,8</b> (policjant 2 śpi) oraz <b>15,4</b> (policjant 7 podbija +1). &nbsp; b) <b>0,35</b> (policjant 1 śpi) oraz <b>7,29</b> (policjant 6 podbija).<br>
+  <b>2.</b> a) <b>0,67</b> (0,66|6... &rarr; policjant 6 podbija do 67). &nbsp; b) Do jedności: <b>15</b> (14|,52); do dziesiątek: <b>470</b> (47|3,8 &rarr; zero wskakuje na miejsce jedności!).<br>
+  <b>3.</b> a) <b>1,242</b> (1,242|4...). &nbsp; b) <b>4,00</b> (3,99|8 &rarr; Efekt Domina: 3,99 + 0,01 = 4,00 – dwa zera muszą zostać!).
+  <div class="tip-box">
+    <b>💡 Plan na poprawę:</b> Zróbcie dziś Kartę 1 i Kartę 2 (2 &times; 5 minut z przerwą), a jutro Kartę 3 i Kartę 4. Z kartą supermocy przed oczami Nadia rozwiąże je bez ani jednego dzielenia pisemnego!
+  </div>
+</div>
+
+</body>
+</html>

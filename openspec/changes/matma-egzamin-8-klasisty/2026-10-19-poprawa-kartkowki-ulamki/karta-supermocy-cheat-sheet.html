@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Karta Supermocy – Misja Ratunkowa: Ułamki i Zaokrąglanie (Nadia)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 5.5mm 8mm 5.5mm 8mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 9pt;
+    line-height: 1.24;
+  }
+  .header {
+    text-align: center;
+    border-bottom: 2.5px solid #2563eb;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 14.5pt;
+    color: #1d4ed8;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .header .sub {
+    font-size: 8.6pt;
+    font-weight: 600;
+    color: #475569;
+    margin-top: 1px;
+  }
+  .status-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 3px 7px;
+    margin-bottom: 5px;
+    font-size: 8pt;
+  }
+  .status-ok { color: #15803d; font-weight: 700; }
+  .status-todo { color: #b91c1c; font-weight: 700; }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 5px;
+  }
+  .card {
+    border-radius: 7px;
+    padding: 5px 8px;
+    border: 1.5px solid #cbd5e1;
+    background: #ffffff;
+    margin-bottom: 5px;
+  }
+  .grid-2 .card {
+    margin-bottom: 0;
+  }
+  .card-blue { border-color: #3b82f6; background: #eff6ff; }
+  .card-emerald { border-color: #10b981; background: #ecfdf5; }
+  .card-amber { border-color: #f59e0b; background: #fffbeb; }
+  .card-purple { border-color: #8b5cf6; background: #f5f3ff; }
+  .card-rose { border-color: #f43f5e; background: #fff1f2; }
+
+  .card-title {
+    font-size: 9.8pt;
+    font-weight: 800;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card-blue .card-title { color: #1d4ed8; }
+  .card-emerald .card-title { color: #047857; }
+  .card-amber .card-title { color: #b45309; }
+  .card-purple .card-title { color: #6d28d9; }
+  .card-rose .card-title { color: #be123c; }
+
+  table.mini-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.2pt;
+    background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  table.mini-table th, table.mini-table td {
+    padding: 2.5px 5px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+  }
+  table.mini-table th {
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 700;
+    text-align: center;
+  }
+  .badge-green {
+    display: inline-block;
+    background: #dcfce7;
+    color: #15803d;
+    font-weight: 700;
+    padding: 0 5px;
+    border-radius: 4px;
+    border: 1px solid #86efac;
+    font-size: 8.2pt;
+  }
+  .badge-red {
+    display: inline-block;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-weight: 700;
+    padding: 0 5px;
+    border-radius: 4px;
+    border: 1px solid #fca5a5;
+    font-size: 8.2pt;
+  }
+  .badge-blue {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 700;
+    padding: 0 5px;
+    border-radius: 4px;
+    border: 1px solid #93c5fd;
+    font-size: 8.2pt;
+  }
+  .trap-box {
+    background: #ffffff;
+    border-left: 3.5px solid #ef4444;
+    padding: 4px 7px;
+    margin-top: 4px;
+    font-size: 8.5pt;
+    border-radius: 0 4px 4px 0;
+  }
+  .rule-box {
+    background: #ffffff;
+    border-left: 3.5px solid #10b981;
+    padding: 4px 7px;
+    margin-top: 4px;
+    font-size: 8.5pt;
+    border-radius: 0 4px 4px 0;
+  }
+  .frac {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 8.5pt;
+    line-height: 1.05;
+    margin: 0 1px;
+  }
+  .frac > span { display: block; padding: 0 2px; }
+  .frac span.bottom { border-top: 1px solid #1e293b; }
+  .footer-tip {
+    text-align: center;
+    font-size: 8.5pt;
+    color: #475569;
+    margin-top: 3px;
+    border-top: 1px dashed #cbd5e1;
+    padding-top: 3px;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🚀 KARTA SUPERMOCY: UŁAMKI, CZAS I ZAOKRĄGLANIE</h1>
+  <div class="sub">Osobista ściągawka Nadii na biurko • 100% zagadnień z kartkówki (Zero dzielenia pod kreską!)</div>
+</div>
+
+<div class="status-bar">
+  <div><span class="status-ok">✅ JUŻ UMIESZ (v):</span> Liczba przeciwna • Cyfra po przecinku w okresie</div>
+  <div><span class="status-todo">🎯 NOWE SUPERMOCE (x &rarr; v):</span> Odwrotność • Skończone/Nieskończone • Minuty na h • Porównywanie • Zaokrąglanie</div>
+</div>
+
+<!-- MODUŁ 1: ODWROTNOŚĆ vs PRZECIWNA -->
+<div class="card card-rose">
+  <div class="card-title">
+    <span>🔄 1. ODWROTNOŚĆ LICZBY vs LICZBA PRZECIWNA (Nie pomyl tych dwóch słów!)</span>
+    <span class="badge-red">Cel #1 z kartkówki</span>
+  </div>
+  <table class="mini-table">
+    <thead>
+      <tr>
+        <th style="width: 22%;">Pojęcie</th>
+        <th style="width: 28%;">Co robimy?</th>
+        <th style="width: 18%;">Co ze znakiem?</th>
+        <th style="width: 32%;">Przykłady Mistrzyni</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Liczba PRZECIWNA</b> <span class="badge-green">v</span></td>
+        <td>Zmieniasz <b>tylko znak</b> z przodu!</td>
+        <td style="text-align:center;"><b>ZMIENIA SIĘ</b> (+ &harr; &minus;)</td>
+        <td><b>2/5</b> &rarr; <b>&minus;2/5</b> &nbsp;|&nbsp; <b>&minus;1,8</b> &rarr; <b>1,8</b> &nbsp;|&nbsp; <b>0</b> &rarr; <b>0</b></td>
+      </tr>
+      <tr>
+        <td><b>ODWROTNOŚĆ liczby</b> <span class="badge-red">x&rarr;v</span></td>
+        <td>Robisz <b>FIKOŁKA (Góra &harr; Dół)</b>!</td>
+        <td style="text-align:center;"><b>BEZ ZMIAN!</b></td>
+        <td><b>3/7</b> &rarr; <b>7/3 = 2 i 1/3</b> &nbsp;|&nbsp; <b>&minus;2/5</b> &rarr; <b>&minus;5/2 = &minus;2,5</b></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="trap-box">
+    <b>🚨 3 PUŁAPKI Z KARTKÓWKI – Zanim zrobisz FIKOŁKA, przygotuj liczbę:</b><br>
+    &bull; <b>1) Liczba mieszana &rarr; zamień na ułamek niewłaściwy (DÓŁ &times; CAŁOŚĆ + GÓRA):</b>
+      <b>1 <span class="frac"><span>2</span><span class="bottom">5</span></span></b> = <span class="frac"><span>7</span><span class="bottom">5</span></span> &rarr; FIKOŁEK &rarr; <b><span class="frac"><span>5</span><span class="bottom">7</span></span></b> <i>(Nigdy 1 i 5/2!)</i> &nbsp;|&nbsp;
+      <b>2 <span class="frac"><span>1</span><span class="bottom">3</span></span></b> = <span class="frac"><span>7</span><span class="bottom">3</span></span> &rarr; <b><span class="frac"><span>3</span><span class="bottom">7</span></span></b><br>
+    &bull; <b>2) Ułamek dziesiętny &rarr; zapisz z kreską:</b>
+      <b>0,3</b> = <span class="frac"><span>3</span><span class="bottom">10</span></span> &rarr; FIKOŁEK &rarr; <b><span class="frac"><span>10</span><span class="bottom">3</span></span> = 3 <span class="frac"><span>1</span><span class="bottom">3</span></span></b> &nbsp;|&nbsp;
+      <b>0,25</b> = <span class="frac"><span>1</span><span class="bottom">4</span></span> &rarr; <b>4</b> &nbsp;|&nbsp;
+      <b>1,5</b> = <span class="frac"><span>15</span><span class="bottom">10</span></span> = <span class="frac"><span>3</span><span class="bottom">2</span></span> &rarr; <b><span class="frac"><span>2</span><span class="bottom">3</span></span></b><br>
+    &bull; <b>3) Cała liczba &rarr; dopisz „1” na dole:</b>
+      <b>8</b> = <span class="frac"><span>8</span><span class="bottom">1</span></span> &rarr; FIKOŁEK &rarr; <b><span class="frac"><span>1</span><span class="bottom">8</span></span></b> &nbsp;|&nbsp;
+      <b>&minus;5</b> = &minus;<span class="frac"><span>5</span><span class="bottom">1</span></span> &rarr; <b>&minus;<span class="frac"><span>1</span><span class="bottom">5</span></span></b> &nbsp;|&nbsp;
+      ⚠️ Liczba <b>0 NIE MA odwrotności!</b>
+  </div>
+</div>
+
+<!-- MODUŁ 2: SKOŃCZONE CZY NIESKOŃCZONE -->
+<div class="card card-blue">
+  <div class="card-title">
+    <span>🔍 2. UŁAMEK O ROZWINIĘCIU SKOŃCZONYM CZY NIESKOŃCZONYM?</span>
+    <span class="badge-blue">Detektyw Mianownika</span>
+  </div>
+  <div style="background: #fef2f2; border: 1.5px solid #f87171; border-radius: 5px; padding: 3px 7px; margin-bottom: 4px; font-size: 8.6pt;">
+    <b>⚠️ KROK 1 (OBOWIĄZKOWY!): NAJPIERW SKRÓĆ UŁAMEK DO KOŃCA!</b>
+    <i>Pułapka z testu:</i> <b>6/15</b> dzieli się przez 3 &rarr; <b>2/5 = 0,4 (SKOŃCZONY!)</b> &nbsp;|&nbsp; <b>3/12</b> (:3) &rarr; <b>1/4 = 0,25 (SKOŃCZONY!)</b> &nbsp;|&nbsp; <b>21/28</b> (:7) &rarr; <b>3/4 = 0,75 (SKOŃCZONY!)</b>
+  </div>
+  <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 6px; font-size: 8.5pt;">
+    <div style="background: #fff; border: 1px solid #93c5fd; border-radius: 5px; padding: 4px 6px;">
+      <b>✅ SKOŃCZONE (Klub Przyjaciół 2 i 5 na dole po skróceniu):</b><br>
+      Mianowniki: <b>2, 4, 5, 8, 10, 16, 20, 25, 40, 50, 80, 100, 125</b><br>
+      &bull; <b>2 &harr; &times;5</b> (1/2 = 0,5) &nbsp;|&nbsp; <b>5 &harr; &times;2</b> (3/5 = 6/10 = 0,6)<br>
+      &bull; <b>4 &harr; &times;25</b> (1/4 = 0,25; 3/4 = 0,75) &nbsp;|&nbsp; <b>25 &harr; &times;4</b> (7/25 = 0,28)<br>
+      &bull; <b>8 &harr; &times;125</b> (1/8 = 0,125; 3/8 = 0,375; 5/8 = 0,625)<br>
+      &bull; <b>20 &harr; &times;5</b> (9/20 = 45/100 = 0,45) &nbsp;|&nbsp; <b>50 &harr; &times;2</b> (13/50 = 0,26)
+    </div>
+    <div style="background: #fff; border: 1px solid #93c5fd; border-radius: 5px; padding: 4px 6px;">
+      <b>♾️ NIESKOŃCZONE OKRESOWE (Obcy szpieg na dole):</b><br>
+      Gdy po skróceniu dół dzieli się przez <b>3, 7, 9, 11...</b><br>
+      (np. mianowniki: <b>3, 6, 7, 9, 11, 12, 15, 18, 22, 30, 99</b>)<br>
+      &bull; <b>Trik Dziewiątek:</b> 1/9 = <b>0,(1)</b> | 5/9 = <b>0,(5)</b> | 17/99 = <b>0,(17)</b><br>
+      &bull; <b>Trójki i Szóstki:</b> 1/3 = 3/9 = <b>0,(3)</b> | 2/3 = 6/9 = <b>0,(6)</b> | 1/6 = <b>0,1(6)</b><br>
+      &bull; <b>Cyfra w okresie <span class="badge-green">v</span>:</b> W 0,(48) nieparzyste miejsca to 4, parzyste to 8!
+    </div>
+  </div>
+</div>
+
+<div class="grid-2">
+  <!-- MODUŁ 3: MINUTY NA GODZINY -->
+  <div class="card card-emerald">
+    <div class="card-title">
+      <span>⏱️ 3. MINUTY NA GODZINY (UŁAMEK DZIESIĘTNY)</span>
+    </div>
+    <div style="font-size: 8.4pt; margin-bottom: 3px;">
+      Godzina ma <b>60 minut</b> (nie 100!). <b>Zakaz pisania 15 min = 0,15 h!</b>
+    </div>
+    <table class="mini-table">
+      <thead>
+        <tr>
+          <th style="background:#d1fae5; color:#065f46;">Minuty</th>
+          <th style="background:#d1fae5; color:#065f46;">Część h</th>
+          <th style="background:#d1fae5; color:#065f46;">Dziesiętnie</th>
+          <th style="background:#d1fae5; color:#065f46;">Szybki patent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>6 min</b> 🌟</td>
+          <td>6/60 = 1/10</td>
+          <td><b>0,1 h</b></td>
+          <td><b>Złoty Klocek!</b> (12 min = <b>0,2 h</b>, 18 min = <b>0,3 h</b>, 24 min = <b>0,4 h</b>, 36 min = <b>0,6 h</b>, 48 min = <b>0,8 h</b>)</td>
+        </tr>
+        <tr>
+          <td><b>3 min</b></td>
+          <td>3/60 = 1/20</td>
+          <td><b>0,05 h</b></td>
+          <td>Pół klocka! (9 min = 6+3 = <b>0,15 h</b>, 21 min = <b>0,35 h</b>)</td>
+        </tr>
+        <tr>
+          <td><b>15 min</b></td>
+          <td>15/60 = 1/4</td>
+          <td><b>0,25 h</b></td>
+          <td>Kwadrans (2 godz 15 min = <b>2,25 h</b>)</td>
+        </tr>
+        <tr>
+          <td><b>30 min</b></td>
+          <td>30/60 = 1/2</td>
+          <td><b>0,5 h</b></td>
+          <td>Pół godziny (90 min = 1 h 30 min = <b>1,5 h</b>)</td>
+        </tr>
+        <tr>
+          <td><b>45 min</b></td>
+          <td>45/60 = 3/4</td>
+          <td><b>0,75 h</b></td>
+          <td>Trzy kwadranse (1 h 45 min = <b>1,75 h</b>)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rule-box">
+      <b>💡 Przepis uniwersalny:</b> Zapisz <b>minuty/60</b>, skróć przez 6 (dostajesz dziesiąte) lub przez 3 (dostajesz dwudzieste i mnożysz &times;5)!
+    </div>
+  </div>
+
+  <!-- MODUŁ 4: ZAOKRĄGLANIE (MUR I POLICJANT) -->
+  <div class="card card-purple">
+    <div class="card-title">
+      <span>🧱 4. ZAOKRĄGLANIE (MUR I POLICJANT)</span>
+    </div>
+    <div style="font-size: 8.3pt; background:#fff; border:1px solid #c4b5fd; border-radius:4px; padding:3px 5px; margin-bottom:4px; text-align:center;">
+      <b>[Dziesiątki][Jedności] , [1: dziesiąte][2: setne][3: tysięczne]</b>
+    </div>
+    <div style="font-size: 8.4pt; line-height: 1.32;">
+      Stawiasz <b>MUR (|)</b> za miejscem zaokrąglenia. Decyduje <b>1. cyfra za murem (POLICJANT)</b>:<br>
+      &bull; 👮 <span class="badge-blue">0, 1, 2, 3, 4</span> &rarr; <b>ŚPI (w dół):</b> cyfra przed murem bez zmian!<br>
+      &nbsp;&nbsp;<i>Do dziesiątych:</i> 4,8 | <b>2</b>9 &approx; <b>4,8</b> &nbsp;|&nbsp; <i>Do setnych:</i> 0,35 | <b>1</b> &approx; <b>0,35</b><br>
+      &bull; 🚨 <span class="badge-red">5, 6, 7, 8, 9</span> &rarr; <b>ALARM (+1 w górę):</b> dodaj +1 przed murem!<br>
+      &nbsp;&nbsp;<i>Do dziesiątych:</i> 7,3 | <b>6</b>2 &approx; <b>7,4</b> &nbsp;|&nbsp; <i>Do jedności:</i> 14 | ,<b>5</b>2 &approx; <b>15</b><br>
+      &bull; 🔁 <b>Zaokrąglanie ułamka z okresem:</b> Najpierw <b>rozpisz nawias</b>!<br>
+      &nbsp;&nbsp;<i>Do setnych:</i> 0,(6) = 0,66 | <b>6</b>6... &approx; <b>0,67</b> &nbsp;|&nbsp; 1,(24) = 1,24 | <b>2</b>4... &approx; <b>1,24</b><br>
+      &bull; 💥 <b>Efekt Domina (gdy stoi 9):</b><br>
+      &nbsp;&nbsp;<i>Do setnych:</i> 3,99 | <b>8</b> &approx; <b>4,00</b> <i>(zera po przecinku muszą zostać!)</i><br>
+      &bull; 🔟 <b>Do dziesiątek (przed przecinkiem!):</b> 4<b>7</b> | 3,8 &approx; <b>470</b> (wstaw 0!).
+    </div>
+  </div>
+</div>
+
+<!-- MODUŁ 5: PORÓWNYWANIE UŁAMKÓW -->
+<div class="card card-amber" style="margin-bottom: 3px;">
+  <div class="card-title">
+    <span>🍕 5. BŁYSKAWICZNE PORÓWNYWANIE UŁAMKÓW (4 PATENTY W 5 SEKUND)</span>
+    <span class="badge-green">Wpisz &gt;, &lt; lub =</span>
+  </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 6px; font-size: 8.3pt;">
+    <div style="background: #fff; padding: 4px 6px; border-radius: 4px; border: 1px solid #fde68a;">
+      <b>1️⃣ Dopisz zera / rozpisz okres:</b><br>
+      &bull; 0,7 czy 0,68? &rarr; <b>0,70 &gt; 0,68</b><br>
+      &bull; 0,(4) czy 0,4? &rarr; 0,444... vs 0,400 &rarr; <b>0,(4) &gt; 0,4</b>!<br>
+      &bull; 0,3(5) vs 0,(35) &rarr; 0,355... &gt; 0,353...
+    </div>
+    <div style="background: #fff; padding: 4px 6px; border-radius: 4px; border: 1px solid #fde68a;">
+      <b>2️⃣ Motylek (Na krzyż &uarr;):</b><br>
+      Gdy różne góry i doły, np. <b>5/7</b> czy <b>7/10</b>?<br>
+      Mnożysz dół&times;góra: 5&times;10 = <b>50</b> vs 7&times;7 = <b>49</b>.<br>
+      50 &gt; 49 &rarr; <b>5/7 &gt; 7/10</b>!
+    </div>
+    <div style="background: #fff; padding: 4px 6px; border-radius: 4px; border: 1px solid #fde68a;">
+      <b>3️⃣ Pizza i Brakujący Kawałek:</b><br>
+      &bull; Ta sama góra: <b>3/7 &gt; 3/8</b> (mniejszy dół = większy kawałek).<br>
+      &bull; Blisko 1: <b>8/9 &gt; 7/8</b> (brakuje tylko 1/9).
+    </div>
+    <div style="background: #fff; padding: 4px 6px; border-radius: 4px; border: 1px solid #fde68a;">
+      <b>4️⃣ Zwykły vs Dziesiętny &amp; Minusy:</b><br>
+      &bull; 3/5 vs 0,58 &rarr; 3/5 = <b>0,60 &gt; 0,58</b>.<br>
+      &bull; <b>Termometr (&minus;):</b> Bliżej zera = więcej!<br>
+      <b>&minus;0,2 &gt; &minus;0,25</b> &nbsp;|&nbsp; <b>&minus;1/4 &gt; &minus;1/2</b>
+    </div>
+  </div>
+</div>
+
+<div class="footer-tip">
+  💡 Plan Nadii na kartkówce: 1) Przy odwrotności zrób ułamek niewłaściwy i FIKOŁKA • 2) Zawsze najpierw SKRÓĆ ułamek • 3) Pamiętaj: 6 min = 0,1 h, a 15 min = 0,25 h! 🏆
+</div>
+
+</body>
+</html>
