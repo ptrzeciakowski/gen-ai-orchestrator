@@ -12,7 +12,7 @@ Skill służy do transformacji dowolnego materiału matematycznego ze szkoły po
 
 Zamiast monotonnego liczenia "pod kreską" i setek powtarzalnych słupków, skill wdraża metodykę **"Sprytu Matematycznego" (Cheat Codes)**, dekompozycję na mikro-kroki oraz gamifikowane, 5-minutowe sprinty sukcesu.
 
-Format wyjściowy to **wyłącznie czysty Markdown oraz profesjonalnie ostylowany, gotowy do druku PDF na A4** (brak formatu DOCX).
+Format wyjściowy to **źródło LaTeX oraz gotowy do druku PDF na A4** (brak formatu DOCX). Zapisy matematyczne zawsze w składni LaTeX.
 
 ---
 
@@ -45,68 +45,89 @@ Skill potrafi przetworzyć materiał wejściowy podany w dowolny sposób:
 
 ## 📦 Standard Generowanych Artefaktów
 
-W wybranym folderze (np. `sandbox/...` lub w katalogu zmiany OpenSpec) skill tworzy komplet plików:
+Każdy materiał powstaje jako **źródło LaTeX → PDF A4** (kompilacja przez `tectonic`). Markdown ani HTML nie są już generowane, chyba że użytkownik o nie poprosi.
 
 ```
 katalog-tematu/
-├── karta-supermocy-cheat-sheet.md    # Źródło Markdown karty na biurko
-├── karta-supermocy-cheat-sheet.html  # Szablon HTML zoptymalizowany pod 1x A4
-├── karta-supermocy-cheat-sheet.pdf   # Wygenerowany elegancki PDF (1 strona A4)
-├── quizy-sukcesu-5-minut.md          # Źródło Markdown 4 kart + klucz odpowiedzi
-├── quizy-sukcesu-5-minut.html        # Szablon HTML (karty 5-minutowe + klucz)
-└── quizy-sukcesu-5-minut.pdf         # Wygenerowany PDF (3 strony A4)
+├── preambula.tex                 # wspólny szablon: A4, ramki reguła/pułapka, nagłówek karty
+├── karty/
+│   ├── 1-<cel>.tex / .pdf        # karta supermocy: JEDEN cel, 1 strona A4
+│   └── ...
+├── quizy/
+│   ├── 1-arkusz.tex / .pdf       # 5-minutowy arkusz dla ucznia, 1 strona A4
+│   ├── 1-klucz.tex / .pdf        # klucz + wskazówki dla rodzica/trenera (nie drukować dla ucznia)
+│   └── ...
+├── build.sh                      # kompiluje wszystko i sprawdza, czy każdy PDF ma 1 stronę
+└── README.md                     # kolejność kart, instrukcja wydruku
 ```
 
-> ⚠️ **ZAKAZ GENEROWANIA DOCX**: Zgodnie z wytycznymi użytkownika NIE generujemy plików `.docx` ani `.odt`. Wystarczy czysty `.md`, `.html` i gotowy `.pdf`.
+> **Zasada: jeden cel = jedna karta = jeden arkusz = jeden klucz.** Nie łącz celów na jednej karcie. Jeśli cel nie mieści się na stronie, dziel go na mniejsze cele, a nie zmniejszaj czcionki.
+
+> ⚠️ **ZAKAZ GENEROWANIA DOCX**: NIE generujemy plików `.docx` ani `.odt`.
 
 ---
 
-### 1. Karta Supermocy (A4 Cheat-Sheet na Biurko)
-Muszą znaleźć się w niej 4 moduły mieszczące się bezwzględnie na **1 stronie A4**:
-- **Moduł 1: Złota Tabela Sprytu / Klub Przyjaciół** (np. dla ułamków: $4 \leftrightarrow 25, 8 \leftrightarrow 125$; dla potęg: $6^n = 2^n \cdot 3^n$, $(a^b)^c = a^{b \cdot c}$, potęgowanie ilorazu).
-- **Moduł 2: Domki Pozycyjne / Wizualny Schemat Myślowy** (schemat kieszonek, reguła strażnika $0$).
-- **Moduł 3: Zasada Muru i Policjanta / Antypułapki Egzaminacyjne** (pionowa linia odcięcia, policjant w dół/w górę, efekt domina).
-- **Moduł 4: Błyskawiczne Porównywanie / Szacowanie w 3 sekundy** (zasada pizzy, groszy, brakującego kawałka).
+### 1. Karta Supermocy (1 cel = 1 strona A4)
 
-**Wymagania techniczne CSS dla Karty:**
-```css
-@page {
-  size: A4 portrait;
-  margin: 8mm 10mm 8mm 10mm;
-}
-* {
-  box-sizing: border-box;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-}
+Struktura każdej karty, w tej kolejności:
+1. **Cel** w jednym zdaniu (nagłówek: `\naglowekKarty{N}{Tytuł}{cel}`).
+2. **Reguła** w ramce (`\begin{regula}[REGUŁA]`), z zapisem wzorem.
+3. **Druga droga do tego samego wyniku**, np. rozkład mianownika ↔ dzielenie pod kreską, dzielenie przez 60 ↔ klocki czasu, motylek ↔ oś liczbowa, sprawdzenie iloczynem. Karta pokazuje, że obie drogi dają ten sam wynik.
+4. **Ilustracja** (TikZ, obowiązkowa): oś liczbowa, schemat dzielenia pod kreską, tarcza zegara, mur i policjant. Ilustracje są kluczowe dla ucznia.
+5. **Przykłady rozstrzygnięte** (2–4 w tabeli lub wypunktowaniu).
+6. **Pułapki z kartkówki** (`\begin{pulapka}`, 2–4 pozycje).
+
+Zasady techniczne:
+- Każdy plik zaczyna się od `\documentclass[11pt,a4paper]{article}` i `\input{../preambula}`.
+- Zapisy w LaTeX: `$...$`, `\dfrac`, `\overline{}` dla okresu, `\text{}` dla jednostek.
+- Kolory i ramki pochodzą z `preambula.tex`. Nie definiuj ich lokalnie.
+- Wcześniejsze „moduły" (Klub Przyjaciół, Mur i Policjant, zasada pizzy) to treści przykładów i pułapek, a nie osobne sekcje.
+
+---
+
+### 2. Quizy Sukcesu (arkusz + klucz na każdą kartę)
+
+Dla każdej karty powstają **dwa pliki**: arkusz i klucz.
+
+**Arkusz dla ucznia** (`quizy/N-arkusz.tex`), 1 strona A4:
+- Nagłówek: cel, czas (5 minut), pola Imię / Data / Punkty.
+- **3 zadania po 2 pkt** (razem 6 pkt):
+  - *Zadanie 1 (Rozgrzewka)*: uzupełnianie luk, S/N, P/F, łączenie w pary.
+  - *Zadanie 2 (Zastosuj supermoc)*: trik z karty w konkretnym obliczeniu.
+  - *Zadanie 3 (Pułapka / zagadka)*: typowe zadanie z kartkówki lub egzaminu ósmoklasisty.
+- Linie do wpisywania: `\rule{3cm}{0.4pt}`.
+- Puste miejsce **wewnątrz ułamka** zapisuj jako `\square`, np. `\dfrac{\square}{5}`. Pozioma kreska w mianowniku wygląda jak kreska ułamkowa i zmyla ucznia.
+- Pasek rang z checkboxami: 5–6 pkt, 3–4 pkt, 1–2 pkt.
+
+**Klucz** (`quizy/N-klucz.tex`), 1 strona A4:
+- Rozwiązania krok po kroku, z zaznaczonymi poprawnymi odpowiedziami.
+- Ramka `title=Wskazówka dla Pawła` (lub rodzica/trenera): jak chwalić proces i jak reagować na typowe błędy.
+- Nagłówek oznaczony „nie drukować dla ucznia".
+
+**Zasada dnia:** maksymalnie 1 arkusz (5 minut) dziennie.
+
+---
+
+### Kompilacja i kontrola
+
+```bash
+brew install tectonic   # raz
+./build.sh              # kompiluje karty/ i quizy/, odrzuca PDF-y dłuższe niż 1 strona
 ```
 
----
-
-### 2. Quizy Sukcesu (5-minutowe Karty Pewności Siebie)
-- **Strona 1 PDF**: Karta 1 i Karta 2 (po 3 zadania na karcie).
-- **Strona 2 PDF**: Karta 3 i Karta 4 (po 3 zadania na karcie).
-- **Strona 3 PDF**: Klucz odpowiedzi + **Wskazówki coachingowe dla rodzica/trenera**:
-  - Jak chwalić za proces i spryt (np. *"Zrobiłaś 6 przykładów w 3 minuty i zero słupków pod kreską!"*).
-  - Jak reagować z uśmiechem na typowe błędy (np. *"Czy 8 groszy w Biedronce to tyle co 80 groszy?"*).
-  - Zasada rygorystyczna: **maksymalnie 1 karta (5 minut) dziennie**.
-- **Struktura każdej karty (3 zadania, 6 pkt)**:
-  - *Zadanie 1 (Rozgrzewka, 2 pkt)*: Łączenie w pary, test prawda/fałsz lub uzupełnienie luki – sukces gwarantowany.
-  - *Zadanie 2 (Zastosuj Supermoc, 2 pkt)*: Wykorzystanie triku z karty supermocy w konkretnym obliczeniu.
-  - *Zadanie 3 (Zagadka Mistrza / Efekt Domina, 2 pkt)*: Typowe zadanie pułapka z egzaminu ósmoklasisty.
-  - Pasek rang z checkboxami: 🏆 5–6 pkt (Czarodziejka / Mistrzyni), 3–4 pkt, 1–2 pkt.
+- `build.sh` przerywa pracę, jeśli którykolwiek PDF ma więcej niż 1 stronę. Wtedy skracaj treść albo dziel cel.
+- Czcionka: ustaw w `preambula.tex` przez `fontspec`. Systemowa czcionka (np. Arial z `/System/Library/Fonts`) działa tylko na tym komputerze, więc przed przeniesieniem projektu zmień ją na czcionkę dołączoną do projektu.
+- Po kompilacji usuń `*.log` i `*.xdv`.
 
 ---
 
-## 🛠️ Generator PDF (`scripts/generate_pdf.py`)
+## 🛠️ Generator PDF z HTML (`scripts/generate_pdf.py`) — tylko starszy format
 
-Do skilla dołączony jest autonomiczny skrypt generujący PDF przez silnik Google Chrome headless:
+Skrypt renderuje HTML przez Google Chrome headless. **Nie używaj go dla kart i quizów w LaTeX.** Zostaje do ewentualnych starszych materiałów w HTML:
 
 ```bash
 python3 .ai/skills/matematyka-supermoce/scripts/generate_pdf.py <sciezka_do_pliku.html> [-o <sciezka_do_wyjscia.pdf>]
 ```
-
-Skrypt automatycznie wykrywa binarkę Google Chrome na macOS (`/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`) lub Linuksie i renderuje pikselowo perfekcyjny plik PDF.
 
 ---
 
