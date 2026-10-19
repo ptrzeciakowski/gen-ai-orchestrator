@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+\input{../preambula}
+
+\begin{document}
+
+\naglowekKarty{1}{Odwrotność czy liczba przeciwna?}{odróżnić odwrotność od liczby przeciwnej i wyznaczać obie}
+
+\vspace{0.3em}
+\begin{regula}[REGUŁA – DWIE RÓŻNE OPERACJE]
+\begin{tabular}{@{}p{3.6cm}p{5.2cm}p{6.6cm}@{}}
+\textbf{Liczba przeciwna} & zmiana \textbf{znaku} & $-\frac{3}{7}$ jest przeciwna do $\frac{3}{7}$ \\[4pt]
+\textbf{Odwrotność} & zamiana \textbf{licznika z mianownikiem} & $\frac{7}{3}$ jest odwrotnością $\frac{3}{7}$ \\
+\end{tabular}
+\end{regula}
+
+\vspace{0.4em}
+\textbf{Dlaczego odwrotność „robi fikołka”? Druga droga: sprawdzenie iloczynem.} Odwrotność to taka liczba, która razy dana liczba daje $1$:
+$$\frac{3}{7}\cdot\frac{7}{3}=\frac{21}{21}=1 \qquad\qquad -\frac{3}{7}\cdot\left(-\frac{7}{3}\right)=1$$
+Gdyby odwrotność miała inny znak niż liczba, iloczyn nie wyszedłby dodatni. Dlatego \emph{odwrotność zachowuje znak}, a \emph{przeciwna go zmienia}.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, x=2.2cm, node distance=3.6cm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=0.9cm, minimum width=2.4cm, inner sep=3pt}]
+  % Wiersz A: przeciwna = lustro względem zera
+  \draw[->] (-3.4,0) -- (3.4,0) node[right] {$x$};
+  \foreach \x in {-3,-2,-1,0,1,2,3} {
+    \draw (\x,0.08) -- (\x,-0.08);
+    \node[below, font=\small] at (\x,-0.1) {$\x$};
+  }
+  \fill[cel] (3/7,0) circle (2.2pt) node[below=5pt, font=\bfseries] {$\frac{3}{7}$};
+  \fill[okres] (-3/7,0) circle (2.2pt) node[below=5pt, font=\bfseries, color=okres] {$-\frac{3}{7}$};
+  \draw[->, thick, okres] (3/7,0.1) to[out=90, in=90, looseness=1.4] node[above, font=\small, color=okres] {lustro względem $0$} (-3/7,0.1);
+  \node[font=\bfseries, anchor=west] at (-3.4,1.6) {A) przeciwna: ODBICIE przez zero};
+\end{tikzpicture}
+\end{center}
+
+\vspace{-0.2em}
+\begin{center}
+\begin{tikzpicture}[>=Stealth, node distance=4.2cm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=0.9cm, minimum width=2.4cm, inner sep=3pt}]
+  \node[font=\bfseries, anchor=west] at (-4.0,1.0) {B) odwrotność: FIKOŁEK (licznik $\leftrightarrow$ mianownik)};
+  \node[box] (f1) at (-2.9,0) {$\dfrac{3}{7}$};
+  \node[box, right=of f1] (f2) {$\dfrac{7}{3}=2\dfrac{1}{3}$};
+  \draw[->, very thick, cel] (f1) -- node[above, font=\small\bfseries] {FIKOŁEK} (f2);
+  \node[font=\small, below=6pt of f2, anchor=north] (chk) {sprawdzenie: $\frac{3}{7}\cdot\frac{7}{3}=1$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2em}
+\textbf{Przykłady rozstrzygnięte:}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+Liczba & Przeciwna & Odwrotność & Co się zmieniło? \\
+\midrule
+$\dfrac{3}{7}$ & $-\dfrac{3}{7}$ & $\dfrac{7}{3}=2\dfrac{1}{3}$ & przeciwna: znak; odwrotność: fikołek \\
+$-4$ & $4$ & $-\dfrac{1}{4}$ & $-4=-\dfrac{4}{1}$, więc fikołek daje $-\dfrac{1}{4}$ \\
+$0{,}3$ & $-0{,}3$ & $\dfrac{10}{3}=3\dfrac{1}{3}$ & najpierw $0{,}3=\dfrac{3}{10}$ \\
+$-2\dfrac{1}{3}$ & $2\dfrac{1}{3}$ & $-\dfrac{3}{7}$ & najpierw $-2\dfrac{1}{3}=-\dfrac{7}{3}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{pulapka}[PUŁAPKI Z KARTKÓWKI]
+\begin{enumerate}[leftmargin=*, itemsep=2pt]
+  \item \textbf{Liczba mieszana:} najpierw zamień na ułamek niewłaściwy. $1\dfrac{2}{5}=\dfrac{5\cdot 1+2}{5}=\dfrac{7}{5}$, więc odwrotność to $\dfrac{5}{7}$. NIGDY nie odwracaj $1\dfrac{2}{5}$ jako $1\dfrac{5}{2}$.
+  \item \textbf{Ułamek dziesiętny:} najpierw zapisz go z kreską. $0{,}25=\dfrac{1}{4}$, więc odwrotność to $4$.
+  \item \textbf{Liczba całkowita:} dopisz „niewidzialną $1$” na dole: $8=\dfrac{8}{1}$, więc odwrotność to $\dfrac{1}{8}$.
+  \item \textbf{Zero} nie ma odwrotności, bo nie da się przez nie dzielić.
+\end{enumerate}
+\end{pulapka}
+
+\end{document}

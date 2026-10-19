@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{article}
+\input{../preambula}
+
+\begin{document}
+
+\naglowekKarty{5}{Zaokrąglanie (Mur i Policjant)}{zaokrąglać liczby dziesiętne i okresowe do wskazanego rzędu}
+
+\vspace{0.3em}
+\begin{regula}[REGUŁA – MUR I POLICJANT]
+\textbf{Krok 1.} Postaw \textbf{mur} $|$ tuż za cyfrą, na której zaokrąglamy.\\
+\textbf{Krok 2.} Spójrz na \textbf{pierwszą cyfrę za murem} (to jest policjant):
+\begin{itemize}[leftmargin=*, itemsep=1pt]
+  \item $0, 1, 2, 3, 4 \rightarrow$ \textbf{ŚPI}: cyfra przed murem zostaje bez zmian.
+  \item $5, 6, 7, 8, 9 \rightarrow$ \textbf{ALARM}: dodaj $1$ do cyfry przed murem.
+\end{itemize}
+\textbf{Krok 3.} Odetnij wszystko za murem. Zera na końcu, które zostały po przecinku, zostają.
+\end{regula}
+
+\vspace{0.4em}
+\textbf{Dlaczego tak? Druga droga: środek przedziału.} Liczby zaokrąglone do danego rzędu leżą co jeden krok na osi. Punkt środkowy między nimi to $5$ za murem. Wszystko poniżej środka zaokrąglamy w dół, wszystko od środka w górę.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, x=10cm]
+  % Przedział między 15,3 a 15,4 (zaokrąglanie do części dziesiątych)
+  \draw[->] (-0.05,0) -- (1.05,0);
+  \foreach \v/\lab in {0/{15,3}, 0.5/{15,35}, 1/{15,4}} {
+    \draw (\v,0.1) -- (\v,-0.1);
+    \node[below, font=\small] at (\v,-0.12) {$\lab$};
+  }
+  % Liczba 15,37 leży za środkiem: zaokrąglamy w górę
+  \fill[okres] (0.7,0) circle (2.2pt) node[above=4pt, font=\small\bfseries, color=okres] {$15{,}37$};
+  \draw[dashed, okres] (0.7,0) -- (0.7,-0.45);
+  \node[font=\small, color=okres, anchor=north] at (0.7,-0.5) {$15{,}37 > 15{,}35 \Rightarrow 15{,}4$};
+  \node[font=\small, anchor=west] at (-0.05,0.9) {Mur: $15{,}3\,|\,7$ $\;\Rightarrow\;$ policjant $7$ = ALARM $\Rightarrow 15{,}4$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2em}
+\textbf{Przykłady rozstrzygnięte:}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Zadanie & Mur & Wynik \\
+\midrule
+$4{,}8\,|\,29$ do dziesiątych & policjant $2$ = ŚPI & $\mathbf{4{,}8}$ \\
+$15{,}3\,|\,7$ do dziesiątych & policjant $7$ = ALARM & $\mathbf{15{,}4}$ \\
+$0{,}35\,|\,1$ do setnych & policjant $1$ = ŚPI & $\mathbf{0{,}35}$ \\
+$7{,}28\,|\,6$ do setnych & policjant $6$ = ALARM & $\mathbf{7{,}29}$ \\
+$0{,}(6)=0{,}66\,|\,6\ldots$ do setnych & policjant $6$ = ALARM & $\mathbf{0{,}67}$ \\
+$14{,}52$ do jedności: $14\,|\,{,}52$ & policjant $5$ = ALARM & $\mathbf{15}$ \\
+$473{,}8$ do dziesiątek: $47\,|\,3{,}8$ & policjant $3$ = ŚPI & $\mathbf{470}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{pulapka}[PUŁAPKI Z KARTKÓWKI]
+\begin{enumerate}[leftmargin=*, itemsep=2pt]
+  \item \textbf{Okres najpierw rozpisz:} $0{,}(6)=0{,}666\ldots$. Dopiero wtedy stawiaj mur.
+  \item \textbf{Efekt domina:} $3{,}998$ do setnych to $3{,}99\,|\,8$, policjant $8$ = ALARM, więc $3{,}99+0{,}01=\mathbf{4{,}00}$. Dwa zera po przecinku muszą zostać.
+  \item \textbf{Patrz tylko na jedną cyfrę za murem.} Reszta nie ma znaczenia: $4{,}8\,|\,29$ to ŚPI, bo liczy się tylko $2$.
+\end{enumerate}
+\end{pulapka}
+
+\end{document}
