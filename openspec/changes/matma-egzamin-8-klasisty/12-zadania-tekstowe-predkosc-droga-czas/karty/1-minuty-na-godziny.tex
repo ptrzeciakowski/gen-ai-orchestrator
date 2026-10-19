@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+\input{../preambula}
+
+\begin{document}
+
+\naglowekKarty{1}{Minuty na godziny w ułamku dziesiętnym}{zamieniać minuty na ułamek godziny bez mylenia z setnymi}
+
+\vspace{0.3em}
+\begin{regula}[REGUŁA]
+Godzina ma $60$ minut, \emph{nie} $100$. Dlatego
+$$t\ \text{min} = \frac{t}{60}\ \text{h}$$
+\textbf{Najważniejsze:} $15\ \text{min}\neq 0{,}15\ \text{h}$, bo $\dfrac{15}{60}=\dfrac{1}{4}=0{,}25$.
+\end{regula}
+
+\vspace{0.4em}
+\textbf{Druga droga: dzielenie pod kreską.} Zamiast pamiętać wynik, podziel minuty przez $60$:
+$$18 : 60 = 0{,}3 \qquad\text{(bo } 180 : 60 = 3\text{, czyli } 18 \text{ dziesiątych)}$$
+$$45 : 60 = 0{,}75 \qquad\text{(bo } 450 : 60 = 7 \text{ r. } 30,\ 300 : 60 = 5\text{)}$$
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, x=0.2cm]
+  % Skala minut (góra) i skala godzin w ułamku dziesiętnym (dół)
+  \draw[->] (-0.5,0) -- (62,0) node[right, font=\small] {min};
+  \draw[->] (-0.5,-2.6) -- (62,-2.6) node[right, font=\small] {h};
+  \foreach \m in {0,6,...,60} {
+    \draw (\m,0.15) -- (\m,-0.15);
+    \node[above, font=\scriptsize] at (\m,0.15) {\m};
+  }
+  \foreach \k in {0,1,...,10} {
+    \pgfmathsetmacro{\xx}{6*\k}
+    \draw (\xx,-2.45) -- (\xx,-2.75);
+    \pgfmathsetmacro{\lab}{0.1*\k}
+    \node[below, font=\scriptsize] at (\xx,-2.7) {\pgfmathprintnumber[fixed,precision=1]{\lab}};
+  }
+  % Zaznaczenie 18 min = 0,3 h oraz 45 min = 0,75 h
+  \fill[cel] (18,0) circle (2.2pt);
+  \fill[cel] (45,0) circle (2.2pt);
+  \draw[dashed, cel] (18,0) -- (18,-2.6);
+  \draw[dashed, cel] (45,0) -- (45,-2.6);
+  \node[font=\small\bfseries, color=cel] at (18,-3.5) {$18\ \text{min}=0{,}3\ \text{h}$};
+  \node[font=\small\bfseries, color=cel] at (45,-3.5) {$45\ \text{min}=0{,}75\ \text{h}$};
+  \node[font=\small, anchor=west] at (-0.5,1.1) {\textbf{Klocek:} $6\ \text{min}=0{,}1\ \text{h}$ (jedna dziesiąta godziny)};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2em}
+\textbf{Tabela klocków (zapamiętaj 6 i 15):}
+\begin{center}
+\renewcommand{\arraystretch}{1.9}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Minuty & Ułamek zwykły & Dziesiętny \\
+\midrule
+$6$ & $\dfrac{6}{60}=\dfrac{1}{10}$ & $0{,}1$ \\
+$15$ & $\dfrac{15}{60}=\dfrac{1}{4}$ & $0{,}25$ \\
+$30$ & $\dfrac{30}{60}=\dfrac{1}{2}$ & $0{,}5$ \\
+$45$ & $\dfrac{45}{60}=\dfrac{3}{4}$ & $0{,}75$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.2em}
+\textbf{Przykłady rozstrzygnięte:}
+\begin{itemize}[leftmargin=*, itemsep=1pt]
+  \item $18\ \text{min} = 3 \cdot 6\ \text{min} = 3\cdot 0{,}1 = \mathbf{0{,}3\ h}$
+  \item $2\ \text{godz}\ 15\ \text{min} = 2 + 0{,}25 = \mathbf{2{,}25\ h}$
+  \item $1\ \text{godz}\ 12\ \text{min} = 1 + 2\cdot 0{,}1 = \mathbf{1{,}2\ h}$
+  \item $27\ \text{min} = 24 + 3 = 4\cdot 0{,}1 + 0{,}05 = \mathbf{0{,}45\ h}$
+\end{itemize}
+
+\begin{pulapka}[PUŁAPKI Z KARTKÓWKI]
+\begin{enumerate}[leftmargin=*, itemsep=2pt]
+  \item $15\ \text{min}\neq 0{,}15\ \text{h}$. Kwadrans to $0{,}25\ \text{h}$.
+  \item $2\ \text{godz}\ 15\ \text{min}\neq 2{,}15\ \text{h}$. Zapis $2{,}15$ to $2$ i $15$ setnych, a $15$ minut to $\dfrac{15}{60}=0{,}25$.
+  \item Nie dziel przez $100$. Godzina to $60$ minut.
+\end{enumerate}
+\end{pulapka}
+
+\end{document}

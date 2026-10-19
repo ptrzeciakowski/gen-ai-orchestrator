@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+\input{../preambula}
+
+\begin{document}
+
+\naglowekKarty{2}{Skończone czy nieskończone?}{rozpoznać rozwinięcie dziesiętne ułamka bez dzielenia „na oko”}
+
+\vspace{0.3em}
+\begin{regula}[REGUŁA]
+\textbf{Krok 1.} Skróć ułamek do postaci nieskracalnej.\\
+\textbf{Krok 2.} Spójrz na mianownik $b$ po skróceniu:
+$$\frac{a}{b}\ \text{(nieskracalny)}\qquad\Longrightarrow\qquad
+\text{rozwinięcie \emph{skończone}} \iff b = 2^{m}\cdot 5^{n},\quad m,n\geq 0$$
+Jeśli w mianowniku jest choćby jeden inny czynnik pierwszy (np. $3$, $7$, $11$), rozwinięcie jest \emph{nieskończone okresowe}.
+\end{regula}
+
+\vspace{0.1em}
+\textbf{Dlaczego tak? Druga droga: dzielenie pod kreską.} Dzielenie kończy się, gdy reszta wynosi $0$. Reszt jest mniej niż dzielnik, więc jeśli dzielenie \emph{nie} kończy się, reszty się powtarzają, a z nimi cyfry wyniku: to jest \emph{okres}.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.82, >=Stealth, node distance=2.55cm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=0.85cm, minimum width=2.3cm, inner sep=3pt}]
+  % Wiersz A: 3 : 8 -> reszta 0 -> koniec
+  \node[font=\bfseries, anchor=west] at (-4.6,0.85) {A) $\frac{3}{8}$};
+  \node[box] (a1) at (-4.6,0) {$30:8=3$\\reszta $6$};
+  \node[box, right=of a1] (a2) {$60:8=7$\\reszta $4$};
+  \node[box, right=of a2] (a3) {$40:8=5$\\reszta $\mathbf{0}$};
+  \node[box, fill=skonczony!20, draw=skonczony, right=of a3] (a4) {$0{,}375$\\\small{\textbf{KONIEC}}};
+  \draw[->, thick] (a1) -- (a2);
+  \draw[->, thick] (a2) -- (a3);
+  \draw[->, thick] (a3) -- (a4);
+
+  % Wiersz B: 2 : 3 -> reszta 2 się powtarza -> okres
+  \node[font=\bfseries, anchor=west] at (-4.6,-1.95) {B) $\frac{2}{3}$};
+  \node[box] (b1) at (-4.6,-2.8) {$20:3=6$\\reszta $\mathbf{2}$};
+  \node[box, right=of b1] (b2) {$20:3=6$\\reszta $\mathbf{2}$};
+  \node[box, fill=okres!12, draw=okres, right=of b2] (b3) {$0{,}(6)$\\\small{\textbf{ZNOWU } $2$ $\Rightarrow$ OKRES}};
+  \draw[->, thick] (b1) -- (b2);
+  \draw[->, thick] (b2) -- (b3);
+  \draw[->, thick, color=okres] (b2.south) to[bend left=45] node[below, font=\small] {reszta $2$ wraca} (b1.south);
+\end{tikzpicture}
+\end{center}
+
+
+\vspace{0.1em}
+\textbf{Przykłady rozstrzygnięte regułą:}
+\renewcommand{\arraystretch}{1.15}
+\begin{center}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+Ułamek & Skracamy? & Mianownik po skróceniu & Rozwinięcie & Typ \\
+\midrule
+$\dfrac{3}{20}$ & nie & $20 = 2^{2}\cdot 5$ & $0{,}15$ & \textcolor{skonczony}{\textbf{skończone}} \\
+$\dfrac{7}{40}$ & nie & $40 = 2^{3}\cdot 5$ & $0{,}175$ & \textcolor{skonczony}{\textbf{skończone}} \\
+$\dfrac{6}{15}$ & tak, $:3$ & $\frac{2}{5}$, czyli $5$ & $0{,}4$ & \textcolor{skonczony}{\textbf{skończone}} \\
+$\dfrac{4}{9}$ & nie & $9 = 3^{2}$ & $0{,}(4)$ & \textcolor{okres}{\textbf{nieskończone}} \\
+$\dfrac{5}{12}$ & nie & $12 = 2^{2}\cdot 3$ & $0{,}41(6)$ & \textcolor{okres}{\textbf{nieskończone}} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{pulapka}[PUŁAPKI Z KARTKÓWKI]
+\begin{enumerate}[leftmargin=*, itemsep=2pt]
+  \item $\frac{6}{15}$ \emph{wygląda} na nieskończony, bo $15 = 3\cdot 5$. Po skróceniu przez $3$ zostaje $\frac{2}{5}$, więc jest skończony. \textbf{Najpierw skracaj!}
+  \item $\frac{5}{12}$ ma w mianowniku dwójkę, ale trójka też wystarcza, żeby rozwinięcie było nieskończone. Jeden obcy czynnik psuje cały ułamek.
+\end{enumerate}
+\end{pulapka}
+
+\begin{regula}[ZAMIANA NA DZIESIĘTNY (skończony)]
+Mianownik zamień na $10^{k}$ przez dopisanie „przyjaciela”: $2\to 5$, $4\to 25$, $8\to 125$, $5\to 2$, $25\to 4$, $125\to 8$.\\
+Np. $\displaystyle\frac{3}{8} = \frac{3\cdot 125}{8\cdot 125} = \frac{375}{1000} = 0{,}375$.
+\end{regula}
+
+\end{document}

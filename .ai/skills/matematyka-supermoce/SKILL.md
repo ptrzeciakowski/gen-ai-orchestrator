@@ -79,7 +79,7 @@ Struktura każdej karty, w tej kolejności:
 
 Zasady techniczne:
 - Każdy plik zaczyna się od `\documentclass[11pt,a4paper]{article}` i `\input{../preambula}`.
-- Zapisy w LaTeX: `$...$`, `\dfrac`, `\overline{}` dla okresu, `\text{}` dla jednostek.
+- Zapisy w LaTeX: `$...$`, `\dfrac`, okres zapisuj w nawiasie, np. `0{,}(3)` (nie `\overline`), `\text{}` dla jednostek.
 - Kolory i ramki pochodzą z `preambula.tex`. Nie definiuj ich lokalnie.
 - Wcześniejsze „moduły" (Klub Przyjaciół, Mur i Policjant, zasada pizzy) to treści przykładów i pułapek, a nie osobne sekcje.
 
