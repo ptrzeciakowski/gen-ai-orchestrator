@@ -11,6 +11,13 @@
 - **Wzorzec struktury podręcznika GWO**: *Matematyka z plusem* (przykładowy pobrany tom [`explore/Matematyka-z-plusem-6-Podrecznik.pdf`](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/matma-egzamin-8-klasisty/explore/Matematyka-z-plusem-6-Podrecznik.pdf) służy jako wzorzec układu dydaktycznego serii GWO: *Wprowadzenie $\rightarrow$ Zadania stopniowane $\rightarrow$ Przed klasówką $\rightarrow$ Wskazówki krok po kroku*, natomiast zakres merytoryczny obejmuje pełny materiał egzaminacyjny ** do klasy 8 włącznie**)
 - **Dokument eksploracji**: [`explore/001-matma-egzamin-8-klasisty-01.md`](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/matma-egzamin-8-klasisty/explore/001-matma-egzamin-8-klasisty-01.md)
 
+> **Aktualizacja v2 (2026-10-19).** Zmieniamy format i tempo:
+> - Materiały to **LaTeX → PDF A4**, a nie Markdown/HTML/Chrome.
+> - **Jeden cel = jedna karta = jeden arkusz = jeden klucz**, każda karta i arkusz na **jednej stronie A4**.
+> - **Jedna karta dziennie** zamiast czterech kart tygodniowo.
+> - Wersja 1 jest zachowana w `wersja-1/`. Działy `01` i `12` są wygenerowane w v2.
+> - Sekcje §5 i §7 poniżej zastępują wcześniejszy zakres i kryteria.
+
 ---
 
 ## 1. Dlaczego Ta Zmiana Jest Potrzebna? (Perspektywa Pedagoga – Problem Statement)
@@ -147,21 +154,14 @@ Plan jest podzielony na **4 Fazy Dydaktyczne (14 Modułów)**. Każdy moduł ł�
 
 ---
 
-## 5. Zakres Prac do Wykonania w Tej Zmianie (Scope of Work & Deliverables)
+## 5. Zakres Prac w Tej Zmianie (v2)
 
-Wszystkie artefakty dydaktyczne w `openspec/changes/matma-egzamin-8-klasisty/` powstaną w standardzie **Markdown (`.md`) + szablon do druku (`.html`) + gotowy plik PDF A4 (`.pdf`)** generowany przez headless Chrome (bez plików DOCX):
-
-- [ ] **1. Master-Plan i Drukowalny Tracker 15-Minutówek (`00-plan-i-tracker-15-minut/`)**:
-  - Jednostronicowa **Mapa Egzaminacyjna A4 (14 Modułów + Finał Arkuszowy)** z kratkami 15-minutowych sesji do odhaczania przez dziecko,
-  - **Ściągawka Pedagogiczna dla Rodzica**: jak prowadzić blok `3 + 7 + 5 min`, jak zadawać pytania naprowadzające (w stylu *Wskazówek GWO*) i jak przyznawać punkty cząstkowe CKE.
-- [ ] **2. Wygenerowanie 5 Brakujących Pakietów Działowych (`Karta Supermocy A4` + `Quizy Sukcesu 5-minutowe` + `Zestaw Zadań Otwartych CKE`)**:
-  - `04-proporcjonalnosc-predkosc-czas-i-skala/` (wypełnienie luki po pustym folderze `12`),
-  - `11-dlugosc-okregu-i-pole-kola-liczba-pi/` (nowy moduł pod Dział XIV kl. VII–VIII),
-  - `13-geometria-przestrzenna-graniastoslupy-i-ostroslupy/` (wypełnienie luki po pustym folderze `10`),
-  - `14-statystyka-kombinatoryka-i-prawdopodobienstwo/` (wypełnienie luki po pustym folderze `11`),
-  - `15-mikro-arkusze-egzaminacyjne-cke/` (wzorcowy arkusz CKE 2024/2025 podzielony na 6 odcinków 15-minutowych z kluczem punktacji cząstkowej).
-- [ ] **3. Konsolidacja i Uzupełnienie 9 Istniejących Pakietów z `matematyka-dla-nadii` (`01`–`03`, `05`–`10`, `12`)**:
-  - Przeniesienie i ujednolicenie numeracji z `2026-09-12-2052-matematyka-dla-nadii` oraz dopisanie brakujących akcentów z podstawy 2024 (m.in. notacja wykładnicza $a\cdot 10^k$, przekształcanie wzorów, przystawanie trójkątów i proste dowody geometryczne z przykładów w `D20240996.pdf`).
+- [x] **1. Przeniesienie wersji 1.** Foldery `00`–`12` przeniesione do `wersja-1/` przez `git mv`.
+- [x] **2. Dział `01-liczby-i-ulamki`.** 4 cele (odwrotność, rozwinięcia, porównywanie, zaokrąglanie) z kartą, arkuszem i kluczem, plus wariant B karty zaokrąglania (bez arkusza), `build.sh`, `preambula.tex`. Każdy PDF ma 1 stronę A4.
+- [x] **3. Dział `12-zadania-tekstowe-predkosc-droga-czas`.** Karta minut na godziny z arkuszem i kluczem.
+- [x] **4. Plan i tracker (`00-plan-i-tracker-15-minut`).** Zasada jedna karta dziennie, tracker kart, lista działów do wygenerowania.
+- [ ] **5. Pozostałe działy `02`–`11`, `13`–`15`.** Każdy dział: rozbicie na cele, karty, arkusze, klucze, `build.sh`.
+- [ ] **6. PDF trackera** w LaTeX (1–2 strony A4).
 
 ---
 
@@ -178,8 +178,13 @@ Wszystkie artefakty dydaktyczne w `openspec/changes/matma-egzamin-8-klasisty/` p
 
 ---
 
-## 7. Kryteria Akceptacji (Acceptance Criteria)
+## 7. Kryteria Akceptacji (v2)
 
-1. **100% pokrycia podstawy CKE 2024 (Klasy IV–VI + Klasy VII–VIII)**: Wszystkie wymagania szczegółowe ze stron 183–194 dokumentu `D20240996.pdf` (poza wyłączonym Działem XV kl. VII–VIII) mają przypisany moduł, *Kartę Supermocy A4* oraz zestaw *Quizów Sukcesu*.
-2. **Kompletność pakietów 01–15**: Żaden katalog działowy nie pozostaje pusty (w przeciwieństwie do archiwalnego `matematyka-dla-nadii`, gdzie foldery `10`, `11`, `12` były puste); każdy zawiera pliki `.md`, `.html` i `.pdf` (A4).
-3. **Gotowość do codziennej pracy w 15 minut**: Każdy moduł jest podzielony na atomowe porcje mieszczące się w formule `3 + 7 + 5 minut` (Rozgrzewka Kotwiczna + Sprint Zadaniowy + Audyt Detektywa).
+1. **Jedna karta = jeden cel.** Każdy cel z podstawy CKE ma osobną kartę, arkusz i klucz. Cele nie są łączone.
+2. **1 strona A4 na każdy PDF.** `build.sh` w każdym dziale kończy się sukcesem. Kontrola stron jest automatyczna.
+3. **Ilustracja i druga droga.** Każda karta ma ilustrację TikZ oraz drugą drogę do wyniku (np. dzielenie pod kreską, oś liczbowa, pieniądze).
+4. **Zapis w LaTeX.** Okres zapisujemy w nawiasie: $0{,}(3)$.
+5. **Jedna karta dziennie.** Tracker pokazuje, którą kartę robić każdego dnia, i nie dopuszcza kumulacji po przerwie.
+
+---
+

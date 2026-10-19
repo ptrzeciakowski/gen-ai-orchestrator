@@ -10,6 +10,12 @@
 - [`openspec/changes/archive/2026-09-12-2052-matematyka-dla-nadii`](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/archive/2026-09-12-2052-matematyka-dla-nadii)
 - Generator PDF: [`.ai/skills/matematyka-supermoce/scripts/generate_pdf.py`](file:///Users/pawel/git/gen-ai-orchestrator/.ai/skills/matematyka-supermoce/scripts/generate_pdf.py)
 
+> **Aktualizacja v2 (2026-10-19).** Ta sekcja i §3 poniżej zastępują wcześniejszy kontrakt HTML/Chrome.
+> - Format: **źródło LaTeX → PDF A4** (`tectonic`), bez Markdownu i HTML.
+> - Jednostka pracy: **jeden cel = jedna karta = jeden arkusz = jeden klucz**, każda karta i arkusz na **jednej stronie A4**.
+> - Tempo: **jedna karta dziennie** (blok 15 min: karta, arkusz 5 min, klucz i poprawa).
+> - Stare pakiety (`wersja-1/`) są zachowane jako punkt odniesienia i nie są już źródłem.
+
 ---
 
 ## 1. Cel i Zakres Architektury (Context & Goals)
@@ -86,22 +92,28 @@ Aby uniknąć duplikacji pracy i jednocześnie wyeliminować luki z archiwalnego
 
 ## 3. Kontrakty Artefaktów i Schematy Danych (Artifact Contracts & Print Schemas)
 
-### 3.1. Kontrakt Katalogu Modułu (`01`–`14`)
-Każdy katalog modułu `NN-nazwa-dzialu/` **MUSI** zawierać komplet 6 plików:
-1. `karta-supermocy-cheat-sheet.md` – źródło Markdown z 4–5 modułami kotwicznymi (*Złota Tabela Sprytu*, *Schemat Wizualny*, *Antypułapki CKE*, *Szacowanie w 3 sekundy*).
-2. `karta-supermocy-cheat-sheet.html` – szablon HTML/CSS zoptymalizowany pod **dokładnie 1 stronę A4 portrait**.
-3. `karta-supermocy-cheat-sheet.pdf` – wyrenderowany plik PDF (walidowany programowo: `pageCount == 1`).
-4. `quizy-sukcesu-5-minut.md` – źródło Markdown zawierające 4 karty 5-minutowe (Karta 1–4, po 3 zadania = 6 pkt na kartę) + Klucz odpowiedzi + Wskazówki w stylu GWO + Wskazówki coachingowe dla rodzica.
-5. `quizy-sukcesu-5-minut.html` – szablon HTML/CSS z podziałem `page-break-after: always`:
-   - **Strona 1 A4**: Karta 1 (Wtorek) i Karta 2 (Środa),
-   - **Strona 2 A4**: Karta 3 (Piątek – ze Spiralą Pamięci) i Karta 4 (Sobota / Boss),
-   - **Strona 3 A4**: Wskazówki naprowadzające (styl GWO) + Pełny Klucz Odpowiedzi Krok po Kroku + Wskazówki Coachingowe dla Rodzica.
-6. `quizy-sukcesu-5-minut.pdf` – wyrenderowany plik PDF (walidowany programowo: `pageCount == 3`).
+### 3.1. Kontrakt Katalogu Działu (`NN-nazwa-dzialu/`) — v2
+Każdy katalog działu **MUSI** mieć strukturę:
+```
+NN-nazwa-dzialu/
+├── preambula.tex        # wspólny szablon: A4, ramki regula/pulapka, naglowekKarty
+├── build.sh             # kompiluje karty/ i quizy/, odrzuca PDF > 1 strona
+├── karty/
+│   └── N-<cel>.tex/.pdf          # 1 cel = 1 karta = 1 strona A4
+└── quizy/
+    ├── N-arkusz.tex/.pdf         # 5-minutowy arkusz dla ucznia, 1 strona A4
+    └── N-klucz.tex/.pdf          # klucz + wskazówki dla rodzica (nie drukować dla ucznia)
+```
+- **Karta** ma w tej kolejności: cel, reguła w ramce, druga droga do tego samego wyniku, ilustracja TikZ (obowiązkowa), przykłady rozstrzygnięte, pułapki z kartkówki.
+- **Arkusz** ma 3 zadania po 2 pkt (6 pkt): rozgrzewka, zastosuj supermoc, pułapka. Pola na odpowiedzi to `\rule`, a puste miejsce w ułamku to `\square`.
+- **Zapis matematyczny** wyłącznie w LaTeX. Okres zapisujemy w nawiasie: $0{,}(3)$, $0{,}41(6)$ (nie `\overline`).
+- **Walidacja:** `build.sh` odrzuca każdy PDF, który nie ma dokładnie 1 strony.
 
-### 3.2. Kontrakt Katalogu `00-plan-i-tracker-15-minut/`
-1. `plan-przygotowan-15-minut.md` / `.html` / `.pdf` (**2 strony A4**):
-   - **Strona 1 A4**: **Mapa Przygody Egzaminacyjnej (Tracker 28 Tygodni $\times$ 5 Sesji 15-Minutowych)** – wizualna plansza z polami wyboru (`[ ]`) do odhaczania każdego 15-minutowego bloku, podzielona na 4 Fazy.
-   - **Strona 2 A4**: **Instrukcja Pedagogiczna dla Rodzica i Uczennicy („Rytuał 3 + 7 + 5 minut”)** + Tabela Rozkładu Tygodniowego (Tygodnie 1–28) + Zasady Bezpiecznika Anty-Stresowego.
+Stan na 2026-10-19: `01-liczby-i-ulamki` ma 4 cele (odwrotność, rozwinięcia, porównywanie, zaokrąglanie) z kartą, arkuszem i kluczem, plus wariant B karty zaokrąglania (`4b`, bez arkusza). `12-zadania-tekstowe-predkosc-droga-czas` ma kartę minut na godziny. Pozostałe działy nie są jeszcze wygenerowane.
+
+### 3.2. Kontrakt Katalogu `00-plan-i-tracker-15-minut/` — v2
+- `plan-przygotowan-15-minut.md` to źródło planu i trackera. Zawiera zasadę **jedna karta dziennie**, tabelę kart w kolejności oraz listę działów do wygenerowania.
+- Wersja PDF trackera nie jest jeszcze wygenerowana (do zrobienia w LaTeX).
 
 ### 3.3. Kontrakt Katalogu `15-mikro-arkusze-egzaminacyjne-cke/`
 1. `mikro-arkusz-egzaminacyjny-6x15min.md` / `.html` / `.pdf`:
@@ -111,22 +123,16 @@ Każdy katalog modułu `NN-nazwa-dzialu/` **MUSI** zawierać komplet 6 plików:
      - **Poziom 1 (Wskazówka Detektywa – zanim spojrzysz do rozwiązania)**: 1 zdanie naprowadzające,
      - **Poziom 2 (Rozwiązanie za punkty CKE)**: Rozpisanie każdego punktu cząstkowego (za co egzaminator CKE daje 1 pkt, 2 pkt, 3 pkt).
 
-### 3.4. Wymagania Techniczne CSS dla Druku A4
-```css
-@page {
-  size: A4 portrait;
-  margin: 8mm 10mm 8mm 10mm;
-}
-* {
-  box-sizing: border-box;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-}
-.page-break {
-  page-break-after: always;
-  break-after: page;
-}
+### 3.4. Wymagania Techniczne dla Druku A4 — v2
+```latex
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=1.5cm]{geometry}
+\usepackage{fontspec}          % silnik tectonic (XeTeX)
+\setmainfont{Arial}            % UWAGA: systemowa czcionka macOS; do zmiany przy przenoszeniu
+\usepackage[polish]{babel}
+\usepackage{amsmath,tikz,tcolorbox,enumitem,booktabs}
 ```
+Wszystkie kolory i ramki (`regula`, `pulapka`, `naglowekKarty`) pochodzą z `preambula.tex`. Nie definiuj ich lokalnie.
 
 ---
 
