@@ -24,6 +24,8 @@ Dokumenty `00`–`05` to historia diagnozy z września 2026 (dane: 77 498 plikó
 
 **D3. Kontekst przed rodzajem dokumentu.** Osoba, obiekt (lokal, auto) lub projekt (firma, rok) ma pierwszeństwo przed typem dokumentu. Dlatego zostają osobne gałęzie dzieci w Zdrowiu, Kuba w Rodzinie, `Pod-Strzecha-7`, `VW-Golf-Opole`, firmy i lata w Pracy. Dokument ma jedno miejsce podstawowe, ewentualnie skrót w drugim — bez rozchodzących się kopii.
 
+**D3a. Skróty tylko za zgodą (decyzja z 2026-10-21). Dokument lub folder pasujący do kilku kategorii ma jedno miejsce podstawowe; skrót w drugim miejscu powstaje wyłącznie na wyraźną decyzję użytkownika, osobno dla każdego przypadku. Co do zasady skrótów nie mnożymy. Wyjątek zatwierdzony: skrót do folderu zdrowia danej osoby w jej podfolderze w `02 👪 Rodzina` oraz skrót do dokumentów zdrowotnych z `Edukacja Dzieci`.
+
 **D4. Niezrozumiała nazwa to powód do przeglądu, nie do usunięcia.** Niepewne pliki trafiają do `Inbox/Do-Przejrzenia` lub `…/Do-Przypisania`. Nie ma automatycznego usuwania, deduplikacji ani kasowania zbiorów na podstawie nazwy (Chrome, Gems, backupy, hasła, Takeout).
 
 **D5. Folder `25📄 Paweł - dokumenty` rozbijany w dwóch krokach.** Najpierw całe rozpoznane podfoldery (13) trafiają do dziedzin z zachowaniem pochodzenia (`Import-z-25`); dopiero potem selektywnie włączane są pojedyncze pliki. Osiem plików luzem w 25 idzie do `Inbox/Do-Przejrzenia/Pliki-z-25`. Folder 25 usuwa się, gdy każdy element ma świadomy cel.
@@ -71,16 +73,16 @@ Poufność: folder `01 🔒 Poufne Dokumenty` jest granicą dostępu, ale **nie 
 
 ## 4. Konwencja nazw plików (Etap B)
 
-Wzorzec: `YYYY-MM-DD-Temat-Opis.ext`, warianty `YYYY-MM-…`, `YYYY-…`, `Temat-Opis.ext`. Szczegóły: [10](./analysis/10-konwencja-nazewnictwa-plikow.md).
+Wzorzec: `YYYY-MM-DD Temat Opis.ext`, warianty `YYYY-MM …`, `YYYY …`, `Temat Opis.ext` (decyzja z 2026-10-21: spacje zamiast myślników, polskie znaki zachowane — jak w folderach). Szczegóły: [10](./analysis/10-konwencja-nazewnictwa-plikow.md).
 
 - **Zbędne spacje** (decyzja z 2026-10-21): z każdej nazwy pliku usuwamy spacje wiodące i końcowe (także przed rozszerzeniem, np. `Michał .pdf` → `Michał.pdf`) oraz podwójne spacje. Dotyczy wszystkich plików, także tych spoza zakresu Etapu B.
 - **Imiona w nazwach**: jedna forma na osobę — `Natalka` (nie `Natalia`); `mama` małą literą; w nazwach dokumentów osobistych `Imię` bez nazwiska, chyba że trzeba rozróżnić osoby.
 - **Duplikaty nazw** w jednym folderze to osobne dokumenty do rozpoznania (inna osoba lub wersja), nie do nadpisania; przy identycznej treści zostaje wersja większa/pełniejsza.
-- Separator: pojedynczy myślnik; bez spacji i podkreślników; transliteracja polskich znaków (ą→a, ł→l…); zachowanie akronimów i identyfikatorów.
+- Separator: pojedyncza spacja między słowami i po dacie; myślniki tylko w dacie i w identyfikatorach; wzorzec `Typ - Osoba` dla dokumentów osobistych zostaje; bez podkreślników; polskie znaki zachowane (NFC); zachowanie akronimów i identyfikatorów.
 - Data wyłącznie z dowodu w nazwie lub treści dokumentu; nigdy z daty utworzenia/modyfikacji w Drive; dwucyfrowy rok (`30.05.23`) wymaga decyzji; bez wymyślonych dni/miesięcy.
 - Rozszerzenie rzeczywiste (także wieloczłonowe); dokumentom natywnym Google nie dopisujemy `.gdoc/.gsheet/.gslides` — typ z MIME.
 - `V2` → `v2` tylko gdy potwierdzone; brak `v1` z domysłu; `(1)` nie dowodzi duplikatu.
-- Kolizje (też po transliteracji i NFC, też między propozycjami) blokują pozycję; bez auto-numeracji.
+- Kolizje (też po NFC, też między propozycjami) blokują pozycję; bez auto-numeracji.
 - Domyślnie poza zakresem: kopie aplikacyjne, Takeout, foldery zarządzane przez aplikacje, skróty, pliki spoza My Drive, pliki bez prawa zmiany nazwy.
 - Raport `stara → nowa`: ID, rodzic, MIME, reguła, źródło i dokładność daty, konflikt, status `unchanged/proposed/blocked/excluded`, decyzja. Raport zawiera prywatne metadane — poza Gitem.
 
@@ -109,7 +111,7 @@ Dry-run v2 (raport 12): 42 383 pozycje w My Drive, 28 folderów i 53 pliki w roo
 | Przeniesienie zrywa zapis z aplikacji (Notability, Chrome, skaner paragonów) | test nowego zapisu przed likwidacją starego miejsca; skrót jako punkt wejścia |
 | Zmiana rodzica zmienia dziedziczone uprawnienia | audyt uprawnień źródła i celu przed zapisem; zapis `before` |
 | Rollback niemożliwy po późniejszych zmianach | cofanie tylko warunkowe; backup Takeout ręcznie; nie obiecujemy odwracalności |
-| Transliteracja → kolizje i utrata rozpoznawalności nazw własnych | blokada kolizji, wyjątki dla zasobów aplikacyjnych, review |
+| Zmiana nazw → kolizje po normalizacji spacji i NFC | blokada kolizji, wyjątki dla zasobów aplikacyjnych, review |
 | Takeout nie odtwarza Dysku 1:1 (uprawnienia, wersje) | traktować jako eksport danych, nie jako rollback |
 
 ## 7. Otwarte decyzje użytkownika (bramka przed zapisem)

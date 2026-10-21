@@ -12,7 +12,7 @@ Etap B rozpoczyna się po zweryfikowaniu etapu A. Obejmuje audyt nazw, raport `s
 
 ## 2. Analiza istniejących nazw i granice danych
 
-[Dokument 06](06-optymalna-struktura-i-procesy-zarzadzania.md) wymaga bezspacyjnych nazw folderów, a w tabeli wzorców plików podaje m.in. `YYYY-MM-DD - [Podmiot] - [Przedmiot].ext` i `2026-07-24 - Warta - Polisa Toyota Corolla.pdf`. Propozycja usuwa tę niespójność przez rozszerzenie zasady pojedynczego myślnika na pliki.
+[Dokument 06](06-optymalna-struktura-i-procesy-zarzadzania.md) wymaga bezspacyjnych nazw folderów, a w tabeli wzorców plików podaje m.in. `YYYY-MM-DD - [Podmiot] - [Przedmiot].ext` i `2026-07-24 - Warta - Polisa Toyota Corolla.pdf`. **Decyzja z 2026-10-21 zastępuje ten kierunek:** nazwy plików, tak jak nazwy folderów, mają spacje i polskie znaki (myślniki obniżały czytelność). Poniższe reguły i przykłady przedstawiają stan po tej decyzji; wcześniejszy wariant z myślnikami i transliteracją jest historyczny.
 
 Tabela w dokumencie 07 opisuje 52 pliki roota: występują daty `30.05.23`, pełne daty ISO w nazwach budżetu, spacje, podkreślniki, znaki diakrytyczne oraz oznaczenia `V2` i `(1)`. Część dat proponowanych w 07 wynika z kontekstu, a nie nazwy źródłowej.
 
@@ -20,20 +20,20 @@ To analiza zapisanej mapy, nie aktualnego konta. Brakuje pełnego bieżącego wy
 
 ## 3. Standard
 
-Podstawowy wzorzec: `YYYY-MM-DD-Temat-Opis.ext`. Dopuszczalne warianty: `YYYY-MM-Temat-Opis.ext`, `YYYY-Temat-Opis.ext` i `Temat-Opis.ext`, gdy data jest nieznana lub nie ma znaczenia. Dla dokumentu natywnego Google wzorzec nie ma sztucznego rozszerzenia.
+Podstawowy wzorzec: `YYYY-MM-DD Temat Opis.ext`. Dopuszczalne warianty: `YYYY-MM Temat Opis.ext`, `YYYY Temat Opis.ext` i `Temat Opis.ext`, gdy data jest nieznana lub nie ma znaczenia. Dla dokumentu natywnego Google wzorzec nie ma sztucznego rozszerzenia.
 
 | Element | Reguła |
 | :--- | :--- |
-| Separator | Pojedynczy myślnik; bez spacji i podkreślników między słowami. Bez myślnika na początku i końcu. |
+| Separator | Pojedyncza spacja między słowami i po dacie; myślniki tylko wewnątrz daty (`YYYY-MM-DD`) i w identyfikatorach. Bez podkreślników, spacji na początku i końcu oraz podwójnych spacji. Wyjątek: ustalony wzorzec `Typ - Osoba` w dokumentach osobistych (np. `Dowód osobisty - Paweł.pdf`). |
 | Data | Kolejność rok–miesiąc–dzień. Dokładność zgodna z dowodem; nie dopisujemy fikcyjnego dnia ani miesiąca. |
 | Znaczenie daty | Data dokumentu, zdarzenia lub okresu rozliczeniowego wskazana w raporcie; nie zastępujemy jej automatycznie datą utworzenia lub modyfikacji w Drive. |
-| Litery | Bez polskich znaków diakrytycznych: ą→a, ć→c, ę→e, ł→l, ń→n, ó→o, ś→s, ź/ż→z; analogicznie wielkie litery. |
-| Nazwy własne | Zachować sens, identyfikatory, markę i rozpoznawalność po transliteracji. Inne alfabety i nieobsługiwane znaki kierować do ręcznego review. |
+| Litery | Polskie znaki diakrytyczne zachowane (jak w nazwach folderów); bez transliteracji. Unicode w formie NFC. |
+| Nazwy własne | Zachować sens, identyfikatory, markę i rozpoznawalność. Inne alfabety i nieobsługiwane znaki kierować do ręcznego review. |
 | Wielkość liter | Czytelne człony jak w przykładach; zachować akronimy ALK, ISO i identyfikatory. Nie wymuszać automatycznie zmiany wielkości liter nazw własnych. |
 | Wersja | Potwierdzone `V2` normalizować do końcowego `v2`. Nie dopisywać `v1` na podstawie braku sufiksu i nie uznawać starej wersji za zbędną. |
 | Rozszerzenie | Zachować rzeczywiste rozszerzenie pliku, również wieloczłonowe. Dokumentom natywnym Google nie dopisywać `.gdoc`, `.gsheet` ani `.gslides`; typ ustalać z MIME. |
 | Opis | Nie wymyślać treści z niejasnego tytułu. Nowy opis semantyczny wymaga potwierdzenia. |
-| Kolizja | Blokować zmianę przy kolizji w folderze docelowym, również między propozycjami. Sprawdzać Unicode NFC i kolizje po transliteracji; podobieństwo bez uwzględnienia wielkości liter zgłaszać do review. |
+| Kolizja | Blokować zmianę przy kolizji w folderze docelowym, również między propozycjami. Sprawdzać Unicode NFC; podobieństwo bez uwzględnienia wielkości liter zgłaszać do review. |
 
 ## 4. Przykłady z mapy
 
@@ -41,15 +41,15 @@ Poniższe propozycje nie są zatwierdzonym planem operacji. Nazwy dokumentów na
 
 | Obecna nazwa według mapy | Propozycja | Warunek |
 | :--- | :--- | :--- |
-| `Apteki ALK 30.05.23.xlsx` | `2023-05-30-Apteki-ALK-Zestawienie.xlsx` | Potwierdzić rozwinięcie dwucyfrowego roku i dopisanie „Zestawienie”. |
-| `Bilet - WH64222365.pdf` | `2026-08-Bilet-WH64222365.pdf` | Miesiąc i rok pochodzą z propozycji 07; potwierdzić w dokumencie. Bez potwierdzenia: `Bilet-WH64222365.pdf`. |
-| `Analiza zużycia energii i fotowoltaiki` | `Analiza-Zuzycia-Energii-i-Fotowoltaiki` | Nie dopisywać roku 2026 tylko dlatego, że występuje w mapie. Potwierdzić MIME i rzeczywistą nazwę. |
-| `Plan wycieczki - Tatry Wysokie (Słowacja) V2` | `2026-08-Tatry-Wysokie-Slowacja-Plan-Wycieczki-v2` | Potwierdzić datę i kolejność członów; bez potwierdzonej daty pominąć prefiks. |
+| `Apteki ALK 30.05.23.xlsx` | `2023-05-30 Apteki ALK Zestawienie.xlsx` | Potwierdzić rozwinięcie dwucyfrowego roku i dopisanie „Zestawienie”. |
+| `Bilet - WH64222365.pdf` | `2026-08 Bilet WH64222365.pdf` | Miesiąc i rok pochodzą z propozycji 07; potwierdzić w dokumencie. Bez potwierdzenia: `Bilet WH64222365.pdf`. |
+| `Analiza zużycia energii i fotowoltaiki` | `Analiza zużycia energii i fotowoltaiki` | Nie dopisywać roku 2026 tylko dlatego, że występuje w mapie. Potwierdzić MIME i rzeczywistą nazwę. |
+| `Plan wycieczki - Tatry Wysokie (Słowacja) V2` | `2026-08 Tatry Wysokie Słowacja Plan wycieczki v2` | Potwierdzić datę i kolejność członów; bez potwierdzonej daty pominąć prefiks. |
 
 ## 5. Reguły transformacji i wyjątki
 
 1. Odczytać rzeczywistą nazwę, ID, MIME i ID rodzica; rozdzielić rozszerzenie tylko dla rzeczywistego pliku binarnego.
-2. Znormalizować Unicode, transliterować obsługiwane znaki i zastąpić odstępy oraz podkreślniki pojedynczym myślnikiem w części opisowej.
+2. Znormalizować Unicode (NFC), usunąć zbędne spacje oraz zastąpić podkreślniki i myślniki-separatory pojedynczą spacją w części opisowej.
 3. Nie zmieniać automatycznie interpunkcji wewnątrz identyfikatora. Usunięcie nawiasów, dwukropka lub zmiana kolejności słów musi być jawna w raporcie.
 4. Rozpoznać datę wyłącznie na podstawie udokumentowanej reguły; niejednoznaczne daty, w tym dwucyfrowe lata, wymagają decyzji.
 5. Sprawdzić proponowane nazwy względem wszystkich rodzeństw oraz całego planu. Kolizje blokować, bez automatycznej numeracji, nadpisywania lub deduplikacji.

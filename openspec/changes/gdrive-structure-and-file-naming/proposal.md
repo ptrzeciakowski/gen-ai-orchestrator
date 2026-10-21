@@ -16,7 +16,7 @@ Potrzebne są dwa niezależnie planowane i weryfikowane etapy: najpierw migracja
   - Wdrożono moduł `planner.py` (schemat planu `v2`), obsługę rzeczywistego ID roota, zawężenie skanu do potwierdzonych potomków My Drive, procedurę bezpieczeństwa `SAFETY.md` oraz 12 testów jednostkowych (`test_planner.py`).
   - Wykonano poprawiony odczyt `dry-run v2` ([12 — poprawiony dry-run](./reports/12-poprawiony-dry-run-i-plan-bezpiecznej-migracji.md)): 42 383 potwierdzone pozycje w My Drive, 77 zaplanowanych operacji (11 zmian nazw folderów, 22 utworzenia brakujących folderów, 44 przeniesienia plików) oraz 36 pozycji `blocked` wymagających decyzji użytkownika przed odblokowaniem zapisu.
 - Etap B: po weryfikacji A zinwentaryzować nazwy w podfolderach i wygenerować raport stara nazwa → nowa nazwa. Zmieniać wyłącznie zatwierdzone pozycje.
-- Przyjąć proponowany format `YYYY-MM-DD-Temat-Opis.ext`, z wariantami miesiąca, roku lub bez daty; pojedyncze myślniki, transliteracja polskich znaków i rzeczywiste rozszerzenia. Nie dopisywać sztucznych rozszerzeń dokumentom Google.
+- Przyjąć proponowany format `YYYY-MM-DD Temat Opis.ext`, z wariantami miesiąca, roku lub bez daty; spacje zamiast myślników (decyzja z 2026-10-21), polskie znaki zachowane i rzeczywiste rozszerzenia. Nie dopisywać sztucznych rozszerzeń dokumentom Google.
 - Blokować niejednoznaczne daty, opisy, kolizje i zmieniony stan źródła. Zachować ID oraz dziennik przed/po do weryfikacji i warunkowego cofania.
 - Backup przygotować ręcznie przez Takeout, z potwierdzeniem zakresu i ograniczeń eksportu. Nie dodawać skryptu backupowego.
 - Szczegółowy standard, przykłady, wyjątki i plan: [10 — konwencja nazw plików](./analysis/10-konwencja-nazewnictwa-plikow.md).
@@ -57,7 +57,7 @@ Usuwanie plików, opróżnianie kosza, deduplikacja, migracja zdjęć, szyfrowan
 - W `dry-run v2` potwierdzono 42 383 pozycje w drzewie My Drive, 28 folderów i 53 pliki w root (wobec 52 w historycznej mapie 07 — 1 dodatkowa pozycja oznaczona do przeglądu). Nadal brakuje pełnego audytu nazw wewnątrz wszystkich podfolderów (zadanie Etapu B).
 - 36 pozycji `blocked` / do decyzji w `dry-run v2` (m.in. przypisanie karty szkolnej, energii, firm/projektów, poddrzew medycznych, dokumentów tożsamości oraz podfolderów folderu `25`) wymaga ręcznego rozstrzygnięcia przed zapisem.
 - Daty biletu i planów podróży oraz rozwinięcie `23` do `2023` wymagają potwierdzenia. Nie wolno przyjmować dat utworzenia/modyfikacji jako daty dokumentu bez dowodu.
-- Transliteracja może powodować kolizje i osłabić rozpoznawalność nazw własnych. Zasoby aplikacyjne wymagają wyjątków.
+- Normalizacja nazw może powodować kolizje. Zasoby aplikacyjne wymagają wyjątków.
 - Takeout nie jest zakładanym mechanizmem odtworzenia 1:1; wybór folderów i kompletność kopii trzeba potwierdzić na koncie.
 - Planer `v2` (`planner.py`) poprawnie rozwiązuje rzeczywiste ID roota i ogranicza skan do My Drive w trybie odczytu, natomiast nowy wykonawca `apply` obsługujący schemat `v2`, pełną weryfikację po partii i warunkowy rollback wymaga jeszcze implementacji i testów na osobnym koncie testowym Drive.
 - Cofanie może być zablokowane przez późniejsze zmiany lub kolizje. Nie obiecujemy bezwarunkowej odwracalności.
@@ -68,4 +68,4 @@ Usuwanie plików, opróżnianie kosza, deduplikacja, migracja zdjęć, szyfrowan
 2. Etap B rozpoczyna się po weryfikacji A; obejmuje kompletny raport zakresu i zatwierdzone pozycje.
 3. Niepewne daty, opisy, kolizje i zmieniony stan blokują operację; brak fikcyjnych dat i sztucznych rozszerzeń.
 4. Każda wykonana operacja ma ID, zapis stanu przed/po, wynik oraz warunki cofania zgodne z `SAFETY.md`.
-5. Testy obejmują rzeczywiste ID roota, kolizje po transliteracji, dokumenty Google, ponowne uruchomienie, błędy częściowe i cofanie.
+5. Testy obejmują rzeczywiste ID roota, kolizje po normalizacji, dokumenty Google, ponowne uruchomienie, błędy częściowe i cofanie.

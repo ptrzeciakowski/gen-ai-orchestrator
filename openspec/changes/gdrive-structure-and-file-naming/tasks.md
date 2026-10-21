@@ -34,13 +34,13 @@ Status: w realizacji (Etap A: zakończono fazę analizy `00`–`10`, konsolidacj
   - **Kryteria akceptacji**: Rekurencyjny odczyt nazw w podfolderach objętych zakresem po migracji struktury, statystyka wzorców i identyfikacja zasobów aplikacyjnych wymagających wykluczenia.
 - [ ] **Doprecyzowanie deterministycznego modułu normalizacji nazw**:
   - **Pliki**: `analysis/10-konwencja-nazewnictwa-plikow.md`, nowy moduł normalizatora w `scripts/gdrive_migration/`.
-  - **Kryteria akceptacji**: Reguły formatu `YYYY-MM-DD-Temat-Opis.ext` (oraz wariantów `YYYY-MM`, `YYYY`, bez daty), transliteracja polskich znaków, brak sztucznych rozszerzeń dla natywnych dokumentów Google, blokada przy niejednoznacznej dacie lub kolizji nazw w tym samym folderze.
+  - **Kryteria akceptacji**: Reguły formatu `YYYY-MM-DD Temat Opis.ext` (oraz wariantów `YYYY-MM`, `YYYY`, bez daty), zachowanie polskich znaków i normalizacja spacji, brak sztucznych rozszerzeń dla natywnych dokumentów Google, blokada przy niejednoznacznej dacie lub kolizji nazw w tym samym folderze.
 - [ ] **Wygenerowanie raportu propozycji zmian nazw (`stara nazwa → nowa nazwa`)**:
   - **Pliki**: lokalny raport JSON/Markdown w `scripts/gdrive_migration/`.
   - **Kryteria akceptacji**: Każda pozycja zawiera `ID`, `stara nazwa`, `nowa nazwa`, `reguła`, `źródło daty`, `konflikt` oraz pole decyzji (`zatwierdzone` / `odrzucone` / `blocked`).
 - [ ] **Testy jednostkowe normalizacji i cofania zmian nazw**:
   - **Pliki**: testy jednostkowe w `scripts/gdrive_migration/`.
-  - **Kryteria akceptacji**: Pokrycie testami transliteracji, dat częściowych, natywnych dokumentów Google, rozszerzeń wieloczłonowych, kolizji po transliteracji, idempotencji i warunkowego cofania z dziennika przed/po.
+  - **Kryteria akceptacji**: Pokrycie testami normalizacji spacji i Unicode, dat częściowych, natywnych dokumentów Google, rozszerzeń wieloczłonowych, kolizji po normalizacji, idempotencji i warunkowego cofania z dziennika przed/po.
   - **Weryfikacja**: `scripts/gdrive_migration/.venv/bin/python -m unittest -v`.
 - [ ] **Zatwierdzenie pozycji raportu, wykonanie zmian nazw i weryfikacja**:
   - **Pliki**: `scripts/gdrive_migration/migrate.py`, dziennik operacji i raport weryfikacji.
