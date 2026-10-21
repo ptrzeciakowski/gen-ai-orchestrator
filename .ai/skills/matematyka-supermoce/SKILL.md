@@ -80,6 +80,11 @@ Struktura każdej karty, w tej kolejności:
 Zasady techniczne:
 - Każdy plik zaczyna się od `\documentclass[11pt,a4paper]{article}` i `\input{../preambula}`.
 - Zapisy w LaTeX: `$...$`, `\dfrac`, okres zapisuj w nawiasie, np. `0{,}(3)` (nie `\overline`), `\text{}` dla jednostek.
+- **Ułamki piętrowe nie mogą nachodzić na siebie.** Ułamki `\dfrac` w tabelach (`tabular`) i w tekście powiększają wiersz, więc przy domyślnym odstępie licznik jednego wiersza zachodzi na mianownik poprzedniego. Zasady:
+  - W każdej tabeli z ułamkami ustaw `\renewcommand{\arraystretch}{1.6}` lub więcej, a przy ułamkach w kilku kolumnach jednocześnie dodaj `\\[6pt]` po wierszu.
+  - Ułamki w tabelach i zdaniach zapisuj konsekwentnie: `\dfrac` (powiększone) albo `\frac` (małe), nie mieszaj obu w jednym wierszu.
+  - Ułamek w ciągłym tekście, który ma nie rozpychać linii, zapisuj `\frac`, a nie `\dfrac`.
+  - Po kompilacji **obejrzyj PDF** (np. `sips -s format png plik.pdf --out plik.png`) i sprawdź, czy żaden ułamek, indeks ani linia ułamkowa nie nachodzi na sąsiedni wiersz lub kolumnę. Jeśli zwiększenie odstępu wypycha treść na drugą stronę, skróć treść, nie zmniejszaj odstępu poniżej `1.6`.
 - Kolory i ramki pochodzą z `preambula.tex`. Nie definiuj ich lokalnie.
 - Wcześniejsze „moduły" (Klub Przyjaciół, Mur i Policjant, zasada pizzy) to treści przykładów i pułapek, a nie osobne sekcje.
 
