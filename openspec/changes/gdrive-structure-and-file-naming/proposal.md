@@ -8,7 +8,7 @@
 
 Dokument 06 wymaga nazw folderów bez spacji, ale podaje wzorce nazw plików ze spacjami. Mapa 07 łączy przenoszenie zasobów z proponowanymi zmianami nazw i datami częściowo wynikającymi z kontekstu. Review 09 wskazuje korekty mapowania, a zaimportowany skrypt migracyjny w wersji pierwotnej posiadał ograniczenia uniemożliwiające bezpieczne wykonanie (co potwierdził pierwszy raport dry-run 11).
 
-Potrzebne są dwa niezależnie planowane i weryfikowane etapy: najpierw migracja katalogów bez zmian nazw plików (Etap A, dla którego wdrożono już nowy planer `v2` i wykonano poprawiony dry-run 12), a następnie audyt i standaryzacja nazw plików (Etap B). Wszystkie artefakty analityczne (`00`–`12`), dane inwentaryzacyjne, prezentacja Beamer (`latex-slides/`) oraz skrypty (`scripts/`) zostały skonsolidowane bezpośrednio w katalogu tej zmiany.
+Potrzebne są dwa niezależnie planowane i weryfikowane etapy: najpierw migracja katalogów bez zmian nazw plików (Etap A, dla którego wdrożono już nowy planer `v2` i wykonano poprawiony dry-run 12), a następnie audyt i standaryzacja nazw plików (Etap B). Wszystkie artefakty analityczne (`00`–`12`), dane inwentaryzacyjne, prezentacja Beamer (`analysis/latex-slides/`) oraz skrypty (`scripts/`) zostały skonsolidowane bezpośrednio w katalogu tej zmiany.
 
 ## What Changes
 

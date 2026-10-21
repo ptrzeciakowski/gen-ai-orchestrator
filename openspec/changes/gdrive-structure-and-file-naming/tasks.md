@@ -4,7 +4,7 @@ Status: w realizacji (Etap A: zakończono fazę analizy `00`–`10`, konsolidacj
 
 ## Faza 0 — Eksploracja, analiza architektury i konsolidacja artefaktów
 
-- [x] Przeprowadzić wielowymiarowy audyt Google Drive i wygenerować dokumentację bazową (`00`–`05`) wraz ze zrzutem metadanych (`analysis/data/drive_analysis_data.json`, `analysis/data/drive_dataset_complete.json`, `analysis/drive_context_for_agents.md`) oraz prezentacją (`latex-slides/`).
+- [x] Przeprowadzić wielowymiarowy audyt Google Drive i wygenerować dokumentację bazową (`00`–`05`) wraz ze zrzutem metadanych (`analysis/data/drive_analysis_data.json`, `analysis/data/drive_dataset_complete.json`, `analysis/drive_context_for_agents.md`) oraz prezentacją (`analysis/latex-slides/`).
 - [x] Opracować docelową architekturę katalogów (`analysis/06-optymalna-struktura-i-procesy-zarzadzania.md`), mapę migracji (`analysis/07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md`), analizę uprawnień/emoji (`analysis/08-uprawnienia-automatyzacja-i-dylemat-emoji.md`), korekty mapowania (`analysis/09-review-katalogow-i-mapowania-gdrive.md`) oraz standard nazewnictwa plików (`analysis/10-konwencja-nazewnictwa-plikow.md`).
 - [x] Przenieść i skonsolidować wszystkie artefakty oraz skrypty z `sandbox/2026-09-19-gdrive-analysis` bezpośrednio w katalogu zmiany `openspec/changes/gdrive-structure-and-file-naming/`.
 

@@ -1,10 +1,22 @@
 import sqlite3
 import os
+from pathlib import Path
 import json
 from datetime import datetime
 from collections import defaultdict, Counter
 
-DB_PATH = "/Users/pawel/Library/Application Support/Google/DriveFS/113301283206781212965/metadata_sqlite_db"
+def find_db():
+    """Baza metadanych DriveFS: GDRIVE_DRIVEFS_DB albo pierwsze znalezione konto."""
+    env = os.environ.get("GDRIVE_DRIVEFS_DB")
+    if env:
+        return env
+    found = sorted(Path.home().glob("Library/Application Support/Google/DriveFS/*/metadata_sqlite_db"))
+    if not found:
+        raise SystemExit("Nie znaleziono bazy DriveFS; ustaw GDRIVE_DRIVEFS_DB.")
+    return str(found[0])
+
+DB_PATH = find_db()
+ANALYSIS_DIR = Path(__file__).resolve().parents[2] / "analysis"
 
 def format_size(s):
     if s is None:
@@ -268,7 +280,7 @@ def main():
         "total_candidates_found": len(candidates_for_deletion)
     }
 
-    out_file = "/Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/analysis/data/drive_analysis_data.json"
+    out_file = str(ANALYSIS_DIR / "data" / "drive_analysis_data.json")
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
