@@ -37,6 +37,7 @@ Nie wskazano istniejącej kanonicznej specyfikacji tych funkcji. Powyższe możl
 Wszystkie materiały z dawnego `sandbox/2026-09-19-gdrive-analysis` zostały przeniesione do katalogu zmiany `openspec/changes/gdrive-structure-and-file-naming/`. Zakres obejmuje skrypty w `openspec/changes/gdrive-structure-and-file-naming/scripts/`, raporty prywatnych metadanych poza Git i późniejsze uzupełnienie zasad z 06–07. Zachowano historyczne dokumenty (`00`–`09`) i pierwszy raport dry-run (`11`), dopisując uściślenia i wyniki `dry-run v2` (`12`) zamiast usuwać wcześniejszy kontekst.
 
 Punkty odniesienia w katalogu zmiany:
+- [design.md — skrót decyzji projektowych i źródeł prawdy](./design.md)
 - [00 — synteza i rekomendacje główne](./analysis/00-synteza-i-rekomendacje-glowne.md) (oraz analizy bazowe [01](./analysis/01-architektura-i-struktura.md), [02](./analysis/02-uprawnienia-bezpieczenstwo-archiwizacja.md), [03](./analysis/03-plan-czyszczenia-i-selekcja-plikow.md), [04](./analysis/04-workflow-nawyki-i-automatyzacja.md), [05](./analysis/05-wielowymiarowa-kategoryzacja-i-metryki.md))
 - [06 — architektura](./analysis/06-optymalna-struktura-i-procesy-zarzadzania.md)
 - [07 — mapa](./analysis/07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md)

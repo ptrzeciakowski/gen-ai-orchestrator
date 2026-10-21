@@ -1,5 +1,7 @@
 # Architektura Docelowa, Model Zarządzania i Procesy Higieny Cyfrowej Dysku Google
 
+> **Uwaga (2026-10-21):** konwencja nazw folderów zmieniona na `NN <emoji> Nazwa Ze Spacjami` z polskimi znakami i jednym emoji — zob. [design.md](../design.md) §3. Opis „bezspacyjnych” nazw poniżej jest historyczny.
+
 **Właściciel:** Paweł Trzeciakowski (`ptrzeciakowski@gmail.com`)  
 **Data opracowania:** 19 września 2026 r. (Aktualizacja: 11 października 2026 r.)  
 **Kluczowa decyzja strategiczna:** Odseparowanie archiwum fotograficzno-wideo ze struktury roboczej Dysku Google i migracja do ekosystemu **Google Photos** (**zrealizowane** – folder `88📸Zdjęcia` został usunięty). Nowe wyzwanie operacyjne: bezpieczna obsługa nowo powstałego archiwum **Takeout (~536 GB)** w chmurze i jego transfer do cold storage offline.  
