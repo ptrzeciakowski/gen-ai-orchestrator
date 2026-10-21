@@ -5,7 +5,7 @@ from datetime import datetime
 from collections import defaultdict, Counter
 
 DB_PATH = "/Users/pawel/Library/Application Support/Google/DriveFS/113301283206781212965/metadata_sqlite_db"
-OUT_DIR = "/Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming"
+OUT_DIR = "/Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/analysis"
 
 def format_size(s):
     if s is None:
@@ -242,7 +242,7 @@ def main():
         "deletion_candidates": deletion_groups
     }
 
-    with open(os.path.join(OUT_DIR, "drive_dataset_complete.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(OUT_DIR, "data", "drive_dataset_complete.json"), "w", encoding="utf-8") as f:
         json.dump(out_dataset, f, ensure_ascii=False, indent=2)
 
     # Now generate the Markdown Context Brief for subagents

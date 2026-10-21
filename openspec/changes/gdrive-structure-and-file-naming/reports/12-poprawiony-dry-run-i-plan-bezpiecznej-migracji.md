@@ -44,11 +44,11 @@ Liczba 42 383 różni się od 54 585 w pierwszym raporcie przede wszystkim dlate
 
 ## Artefakty
 
-- [Czytelny, szczegółowy raport dry-run](scripts/gdrive_migration/dry_run_report.md) — generowany automatycznie przez `plan`; operacje, konflikty i pełna lista propozycji z review 09.
-- [Plan v2](scripts/gdrive_migration/plan.json) i [bieżąca inwentaryzacja](scripts/gdrive_migration/inventory.json).
+- [Czytelny, szczegółowy raport dry-run](../scripts/gdrive_migration/dry_run_report.md) — generowany automatycznie przez `plan`; operacje, konflikty i pełna lista propozycji z review 09.
+- [Plan v2](../scripts/gdrive_migration/plan.json) i [bieżąca inwentaryzacja](../scripts/gdrive_migration/inventory.json).
 - Poprzednie wyniki zabezpieczone lokalnie w `scripts/gdrive_migration/reports/2026-10-13-original/`.
-- [Procedura bezpieczeństwa](scripts/gdrive_migration/SAFETY.md) — bramka zatwierdzenia, wymagania dla przyszłego wykonawcy, weryfikacja po partii i warunkowe ręczne odtworzenie.
-- [Testy](scripts/gdrive_migration/test_planner.py), [planer](scripts/gdrive_migration/planner.py) oraz [zaktualizowany README](scripts/gdrive_migration/README.md).
+- [Procedura bezpieczeństwa](../scripts/gdrive_migration/SAFETY.md) — bramka zatwierdzenia, wymagania dla przyszłego wykonawcy, weryfikacja po partii i warunkowe ręczne odtworzenie.
+- [Testy](../scripts/gdrive_migration/test_planner.py), [planer](../scripts/gdrive_migration/planner.py) oraz [zaktualizowany README](../scripts/gdrive_migration/README.md).
 
 Szczegółowe raporty i inwentaryzacje zawierają prywatne metadane, są ignorowane przez Git i pozostają lokalne; linki do nich nie muszą działać w innym klonie repozytorium. Nie kopiowano tokenów ani credentiali do raportów.
 

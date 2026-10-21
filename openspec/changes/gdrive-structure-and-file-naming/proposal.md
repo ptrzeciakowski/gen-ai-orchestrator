@@ -14,12 +14,12 @@ Potrzebne są dwa niezależnie planowane i weryfikowane etapy: najpierw migracja
 
 - Etap A: dopracować migrację katalogów i przenoszenie plików według 07 oraz korekt 09, zachowując nazwy plików.
   - Wdrożono moduł `planner.py` (schemat planu `v2`), obsługę rzeczywistego ID roota, zawężenie skanu do potwierdzonych potomków My Drive, procedurę bezpieczeństwa `SAFETY.md` oraz 12 testów jednostkowych (`test_planner.py`).
-  - Wykonano poprawiony odczyt `dry-run v2` ([12 — poprawiony dry-run](./12-poprawiony-dry-run-i-plan-bezpiecznej-migracji.md)): 42 383 potwierdzone pozycje w My Drive, 77 zaplanowanych operacji (11 zmian nazw folderów, 22 utworzenia brakujących folderów, 44 przeniesienia plików) oraz 36 pozycji `blocked` wymagających decyzji użytkownika przed odblokowaniem zapisu.
+  - Wykonano poprawiony odczyt `dry-run v2` ([12 — poprawiony dry-run](./reports/12-poprawiony-dry-run-i-plan-bezpiecznej-migracji.md)): 42 383 potwierdzone pozycje w My Drive, 77 zaplanowanych operacji (11 zmian nazw folderów, 22 utworzenia brakujących folderów, 44 przeniesienia plików) oraz 36 pozycji `blocked` wymagających decyzji użytkownika przed odblokowaniem zapisu.
 - Etap B: po weryfikacji A zinwentaryzować nazwy w podfolderach i wygenerować raport stara nazwa → nowa nazwa. Zmieniać wyłącznie zatwierdzone pozycje.
 - Przyjąć proponowany format `YYYY-MM-DD-Temat-Opis.ext`, z wariantami miesiąca, roku lub bez daty; pojedyncze myślniki, transliteracja polskich znaków i rzeczywiste rozszerzenia. Nie dopisywać sztucznych rozszerzeń dokumentom Google.
 - Blokować niejednoznaczne daty, opisy, kolizje i zmieniony stan źródła. Zachować ID oraz dziennik przed/po do weryfikacji i warunkowego cofania.
 - Backup przygotować ręcznie przez Takeout, z potwierdzeniem zakresu i ograniczeń eksportu. Nie dodawać skryptu backupowego.
-- Szczegółowy standard, przykłady, wyjątki i plan: [10 — konwencja nazw plików](./10-konwencja-nazewnictwa-plikow.md).
+- Szczegółowy standard, przykłady, wyjątki i plan: [10 — konwencja nazw plików](./analysis/10-konwencja-nazewnictwa-plikow.md).
 
 ## Capabilities
 
@@ -37,14 +37,14 @@ Nie wskazano istniejącej kanonicznej specyfikacji tych funkcji. Powyższe możl
 Wszystkie materiały z dawnego `sandbox/2026-09-19-gdrive-analysis` zostały przeniesione do katalogu zmiany `openspec/changes/gdrive-structure-and-file-naming/`. Zakres obejmuje skrypty w `openspec/changes/gdrive-structure-and-file-naming/scripts/`, raporty prywatnych metadanych poza Git i późniejsze uzupełnienie zasad z 06–07. Zachowano historyczne dokumenty (`00`–`09`) i pierwszy raport dry-run (`11`), dopisując uściślenia i wyniki `dry-run v2` (`12`) zamiast usuwać wcześniejszy kontekst.
 
 Punkty odniesienia w katalogu zmiany:
-- [00 — synteza i rekomendacje główne](./00-synteza-i-rekomendacje-glowne.md) (oraz analizy bazowe [01](./01-architektura-i-struktura-pro.md), [02](./02-uprawnienia-bezpieczenstwo-archiwizacja-pro.md), [03](./03-plan-czyszczenia-i-selekcja-plikow-flash.md), [04](./04-workflow-nawyki-i-automatyzacja-flash.md), [05](./05-wielowymiarowa-kategoryzacja-i-metryki-flashlite.md))
-- [06 — architektura](./06-optymalna-struktura-i-procesy-zarzadzania.md)
-- [07 — mapa](./07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md)
-- [08 — uprawnienia, automatyzacja i dylemat emoji](./08-uprawnienia-automatyzacja-i-dylemat-emoji.md)
-- [09 — review](./09-review-katalogow-i-mapowania-gdrive.md)
-- [10 — konwencja nazw plików](./10-konwencja-nazewnictwa-plikow.md)
-- [11 — raport dry-run migracji (v1)](./11-raport-dry-run-migracji-2026-10-13.md)
-- [12 — poprawiony dry-run i plan bezpiecznej migracji (v2)](./12-poprawiony-dry-run-i-plan-bezpiecznej-migracji.md)
+- [00 — synteza i rekomendacje główne](./analysis/00-synteza-i-rekomendacje-glowne.md) (oraz analizy bazowe [01](./analysis/01-architektura-i-struktura.md), [02](./analysis/02-uprawnienia-bezpieczenstwo-archiwizacja.md), [03](./analysis/03-plan-czyszczenia-i-selekcja-plikow.md), [04](./analysis/04-workflow-nawyki-i-automatyzacja.md), [05](./analysis/05-wielowymiarowa-kategoryzacja-i-metryki.md))
+- [06 — architektura](./analysis/06-optymalna-struktura-i-procesy-zarzadzania.md)
+- [07 — mapa](./analysis/07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md)
+- [08 — uprawnienia, automatyzacja i dylemat emoji](./analysis/08-uprawnienia-automatyzacja-i-dylemat-emoji.md)
+- [09 — review](./analysis/09-review-katalogow-i-mapowania-gdrive.md)
+- [10 — konwencja nazw plików](./analysis/10-konwencja-nazewnictwa-plikow.md)
+- [11 — raport dry-run migracji (v1)](./reports/11-raport-dry-run-migracji-2026-10-13.md)
+- [12 — poprawiony dry-run i plan bezpiecznej migracji (v2)](./reports/12-poprawiony-dry-run-i-plan-bezpiecznej-migracji.md)
 - [Stan skryptu migracji](./scripts/gdrive_migration/README.md) oraz [procedura bezpieczeństwa SAFETY.md](./scripts/gdrive_migration/SAFETY.md)
 
 ## Non-Goals

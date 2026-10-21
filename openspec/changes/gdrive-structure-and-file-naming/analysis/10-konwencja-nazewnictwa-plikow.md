@@ -2,7 +2,7 @@
 
 **Data:** 2026-10-12, Europe/Warsaw  
 **Status:** propozycja do wdrożenia po migracji katalogów; ten dokument nie uruchamia zmian na Dysku.  
-**Powiązana zmiana:** [propozycja OpenSpec](../../openspec/changes/gdrive-structure-and-file-naming/proposal.md).
+**Powiązana zmiana:** [propozycja OpenSpec](../proposal.md).
 
 ## 1. Dwa osobne etapy
 

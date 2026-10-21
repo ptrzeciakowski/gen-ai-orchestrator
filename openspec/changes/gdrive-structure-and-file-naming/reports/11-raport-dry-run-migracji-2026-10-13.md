@@ -28,10 +28,10 @@ Uruchomiono `scripts/gdrive_migration/migrate.py` z poleceniem `plan`. Na czas u
 
 Źródła raportu:
 
-- [plan.json](scripts/gdrive_migration/plan.json) — operacje, blokady i liczba pozycji;
-- [inventory.json](scripts/gdrive_migration/inventory.json) — metadane pozycji odczytanych z API;
-- [README skryptu](scripts/gdrive_migration/README.md) — ograniczenia implementacji;
-- [migrate.py](scripts/gdrive_migration/migrate.py) — rzeczywista logika skanowania i planowania.
+- [plan.json](../scripts/gdrive_migration/plan.json) — operacje, blokady i liczba pozycji;
+- [inventory.json](../scripts/gdrive_migration/inventory.json) — metadane pozycji odczytanych z API;
+- [README skryptu](../scripts/gdrive_migration/README.md) — ograniczenia implementacji;
+- [migrate.py](../scripts/gdrive_migration/migrate.py) — rzeczywista logika skanowania i planowania.
 
 Raport przygotowano lokalnie na podstawie istniejących wyników, bez ponownego odpytywania Google Drive. Pliki JSON są lokalne i ignorowane przez Git, więc linki mogą nie działać w innym klonie repozytorium.
 
@@ -93,7 +93,7 @@ Konsekwencje:
 
 1. Poprawić rozpoznawanie roota: pobierać jego rzeczywisty identyfikator i stosować go w planowaniu, kontrolach `apply` oraz `verify`.
 2. Jednoznacznie ograniczyć i opisać zakres skanowania oraz obsłużyć konflikty i istniejące foldery docelowe.
-3. Uzupełnić mapowanie zgodnie z dokumentami [07](07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md) i [09](09-review-katalogow-i-mapowania-gdrive.md).
+3. Uzupełnić mapowanie zgodnie z dokumentami [07](../analysis/07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md) i [09](../analysis/09-review-katalogow-i-mapowania-gdrive.md).
 4. Przetestować logikę na osobnym zestawie danych, a następnie ponownie wykonać planowanie z dostępem tylko do odczytu.
 5. Przed jakimkolwiek `apply` ręcznie zatwierdzić poprawiony plan i przygotować weryfikację oraz procedurę odtworzenia zmian.
 

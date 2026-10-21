@@ -4,7 +4,7 @@
 **Autor:** Antigravity  
 **Właściciel zasobów:** Paweł Trzeciakowski (`ptrzeciakowski@gmail.com`)  
 **Data opracowania:** 11 października 2026 r.  
-**Kontekst:** Wdrożenie nowej architektury katalogów Dysku Google ("Lean Knowledge & Asset Hub") w oparciu o mapę migracji [`07-mapa.md`](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/07-mapa.md) oraz specyfikację z [`06-optymalna-struktura-i-procesy-zarzadzania.md`](file:///Users/pawel/git/gen-ai-orchestrator/openspec/changes/gdrive-structure-and-file-naming/06-optymalna-struktura-i-procesy-zarzadzania.md).
+**Kontekst:** Wdrożenie nowej architektury katalogów Dysku Google ("Lean Knowledge & Asset Hub") w oparciu o mapę migracji [`07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md`](07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md) oraz specyfikację z [`06-optymalna-struktura-i-procesy-zarzadzania.md`](06-optymalna-struktura-i-procesy-zarzadzania.md).
 
 ---
 

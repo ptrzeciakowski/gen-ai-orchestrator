@@ -45,7 +45,7 @@ def file_mapping():
     substring matches: shortened names in the document must be reviewed.
     """
     mappings = []
-    for line in (DOCS / '07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md').read_text().splitlines():
+    for line in (DOCS / 'analysis' / '07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md').read_text().splitlines():
         cells = [cell.strip() for cell in line.split('|')]
         if len(cells) != 9 or not cells[1].isdigit():
             continue
@@ -75,7 +75,7 @@ def file_mapping():
 
 def folder_mapping():
     """Preserve all decisions from review 09, including conditional mappings."""
-    text = (DOCS / '09-review-katalogow-i-mapowania-gdrive.md').read_text()
+    text = (DOCS / 'analysis' / '09-review-katalogow-i-mapowania-gdrive.md').read_text()
     section = text.split('## 5. Skorygowana mapa')[1].split('## 7. Reguły')[0]
     result = []
     for line in section.splitlines():

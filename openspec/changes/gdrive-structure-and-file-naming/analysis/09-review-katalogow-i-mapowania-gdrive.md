@@ -34,7 +34,7 @@ Najważniejsze korekty:
 
 Podstawą propozycji docelowej są [06 — architektura i procesy](06-optymalna-struktura-i-procesy-zarzadzania.md), [07 — mapa migracji](07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md) i [08 — uprawnienia i nazewnictwo](08-uprawnienia-automatyzacja-i-dylemat-emoji.md). Starsze dokumenty 00–05 traktuję jako historię diagnozy, a nie równoległe instrukcje wykonawcze.
 
-Sprawdziłem również [zestawienie szczegółowe](drive_dataset_complete.json) i [zestawienie analityczne](drive_analysis_data.json). Zawierają stan opisany jako wrześniowy: 28 katalogów głównych i 49 plików luzem. Dokument 07 opisuje październikowy stan z 52 plikami i innym zestawem folderów. Taka aktualizacja jest możliwa, ale w tym katalogu nie ma odpowiadającego jej nowego eksportu metadanych. **Nie przedstawiam zapisanej mapy jako zweryfikowanego aktualnego stanu konta.**
+Sprawdziłem również [zestawienie szczegółowe](data/drive_dataset_complete.json) i [zestawienie analityczne](data/drive_analysis_data.json). Zawierają stan opisany jako wrześniowy: 28 katalogów głównych i 49 plików luzem. Dokument 07 opisuje październikowy stan z 52 plikami i innym zestawem folderów. Taka aktualizacja jest możliwa, ale w tym katalogu nie ma odpowiadającego jej nowego eksportu metadanych. **Nie przedstawiam zapisanej mapy jako zweryfikowanego aktualnego stanu konta.**
 
 JSON zawiera nazwy bezpośrednich podfolderów i zagregowane liczby plików, nie pełny spis wszystkich 77 498 plików. Nie zawiera też audytu uprawnień. To wystarcza do wskazania luk w mapowaniu, ale nie do rozstrzygnięcia zawartości niejednoznacznych folderów.
 
