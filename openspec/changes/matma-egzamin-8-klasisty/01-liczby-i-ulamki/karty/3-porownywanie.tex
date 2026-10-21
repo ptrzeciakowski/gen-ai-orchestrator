@@ -10,33 +10,31 @@
 \begin{enumerate}[leftmargin=*, itemsep=2pt]
   \item \textbf{Dziesiętne:} wyrównaj liczbę cyfr po przecinku zerami. $0{,}6$ vs $0{,}57$: $0{,}60 > 0{,}57$.
   \item \textbf{Okres:} rozpisz okres, aż będzie widać różnicę. $0{,}(4)=0{,}444\ldots > 0{,}400 = 0{,}4$.
-  \item \textbf{Motylek} (ułamki zwykłe): pomnóż na krzyż. $\dfrac{a}{b}$ vs $\dfrac{c}{d}$ porównujemy $a\cdot d$ z $c\cdot b$.
+  \item \textbf{Wspólny mianownik} (ułamki zwykłe): rozszerz oba ułamki do tego samego mianownika i porównaj liczniki. $\dfrac{3}{4}$ vs $\dfrac{5}{7}$: $\dfrac{21}{28}>\dfrac{20}{28}$.
   \item \textbf{Ta sama góra / ten sam dół:} przy tym samym liczniku większy jest mniejszy mianownik ($\dfrac{3}{7}>\dfrac{3}{8}$).
 \end{enumerate}
 \end{regula}
 
 \vspace{0.4em}
-\textbf{Dlaczego motylek działa? Druga droga: oś liczbowa.} Porównanie to pytanie, która liczba leży bardziej na prawo. Przybliżmy fragment osi między $0{,}6$ a $0{,}8$:
+\textbf{Ułamki zwykłe krok po kroku: wspólny mianownik. Druga droga: oś liczbowa.} Porównajmy $\dfrac{5}{6}$ i $\dfrac{7}{9}$:
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item \textbf{Wspólny mianownik:} wypisz wielokrotności $6$: $6, 12, \mathbf{18}$ oraz $9$: $9, \mathbf{18}$. Najmniejsza wspólna to $18$.
+  \item \textbf{Rozszerz oba ułamki do mianownika $18$:} $\dfrac{5}{6}=\dfrac{5\cdot 3}{6\cdot 3}=\dfrac{15}{18}$ \quad oraz \quad $\dfrac{7}{9}=\dfrac{7\cdot 2}{9\cdot 2}=\dfrac{14}{18}$.
+  \item \textbf{Porównaj liczniki} (mianowniki są takie same): $15>14$, więc $\dfrac{5}{6}>\dfrac{7}{9}$.
+\end{enumerate}
+Na osi liczbowej, po podzieleniu jej na osiemnaste części, widać to samo: większy licznik leży bardziej na prawo.
 
 \begin{center}
-\begin{tikzpicture}[>=Stealth, x=2.2cm]
-  % Oś od 0,6 do 0,8; 1 jednostka na osi = 0,2 wartości (x=24cm, więc 0,6 -> 0, 0,8 -> 4.8cm)
-  \pgfmathsetmacro{\sc}{20}
-  \pgfmathsetmacro{\zero}{0.6}
-  \draw[->] (-0.2,0) -- (4.6,0) node[right, font=\small] {$x$};
-  \foreach \v in {0.6,0.65,0.7,0.75,0.8} {
-    \pgfmathsetmacro{\px}{(\v-0.6)*\sc}
+\begin{tikzpicture}[>=Stealth, x=1.6cm]
+  \draw[->] (-0.3,0) -- (6.5,0) node[right, font=\small] {$x$};
+  \foreach \k in {12,...,18} {
+    \pgfmathsetmacro{\px}{\k-12}
     \draw (\px,0.1) -- (\px,-0.1);
-    \node[below, font=\small] at (\px,-0.1) {\pgfmathprintnumber[fixed,precision=2]{\v}};
+    \node[below, font=\small] at (\px,-0.1) {$\frac{\k}{18}$};
   }
-  % 7/10 = 0,70 oraz 5/7 ~ 0,714
-  \pgfmathsetmacro{\pA}{(0.7-0.6)*\sc}
-  \pgfmathsetmacro{\pB}{(5/7-0.6)*\sc}
-  \fill[cel] (\pA,0) circle (2.2pt) node[above left=2pt, font=\small\bfseries, color=cel] {$\frac{7}{10}=0{,}7$};
-  \fill[okres] (\pB,0) circle (2.2pt) node[above right=2pt, font=\small\bfseries, color=okres] {$\frac{5}{7}\approx 0{,}714$};
-  \draw[dashed, okres] (\pB,0) -- (\pB,-0.5);
-  \node[font=\small, color=okres] at (\pB,-0.7) {$\frac{5}{7}$ leży bardziej na prawo};
-  \node[font=\small, anchor=west] at (-0.2,1.4) {Motylek: $5\cdot 10=50$, $7\cdot 7=49$, więc $50>49$, czyli $\dfrac{5}{7}>\dfrac{7}{10}$};
+  \fill[cel] (2,0) circle (2.2pt) node[above left=2pt, font=\small\bfseries, color=cel] {$\frac{14}{18}=\frac{7}{9}$};
+  \fill[okres] (3,0) circle (2.2pt) node[above right=2pt, font=\small\bfseries, color=okres] {$\frac{15}{18}=\frac{5}{6}$};
+  \node[font=\small, color=okres] at (3,-1.0) {$\frac{5}{6}$ leży bardziej na prawo};
 \end{tikzpicture}
 \end{center}
 
@@ -46,14 +44,15 @@
 \vspace{0.2em}
 \textbf{Przykłady rozstrzygnięte:}
 \begin{center}
-\renewcommand{\arraystretch}{1.4}
+\renewcommand{\arraystretch}{1.6}
 \begin{tabular}{@{}lll@{}}
 \toprule
 Porównanie & Metoda & Wynik \\
 \midrule
 $0{,}6$ vs $0{,}57$ & wyrównanie zerami: $0{,}60$ vs $0{,}57$ & $0{,}6>0{,}57$ \\
 $0{,}(4)$ vs $0{,}4$ & rozpisz okres: $0{,}444\ldots$ vs $0{,}400$ & $0{,}(4)>0{,}4$ \\
-$\dfrac{5}{7}$ vs $\dfrac{7}{10}$ & motylek: $50$ vs $49$ & $\dfrac{5}{7}>\dfrac{7}{10}$ \\
+$\dfrac{5}{6}$ vs $\dfrac{7}{9}$ & mianownik $18$: $\dfrac{15}{18}$ vs $\dfrac{14}{18}$ & $\dfrac{5}{6}>\dfrac{7}{9}$ \\
+$\dfrac{3}{4}$ vs $\dfrac{5}{7}$ & mianownik $28$: $\dfrac{21}{28}$ vs $\dfrac{20}{28}$ & $\dfrac{3}{4}>\dfrac{5}{7}$ \\
 $\dfrac{3}{7}$ vs $\dfrac{3}{8}$ & ten sam licznik & $\dfrac{3}{7}>\dfrac{3}{8}$ \\
 $-0{,}2$ vs $-0{,}25$ & termometr: bliżej zera & $-0{,}2>-0{,}25$ \\
 \bottomrule

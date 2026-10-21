@@ -91,16 +91,19 @@ Dla każdej karty powstają **dwa pliki**: arkusz i klucz.
 
 **Arkusz dla ucznia** (`quizy/N-arkusz.tex`), 1 strona A4:
 - Nagłówek: cel, czas (5 minut), pola Imię / Data / Punkty.
-- **3 zadania po 2 pkt** (razem 6 pkt):
-  - *Zadanie 1 (Rozgrzewka)*: uzupełnianie luk, S/N, P/F, łączenie w pary.
+- **3 zadania po 2 pkt** (razem 6 pkt), wszystkie **otwarte**:
+  - *Zadanie 1 (Rozgrzewka)*: proste obliczenie lub uzupełnienie luki z wynikiem policzonym przez ucznia.
   - *Zadanie 2 (Zastosuj supermoc)*: trik z karty w konkretnym obliczeniu.
   - *Zadanie 3 (Pułapka / zagadka)*: typowe zadanie z kartkówki lub egzaminu ósmoklasisty.
-- Linie do wpisywania: `\rule{3cm}{0.4pt}`.
+- **Zakaz zadań testowych**: w arkuszach nie ma zadań zamkniętych, czyli wyboru A/B/C/D, Prawda/Fałsz, S/N, łączenia w pary ani zaznaczania odpowiedzi. Zadania testowe wolno dodać **wyłącznie wtedy, gdy operator / nauczyciel wprost o nie poprosi**. Bez takiej prośby zawsze zadania otwarte.
+- **Pokaż obliczenia**: w KAŻDYM zadaniu jest polecenie „Pokaż obliczenia." (lub równoważne, np. „Zapisz tok rozumowania."). Sama odpowiedź bez obliczeń nie daje pełnej liczby punktów, co zapisz w nagłówku arkusza.
+- **Układ strony**: zadania wypełniają **całą stronę A4**, a nie tylko jej górną część. Pomiędzy zadaniami (i pod ostatnim) zostaw puste miejsce na obliczenia, czyli wolną przestrzeń w ramce lub z delikatną kratką (np. `\vspace{...}`, `\vfill` między zadaniami lub `\framebox`/`tikz` z kratką). Miejsce dobierz do złożoności zadania, aby uczeń zmieścił cały zapis. Po wygenerowaniu sprawdź w PDF, że strona nie jest w połowie pusta i że nie wyszła poza 1 stronę.
+- Linie do wpisywania odpowiedzi końcowej: `\rule{3cm}{0.4pt}`.
 - Puste miejsce **wewnątrz ułamka** zapisuj jako `\square`, np. `\dfrac{\square}{5}`. Pozioma kreska w mianowniku wygląda jak kreska ułamkowa i zmyla ucznia.
 - Pasek rang z checkboxami: 5–6 pkt, 3–4 pkt, 1–2 pkt.
 
 **Klucz** (`quizy/N-klucz.tex`), 1 strona A4:
-- Rozwiązania krok po kroku, z zaznaczonymi poprawnymi odpowiedziami.
+- Rozwiązania krok po kroku (pełne obliczenia, takie jak uczeń ma pokazać), z zaznaczonymi poprawnymi odpowiedziami.
 - Ramka `title=Wskazówka dla Pawła` (lub rodzica/trenera): jak chwalić proces i jak reagować na typowe błędy.
 - Nagłówek oznaczony „nie drukować dla ucznia".
 
