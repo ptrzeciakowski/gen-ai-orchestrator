@@ -15,7 +15,7 @@ Legenda: ✅ zrobione · 🟡 częściowo / czeka na akcję · ⬜ nie ruszane
 |---|---|---|---|---|
 | `00 📥 Inbox` | ✅ | ⬜ | ⬜ | |
 | `01 🔒 Poufne Dokumenty` | ✅ | ✅ | ✅ | **Zakończone 2026-10-21.** Szczegóły niżej. |
-| `02 👪 Rodzina` | ✅ | ✅ | 🟡 | **W trakcie 2026-10-21.** Szczegóły niżej. |
+| `02 👪 Rodzina` | ✅ | ✅ | 🟡 | **W trakcie 2026-10-21/22.** Szczegóły niżej. |
 | `03 🏥 Zdrowie` | ✅ | ⬜ | ⬜ | |
 | `04 🏫 Edukacja Dzieci` | ✅ | ⬜ | ⬜ | |
 | `05 💰 Finanse` | ✅ | ⬜ | ⬜ | |
@@ -54,9 +54,10 @@ Pliki luzem w root: ⬜ 5 plików (3 arkusze/prezentacja/dokument Google, 1 `.do
 - ✅ Do `04 🏫 Edukacja Dzieci/Nadia`: dwie opinie psychologiczne (skrót do pierwszej już jest w Zdrowie/Nadia).
 - ✅ Nazwy: `2026-06-20 Wzrost Nadii i Michała` (data ostatniego pomiaru), `2024-06-04 Nadia brzydki list do Taty.pdf` (data ze skanu). Wzrost zostaje w `02 👪 Rodzina` jako pamiątka.
 - 🟡 Do decyzji: duplikaty względem `01 Tożsamość` — `Pawel - prawo jazdy.pdf`, `Skrócony odpis aktu małżeństwa.pdf`, `Michał - dowód osobisty.heic` (wersje w Rodzinie mogą być inne skany).
-- 🟡 Skrót do `00 ‼️ Ważne dokumenty/Karta szczepień - Michał` oraz sam folder `00` — usunąć po decyzji.
+- ✅ Skrót `Karta szczepień - Michał` (z `03 Michał`) usunięty; karta jest w `03 🏥 Zdrowie`, skrót w Zdrowiu wskazuje poprawnie. Folder `00 ‼️ Ważne dokumenty` — do ponownego sprawdzenia przy przeglądzie root-a.
 - ⬜ Skróty ręczne (konektor ich nie tworzy): zdrowie Natalki w `01 Natalka`; opinia `2026.06.16 - Ocena…` w Zdrowie/Nadia; ewentualnie Pawła.
 - ⬜ `Zdrowie/Natka` → rozważyć `Natalka` przy porządkowaniu Zdrowia; wnętrze `04 Edukacja Dzieci/Nadia` i `Zdrowie` bez zmian (osobny przebieg).
+- 🟡 **`03 Michał` (2026-10-22):** root przejrzany ✅ — zostają skróty `01 Zdrowie`, `02 Szkoła` (wyjątek D3a), folder `05 Tenis` i nowy `09 Archiwum`. Usunięty `Michał - dowód osobisty.heic` (jest PDF w Tożsamości) oraz `OSWIADCZENIE.pdf`. Do `09 Archiwum` trafiły `Pamiętnik Michała` i `I Komunia` (zmieniona nazwa, bez numeru; 4 pliki wewnątrz bez zmian nazw — `Winowajcy - zaliczka.pdf` do Etapu B). ✅ `05 Tenis` (2026-10-22): pliki i foldery wydarzeń ułożone płasko w folderach `2021`, `2024`, `2025`, `2026`; `00 Podsumowanie sezonów tenisowych` zostaje w roocie. Nazwy zgodne z konwencją (bez ` - `, z rozszerzeniami `.pdf`, bez `_encrypted_`); `LTADallenglish1.pdf` → `2025-05 Tennis Canada LTAD.pdf`. Poza zakresem: zdjęcia `IMG_*`/`_DSC*` (bez daty i tematu), `UMOWA Kadra WMZT 2026.pdf`. ⬜ Do sprawdzenia: wnętrza folderów wydarzeń oraz folder `2025-08-25 PIT obóz zdjęcia` (~40 zdjęć).
 - ⬜ Etap B: `Zrzut ekranu …jpeg.png`, pliki bez rozszerzenia w `04 Kuba`, `passa 2021 -wyniki.pdf` itd.
 
 ## Do zsynchronizowania w repozytorium po zakończeniu porządków
