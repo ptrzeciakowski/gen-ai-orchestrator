@@ -15,7 +15,7 @@ Legenda: ✅ zrobione · 🟡 częściowo / czeka na akcję · ⬜ nie ruszane
 |---|---|---|---|---|
 | `00 📥 Inbox` | ✅ | ⬜ | ⬜ | |
 | `01 🔒 Poufne Dokumenty` | ✅ | ✅ | ✅ | **Zakończone 2026-10-21.** Szczegóły niżej. |
-| `02 👪 Rodzina` | ✅ | ✅ | 🟡 | **W trakcie 2026-10-21/22.** Szczegóły niżej. |
+| `02 👪 Rodzina` | ✅ | ✅ | ✅ | **Zakończone 2026-10-22.** Szczegóły niżej. |
 | `03 🏥 Zdrowie` | ✅ | ⬜ | ⬜ | |
 | `04 🏫 Edukacja Dzieci` | ✅ | ⬜ | ⬜ | |
 | `05 💰 Finanse` | ✅ | ⬜ | ⬜ | |
@@ -53,11 +53,17 @@ Pliki luzem w root: ⬜ 5 plików (3 arkusze/prezentacja/dokument Google, 1 `.do
 - ✅ Do `03 🏥 Zdrowie`: `Pantomogram`, `TK kolana lewego` → `Natka`; `Karta szczepień - Nadia` → `Nadia`.
 - ✅ Do `04 🏫 Edukacja Dzieci/Nadia`: dwie opinie psychologiczne (skrót do pierwszej już jest w Zdrowie/Nadia).
 - ✅ Nazwy: `2026-06-20 Wzrost Nadii i Michała` (data ostatniego pomiaru), `2024-06-04 Nadia brzydki list do Taty.pdf` (data ze skanu). Wzrost zostaje w `02 👪 Rodzina` jako pamiątka.
-- 🟡 Do decyzji: duplikaty względem `01 Tożsamość` — `Pawel - prawo jazdy.pdf`, `Skrócony odpis aktu małżeństwa.pdf`, `Michał - dowód osobisty.heic` (wersje w Rodzinie mogą być inne skany).
+- ✅ Duplikaty względem `01 Tożsamość` rozwiązane (2026-10-22): w `02 Rodzina` nie ma już `Pawel - prawo jazdy.pdf` ani `Skrócony odpis aktu małżeństwa.pdf`; zostają wersje w Tożsamości. Pliki luzem w roocie Rodziny wyczyszczone (0).
 - ✅ Skrót `Karta szczepień - Michał` (z `03 Michał`) usunięty; karta jest w `03 🏥 Zdrowie`, skrót w Zdrowiu wskazuje poprawnie. Folder `00 ‼️ Ważne dokumenty` — do ponownego sprawdzenia przy przeglądzie root-a.
-- ⬜ Skróty ręczne (konektor ich nie tworzy): zdrowie Natalki w `01 Natalka`; opinia `2026.06.16 - Ocena…` w Zdrowie/Nadia; ewentualnie Pawła.
+- ✅ **`03 Michał` zakończony (2026-10-22)**, w tym ręcznie dodany folder-link do zdrowia.
+- ✅ **`01 Natalka` zakończony (2026-10-22):** `Natalka - Studniówka 2006.iso` → `2006 Natalka Studniówka.iso` (zostaje w miejscu); folder-link do zdrowia dodany ręcznie.
+- ✅ **`02 Nadia` zakończony (2026-10-22):** `04. ZHP` → `04 ZHP`; zmienione nazwy plików i folderów w roocie, `03 Konie` (`2026-04-12 Becker Sport` + zawartość) i `04 ZHP`; `Waga - dziennik.xlsx` → `Zdrowie/Nadia/Nadia Waga Dziennik.xlsx`. Skan `2026-03-20 Nadia Konie skan.pdf` nazwany bez sprawdzenia treści.
+- ✅ **`04 Kuba` zakończony (2026-10-22):** Kuba to bratanek — materiały zostają w Rodzinie (bez skrótu do Edukacji). Folder `Matematyka` usunięty przez użytkownika. Wszystkie 19 plików w roocie z nazwami zgodnymi z konwencją i rozszerzeniami (`.pdf`, `.png`); daty z nazw lub z daty utworzenia pliku (PDF-y: 2022-03-20/27, 2022-12-04/25; PNG zadań: 2022-11-06/16; `Franek i Latarnie`: 2022-11-05). Prefiksy kodów zadań (`PIN`, `WLM`, …) zachowane jako część tematu.
+- ✅ **`05 Dzieci` zakończony (2026-10-22):** `#Archiwum` → `09 Archiwum`; folder `10. Niania` (rozliczenia godzin, wzór umowy, zdjęcia 2014–2015) przeniesiony do kosza — do opróżnienia; `Basen/2020/2021` → `Basen/2020-2021`; nazwy plików/dokumentów dostosowane do konwencji (m.in. `2021 Passa wyniki.pdf`, `2023 Bieg passy`, `Urządzenia cyfrowe` bez emoji). Daty z daty utworzenia pliku.
+- ✅ **`10 Genealogia` zakończony (2026-10-22):** folder na Dysku nazywał się `10 Drzewo genealogiczne` → `10 Genealogia`. 18 plików z 2024-01-21: 14 zrzutów ekranu ponumerowanych `2024-01-21 Genealogia zrzut 01…14.png` (w kolejności godzin, bez `.jpeg.png`), `Bartek`, `Nadunia`, `Brat` oraz PDF → `2024-01-21 Genealogia dokument.pdf`. Treści plików nie sprawdzano — nazwy opisowe do poprawy, jeśli będzie potrzeba.
+- ✅ Skróty ręczne (konektor ich nie tworzy) wykonane przez użytkownika (2026-10-22).
 - ⬜ `Zdrowie/Natka` → rozważyć `Natalka` przy porządkowaniu Zdrowia; wnętrze `04 Edukacja Dzieci/Nadia` i `Zdrowie` bez zmian (osobny przebieg).
-- 🟡 **`03 Michał` (2026-10-22):** root przejrzany ✅ — zostają skróty `01 Zdrowie`, `02 Szkoła` (wyjątek D3a), folder `05 Tenis` i nowy `09 Archiwum`. Usunięty `Michał - dowód osobisty.heic` (jest PDF w Tożsamości) oraz `OSWIADCZENIE.pdf`. Do `09 Archiwum` trafiły `Pamiętnik Michała` i `I Komunia` (zmieniona nazwa, bez numeru; 4 pliki wewnątrz bez zmian nazw — `Winowajcy - zaliczka.pdf` do Etapu B). ✅ `05 Tenis` (2026-10-22): pliki i foldery wydarzeń ułożone płasko w folderach `2021`, `2024`, `2025`, `2026`; `00 Podsumowanie sezonów tenisowych` zostaje w roocie. Nazwy zgodne z konwencją (bez ` - `, z rozszerzeniami `.pdf`, bez `_encrypted_`); `LTADallenglish1.pdf` → `2025-05 Tennis Canada LTAD.pdf`. Poza zakresem: zdjęcia `IMG_*`/`_DSC*` (bez daty i tematu), `UMOWA Kadra WMZT 2026.pdf`. ⬜ Do sprawdzenia: wnętrza folderów wydarzeń oraz folder `2025-08-25 PIT obóz zdjęcia` (~40 zdjęć).
+- ✅ **`03 Michał` (2026-10-22):** root przejrzany ✅ — zostają skróty `01 Zdrowie`, `02 Szkoła` (wyjątek D3a), folder `05 Tenis` i nowy `09 Archiwum`. Usunięty `Michał - dowód osobisty.heic` (jest PDF w Tożsamości) oraz `OSWIADCZENIE.pdf`. Do `09 Archiwum` trafiły `Pamiętnik Michała` i `I Komunia` (zmieniona nazwa, bez numeru; 4 pliki wewnątrz bez zmian nazw — `Winowajcy - zaliczka.pdf` do Etapu B). ✅ `05 Tenis` (2026-10-22): pliki i foldery wydarzeń ułożone płasko w folderach `2021`, `2024`, `2025`, `2026`; `00 Podsumowanie sezonów tenisowych` zostaje w roocie. Nazwy zgodne z konwencją (bez ` - `, z rozszerzeniami `.pdf`, bez `_encrypted_`); `LTADallenglish1.pdf` → `2025-05 Tennis Canada LTAD.pdf`. Poza zakresem: zdjęcia `IMG_*`/`_DSC*` (bez daty i tematu), `UMOWA Kadra WMZT 2026.pdf`. ✅ Wnętrza folderów wydarzeń i `2025-08-25 PIT obóz zdjęcia` (~40 zdjęć) zaakceptowane jako wyjątek — zdjęcia to materiał szkoleniowy, nie pamiątka (design.md §4).
 - ⬜ Etap B: `Zrzut ekranu …jpeg.png`, pliki bez rozszerzenia w `04 Kuba`, `passa 2021 -wyniki.pdf` itd.
 
 ## Do zsynchronizowania w repozytorium po zakończeniu porządków

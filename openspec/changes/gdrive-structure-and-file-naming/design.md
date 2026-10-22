@@ -81,9 +81,10 @@ Wzorzec: `YYYY-MM-DD Temat Opis.ext`, warianty `YYYY-MM …`, `YYYY …`, `Temat
 - **Imiona w nazwach**: jedna forma na osobę — `Natalka` (nie `Natalia`); `mama` małą literą; w nazwach dokumentów osobistych `Imię` bez nazwiska, chyba że trzeba rozróżnić osoby.
 - **Duplikaty nazw** w jednym folderze to osobne dokumenty do rozpoznania (inna osoba lub wersja), nie do nadpisania; przy identycznej treści zostaje wersja większa/pełniejsza.
 - Separator: pojedyncza spacja między słowami i po dacie; myślniki tylko w dacie i w identyfikatorach; wzorzec `Typ - Osoba` dla dokumentów osobistych zostaje; bez podkreślników; polskie znaki zachowane (NFC); zachowanie akronimów i identyfikatorów.
-- Data wyłącznie z dowodu w nazwie lub treści dokumentu; nigdy z daty utworzenia/modyfikacji w Drive; dwucyfrowy rok (`30.05.23`) wymaga decyzji; bez wymyślonych dni/miesięcy.
+- Data z dowodu w nazwie lub treści dokumentu; data utworzenia/modyfikacji w Drive tylko jako ostateczność dla materiałów bez żadnej daty (decyzja z 2026-10-22; dokładność daty zapisana w raporcie), nigdy gdy dowód istnieje; dwucyfrowy rok (`30.05.23`) wymaga decyzji; bez wymyślonych dni/miesięcy.
 - Rozszerzenie rzeczywiste (także wieloczłonowe); dokumentom natywnym Google nie dopisujemy `.gdoc/.gsheet/.gslides` — typ z MIME.
 - `V2` → `v2` tylko gdy potwierdzone; brak `v1` z domysłu; `(1)` nie dowodzi duplikatu.
+- **Wyjątek: zdjęcia jako materiał szkoleniowy** (decyzja z 2026-10-22): zdjęcia, które są materiałem szkoleniowym (np. analiza techniki, wideoanaliza, `05 Tenis/…/2025-08-25 PIT obóz zdjęcia`), a nie pamiątką, mogą zostać w Drive i zachować oryginalne nazwy plików (`IMG_*`, `_DSC*`); folder wydarzenia nazywamy zgodnie z konwencją. Pozostałe zdjęcia-pamiątki są poza zakresem (D7 — Google Photos).
 - Kolizje (też po NFC, też między propozycjami) blokują pozycję; bez auto-numeracji.
 - Domyślnie poza zakresem: kopie aplikacyjne, Takeout, foldery zarządzane przez aplikacje, skróty, pliki spoza My Drive, pliki bez prawa zmiany nazwy.
 - Raport `stara → nowa`: ID, rodzic, MIME, reguła, źródło i dokładność daty, konflikt, status `unchanged/proposed/blocked/excluded`, decyzja. Raport zawiera prywatne metadane — poza Gitem.
