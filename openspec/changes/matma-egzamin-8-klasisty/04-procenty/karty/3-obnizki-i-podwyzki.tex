@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper]{article}
+\input{../preambula}
+
+\begin{document}
+
+\naglowekKarty{3}{Obniżki i podwyżki: mnożnik}{obliczyć nową cenę, także po dwóch zmianach z rzędu}
+
+\vspace{0.3em}
+\begin{regula}[REGUŁA – MNOŻNIK ZMIANY CENY]
+Po obniżce o $p\%$ zostaje $(100-p)\%$ ceny, po podwyżce o $p\%$ jest $(100+p)\%$ ceny:
+$$\text{obniżka o } 20\% \to \cdot\, 0{,}8 \qquad\qquad \text{podwyżka o } 15\% \to \cdot\, 1{,}15$$
+\textbf{Dwie zmiany z rzędu:} mnożniki mnożymy, procentów \emph{nie} dodajemy ani nie odejmujemy.
+\end{regula}
+
+\vspace{0.4em}
+\textbf{Krok po kroku: bluza za $120\ \text{zł}$, obniżka o $25\%$.}
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item Zostaje $75\%$ ceny, czyli mnożnik $0{,}75$.
+  \item $120\cdot 0{,}75=90\ \text{zł}$.
+\end{enumerate}
+\textbf{Druga droga:} policz zmianę klockami i odejmij. $25\%$ z $120=30$, więc $120-30=90\ \text{zł}$. Dla podwyżki dodajemy: bilet $40\ \text{zł}$ po podwyżce o $10\%$ to $40+4=44\ \text{zł}$.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth]
+  % Skala: 1 cm = 10 zl
+  \fill[cel!30] (0,1.6) rectangle (10,2.3);   \draw[thick] (0,1.6) rectangle (10,2.3);
+  \fill[okres!30] (0,0.8) rectangle (8,1.5);  \draw[thick] (0,0.8) rectangle (8,1.5);
+  \fill[skonczony!30] (0,0) rectangle (9.6,0.7); \draw[thick] (0,0) rectangle (9.6,0.7);
+  \node[font=\small\bfseries, anchor=west] at (10.2,1.95) {$100\ \text{zł}$};
+  \node[font=\small\bfseries, anchor=west] at (8.2,1.15) {$80\ \text{zł}$};
+  \node[font=\small\bfseries, anchor=west] at (9.8,0.35) {$96\ \text{zł}$};
+  \node[font=\small, anchor=east] at (-0.2,1.55) {$-20\%$ $\downarrow$};
+  \node[font=\small, anchor=east] at (-0.2,0.75) {$+20\%$ $\downarrow$};
+  \node[font=\small\bfseries, color=okres] at (5,-0.5) {Nie wróciliśmy do $100\ \text{zł}$: $\ 1{,}2\cdot 0{,}8=0{,}96$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2em}
+\textbf{Przykłady rozstrzygnięte:}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Zadanie & Obliczenie & Wynik \\
+\midrule
+$120\ \text{zł}$, obniżka $25\%$ & $120\cdot 0{,}75$ & $90\ \text{zł}$ \\
+$40\ \text{zł}$, podwyżka $10\%$ & $40\cdot 1{,}1$ & $44\ \text{zł}$ \\
+$200\ \text{zł}$, $-10\%$, potem $+10\%$ & $200\cdot 0{,}9\cdot 1{,}1=180\cdot 1{,}1$ & $198\ \text{zł}$ \\
+$100\ \text{zł}$, $+50\%$, potem $-50\%$ & $100\to 150\to 75$ & $75\ \text{zł}$ \\
+Po obniżce $20\%$ cena $80\ \text{zł}$ & $80\%$ ceny to $80$, więc $100\%$ to $100$ & $100\ \text{zł}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{pulapka}[PUŁAPKI Z KARTKÓWKI]
+\begin{enumerate}[leftmargin=*, itemsep=2pt]
+  \item Obniżka o $10\%$, potem podwyżka o $10\%$ \emph{nie} przywraca ceny: dostajemy $99\%$ ceny, nie $100\%$. Drugi procent liczysz z \emph{nowej} ceny.
+  \item Cena po obniżce o $20\%$ wynosi $80\ \text{zł}$. Cena przed to $100\ \text{zł}$, a nie $80+20\%=96\ \text{zł}$.
+  \item Pytają „o ile zł” czy „ile kosztuje po”? Obniżka to $30\ \text{zł}$, cena po obniżce to $90\ \text{zł}$.
+\end{enumerate}
+\end{pulapka}
+
+\end{document}

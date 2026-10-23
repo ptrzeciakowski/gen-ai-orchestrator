@@ -65,7 +65,7 @@ Każdy dział powstaje w osobnym kroku, zgodnie z §3.1 `design.md`. Kolejność
 
 - [ ] **4.1: `02-potegi`** (cele: prawa potęg, rozbicie podstawy, notacja $a\cdot 10^k$)
 - [ ] **4.2: `03-pierwiastki`** (cele: pierwiastki, wyłączanie czynnika, szacowanie)
-- [ ] **4.3: `04-procenty`** (cele: obliczenia procentowe, przelicznik ułamkowy, punkty procentowe)
+- [x] **4.3: `04-procenty`** (4 karty: procent z liczby, jaki to procent i całość, obniżki i podwyżki, punkty procentowe; każda z arkuszem i kluczem)
 - [ ] **4.4: `05-wyrazenia-algebraiczne`** (cele: redukcja wyrazów, mnożenie nawiasów, pułapka minusa)
 - [ ] **4.5: `06-rownania`** (cele: równania 1. stopnia, likwidacja ułamków, zadania tekstowe)
 - [ ] **4.6: `07-trojkaty-katy-pitagoras`** (cele: kąty, trójkąty, Pitagoras, trójki pitagorejskie)

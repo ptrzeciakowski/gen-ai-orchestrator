@@ -47,7 +47,7 @@ Każdy dział trzeba rozbić na cele (karty). Nie generujemy całego działu nar
 | 01 | `01-liczby-i-ulamki` | część: 4 karty z 5+ celów (liczby podzielne, rzymskie, całkowite — do zrobienia) |
 | 02 | `02-potegi` | do zrobienia |
 | 03 | `03-pierwiastki` | do zrobienia |
-| 04 | `04-procenty` | do zrobienia |
+| 04 | `04-procenty` | gotowe: 4 karty z arkuszami i kluczami (procent z liczby, jaki to procent, obniżki i podwyżki, punkty procentowe) |
 | 05 | `05-wyrazenia-algebraiczne` | do zrobienia |
 | 06 | `06-rownania` | do zrobienia |
 | 07 | `07-trojkaty-katy-pitagoras` | do zrobienia |

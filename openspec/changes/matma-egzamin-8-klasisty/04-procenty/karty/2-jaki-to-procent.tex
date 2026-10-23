@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+\input{../preambula}
+
+\begin{document}
+
+\naglowekKarty{2}{Jaki to procent i ile wynosi całość}{zamienić „część z całości” na procent i odwrotnie}
+
+\vspace{0.3em}
+\begin{regula}[REGUŁA – DWA PYTANIA I DWA RUCHY]
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item \textbf{Jaki to procent?} Zapisz ułamek $\dfrac{\text{część}}{\text{całość}}$ i rozszerz go do mianownika $100$. Licznik to szukany procent. \quad $\dfrac{5}{25}=\dfrac{20}{100}=20\%$.
+  \item \textbf{Ile wynosi całość?} Znajdź $1\%$ (podziel część przez liczbę procentów), potem pomnóż przez $100$. \quad $20\%=14\ \Rightarrow\ 1\%=0{,}7\ \Rightarrow\ 100\%=70$.
+\end{enumerate}
+\end{regula}
+
+\vspace{0.4em}
+\textbf{Krok po kroku: 5 uczniów z 25 ma zielone oczy. Jaki to procent?}
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item Część to $5$, całość to $25$: $\dfrac{5}{25}$.
+  \item Rozszerz do mianownika $100$ (mnożymy przez $4$): $\dfrac{5\cdot 4}{25\cdot 4}=\dfrac{20}{100}=20\%$.
+\end{enumerate}
+\textbf{Druga droga:} podziel i pomnóż przez $100$. $5:25=0{,}2$, a $0{,}2\cdot 100\%=20\%$. Gdy mianownik nie jest dzielnikiem $100$, ta droga jest szybsza: $\dfrac{3}{8}=0{,}375=37{,}5\%$.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth]
+  % Siatka 5x5: 25 uczniów, 5 zaznaczonych
+  \foreach \r in {0,...,4} {
+    \foreach \c in {0,...,4} {
+      \draw (\c*0.8,-\r*0.8) rectangle ++(0.8,-0.8);
+    }
+  }
+  \foreach \c in {0,...,4} { \fill[cel!45] (\c*0.8,0) rectangle ++(0.8,-0.8); \draw (\c*0.8,0) rectangle ++(0.8,-0.8); }
+  \node[font=\small\bfseries, color=cel, anchor=west] at (4.4,-0.4) {$5$ zielonych oczu};
+  \node[font=\small, anchor=west] at (4.4,-1.4) {całość: $25$ uczniów};
+  \node[font=\small\bfseries, color=okres, anchor=west] at (4.4,-2.4) {$\dfrac{5}{25}=\dfrac{20}{100}=20\%$};
+  \node[font=\small, anchor=west] at (4.4,-3.3) {jeden rząd z pięciu to $\dfrac{1}{5}=20\%$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{-0.2em}
+\textbf{Przykłady rozstrzygnięte:}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Zadanie & Obliczenie & Wynik \\
+\midrule
+$6$ z $20$ & $\dfrac{6}{20}=\dfrac{30}{100}$ & $30\%$ \\[4pt]
+$9$ z $12$ & $\dfrac{9}{12}=\dfrac{3}{4}$ & $75\%$ \\[4pt]
+$3$ z $8$ & $3:8=0{,}375$ & $37{,}5\%$ \\
+$10\%$ całości to $30\ \text{zł}$ & $30\cdot 10$ & $300\ \text{zł}$ \\
+$25\%$ całości to $12$ & $12\cdot 4$ (bo $25\%=\dfrac{1}{4}$) & $48$ \\
+$20\%$ całości to $14$ & $1\%=0{,}7$, \ $0{,}7\cdot 100$ & $70$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{pulapka}[PUŁAPKI Z KARTKÓWKI]
+\begin{enumerate}[leftmargin=*, itemsep=2pt]
+  \item Czytaj, o co pyta zadanie. Z $20$ kostek zjedzono $6$: zjedzono $30\%$, ale \emph{zostało} $14$ kostek, czyli $70\%$.
+  \item Całość stoi w mianowniku. Ile procent liczby $50$ to $20$? $\dfrac{20}{50}=40\%$, a nie $\dfrac{50}{20}=250\%$.
+  \item Jeśli $10\%$ to $30$, całość to $300$ (razy $10$), a nie $3$.
+\end{enumerate}
+\end{pulapka}
+
+\end{document}

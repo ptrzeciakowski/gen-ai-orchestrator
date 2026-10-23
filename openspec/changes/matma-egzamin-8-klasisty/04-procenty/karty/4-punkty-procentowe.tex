@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper]{article}
+\input{../preambula}
+
+\begin{document}
+
+\naglowekKarty{4}{Punkty procentowe czy procenty}{odróżnić „o ile punktów procentowych” od „o ile procent”}
+
+\vspace{0.3em}
+\begin{regula}[REGUŁA – DWA RÓŻNE PYTANIA]
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item \textbf{O ile punktów procentowych (pp)?} Po prostu odejmij oba procenty. \quad $25\%-20\%=5\ \text{pp}$.
+  \item \textbf{O ile procent?} Porównaj zmianę z wartością \emph{początkową}: $\dfrac{\text{zmiana}}{\text{początek}}\cdot 100\%$. \quad $\dfrac{5}{20}=\dfrac{1}{4}=25\%$.
+\end{enumerate}
+\end{regula}
+
+\vspace{0.4em}
+\textbf{Krok po kroku: poparcie wzrosło z $20\%$ do $25\%$.}
+\begin{enumerate}[leftmargin=*, itemsep=3pt]
+  \item Punkty procentowe: $25-20=5$, więc wzrost o $5$ pp.
+  \item Procenty: zmiana $5$ w stosunku do początku $20$: $\dfrac{5}{20}=25\%$, więc wzrost o $25\%$.
+\end{enumerate}
+\textbf{Druga droga: sto osób.} Gdy zapytano $100$ osób, było $20$ zwolenników, a jest $25$. Przybyło $5$ osób (to $5$ pp). Było ich $20$, a przybyło $5$ z tych $20$, czyli $\dfrac{1}{4}=25\%$.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth]
+  % Dwa paski po 100 jednostek (1 jednostka = 0.1 cm)
+  \draw[thick] (0,1.4) rectangle (10,2.1);
+  \fill[cel!35] (0,1.4) rectangle (2,2.1); \draw[thick] (0,1.4) rectangle (10,2.1);
+  \node[font=\small\bfseries, color=cel] at (1,1.75) {$20\%$};
+  \draw[thick] (0,0.2) rectangle (10,0.9);
+  \fill[cel!35] (0,0.2) rectangle (2,0.9); \fill[okres!40] (2,0.2) rectangle (2.5,0.9); \draw[thick] (0,0.2) rectangle (10,0.9);
+  \node[font=\small\bfseries, color=cel] at (1,0.55) {$20\%$};
+  \node[font=\small\bfseries, color=okres] at (2.25,-0.15) {$+5\ \text{pp}$};
+  \node[font=\small, anchor=west] at (10.2,1.75) {było $20\%$};
+  \node[font=\small, anchor=west] at (10.2,0.55) {jest $25\%$};
+  \node[font=\small\bfseries, color=okres, anchor=west] at (3.2,0.55) {$5$ z $20$ to $25\%$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.1em}
+\textbf{Przykłady rozstrzygnięte:}
+\begin{center}
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Zmiana & O ile pp & O ile \% \\
+\midrule
+$20\%\to 25\%$ & wzrost o $5$ pp & $\dfrac{5}{20}=25\%$ wzrostu \\[9pt]
+$10\%\to 20\%$ & wzrost o $10$ pp & $\dfrac{10}{10}=100\%$ wzrostu (podwoiło się) \\[9pt]
+$50\%\to 40\%$ & spadek o $10$ pp & $\dfrac{10}{50}=20\%$ spadku \\[9pt]
+$5\%\to 4\%$ & spadek o $1$ pp & $\dfrac{1}{5}=20\%$ spadku \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{pulapka}[PUŁAPKI Z KARTKÓWKI]
+\begin{enumerate}[leftmargin=*, itemsep=2pt]
+  \item „Wzrost o $5\%$” i „wzrost o $5$ pp” to dwie różne rzeczy. Zdanie „z $20\%$ na $25\%$, czyli o $5\%$” jest fałszywe.
+  \item Procenty (zmiana względna) dzielimy zawsze przez wartość \emph{początkową}, nie końcową.
+  \item Punkty procentowe odejmujemy, bez żadnego mnożenia. Mnożenie pojawia się dopiero przy „o ile procent”.
+\end{enumerate}
+\end{pulapka}
+
+\end{document}

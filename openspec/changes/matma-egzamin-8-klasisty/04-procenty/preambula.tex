@@ -1,0 +1,55 @@
+% Wspólny szablon dla kart supermocy (jedna karta = jedna strona A4)
+% Użycie w karcie: \documentclass[11pt,a4paper]{article} \input{../preambula} \begin{document}
+
+% Silnik tectonic (XeTeX): polskie znaki przez fontspec, nie przez inputenc/T1
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage[polish]{babel}
+\usepackage[a4paper,margin=1.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,decorations.pathreplacing}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+
+\definecolor{cel}{HTML}{1F4E79}
+\definecolor{regula}{HTML}{E8F1FA}
+\definecolor{pulapka}{HTML}{FDECEA}
+\definecolor{okres}{HTML}{C0392B}
+\definecolor{skonczony}{HTML}{1E8449}
+
+% Ramka na regułę
+\newtcolorbox{regula}[1][]{
+  colback=regula, colframe=cel, boxrule=0.8pt, arc=2pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt, title=#1,
+  fonttitle=\bfseries, coltitle=white
+}
+
+% Ramka na pułapkę z kartkówki
+\newtcolorbox{pulapka}[1][]{
+  colback=pulapka, colframe=okres, boxrule=0.8pt, arc=2pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt, title=#1,
+  fonttitle=\bfseries, coltitle=white
+}
+
+% Nagłówek karty: numer, tytuł, cel
+\newcommand{\naglowekKarty}[3]{%
+  {\LARGE\bfseries\color{cel} Karta #1: #2}\\[2pt]
+  {\large Cel: #3}\par
+  \vspace{0.3em}\noindent\rule{\linewidth}{1pt}\par
+}
+
+% Pole na obliczenia ucznia: ramka z delikatną kratką, argument = wysokość
+\newcommand{\miejsce}[1]{%
+  \par\vspace{0.2em}\noindent
+  \begin{tikzpicture}
+    \draw[step=0.5cm, gray!25, very thin] (0,0) grid (\textwidth,#1);
+    \draw[gray!60, rounded corners=2pt] (0,0) rectangle (\textwidth,#1);
+    \node[anchor=north west, font=\scriptsize, text=gray] at (0.05,#1) {obliczenia};
+  \end{tikzpicture}\par}

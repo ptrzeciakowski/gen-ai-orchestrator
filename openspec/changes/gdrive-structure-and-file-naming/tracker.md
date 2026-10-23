@@ -16,7 +16,7 @@ Legenda: ✅ zrobione · 🟡 częściowo / czeka na akcję · ⬜ nie ruszane
 | `00 📥 Inbox` | ✅ | ⬜ | ⬜ | |
 | `01 🔒 Poufne Dokumenty` | ✅ | ✅ | ✅ | **Zakończone 2026-10-21.** Szczegóły niżej. |
 | `02 👪 Rodzina` | ✅ | ✅ | ✅ | **Zakończone 2026-10-22.** Szczegóły niżej. |
-| `03 🏥 Zdrowie` | ✅ | ⬜ | ⬜ | |
+| `03 🏥 Zdrowie` | ✅ | ✅ | 🟡 | Root uporządkowany 2026-10-23; wnętrza podfolderów do przeglądu. Szczegóły niżej. |
 | `04 🏫 Edukacja Dzieci` | ✅ | ⬜ | ⬜ | |
 | `05 💰 Finanse` | ✅ | ⬜ | ⬜ | |
 | `07 🏢 Praca i Projekty` | ✅ | ⬜ | ⬜ | |
@@ -65,6 +65,19 @@ Pliki luzem w root: ⬜ 5 plików (3 arkusze/prezentacja/dokument Google, 1 `.do
 - ⬜ `Zdrowie/Natka` → rozważyć `Natalka` przy porządkowaniu Zdrowia; wnętrze `04 Edukacja Dzieci/Nadia` i `Zdrowie` bez zmian (osobny przebieg).
 - ✅ **`03 Michał` (2026-10-22):** root przejrzany ✅ — zostają skróty `01 Zdrowie`, `02 Szkoła` (wyjątek D3a), folder `05 Tenis` i nowy `09 Archiwum`. Usunięty `Michał - dowód osobisty.heic` (jest PDF w Tożsamości) oraz `OSWIADCZENIE.pdf`. Do `09 Archiwum` trafiły `Pamiętnik Michała` i `I Komunia` (zmieniona nazwa, bez numeru; 4 pliki wewnątrz bez zmian nazw — `Winowajcy - zaliczka.pdf` do Etapu B). ✅ `05 Tenis` (2026-10-22): pliki i foldery wydarzeń ułożone płasko w folderach `2021`, `2024`, `2025`, `2026`; `00 Podsumowanie sezonów tenisowych` zostaje w roocie. Nazwy zgodne z konwencją (bez ` - `, z rozszerzeniami `.pdf`, bez `_encrypted_`); `LTADallenglish1.pdf` → `2025-05 Tennis Canada LTAD.pdf`. Poza zakresem: zdjęcia `IMG_*`/`_DSC*` (bez daty i tematu), `UMOWA Kadra WMZT 2026.pdf`. ✅ Wnętrza folderów wydarzeń i `2025-08-25 PIT obóz zdjęcia` (~40 zdjęć) zaakceptowane jako wyjątek — zdjęcia to materiał szkoleniowy, nie pamiątka (design.md §4).
 - ⬜ Etap B: `Zrzut ekranu …jpeg.png`, pliki bez rozszerzenia w `04 Kuba`, `passa 2021 -wyniki.pdf` itd.
+
+## Szczegóły: `03 🏥 Zdrowie`
+
+- ✅ Root (2026-10-23): podfoldery `01 Natalka` (było `Natka`), `02 Nadia`, `03 Michał`, `04 Paweł` (było `Pawel`), `05 mama`, `09 Archiwum` (było `_Archiwum`) — numeracja zgodna z `02 👪 Rodzina`.
+- ✅ `Terapia M.` → `03 Michał/Terapia` (później przeniesiona przez użytkownika do roota Zdrowia). Skan `Zeskanowano 14 gru 2025…pdf` (wniosek LUX MED Swoboda Leczenia, dziecko ur. 2016 — Michał wg użytkownika) → `03 Michał/2025-12-14 LuxMed Swoboda Leczenia Wniosek.pdf` (data z nazwy skanu).
+- ✅ `2024 - LuxMed w Roche` → `04 Paweł/2024 LuxMed w Roche` (umowy i oferty benefitu z pracy; wnętrze bez zmian nazw).
+- ✅ `01 Natalka` (2026-10-23): nazwy w roocie zgodne z konwencją (m.in. `2025-11 Tomografia Komputerowa Osiowa` z poprawioną literówką, `TK kolana lewego`); wnętrza folderów `Pantomogram`, `TK kolana lewego`, `2025-11 …`, `2026-01 …` nie przeglądane.
+- ✅ `02 Nadia` (2026-10-23): 24 pliki/skrót przemianowane; numery zleceń laboratoryjnych usunięte z nazw (`Morfologia`, `Panel testów wziewnych`), `Morfologia płytki rozmaz T4 wolne TSH` i `Panel pyłki …` datowane datą utworzenia 2024-10-05 (dokładność: data utworzenia). Pantomogram `.dcm`/`.jpg` → `2025-12-29 Pantomogram Nadia`. ⬜ Do decyzji: duplikat `Trzeciakowska_Nadia_20251229_181948.jpg` (ten sam rozmiar co zdatowany JPG).
+- ✅ `03 Michał` (2026-10-23): ~40 pozycji przemianowanych (w roocie i `2025-06 Złamanie kości śródstopia`); `szkoda.pdf` → `2025-08-05 Szkoda.pdf` (data utworzenia). Duplikaty rozstrzygnięte przez użytkownika: dwa pliki z 2026-04-20 rozróżnione ręcznie (`2026-04-20 Morfologia`, `2026-04-20 Glukoza`), nowszy duplikat `Rozmowa redukująca stres` usunięty. Podfoldery `Konsultacje` i `Badania` w `2025-06 …` nieprzejrzane.
+- 🟡 `Terapia` (użytkownik przeniósł ją z `03 Michał` do roota Zdrowia jako `07 Terapia m.`, 2026-10-23): pliki w środku przemianowane; użytkownik zmienił nazwę na `Terapia małżeńska` — ✅ zakończone.
+- 🟡 `04 Paweł` (2026-10-23): ~40 pozycji przemianowanych w roocie, `2024 LuxMed w Roche`, `2024-05 Nerwy w konserwy by Tomek Zieliński` i `Kolano` (`#Kolano` → `Kolano`). Numery zleceń laboratoryjnych usunięte z nazw; `Badanie_lekarskie_506129921.pdf` → `2024-05-06 Badanie lekarskie.pdf` (data utworzenia); `endomondo-2020-12-10.zip` → `2020-12-10 Endomondo.zip`; poprawiona literówka `rekominanty` → `Rekomendacje`. ✅ Duplikat `Tomografia.pdf` (ten sam rozmiar co `2025-10-27 Tomografia nerwu wzrokowego.pdf`) przeniesiony do kosza — do opróżnienia. `Dziedzic etal 1.docx` w `Kolano` bez daty.
+- ✅ `05 mama` (2026-10-23): 2 pliki — `2026-02-09 USG.jpg` (godzina z nazwy pominięta), `2023-08-11 MRI stawu barkowego.pdf`.
+- ⬜ Wnętrza pozostałych podfolderów (`05`, `09 Archiwum`) i nazwy plików w nich; skróty z `02 Rodzina` wskazują po ID, więc powinny działać — do weryfikacji.
 
 ## Do zsynchronizowania w repozytorium po zakończeniu porządków
 
