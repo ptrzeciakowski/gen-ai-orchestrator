@@ -17,8 +17,8 @@ Legenda: ✅ zrobione · 🟡 częściowo / czeka na akcję · ⬜ nie ruszane
 | `01 🔒 Poufne Dokumenty` | ✅ | ✅ | ✅ | **Zakończone 2026-10-21.** Szczegóły niżej. |
 | `02 👪 Rodzina` | ✅ | ✅ | ✅ | **Zakończone 2026-10-22.** Szczegóły niżej. |
 | `03 🏥 Zdrowie` | ✅ | ✅ | ✅ | **Zakończone 2026-10-23.** Szczegóły niżej. |
-| `04 🏫 Edukacja Dzieci` | ✅ | ⬜ | ⬜ | Następny w kolejce (od 2026-10-24). |
-| `05 💰 Finanse` | ✅ | ⬜ | ⬜ | |
+| `04 🏫 Edukacja Dzieci` | ✅ | ✅ | ✅ | **Zakończone 2026-10-24** (poza pozycjami do decyzji). Szczegóły niżej. |
+| `05 💰 Finanse` | ✅ | ✅ | ✅ | **Zakończone 2026-10-24** (decyzja użytkownika: dalszych zmian w podfolderach nie robimy). Szczegóły niżej. |
 | `07 🏢 Praca i Projekty` | ✅ | ⬜ | ⬜ | |
 | `08 🌂 Ubezpieczenia` | ✅ | ⬜ | ⬜ | Do decyzji: osobny folder czy rozproszenie wg 09. |
 | `10 🏠 Mieszkanie i Nieruchomości` | ✅ | ⬜ | ⬜ | |
@@ -79,6 +79,29 @@ Pliki luzem w root: ⬜ 5 plików (3 arkusze/prezentacja/dokument Google, 1 `.do
 - ✅ `05 mama` (2026-10-23): 2 pliki — `2026-02-09 USG.jpg` (godzina z nazwy pominięta), `2023-08-11 MRI stawu barkowego.pdf`.
 - ✅ `09 Archiwum` (2026-10-23): podfolder `Tato` → `tata`; w środku `2023 Wniosek o ZOL` (załączniki `Załącznik 1…6`) i dokumenty taty (`2022-06-28 Karta informacyjna szpitalna tata.pdf` itd.). Daty z nazw lub z daty utworzenia (`2022-07-05/07`, `2023-07-23`); pliki bez rozszerzenia dostały `.pdf`; poprawiona literówka `opieka` → `opieką`.
 - ⬜ Weryfikacja: skróty z `02 Rodzina` do podfolderów Zdrowia wskazują po ID, więc powinny działać po zmianach nazw. Nieprzejrzane wnętrza: `Pantomogram`, `TK kolana lewego`, `2025-11 …`, `2026-01 …` (Natalka), `Konsultacje`, `Badania` (Michał/złamanie).
+
+## Szczegóły: `04 🏫 Edukacja Dzieci`
+
+- ✅ Root (2026-10-24): foldery klas `Michał` (6) i `Nadia` (7) → `RRRR-RR Klasa Nx` (bez ` - `, `/` → `-`); `04 matma` → `Matematyka`.
+- ✅ Pliki luzem: `Szkoła` → `2024-12-04 Nadia Matematyka Sprawdzian`; `upoważnienie …` → `2022-09-01 Upoważnienia Michał i Nadia 2022-2023.pdf`. Pusta `Karta kwalifikacyjna ZIELONEJ SZKOŁY` — do kosza (do opróżnienia).
+- ✅ `Nadia`: opinia psychologiczna → `2023-04-18 …` (data z treści, nie z nazwy), ocena efektywności → `2026-06-17 …` (data z treści), `Angielski 2023-01` → `2023-01 Nadia Angielski Zagadnienia do Diagnozy`. Opinie zostają w Edukacji (decyzja użytkownika).
+- ✅ Legitymacja szkolna (3 pliki, PESEL) → `01 🔒 Poufne Dokumenty/01 Tożsamość` jako `2024-12-21 Nadia Legitymacja Szkolna` (+ `Strona 1`, `Strona 2`); uprawnienia sprawdzone — tylko właściciel.
+- ✅ Skrót `Nadia` → `Nadia - zdrowie` (wyjątek D3a).
+- ✅ Wnętrza (2026-10-24): przejrzane i nazwane wszystkie 13 folderów klas, `Matematyka` (Michał) oraz podfoldery (`Religia Pytania`, `I Komunia`, `Fotograf Zgody`, `Zaświadczenia o Niekaralności`, `Język Polski`, `Matematyka` w 6c, `Kiermasz Charytatywny`, `Książka Pierwszoklasisty`, `Prace Domowe`) — ok. 110 pozycji. Daty z treści dokumentu lub nazwy; gdy brak — z daty utworzenia pliku (dotyczy m.in. dokumentów przedszkolnych `2021-03-07`, `Umowa`, plany lekcji, skany). Tytuły szkolne bez osoby, jeśli folder ją wskazuje; `Nadia`/`Paweł` tylko tam, gdzie dokument jest osobisty lub folder nie wystarcza.
+- ✅ Daty poprawione względem starych nazw: opinia psychologiczna (`2023-04-18`), ocena efektywności 2026 (`2026-06-17`).
+- ✅ Decyzje (2026-10-24): do kosza (do opróżnienia) — instalator Zoom `.exe`, pusty `\n.txt`, dwa `Nadia na koniu.mp4` (wideo są w Google Photos), oba puste formularze `Karta Kwalifikacyjna Zielona Szkoła Tarda`. `Zaświadczenia o Niekaralności` → `01 🔒 Poufne Dokumenty/01 Tożsamość`. `2025-09-11 E-podręczniki Kody.pdf` zostaje w `Klasa 6c`. `2024-12-04 Nadia Matematyka Sprawdzian` zostaje tylko w `2024-25 Klasa 5c`.
+- ⚠️ Przy kolizji `2024-03-10 Francuski Album o Rodzinie` (prezentacja, dokument, PDF) dopisano `Prezentacja` / `Dokument` zamiast blokowania.
+- ⬜ `Prace Domowe` (1c) i dokument `Finka i Teo…` należą do konta `natalia.trzeciakowska` — zmiana nazwy przeszła.
+
+## Szczegóły: `05 💰 Finanse`
+
+- ✅ **Zamknięte 2026-10-24 na decyzję użytkownika.** Nieprzejrzane i niezmienione celowo: `00 Podatki`, `97 Emerytura`, `98 Kredyty`, większość wnętrza `99 Archiwum`, `home-budget-app` (folder aplikacji). Wpisy poniżej to stan wykonania, nie lista zadań.
+
+- ✅ Root (2026-10-24): podfoldery `00 Podatki`, `01 Budżet`, `97 Emerytura`, `98 Kredyty`, `99 Archiwum`; pliki `Budżet Domowy`, `2026-06-21 Budżet Kategoryzacja Transakcji`, `Tenis Rozliczenia`, `Konta Schemat.drawio`, `2026-04-12 Business Case Farma PV 500 kWp`. Decyzje: business case PV i `Tenis Rozliczenia` zostają w Finansach.
+- 🟡 Przejrzane wstępnie (bez zmian): `01 Budżet` — eksporty i kopie aplikacji Home Budget Analyzer (m.in. `home_budget.db`, `home_budget_backup_2026-06-13.json` ~10 MB, `lista_operacji_…csv`, 5 eksportów AI, podfolder `files/in`+`out`) z numerami kart i rachunków; `97 Emerytura` (PPK, IKE, PPE, AXA OFE — 5 plików z PESEL); `98 Kredyty` (arkusze rat i CashFlow kredytu hipotecznego 2016, duplikaty `.xlsx`/`.docx`); `00 Podatki` (foldery `2023`–`2025`, `_Archiwum`, `Rodzice`); `99 Archiwum` (`#Home Budget`, `04. PKO BP`, `50. Budżet domowy`, `03. mBank`, `02. BGŻ Optima` i dalsze).
+- ✅ Decyzje (2026-10-24): `01 Budżet` → `home-budget-app` (folder aplikacji, bez ruszania zawartości); dwa pliki o śmieciowych nazwach przemianowane na `2026-06-28 Home Budget Kategoryzacja AI Eksport.txt` i `2026-06-28 Home Budget Wszystkie Transakcje.txt` (oba 1,88 MB, rozszerzenie `.txt` założone, treść nie sprawdzana); wyciągi i pliki z PESEL zostają w Finansach.
+- ✅ `99 Archiwum` root (2026-10-24): 7 folderów (`02 BGŻ Optima`, `03 mBank`, `04 PKO BP`, `50 Budżet Domowy`, `Home Budget`, `2012 Podsumowanie Wydatków`, `2012 Kredyt Mieszkaniowy`) i ~13 plików przemianowanych wg konwencji; `Tmp.zip` (po sprawdzeniu: prototyp Home Budget z 2019 — eksporty mBank/PKO + SQLite) → `2019-12-29 Home Budget Prototyp Eksporty Bankowe.zip`. Dwa arkusze `Zestawienie wydatków` (2021-01-14) to identyczne puste szablony — nie przemianowane, do decyzji (kosz?).
+- 🟡 `99 Archiwum` wnętrza: w `2012 Kredyt Mieszkaniowy` (5 plików) i `2012 Podsumowanie Wydatków` (4 pliki `YYYY-MM Budżet.xlsx`) przemianowano pierwsze strony listingu; kolejne strony tych folderów oraz `Home Budget` (`#Raw Files`, `Sandbox`), `02 BGŻ Optima`, `03 mBank` (`01. Historia transakcji`…), `04 PKO BP`, `50 Budżet Domowy` i `Archiwum` w `2012 Podsumowanie…` — nie przejrzane. Dalej: `00 Podatki`, `97 Emerytura`, `98 Kredyty`.
 
 ## Do zsynchronizowania w repozytorium po zakończeniu porządków
 
