@@ -1,6 +1,6 @@
 # Tracker porządkowania Dysku (poziom folderów w root)
 
-Ręczne porządkowanie katalog po katalogu (od 2026-10-21). Zasady: [design.md](./design.md) §3–4. Stan na **2026-10-21**.
+Ręczne porządkowanie katalog po katalogu (od 2026-10-21). Zasady: [design.md](./design.md) §3–4. Stan na **2026-10-23**.
 
 Legenda: ✅ zrobione · 🟡 częściowo / czeka na akcję · ⬜ nie ruszane
 
@@ -16,8 +16,8 @@ Legenda: ✅ zrobione · 🟡 częściowo / czeka na akcję · ⬜ nie ruszane
 | `00 📥 Inbox` | ✅ | ⬜ | ⬜ | |
 | `01 🔒 Poufne Dokumenty` | ✅ | ✅ | ✅ | **Zakończone 2026-10-21.** Szczegóły niżej. |
 | `02 👪 Rodzina` | ✅ | ✅ | ✅ | **Zakończone 2026-10-22.** Szczegóły niżej. |
-| `03 🏥 Zdrowie` | ✅ | ✅ | 🟡 | Root uporządkowany 2026-10-23; wnętrza podfolderów do przeglądu. Szczegóły niżej. |
-| `04 🏫 Edukacja Dzieci` | ✅ | ⬜ | ⬜ | |
+| `03 🏥 Zdrowie` | ✅ | ✅ | ✅ | **Zakończone 2026-10-23.** Szczegóły niżej. |
+| `04 🏫 Edukacja Dzieci` | ✅ | ⬜ | ⬜ | Następny w kolejce (od 2026-10-24). |
 | `05 💰 Finanse` | ✅ | ⬜ | ⬜ | |
 | `07 🏢 Praca i Projekty` | ✅ | ⬜ | ⬜ | |
 | `08 🌂 Ubezpieczenia` | ✅ | ⬜ | ⬜ | Do decyzji: osobny folder czy rozproszenie wg 09. |
@@ -77,7 +77,8 @@ Pliki luzem w root: ⬜ 5 plików (3 arkusze/prezentacja/dokument Google, 1 `.do
 - 🟡 `Terapia` (użytkownik przeniósł ją z `03 Michał` do roota Zdrowia jako `07 Terapia m.`, 2026-10-23): pliki w środku przemianowane; użytkownik zmienił nazwę na `Terapia małżeńska` — ✅ zakończone.
 - 🟡 `04 Paweł` (2026-10-23): ~40 pozycji przemianowanych w roocie, `2024 LuxMed w Roche`, `2024-05 Nerwy w konserwy by Tomek Zieliński` i `Kolano` (`#Kolano` → `Kolano`). Numery zleceń laboratoryjnych usunięte z nazw; `Badanie_lekarskie_506129921.pdf` → `2024-05-06 Badanie lekarskie.pdf` (data utworzenia); `endomondo-2020-12-10.zip` → `2020-12-10 Endomondo.zip`; poprawiona literówka `rekominanty` → `Rekomendacje`. ✅ Duplikat `Tomografia.pdf` (ten sam rozmiar co `2025-10-27 Tomografia nerwu wzrokowego.pdf`) przeniesiony do kosza — do opróżnienia. `Dziedzic etal 1.docx` w `Kolano` bez daty.
 - ✅ `05 mama` (2026-10-23): 2 pliki — `2026-02-09 USG.jpg` (godzina z nazwy pominięta), `2023-08-11 MRI stawu barkowego.pdf`.
-- ⬜ Wnętrza pozostałych podfolderów (`05`, `09 Archiwum`) i nazwy plików w nich; skróty z `02 Rodzina` wskazują po ID, więc powinny działać — do weryfikacji.
+- ✅ `09 Archiwum` (2026-10-23): podfolder `Tato` → `tata`; w środku `2023 Wniosek o ZOL` (załączniki `Załącznik 1…6`) i dokumenty taty (`2022-06-28 Karta informacyjna szpitalna tata.pdf` itd.). Daty z nazw lub z daty utworzenia (`2022-07-05/07`, `2023-07-23`); pliki bez rozszerzenia dostały `.pdf`; poprawiona literówka `opieka` → `opieką`.
+- ⬜ Weryfikacja: skróty z `02 Rodzina` do podfolderów Zdrowia wskazują po ID, więc powinny działać po zmianach nazw. Nieprzejrzane wnętrza: `Pantomogram`, `TK kolana lewego`, `2025-11 …`, `2026-01 …` (Natalka), `Konsultacje`, `Badania` (Michał/złamanie).
 
 ## Do zsynchronizowania w repozytorium po zakończeniu porządków
 
