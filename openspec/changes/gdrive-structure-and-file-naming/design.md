@@ -18,7 +18,7 @@ Dokumenty `00`–`05` to historia diagnozy z września 2026 (dane: 77 498 plikó
 
 ## 2. Decyzje
 
-**D1. Dwa niezależne etapy.** Etap A przenosi i przemianowuje *foldery*, nazwy plików zostają bez zmian. Etap B zmienia nazwy plików i startuje dopiero po zweryfikowaniu A. Każdy etap ma własny plan, dziennik i weryfikację — przy awarii wiadomo, który z nich ją spowodował.
+**D1. Porządkowanie per folder, struktura i nazwy razem (zmiana z 2026-10-24).** Pierwotnie dwa niezależne etapy (A: foldery, B: nazwy plików) ze skryptowym wykonaniem. Obecnie każdy folder z root przechodzi cały cykl — struktura, przeniesienia i nazwy plików — w jednym półautomatycznym przebiegu z akceptacją użytkownika; małe, pojedyncze i weryfikowane po ID kroki zastępują oddzielne dzienniki etapów.
 
 **D2. Przemianowanie źródeł przed tworzeniem celów.** Istniejące foldery główne zmieniają nazwę *w miejscu* (zachowane ID, uprawnienia i skróty); nowe foldery powstają tylko tam, gdzie nic nie jest przemianowywane. Planer uwzględnia planowane rename'y w wirtualnym indeksie, więc nie powstają równoległe drzewa.
 
@@ -30,7 +30,7 @@ Dokumenty `00`–`05` to historia diagnozy z września 2026 (dane: 77 498 plikó
 
 **D5. Folder `25📄 Paweł - dokumenty` rozbijany w dwóch krokach.** Najpierw całe rozpoznane podfoldery (13) trafiają do dziedzin z zachowaniem pochodzenia (`Import-z-25`); dopiero potem selektywnie włączane są pojedyncze pliki. Osiem plików luzem w 25 idzie do `Inbox/Do-Przejrzenia/Pliki-z-25`. Folder 25 usuwa się, gdy każdy element ma świadomy cel.
 
-**D6. Planowanie tylko do odczytu, wykonanie zablokowane.** `planner.py` buduje plan `schema_version: 2` i nie ma dostępu do metod modyfikujących Drive (OAuth `drive.metadata.readonly`). Stary `apply` jest wyłączony; nowy wykonawca to osobne zadanie (§5).
+**D6. Tryb półautomatyczny (2026-10-24).** Claude czyta Drive przez konektor, proponuje zmiany i wykonuje je dopiero po akceptacji użytkownika (skróty i usunięcia — osobna zgoda); decyzje i stan zapisuje `tracker.md`. `planner.py` (plan `v2`, OAuth `drive.metadata.readonly`) zostaje narzędziem pomocniczym tylko do odczytu; stary `apply` jest wyłączony, a nowy wykonawca nie jest budowany (wznowienie tylko przy operacjach masowych).
 
 **D7. Takeout i zdjęcia poza zakresem.** Zdjęcia zostały przeniesione do Google Photos. Folder `Takeout` (~536 GB) jest przejściowy i obsługiwany ręcznie (pobranie offline, weryfikacja, usunięcie); ta zmiana go nie rusza. Backup przed migracją robi użytkownik ręcznie przez Takeout — bez skryptu.
 
@@ -101,12 +101,12 @@ scripts/analysis/           jednorazowe skrypty czytające lokalną bazę DriveF
 
 - OAuth poza repozytorium: `~/.config/gdrive-migration/` (`GDRIVE_MIGRATION_CONFIG`). Pliki robocze (`plan.json`, `inventory.json`, `dry_run_report.md`) i `analysis/data/` są lokalne i ignorowane przez Git.
 - **Planer** pracuje na rzeczywistym ID roota (nie aliasie `root`), ogranicza skan do potwierdzonych potomków My Drive (bez skrótów i Shared Drives), dopasowuje nazwy dokładnie (NFC), blokuje duplikaty źródeł i kolizje celów.
-- **Wykonawca `apply v2`** (do zbudowania): tylko zatwierdzony plan v2 ze sprawdzeniem skrótu; dziennik zapisywany trwale przed i po każdej operacji (ID, poprzednia nazwa i rodzice, cel, odpowiedź API); zatrzymanie partii przy rozbieżności `before` lub kolizji; weryfikacja każdej operacji po ID; idempotentne wznowienie; warunkowe cofanie w odwrotnej kolejności. Test na osobnym koncie Drive przed użyciem produkcyjnym. Wymagania: [SAFETY.md](./scripts/gdrive_migration/SAFETY.md).
-- Etap B użyje tego samego mechanizmu (plan → zatwierdzenie → dziennik → weryfikacja) z modułem normalizatora nazw.
+- **Wykonawca `apply v2`** (wycofany z planu 2026-10-24; poniżej wymagania na wypadek operacji masowych): tylko zatwierdzony plan v2 ze sprawdzeniem skrótu; dziennik zapisywany trwale przed i po każdej operacji (ID, poprzednia nazwa i rodzice, cel, odpowiedź API); zatrzymanie partii przy rozbieżności `before` lub kolizji; weryfikacja każdej operacji po ID; idempotentne wznowienie; warunkowe cofanie w odwrotnej kolejności. Test na osobnym koncie Drive przed użyciem produkcyjnym. Wymagania: [SAFETY.md](./scripts/gdrive_migration/SAFETY.md).
+- Nazwy plików (§4) stosowane są przy przeglądzie folderu wg reguł z tego dokumentu; osobny moduł normalizatora jest opcjonalny.
 
 ## 6. Stan i ryzyka
 
-Dry-run v2 (raport 12): 42 383 pozycje w My Drive, 28 folderów i 53 pliki w roocie; 77 operacji (11 rename'ów, 22 nowe foldery, 44 przeniesienia); 36 pozycji `blocked`; **0 operacji wykonanych**.
+Dry-run v2 (raport 12): 42 383 pozycje w My Drive, 28 folderów i 53 pliki w roocie; 77 operacji (11 rename'ów, 22 nowe foldery, 44 przeniesienia); 36 pozycji `blocked`; liczby dotyczą skryptowego dry-run; faktyczne zmiany wykonywane są ręcznie/półautomatycznie — foldery `01`–`05` zakończone (stan: `tracker.md`).
 
 | Ryzyko | Mitygacja |
 |---|---|
@@ -117,6 +117,6 @@ Dry-run v2 (raport 12): 42 383 pozycje w My Drive, 28 folderów i 53 pliki w roo
 | Zmiana nazw → kolizje po normalizacji spacji i NFC | blokada kolizji, wyjątki dla zasobów aplikacyjnych, review |
 | Takeout nie odtwarza Dysku 1:1 (uprawnienia, wersje) | traktować jako eksport danych, nie jako rollback |
 
-## 7. Otwarte decyzje użytkownika (bramka przed zapisem)
+## 7. Otwarte decyzje użytkownika
 
-Rozstrzygnięcia wymagane do odblokowania zapisu (zadanie „Bramka decyzyjna" w tasks.md): przypisanie karty szkolnej (które dziecko), energii z folderu `16🏡Pokój` i `06. Działka Dom` (który obiekt), `Terapia M.`, folderów Chrome i `91🔑Hasła` (treść), dokumentów tożsamości (uprawnienia, szyfrowanie), `Obsidian` i `Gemini Gems` (czy używane), `89 Sterta`, ośmiu plików luzem w 25, projektów Snowflake/HSBC; punkty zapisu aplikacji; potwierdzenie ręcznego backupu.
+Bramka zbiorcza zniesiona (2026-10-24); poniższe pozycje rozstrzygamy na bieżąco przy przeglądzie właściwego folderu: przypisanie karty szkolnej (które dziecko), energii z folderu `16🏡Pokój` i `06. Działka Dom` (który obiekt), `Terapia M.`, folderów Chrome i `91🔑Hasła` (treść), dokumentów tożsamości (uprawnienia, szyfrowanie), `Obsidian` i `Gemini Gems` (czy używane), `89 Sterta`, ośmiu plików luzem w 25, projektów Snowflake/HSBC; punkty zapisu aplikacji; potwierdzenie ręcznego backupu.

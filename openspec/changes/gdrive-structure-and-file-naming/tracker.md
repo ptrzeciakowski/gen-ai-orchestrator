@@ -1,6 +1,6 @@
 # Tracker porządkowania Dysku (poziom folderów w root)
 
-Ręczne porządkowanie katalog po katalogu (od 2026-10-21). Zasady: [design.md](./design.md) §3–4. Stan na **2026-10-23**.
+Ręczne porządkowanie katalog po katalogu (od 2026-10-21). Zasady: [design.md](./design.md) §3–4. Stan na **2026-10-24**.
 
 Legenda: ✅ zrobione · 🟡 częściowo / czeka na akcję · ⬜ nie ruszane
 
@@ -19,7 +19,7 @@ Legenda: ✅ zrobione · 🟡 częściowo / czeka na akcję · ⬜ nie ruszane
 | `03 🏥 Zdrowie` | ✅ | ✅ | ✅ | **Zakończone 2026-10-23.** Szczegóły niżej. |
 | `04 🏫 Edukacja Dzieci` | ✅ | ✅ | ✅ | **Zakończone 2026-10-24** (poza pozycjami do decyzji). Szczegóły niżej. |
 | `05 💰 Finanse` | ✅ | ✅ | ✅ | **Zakończone 2026-10-24** (decyzja użytkownika: dalszych zmian w podfolderach nie robimy). Szczegóły niżej. |
-| `07 🏢 Praca i Projekty` | ✅ | ⬜ | ⬜ | |
+| `07 🏢 Praca i Projekty` | ✅ | ✅ | ✅ | **Zakończone 2026-10-24.** Szczegóły niżej. |
 | `08 🌂 Ubezpieczenia` | ✅ | ⬜ | ⬜ | Do decyzji: osobny folder czy rozproszenie wg 09. |
 | `10 🏠 Mieszkanie i Nieruchomości` | ✅ | ⬜ | ⬜ | |
 | `11 🏡 Lewickie i Pokój` | ✅ | ⬜ | ⬜ | 09: rozdzielić, Pokój do potwierdzenia. |
@@ -109,3 +109,14 @@ Pliki luzem w root: ⬜ 5 plików (3 arkusze/prezentacja/dokument Google, 1 `.do
 - ⬜ Drzewo i mapowanie w `analysis/07`, `09` (nazwy z myślnikami; oznaczone jako historyczne w `design.md`).
 - ⬜ `tasks.md` i `proposal.md`: liczby (53 pliki w root → 5), status Etapu A, zadania wynikające z ręcznej reorganizacji.
 - ⬜ Decyzje otwarte z `design.md` §7 (m.in. Pokój/Działka, Ubezpieczenia, `Dokumenty Osobiste`).
+
+## Szczegóły: `07 🏢 Praca i Projekty`
+
+- ✅ Układ: `01 Kariera i CV` (`CV`, `Archiwum CV`, `Świadectwa Pracy`, `Dyplomy i Certyfikaty`), `02 Firmy` (`2018 Roche`, `2025 Allegro`), `03 Rekrutacje` (`2015 Affecto`, `2026 HSBC` — firmy, do których Paweł aplikował, ale zrezygnował), `04 Szkolenia`.
+- ✅ Do `01 🔒 Poufne Dokumenty/01 Tożsamość`: dwa pliki ESTA. Do `02 👪 Rodzina/01 Natalka`: `Pierścionek Rocznicowy Casa Batlló` i `2014-06-01 CV Natalka.docx` (CV Natalki znalezione w archiwum CV Pawła).
+- ✅ Zawartość `2018 Roche` zostaje na miejscu (decyzja użytkownika); zmienione nazwy folderu `Private stuff` → `Odejście z Roche` oraz pliku świadectwa.
+- ✅ Do kosza: duplikat świadectwa pracy Roche (kopia z folderu Roche, identyczny rozmiar) i `AWS Certified Cloud Practitioner (1).pdf`.
+- ✅ Nazwy: CV z datą z nazwy pliku (`2009-12-06`, `2013-07-30`, `2013-08-10`, `2013-08-13`, `2014-06-30`); `2025-08` i `2026-03 Przedłużenie Umowy o Pracę` — miesiące z daty utworzenia pliku w Drive, nie z treści dokumentu; `2025-03-13 Certyfikat LeanIX User` — data ze znacznika w nazwie pliku.
+- ⬜ Drobne: nieujednolicone pozostałe pliki w `2018 Roche`, `Odejście z Roche`, `Dokumenty` (Affecto) i `Data Mesh Wdrożenie` (zawartość zostaje w oryginalnych nazwach, poza wymienionymi); dokumenty Snowflake zostały przeniesione ręcznie przez użytkownika.
+- ⬜ Opróżnić kosz (dwa duplikaty).
+

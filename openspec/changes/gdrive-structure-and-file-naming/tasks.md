@@ -1,6 +1,6 @@
 # Plan prac (`tasks.md`)
 
-Status: w realizacji (Etap A: zakończono fazę analizy `00`–`10`, konsolidację artefaktów w katalogu zmiany oraz bezpieczne planowanie `dry-run v2` w trybie read-only; wykonanie zapisu `apply` pozostaje zablokowane do czasu decyzji użytkownika).
+Status: w realizacji — tryb półautomatyczny (decyzja z 2026-10-24). Porządkowanie Dysku odbywa się folder po folderze, z przeglądem przez konektor Google Drive i zatwierdzaniem każdej zmiany przez użytkownika; stan zapisuje `tracker.md`. Skryptowy `apply v2` i warunkowe cofanie są wycofane ze ścieżki krytycznej (planer `v2` zostaje jako narzędzie pomocnicze, tylko do odczytu).
 
 ## Faza 0 — Eksploracja, analiza architektury i konsolidacja artefaktów
 
@@ -15,36 +15,40 @@ Status: w realizacji (Etap A: zakończono fazę analizy `00`–`10`, konsolidacj
 - [x] Uaktualnić inwentaryzację i mapowanie z uwzględnieniem dokumentu `07` (52 pliki) oraz review `09` (28 folderów głównych i 13 podfolderów folderu `25`), zapisując stan `before` w schemacie planu `v2` (`scripts/gdrive_migration/planner.py`) i blokując stare wywołanie `apply`.
 - [x] Przygotować procedurę zatwierdzenia, weryfikacji i warunkowego odtworzenia w `scripts/gdrive_migration/SAFETY.md` oraz przetestować logikę planera (12 testów jednostkowych w `scripts/gdrive_migration/test_planner.py`, weryfikacja: `scripts/gdrive_migration/.venv/bin/python -m unittest -v test_planner`).
 - [x] Wykonać poprawiony odczyt `dry-run v2` tylko do odczytu (`reports/12-poprawiony-dry-run-i-plan-bezpiecznej-migracji.md`, lokalny `scripts/gdrive_migration/dry_run_report.md` oraz `plan.json` v2: 42 383 pozycje w My Drive, 77 operacji, 36 pozycji `blocked` do decyzji).
-- [ ] **Bramka decyzyjna i ręczny backup**:
-  - **Pliki**: `scripts/gdrive_migration/dry_run_report.md`, `scripts/gdrive_migration/plan.json`, `scripts/gdrive_migration/SAFETY.md`.
-  - **Kryteria akceptacji**: Rozstrzygnięcie 36 pozycji `blocked` / warunkowych z raportu `12` (m.in. przypisanie karty szkolnej, energii, firm/projektów, poddrzew medycznych, dokumentów tożsamości i podfolderów folderu `25`), potwierdzenie punktów zapisu aplikacji (Notability, Chrome, skaner paragonów) oraz potwierdzenie ręcznego backupu Takeout.
-- [ ] **Implementacja i testy wykonawcy `apply v2` oraz warunkowego cofania**:
-  - **Pliki**: `scripts/gdrive_migration/migrate.py`, `scripts/gdrive_migration/planner.py`, `scripts/gdrive_migration/test_planner.py`.
-  - **Kryteria akceptacji**: Obsługa wyłącznie zatwierdzonego schematu `plan.json` v2 ze sprawdzeniem skrótu kryptograficznego planu, trwały zapis dziennika `migration_log.json` przed i po każdej operacji, zatrzymanie partii przy rozbieżności stanu `before` lub kolizji, pełna weryfikacja `verify` po ID każdej operacji oraz testy wznowienia, błędów częściowych i warunkowego cofania na osobnym zestawie testowym Drive.
-  - **Weryfikacja**: `scripts/gdrive_migration/.venv/bin/python -m unittest -v` oraz test na koncie testowym przed odblokowaniem produkcyjnego `apply`.
-- [ ] **Wykonanie zatwierdzonych operacji Etapu A i weryfikacja końcowa**:
-  - **Pliki**: `scripts/gdrive_migration/migrate.py`, `scripts/gdrive_migration/migration_log.json`, `scripts/gdrive_migration/verification.json`.
-  - **Kryteria akceptacji**: Wykonanie wyłącznie zatwierdzonych partii operacji przy zachowaniu oryginalnych nazw plików, 100% zgodności ID i rodziców w `verify` oraz działające zapisy z podpiętych aplikacji.
-  - **Weryfikacja**: `scripts/gdrive_migration/.venv/bin/python migrate.py verify`.
+- [x] **Zmiana trybu na półautomatyczny** (2026-10-24): zamiast zbiorczego `apply v2` — porządkowanie katalog po katalogu z zatwierdzaniem przez użytkownika (zasady: `design.md` §3–5, D6). Etap B (nazwy plików) wykonywany w tym samym przebiegu co porządkowanie danego folderu.
+- [x] Foldery `01`–`05` uporządkowane (struktura, nazwy, uprawnienia `01`) — szczegóły w `tracker.md`.
 
-## Etap B — Standaryzacja nazw plików (po zakończeniu i weryfikacji Etapu A)
+## Etap C — Porządkowanie folderów w root (pętla per folder, `tracker.md`)
 
-- [ ] **Zebranie pełnego wykazu nazw plików w podfolderach**:
-  - **Pliki**: `scripts/gdrive_migration/migrate.py`, `analysis/10-konwencja-nazewnictwa-plikow.md`.
-  - **Kryteria akceptacji**: Rekurencyjny odczyt nazw w podfolderach objętych zakresem po migracji struktury, statystyka wzorców i identyfikacja zasobów aplikacyjnych wymagających wykluczenia.
-- [ ] **Doprecyzowanie deterministycznego modułu normalizacji nazw**:
-  - **Pliki**: `analysis/10-konwencja-nazewnictwa-plikow.md`, nowy moduł normalizatora w `scripts/gdrive_migration/`.
-  - **Kryteria akceptacji**: Reguły formatu `YYYY-MM-DD Temat Opis.ext` (oraz wariantów `YYYY-MM`, `YYYY`, bez daty), zachowanie polskich znaków i normalizacja spacji, brak sztucznych rozszerzeń dla natywnych dokumentów Google, blokada przy niejednoznacznej dacie lub kolizji nazw w tym samym folderze.
-- [ ] **Wygenerowanie raportu propozycji zmian nazw (`stara nazwa → nowa nazwa`)**:
-  - **Pliki**: lokalny raport JSON/Markdown w `scripts/gdrive_migration/`.
-  - **Kryteria akceptacji**: Każda pozycja zawiera `ID`, `stara nazwa`, `nowa nazwa`, `reguła`, `źródło daty`, `konflikt` oraz pole decyzji (`zatwierdzone` / `odrzucone` / `blocked`).
-- [ ] **Testy jednostkowe normalizacji i cofania zmian nazw**:
-  - **Pliki**: testy jednostkowe w `scripts/gdrive_migration/`.
-  - **Kryteria akceptacji**: Pokrycie testami normalizacji spacji i Unicode, dat częściowych, natywnych dokumentów Google, rozszerzeń wieloczłonowych, kolizji po normalizacji, idempotencji i warunkowego cofania z dziennika przed/po.
-  - **Weryfikacja**: `scripts/gdrive_migration/.venv/bin/python -m unittest -v`.
-- [ ] **Zatwierdzenie pozycji raportu, wykonanie zmian nazw i weryfikacja**:
-  - **Pliki**: `scripts/gdrive_migration/migrate.py`, dziennik operacji i raport weryfikacji.
-  - **Kryteria akceptacji**: Zmiana wyłącznie pozycji jawnie zatwierdzonych przez użytkownika z kontrolą niezmienionego stanu `before`, weryfikacja każdej operacji po ID i zapis wyjątków.
+Dla każdego folderu z listy poniżej wykonać ten sam cykl:
+
+1. Odczyt zawartości (konektor Drive), zestawienie względem `analysis/07`/`09` i `design.md` §3–4.
+2. Propozycja: struktura podfolderów, przeniesienia, nowe nazwy folderów i plików (reguły `design.md` §4), pozycje do decyzji. Zmiany wykonuje się dopiero po akceptacji użytkownika; skróty tylko za zgodą (D3a).
+3. Wykonanie zatwierdzonych zmian, weryfikacja po ID (rodzic, nazwa) i uprawnień tam, gdzie dotyczy.
+4. Aktualizacja `tracker.md` (sekcja szczegółów folderu, decyzje, pozostałe pozycje).
+
+- [x] `07 🏢 Praca i Projekty`
+- [ ] `08 🌂 Ubezpieczenia` (najpierw decyzja: osobny folder czy rozproszenie wg 09)
+- [ ] `10 🏠 Mieszkanie i Nieruchomości`
+- [ ] `11 🏡 Lewickie i Pokój` (09: rozdzielić; Pokój do potwierdzenia)
+- [ ] `12 🚗 Pojazdy`
+- [ ] `20 📚 Wiedza i Rozwój`, `21 🎵 Audio i Multimedia`, `22 🏃 Sport i Aktywność`, `23 🎮 Gry i Hobby`, `24 🧳 Podróże i Wyjazdy`
+- [ ] `80 📱 Aplikacje i Synchronizacja` (sprawdzić punkty zapisu Notability, Chrome, skanera paragonów przed zmianami)
+- [ ] `90 📦 Archiwum`, `99 🚮 Do Usunięcia`; `95 💽 Google Takeout` poza zakresem (ręcznie)
+- [ ] `00 📥 Inbox` oraz 5 plików luzem w root — przypisanie do folderów
+- [ ] Pozostałości: opróżnić kosz po potwierdzeniu aktualności `hasla.kdbx`; ponownie sprawdzić `00 ‼️ Ważne dokumenty`; pozycje do decyzji z `04 🏫 Edukacja Dzieci`
+- [ ] Przed zamknięciem zmiany: ręczny backup Takeout potwierdzony przez użytkownika (nie jest bramką dla pojedynczych, odwracalnych kroków; obowiązuje przed ewentualnymi operacjami masowymi)
+
+## Zamknięcie
+
 - [ ] **Uzupełnienie kanonicznej dokumentacji zasad**:
-  - **Pliki**: `analysis/06-optymalna-struktura-i-procesy-zarzadzania.md`, `analysis/07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md`, `analysis/10-konwencja-nazewnictwa-plikow.md`.
-  - **Kryteria akceptacji**: Dopisanie finalnych uściśleń po wdrożeniu Etapu A i B z zachowaniem pełnej historii dokumentów `06`–`12`.
+  - **Pliki**: `design.md`, `analysis/06-optymalna-struktura-i-procesy-zarzadzania.md`, `analysis/07-mapa-katalogow-i-istniejacych-plikow-do-nowej-struktury.md`, `analysis/10-konwencja-nazewnictwa-plikow.md`.
+  - **Kryteria akceptacji**: Dopisanie finalnych uściśleń z porządkowania wszystkich folderów z zachowaniem historii dokumentów `06`–`12`; `tracker.md` bez pozycji otwartych lub z jawnie odroczonymi.
+
+## Wycofane z planu (decyzja z 2026-10-24)
+
+Zachowane jako historia, nie do realizacji w tej zmianie (do wznowienia tylko przy potrzebie operacji masowych):
+
+- ~~Bramka decyzyjna na 36 pozycji `blocked` i `plan.json` v2~~ — pozycje rozstrzygane na bieżąco per folder.
+- ~~Wykonawca `apply v2`, dziennik `migration_log.json`, `verify`, warunkowe cofanie, test na koncie testowym~~.
+- ~~Zbiorczy audyt nazw, generator raportu `stara → nowa`, moduł normalizatora nazw i testy jednostkowe normalizacji~~ — reguły z `design.md` §4 stosowane przy przeglądzie każdego folderu.

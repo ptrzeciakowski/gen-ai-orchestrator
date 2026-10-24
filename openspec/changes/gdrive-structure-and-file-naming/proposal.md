@@ -2,7 +2,7 @@
 
 **Kod:** `gdrive-structure-and-file-naming`  
 **Data:** 2026-10-12 (aktualizacja konsolidacyjna: 2026-10-18)  
-**Status:** w realizacji (Etap A: zakończone bezpieczne planowanie `dry-run v2` tylko do odczytu; wykonanie `apply` na Google Drive pozostaje zablokowane do czasu ręcznego zatwierdzenia pozycji `blocked` i testu wykonawcy).
+**Status:** w realizacji — tryb półautomatyczny (od 2026-10-24): porządkowanie folder po folderze z zatwierdzaniem każdej zmiany przez użytkownika i odczytem przez konektor Google Drive; postęp w [tracker.md](./tracker.md). Skryptowy `apply` wycofany ze ścieżki krytycznej.
 
 ## Why
 
@@ -11,6 +11,9 @@ Dokument 06 wymaga nazw folderów bez spacji, ale podaje wzorce nazw plików ze 
 Potrzebne są dwa niezależnie planowane i weryfikowane etapy: najpierw migracja katalogów bez zmian nazw plików (Etap A, dla którego wdrożono już nowy planer `v2` i wykonano poprawiony dry-run 12), a następnie audyt i standaryzacja nazw plików (Etap B). Wszystkie artefakty analityczne (`00`–`12`), dane inwentaryzacyjne, prezentacja Beamer (`analysis/latex-slides/`) oraz skrypty (`scripts/`) zostały skonsolidowane bezpośrednio w katalogu tej zmiany.
 
 ## What Changes
+
+- **Tryb półautomatyczny (2026-10-24):** zamiast zbiorczego planu `v2` z wykonawcą `apply` i cofaniem — pętla per folder: odczyt → propozycja → akceptacja użytkownika → wykonanie → weryfikacja → wpis do trackera. Etap A (struktura) i Etap B (nazwy plików) są wykonywane razem dla danego folderu (zmiana względem pierwotnego rozdzielenia; D1 w `design.md` zaktualizowane). Foldery `01`–`05` zakończone.
+- Poniższe punkty Etapu A/B opisują materiał wejściowy i reguły; zbiorcze wykonanie skryptem nie jest już planowane.
 
 - Etap A: dopracować migrację katalogów i przenoszenie plików według 07 oraz korekt 09, zachowując nazwy plików.
   - Wdrożono moduł `planner.py` (schemat planu `v2`), obsługę rzeczywistego ID roota, zawężenie skanu do potwierdzonych potomków My Drive, procedurę bezpieczeństwa `SAFETY.md` oraz 12 testów jednostkowych (`test_planner.py`).
@@ -50,7 +53,7 @@ Punkty odniesienia w katalogu zmiany:
 
 ## Non-Goals
 
-Usuwanie plików, opróżnianie kosza, deduplikacja, migracja zdjęć, szyfrowanie, automatyczna zmiana uprawnień, transfer Takeout, tworzenie backupów skryptem i jednoczesne zmienianie struktury oraz nazw plików. Wykonawca `apply` pozostaje celowo zablokowany do czasu zatwierdzenia planu przez użytkownika.
+Usuwanie plików, opróżnianie kosza, deduplikacja, migracja zdjęć, szyfrowanie, automatyczna zmiana uprawnień, transfer Takeout, tworzenie backupów skryptem i jednoczesne zmienianie struktury oraz nazw plików. Zbiorczy wykonawca `apply` nie jest budowany; zapisy wykonuje się pojedynczo, za zgodą użytkownika, w ramach porządkowania danego folderu.
 
 ## Risks and Unverified Assumptions
 
@@ -64,8 +67,8 @@ Usuwanie plików, opróżnianie kosza, deduplikacja, migracja zdjęć, szyfrowan
 
 ## Acceptance Criteria
 
-1. Etap A zachowuje nazwy plików i ma własny plan (`plan.json` v2) oraz weryfikację operacji.
-2. Etap B rozpoczyna się po weryfikacji A; obejmuje kompletny raport zakresu i zatwierdzone pozycje.
+1. Każdy folder z root jest przeglądany osobno; zmiany wykonywane wyłącznie po akceptacji użytkownika i zapisane w `tracker.md`.
+2. Nazwy plików i folderów w uporządkowanym folderze zgodne z `design.md` §3–4; wyjątki i pozycje do decyzji jawnie odnotowane.
 3. Niepewne daty, opisy, kolizje i zmieniony stan blokują operację; brak fikcyjnych dat i sztucznych rozszerzeń.
-4. Każda wykonana operacja ma ID, zapis stanu przed/po, wynik oraz warunki cofania zgodne z `SAFETY.md`.
-5. Testy obejmują rzeczywiste ID roota, kolizje po normalizacji, dokumenty Google, ponowne uruchomienie, błędy częściowe i cofanie.
+4. Zmiany są weryfikowane po ID (rodzic, nazwa); w tracker wpisane decyzje i ręczne kroki użytkownika. Dziennik przed/po oraz cofanie według `SAFETY.md` obowiązują tylko przy operacjach masowych.
+5. Testy jednostkowe `planner.py` pozostają dla narzędzia pomocniczego; nowych testów wykonawcy nie wymagamy.
