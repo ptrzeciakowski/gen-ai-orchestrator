@@ -20,7 +20,7 @@ Legenda: ✅ zrobione · 🟡 częściowo / czeka na akcję · ⬜ nie ruszane
 | `04 🏫 Edukacja Dzieci` | ✅ | ✅ | ✅ | **Zakończone 2026-10-24** (poza pozycjami do decyzji). Szczegóły niżej. |
 | `05 💰 Finanse` | ✅ | ✅ | ✅ | **Zakończone 2026-10-24** (decyzja użytkownika: dalszych zmian w podfolderach nie robimy). Szczegóły niżej. |
 | `07 🏢 Praca i Projekty` | ✅ | ✅ | ✅ | **Zakończone 2026-10-24.** Szczegóły niżej. |
-| `08 🌂 Ubezpieczenia` | ✅ | ⬜ | ⬜ | Do decyzji: osobny folder czy rozproszenie wg 09. |
+| `08 🌂 Ubezpieczenia` | ✅ | ✅ | ✅ | **Rozproszony i usunięty 2026-10-24** (decyzja: rozpraszamy wg 09). Szczegóły niżej. |
 | `10 🏠 Mieszkanie i Nieruchomości` | ✅ | ⬜ | ⬜ | |
 | `11 🏡 Lewickie i Pokój` | ✅ | ⬜ | ⬜ | 09: rozdzielić, Pokój do potwierdzenia. |
 | `12 🚗 Pojazdy` | ✅ | ⬜ | ⬜ | |
@@ -119,4 +119,15 @@ Pliki luzem w root: ⬜ 5 plików (3 arkusze/prezentacja/dokument Google, 1 `.do
 - ✅ Nazwy: CV z datą z nazwy pliku (`2009-12-06`, `2013-07-30`, `2013-08-10`, `2013-08-13`, `2014-06-30`); `2025-08` i `2026-03 Przedłużenie Umowy o Pracę` — miesiące z daty utworzenia pliku w Drive, nie z treści dokumentu; `2025-03-13 Certyfikat LeanIX User` — data ze znacznika w nazwie pliku.
 - ⬜ Drobne: nieujednolicone pozostałe pliki w `2018 Roche`, `Odejście z Roche`, `Dokumenty` (Affecto) i `Data Mesh Wdrożenie` (zawartość zostaje w oryginalnych nazwach, poza wymienionymi); dokumenty Snowflake zostały przeniesione ręcznie przez użytkownika.
 - ⬜ Opróżnić kosz (dwa duplikaty).
+
+## Szczegóły: `08 🌂 Ubezpieczenia` (rozproszony)
+
+- ✅ Decyzja (2026-10-24): polisy trafiają do kontekstu (auto, dzieci, podróż); folder główny usunięty (do kosza po opróżnieniu).
+- ✅ `VW Golf - Opole` → `12 🚗 Pojazdy/2001 VW Golf Opole/Ubezpieczenie` (lata `2025`, `2026`, `Oferty` zachowane). Nowy folder auta: `2001 VW Golf Opole`. Projekt Drive `Ubezpieczenie - Vw Golf` obok.
+- ✅ `NNW Nadii i Michasia` → `02 👪 Rodzina/05 Dzieci/Ubezpieczenie NNW` (lata 2024–2026). Dwa pliki o nazwach numerycznych z 2026 rozpoznane z treści: polisy UNIQA z 2026-09-24 (`38701307` → Nadia, `38701296` → Michał). Dwa przelewy z 2025 nazwane numerami polis (695973, 695983) — nie wiadomo, które dziecko.
+- ✅ `2025 Słowacja Natalki` → `24 🧳 Podróże i Wyjazdy/2025/2025-09 Słowacja Natalka Ubezpieczenie` (termin podróży 2025-09-11–14 z polisy Warta Travel).
+- ✅ `OWU Warta Travel C0517` → `24 🧳 …/2026/2026.06 - San Francisco/Ubezpieczenie` (OWU od 2026-05-17, plik z 2026-05-22; dopasowane do podróży w czerwcu, bo Barcelona była przed datą OWU).
+- ✅ Projekt Drive `Ubezpieczenie - Toyota Corolla` → `12 🚗 Pojazdy/2023 - Toyota Corolla`.
+- ✅ Do kosza: skróty `02 Toyota Corolla - ubezpieczenie`, `20. Mieszkanie Pod Strzechą Ubezpieczenie` (wskazywały na ubezpieczenie Toyoty i mieszkania) oraz pusty folder `08 🌂 Ubezpieczenia`.
+- ⬜ Do `12 🚗 Pojazdy` i `24 🧳 Podróże` przy ich przeglądzie: ujednolicić nazwy folderów (`2023 - Toyota Corolla`, `2026.06 - San Francisco`, `2025-09 Słowacja Natalka Ubezpieczenie`); w `2027.02 - Narty/Ubezpieczenie` i `2026.06 - San Francisco/Ubezpieczenie` istnieją już foldery ubezpieczeniowe.
 

@@ -28,7 +28,7 @@ Dla każdego folderu z listy poniżej wykonać ten sam cykl:
 4. Aktualizacja `tracker.md` (sekcja szczegółów folderu, decyzje, pozostałe pozycje).
 
 - [x] `07 🏢 Praca i Projekty`
-- [ ] `08 🌂 Ubezpieczenia` (najpierw decyzja: osobny folder czy rozproszenie wg 09)
+- [x] `08 🌂 Ubezpieczenia` (rozproszony według 09, folder usunięty)
 - [ ] `10 🏠 Mieszkanie i Nieruchomości`
 - [ ] `11 🏡 Lewickie i Pokój` (09: rozdzielić; Pokój do potwierdzenia)
 - [ ] `12 🚗 Pojazdy`
